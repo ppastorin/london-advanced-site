@@ -1,21 +1,20 @@
-# London Advanced — Editorial Atlas
+# London Advanced — Navigation Fix v1.5
 
-Production-ready static homepage for London Advanced.
+This release fixes navigation when the Cloudflare page is embedded in Google Sites.
 
-## Contents
+## What changed
 
-- `dist/index.html` — page shell and metadata.
-- `dist/content.js` — app links, guide links, social links, article previews and analytics IDs.
-- `dist/app.js` — homepage rendering, click events and analytics consent.
-- `dist/styles.css` — Editorial Atlas layout and responsive styling.
-- `dist/assets/` — London map and guide cover.
-- `dist/_headers` — Cloudflare Pages embedding and security headers.
-- `INSTALLATION_GUIDE.md` — complete GitHub, Cloudflare and Google Sites instructions.
+- All five tool cards and both desktop/mobile tool menus use normal links that open automatically in a new tab.
+- Guide, story, Facebook, and Instagram links use the same Google Sites-compatible behavior.
+- The compass wordmark is no longer a dead link.
+- Journal and Explore the tools remain same-view controls and scroll inside the embedded page.
+- A complete mobile menu appears at 900 px and below.
+- Cloudflare is explicitly configured to deploy only `dist/` instead of the repository root.
 
-## Local preview
+## Important platform limitation
 
-Open `dist/index.html` directly in a browser, or serve the `dist` folder with any static web server.
+Google Sites places custom HTML embeds in a sandbox that allows pop-ups but does not allow top-level navigation. Consequently, an embedded link cannot replace the complete Google Sites browser tab. `target="_top"` and equivalent JavaScript are blocked by the browser.
 
-## Routine maintenance
+Version 1.5 uses the reliable behavior permitted by Google Sites: external destinations open automatically in a new tab after a normal click or tap. True same-tab navigation requires either native links placed directly in Google Sites or making the Cloudflare site the top-level website.
 
-For most changes, edit only `dist/content.js`. Commit the change to GitHub and Cloudflare Pages will redeploy automatically.
+Follow `INSTALL_AND_TEST.md` in order.

@@ -14,7 +14,7 @@ function icon(name) {
 
 function appCards() {
   return DATA.apps.map((app, index) => `
-    <a class="app-card app-${index + 1}" href="${app.href}" target="_top" data-track="app:${app.name}">
+    <a class="app-card app-${index + 1}" href="${app.href}" target="_blank" rel="noopener noreferrer" data-track="app:${app.name}">
       ${icon(app.icon)}
       <span class="app-number">0${index + 1}</span>
       <div>
@@ -45,7 +45,7 @@ function socialLinks() {
 
 function toolMenuLinks() {
   return DATA.apps.map(app => `
-    <a href="${app.href}" target="_top" data-track="app-menu:${app.name}">
+    <a href="${app.href}" target="_blank" rel="noopener noreferrer" data-track="app-menu:${app.name}">
       <span>${app.short}</span>
       <strong>${app.name}</strong>
     </a>`).join("");
@@ -63,18 +63,35 @@ function communityMenuLinks() {
     </a>`;
 }
 
+function mobileMenuContent() {
+  return `
+    <p class="mobile-menu-heading">Tools</p>
+    ${toolMenuLinks()}
+    <p class="mobile-menu-heading">Explore</p>
+    <a href="${DATA.links.guideStore}" target="_blank" rel="noopener noreferrer" data-track="guide:mobile-menu">
+      <span>The Other London</span>
+      <strong>Guide ↗</strong>
+    </a>
+    <button class="mobile-section-link" type="button" data-scroll-target="journal">
+      <span>Places and ideas</span>
+      <strong>Journal</strong>
+    </button>
+    <p class="mobile-menu-heading">Community</p>
+    ${communityMenuLinks()}`;
+}
+
 function render() {
   document.querySelector("#site").innerHTML = `<main id="top">
     <header class="site-nav">
-      <a class="wordmark" href="${DATA.links.home}" target="_top" aria-label="London Advanced home">
+      <div class="wordmark" aria-label="London Advanced">
         <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
           <circle cx="18" cy="18" r="15.5"/>
           <path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/>
           <circle class="brand-centre" cx="18" cy="18" r="2.2"/>
         </svg>
         <span class="brand-name">London Advanced</span>
-      </a>
-      <nav aria-label="Main navigation">
+      </div>
+      <nav class="desktop-nav" aria-label="Main navigation">
         <details class="nav-dropdown tools-menu">
           <summary>Tools</summary>
           <div class="nav-menu-panel tools-menu-panel">${toolMenuLinks()}</div>
@@ -86,6 +103,10 @@ function render() {
           <div class="nav-menu-panel community-menu-panel">${communityMenuLinks()}</div>
         </details>
       </nav>
+      <details class="nav-dropdown mobile-menu">
+        <summary aria-label="Open navigation menu"><span>Menu</span></summary>
+        <div class="nav-menu-panel mobile-menu-panel">${mobileMenuContent()}</div>
+      </details>
     </header>
 
     <section class="hero">
@@ -130,6 +151,7 @@ function bindSectionScrolling() {
   document.querySelectorAll("[data-scroll-target]").forEach(button => {
     button.addEventListener("click", () => {
       document.getElementById(button.dataset.scrollTarget)?.scrollIntoView({ behavior: "smooth" });
+      button.closest("details")?.removeAttribute("open");
     });
   });
 }
