@@ -5,6 +5,7 @@ window.LONDON_ADVANCED = {
     author: "Paolo Pastorino"
   },
   links: {
+    home: "https://www.londonadvanced.com/home",
     guide: "https://payhip.com/b/DrBE5",
     guideStore: "https://payhip.com/TheOtherLondon",
     marketGuide: "https://www.rexby.com/LondonAdvanced/theotherlondon",

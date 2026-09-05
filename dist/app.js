@@ -43,12 +43,26 @@ function socialLinks() {
   </div>`;
 }
 
+function toolMenuLinks() {
+  return DATA.apps.map(app => `
+    <a href="${app.href}" target="_top" data-track="app-menu:${app.name}">
+      <span>${app.short}</span>
+      <strong>${app.name}</strong>
+    </a>`).join("");
+}
+
 function render() {
   document.querySelector("#site").innerHTML = `<main id="top">
     <header class="site-nav">
-      <a class="wordmark" href="#top" aria-label="London Advanced home">LA<span>•</span></a>
+      <a class="wordmark" href="${DATA.links.home}" target="_top" aria-label="London Advanced home">LA<span>•</span></a>
       <nav aria-label="Main navigation">
-        <a href="#tools">Tools</a><a href="#guide">Guide</a><a href="#journal">Journal</a><a href="#community">Community</a>
+        <details class="tools-menu">
+          <summary>Tools</summary>
+          <div class="tools-menu-panel">${toolMenuLinks()}</div>
+        </details>
+        <a href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
+        <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
+        <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="social:menu-facebook">Community</a>
       </nav>
       <a class="nav-cta" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:nav">Get the guide</a>
     </header>
@@ -58,7 +72,7 @@ function render() {
         <span class="eyebrow">Independent London guide · 5 free tools</span>
         <h1>The city beyond<br><em>the obvious.</em></h1>
         <p>Find unusual places, make smarter journeys and see what London feels like before you set out.</p>
-        <div class="hero-actions"><a class="button primary" href="#tools">Explore the tools</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:hero">Discover the guide →</a></div>
+        <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Explore the tools</button><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:hero">Discover the guide →</a></div>
       </div>
       <figure class="map-window"><img src="assets/london-map.jpg" alt="Map of London showing places included in London Advanced"><figcaption><b>1,100+</b> places beyond the standard lists</figcaption></figure>
     </section>
@@ -86,7 +100,26 @@ function render() {
       <small>© ${new Date().getFullYear()} Paolo Pastorino</small>
     </footer>
   </main>`;
+  bindSectionScrolling();
+  bindToolMenu();
   bindTracking();
+}
+
+function bindSectionScrolling() {
+  document.querySelectorAll("[data-scroll-target]").forEach(button => {
+    button.addEventListener("click", () => {
+      document.getElementById(button.dataset.scrollTarget)?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}
+
+function bindToolMenu() {
+  const menu = document.querySelector(".tools-menu");
+  if (!menu) return;
+  menu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => menu.removeAttribute("open")));
+  document.addEventListener("click", event => {
+    if (!menu.contains(event.target)) menu.removeAttribute("open");
+  });
 }
 
 function loadGoogleAnalytics(id) {
