@@ -12,17 +12,28 @@ function icon(name) {
   return `<span class="app-icon">${icons[name]}</span>`;
 }
 
+const visualMotifs = {
+  pulse: `<div class="signal-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-chip">LIVE</span>`,
+  crowd: `<div class="crowd-field" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-chip">NOW +3H</span>`,
+  ticket: `<div class="ticket-graphic" aria-hidden="true"><span>ZONE 1–6</span><b>£</b><small>FARE CHECK</small></div>`,
+  route: `<svg class="route-map" viewBox="0 0 220 100" aria-hidden="true"><path d="M12 77c28 0 28-49 58-49s26 51 57 51 31-55 78-55"/><circle cx="12" cy="77" r="6"/><circle cx="205" cy="24" r="6"/></svg><span class="route-label route-a">A</span><span class="route-label route-b">B</span>`,
+  spark: `<div class="mood-orbit" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="mood-word mood-one">QUIET</span><span class="mood-word mood-two">CURIOUS</span>`
+};
+
 function appCards() {
   return DATA.apps.map((app, index) => `
     <a class="app-card app-${index + 1}" href="${app.href}" target="_blank" rel="noopener noreferrer" data-track="app:${app.name}">
-      ${icon(app.icon)}
-      <span class="app-number">0${index + 1}</span>
-      <div>
+      <div class="app-visual visual-${app.icon}">
+        ${icon(app.icon)}
+        <span class="app-number">0${index + 1}</span>
+        ${visualMotifs[app.icon]}
+      </div>
+      <div class="app-copy">
         <span class="app-short">${app.short}</span>
         <h3>${app.name}</h3>
         <p>${app.description}</p>
+        <span class="app-action">Open tool <b aria-hidden="true">↗</b></span>
       </div>
-      <span class="arrow" aria-hidden="true">↗</span>
     </a>`).join("");
 }
 
@@ -120,7 +131,7 @@ function render() {
     </section>
 
     <section id="tools" class="tools section-wrap">
-      <div class="section-heading"><span>01 / Practical London</span><h2>Choose what you need now.</h2><p>Five focused tools. No account, no app download and no generic recommendations.</p></div>
+      <div class="section-heading tool-heading"><div><span>01 / Practical London</span><h2>Choose what you need now.</h2></div><p>Five focused tools. No account, no app download and no generic recommendations.</p></div>
       <div class="app-grid">${appCards()}</div>
     </section>
 

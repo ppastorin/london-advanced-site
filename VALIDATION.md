@@ -13,6 +13,11 @@ Completed before packaging:
 - No navigation anchor relies on a fragment-only `href`.
 - The internal Tools and Journal controls use explicit same-view scrolling.
 - Responsive CSS hides desktop navigation and shows the mobile menu at 900 px and below.
+- All five cards render a distinct visual motif: live signal, crowd field, fare ticket, route, and mood orbit.
+- Mobile cards switch to a 104 px graphical column plus a flexible text column at 600 px and below.
+- Mobile-only rules remove the long card description and preserve the short purpose, title, and action.
+- Mobile menu controls preserve a minimum 44 px touch target.
+- Section spacing and hero height were reduced without removing content.
 - All five `londonadvanced.com` tool URLs returned HTTP 200 during endpoint checks.
 - Payhip, Facebook, and Instagram destinations resolved successfully; logged-out Facebook requests redirect to Facebook login.
 

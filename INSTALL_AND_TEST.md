@@ -1,4 +1,4 @@
-# Install and test v1.5
+# Install and test v1.6
 
 ## 1. Confirm the package structure
 
@@ -26,7 +26,7 @@ Do not put `wrangler.jsonc` inside `dist`. It must be at the GitHub repository r
 3. Choose **Add file → Upload files**.
 4. Drag `wrangler.jsonc` and the complete `dist` folder from this package into the upload area.
 5. If GitHub reports existing files, allow these package files to replace the files with the same paths.
-6. Commit with the message `Fix Google Sites navigation and mobile menu`.
+6. Commit with the message `Release v1.6 usability and visual refresh`.
 7. In the GitHub file list, open `wrangler.jsonc` and confirm it contains `"directory": "./dist"`.
 
 The old root-level `app.js`, `styles.css`, `content.js`, `index.html`, and `assets` can remain. Cloudflare will ignore them after it reads this `wrangler.jsonc`.
@@ -65,6 +65,7 @@ On desktop:
 4. Open **Community**, then test Facebook and Instagram. Each must open in a new tab. Facebook may show its sign-in page when logged out; this is normal.
 5. Click **Journal**. It must scroll within the current page and must not open a tab.
 6. Click **Explore the tools**. It must scroll to the tool cards in the current page.
+7. Confirm each tool card has a distinct graphical header and that the two upper cards align cleanly with the three lower cards.
 
 Do not continue until these tests pass.
 
@@ -89,6 +90,7 @@ Use a real phone if possible. Also test in Chrome DevTools with both a narrow An
 7. Tap **Explore the tools**. It must scroll in the same view.
 8. Check portrait and landscape orientation. Confirm that the menu panel fits inside the screen, scrolls vertically when needed, and causes no horizontal page overflow.
 9. Test at approximately 320 px, 390 px, 600 px, and 900 px widths.
+10. At 600 px and below, confirm each tool is a compact horizontal card and that its long description is intentionally hidden.
 
 ## 8. Final cache check
 
