@@ -54,7 +54,7 @@ window.LONDON_ADVANCED = {
     { category: "Gardens", title: "Mount Street Gardens", text: "A secluded Mayfair garden shaped by the buildings around it." }
   ],
   analytics: {
-    googleAnalyticsId: "G-XXXXXXXXXX",
+    googleAnalyticsId: "G-3ZQEZ6R171",
     cloudflareBeaconToken: "REPLACE_WITH_CLOUDFLARE_TOKEN"
   }
 };
