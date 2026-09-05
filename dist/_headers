@@ -1,0 +1,5 @@
+/*
+  Content-Security-Policy: frame-ancestors https://www.londonadvanced.com https://sites.google.com
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+
