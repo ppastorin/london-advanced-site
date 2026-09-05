@@ -55,6 +55,6 @@ window.LONDON_ADVANCED = {
   ],
   analytics: {
     googleAnalyticsId: "G-3ZQEZ6R171",
-    cloudflareBeaconToken: "REPLACE_WITH_CLOUDFLARE_TOKEN"
+    cloudflareBeaconToken: "354ac0e9140348778ef0ff51cf476480"
   }
 };
