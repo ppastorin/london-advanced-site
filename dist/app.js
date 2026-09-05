@@ -51,20 +51,41 @@ function toolMenuLinks() {
     </a>`).join("");
 }
 
+function communityMenuLinks() {
+  return `
+    <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="social:menu-facebook">
+      <span>Join the discussion</span>
+      <strong>Facebook group ↗</strong>
+    </a>
+    <a href="${DATA.links.instagram}" target="_blank" rel="noopener" data-track="social:menu-instagram">
+      <span>Follow the photography</span>
+      <strong>Instagram ↗</strong>
+    </a>`;
+}
+
 function render() {
   document.querySelector("#site").innerHTML = `<main id="top">
     <header class="site-nav">
-      <a class="wordmark" href="${DATA.links.home}" target="_top" aria-label="London Advanced home">LA<span>•</span></a>
+      <a class="wordmark" href="${DATA.links.home}" target="_top" aria-label="London Advanced home">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+          <circle cx="18" cy="18" r="15.5"/>
+          <path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/>
+          <circle class="brand-centre" cx="18" cy="18" r="2.2"/>
+        </svg>
+        <span class="brand-name">London Advanced</span>
+      </a>
       <nav aria-label="Main navigation">
-        <details class="tools-menu">
+        <details class="nav-dropdown tools-menu">
           <summary>Tools</summary>
-          <div class="tools-menu-panel">${toolMenuLinks()}</div>
+          <div class="nav-menu-panel tools-menu-panel">${toolMenuLinks()}</div>
         </details>
         <a href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
-        <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="social:menu-facebook">Community</a>
+        <details class="nav-dropdown community-menu">
+          <summary>Community</summary>
+          <div class="nav-menu-panel community-menu-panel">${communityMenuLinks()}</div>
+        </details>
       </nav>
-      <a class="nav-cta" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:nav">Get the guide</a>
     </header>
 
     <section class="hero">
@@ -101,7 +122,7 @@ function render() {
     </footer>
   </main>`;
   bindSectionScrolling();
-  bindToolMenu();
+  bindDropdownMenus();
   bindTracking();
 }
 
@@ -113,12 +134,22 @@ function bindSectionScrolling() {
   });
 }
 
-function bindToolMenu() {
-  const menu = document.querySelector(".tools-menu");
-  if (!menu) return;
-  menu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => menu.removeAttribute("open")));
+function bindDropdownMenus() {
+  const menus = [...document.querySelectorAll(".nav-dropdown")];
+  if (!menus.length) return;
+  menus.forEach(menu => {
+    menu.addEventListener("toggle", () => {
+      if (menu.open) menus.filter(other => other !== menu).forEach(other => other.removeAttribute("open"));
+    });
+    menu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => menu.removeAttribute("open")));
+  });
   document.addEventListener("click", event => {
-    if (!menu.contains(event.target)) menu.removeAttribute("open");
+    menus.forEach(menu => {
+      if (!menu.contains(event.target)) menu.removeAttribute("open");
+    });
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") menus.forEach(menu => menu.removeAttribute("open"));
   });
 }
 
