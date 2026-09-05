@@ -49,7 +49,7 @@ Then open `http://localhost:8080`. Stop the server with `Ctrl+C`.
 6. Create the repository.
 7. Extract `London-Advanced-Editorial-Atlas-GitHub-v1.zip` on your computer.
 8. On the empty repository page choose **uploading an existing file**.
-9. Upload all extracted files and folders, including `.gitignore`, `dist`, `README.md`, `INSTALLATION_GUIDE.md` and `wrangler.jsonc`.
+9. Upload all extracted files and folders, including `.gitignore`, `dist`, `README.md` and `INSTALLATION_GUIDE.md`.
 10. Commit them to the `main` branch.
 
 Using GitHub Desktop is equally valid: create a local repository from the extracted folder, publish it to GitHub, and keep `main` as the production branch.
@@ -69,6 +69,7 @@ Using GitHub Desktop is equally valid: create a local repository from the extrac
 | Production branch | `main` |
 | Framework preset | None |
 | Build command | Leave blank |
+| Deploy command | Leave blank — do not use `npx wrangler deploy` |
 | Build output directory | `dist` |
 | Root directory | Leave blank |
 
@@ -77,6 +78,20 @@ Using GitHub Desktop is equally valid: create a local repository from the extrac
 10. Test all five app cards, both guide buttons and both social links.
 
 Every later commit to `main` will trigger a new production deployment. Work on a separate branch for unfinished changes so they produce preview deployments instead.
+
+### If Cloudflare runs `npx wrangler deploy`
+
+That is the wrong command for a Pages Git integration. The characteristic error is `Missing entry-point to Worker script or to assets directory`.
+
+1. Open the Cloudflare project.
+2. Open **Settings → Build** or **Settings → Builds & deployments**.
+3. Edit the production build configuration.
+4. Remove `npx wrangler deploy` from **Deploy command** so the field is empty.
+5. Confirm that **Build command** is also empty and **Build output directory** is `dist`.
+6. Save the configuration.
+7. Open **Deployments**, select the failed deployment and retry it.
+
+If Cloudflare will not allow an empty deploy command, the project was created as a Workers Builds project rather than a Pages Git-integration project. Do not add a Worker entry point to work around that mistake. Delete only that failed Cloudflare project and recreate it through **Workers & Pages → Create application → Pages → Connect to Git**. Your GitHub repository is unaffected.
 
 ## 5. Cloudflare direct upload — Method B, manual fallback
 

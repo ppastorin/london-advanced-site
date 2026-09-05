@@ -10,7 +10,6 @@ Production-ready static homepage for London Advanced.
 - `dist/styles.css` — Editorial Atlas layout and responsive styling.
 - `dist/assets/` — London map and guide cover.
 - `dist/_headers` — Cloudflare Pages embedding and security headers.
-- `wrangler.jsonc` — optional Cloudflare command-line deployment configuration.
 - `INSTALLATION_GUIDE.md` — complete GitHub, Cloudflare and Google Sites instructions.
 
 ## Local preview
@@ -20,4 +19,3 @@ Open `dist/index.html` directly in a browser, or serve the `dist` folder with an
 ## Routine maintenance
 
 For most changes, edit only `dist/content.js`. Commit the change to GitHub and Cloudflare Pages will redeploy automatically.
-
