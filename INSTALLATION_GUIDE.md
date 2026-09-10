@@ -184,3 +184,4 @@ If a deployment is broken:
 4. Use Cloudflare's rollback option if available, or revert the problematic GitHub commit and push the revert to `main`.
 
 Restore the last working version first, then diagnose the change separately.
+> Legacy v1.6 instructions. Do not use this file for the Cloudflare domain migration. Follow `MIGRATION_GUIDE.md` for release v2.0.

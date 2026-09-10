@@ -24,3 +24,4 @@ Completed before packaging:
 The live Google Sites page was inspected separately. Its custom-embed sandbox includes `allow-popups` and `allow-popups-to-escape-sandbox`, but it does not include `allow-top-navigation` or `allow-top-navigation-by-user-activation`. This is why new tabs are supported and same-tab top-level replacement is blocked.
 
 The final real-device and post-deployment acceptance tests are in `INSTALL_AND_TEST.md`.
+> Legacy v1.6 checklist. Release v2.0 is validated with `npm test` and `.github/workflows/site-checks.yml`; follow `MIGRATION_GUIDE.md`.

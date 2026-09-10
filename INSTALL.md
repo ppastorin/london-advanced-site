@@ -16,3 +16,4 @@ Changes:
 - Makes Tools a dropdown containing all five public Google Sites tool pages.
 - Makes Community a dropdown containing Facebook and Instagram.
 - Uses button-driven section scrolling for Journal and Explore the tools, avoiding Worker hash URLs.
+> Legacy v1.6 instructions. Do not use this file for the Cloudflare domain migration. Follow `MIGRATION_GUIDE.md` for release v2.0.

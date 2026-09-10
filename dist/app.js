@@ -22,7 +22,7 @@ const visualMotifs = {
 
 function appCards() {
   return DATA.apps.map((app, index) => `
-    <a class="app-card app-${index + 1}" href="${app.href}" target="_blank" rel="noopener noreferrer" data-track="app:${app.name}">
+    <a class="app-card app-${index + 1}" href="${app.href}" data-track="app:${app.name}">
       <div class="app-visual visual-${app.icon}">
         ${icon(app.icon)}
         <span class="app-number">0${index + 1}</span>
@@ -32,7 +32,7 @@ function appCards() {
         <span class="app-short">${app.short}</span>
         <h3>${app.name}</h3>
         <p>${app.description}</p>
-        <span class="app-action">Open tool <b aria-hidden="true">↗</b></span>
+        <span class="app-action">Open tool <b aria-hidden="true">→</b></span>
       </div>
     </a>`).join("");
 }
@@ -56,7 +56,7 @@ function socialLinks() {
 
 function toolMenuLinks() {
   return DATA.apps.map(app => `
-    <a href="${app.href}" target="_blank" rel="noopener noreferrer" data-track="app-menu:${app.name}">
+    <a href="${app.href}" data-track="app-menu:${app.name}">
       <span>${app.short}</span>
       <strong>${app.name}</strong>
     </a>`).join("");
