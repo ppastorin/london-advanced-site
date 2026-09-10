@@ -5,7 +5,7 @@ window.LONDON_ADVANCED = {
     author: "Paolo Pastorino"
   },
   links: {
-    home: "https://www.londonadvanced.com/home",
+    home: "/",
     guide: "https://payhip.com/b/DrBE5",
     guideStore: "https://payhip.com/TheOtherLondon",
     marketGuide: "https://www.rexby.com/LondonAdvanced/theotherlondon",
@@ -14,38 +14,48 @@ window.LONDON_ADVANCED = {
   },
   apps: [
     {
+      id: "london-dashboard",
       name: "London Dashboard",
       short: "Today at a glance",
       description: "Weather, transport, airports and events in one practical view.",
-      href: "https://www.londonadvanced.com/home/london-dashboard",
+      href: "/home/london-dashboard/",
+      embedUrl: "https://london-now.ppastorin.workers.dev/",
       icon: "pulse"
     },
     {
+      id: "escape-the-crowds",
       name: "Escape the Crowds",
       short: "See pressure before you go",
       description: "Compare crowd pressure around London now and over the next few hours.",
-      href: "https://www.londonadvanced.com/home/escape-the-crowds",
+      href: "/home/escape-the-crowds/",
+      embedUrl: "https://london-advanced-crowd-pressure.ppastorin.workers.dev/",
       icon: "crowd"
     },
     {
+      id: "travel-fare-calculator",
       name: "Travel Fare Calculator",
       short: "Pay the right fare",
       description: "Compare London travel costs for adults and children before you set out.",
-      href: "https://www.londonadvanced.com/home/travel-fare-calculator",
+      href: "/home/travel-fare-calculator/",
+      embedUrl: "https://script.google.com/macros/s/AKfycby3upcYSg-jR3idu9_aUbeT_ooAPLF5D-5fjxDbrERvULyLUsp1mxPGzEa9GyByX6WjPg/exec",
       icon: "ticket"
     },
     {
+      id: "smart-navigation",
       name: "Smart Navigation",
       short: "Make the journey part of the visit",
       description: "Find worthwhile detours between where you are and where you are going.",
-      href: "https://www.londonadvanced.com/home/smart-navigation",
+      href: "/home/smart-navigation/",
+      embedUrl: "https://script.google.com/macros/s/AKfycbxcjGjLqBgTqItDVRKspQTDE__wL6y7WAd2Lr617vOfhzrqMX9tvKEXW6_OxbfK2Yz34w/exec",
       icon: "route"
     },
     {
+      id: "london-by-mood",
       name: "London by Mood",
       short: "Start with how you feel",
       description: "Choose a mood and discover places that fit it, rather than another generic list.",
-      href: "https://www.londonadvanced.com/home/london-by-mood",
+      href: "/home/london-by-mood/",
+      embedUrl: "https://london-by-mood.ppastorin.workers.dev/",
       icon: "spark"
     }
   ],

@@ -1,4 +1,18 @@
-# London Advanced — Usability and Visual Refresh v1.6
+# London Advanced — Direct Cloudflare Portal v2.0
+
+This release preserves the v1.6 visual design and adds the routes, embedded tools, SEO files and automated checks required to serve `www.londonadvanced.com` directly from Cloudflare.
+
+Start with `MIGRATION_GUIDE.md`. Approved application endpoints are documented in `LINK_INVENTORY.md`, and release changes are listed in `RELEASE_NOTES_V2.md`.
+
+Run the complete repository validation with:
+
+```bash
+npm test
+```
+
+Cloudflare publishes only `dist/` as configured in `wrangler.jsonc`.
+
+## Previous v1.6 design release
 
 This release keeps the Google Sites-compatible navigation from v1.5 and redesigns the page for faster scanning, shorter scrolling, and stronger visual hierarchy.
 

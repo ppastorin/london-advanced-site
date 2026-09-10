@@ -102,3 +102,4 @@ If the old behavior remains after a successful deployment:
 4. Test in an incognito window to bypass browser cache.
 
 Do not edit the Google Sites embed code for this release. The fix is entirely in the Cloudflare-hosted page.
+> Legacy v1.6 instructions. Do not use this file for the Cloudflare domain migration. Follow `MIGRATION_GUIDE.md` for release v2.0.

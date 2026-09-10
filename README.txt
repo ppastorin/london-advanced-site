@@ -20,3 +20,5 @@ Changes:
 
 After committing to main, wait for the Cloudflare production build and test the
 published Google Sites page in an incognito window.
+LONDON ADVANCED V2.0
+For the Cloudflare domain migration, follow MIGRATION_GUIDE.md. The remaining text in this file describes the earlier v1.6 release.

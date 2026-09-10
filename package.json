@@ -1,0 +1,12 @@
+{
+  "name": "london-advanced-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "London Advanced Cloudflare portal and branded tool routes",
+  "scripts": {
+    "test": "node scripts/validate-site.mjs",
+    "check": "node scripts/validate-site.mjs",
+    "links": "node scripts/list-links.mjs",
+    "health": "node scripts/check-endpoints.mjs"
+  }
+}
