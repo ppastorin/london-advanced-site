@@ -1,0 +1,43 @@
+name: Site safety checks
+
+on:
+  pull_request:
+    paths:
+      - "dist/**"
+      - "scripts/**"
+      - "wrangler.jsonc"
+      - "package.json"
+  push:
+    branches:
+      - main
+    paths:
+      - "dist/**"
+      - "scripts/**"
+      - "wrangler.jsonc"
+      - "package.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate routes and deployment package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate site structure and links
+        run: npm test
+
+      - name: Print external-link inventory
+        run: npm run links
+
+      - name: Validate the Cloudflare package
+        run: npx --yes wrangler@4 deploy --dry-run --outdir /tmp/london-advanced-wrangler-check
