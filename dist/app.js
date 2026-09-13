@@ -84,9 +84,13 @@ function mobileMenuContent() {
       <strong>Guide ↗</strong>
     </a>
     <button class="mobile-section-link" type="button" data-scroll-target="events" data-events-nav hidden>
-      <span>Free and low-cost events</span>
-      <strong>This week</strong>
+      <span>Three featured selections</span>
+      <strong>Highlights</strong>
     </button>
+    <a class="mobile-section-link" href="/events/" data-events-nav hidden>
+      <span>The complete weekend edit</span>
+      <strong>All events</strong>
+    </a>
     <button class="mobile-section-link" type="button" data-scroll-target="journal">
       <span>Places and ideas</span>
       <strong>Journal</strong>
@@ -105,7 +109,10 @@ function eventsSection() {
       <div class="events-grid" data-events-feed aria-live="polite"></div>
       <div class="events-footer">
         <span data-events-updated>Updated Sunday and Thursday</span>
-        <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="events:facebook">Discuss in the Facebook group →</a>
+        <div class="events-footer-links">
+          <a class="events-all-link" href="/events/" data-events-all data-track="events:all">See the complete edit <span aria-hidden="true">→</span></a>
+          <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="events:facebook">Discuss in the Facebook group →</a>
+        </div>
       </div>
     </section>`;
 }
@@ -170,17 +177,19 @@ function renderEventCard(event, index) {
 }
 
 function activeDigest(data, now = new Date()) {
-  if (!data || data.schema_version !== "1.0" || !Array.isArray(data.events)) return [];
+  if (!data || data.schema_version !== "1.1" || !Array.isArray(data.events) || !Array.isArray(data.homepage_event_ids)) return [];
   const londonDate = new Intl.DateTimeFormat("en-CA", {
     year: "numeric", month: "2-digit", day: "2-digit", timeZone: "Europe/London"
   }).format(now);
   if (londonDate < data.valid_from || londonDate > data.valid_until) return [];
-  return data.events.filter(event =>
+  const activeEvents = data.events.filter(event =>
     event.publication_status === "approved" &&
     Number.isInteger(event.advanced?.score) && event.advanced.score >= 7 &&
     Date.parse(event.publish_at) <= now.getTime() &&
     Date.parse(event.expire_at) > now.getTime()
-  ).slice(0, 3);
+  );
+  const byId = new Map(activeEvents.map(event => [event.id, event]));
+  return data.homepage_event_ids.map(id => byId.get(id)).filter(Boolean).slice(0, 3);
 }
 
 async function loadEvents() {
@@ -207,6 +216,14 @@ async function loadEvents() {
     section.querySelector("[data-events-updated]").textContent = `Last edited ${new Intl.DateTimeFormat("en-GB", {
       weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/London"
     }).format(updated)} · London time`;
+    const allLink = section.querySelector("[data-events-all]");
+    const activeCount = data.events.filter(event =>
+      event.publication_status === "approved" &&
+      Date.parse(event.publish_at) <= previewTime.getTime() &&
+      Date.parse(event.expire_at) > previewTime.getTime()
+    ).length;
+    allLink.innerHTML = `See all ${activeCount} weekend pick${activeCount === 1 ? "" : "s"} <span aria-hidden="true">→</span>`;
+    if (demoRequested && (localPreview || cloudflarePreview)) allLink.href = "/events/?events-demo=1";
     section.hidden = false;
     document.querySelectorAll("[data-events-nav]").forEach(control => { control.hidden = false; });
     bindTracking(feed);
@@ -232,7 +249,8 @@ function render() {
           <div class="nav-menu-panel tools-menu-panel">${toolMenuLinks()}</div>
         </details>
         <a href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
-        <button class="nav-section-button" type="button" data-scroll-target="events" data-events-nav hidden>This week</button>
+        <button class="nav-section-button" type="button" data-scroll-target="events" data-events-nav hidden>Highlights</button>
+        <a href="/events/" data-events-nav hidden>All events</a>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
         <details class="nav-dropdown community-menu">
           <summary>Community</summary>

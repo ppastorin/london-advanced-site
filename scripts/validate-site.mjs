@@ -32,6 +32,8 @@ const requiredAssets = [
   "dist/app.js",
   "dist/content.js",
   "dist/data/events.json",
+  "dist/events/index.html",
+  "dist/events/events.js",
   "dist/tool-page.css",
   "dist/tool-page.js",
   "dist/_headers",
@@ -79,7 +81,7 @@ const expectedTools = new Map([
 const contentText = requireFile("dist/content.js");
 const appText = requireFile("dist/app.js");
 const stylesText = requireFile("dist/styles.css");
-if (!appText.includes('id="events"') || !appText.includes('fetch("/data/events.json"')) {
+if (!appText.includes('id="events"') || !appText.includes('fetch("/data/events.json"') || !appText.includes('href="/events/"')) {
   fail("The homepage event component or its JSON feed request is missing.");
 }
 if (!stylesText.includes(".events-section") || !stylesText.includes(".event-card")) {
@@ -153,8 +155,26 @@ for (const requiredFrameHost of [
 }
 
 const sitemap = requireFile("dist/sitemap.xml");
+if (!sitemap.includes("https://www.londonadvanced.com/events/")) fail("Sitemap is missing /events/.");
 for (const { href } of expectedTools.values()) {
   if (!sitemap.includes(`https://www.londonadvanced.com${href}`)) fail(`Sitemap is missing ${href}`);
+}
+
+const eventsHtml = requireFile("dist/events/index.html");
+const eventsScript = requireFile("dist/events/events.js");
+if (!eventsHtml.includes('<link rel="canonical" href="https://www.londonadvanced.com/events/">')) {
+  fail("The full events page is missing its canonical URL.");
+}
+if (!eventsHtml.includes('data-events-list') || !eventsHtml.includes('/events/events.js')) {
+  fail("The full events page shell or script reference is missing.");
+}
+if (!eventsScript.includes('fetch("/data/events.json"') || !eventsScript.includes('schema_version !== "1.1"')) {
+  fail("The full events page does not use the version 1.1 events feed.");
+}
+try {
+  new vm.Script(eventsScript, { filename: "dist/events/events.js" });
+} catch (error) {
+  fail(`dist/events/events.js has invalid JavaScript: ${error.message}`);
 }
 
 if (failures.length) {

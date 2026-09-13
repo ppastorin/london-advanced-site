@@ -45,11 +45,11 @@ export function validateDigest(data) {
   const errors = [];
   const topKeys = new Set([
     'schema_version', 'generated_at', 'valid_from', 'valid_until',
-    'timezone', 'editorial_title', 'events'
+    'timezone', 'editorial_title', 'homepage_event_ids', 'events'
   ]);
   if (!exactKeys(errors, data, '$', topKeys)) return errors;
 
-  if (data.schema_version !== '1.0') errors.push('$.schema_version must equal "1.0"');
+  if (data.schema_version !== '1.1') errors.push('$.schema_version must equal "1.1"');
   if (!validDate(data.generated_at)) errors.push('$.generated_at must be an ISO date-time');
   if (!DATE_RE.test(data.valid_from ?? '')) errors.push('$.valid_from must be YYYY-MM-DD');
   if (!DATE_RE.test(data.valid_until ?? '')) errors.push('$.valid_until must be YYYY-MM-DD');
@@ -60,8 +60,20 @@ export function validateDigest(data) {
   if (data.editorial_title !== 'THIS WEEK, BEYOND THE OBVIOUS') {
     errors.push('$.editorial_title has an unexpected value');
   }
-  if (!Array.isArray(data.events) || data.events.length < 1 || data.events.length > 3) {
-    errors.push('$.events must contain between 1 and 3 approved homepage events');
+  if (!Array.isArray(data.homepage_event_ids) || data.homepage_event_ids.length < 1 || data.homepage_event_ids.length > 3) {
+    errors.push('$.homepage_event_ids must contain between 1 and 3 event ids');
+  } else {
+    if (new Set(data.homepage_event_ids).size !== data.homepage_event_ids.length) {
+      errors.push('$.homepage_event_ids must not contain duplicates');
+    }
+    data.homepage_event_ids.forEach((id, index) => {
+      if (typeof id !== 'string' || !SLUG_RE.test(id)) {
+        errors.push(`$.homepage_event_ids[${index}] must be a lowercase slug`);
+      }
+    });
+  }
+  if (!Array.isArray(data.events) || data.events.length < 1 || data.events.length > 8) {
+    errors.push('$.events must contain between 1 and 8 approved events');
     return errors;
   }
 
@@ -78,6 +90,11 @@ export function validateDigest(data) {
       duplicateKeys.add(event.duplicate_key);
     }
   });
+  if (Array.isArray(data.homepage_event_ids)) {
+    for (const id of data.homepage_event_ids) {
+      if (!ids.has(id)) errors.push(`$.homepage_event_ids references missing event id: ${id}`);
+    }
+  }
   return errors;
 }
 

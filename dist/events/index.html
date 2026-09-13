@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A twice-weekly edit of unusual, free and low-cost London events, independently verified by London Advanced.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="This week, beyond the obvious — London Advanced">
+  <meta property="og:description" content="Verified London events selected for unusual access, local character and exceptional value.">
+  <meta property="og:url" content="https://www.londonadvanced.com/events/">
+  <meta property="og:image" content="https://www.londonadvanced.com/assets/london-map.jpg">
+  <link rel="canonical" href="https://www.londonadvanced.com/events/">
+  <title>This week, beyond the obvious — London Advanced</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="events-page">
+  <header class="site-nav">
+    <a class="wordmark" href="/" aria-label="London Advanced home">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+        <circle cx="18" cy="18" r="15.5"/>
+        <path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/>
+        <circle class="brand-centre" cx="18" cy="18" r="2.2"/>
+      </svg>
+      <span class="brand-name">London Advanced</span>
+    </a>
+    <nav class="events-page-nav" aria-label="Events navigation">
+      <a href="/#tools">Tools</a>
+      <a href="/">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="events-page-hero">
+      <div>
+        <span class="eyebrow">Twice-weekly London edit</span>
+        <h1>This week,<br><em>beyond the obvious.</em></h1>
+      </div>
+      <div class="events-page-intro">
+        <p>Free and low-cost events selected for unusual access, local character and a London story worth following.</p>
+        <span data-events-range>Updated Sunday and Thursday</span>
+      </div>
+    </section>
+
+    <section class="events-list-wrap" aria-labelledby="events-list-title">
+      <div class="events-list-toolbar">
+        <h2 id="events-list-title">The complete edit</h2>
+        <span data-events-count aria-live="polite">Loading current events…</span>
+      </div>
+      <div class="events-list" data-events-list aria-live="polite"></div>
+      <div class="events-empty" data-events-empty hidden>
+        <h2>The current edit has closed.</h2>
+        <p>The next verified selection is published on Sunday and Thursday.</p>
+        <a class="button dark" href="/">Return to London Advanced</a>
+      </div>
+    </section>
+
+    <section class="events-page-community">
+      <div>
+        <span class="eyebrow">Continue the conversation</span>
+        <p>Found something worth adding to the next edit?</p>
+      </div>
+      <a data-facebook-link target="_blank" rel="noopener">Discuss it in the Facebook group ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>London Advanced</strong><span>Independent tools and field notes for a less obvious London.</span></div>
+    <a href="/">Back to the homepage</a>
+    <small>© <span data-year></span> Paolo Pastorino</small>
+  </footer>
+
+  <script src="/content.js"></script>
+  <script src="/events/events.js"></script>
+</body>
+</html>
