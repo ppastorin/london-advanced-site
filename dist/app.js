@@ -83,9 +83,13 @@ function mobileMenuContent() {
       <span>The Other London</span>
       <strong>Guide ↗</strong>
     </a>
+    <button class="mobile-section-link" type="button" data-scroll-target="events" data-events-nav hidden>
+      <span>Three featured selections</span>
+      <strong>Highlights</strong>
+    </button>
     <a class="mobile-section-link" href="/events/" data-events-nav hidden>
-      <span>Free and low-cost events</span>
-      <strong>This week</strong>
+      <span>The complete weekend edit</span>
+      <strong>All events</strong>
     </a>
     <button class="mobile-section-link" type="button" data-scroll-target="journal">
       <span>Places and ideas</span>
@@ -245,7 +249,8 @@ function render() {
           <div class="nav-menu-panel tools-menu-panel">${toolMenuLinks()}</div>
         </details>
         <a href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
-        <a href="/events/" data-events-nav hidden>This week</a>
+        <button class="nav-section-button" type="button" data-scroll-target="events" data-events-nav hidden>Highlights</button>
+        <a href="/events/" data-events-nav hidden>All events</a>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
         <details class="nav-dropdown community-menu">
           <summary>Community</summary>
