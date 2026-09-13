@@ -83,10 +83,10 @@ function mobileMenuContent() {
       <span>The Other London</span>
       <strong>Guide ↗</strong>
     </a>
-    <button class="mobile-section-link" type="button" data-scroll-target="events" data-events-nav hidden>
+    <a class="mobile-section-link" href="/events/" data-events-nav hidden>
       <span>Free and low-cost events</span>
       <strong>This week</strong>
-    </button>
+    </a>
     <button class="mobile-section-link" type="button" data-scroll-target="journal">
       <span>Places and ideas</span>
       <strong>Journal</strong>
@@ -106,7 +106,7 @@ function eventsSection() {
       <div class="events-footer">
         <span data-events-updated>Updated Sunday and Thursday</span>
         <div class="events-footer-links">
-          <a href="/events/" data-events-all data-track="events:all">See the complete edit →</a>
+          <a class="events-all-link" href="/events/" data-events-all data-track="events:all">See the complete edit <span aria-hidden="true">→</span></a>
           <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="events:facebook">Discuss in the Facebook group →</a>
         </div>
       </div>
@@ -218,7 +218,7 @@ async function loadEvents() {
       Date.parse(event.publish_at) <= previewTime.getTime() &&
       Date.parse(event.expire_at) > previewTime.getTime()
     ).length;
-    allLink.textContent = `See all ${activeCount} weekend pick${activeCount === 1 ? "" : "s"} →`;
+    allLink.innerHTML = `See all ${activeCount} weekend pick${activeCount === 1 ? "" : "s"} <span aria-hidden="true">→</span>`;
     if (demoRequested && (localPreview || cloudflarePreview)) allLink.href = "/events/?events-demo=1";
     section.hidden = false;
     document.querySelectorAll("[data-events-nav]").forEach(control => { control.hidden = false; });
@@ -245,7 +245,7 @@ function render() {
           <div class="nav-menu-panel tools-menu-panel">${toolMenuLinks()}</div>
         </details>
         <a href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
-        <button class="nav-section-button" type="button" data-scroll-target="events" data-events-nav hidden>This week</button>
+        <a href="/events/" data-events-nav hidden>This week</a>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
         <details class="nav-dropdown community-menu">
           <summary>Community</summary>
