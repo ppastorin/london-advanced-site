@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-13T10:55:36+01:00",
+  "generated_at": "2026-09-13T11:01:00+01:00",
   "valid_from": "2026-09-13",
   "valid_until": "2026-09-20",
   "timezone": "Europe/London",
@@ -47,12 +47,12 @@
       ],
       "official_url": "https://threeriversbexley.org/",
       "verification": {
-        "verified_at": "2026-09-13T10:55:36+01:00",
+        "verified_at": "2026-09-13T11:01:00+01:00",
         "confidence": "high",
         "source_url": "https://threeriversbexley.org/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-13T10:55:36+01:00",
+      "publish_at": "2026-09-13T11:01:00+01:00",
       "expire_at": "2026-09-19T21:15:00+01:00",
       "duplicate_key": "crossness-pumping-station|2026-09-19|hello-earth-launch"
     },
@@ -97,12 +97,12 @@
       ],
       "official_url": "https://www.eastlondonmosque.org.uk/Event/visit-my-mosque-2026-open-day",
       "verification": {
-        "verified_at": "2026-09-13T10:55:36+01:00",
+        "verified_at": "2026-09-13T11:01:00+01:00",
         "confidence": "high",
         "source_url": "https://www.eastlondonmosque.org.uk/Event/visit-my-mosque-2026-open-day"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-13T10:55:36+01:00",
+      "publish_at": "2026-09-13T11:01:00+01:00",
       "expire_at": "2026-09-19T15:15:00+01:00",
       "duplicate_key": "london-muslim-centre|2026-09-19|visit-my-mosque-open-day"
     },
@@ -147,12 +147,12 @@
       ],
       "official_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind",
       "verification": {
-        "verified_at": "2026-09-13T10:55:36+01:00",
+        "verified_at": "2026-09-13T11:01:00+01:00",
         "confidence": "high",
         "source_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-13T10:55:36+01:00",
+      "publish_at": "2026-09-13T11:01:00+01:00",
       "expire_at": "2026-09-18T18:15:00+01:00",
       "duplicate_key": "somerset-house|2026-09-18|reviving-craft"
     }
