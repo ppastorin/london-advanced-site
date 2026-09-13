@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2099-01-01T11:00:00Z",
+  "valid_from": "2099-01-01",
+  "valid_until": "2099-01-07",
+  "timezone": "Europe/London",
+  "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
+  "events": [
+    {
+      "id": "demo-hidden-archive-2099-01-02",
+      "title_en": "DEMO — A hidden archive opens its doors",
+      "title_it": "DEMO — Un archivio nascosto apre le sue porte",
+      "summary_en": "A demonstration record used to test layout, validation and deployment without publishing an unverified real-world event.",
+      "summary_it": "Un record dimostrativo usato per collaudare layout, validazione e pubblicazione senza presentare un evento reale non verificato.",
+      "start": "2099-01-02T11:00:00Z",
+      "end": "2099-01-02T12:30:00Z",
+      "venue": {
+        "name": "Example London Archive",
+        "address": "1 Example Street",
+        "postcode": "EC1A 1AA",
+        "borough": "City of London"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://example.com/events/demo-hidden-archive"
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 10,
+        "reason": "Demonstrates the highest editorial score while remaining an unmistakably non-production test record.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://example.com/events/demo-hidden-archive",
+      "verification": {
+        "verified_at": "2099-01-01T10:45:00Z",
+        "confidence": "high",
+        "source_url": "https://example.com/events/demo-hidden-archive"
+      },
+      "publication_status": "approved",
+      "publish_at": "2099-01-01T11:00:00Z",
+      "expire_at": "2099-01-02T12:45:00Z",
+      "duplicate_key": "example-london-archive|2099-01-02|demo-hidden-archive"
+    },
+    {
+      "id": "demo-rooftop-garden-2099-01-03",
+      "title_en": "DEMO — After-hours rooftop garden walk",
+      "title_it": "DEMO — Passeggiata serale in un giardino pensile",
+      "summary_en": "A second demonstration record showing how a low-cost event, an outdoor location and recommended booking appear in the component.",
+      "summary_it": "Un secondo record dimostrativo mostra nel componente un evento economico, un luogo all'aperto e la prenotazione consigliata.",
+      "start": "2099-01-03T18:00:00Z",
+      "end": "2099-01-03T19:15:00Z",
+      "venue": {
+        "name": "Example Rooftop Garden",
+        "address": "2 Sample Lane",
+        "postcode": "SE1 2AA",
+        "borough": "Southwark"
+      },
+      "price": {
+        "amount_gbp": 5,
+        "display": "£5",
+        "classification": "cheap"
+      },
+      "booking": {
+        "required": false,
+        "status": "recommended",
+        "url": "https://example.com/events/demo-rooftop-garden"
+      },
+      "category": "nature",
+      "advanced": {
+        "score": 8,
+        "reason": "Demonstrates unusual access, a distinctive London setting and a price within the normal low-cost ceiling.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 1,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 1
+        }
+      },
+      "newsletter_sources": [
+        "London x London"
+      ],
+      "official_url": "https://example.com/events/demo-rooftop-garden",
+      "verification": {
+        "verified_at": "2099-01-01T10:45:00Z",
+        "confidence": "high",
+        "source_url": "https://example.com/events/demo-rooftop-garden"
+      },
+      "publication_status": "approved",
+      "publish_at": "2099-01-01T11:00:00Z",
+      "expire_at": "2099-01-03T19:30:00Z",
+      "duplicate_key": "example-rooftop-garden|2099-01-03|demo-walk"
+    },
+    {
+      "id": "demo-makers-studio-2099-01-05",
+      "title_en": "DEMO — Inside a working makers' studio",
+      "title_it": "DEMO — Dentro uno studio artigiano in attività",
+      "summary_en": "A third demonstration record tests longer wording and a multi-source discovery trail while remaining safely outside the live validity window.",
+      "summary_it": "Un terzo record dimostrativo collauda testi più lunghi e più fonti, restando in sicurezza fuori dalla finestra di pubblicazione.",
+      "start": "2099-01-05T10:30:00Z",
+      "end": "2099-01-05T16:00:00Z",
+      "venue": {
+        "name": "Example Makers' Studio",
+        "address": "3 Prototype Yard",
+        "postcode": "E2 3AA",
+        "borough": "Tower Hamlets"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 9,
+        "reason": "Demonstrates local character, maker access and a non-obvious place while exercising the free drop-in state.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 1
+        }
+      },
+      "newsletter_sources": [
+        "Londonfy",
+        "The Times"
+      ],
+      "official_url": "https://example.com/events/demo-makers-studio",
+      "verification": {
+        "verified_at": "2099-01-01T10:45:00Z",
+        "confidence": "high",
+        "source_url": "https://example.com/events/demo-makers-studio"
+      },
+      "publication_status": "approved",
+      "publish_at": "2099-01-01T11:00:00Z",
+      "expire_at": "2099-01-05T16:15:00Z",
+      "duplicate_key": "example-makers-studio|2099-01-05|demo-open-studio"
+    }
+  ]
+}

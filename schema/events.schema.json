@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.londonadvanced.com/schema/events.schema.json",
+  "title": "London Advanced homepage events feed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "valid_from",
+    "valid_until",
+    "timezone",
+    "editorial_title",
+    "events"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "valid_from": { "type": "string", "format": "date" },
+    "valid_until": { "type": "string", "format": "date" },
+    "timezone": { "const": "Europe/London" },
+    "editorial_title": { "const": "THIS WEEK, BEYOND THE OBVIOUS" },
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": { "$ref": "#/$defs/event" }
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title_en",
+        "title_it",
+        "summary_en",
+        "summary_it",
+        "start",
+        "end",
+        "venue",
+        "price",
+        "booking",
+        "category",
+        "advanced",
+        "newsletter_sources",
+        "official_url",
+        "verification",
+        "publication_status",
+        "publish_at",
+        "expire_at",
+        "duplicate_key"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title_en": { "type": "string", "minLength": 3, "maxLength": 100 },
+        "title_it": { "type": "string", "minLength": 3, "maxLength": 100 },
+        "summary_en": { "type": "string", "minLength": 40, "maxLength": 280 },
+        "summary_it": { "type": "string", "minLength": 40, "maxLength": 280 },
+        "start": { "type": "string", "format": "date-time" },
+        "end": { "type": "string", "format": "date-time" },
+        "venue": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "address", "postcode", "borough"],
+          "properties": {
+            "name": { "type": "string", "minLength": 2, "maxLength": 120 },
+            "address": { "type": "string", "minLength": 3, "maxLength": 180 },
+            "postcode": { "type": "string", "minLength": 3, "maxLength": 12 },
+            "borough": { "type": "string", "minLength": 2, "maxLength": 80 }
+          }
+        },
+        "price": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["amount_gbp", "display", "classification"],
+          "properties": {
+            "amount_gbp": { "type": "number", "minimum": 0, "maximum": 15 },
+            "display": { "type": "string", "minLength": 2, "maxLength": 40 },
+            "classification": { "enum": ["free", "cheap", "exceptional"] }
+          }
+        },
+        "booking": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["required", "status", "url"],
+          "properties": {
+            "required": { "type": "boolean" },
+            "status": { "enum": ["drop-in", "recommended", "required"] },
+            "url": { "type": ["string", "null"] }
+          }
+        },
+        "category": {
+          "enum": [
+            "architecture",
+            "art-design",
+            "community",
+            "heritage-history",
+            "local-culture",
+            "nature",
+            "talk",
+            "urban-exploration"
+          ]
+        },
+        "advanced": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["score", "reason", "breakdown"],
+          "properties": {
+            "score": { "type": "integer", "minimum": 7, "maximum": 10 },
+            "reason": { "type": "string", "minLength": 20, "maxLength": 220 },
+            "breakdown": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["non_obvious", "place_story", "unusual_access", "local_character", "value"],
+              "properties": {
+                "non_obvious": { "type": "integer", "minimum": 0, "maximum": 3 },
+                "place_story": { "type": "integer", "minimum": 0, "maximum": 2 },
+                "unusual_access": { "type": "integer", "minimum": 0, "maximum": 2 },
+                "local_character": { "type": "integer", "minimum": 0, "maximum": 1 },
+                "value": { "type": "integer", "minimum": 0, "maximum": 2 }
+              }
+            }
+          }
+        },
+        "newsletter_sources": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["Londonist", "The Times", "Londonfy", "London x London"] }
+        },
+        "official_url": { "type": "string", "pattern": "^https://" },
+        "verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["verified_at", "confidence", "source_url"],
+          "properties": {
+            "verified_at": { "type": "string", "format": "date-time" },
+            "confidence": { "const": "high" },
+            "source_url": { "type": "string", "pattern": "^https://" }
+          }
+        },
+        "publication_status": { "const": "approved" },
+        "publish_at": { "type": "string", "format": "date-time" },
+        "expire_at": { "type": "string", "format": "date-time" },
+        "duplicate_key": { "type": "string", "minLength": 8, "maxLength": 180 }
+      }
+    }
+  }
+}
