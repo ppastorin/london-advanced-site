@@ -83,14 +83,19 @@ function mobileMenuContent() {
       <span>The Other London</span>
       <strong>Guide ↗</strong>
     </a>
-    <button class="mobile-section-link" type="button" data-scroll-target="events" data-events-nav hidden>
-      <span>Three featured selections</span>
-      <strong>Highlights</strong>
-    </button>
-    <a class="mobile-section-link" href="/events/" data-events-nav hidden>
-      <span>The complete weekend edit</span>
-      <strong>All events</strong>
-    </a>
+    <details class="mobile-week-menu" data-events-nav hidden>
+      <summary><span>Weekend selections</span><strong>This week</strong></summary>
+      <div>
+        <a href="#events" data-track="events:mobile-highlights">
+          <span>Three featured selections</span>
+          <strong>Highlights</strong>
+        </a>
+        <a href="/events/" data-track="events:mobile-all">
+          <span>The complete weekend edit</span>
+          <strong>All events</strong>
+        </a>
+      </div>
+    </details>
     <button class="mobile-section-link" type="button" data-scroll-target="journal">
       <span>Places and ideas</span>
       <strong>Journal</strong>
@@ -249,8 +254,19 @@ function render() {
           <div class="nav-menu-panel tools-menu-panel">${toolMenuLinks()}</div>
         </details>
         <a href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
-        <button class="nav-section-button" type="button" data-scroll-target="events" data-events-nav hidden>Highlights</button>
-        <a href="/events/" data-events-nav hidden>All events</a>
+        <details class="nav-dropdown week-menu" data-events-nav hidden>
+          <summary>This week</summary>
+          <div class="nav-menu-panel week-menu-panel">
+            <a href="#events" data-track="events:menu-highlights">
+              <span>Three featured selections</span>
+              <strong>Highlights</strong>
+            </a>
+            <a href="/events/" data-track="events:menu-all">
+              <span>The complete weekend edit</span>
+              <strong>All events</strong>
+            </a>
+          </div>
+        </details>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
         <details class="nav-dropdown community-menu">
           <summary>Community</summary>

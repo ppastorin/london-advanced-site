@@ -88,6 +88,7 @@ section[id] { scroll-margin-top: 76px; }
 .nav-menu-panel span { color: var(--muted); font-size: 11px; }
 .nav-menu-panel strong { font-size: 13px; }
 .community-menu-panel { left: auto; right: 0; width: min(250px, 82vw); transform: none; }
+.week-menu-panel { width: min(280px, 82vw); }
 .mobile-menu { display: none; justify-self: end; }
 .mobile-menu > summary {
   display: flex;
@@ -140,6 +141,23 @@ section[id] { scroll-margin-top: 76px; }
 .mobile-section-link:hover { background: var(--paper); }
 .mobile-section-link span { color: var(--muted); font-size: 11px; }
 .mobile-section-link strong { font-size: 13px; }
+.mobile-week-menu { border-bottom: 1px solid var(--line); }
+.mobile-week-menu > summary {
+  min-height: 44px;
+  padding: 9px 10px;
+  display: grid;
+  gap: 2px;
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+.mobile-week-menu > summary::-webkit-details-marker { display: none; }
+.mobile-week-menu > summary::after { content: "+"; position: absolute; right: 12px; top: 50%; color: var(--gold); font-weight: 700; transform: translateY(-50%); }
+.mobile-week-menu[open] > summary::after { content: "−"; }
+.mobile-week-menu > summary span { color: var(--muted); font-size: 11px; }
+.mobile-week-menu > summary strong { font-size: 13px; }
+.mobile-week-menu > div { padding: 0 8px 8px 16px; background: var(--paper); }
+.mobile-week-menu > div a { padding-left: 12px; border-left: 2px solid var(--gold); }
 
 .eyebrow { font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 .button {
