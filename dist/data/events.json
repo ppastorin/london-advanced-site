@@ -1,10 +1,15 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "generated_at": "2026-09-13T11:01:00+01:00",
   "valid_from": "2026-09-13",
   "valid_until": "2026-09-20",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
+  "homepage_event_ids": [
+    "hello-earth-crossness-2026-09-19",
+    "visit-my-mosque-east-london-2026-09-19",
+    "reviving-craft-somerset-house-2026-09-18"
+  ],
   "events": [
     {
       "id": "hello-earth-crossness-2026-09-19",
@@ -155,6 +160,206 @@
       "publish_at": "2026-09-13T11:01:00+01:00",
       "expire_at": "2026-09-18T18:15:00+01:00",
       "duplicate_key": "somerset-house|2026-09-18|reviving-craft"
+    },
+    {
+      "id": "sacred-treasures-kyiv-va-2026-09-18",
+      "title_en": "Sacred Treasures from Kyiv at the V&A",
+      "title_it": "Sacred Treasures from Kyiv al V&A",
+      "summary_en": "Seven Ukrainian Baroque sacred works from the Kyiv-Pechersk Lavra are shown in the UK for the first time, including an icon, altar Gospel and silver chalice.",
+      "summary_it": "Sette opere sacre del barocco ucraino dalla Kyiv-Pechersk Lavra arrivano per la prima volta nel Regno Unito, tra cui un’icona, un Vangelo da altare e un calice d’argento.",
+      "start": "2026-09-18T10:00:00+01:00",
+      "end": "2026-09-20T17:45:00+01:00",
+      "venue": {
+        "name": "V&A South Kensington",
+        "address": "Cromwell Road, London",
+        "postcode": "SW7 2RL",
+        "borough": "Kensington and Chelsea"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 8,
+        "reason": "A rare first UK display that connects Ukrainian religious heritage, Baroque craft and cultural preservation at no cost.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv",
+      "verification": {
+        "verified_at": "2026-09-13T11:01:00+01:00",
+        "confidence": "high",
+        "source_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-13T11:01:00+01:00",
+      "expire_at": "2026-09-20T18:00:00+01:00",
+      "duplicate_key": "va-south-kensington|2026-09-18|sacred-treasures-kyiv"
+    },
+    {
+      "id": "crossing-borders-horniman-2026-09-19",
+      "title_en": "Crossing Borders at the Horniman Museum",
+      "title_it": "Crossing Borders all’Horniman Museum",
+      "summary_en": "A day shaped with refugees and people seeking protection, bringing together Afghan kite-making, Honduran dance, Ukrainian music, workshops, art and live podcasting.",
+      "summary_it": "Una giornata creata con rifugiati e persone in cerca di protezione, tra aquiloni afghani, danza honduregna, musica ucraina, laboratori, arte e podcast dal vivo.",
+      "start": "2026-09-19T11:00:00+01:00",
+      "end": "2026-09-19T16:00:00+01:00",
+      "venue": {
+        "name": "Horniman Museum and Gardens",
+        "address": "100 London Road, Forest Hill, London",
+        "postcode": "SE23 3PQ",
+        "borough": "Lewisham"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "community",
+      "advanced": {
+        "score": 8,
+        "reason": "A locally shaped cultural programme with distinctive traditions, direct community participation and excellent free access.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 1,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.horniman.ac.uk/event/crossing-borders/",
+      "verification": {
+        "verified_at": "2026-09-13T11:01:00+01:00",
+        "confidence": "high",
+        "source_url": "https://www.horniman.ac.uk/event/crossing-borders/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-13T11:01:00+01:00",
+      "expire_at": "2026-09-19T16:15:00+01:00",
+      "duplicate_key": "horniman-museum|2026-09-19|crossing-borders"
+    },
+    {
+      "id": "city-cycling-festival-hub-2026-09-20",
+      "title_en": "City Cycling Festival Hub at St Paul’s",
+      "title_it": "City Cycling Festival Hub a St Paul’s",
+      "summary_en": "Peter’s Hill hosts adapted cycles, free minor repairs, security marking, music and guided rides, including handcycles and cycles able to carry a wheelchair.",
+      "summary_it": "Peter’s Hill ospita biciclette adattate, piccole riparazioni gratuite, marcatura antifurto, musica e percorsi guidati, inclusi handcycle e mezzi per sedie a rotelle.",
+      "start": "2026-09-20T10:00:00+01:00",
+      "end": "2026-09-20T16:00:00+01:00",
+      "venue": {
+        "name": "Peter’s Hill",
+        "address": "Peter’s Hill, Queen Victoria Street, London",
+        "postcode": "EC4V 4DY",
+        "borough": "City of London"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "recommended",
+        "url": "https://lcc.org.uk/events/festival_hub_cityoflondon/"
+      },
+      "category": "community",
+      "advanced": {
+        "score": 7,
+        "reason": "Inclusive cycling and neighbourhood rides in an unusual City setting, with accessible equipment and free practical support.",
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 1,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://lcc.org.uk/events/festival_hub_cityoflondon/",
+      "verification": {
+        "verified_at": "2026-09-13T11:01:00+01:00",
+        "confidence": "high",
+        "source_url": "https://lcc.org.uk/events/festival_hub_cityoflondon/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-13T11:01:00+01:00",
+      "expire_at": "2026-09-20T16:15:00+01:00",
+      "duplicate_key": "peters-hill|2026-09-20|city-cycling-festival-hub"
+    },
+    {
+      "id": "brick-lane-curry-festival-2026-09-20",
+      "title_en": "Brick Lane Curry Festival",
+      "title_it": "Brick Lane Curry Festival",
+      "summary_en": "Banglatown’s food history takes over Brick Lane with music, dance, giant puppets, cookery demonstrations, family activities and offers from participating restaurants.",
+      "summary_it": "La storia gastronomica di Banglatown anima Brick Lane con musica, danza, grandi pupazzi, dimostrazioni di cucina, attività per famiglie e offerte nei ristoranti partecipanti.",
+      "start": "2026-09-20T12:00:00+01:00",
+      "end": "2026-09-20T19:00:00+01:00",
+      "venue": {
+        "name": "Brick Lane",
+        "address": "Brick Lane, London",
+        "postcode": "E1 6QR",
+        "borough": "Tower Hamlets"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "recommended",
+        "url": "https://www.towerhamlets.gov.uk/News_events/2026/August/Bigger-Better-and-Spicier.aspx"
+      },
+      "category": "local-culture",
+      "advanced": {
+        "score": 7,
+        "reason": "A free celebration rooted in Banglatown’s food heritage and independent restaurants, with a strong East End neighbourhood identity.",
+        "breakdown": {
+          "non_obvious": 1,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.towerhamlets.gov.uk/News_events/2026/August/Bigger-Better-and-Spicier.aspx",
+      "verification": {
+        "verified_at": "2026-09-13T11:01:00+01:00",
+        "confidence": "high",
+        "source_url": "https://www.towerhamlets.gov.uk/News_events/2026/August/Bigger-Better-and-Spicier.aspx"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-13T11:01:00+01:00",
+      "expire_at": "2026-09-20T19:15:00+01:00",
+      "duplicate_key": "brick-lane|2026-09-20|curry-festival"
     }
   ]
 }

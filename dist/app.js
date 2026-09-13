@@ -105,7 +105,10 @@ function eventsSection() {
       <div class="events-grid" data-events-feed aria-live="polite"></div>
       <div class="events-footer">
         <span data-events-updated>Updated Sunday and Thursday</span>
-        <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="events:facebook">Discuss in the Facebook group →</a>
+        <div class="events-footer-links">
+          <a href="/events/" data-events-all data-track="events:all">See the complete edit →</a>
+          <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="events:facebook">Discuss in the Facebook group →</a>
+        </div>
       </div>
     </section>`;
 }
@@ -170,17 +173,19 @@ function renderEventCard(event, index) {
 }
 
 function activeDigest(data, now = new Date()) {
-  if (!data || data.schema_version !== "1.0" || !Array.isArray(data.events)) return [];
+  if (!data || data.schema_version !== "1.1" || !Array.isArray(data.events) || !Array.isArray(data.homepage_event_ids)) return [];
   const londonDate = new Intl.DateTimeFormat("en-CA", {
     year: "numeric", month: "2-digit", day: "2-digit", timeZone: "Europe/London"
   }).format(now);
   if (londonDate < data.valid_from || londonDate > data.valid_until) return [];
-  return data.events.filter(event =>
+  const activeEvents = data.events.filter(event =>
     event.publication_status === "approved" &&
     Number.isInteger(event.advanced?.score) && event.advanced.score >= 7 &&
     Date.parse(event.publish_at) <= now.getTime() &&
     Date.parse(event.expire_at) > now.getTime()
-  ).slice(0, 3);
+  );
+  const byId = new Map(activeEvents.map(event => [event.id, event]));
+  return data.homepage_event_ids.map(id => byId.get(id)).filter(Boolean).slice(0, 3);
 }
 
 async function loadEvents() {
@@ -207,6 +212,14 @@ async function loadEvents() {
     section.querySelector("[data-events-updated]").textContent = `Last edited ${new Intl.DateTimeFormat("en-GB", {
       weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/London"
     }).format(updated)} · London time`;
+    const allLink = section.querySelector("[data-events-all]");
+    const activeCount = data.events.filter(event =>
+      event.publication_status === "approved" &&
+      Date.parse(event.publish_at) <= previewTime.getTime() &&
+      Date.parse(event.expire_at) > previewTime.getTime()
+    ).length;
+    allLink.textContent = `See all ${activeCount} weekend pick${activeCount === 1 ? "" : "s"} →`;
+    if (demoRequested && (localPreview || cloudflarePreview)) allLink.href = "/events/?events-demo=1";
     section.hidden = false;
     document.querySelectorAll("[data-events-nav]").forEach(control => { control.hidden = false; });
     bindTracking(feed);

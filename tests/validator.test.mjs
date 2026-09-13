@@ -5,8 +5,23 @@ import { validateDigest } from '../scripts/validate-events.mjs';
 
 const valid = JSON.parse(await readFile(new URL('../dist/data/events.json', import.meta.url), 'utf8'));
 
-test('accepts the supplied Phase 1 feed', () => {
+test('accepts the supplied full-list feed', () => {
   assert.deepEqual(validateDigest(valid), []);
+});
+
+function expandTo(candidate, count) {
+  while (candidate.events.length < count) {
+    const copy = structuredClone(candidate.events[0]);
+    copy.id = `additional-event-${candidate.events.length + 1}`;
+    copy.duplicate_key = `additional-venue|2099-01-${String(candidate.events.length + 2).padStart(2, '0')}|event-${candidate.events.length + 1}`;
+    candidate.events.push(copy);
+  }
+  return candidate;
+}
+
+test('accepts up to eight approved events while featuring only three', () => {
+  const candidate = expandTo(structuredClone(valid), 8);
+  assert.deepEqual(validateDigest(candidate), []);
 });
 
 test('rejects an event below the editorial threshold', () => {
@@ -33,8 +48,19 @@ test('rejects duplicate events', () => {
   assert.ok(validateDigest(candidate).some((error) => error.includes('duplicate_key is duplicated')));
 });
 
-test('rejects more than three homepage cards', () => {
+test('rejects more than eight events', () => {
+  const candidate = expandTo(structuredClone(valid), 9);
+  assert.ok(validateDigest(candidate).some((error) => error.includes('between 1 and 8')));
+});
+
+test('rejects more than three homepage selections', () => {
+  const candidate = expandTo(structuredClone(valid), 4);
+  candidate.homepage_event_ids.push(candidate.events[3].id);
+  assert.ok(validateDigest(candidate).some((error) => error.includes('homepage_event_ids')));
+});
+
+test('rejects a homepage selection that is missing from the feed', () => {
   const candidate = structuredClone(valid);
-  candidate.events.push(structuredClone(candidate.events[0]));
-  assert.ok(validateDigest(candidate).some((error) => error.includes('between 1 and 3')));
+  candidate.homepage_event_ids[0] = 'missing-event';
+  assert.ok(validateDigest(candidate).some((error) => error.includes('references missing event id')));
 });
