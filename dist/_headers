@@ -6,6 +6,9 @@
 /*.html
   Cache-Control: no-cache
 
+/data/events.json
+  Cache-Control: public, max-age=300, must-revalidate
+
 /assets/*
   Cache-Control: public, max-age=604800
 

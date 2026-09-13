@@ -83,12 +83,136 @@ function mobileMenuContent() {
       <span>The Other London</span>
       <strong>Guide ↗</strong>
     </a>
+    <button class="mobile-section-link" type="button" data-scroll-target="events" data-events-nav hidden>
+      <span>Free and low-cost events</span>
+      <strong>This week</strong>
+    </button>
     <button class="mobile-section-link" type="button" data-scroll-target="journal">
       <span>Places and ideas</span>
       <strong>Journal</strong>
     </button>
     <p class="mobile-menu-heading">Community</p>
     ${communityMenuLinks()}`;
+}
+
+function eventsSection() {
+  return `
+    <section id="events" class="events-section section-wrap" hidden>
+      <div class="section-heading horizontal events-heading">
+        <div><span>02 / Twice-weekly edit</span><h2>THIS WEEK,<br><em>BEYOND THE OBVIOUS</em></h2></div>
+        <p>Three free or unusually good-value London events, selected for access, local character and a story worth following.</p>
+      </div>
+      <div class="events-grid" data-events-feed aria-live="polite"></div>
+      <div class="events-footer">
+        <span data-events-updated>Updated Sunday and Thursday</span>
+        <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="events:facebook">Discuss in the Facebook group →</a>
+      </div>
+    </section>`;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>'"]/g, character => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
+  })[character]);
+}
+
+function safeHttpsUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+function formatEventDate(event) {
+  const start = new Date(event.start);
+  const end = new Date(event.end);
+  const date = new Intl.DateTimeFormat("en-GB", {
+    weekday: "short", day: "numeric", month: "short", timeZone: "Europe/London"
+  });
+  const time = new Intl.DateTimeFormat("en-GB", {
+    hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Europe/London"
+  });
+  const dayKey = value => new Intl.DateTimeFormat("en-CA", {
+    year: "numeric", month: "2-digit", day: "2-digit", timeZone: "Europe/London"
+  }).format(value);
+  if (dayKey(start) === dayKey(end)) return `${date.format(start)} · ${time.format(start)}–${time.format(end)}`;
+  return `${date.format(start)} – ${date.format(end)}`;
+}
+
+function bookingLabel(booking) {
+  if (booking.required) return "Booking required";
+  if (booking.status === "recommended") return "Booking recommended";
+  return "Drop in";
+}
+
+function renderEventCard(event, index) {
+  const officialUrl = safeHttpsUrl(event.official_url);
+  if (!officialUrl) return "";
+  const bookingUrl = safeHttpsUrl(event.booking?.url);
+  const actionUrl = bookingUrl || officialUrl;
+  return `
+    <article class="event-card">
+      <div class="event-card-top">
+        <span class="event-index">0${index + 1}</span>
+        <span class="event-price">${escapeHtml(event.price.display)}</span>
+      </div>
+      <p class="event-date">${escapeHtml(formatEventDate(event))}</p>
+      <h3>${escapeHtml(event.title_en)}</h3>
+      <p class="event-summary">${escapeHtml(event.summary_en)}</p>
+      <dl class="event-details">
+        <div><dt>Where</dt><dd>${escapeHtml(event.venue.name)}, ${escapeHtml(event.venue.borough)}</dd></div>
+        <div><dt>Access</dt><dd>${escapeHtml(bookingLabel(event.booking))}</dd></div>
+      </dl>
+      <a class="event-action" href="${escapeHtml(actionUrl)}" target="_blank" rel="noopener" data-track="event:${escapeHtml(event.id)}">Check details <span aria-hidden="true">↗</span></a>
+    </article>`;
+}
+
+function activeDigest(data, now = new Date()) {
+  if (!data || data.schema_version !== "1.0" || !Array.isArray(data.events)) return [];
+  const londonDate = new Intl.DateTimeFormat("en-CA", {
+    year: "numeric", month: "2-digit", day: "2-digit", timeZone: "Europe/London"
+  }).format(now);
+  if (londonDate < data.valid_from || londonDate > data.valid_until) return [];
+  return data.events.filter(event =>
+    event.publication_status === "approved" &&
+    Number.isInteger(event.advanced?.score) && event.advanced.score >= 7 &&
+    Date.parse(event.publish_at) <= now.getTime() &&
+    Date.parse(event.expire_at) > now.getTime()
+  ).slice(0, 3);
+}
+
+async function loadEvents() {
+  const section = document.querySelector("#events");
+  const feed = section?.querySelector("[data-events-feed]");
+  if (!section || !feed) return;
+  try {
+    const response = await fetch("/data/events.json", { cache: "no-store" });
+    if (!response.ok) throw new Error(`Events feed returned ${response.status}`);
+    const data = await response.json();
+    const hostname = window.location.hostname;
+    const localPreview = ["localhost", "127.0.0.1"].includes(hostname);
+    const cloudflarePreview = hostname.endsWith(".workers.dev") &&
+      hostname.includes("-london-advanced-site.") &&
+      hostname !== "london-advanced-site.ppastorin.workers.dev";
+    const demoRequested = new URLSearchParams(window.location.search).get("events-demo") === "1";
+    const previewTime = demoRequested && (localPreview || cloudflarePreview)
+      ? new Date(`${data.valid_from}T12:00:00Z`)
+      : new Date();
+    const events = activeDigest(data, previewTime);
+    if (!events.length) return;
+    feed.innerHTML = events.map(renderEventCard).join("");
+    const updated = new Date(data.generated_at);
+    section.querySelector("[data-events-updated]").textContent = `Last edited ${new Intl.DateTimeFormat("en-GB", {
+      weekday: "long", day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/London"
+    }).format(updated)} · London time`;
+    section.hidden = false;
+    document.querySelectorAll("[data-events-nav]").forEach(control => { control.hidden = false; });
+    bindTracking(feed);
+  } catch (error) {
+    console.warn("London Advanced events feed is unavailable.", error);
+  }
 }
 
 function render() {
@@ -108,6 +232,7 @@ function render() {
           <div class="nav-menu-panel tools-menu-panel">${toolMenuLinks()}</div>
         </details>
         <a href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
+        <button class="nav-section-button" type="button" data-scroll-target="events" data-events-nav hidden>This week</button>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
         <details class="nav-dropdown community-menu">
           <summary>Community</summary>
@@ -135,13 +260,15 @@ function render() {
       <div class="app-grid">${appCards()}</div>
     </section>
 
+    ${eventsSection()}
+
     <section id="guide" class="guide-split section-wrap">
       <div class="guide-cover-wrap"><img src="assets/guide-cover.jpg" alt="Cover of The Other London guide"><span>124 pages</span></div>
       <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>A field guide for people who would rather look twice.</h2><p>Handpicked places, practical details, original photography and map links—designed to help you find the London that standard guides miss.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Buy the full guide</a><a class="text-link" href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:sample">See the free sample →</a></div></div>
     </section>
 
     <section id="journal" class="journal section-wrap">
-      <div class="section-heading horizontal"><div><span>02 / Field notes</span><h2>Three places to start.</h2></div><p>Unusual corners, quiet routes and overlooked details selected from The Other London.</p></div>
+      <div class="section-heading horizontal"><div><span>03 / Field notes</span><h2>Three places to start.</h2></div><p>Unusual corners, quiet routes and overlooked details selected from The Other London.</p></div>
       <div class="story-grid">${storyCards()}</div>
     </section>
 
@@ -156,6 +283,7 @@ function render() {
   bindSectionScrolling();
   bindDropdownMenus();
   bindTracking();
+  loadEvents();
 }
 
 function bindSectionScrolling() {
@@ -235,8 +363,8 @@ function track(label) {
   }
 }
 
-function bindTracking() {
-  document.querySelectorAll("[data-track]").forEach(link => link.addEventListener("click", () => track(link.dataset.track)));
+function bindTracking(root = document) {
+  root.querySelectorAll("[data-track]").forEach(link => link.addEventListener("click", () => track(link.dataset.track)));
 }
 
 render();

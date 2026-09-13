@@ -31,6 +31,7 @@ const requiredAssets = [
   "dist/styles.css",
   "dist/app.js",
   "dist/content.js",
+  "dist/data/events.json",
   "dist/tool-page.css",
   "dist/tool-page.js",
   "dist/_headers",
@@ -76,6 +77,14 @@ const expectedTools = new Map([
 ]);
 
 const contentText = requireFile("dist/content.js");
+const appText = requireFile("dist/app.js");
+const stylesText = requireFile("dist/styles.css");
+if (!appText.includes('id="events"') || !appText.includes('fetch("/data/events.json"')) {
+  fail("The homepage event component or its JSON feed request is missing.");
+}
+if (!stylesText.includes(".events-section") || !stylesText.includes(".event-card")) {
+  fail("The homepage event component styles are missing.");
+}
 const sandbox = { window: {} };
 try {
   vm.runInNewContext(contentText, sandbox, { filename: "dist/content.js" });
@@ -131,6 +140,9 @@ for (const forbiddenName of ["wrangler.jsonc", "README.md", "INSTALL.md", "packa
 }
 
 const headers = requireFile("dist/_headers");
+if (!headers.includes("/data/events.json") || !headers.includes("max-age=300")) {
+  fail("dist/_headers must give the events feed a five-minute cache policy.");
+}
 for (const requiredFrameHost of [
   "london-now.ppastorin.workers.dev",
   "london-advanced-crowd-pressure.ppastorin.workers.dev",

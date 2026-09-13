@@ -4,8 +4,12 @@
   "private": true,
   "description": "London Advanced Cloudflare portal and branded tool routes",
   "scripts": {
-    "test": "node scripts/validate-site.mjs",
-    "check": "node scripts/validate-site.mjs",
+    "test": "node scripts/validate-site.mjs && node --test tests/*.test.mjs && node scripts/validate-events.mjs dist/data/events.json",
+    "check": "npm test",
+    "validate:events": "node scripts/validate-events.mjs dist/data/events.json",
+    "stage:events": "node scripts/stage-events.mjs",
+    "preview": "npx wrangler dev",
+    "deploy": "npm test && npx wrangler deploy",
     "links": "node scripts/list-links.mjs",
     "health": "node scripts/check-endpoints.mjs"
   }
