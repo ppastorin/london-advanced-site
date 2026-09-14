@@ -64,3 +64,24 @@ test('rejects a homepage selection that is missing from the feed', () => {
   candidate.homepage_event_ids[0] = 'missing-event';
   assert.ok(validateDigest(candidate).some((error) => error.includes('references missing event id')));
 });
+
+test('accepts the approved Ticketmaster UK affiliate deep link', () => {
+  const candidate = structuredClone(valid);
+  candidate.events[0].booking.url = 'https://www.ticketmaster.co.uk/fontaines-dc-tickets/artist/5281142';
+  candidate.events[0].booking.affiliate_url = 'https://ticketmaster.evyy.net/c/7729619/1965662/24023?u=https%3A%2F%2Fwww.ticketmaster.co.uk%2Ffontaines-dc-tickets%2Fartist%2F5281142';
+  assert.deepEqual(validateDigest(candidate), []);
+});
+
+test('rejects an affiliate link for a different publisher account', () => {
+  const candidate = structuredClone(valid);
+  candidate.events[0].booking.url = 'https://www.ticketmaster.co.uk/fontaines-dc-tickets/artist/5281142';
+  candidate.events[0].booking.affiliate_url = 'https://ticketmaster.evyy.net/c/9999999/1965662/24023?u=https%3A%2F%2Fwww.ticketmaster.co.uk%2Ffontaines-dc-tickets%2Fartist%2F5281142';
+  assert.ok(validateDigest(candidate).some((error) => error.includes('approved Ticketmaster UK affiliate account')));
+});
+
+test('rejects an affiliate destination that differs from the direct booking URL', () => {
+  const candidate = structuredClone(valid);
+  candidate.events[0].booking.url = 'https://www.ticketmaster.co.uk/fontaines-dc-tickets/artist/5281142';
+  candidate.events[0].booking.affiliate_url = 'https://ticketmaster.evyy.net/c/7729619/1965662/24023?u=https%3A%2F%2Fwww.ticketmaster.co.uk%2Fanother-artist';
+  assert.ok(validateDigest(candidate).some((error) => error.includes('exactly match')));
+});

@@ -361,8 +361,10 @@ section[id] { scroll-margin-top: 76px; }
 .event-details div { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 10px; }
 .event-details dt { color: #7a746d; font: 500 9px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 .event-details dd { margin: 0; font-size: 12px; line-height: 1.35; }
-.event-action { margin-top: auto; padding-top: 16px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); font-size: 13px; font-weight: 700; }
+.event-action-group { margin-top: auto; }
+.event-action { padding-top: 16px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); font-size: 13px; font-weight: 700; }
 .event-action:hover { color: var(--red); }
+.affiliate-note { margin: 8px 0 0; color: #6f6861; font: 9px/1.45 var(--mono); letter-spacing: .015em; }
 .events-footer { margin-top: 22px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: #c7bda9; font: 11px var(--mono); }
 .events-footer a { color: var(--paper); font-family: var(--sans); font-weight: 700; }
 .events-footer a:hover { color: var(--gold); }
@@ -537,7 +539,7 @@ footer span, footer small { font-size: 12px; }
   .events-page-intro { max-width: 620px; }
   .events-day { grid-template-columns: 1fr; gap: 10px; }
   .events-list-card { grid-template-columns: 110px minmax(0, 1fr) 180px; }
-  .events-list-action { grid-column: 2 / -1; }
+  .events-list-action-group { grid-column: 2 / -1; }
   .story-grid { grid-template-columns: 1fr; }
   .story-card { min-height: 230px; }
 }
@@ -584,7 +586,7 @@ footer span, footer small { font-size: 12px; }
   .events-list { gap: 34px; }
   .events-list-card { padding: 22px 0 25px; grid-template-columns: 1fr; gap: 18px; }
   .events-list-meta { align-items: center; flex-direction: row; justify-content: space-between; }
-  .events-list-action { grid-column: auto; }
+  .events-list-action-group { grid-column: auto; }
   .events-page-community { padding: 46px 18px; align-items: flex-start; flex-direction: column; }
   .guide-cover-wrap { max-width: 260px; }
   .guide-cover-wrap span { right: -12px; }

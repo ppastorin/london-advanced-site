@@ -96,7 +96,11 @@
           "properties": {
             "required": { "type": "boolean" },
             "status": { "enum": ["drop-in", "recommended", "required"] },
-            "url": { "type": ["string", "null"] }
+            "url": { "type": ["string", "null"] },
+            "affiliate_url": {
+              "type": ["string", "null"],
+              "pattern": "^https://ticketmaster\\.evyy\\.net/c/7729619/1965662/24023\\?u="
+            }
           }
         },
         "category": {

@@ -36,6 +36,19 @@ and availability. Use the official source when newsletters conflict. Do not publ
 candidate unless confidence is high. Paraphrase newsletter wording and do not reuse
 newsletter images.
 
+For a booking destination on `ticketmaster.co.uk` or `www.ticketmaster.co.uk`, keep the
+clean, direct Ticketmaster UK URL in `booking.url` and create `booking.affiliate_url`
+with this exact deep-link wrapper:
+
+`https://ticketmaster.evyy.net/c/7729619/1965662/24023?u=ENCODED_DESTINATION`
+
+Replace `ENCODED_DESTINATION` with `encodeURIComponent(booking.url)`. The decoded `u`
+parameter must exactly match `booking.url`. Do not add any other query parameters. Do
+not create `booking.affiliate_url` for another ticketing provider or another Ticketmaster
+country. When there is no eligible Ticketmaster UK booking link, omit
+`booking.affiliate_url` or set it to `null`. Keep `official_url` and
+`verification.source_url` as clean, non-affiliate source URLs.
+
 Keep between one and eight strongest verified events for the complete `/events/` page.
 When more than eight pass, prioritise quality first and balance dates, boroughs and
 categories when quality is comparable. From that same approved set, select between one

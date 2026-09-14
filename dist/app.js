@@ -137,6 +137,17 @@ function safeHttpsUrl(value) {
   }
 }
 
+function safeTicketmasterAffiliateUrl(value) {
+  const safeUrl = safeHttpsUrl(value);
+  if (!safeUrl) return null;
+  const url = new URL(safeUrl);
+  if (url.hostname !== "ticketmaster.evyy.net" || url.pathname !== "/c/7729619/1965662/24023") return null;
+  const destination = safeHttpsUrl(url.searchParams.get("u"));
+  if (!destination) return null;
+  const destinationHost = new URL(destination).hostname;
+  return ["ticketmaster.co.uk", "www.ticketmaster.co.uk"].includes(destinationHost) ? safeUrl : null;
+}
+
 function formatEventDate(event) {
   const start = new Date(event.start);
   const end = new Date(event.end);
@@ -163,7 +174,13 @@ function renderEventCard(event, index) {
   const officialUrl = safeHttpsUrl(event.official_url);
   if (!officialUrl) return "";
   const bookingUrl = safeHttpsUrl(event.booking?.url);
-  const actionUrl = bookingUrl || officialUrl;
+  const affiliateUrl = safeTicketmasterAffiliateUrl(event.booking?.affiliate_url);
+  const actionUrl = affiliateUrl || bookingUrl || officialUrl;
+  const actionLabel = affiliateUrl ? "Ad · Book on Ticketmaster" : "Check details";
+  const actionRel = affiliateUrl ? "sponsored noopener noreferrer" : "noopener noreferrer";
+  const affiliateNote = affiliateUrl
+    ? '<p class="affiliate-note">We may earn a commission at no extra cost to you.</p>'
+    : "";
   return `
     <article class="event-card">
       <div class="event-card-top">
@@ -177,7 +194,10 @@ function renderEventCard(event, index) {
         <div><dt>Where</dt><dd>${escapeHtml(event.venue.name)}, ${escapeHtml(event.venue.borough)}</dd></div>
         <div><dt>Access</dt><dd>${escapeHtml(bookingLabel(event.booking))}</dd></div>
       </dl>
-      <a class="event-action" href="${escapeHtml(actionUrl)}" target="_blank" rel="noopener" data-track="event:${escapeHtml(event.id)}">Check details <span aria-hidden="true">↗</span></a>
+      <div class="event-action-group">
+        <a class="event-action" href="${escapeHtml(actionUrl)}" target="_blank" rel="${actionRel}" data-track="event:${escapeHtml(event.id)}">${actionLabel} <span aria-hidden="true">↗</span></a>
+        ${affiliateNote}
+      </div>
     </article>`;
 }
 

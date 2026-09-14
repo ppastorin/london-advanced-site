@@ -15,6 +15,17 @@ function safeHttpsUrl(value) {
   }
 }
 
+function safeTicketmasterAffiliateUrl(value) {
+  const safeUrl = safeHttpsUrl(value);
+  if (!safeUrl) return null;
+  const url = new URL(safeUrl);
+  if (url.hostname !== "ticketmaster.evyy.net" || url.pathname !== "/c/7729619/1965662/24023") return null;
+  const destination = safeHttpsUrl(url.searchParams.get("u"));
+  if (!destination) return null;
+  const destinationHost = new URL(destination).hostname;
+  return ["ticketmaster.co.uk", "www.ticketmaster.co.uk"].includes(destinationHost) ? safeUrl : null;
+}
+
 function londonDayKey(value) {
   return new Intl.DateTimeFormat("en-CA", {
     year: "numeric", month: "2-digit", day: "2-digit", timeZone: "Europe/London"
@@ -60,7 +71,13 @@ function renderEvent(event) {
   const officialUrl = safeHttpsUrl(event.official_url);
   if (!officialUrl) return "";
   const bookingUrl = safeHttpsUrl(event.booking?.url);
-  const actionUrl = bookingUrl || officialUrl;
+  const affiliateUrl = safeTicketmasterAffiliateUrl(event.booking?.affiliate_url);
+  const actionUrl = affiliateUrl || bookingUrl || officialUrl;
+  const actionLabel = affiliateUrl ? "Ad · Book on Ticketmaster" : "Check official details";
+  const actionRel = affiliateUrl ? "sponsored noopener noreferrer" : "noopener noreferrer";
+  const affiliateNote = affiliateUrl
+    ? '<p class="affiliate-note">We may earn a commission at no extra cost to you.</p>'
+    : "";
   return `
     <article class="events-list-card">
       <div class="events-list-meta">
@@ -77,7 +94,10 @@ function renderEvent(event) {
         <div><dt>Address</dt><dd>${escapeHtml(event.venue.address)}, ${escapeHtml(event.venue.postcode)}</dd></div>
         <div><dt>Access</dt><dd>${escapeHtml(bookingLabel(event.booking))}</dd></div>
       </dl>
-      <a class="events-list-action" href="${escapeHtml(actionUrl)}" target="_blank" rel="noopener" data-event-id="${escapeHtml(event.id)}">Check official details <span aria-hidden="true">↗</span></a>
+      <div class="events-list-action-group">
+        <a class="events-list-action" href="${escapeHtml(actionUrl)}" target="_blank" rel="${actionRel}" data-event-id="${escapeHtml(event.id)}">${actionLabel} <span aria-hidden="true">↗</span></a>
+        ${affiliateNote}
+      </div>
     </article>`;
 }
 
