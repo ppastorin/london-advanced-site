@@ -4,6 +4,9 @@ import { fileURLToPath } from 'node:url';
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const HTTPS_RE = /^https:\/\//i;
+const TICKETMASTER_AFFILIATE_HOST = 'ticketmaster.evyy.net';
+const TICKETMASTER_AFFILIATE_PATH = '/c/7729619/1965662/24023';
+const TICKETMASTER_UK_HOSTS = new Set(['ticketmaster.co.uk', 'www.ticketmaster.co.uk']);
 const ALLOWED_SOURCES = new Set(['Londonist', 'The Times', 'Londonfy', 'London x London']);
 const ALLOWED_CATEGORIES = new Set([
   'architecture',
@@ -39,6 +42,38 @@ function exactKeys(errors, object, path, allowed) {
     if (!allowed.has(key)) errors.push(`${path}.${key} is not allowed`);
   }
   return true;
+}
+
+function validateAffiliateUrl(errors, affiliateUrl, bookingUrl, path) {
+  if (affiliateUrl === null || affiliateUrl === undefined) return;
+  if (typeof affiliateUrl !== 'string') {
+    errors.push(`${path} must be an HTTPS Ticketmaster affiliate URL or null`);
+    return;
+  }
+
+  try {
+    const url = new URL(affiliateUrl);
+    if (url.protocol !== 'https:' || url.hostname !== TICKETMASTER_AFFILIATE_HOST || url.pathname !== TICKETMASTER_AFFILIATE_PATH) {
+      errors.push(`${path} must use the approved Ticketmaster UK affiliate account`);
+      return;
+    }
+    const parameterNames = [...url.searchParams.keys()];
+    if (parameterNames.length !== 1 || parameterNames[0] !== 'u' || url.hash) {
+      errors.push(`${path} must contain only the Ticketmaster destination parameter u`);
+      return;
+    }
+    const destination = url.searchParams.get('u');
+    const destinationUrl = new URL(destination);
+    if (destinationUrl.protocol !== 'https:' || !TICKETMASTER_UK_HOSTS.has(destinationUrl.hostname)) {
+      errors.push(`${path} destination must be on ticketmaster.co.uk`);
+      return;
+    }
+    if (destinationUrl.href !== bookingUrl) {
+      errors.push(`${path} destination must exactly match ${path.replace(/affiliate_url$/, 'url')}`);
+    }
+  } catch {
+    errors.push(`${path} must be a valid Ticketmaster affiliate URL`);
+  }
 }
 
 export function validateDigest(data) {
@@ -135,12 +170,13 @@ function validateEvent(event, path, errors) {
     if (event.price.classification === 'exceptional' && !(amount > 10 && amount <= 15)) errors.push(`${path}.price exceptional events must cost £10.01–£15`);
   }
 
-  if (exactKeys(errors, event.booking, `${path}.booking`, new Set(['required', 'status', 'url']))) {
+  if (exactKeys(errors, event.booking, `${path}.booking`, new Set(['required', 'status', 'url', 'affiliate_url']))) {
     if (typeof event.booking.required !== 'boolean') errors.push(`${path}.booking.required must be boolean`);
     if (!['drop-in', 'recommended', 'required'].includes(event.booking.status)) errors.push(`${path}.booking.status is invalid`);
     if (event.booking.required && event.booking.status !== 'required') errors.push(`${path}.booking status must be required when required is true`);
     if (event.booking.required && !HTTPS_RE.test(event.booking.url ?? '')) errors.push(`${path}.booking.url must be HTTPS when booking is required`);
     if (event.booking.url !== null && !HTTPS_RE.test(event.booking.url ?? '')) errors.push(`${path}.booking.url must be HTTPS or null`);
+    validateAffiliateUrl(errors, event.booking.affiliate_url, event.booking.url, `${path}.booking.affiliate_url`);
   }
 
   if (!ALLOWED_CATEGORIES.has(event.category)) errors.push(`${path}.category is invalid`);
