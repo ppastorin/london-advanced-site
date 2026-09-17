@@ -1,29 +1,29 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-09-13T11:01:00+01:00",
-  "valid_from": "2026-09-13",
+  "generated_at": "2026-09-17T11:01:20+01:00",
+  "valid_from": "2026-09-17",
   "valid_until": "2026-09-20",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
     "hello-earth-crossness-2026-09-19",
-    "visit-my-mosque-east-london-2026-09-19",
+    "costermongers-harvest-festival-2026-09-20",
     "reviving-craft-somerset-house-2026-09-18"
   ],
   "events": [
     {
-      "id": "hello-earth-crossness-2026-09-19",
-      "title_en": "HELLO EARTH at Crossness Pumping Station",
-      "title_it": "HELLO EARTH alla Crossness Pumping Station",
-      "summary_en": "Artists, ecologists and local groups launch a new Bexley programme inside the Victorian “Cathedral of Sewage”, with talks, films, music, children’s workshops and rare station tours.",
-      "summary_it": "Artisti, ecologisti e realtà locali lanciano un nuovo programma di Bexley nella “cattedrale delle acque reflue” vittoriana, tra incontri, film, musica, laboratori e visite.",
-      "start": "2026-09-19T17:00:00+01:00",
-      "end": "2026-09-19T21:00:00+01:00",
+      "id": "sacred-treasures-kyiv-va-2026-09-18",
+      "title_en": "Sacred Treasures from Kyiv at the V&A",
+      "title_it": "Sacred Treasures from Kyiv al V&A",
+      "summary_en": "Seven Ukrainian Baroque sacred works from the Kyiv-Pechersk Lavra are shown in the UK for the first time, including an icon, altar Gospel and silver chalice.",
+      "summary_it": "Sette opere sacre del barocco ucraino dalla Kyiv-Pechersk Lavra arrivano per la prima volta nel Regno Unito, tra cui un’icona, un Vangelo da altare e un calice d’argento.",
+      "start": "2026-09-18T10:00:00+01:00",
+      "end": "2026-09-20T17:45:00+01:00",
       "venue": {
-        "name": "Crossness Pumping Station",
-        "address": "Bazalgette Way, Thamesmead, London",
-        "postcode": "SE2 9AQ",
-        "borough": "Bexley"
+        "name": "V&A South Kensington",
+        "address": "Cromwell Road, London",
+        "postcode": "SW7 2RL",
+        "borough": "Kensington and Chelsea"
       },
       "price": {
         "amount_gbp": 0,
@@ -31,35 +31,81 @@
         "classification": "free"
       },
       "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.eventbrite.co.uk/e/hello-earth-launch-party-tickets-1998365867103"
+        "required": false,
+        "status": "drop-in",
+        "url": null
       },
-      "category": "urban-exploration",
+      "category": "heritage-history",
       "advanced": {
-        "score": 10,
-        "reason": "Exceptional access to major Victorian infrastructure, combined with local ecological culture and a free one-off programme.",
+        "score": 8,
+        "reason": "A rare first UK display that connects Ukrainian religious heritage, Baroque craft and cultural preservation at no cost.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
+          "unusual_access": 1,
+          "local_character": 0,
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://threeriversbexley.org/",
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv",
       "verification": {
-        "verified_at": "2026-09-13T11:01:00+01:00",
+        "verified_at": "2026-09-17T11:01:20+01:00",
         "confidence": "high",
-        "source_url": "https://threeriversbexley.org/"
+        "source_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-13T11:01:00+01:00",
-      "expire_at": "2026-09-19T21:15:00+01:00",
-      "duplicate_key": "crossness-pumping-station|2026-09-19|hello-earth-launch"
+      "publish_at": "2026-09-17T11:01:20+01:00",
+      "expire_at": "2026-09-20T18:00:00+01:00",
+      "duplicate_key": "va-south-kensington|2026-09-18|sacred-treasures-kyiv"
+    },
+    {
+      "id": "reviving-craft-somerset-house-2026-09-18",
+      "title_en": "Reviving Craft at Somerset House",
+      "title_it": "Reviving Craft a Somerset House",
+      "summary_en": "More than 70 artists trace China’s living craft heritage through ceramics, glass, textiles, jewellery, furniture and immersive digital work in the South Wing galleries.",
+      "summary_it": "Oltre 70 artisti raccontano il patrimonio artigianale cinese attraverso ceramica, vetro, tessuti, gioielli, arredi e opere digitali immersive nelle gallerie South Wing.",
+      "start": "2026-09-18T11:00:00+01:00",
+      "end": "2026-09-18T18:00:00+01:00",
+      "venue": {
+        "name": "Somerset House, Embankment Galleries South Wing",
+        "address": "Somerset House, Strand, London",
+        "postcode": "WC2R 1LA",
+        "borough": "Westminster"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 8,
+        "reason": "A substantial free exhibition links living craft traditions with contemporary and immersive design in a distinctive London setting.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind",
+      "verification": {
+        "verified_at": "2026-09-17T11:01:20+01:00",
+        "confidence": "high",
+        "source_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-17T11:01:20+01:00",
+      "expire_at": "2026-09-18T18:15:00+01:00",
+      "duplicate_key": "somerset-house|2026-09-18|reviving-craft"
     },
     {
       "id": "visit-my-mosque-east-london-2026-09-19",
@@ -97,119 +143,17 @@
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
+      "newsletter_sources": ["Londonist"],
       "official_url": "https://www.eastlondonmosque.org.uk/Event/visit-my-mosque-2026-open-day",
       "verification": {
-        "verified_at": "2026-09-13T11:01:00+01:00",
+        "verified_at": "2026-09-17T11:01:20+01:00",
         "confidence": "high",
         "source_url": "https://www.eastlondonmosque.org.uk/Event/visit-my-mosque-2026-open-day"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-13T11:01:00+01:00",
+      "publish_at": "2026-09-17T11:01:20+01:00",
       "expire_at": "2026-09-19T15:15:00+01:00",
       "duplicate_key": "london-muslim-centre|2026-09-19|visit-my-mosque-open-day"
-    },
-    {
-      "id": "reviving-craft-somerset-house-2026-09-18",
-      "title_en": "Reviving Craft at Somerset House",
-      "title_it": "Reviving Craft a Somerset House",
-      "summary_en": "More than 60 artists trace China’s living craft heritage through ceramics, glass, textiles, jewellery, furniture and immersive digital work in the South Wing galleries.",
-      "summary_it": "Oltre 60 artisti raccontano il patrimonio artigianale cinese attraverso ceramica, vetro, tessuti, gioielli, arredi e opere digitali immersive nelle gallerie South Wing.",
-      "start": "2026-09-18T11:00:00+01:00",
-      "end": "2026-09-18T18:00:00+01:00",
-      "venue": {
-        "name": "Somerset House, Embankment Galleries South Wing",
-        "address": "Somerset House, Strand, London",
-        "postcode": "WC2R 1LA",
-        "borough": "Westminster"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "art-design",
-      "advanced": {
-        "score": 8,
-        "reason": "A substantial free exhibition links living craft traditions with contemporary and immersive design in a distinctive London setting.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 0,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind",
-      "verification": {
-        "verified_at": "2026-09-13T11:01:00+01:00",
-        "confidence": "high",
-        "source_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-13T11:01:00+01:00",
-      "expire_at": "2026-09-18T18:15:00+01:00",
-      "duplicate_key": "somerset-house|2026-09-18|reviving-craft"
-    },
-    {
-      "id": "sacred-treasures-kyiv-va-2026-09-18",
-      "title_en": "Sacred Treasures from Kyiv at the V&A",
-      "title_it": "Sacred Treasures from Kyiv al V&A",
-      "summary_en": "Seven Ukrainian Baroque sacred works from the Kyiv-Pechersk Lavra are shown in the UK for the first time, including an icon, altar Gospel and silver chalice.",
-      "summary_it": "Sette opere sacre del barocco ucraino dalla Kyiv-Pechersk Lavra arrivano per la prima volta nel Regno Unito, tra cui un’icona, un Vangelo da altare e un calice d’argento.",
-      "start": "2026-09-18T10:00:00+01:00",
-      "end": "2026-09-20T17:45:00+01:00",
-      "venue": {
-        "name": "V&A South Kensington",
-        "address": "Cromwell Road, London",
-        "postcode": "SW7 2RL",
-        "borough": "Kensington and Chelsea"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 8,
-        "reason": "A rare first UK display that connects Ukrainian religious heritage, Baroque craft and cultural preservation at no cost.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 0,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv",
-      "verification": {
-        "verified_at": "2026-09-13T11:01:00+01:00",
-        "confidence": "high",
-        "source_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-13T11:01:00+01:00",
-      "expire_at": "2026-09-20T18:00:00+01:00",
-      "duplicate_key": "va-south-kensington|2026-09-18|sacred-treasures-kyiv"
     },
     {
       "id": "crossing-borders-horniman-2026-09-19",
@@ -247,19 +191,65 @@
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
+      "newsletter_sources": ["Londonist"],
       "official_url": "https://www.horniman.ac.uk/event/crossing-borders/",
       "verification": {
-        "verified_at": "2026-09-13T11:01:00+01:00",
+        "verified_at": "2026-09-17T11:01:20+01:00",
         "confidence": "high",
         "source_url": "https://www.horniman.ac.uk/event/crossing-borders/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-13T11:01:00+01:00",
+      "publish_at": "2026-09-17T11:01:20+01:00",
       "expire_at": "2026-09-19T16:15:00+01:00",
       "duplicate_key": "horniman-museum|2026-09-19|crossing-borders"
+    },
+    {
+      "id": "hello-earth-crossness-2026-09-19",
+      "title_en": "HELLO EARTH at Crossness Pumping Station",
+      "title_it": "HELLO EARTH alla Crossness Pumping Station",
+      "summary_en": "Artists, ecologists and local groups launch a new Bexley programme inside the Victorian “Cathedral of Sewage”, with talks, films, music, children’s workshops and rare station tours.",
+      "summary_it": "Artisti, ecologisti e realtà locali lanciano un nuovo programma di Bexley nella “cattedrale delle acque reflue” vittoriana, tra incontri, film, musica, laboratori e visite.",
+      "start": "2026-09-19T17:00:00+01:00",
+      "end": "2026-09-19T21:00:00+01:00",
+      "venue": {
+        "name": "Crossness Pumping Station",
+        "address": "Bazalgette Way, Thamesmead, London",
+        "postcode": "SE2 9AQ",
+        "borough": "Bexley"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://www.eventbrite.co.uk/e/hello-earth-launch-party-tickets-1998365867103"
+      },
+      "category": "urban-exploration",
+      "advanced": {
+        "score": 10,
+        "reason": "Exceptional access to major Victorian infrastructure, combined with local ecological culture and a free one-off programme.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://threeriversbexley.org/",
+      "verification": {
+        "verified_at": "2026-09-17T11:01:20+01:00",
+        "confidence": "high",
+        "source_url": "https://threeriversbexley.org/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-17T11:01:20+01:00",
+      "expire_at": "2026-09-19T21:15:00+01:00",
+      "duplicate_key": "crossness-pumping-station|2026-09-19|hello-earth-launch"
     },
     {
       "id": "city-cycling-festival-hub-2026-09-20",
@@ -271,8 +261,8 @@
       "end": "2026-09-20T16:00:00+01:00",
       "venue": {
         "name": "Peter’s Hill",
-        "address": "Peter’s Hill, Queen Victoria Street, London",
-        "postcode": "EC4V 4DY",
+        "address": "Carter Lane, Peter’s Hill, London",
+        "postcode": "EC4V 5EY",
         "borough": "City of London"
       },
       "price": {
@@ -297,17 +287,15 @@
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
+      "newsletter_sources": ["Londonist"],
       "official_url": "https://lcc.org.uk/events/festival_hub_cityoflondon/",
       "verification": {
-        "verified_at": "2026-09-13T11:01:00+01:00",
+        "verified_at": "2026-09-17T11:01:20+01:00",
         "confidence": "high",
         "source_url": "https://lcc.org.uk/events/festival_hub_cityoflondon/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-13T11:01:00+01:00",
+      "publish_at": "2026-09-17T11:01:20+01:00",
       "expire_at": "2026-09-20T16:15:00+01:00",
       "duplicate_key": "peters-hill|2026-09-20|city-cycling-festival-hub"
     },
@@ -333,7 +321,7 @@
       "booking": {
         "required": false,
         "status": "recommended",
-        "url": "https://www.towerhamlets.gov.uk/News_events/2026/August/Bigger-Better-and-Spicier.aspx"
+        "url": "https://www.eventbrite.co.uk/e/brick-lane-curry-festival-2026-tickets-1993902630442"
       },
       "category": "local-culture",
       "advanced": {
@@ -347,19 +335,65 @@
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
+      "newsletter_sources": ["Londonist", "Londonfy"],
       "official_url": "https://www.towerhamlets.gov.uk/News_events/2026/August/Bigger-Better-and-Spicier.aspx",
       "verification": {
-        "verified_at": "2026-09-13T11:01:00+01:00",
+        "verified_at": "2026-09-17T11:01:20+01:00",
         "confidence": "high",
         "source_url": "https://www.towerhamlets.gov.uk/News_events/2026/August/Bigger-Better-and-Spicier.aspx"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-13T11:01:00+01:00",
+      "publish_at": "2026-09-17T11:01:20+01:00",
       "expire_at": "2026-09-20T19:15:00+01:00",
       "duplicate_key": "brick-lane|2026-09-20|curry-festival"
+    },
+    {
+      "id": "costermongers-harvest-festival-2026-09-20",
+      "title_en": "Costermongers’ Pearly Harvest Festival",
+      "title_it": "Festa del raccolto dei Pearly Kings and Queens",
+      "summary_en": "London’s Pearly Kings and Queens gather in button-covered finery for maypole and Morris dancing, Cockney songs and a procession from Guildhall Yard to St Mary-le-Bow.",
+      "summary_it": "I Pearly Kings and Queens si ritrovano nei loro abiti ricoperti di bottoni, tra danze tradizionali, canti cockney e una processione da Guildhall Yard a St Mary-le-Bow.",
+      "start": "2026-09-20T13:30:00+01:00",
+      "end": "2026-09-20T16:00:00+01:00",
+      "venue": {
+        "name": "Guildhall Yard",
+        "address": "Guildhall Yard, London",
+        "postcode": "EC2V 5AE",
+        "borough": "City of London"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 10,
+        "reason": "A deeply London-specific charitable tradition, presented as a free annual procession and ceremony in the historic City.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://pearlysociety.org.uk/event/costermongers-harvest-festival/",
+      "verification": {
+        "verified_at": "2026-09-17T11:01:20+01:00",
+        "confidence": "high",
+        "source_url": "https://pearlysociety.org.uk/event/costermongers-harvest-festival/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-17T11:01:20+01:00",
+      "expire_at": "2026-09-20T16:15:00+01:00",
+      "duplicate_key": "guildhall-yard|2026-09-20|costermongers-harvest-festival"
     }
   ]
 }
