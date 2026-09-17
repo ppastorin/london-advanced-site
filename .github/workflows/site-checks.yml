@@ -33,6 +33,11 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Verify static pre-rendering
+        run: |
+          npm run prerender
+          git diff --exit-code -- dist/index.html dist/events/index.html
+
       - name: Validate site structure and links
         run: npm test
 

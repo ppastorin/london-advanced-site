@@ -235,7 +235,12 @@ async function loadEvents() {
       ? new Date(`${data.valid_from}T12:00:00Z`)
       : new Date();
     const events = activeDigest(data, previewTime);
-    if (!events.length) return;
+    if (!events.length) {
+      feed.innerHTML = "";
+      section.hidden = true;
+      document.querySelectorAll("[data-events-nav]").forEach(control => { control.hidden = true; });
+      return;
+    }
     feed.innerHTML = events.map(renderEventCard).join("");
     const updated = new Date(data.generated_at);
     section.querySelector("[data-events-updated]").textContent = `Last edited ${new Intl.DateTimeFormat("en-GB", {
@@ -258,7 +263,9 @@ async function loadEvents() {
 }
 
 function render() {
-  document.querySelector("#site").innerHTML = `<main id="top">
+  const site = document.querySelector("#site");
+  if (!site) return;
+  if (!site.innerHTML.trim()) site.innerHTML = `<main id="top">
     <header class="site-nav">
       <div class="wordmark" aria-label="London Advanced">
         <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
