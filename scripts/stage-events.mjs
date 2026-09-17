@@ -1,6 +1,7 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { validateDigest } from './validate-events.mjs';
+import { prerender } from './prerender.mjs';
 
 const input = process.argv[2];
 if (!input) {
@@ -30,4 +31,5 @@ if (errors.length) {
 await mkdir(resolve('dist/data'), { recursive: true });
 await writeFile(temporary, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 await rename(temporary, target);
-console.log(`Staged ${data.events.length} validated events in dist/data/events.json`);
+await prerender();
+console.log(`Staged ${data.events.length} validated events in dist/data/events.json and refreshed the static pages.`);

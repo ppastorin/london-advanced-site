@@ -42,7 +42,9 @@ const requiredAssets = [
   "dist/robots.txt",
   "dist/sitemap.xml",
   "dist/assets/guide-cover.jpg",
-  "dist/assets/london-map.jpg"
+  "dist/assets/london-map.jpg",
+  "dist/assets/favicon.svg",
+  "dist/assets/london-advanced-logo.svg"
 ];
 requiredAssets.forEach(requireFile);
 
@@ -78,9 +80,36 @@ const expectedTools = new Map([
   }]
 ]);
 
+const homepageHtml = requireFile("dist/index.html");
 const contentText = requireFile("dist/content.js");
 const appText = requireFile("dist/app.js");
 const stylesText = requireFile("dist/styles.css");
+const prerenderText = requireFile("scripts/prerender.mjs");
+
+if (!homepageHtml.includes('<main id="top">') || homepageHtml.includes('<div id="site"></div>')) {
+  fail("The homepage must contain pre-rendered content instead of an empty JavaScript shell.");
+}
+if (!homepageHtml.includes('class="event-card"') || !homepageHtml.includes('data-events-feed')) {
+  fail("The homepage must contain pre-rendered current event cards.");
+}
+for (const schemaType of ["WebSite", "Organization", "Person"]) {
+  if (!homepageHtml.includes(`"@type": "${schemaType}"`)) fail(`Homepage JSON-LD is missing ${schemaType}.`);
+}
+if (!homepageHtml.includes('<meta property="og:site_name" content="London Advanced">')) {
+  fail("The homepage is missing og:site_name.");
+}
+if (!homepageHtml.includes('<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">')) {
+  fail("The homepage is missing its favicon link.");
+}
+if (!homepageHtml.includes("https://www.londonadvanced.com/assets/london-advanced-logo.svg")) {
+  fail("Homepage Organization data is missing the canonical logo URL.");
+}
+if (!appText.includes("if (!site.innerHTML.trim())")) {
+  fail("dist/app.js must preserve the pre-rendered homepage during hydration.");
+}
+if (!prerenderText.includes("renderHomepage") || !prerenderText.includes("renderEventsPage")) {
+  fail("scripts/prerender.mjs must render both the homepage and events page.");
+}
 if (!appText.includes('id="events"') || !appText.includes('fetch("/data/events.json"') || !appText.includes('href="/events/"')) {
   fail("The homepage event component or its JSON feed request is missing.");
 }
@@ -167,6 +196,13 @@ if (!eventsHtml.includes('<link rel="canonical" href="https://www.londonadvanced
 }
 if (!eventsHtml.includes('data-events-list') || !eventsHtml.includes('/events/events.js')) {
   fail("The full events page shell or script reference is missing.");
+}
+if (!eventsHtml.includes('class="events-list-card"') || eventsHtml.includes("Loading current events")) {
+  fail("The full events page must contain pre-rendered event cards and a static count.");
+}
+if (!eventsHtml.includes('<meta property="og:site_name" content="London Advanced">') ||
+    !eventsHtml.includes('<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">')) {
+  fail("The events page is missing site identity metadata.");
 }
 if (!eventsScript.includes('fetch("/data/events.json"') || !eventsScript.includes('schema_version !== "1.1"')) {
   fail("The full events page does not use the version 1.1 events feed.");

@@ -148,10 +148,14 @@ async function loadEvents() {
       : new Date();
     const events = activeEvents(data, now);
     if (!events.length) {
+      list.innerHTML = "";
+      list.hidden = true;
       count.textContent = "No current events";
       empty.hidden = false;
       return;
     }
+    list.hidden = false;
+    empty.hidden = true;
     list.innerHTML = renderGroups(events);
     count.textContent = `${events.length} verified event${events.length === 1 ? "" : "s"}`;
     const from = new Date(Math.min(...events.map(event => Date.parse(event.start))));
