@@ -15,8 +15,10 @@
 
   frame.title = tool.name;
   frame.src = tool.embedUrl;
-  directLink.href = tool.embedUrl;
-  directLink.setAttribute("aria-label", `Open ${tool.name} directly in a new tab`);
+  if (directLink) {
+    directLink.href = tool.embedUrl;
+    directLink.setAttribute("aria-label", `Open ${tool.name} directly in a new tab`);
+  }
 
   DATA.apps.forEach(item => {
     const option = document.createElement("option");
@@ -34,7 +36,7 @@
     stage.classList.add("is-loaded");
   });
 
-  directLink.addEventListener("click", () => track(`tool-direct:${tool.name}`));
+  if (directLink) directLink.addEventListener("click", () => track(`tool-direct:${tool.name}`));
   document.querySelector(".guide-strip").addEventListener("click", () => track(`guide:tool-${tool.id}`));
 
   function loadGoogleAnalytics(id) {
