@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   health:
-    name: Check five production applications
+    name: Check production endpoints
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+
+      - name: Check canonical redirects
+        run: node scripts/check-canonical-redirects.mjs
 
       - name: Check application endpoints
         run: npm run health

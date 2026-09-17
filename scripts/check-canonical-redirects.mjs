@@ -1,11 +1,31 @@
-const targets = [
-  "http://londonadvanced.com/",
-  "https://londonadvanced.com/",
-  "http://www.londonadvanced.com/",
-  "https://www.londonadvanced.com/"
+const cases = [
+  {
+    startUrl: "http://londonadvanced.com/",
+    expectedUrl: "https://www.londonadvanced.com/"
+  },
+  {
+    startUrl: "https://londonadvanced.com/",
+    expectedUrl: "https://www.londonadvanced.com/"
+  },
+  {
+    startUrl: "http://www.londonadvanced.com/",
+    expectedUrl: "https://www.londonadvanced.com/"
+  },
+  {
+    startUrl: "https://www.londonadvanced.com/",
+    expectedUrl: "https://www.londonadvanced.com/"
+  },
+  {
+    startUrl: "http://londonadvanced.com/events/?redirect_probe=1",
+    expectedUrl: "https://www.londonadvanced.com/events/?redirect_probe=1"
+  },
+  {
+    startUrl: "https://londonadvanced.com/events/?redirect_probe=1",
+    expectedUrl: "https://www.londonadvanced.com/events/?redirect_probe=1"
+  }
 ];
 
-async function trace(startUrl) {
+async function trace({ startUrl, expectedUrl }) {
   const hops = [];
   const seen = new Set();
   let current = startUrl;
@@ -13,7 +33,7 @@ async function trace(startUrl) {
   for (let index = 0; index < 10; index += 1) {
     if (seen.has(current)) {
       hops.push({ url: current, error: "redirect loop" });
-      return { startUrl, hops, ok: false };
+      return { startUrl, expectedUrl, hops, ok: false };
     }
     seen.add(current);
 
@@ -39,26 +59,30 @@ async function trace(startUrl) {
       continue;
     }
 
-    const ok = response.status === 200 && current === "https://www.londonadvanced.com/";
-    return { startUrl, hops, ok };
+    return {
+      startUrl,
+      expectedUrl,
+      hops,
+      ok: response.status === 200 && current === expectedUrl
+    };
   }
 
   hops.push({ url: current, error: "more than 10 redirects" });
-  return { startUrl, hops, ok: false };
+  return { startUrl, expectedUrl, hops, ok: false };
 }
 
 const results = [];
-for (const target of targets) {
+for (const testCase of cases) {
   try {
-    results.push(await trace(target));
+    results.push(await trace(testCase));
   } catch (error) {
-    results.push({ startUrl: target, hops: [], ok: false, error: error.message });
+    results.push({ ...testCase, hops: [], ok: false, error: error.message });
   }
 }
 
 console.log(JSON.stringify(results, null, 2));
 
 if (results.some(result => !result.ok)) {
-  console.error("\nCanonical-host check failed. Every variant must terminate at https://www.londonadvanced.com/ with HTTP 200.");
+  console.error("\nCanonical-host check failed. Every variant must terminate at the expected HTTPS www URL with HTTP 200.");
   process.exit(1);
 }
