@@ -12,6 +12,9 @@
   const stage = document.querySelector(".tool-stage");
   const directLink = document.querySelector("#direct-link");
   const switcher = document.querySelector("#tool-switcher");
+  const aboutTrigger = document.querySelector("#dashboard-about-trigger");
+  const aboutPanel = document.querySelector("#dashboard-about-panel");
+  const aboutClose = document.querySelector("#dashboard-about-close");
 
   frame.title = tool.name;
   frame.src = tool.embedUrl;
@@ -35,6 +38,17 @@
   frame.addEventListener("load", () => {
     stage.classList.add("is-loaded");
   });
+
+  if (aboutTrigger && aboutPanel && aboutClose) {
+    aboutTrigger.addEventListener("click", () => aboutPanel.showModal());
+    aboutClose.addEventListener("click", () => aboutPanel.close());
+    aboutPanel.addEventListener("click", event => {
+      const bounds = aboutPanel.getBoundingClientRect();
+      const inside = event.clientX >= bounds.left && event.clientX <= bounds.right &&
+        event.clientY >= bounds.top && event.clientY <= bounds.bottom;
+      if (!inside) aboutPanel.close();
+    });
+  }
 
   if (directLink) directLink.addEventListener("click", () => track(`tool-direct:${tool.name}`));
   document.querySelector(".guide-strip").addEventListener("click", () => track(`guide:tool-${tool.id}`));
