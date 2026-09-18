@@ -77,18 +77,17 @@
     </div>
   </header>
 
-  <section class="tool-intro" aria-labelledby="dashboard-intro-title">
-    <div>
-      <span class="section-kicker">Plan the practical side of your London day</span>
-      <h2 id="dashboard-intro-title">See what may change your plans before you set out.</h2>
-      <p>Check the latest weather forecast, transport disruption, airport access, London-wide air quality and upcoming events in one practical view.</p>
-    </div>
-    <a href="#about-dashboard">About this dashboard <span aria-hidden="true">↓</span></a>
-  </section>
-
   <main class="tool-stage"><div class="frame-status" role="status">Loading London Dashboard…</div><iframe class="tool-frame" id="tool-frame" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></main>
 
-  <article class="tool-information" id="about-dashboard" aria-labelledby="dashboard-about-title">
+  <details class="information-disclosure" id="about-dashboard">
+    <summary>
+      <span class="disclosure-copy">
+        <span class="section-kicker">About this dashboard</span>
+        <strong>Weather, transport, airport access, air quality and events in one view.</strong>
+      </span>
+      <span class="disclosure-action" aria-hidden="true"><span>Read the guide</span><i></i></span>
+    </summary>
+  <article class="tool-information" aria-labelledby="dashboard-about-title">
     <div class="information-lead">
       <div>
         <span class="section-kicker">About this tool</span>
@@ -172,6 +171,7 @@
       </div>
     </section>
   </article>
+  </details>
 
   <a class="guide-strip" href="https://payhip.com/b/DrBE5" target="_blank" rel="noopener"><span>The Other London</span><strong>Looking for London beyond the standard lists?</strong><span>Explore the guide →</span></a>
   <noscript>This page requires JavaScript. <a href="https://london-now.ppastorin.workers.dev/">Open London Dashboard directly</a>.</noscript>
