@@ -1,28 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Find worthwhile London detours and unusual places between your starting point and destination.">
+  <meta name="author" content="Paolo Pastorino">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="London Advanced">
   <meta property="og:title" content="Smart Navigation — London Advanced">
   <meta property="og:description" content="Make the journey part of the visit with worthwhile detours along your London route.">
   <meta property="og:url" content="https://www.londonadvanced.com/home/smart-navigation/">
+  <meta property="og:image" content="https://www.londonadvanced.com/assets/london-map.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.londonadvanced.com/home/smart-navigation/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <title>Smart Navigation — London Detour Engine | London Advanced</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://www.londonadvanced.com/home/smart-navigation/#application",
+        "name": "Smart Navigation",
+        "url": "https://www.londonadvanced.com/home/smart-navigation/",
+        "description": "A free London walking-route tool for finding unusual places within a short detour of a journey.",
+        "applicationCategory": "NavigationApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "author": { "@id": "https://www.londonadvanced.com/#paolo-pastorino" },
+        "publisher": { "@id": "https://www.londonadvanced.com/#organization" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.londonadvanced.com/home/smart-navigation/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "London Advanced", "item": "https://www.londonadvanced.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Smart Navigation", "item": "https://www.londonadvanced.com/home/smart-navigation/" }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/tool-page.css">
 </head>
-<body class="tool-shell" data-tool-id="smart-navigation">
+<body class="tool-shell enriched-tool-page" data-tool-id="smart-navigation">
   <header class="tool-header">
     <a class="tool-brand" href="/" aria-label="London Advanced home"><svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/><circle class="brand-centre" cx="18" cy="18" r="2.2"/></svg><span class="brand-name">London Advanced</span></a>
     <div class="tool-title"><span>Make the journey part of the visit</span><h1>Smart Navigation</h1></div>
-    <div class="tool-actions"><label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label><select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select><a class="direct-link" id="direct-link" href="#" target="_blank" rel="noopener noreferrer">Open directly ↗</a></div>
+    <div class="tool-actions"><label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label><select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select><button class="about-trigger" type="button" aria-haspopup="dialog" aria-controls="navigation-about-panel">About</button><a class="direct-link" id="direct-link" href="#" target="_blank" rel="noopener noreferrer">Open directly ↗</a></div>
   </header>
   <main class="tool-stage"><div class="frame-status" role="status">Loading Smart Navigation…</div><iframe class="tool-frame" id="tool-frame" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></main>
+  <dialog class="about-panel" id="navigation-about-panel" aria-labelledby="navigation-about-title">
+    <header class="panel-header"><div><span class="section-kicker">London Advanced</span><strong>About this tool</strong></div><button class="panel-close" type="button">Close <span aria-hidden="true">×</span></button></header>
+    <div class="panel-scroll"><article class="tool-information">
+      <div class="information-lead"><div><span class="section-kicker">Make the journey part of the visit</span><h2 id="navigation-about-title">Find worthwhile detours, not another generic list.</h2><p>Smart Navigation starts with your actual journey. Instead of asking you to cross London for a recommendation, it looks for interesting places close to a walking route between your starting point and destination.</p><p>You decide how far you will leave the route and which types of places interest you. The map then shows possible detours from the London Advanced collection.</p></div><aside class="quick-facts" aria-label="Smart Navigation quick facts"><span>Useful for</span><ul><li>Making a necessary walk interesting</li><li>Filling time between appointments</li><li>Finding overlooked places nearby</li><li>Checking cycle docks near a route</li></ul></aside></div>
+      <section class="information-section" aria-labelledby="navigation-how-title"><div class="information-heading"><span class="section-kicker">How to use it</span><h2 id="navigation-how-title">Build a route around your time.</h2></div><ol class="step-grid"><li><span>01</span><h3>Enter your journey</h3><p>Choose your starting point and destination to create a walking route between them.</p></li><li><span>02</span><h3>Set your tolerance</h3><p>Choose 200 metres for small diversions or 500 metres when you have more time.</p></li><li><span>03</span><h3>Choose categories</h3><p>Concentrate on the types of places that interest you instead of displaying every result.</p></li><li><span>04</span><h3>Explore the map</h3><p>Review suggested stops and nearby Santander Cycles docking information where available.</p></li></ol></section>
+      <div class="evidence-grid"><section aria-labelledby="navigation-sources-title"><span class="section-kicker">What it uses</span><h2 id="navigation-sources-title">A route and a curated collection.</h2><p>Smart Navigation combines a mapped walking route with London Advanced’s database of unusual and overlooked places. Suggestions are selected by their relationship to the route and your chosen detour distance.</p><p>Santander Cycles information comes from Transport for London and shows nearby docking stations with current bike and space availability.</p></section><section aria-labelledby="navigation-limits-title"><span class="section-kicker">What to know</span><h2 id="navigation-limits-title">Exploration, not turn-by-turn navigation.</h2><p>Street closures, temporary restrictions and walking conditions may not be reflected immediately. A nearby place is not guaranteed to be open or publicly accessible.</p><p>The selected radius is the permitted search area; actual additional walking varies with streets and entrances. Cycle availability changes quickly and should be confirmed before relying on a dock.</p></section></div>
+      <section class="related-tools" aria-labelledby="navigation-related-title"><div class="information-heading"><span class="section-kicker">Continue exploring</span><h2 id="navigation-related-title">Refine the journey.</h2></div><div class="related-grid"><a href="/home/london-by-mood/"><span>Choose by atmosphere and time</span><strong>London by Mood →</strong></a><a href="/home/escape-the-crowds/"><span>Compare pressure around stops</span><strong>Escape the Crowds →</strong></a><a href="/home/travel-fare-calculator/"><span>Compare costs for the rest</span><strong>Fare Calculator →</strong></a></div></section>
+    </article></div>
+  </dialog>
   <a class="guide-strip" href="https://payhip.com/b/DrBE5" target="_blank" rel="noopener"><span>The Other London</span><strong>Turn the route itself into part of your visit.</strong><span>Explore the guide →</span></a>
   <noscript>This page requires JavaScript. <a href="https://script.google.com/macros/s/AKfycbxcjGjLqBgTqItDVRKspQTDE__wL6y7WAd2Lr617vOfhzrqMX9tvKEXW6_OxbfK2Yz34w/exec">Open Smart Navigation directly</a>.</noscript>
   <script src="/content.js"></script><script src="/tool-page.js"></script>

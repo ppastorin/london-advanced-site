@@ -12,9 +12,9 @@
   const stage = document.querySelector(".tool-stage");
   const directLink = document.querySelector("#direct-link");
   const switcher = document.querySelector("#tool-switcher");
-  const aboutTrigger = document.querySelector("#dashboard-about-trigger");
-  const aboutPanel = document.querySelector("#dashboard-about-panel");
-  const aboutClose = document.querySelector("#dashboard-about-close");
+  const aboutTrigger = document.querySelector(".about-trigger");
+  const aboutPanel = document.querySelector(".about-panel");
+  const aboutClose = document.querySelector(".panel-close");
 
   frame.title = tool.name;
   frame.src = tool.embedUrl;

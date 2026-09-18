@@ -1,28 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Compare London travel costs for adults and children using contactless and Oyster options.">
+  <meta name="author" content="Paolo Pastorino">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="London Advanced">
   <meta property="og:title" content="Travel Fare Calculator — London Advanced">
   <meta property="og:description" content="Work out a practical London travel payment strategy before setting out.">
   <meta property="og:url" content="https://www.londonadvanced.com/home/travel-fare-calculator/">
+  <meta property="og:image" content="https://www.londonadvanced.com/assets/london-map.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.londonadvanced.com/home/travel-fare-calculator/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <title>London Travel Fare Calculator | London Advanced</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://www.londonadvanced.com/home/travel-fare-calculator/#application",
+        "name": "London Travel Fare Calculator",
+        "url": "https://www.londonadvanced.com/home/travel-fare-calculator/",
+        "description": "A free calculator comparing contactless, Oyster pay as you go and 7-Day Travelcard costs for London visitors.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "author": { "@id": "https://www.londonadvanced.com/#paolo-pastorino" },
+        "publisher": { "@id": "https://www.londonadvanced.com/#organization" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.londonadvanced.com/home/travel-fare-calculator/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "London Advanced", "item": "https://www.londonadvanced.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Travel Fare Calculator", "item": "https://www.londonadvanced.com/home/travel-fare-calculator/" }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/tool-page.css">
 </head>
-<body class="tool-shell" data-tool-id="travel-fare-calculator">
+<body class="tool-shell enriched-tool-page" data-tool-id="travel-fare-calculator">
   <header class="tool-header">
     <a class="tool-brand" href="/" aria-label="London Advanced home"><svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/><circle class="brand-centre" cx="18" cy="18" r="2.2"/></svg><span class="brand-name">London Advanced</span></a>
     <div class="tool-title"><span>Pay the right fare</span><h1>Travel Fare Calculator</h1></div>
-    <div class="tool-actions"><label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label><select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select><a class="direct-link" id="direct-link" href="#" target="_blank" rel="noopener noreferrer">Open directly ↗</a></div>
+    <div class="tool-actions"><label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label><select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select><button class="about-trigger" type="button" aria-haspopup="dialog" aria-controls="fare-about-panel">About</button><a class="direct-link" id="direct-link" href="#" target="_blank" rel="noopener noreferrer">Open directly ↗</a></div>
   </header>
   <main class="tool-stage"><div class="frame-status" role="status">Loading Travel Fare Calculator…</div><iframe class="tool-frame" id="tool-frame" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></main>
+  <dialog class="about-panel" id="fare-about-panel" aria-labelledby="fare-about-title">
+    <header class="panel-header"><div><span class="section-kicker">London Advanced</span><strong>About this tool</strong></div><button class="panel-close" type="button">Close <span aria-hidden="true">×</span></button></header>
+    <div class="panel-scroll"><article class="tool-information">
+      <div class="information-lead"><div><span class="section-kicker">Pay the right fare</span><h2 id="fare-about-title">Compare the options before buying.</h2><p>London fares are straightforward for a single adult journey but become less obvious for families, children, longer stays and trips crossing the Monday-to-Sunday weekly-capping period.</p><p>The calculator compares the main options using your group and visit details. It includes cash needed for Oyster cards, possible unused credit and cards you already own. No visitor details are stored.</p></div><aside class="quick-facts" aria-label="Travel Fare Calculator quick facts"><span>Useful for</span><ul><li>Families travelling with children</li><li>Visits lasting several days</li><li>Comparing Oyster and contactless</li><li>Understanding upfront cash needed</li></ul></aside></div>
+      <section class="information-section" aria-labelledby="fare-how-title"><div class="information-heading"><span class="section-kicker">How to use it</span><h2 id="fare-how-title">Describe the visit, then compare.</h2></div><ol class="step-grid"><li><span>01</span><h3>Describe your group</h3><p>Enter the number of adults and children, including children’s ages because London fare rules differ.</p></li><li><span>02</span><h3>Add travel dates</h3><p>Choose the first day and number of travel days so weekly capping can be considered.</p></li><li><span>03</span><h3>Add existing cards</h3><p>Include suitable Oyster cards already owned to avoid charging for unnecessary replacements.</p></li><li><span>04</span><h3>Compare totals</h3><p>Review estimated cost, cash required, card charges and likely unused Oyster credit.</p></li></ol></section>
+      <div class="evidence-grid"><section aria-labelledby="fare-includes-title"><span class="section-kicker">What it includes</span><h2 id="fare-includes-title">The main visitor options.</h2><p>The comparison covers adult contactless daily and weekly capping, standard Oyster pay as you go, 7-Day Travelcards, eligible under-11 free travel and the 11–15 Young Visitor discount.</p><p>It also accounts for standard Oyster card costs, £5 top-up increments and cards the group already owns. Fare values are maintained separately when TfL prices change.</p></section><section aria-labelledby="fare-limits-title"><span class="section-kicker">What to know</span><h2 id="fare-limits-title">An independent planning estimate.</h2><p>This is not a TfL sales or ticketing service. It does not cover every concession, Visitor Oyster, Zip Oyster or every unusual journey pattern.</p><p>The current comparison is designed mainly for Zones 1–2. Confirm eligibility, current prices and travel outside that scope with TfL before buying or loading credit.</p></section></div>
+      <section class="related-tools" aria-labelledby="fare-related-title"><div class="information-heading"><span class="section-kicker">Continue exploring</span><h2 id="fare-related-title">Plan the rest of your day.</h2></div><div class="related-grid"><a href="/home/london-dashboard/"><span>Check current disruption</span><strong>London Dashboard →</strong></a><a href="/home/smart-navigation/"><span>Make part of the journey on foot</span><strong>Smart Navigation →</strong></a><a href="/home/london-by-mood/"><span>Find somewhere within reach</span><strong>London by Mood →</strong></a></div></section>
+    </article></div>
+  </dialog>
   <a class="guide-strip" href="https://payhip.com/b/DrBE5" target="_blank" rel="noopener"><span>The Other London</span><strong>Plan the fare, then discover somewhere less obvious.</strong><span>Explore the guide →</span></a>
   <noscript>This page requires JavaScript. <a href="https://script.google.com/macros/s/AKfycby3upcYSg-jR3idu9_aUbeT_ooAPLF5D-5fjxDbrERvULyLUsp1mxPGzEa9GyByX6WjPg/exec">Open the calculator directly</a>.</noscript>
   <script src="/content.js"></script><script src="/tool-page.js"></script>

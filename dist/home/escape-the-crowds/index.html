@@ -1,28 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Compare estimated crowd pressure at unusual London places now and over the next few hours.">
+  <meta name="author" content="Paolo Pastorino">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="London Advanced">
   <meta property="og:title" content="Escape the Crowds — London Advanced">
   <meta property="og:description" content="See estimated crowd pressure before choosing where to go in London.">
   <meta property="og:url" content="https://www.londonadvanced.com/home/escape-the-crowds/">
+  <meta property="og:image" content="https://www.londonadvanced.com/assets/london-map.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.londonadvanced.com/home/escape-the-crowds/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <title>Escape the Crowds — London crowd-pressure map | London Advanced</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://www.londonadvanced.com/home/escape-the-crowds/#application",
+        "name": "Escape the Crowds",
+        "url": "https://www.londonadvanced.com/home/escape-the-crowds/",
+        "description": "A free London crowd-pressure map comparing expected pressure around unusual places now and over the next three hours.",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "author": { "@id": "https://www.londonadvanced.com/#paolo-pastorino" },
+        "publisher": { "@id": "https://www.londonadvanced.com/#organization" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.londonadvanced.com/home/escape-the-crowds/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "London Advanced", "item": "https://www.londonadvanced.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Escape the Crowds", "item": "https://www.londonadvanced.com/home/escape-the-crowds/" }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/tool-page.css">
 </head>
-<body class="tool-shell" data-tool-id="escape-the-crowds">
+<body class="tool-shell enriched-tool-page" data-tool-id="escape-the-crowds">
   <header class="tool-header">
     <a class="tool-brand" href="/" aria-label="London Advanced home"><svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/><circle class="brand-centre" cx="18" cy="18" r="2.2"/></svg><span class="brand-name">London Advanced</span></a>
     <div class="tool-title"><span>See pressure before you go</span><h1>Escape the Crowds</h1></div>
-    <div class="tool-actions"><label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label><select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select><a class="direct-link" id="direct-link" href="#" target="_blank" rel="noopener noreferrer">Open directly ↗</a></div>
+    <div class="tool-actions"><label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label><select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select><button class="about-trigger" type="button" aria-haspopup="dialog" aria-controls="escape-about-panel">About</button><a class="direct-link" id="direct-link" href="#" target="_blank" rel="noopener noreferrer">Open directly ↗</a></div>
   </header>
   <main class="tool-stage"><div class="frame-status" role="status">Loading Escape the Crowds…</div><iframe class="tool-frame" id="tool-frame" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></main>
+  <dialog class="about-panel" id="escape-about-panel" aria-labelledby="escape-about-title">
+    <header class="panel-header"><div><span class="section-kicker">London Advanced</span><strong>About this tool</strong></div><button class="panel-close" type="button">Close <span aria-hidden="true">×</span></button></header>
+    <div class="panel-scroll"><article class="tool-information">
+      <div class="information-lead"><div><span class="section-kicker">See pressure before you go</span><h2 id="escape-about-title">A more realistic view of how busy London may feel.</h2><p>Escape the Crowds estimates the expected busy experience around more than 800 London places. It combines the character of the location, historical area patterns, nearby transport pressure and the time of day.</p><p>The result is not a venue headcount and it does not promise that a place will be empty. It indicates the pressure you are likely to experience in the surrounding area.</p></div><aside class="quick-facts" aria-label="Escape the Crowds quick facts"><span>Useful for</span><ul><li>Comparing several places</li><li>Changing the time of a visit</li><li>Finding less pressured alternatives</li><li>Avoiding unnecessarily busy areas</li></ul></aside></div>
+      <section class="information-section" aria-labelledby="escape-how-title"><div class="information-heading"><span class="section-kicker">How to use it</span><h2 id="escape-how-title">Compare options, not promises.</h2></div><ol class="step-grid"><li><span>01</span><h3>Choose a time</h3><p>View estimated pressure now or look one, two or three hours ahead using historical and editorial patterns.</p></li><li><span>02</span><h3>Filter the map</h3><p>Focus on the type of place you want to visit and compare options in the same part of London.</p></li><li><span>03</span><h3>Compare pressure</h3><p>Use relative differences between places and times instead of chasing a supposedly perfect score.</p></li><li><span>04</span><h3>Check practical details</h3><p>Confirm opening times and access arrangements with the venue before making a special journey.</p></li></ol></section>
+      <div class="evidence-grid"><section aria-labelledby="escape-sources-title"><span class="section-kicker">How it is built</span><h2 id="escape-sources-title">Several signals, combined.</h2><p>The model uses London Advanced’s editorial tourist-intensity assessment, historical area and station patterns derived from TfL NUMBAT data, live TfL station conditions where available, and the expected relationship between each place and the time of day.</p><p>When an input is unavailable, the model rebalances the remaining evidence rather than inserting a fabricated neutral value.</p></section><section aria-labelledby="escape-limits-title"><span class="section-kicker">What to know</span><h2 id="escape-limits-title">An estimate, not a live headcount.</h2><p>Crowd pressure means the likely busy experience around a place. It is not a count of visitors inside a building, park or attraction.</p><p>Live transport information may be delayed or missing, while future readings are forecasts. The tool cannot guarantee that a place is empty, open, safe or accessible.</p></section></div>
+      <section class="related-tools" aria-labelledby="escape-related-title"><div class="information-heading"><span class="section-kicker">Continue exploring</span><h2 id="escape-related-title">Choose your next tool.</h2></div><div class="related-grid"><a href="/home/london-by-mood/"><span>Choose places by atmosphere</span><strong>London by Mood →</strong></a><a href="/home/smart-navigation/"><span>Find places along your route</span><strong>Smart Navigation →</strong></a><a href="/home/london-dashboard/"><span>Check live conditions</span><strong>London Dashboard →</strong></a></div></section>
+    </article></div>
+  </dialog>
   <a class="guide-strip" href="https://payhip.com/b/DrBE5" target="_blank" rel="noopener"><span>The Other London</span><strong>Find quieter and less obvious places across London.</strong><span>Explore the guide →</span></a>
   <noscript>This page requires JavaScript. <a href="https://london-advanced-crowd-pressure.ppastorin.workers.dev/">Open Escape the Crowds directly</a>.</noscript>
   <script src="/content.js"></script><script src="/tool-page.js"></script>

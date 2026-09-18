@@ -1,28 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Choose how you want London to feel and discover unusual places that match your mood and journey time.">
+  <meta name="author" content="Paolo Pastorino">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="London Advanced">
   <meta property="og:title" content="London by Mood — London Advanced">
   <meta property="og:description" content="Start with how you want London to feel, then discover places that fit.">
   <meta property="og:url" content="https://www.londonadvanced.com/home/london-by-mood/">
+  <meta property="og:image" content="https://www.londonadvanced.com/assets/london-map.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.londonadvanced.com/home/london-by-mood/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <title>London by Mood — Find places by feeling | London Advanced</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://www.londonadvanced.com/home/london-by-mood/#application",
+        "name": "London by Mood",
+        "url": "https://www.londonadvanced.com/home/london-by-mood/",
+        "description": "A free discovery tool that recommends unusual London places by mood, starting point, travel mode and journey time.",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "author": { "@id": "https://www.londonadvanced.com/#paolo-pastorino" },
+        "publisher": { "@id": "https://www.londonadvanced.com/#organization" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.londonadvanced.com/home/london-by-mood/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "London Advanced", "item": "https://www.londonadvanced.com/" },
+          { "@type": "ListItem", "position": 2, "name": "London by Mood", "item": "https://www.londonadvanced.com/home/london-by-mood/" }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/tool-page.css">
 </head>
-<body class="tool-shell" data-tool-id="london-by-mood">
+<body class="tool-shell enriched-tool-page" data-tool-id="london-by-mood">
   <header class="tool-header">
     <a class="tool-brand" href="/" aria-label="London Advanced home"><svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/><circle class="brand-centre" cx="18" cy="18" r="2.2"/></svg><span class="brand-name">London Advanced</span></a>
     <div class="tool-title"><span>Start with how you feel</span><h1>London by Mood</h1></div>
-    <div class="tool-actions"><label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label><select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select><a class="direct-link" id="direct-link" href="#" target="_blank" rel="noopener noreferrer">Open directly ↗</a></div>
+    <div class="tool-actions"><label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label><select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select><button class="about-trigger" type="button" aria-haspopup="dialog" aria-controls="mood-about-panel">About</button><a class="direct-link" id="direct-link" href="#" target="_blank" rel="noopener noreferrer">Open directly ↗</a></div>
   </header>
   <main class="tool-stage"><div class="frame-status" role="status">Loading London by Mood…</div><iframe class="tool-frame" id="tool-frame" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></main>
+  <dialog class="about-panel" id="mood-about-panel" aria-labelledby="mood-about-title">
+    <header class="panel-header"><div><span class="section-kicker">London Advanced</span><strong>About this tool</strong></div><button class="panel-close" type="button">Close <span aria-hidden="true">×</span></button></header>
+    <div class="panel-scroll"><article class="tool-information">
+      <div class="information-lead"><div><span class="section-kicker">Start with how you want London to feel</span><h2 id="mood-about-title">A different way to decide where to go.</h2><p>Most London lists begin with a category: museum, park, viewpoint or market. London by Mood begins with the experience you want—quiet, beautiful, green, unexpected, atmospheric, local, a little weird or simply somewhere to wander.</p><p>The tool ranks more than 800 places using London Advanced’s editorial assessments, your chosen mood and the practical limits of your journey.</p></div><aside class="quick-facts" aria-label="London by Mood quick facts"><span>Useful for</span><ul><li>Unplanned afternoons</li><li>Repeat visits to London</li><li>Choosing between many options</li><li>Matching a place to your energy</li></ul></aside></div>
+      <section class="information-section" aria-labelledby="mood-how-title"><div class="information-heading"><span class="section-kicker">How to use it</span><h2 id="mood-how-title">Turn a feeling into a shortlist.</h2></div><ol class="step-grid"><li><span>01</span><h3>Choose a mood</h3><p>Select quiet, unexpected, beautiful, a little weird, local, green, atmospheric or somewhere to wander.</p></li><li><span>02</span><h3>Choose travel mode</h3><p>Select walking or public transport so the journey-time limit is interpreted appropriately.</p></li><li><span>03</span><h3>Set your starting point</h3><p>Enter a London address or postcode, or use one of the available starting locations.</p></li><li><span>04</span><h3>Review suggestions</h3><p>Compare mood fit, location, estimated journey time and the editorial reason each place was selected.</p></li></ol></section>
+      <div class="evidence-grid"><section aria-labelledby="mood-sources-title"><span class="section-kicker">How it is built</span><h2 id="mood-sources-title">Editorial fit plus practical limits.</h2><p>Each place in the London Advanced collection has been reviewed against several moods and practical characteristics. Ranking combines those editorial scores with your location, travel mode and maximum journey time.</p><p>Address lookup uses OpenStreetMap’s Nominatim service. Directions open in Google Maps after you choose a result.</p></section><section aria-labelledby="mood-limits-title"><span class="section-kicker">What to know</span><h2 id="mood-limits-title">A recommendation, not a guarantee.</h2><p>Journey times are conservative ranking estimates, not live TfL results. They may not reflect disruption, waiting time, walking pace or temporary route changes.</p><p>Search is limited to London. Opening hours, booking requirements and access conditions should be checked with the official source.</p></section></div>
+      <section class="related-tools" aria-labelledby="mood-related-title"><div class="information-heading"><span class="section-kicker">Continue exploring</span><h2 id="mood-related-title">Turn the shortlist into a plan.</h2></div><div class="related-grid"><a href="/home/escape-the-crowds/"><span>Compare expected pressure</span><strong>Escape the Crowds →</strong></a><a href="/home/smart-navigation/"><span>Find places close to a route</span><strong>Smart Navigation →</strong></a><a href="/home/london-dashboard/"><span>Check live conditions</span><strong>London Dashboard →</strong></a></div></section>
+    </article></div>
+  </dialog>
   <a class="guide-strip" href="https://payhip.com/b/DrBE5" target="_blank" rel="noopener"><span>The Other London</span><strong>Keep exploring London beyond the obvious.</strong><span>Explore the guide →</span></a>
   <noscript>This page requires JavaScript. <a href="https://london-by-mood.ppastorin.workers.dev/">Open London by Mood directly</a>.</noscript>
   <script src="/content.js"></script><script src="/tool-page.js"></script>
