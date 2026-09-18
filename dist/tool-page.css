@@ -82,6 +82,21 @@ a { color: inherit; }
   background: #fff;
   font: 600 12px var(--sans);
 }
+.about-trigger {
+  min-height: 38px;
+  padding: 0 15px;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  font: 700 12px var(--sans);
+  cursor: pointer;
+}
+.about-trigger:hover,
+.about-trigger:focus-visible {
+  color: #fff;
+  background: var(--ink);
+}
 .direct-link {
   min-height: 38px;
   display: inline-flex;
@@ -97,6 +112,7 @@ a { color: inherit; }
 }
 .tool-brand:focus-visible,
 .tool-switcher:focus-visible,
+.about-trigger:focus-visible,
 .direct-link:focus-visible,
 .guide-strip:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 
@@ -127,27 +143,24 @@ a { color: inherit; }
 }
 .tool-stage.is-loaded .frame-status { display: none; }
 
-/* Enriched tool pages keep the application prominent while allowing useful,
-   indexable guidance to continue below the embedded tool. */
+/* The enriched Dashboard keeps the application as the only scrolling surface.
+   Supporting content opens in an independent modal panel. */
 .tool-shell.enriched-tool-page {
-  height: auto;
-  min-height: 100dvh;
-  display: block;
-  overflow: visible;
-}
-.enriched-tool-page .tool-header {
-  position: sticky;
-  top: 0;
+  height: 100dvh;
+  min-height: 540px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
 }
 .enriched-tool-page .tool-stage {
-  height: calc(100dvh - 74px);
-  min-height: 640px;
-  border-bottom: 1px solid var(--line);
+  height: auto;
+  min-height: 0;
+  border-bottom: 0;
 }
 
 .tool-information {
-  width: min(1180px, calc(100% - 40px));
-  margin-inline: auto;
+  width: 100%;
+  margin: 0;
 }
 .section-kicker {
   display: block;
@@ -162,72 +175,90 @@ a { color: inherit; }
   font: 400 clamp(29px, 4vw, 52px)/1.02 var(--serif);
   letter-spacing: -.025em;
 }
-.information-disclosure {
-  border-bottom: 1px solid var(--line);
+.about-panel {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(560px, 100vw);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: var(--ink);
+  border: 0;
+  border-left: 1px solid var(--line);
   background: var(--paper);
+  box-shadow: -22px 0 70px rgba(0, 0, 0, .2);
 }
-.information-disclosure > summary {
-  width: min(1180px, calc(100% - 40px));
-  min-height: 82px;
+.about-panel[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.about-panel::backdrop { background: rgba(17, 17, 17, .46); }
+.panel-header {
+  min-height: 74px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  margin-inline: auto;
-  padding: 15px 0;
-  cursor: pointer;
-  list-style: none;
+  gap: 20px;
+  padding: 11px 24px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(247, 239, 237, .98);
 }
-.information-disclosure > summary::-webkit-details-marker { display: none; }
-.disclosure-copy { min-width: 0; }
-.disclosure-copy .section-kicker { margin-bottom: 5px; }
-.disclosure-copy strong {
-  display: block;
-  overflow: hidden;
-  font: 500 14px/1.45 var(--sans);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.disclosure-action {
+.panel-header .section-kicker { margin-bottom: 3px; }
+.panel-header strong { font: 400 25px/1.1 var(--serif); }
+.panel-close {
   min-height: 38px;
   display: inline-flex;
   align-items: center;
-  gap: 11px;
-  flex: 0 0 auto;
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.disclosure-action i {
-  position: relative;
-  width: 28px;
-  height: 28px;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-}
-.disclosure-action i::before,
-.disclosure-action i::after {
-  content: "";
-  position: absolute;
-  inset: 50% auto auto 50%;
-  width: 10px;
-  height: 1px;
-  background: currentColor;
-  transform: translate(-50%, -50%);
-}
-.disclosure-action i::after {
-  transform: translate(-50%, -50%) rotate(90deg);
-  transition: transform .2s ease;
-}
-.information-disclosure[open] .disclosure-action i::after {
-  transform: translate(-50%, -50%) rotate(0deg);
-}
-.information-disclosure > summary:hover .disclosure-action i,
-.information-disclosure > summary:focus-visible .disclosure-action i {
+  gap: 9px;
+  padding: 0 9px 0 14px;
   color: #fff;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
   background: var(--ink);
+  font: 700 12px var(--sans);
+  cursor: pointer;
 }
-.information-disclosure > summary:focus-visible,
+.panel-close span {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1;
+}
+.panel-close:hover { color: var(--ink); background: #fff; }
+.panel-close:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+.panel-scroll {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.panel-scroll:focus-visible { outline: none; }
+.about-panel .tool-information { padding: 44px 28px 64px; }
+.about-panel .information-lead,
+.about-panel .evidence-grid,
+.about-panel .related-grid,
+.about-panel .step-grid { grid-template-columns: 1fr; }
+.about-panel .information-lead { gap: 28px; }
+.about-panel .information-section,
+.about-panel .related-tools,
+.about-panel .evidence-grid { margin-top: 58px; }
+.about-panel .step-grid li { min-height: 0; }
+.about-panel .step-grid h3 { margin-top: 28px; }
+.about-panel .evidence-grid > section { padding: 28px 24px; }
+.about-panel .related-grid a { min-height: 110px; }
+.about-panel .information-lead > div > p:first-of-type { font-size: 18px; }
+.about-panel .tool-information h2 { font-size: clamp(29px, 5vw, 39px); }
+.about-panel .information-heading h2,
+.about-panel .evidence-grid h2 { font-size: 29px; }
+.about-panel .related-grid a:focus-visible,
 .related-grid a:focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 3px;
@@ -429,24 +460,11 @@ a { color: inherit; }
   .consent { bottom: 62px; align-items: stretch; flex-direction: column; }
   .consent > div { justify-content: flex-end; }
 
-  .enriched-tool-page .tool-stage {
-    height: 720px;
-    min-height: 720px;
-  }
-  .tool-information {
-    width: calc(100% - 28px);
-    max-width: 1180px;
-  }
-  .information-disclosure > summary {
-    width: calc(100% - 28px);
-    min-height: 74px;
-  }
-  .disclosure-copy strong {
-    max-width: 64vw;
-    font-size: 13px;
-  }
-  .disclosure-action > span { display: none; }
-  .tool-information { padding: 58px 0; }
+  .about-trigger { padding-inline: 13px; }
+  .about-panel { width: 100vw; border-left: 0; }
+  .panel-header { min-height: 70px; padding: 10px 14px; }
+  .panel-header strong { font-size: 23px; }
+  .about-panel .tool-information { padding: 38px 14px 52px; }
   .information-lead,
   .evidence-grid,
   .related-grid { grid-template-columns: 1fr; }
