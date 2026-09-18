@@ -37,6 +37,7 @@ const requiredAssets = [
   "dist/about/index.html",
   "dist/methodology/index.html",
   "dist/editorial.css",
+  "dist/editorial.js",
   "dist/tool-page.css",
   "dist/tool-page.js",
   "dist/_headers",
@@ -250,10 +251,21 @@ for (const page of [
     '"@type": "BreadcrumbList"',
     '<meta name="author" content="Paolo Pastorino">',
     '<meta property="og:site_name" content="London Advanced">',
-    '<link rel="stylesheet" href="/editorial.css">'
+    '<link rel="stylesheet" href="/editorial.css">',
+    '<script src="/editorial.js"></script>',
+    'class="nav-dropdown tools-menu"',
+    'class="nav-dropdown project-menu"',
+    'class="nav-dropdown community-menu"'
   ]) {
     if (!html.includes(marker)) fail(`${page.path} is missing ${marker}.`);
   }
+}
+
+const editorialScript = requireFile("dist/editorial.js");
+try {
+  new vm.Script(editorialScript, { filename: "dist/editorial.js" });
+} catch (error) {
+  fail(`dist/editorial.js has invalid JavaScript: ${error.message}`);
 }
 
 if (!appText.includes('href="/about/"') || !appText.includes('href="/methodology/"')) {
