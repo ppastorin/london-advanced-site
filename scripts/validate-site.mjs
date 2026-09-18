@@ -34,6 +34,10 @@ const requiredAssets = [
   "dist/data/events.json",
   "dist/events/index.html",
   "dist/events/events.js",
+  "dist/about/index.html",
+  "dist/methodology/index.html",
+  "dist/editorial.css",
+  "dist/editorial.js",
   "dist/tool-page.css",
   "dist/tool-page.js",
   "dist/_headers",
@@ -185,6 +189,8 @@ for (const requiredFrameHost of [
 
 const sitemap = requireFile("dist/sitemap.xml");
 if (!sitemap.includes("https://www.londonadvanced.com/events/")) fail("Sitemap is missing /events/.");
+if (!sitemap.includes("https://www.londonadvanced.com/about/")) fail("Sitemap is missing /about/.");
+if (!sitemap.includes("https://www.londonadvanced.com/methodology/")) fail("Sitemap is missing /methodology/.");
 for (const { href } of expectedTools.values()) {
   if (!sitemap.includes(`https://www.londonadvanced.com${href}`)) fail(`Sitemap is missing ${href}`);
 }
@@ -232,6 +238,38 @@ for (const [toolId, { href }] of expectedTools) {
   ]) {
     if (!toolHtml.includes(marker)) fail(`The enriched ${toolId} page is missing ${marker}.`);
   }
+}
+
+for (const page of [
+  { path: "dist/about/index.html", canonical: "https://www.londonadvanced.com/about/", type: "AboutPage" },
+  { path: "dist/methodology/index.html", canonical: "https://www.londonadvanced.com/methodology/", type: "WebPage" }
+]) {
+  const html = requireFile(page.path);
+  for (const marker of [
+    `<link rel="canonical" href="${page.canonical}">`,
+    `"@type": "${page.type}"`,
+    '"@type": "BreadcrumbList"',
+    '<meta name="author" content="Paolo Pastorino">',
+    '<meta property="og:site_name" content="London Advanced">',
+    '<link rel="stylesheet" href="/editorial.css">',
+    '<script src="/editorial.js"></script>',
+    'class="nav-dropdown tools-menu"',
+    'class="nav-dropdown project-menu"',
+    'class="nav-dropdown community-menu"'
+  ]) {
+    if (!html.includes(marker)) fail(`${page.path} is missing ${marker}.`);
+  }
+}
+
+const editorialScript = requireFile("dist/editorial.js");
+try {
+  new vm.Script(editorialScript, { filename: "dist/editorial.js" });
+} catch (error) {
+  fail(`dist/editorial.js has invalid JavaScript: ${error.message}`);
+}
+
+if (!appText.includes('href="/about/"') || !appText.includes('href="/methodology/"')) {
+  fail("The homepage navigation must link to About and Methodology.");
 }
 
 if (failures.length) {
