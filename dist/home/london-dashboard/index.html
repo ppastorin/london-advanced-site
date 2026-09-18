@@ -74,20 +74,22 @@
     <div class="tool-actions">
       <label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label>
       <select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select>
+      <button class="about-trigger" id="dashboard-about-trigger" type="button" aria-haspopup="dialog" aria-controls="dashboard-about-panel">About</button>
     </div>
   </header>
 
   <main class="tool-stage"><div class="frame-status" role="status">Loading London Dashboard…</div><iframe class="tool-frame" id="tool-frame" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></main>
 
-  <details class="information-disclosure" id="about-dashboard">
-    <summary>
-      <span class="disclosure-copy">
-        <span class="section-kicker">About this dashboard</span>
-        <strong>Weather, transport, airport access, air quality and events in one view.</strong>
-      </span>
-      <span class="disclosure-action" aria-hidden="true"><span>Read the guide</span><i></i></span>
-    </summary>
-  <article class="tool-information" aria-labelledby="dashboard-about-title">
+  <dialog class="about-panel" id="dashboard-about-panel" aria-labelledby="dashboard-about-title">
+    <header class="panel-header">
+      <div>
+        <span class="section-kicker">London Advanced</span>
+        <strong>About this dashboard</strong>
+      </div>
+      <button class="panel-close" id="dashboard-about-close" type="button">Close <span aria-hidden="true">×</span></button>
+    </header>
+    <div class="panel-scroll">
+    <article class="tool-information">
     <div class="information-lead">
       <div>
         <span class="section-kicker">About this tool</span>
@@ -170,8 +172,9 @@
         </a>
       </div>
     </section>
-  </article>
-  </details>
+    </article>
+    </div>
+  </dialog>
 
   <a class="guide-strip" href="https://payhip.com/b/DrBE5" target="_blank" rel="noopener"><span>The Other London</span><strong>Looking for London beyond the standard lists?</strong><span>Explore the guide →</span></a>
   <noscript>This page requires JavaScript. <a href="https://london-now.ppastorin.workers.dev/">Open London Dashboard directly</a>.</noscript>
