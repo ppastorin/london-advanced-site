@@ -213,6 +213,24 @@ try {
   fail(`dist/events/events.js has invalid JavaScript: ${error.message}`);
 }
 
+const dashboardHtml = requireFile("dist/home/london-dashboard/index.html");
+for (const marker of [
+  'id="dashboard-about-trigger"',
+  'id="dashboard-about-panel"',
+  'id="dashboard-about-close"',
+  'class="step-grid"',
+  'class="evidence-grid"',
+  'class="related-grid"',
+  '"@type": "WebApplication"',
+  '"@type": "BreadcrumbList"'
+]) {
+  if (!dashboardHtml.includes(marker)) fail(`The enriched London Dashboard page is missing ${marker}.`);
+}
+if (!dashboardHtml.includes('<meta property="og:site_name" content="London Advanced">') ||
+    !dashboardHtml.includes('<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">')) {
+  fail("The London Dashboard page is missing site identity metadata.");
+}
+
 if (failures.length) {
   console.error("\nLondon Advanced validation failed:\n");
   failures.forEach((message, index) => console.error(`${index + 1}. ${message}`));

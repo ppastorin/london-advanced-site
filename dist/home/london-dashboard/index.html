@@ -1,22 +1,70 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Live London weather, transport status, airports, events and air quality in one practical dashboard.">
+  <meta name="author" content="Paolo Pastorino">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="London Advanced">
   <meta property="og:title" content="London Dashboard — London Advanced">
   <meta property="og:description" content="See the practical state of London today in one live dashboard.">
   <meta property="og:url" content="https://www.londonadvanced.com/home/london-dashboard/">
+  <meta property="og:image" content="https://www.londonadvanced.com/assets/london-map.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.londonadvanced.com/home/london-dashboard/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <title>London Dashboard — Weather, transport and events | London Advanced</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://www.londonadvanced.com/home/london-dashboard/#application",
+        "name": "London Dashboard",
+        "url": "https://www.londonadvanced.com/home/london-dashboard/",
+        "description": "A free London dashboard for weather, transport status, airport travel, air quality and upcoming events.",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "browserRequirements": "Requires JavaScript and a modern web browser",
+        "author": { "@id": "https://www.londonadvanced.com/#paolo-pastorino" },
+        "publisher": { "@id": "https://www.londonadvanced.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.londonadvanced.com/home/london-dashboard/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "London Advanced",
+            "item": "https://www.londonadvanced.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "London Dashboard",
+            "item": "https://www.londonadvanced.com/home/london-dashboard/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/tool-page.css">
 </head>
-<body class="tool-shell" data-tool-id="london-dashboard">
+<body class="tool-shell enriched-tool-page" data-tool-id="london-dashboard">
   <header class="tool-header">
     <a class="tool-brand" href="/" aria-label="London Advanced home">
       <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/><circle class="brand-centre" cx="18" cy="18" r="2.2"/></svg>
@@ -26,9 +74,108 @@
     <div class="tool-actions">
       <label class="visually-hidden" for="tool-switcher">Switch London Advanced tool</label>
       <select class="tool-switcher" id="tool-switcher" aria-label="Switch London Advanced tool"></select>
+      <button class="about-trigger" id="dashboard-about-trigger" type="button" aria-haspopup="dialog" aria-controls="dashboard-about-panel">About</button>
     </div>
   </header>
+
   <main class="tool-stage"><div class="frame-status" role="status">Loading London Dashboard…</div><iframe class="tool-frame" id="tool-frame" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></main>
+
+  <dialog class="about-panel" id="dashboard-about-panel" aria-labelledby="dashboard-about-title">
+    <header class="panel-header">
+      <div>
+        <span class="section-kicker">London Advanced</span>
+        <strong>About this dashboard</strong>
+      </div>
+      <button class="panel-close" id="dashboard-about-close" type="button">Close <span aria-hidden="true">×</span></button>
+    </header>
+    <div class="panel-scroll">
+    <article class="tool-information">
+    <div class="information-lead">
+      <div>
+        <span class="section-kicker">About this tool</span>
+        <h2 id="dashboard-about-title">London today, in one place.</h2>
+        <p>London Dashboard brings together the information that can change a day in the city: the weather ahead, problems on the transport network, travel to the airports, current air-quality conditions and events happening across London.</p>
+        <p>It is designed as a quick starting point rather than another full journey planner. Use it to understand what is happening, spot anything that may affect your plans and decide where to look next.</p>
+      </div>
+      <aside class="quick-facts" aria-label="London Dashboard quick facts">
+        <span>Useful for</span>
+        <ul>
+          <li>Checking conditions before leaving</li>
+          <li>Monitoring transport disruption</li>
+          <li>Planning airport journeys</li>
+          <li>Browsing events by date</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="information-section" aria-labelledby="dashboard-how-title">
+      <div class="information-heading">
+        <span class="section-kicker">How to use it</span>
+        <h2 id="dashboard-how-title">From a quick check to a firmer plan.</h2>
+      </div>
+      <ol class="step-grid">
+        <li>
+          <span>01</span>
+          <h3>Start with Now</h3>
+          <p>Check the latest London weather forecast, current Tube conditions and the air-quality reading before deciding what to do or how to travel.</p>
+        </li>
+        <li>
+          <span>02</span>
+          <h3>Review Travel and Flights</h3>
+          <p>Look for disruption affecting rail and London transport, then check the airport information relevant to your journey.</p>
+        </li>
+        <li>
+          <span>03</span>
+          <h3>Search for events</h3>
+          <p>Choose a single date or a range of up to 31 days, filter Ticketmaster results by category and browse the available pages.</p>
+        </li>
+        <li>
+          <span>04</span>
+          <h3>Continue with the right tool</h3>
+          <p>Move to Escape the Crowds, the Fare Calculator, Smart Navigation or London by Mood when you need more detailed help.</p>
+        </li>
+      </ol>
+    </section>
+
+    <div class="evidence-grid">
+      <section aria-labelledby="dashboard-sources-title">
+        <span class="section-kicker">What it uses</span>
+        <h2 id="dashboard-sources-title">Established London data sources.</h2>
+        <p>The dashboard brings together information from sources including the Met Office, Transport for London, National Rail, the London Air Quality Network and the Ticketmaster Discovery API.</p>
+        <p>Some information is cached briefly to keep the dashboard fast and reduce unnecessary requests to external services.</p>
+      </section>
+      <section aria-labelledby="dashboard-limits-title">
+        <span class="section-kicker">What to know</span>
+        <h2 id="dashboard-limits-title">Useful context, not a guarantee.</h2>
+        <p>Live services can be delayed, incomplete or temporarily unavailable. Check the relevant operator before beginning a time-critical journey.</p>
+        <p>The air-quality figure is the highest current index reported across participating London monitoring sites, not a street-level reading. Ticketmaster is useful for bookable events but is not a complete list of everything happening in London.</p>
+      </section>
+    </div>
+
+    <section class="related-tools" aria-labelledby="dashboard-related-title">
+      <div class="information-heading">
+        <span class="section-kicker">Continue exploring</span>
+        <h2 id="dashboard-related-title">Choose your next London Advanced tool.</h2>
+      </div>
+      <div class="related-grid">
+        <a href="/home/escape-the-crowds/">
+          <span>Compare expected pressure</span>
+          <strong>Escape the Crowds →</strong>
+        </a>
+        <a href="/home/travel-fare-calculator/">
+          <span>Compare likely transport costs</span>
+          <strong>Travel Fare Calculator →</strong>
+        </a>
+        <a href="/events/">
+          <span>Independent weekend selection</span>
+          <strong>This Week →</strong>
+        </a>
+      </div>
+    </section>
+    </article>
+    </div>
+  </dialog>
+
   <a class="guide-strip" href="https://payhip.com/b/DrBE5" target="_blank" rel="noopener"><span>The Other London</span><strong>Looking for London beyond the standard lists?</strong><span>Explore the guide →</span></a>
   <noscript>This page requires JavaScript. <a href="https://london-now.ppastorin.workers.dev/">Open London Dashboard directly</a>.</noscript>
   <script src="/content.js"></script><script src="/tool-page.js"></script>
