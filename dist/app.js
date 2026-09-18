@@ -74,6 +74,17 @@ function communityMenuLinks() {
     </a>`;
 }
 
+function projectMenuLinks() {
+  return `<a href="/about/" data-track="project:about">
+      <span>The person and purpose</span>
+      <strong>About</strong>
+    </a>
+    <a href="/methodology/" data-track="project:methodology">
+      <span>Sources, decisions and limits</span>
+      <strong>Methodology</strong>
+    </a>`;
+}
+
 function mobileMenuContent() {
   return `
     <p class="mobile-menu-heading">Tools</p>
@@ -100,6 +111,8 @@ function mobileMenuContent() {
       <span>Places and ideas</span>
       <strong>Journal</strong>
     </button>
+    <p class="mobile-menu-heading">Project</p>
+    ${projectMenuLinks()}
     <p class="mobile-menu-heading">Community</p>
     ${communityMenuLinks()}`;
 }
@@ -295,6 +308,10 @@ function render() {
           </div>
         </details>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
+        <details class="nav-dropdown project-menu">
+          <summary>Project</summary>
+          <div class="nav-menu-panel project-menu-panel">${projectMenuLinks()}</div>
+        </details>
         <details class="nav-dropdown community-menu">
           <summary>Community</summary>
           <div class="nav-menu-panel community-menu-panel">${communityMenuLinks()}</div>
