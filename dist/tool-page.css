@@ -127,6 +127,205 @@ a { color: inherit; }
 }
 .tool-stage.is-loaded .frame-status { display: none; }
 
+/* Enriched tool pages keep the application prominent while allowing useful,
+   indexable guidance to continue below the embedded tool. */
+.tool-shell.enriched-tool-page {
+  height: auto;
+  min-height: 100dvh;
+  display: block;
+  overflow: visible;
+}
+.enriched-tool-page .tool-header {
+  position: sticky;
+  top: 0;
+}
+.enriched-tool-page .tool-stage {
+  height: clamp(620px, 76dvh, 820px);
+  min-height: 620px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tool-intro,
+.tool-information {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.tool-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 32px;
+  padding: 26px 0 24px;
+}
+.section-kicker {
+  display: block;
+  margin-bottom: 8px;
+  color: #765f33;
+  font: 500 10px var(--mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.tool-intro h2,
+.tool-information h2 {
+  margin: 0;
+  font: 400 clamp(29px, 4vw, 52px)/1.02 var(--serif);
+  letter-spacing: -.025em;
+}
+.tool-intro p {
+  max-width: 780px;
+  margin: 12px 0 0;
+  color: #4c4a47;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.tool-intro > a {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.tool-intro > a:hover,
+.tool-intro > a:focus-visible {
+  color: #fff;
+  background: var(--ink);
+}
+.tool-intro > a:focus-visible,
+.related-grid a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.tool-information {
+  padding: clamp(56px, 8vw, 100px) 0;
+  scroll-margin-top: 92px;
+}
+.information-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(250px, .7fr);
+  gap: clamp(36px, 7vw, 96px);
+  align-items: start;
+}
+.information-lead > div > p,
+.evidence-grid p {
+  color: #494744;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.information-lead > div > p:first-of-type {
+  margin-top: 22px;
+  color: var(--ink);
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+}
+.quick-facts {
+  padding: 26px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+.quick-facts > span {
+  font: 500 10px var(--mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.quick-facts ul {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.quick-facts li {
+  padding: 11px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.information-section,
+.related-tools {
+  margin-top: clamp(64px, 9vw, 112px);
+}
+.information-heading {
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+.information-heading h2,
+.evidence-grid h2 {
+  font-size: clamp(28px, 3.5vw, 43px);
+}
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 1px;
+  list-style: none;
+  background: var(--line);
+}
+.step-grid li {
+  min-height: 260px;
+  padding: 24px;
+  background: var(--paper);
+}
+.step-grid li > span {
+  color: #765f33;
+  font: 500 10px var(--mono);
+}
+.step-grid h3 {
+  margin: 46px 0 12px;
+  font: 400 25px/1.08 var(--serif);
+}
+.step-grid p {
+  margin: 0;
+  color: #55514c;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(64px, 9vw, 112px);
+  padding: 1px;
+  background: var(--line);
+}
+.evidence-grid > section {
+  padding: clamp(28px, 5vw, 54px);
+  background: #fff;
+}
+.evidence-grid > section:last-child { background: var(--cream); }
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.related-grid a {
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #fff;
+  text-decoration: none;
+}
+.related-grid a:hover,
+.related-grid a:focus-visible {
+  border-color: var(--ink);
+  box-shadow: 0 9px 24px rgba(23, 23, 23, .08);
+  transform: translateY(-2px);
+}
+.related-grid span { color: #6c6862; font-size: 12px; }
+.related-grid strong { font: 400 21px/1.15 var(--serif); }
+
 .guide-strip {
   min-height: 52px;
   display: grid;
@@ -199,6 +398,34 @@ a { color: inherit; }
   .guide-strip > span:last-child { font-size: 11px; }
   .consent { bottom: 62px; align-items: stretch; flex-direction: column; }
   .consent > div { justify-content: flex-end; }
+
+  .enriched-tool-page .tool-header { position: relative; }
+  .enriched-tool-page .tool-stage {
+    height: 720px;
+    min-height: 720px;
+  }
+  .tool-intro,
+  .tool-information {
+    width: calc(100% - 28px);
+    max-width: 1180px;
+  }
+  .tool-intro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px 0;
+  }
+  .tool-intro h2 { font-size: 31px; }
+  .tool-intro > a { justify-self: start; }
+  .tool-information { padding: 58px 0; }
+  .information-lead,
+  .evidence-grid,
+  .related-grid { grid-template-columns: 1fr; }
+  .information-lead { gap: 28px; }
+  .step-grid { grid-template-columns: 1fr; }
+  .step-grid li { min-height: 0; }
+  .step-grid h3 { margin-top: 28px; }
+  .evidence-grid > section { padding: 28px 22px; }
+  .related-grid a { min-height: 112px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
