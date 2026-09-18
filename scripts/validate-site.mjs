@@ -215,7 +215,7 @@ try {
 
 const dashboardHtml = requireFile("dist/home/london-dashboard/index.html");
 for (const marker of [
-  'class="tool-intro"',
+  'class="information-disclosure"',
   'id="about-dashboard"',
   'class="step-grid"',
   'class="evidence-grid"',
