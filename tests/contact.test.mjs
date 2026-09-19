@@ -26,8 +26,10 @@ function contactRequest(overrides = {}, headers = {}) {
 
 test("accepts a valid contact submission only after the delivery provider accepts it", async () => {
   let deliveredPayload;
+  let deliveryHeaders;
   const response = await handleContact(contactRequest(), async (_url, options) => {
     deliveredPayload = JSON.parse(options.body);
+    deliveryHeaders = options.headers;
     return Response.json({ success: "true", message: "submitted" });
   });
 
@@ -36,6 +38,8 @@ test("accepts a valid contact submission only after the delivery provider accept
   assert.equal(deliveredPayload.name, "Delivery Test");
   assert.equal(deliveredPayload.email, "visitor@example.com");
   assert.equal(deliveredPayload._captcha, "false");
+  assert.equal(deliveryHeaders.Origin, "https://www.londonadvanced.com");
+  assert.equal(deliveryHeaders.Referer, "https://www.londonadvanced.com/");
 });
 
 test("redirects a successful browser submission to the local thank-you page", async () => {

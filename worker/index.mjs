@@ -100,7 +100,9 @@ export async function handleContact(request, providerFetch = fetch) {
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        Origin: "https://www.londonadvanced.com",
+        Referer: "https://www.londonadvanced.com/"
       },
       body: JSON.stringify({
         name,
