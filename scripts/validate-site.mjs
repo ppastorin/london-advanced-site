@@ -36,6 +36,7 @@ const requiredAssets = [
   "dist/events/events.js",
   "dist/about/index.html",
   "dist/methodology/index.html",
+  "dist/thank-you/index.html",
   "dist/editorial.css",
   "dist/editorial.js",
   "dist/tool-page.css",
@@ -55,7 +56,10 @@ requiredAssets.forEach(requireFile);
 const wranglerText = requireFile("wrangler.jsonc");
 try {
   const wrangler = JSON.parse(wranglerText);
+  if (wrangler.main !== "./worker/index.mjs") fail('wrangler.jsonc must use "./worker/index.mjs" as its Worker entrypoint.');
   if (wrangler.assets?.directory !== "./dist") fail('wrangler.jsonc must set assets.directory to "./dist".');
+  if (wrangler.assets?.binding !== "ASSETS") fail('wrangler.jsonc must expose the static assets as the "ASSETS" binding.');
+  if (!wrangler.assets?.run_worker_first?.includes("/api/contact")) fail("The contact endpoint must run through the Worker.");
   if (wrangler.assets?.not_found_handling !== "404-page") fail('wrangler.jsonc must use not_found_handling "404-page".');
 } catch (error) {
   fail(`wrangler.jsonc is not valid JSON: ${error.message}`);
@@ -277,11 +281,16 @@ if (!homepageHtml.includes('class="wordmark" href="#top"') || !homepageHtml.incl
 for (const marker of [
   'id="contact"',
   'data-scroll-target="contact"',
-  'action="https://formsubmit.co/paolo.pastorino@gmail.com"',
-  'name="_captcha" value="true"',
-  'name="_honey"'
+  'action="/api/contact"',
+  'name="started_at"',
+  'name="human_answer"',
+  'name="_honey"',
+  'data-contact-form'
 ]) {
   if (!homepageHtml.includes(marker)) fail(`The contact experience is missing ${marker}.`);
+}
+if (homepageHtml.includes("formsubmit.co") || homepageHtml.includes("paolo.pastorino@gmail.com")) {
+  fail("The public homepage must not expose the delivery provider or target email address.");
 }
 for (const network of ["facebook", "instagram"]) {
   const count = (homepageHtml.match(new RegExp(`data-track="social:${network}"`, "g")) || []).length;
@@ -290,6 +299,15 @@ for (const network of ["facebook", "instagram"]) {
 const homepageFooter = homepageHtml.match(/<footer id="community">[\s\S]*?<\/footer>/)?.[0] || "";
 if (homepageFooter.includes('class="social-links"')) fail("The homepage footer must not repeat the social links.");
 if (!homepageFooter.includes('href="#contact"')) fail("The homepage footer must link to the contact form.");
+
+const thankYouHtml = requireFile("dist/thank-you/index.html");
+if (!thankYouHtml.includes("Thank you") || !thankYouHtml.includes('href="/"')) {
+  fail("The thank-you page must confirm submission and link back to the homepage.");
+}
+const contactWorker = requireFile("worker/index.mjs");
+for (const marker of ["/api/contact", "human_answer", "started_at", "ASSETS.fetch", "PROVIDER_ENDPOINT", "atob("]) {
+  if (!contactWorker.includes(marker)) fail(`The contact Worker is missing ${marker}.`);
+}
 
 if (failures.length) {
   console.error("\nLondon Advanced validation failed:\n");

@@ -361,22 +361,20 @@ function render() {
         <h2>Seen something worth sharing?</h2>
         <p>Send a question, correction or London suggestion. I read every genuine message.</p>
       </div>
-      <form class="contact-form" action="https://formsubmit.co/paolo.pastorino@gmail.com" method="POST" target="_blank">
-        <input type="hidden" name="_subject" value="New message from London Advanced">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_next" value="https://www.londonadvanced.com/?contact=sent#contact">
+      <form class="contact-form" action="/api/contact" method="POST" data-contact-form>
+        <input type="hidden" name="started_at" value="">
         <label class="contact-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
         <div class="contact-fields">
-          <label>Name<input type="text" name="name" autocomplete="name" required></label>
-          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Name<input type="text" name="name" autocomplete="name" minlength="2" maxlength="100" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" maxlength="254" required></label>
         </div>
-        <label>Message<textarea name="message" rows="6" required></textarea></label>
+        <label>Message<textarea name="message" rows="6" minlength="10" maxlength="5000" required></textarea></label>
+        <label class="contact-check">Human check <span>What city is this website about?</span><input type="text" name="human_answer" autocomplete="off" maxlength="30" required></label>
         <div class="contact-submit">
           <button class="button dark" type="submit">Send message</button>
-          <p>A short spam check opens when you send.</p>
+          <p>Your message is checked securely without leaving the site.</p>
         </div>
-        <p class="contact-success" data-contact-success hidden role="status">Thank you — your message has been sent.</p>
+        <p class="contact-error" data-contact-error hidden role="alert">The message could not be sent. Please check the form and try again.</p>
       </form>
     </section>
 
@@ -390,13 +388,20 @@ function render() {
   bindSectionScrolling();
   bindDropdownMenus();
   bindTracking();
+  bindContactForm();
   showContactStatus();
   loadEvents();
 }
 
+function bindContactForm() {
+  const form = document.querySelector("[data-contact-form]");
+  const startedAt = form?.querySelector('[name="started_at"]');
+  if (startedAt) startedAt.value = String(Date.now());
+}
+
 function showContactStatus() {
-  if (new URLSearchParams(window.location.search).get("contact") !== "sent") return;
-  const message = document.querySelector("[data-contact-success]");
+  if (new URLSearchParams(window.location.search).get("contact") !== "error") return;
+  const message = document.querySelector("[data-contact-error]");
   if (message) message.hidden = false;
 }
 

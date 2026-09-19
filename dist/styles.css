@@ -499,9 +499,17 @@ section[id] { scroll-margin-top: 76px; }
 .contact-form input:focus,
 .contact-form textarea:focus { outline: 2px solid var(--gold); outline-offset: 2px; border-color: var(--ink); }
 .contact-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.contact-check { max-width: 360px; }
+.contact-check span { color: #666; font-weight: 400; }
 .contact-submit { display: flex; align-items: center; gap: 18px; }
 .contact-submit p { margin: 0; color: #666; font-size: 12px; line-height: 1.4; }
-.contact-success { margin: 18px 0 0; padding: 12px 14px; border-left: 3px solid var(--gold); background: #fff; font-size: 14px; }
+.contact-error { margin: 18px 0 0; padding: 12px 14px; border-left: 3px solid #a23a32; background: #fff; font-size: 14px; }
+
+.thank-you-page { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
+.thank-you-main { display: grid; place-items: center; padding: 70px 20px; }
+.thank-you-card { width: min(760px, 100%); padding: clamp(38px, 7vw, 82px); border: 1px solid var(--ink); background: #fff; }
+.thank-you-card h1 { margin: 18px 0 24px; font: 400 clamp(54px, 8vw, 96px)/.96 var(--serif); }
+.thank-you-card p { max-width: 560px; margin: 0 0 32px; color: #555; font-size: 18px; line-height: 1.6; }
 
 .community-band {
   padding: 50px clamp(20px, 5.5vw, 96px);
