@@ -111,6 +111,10 @@ function mobileMenuContent() {
       <span>Places and ideas</span>
       <strong>Journal</strong>
     </button>
+    <button class="mobile-section-link" type="button" data-scroll-target="contact">
+      <span>Questions and suggestions</span>
+      <strong>Contact me</strong>
+    </button>
     <p class="mobile-menu-heading">Project</p>
     ${projectMenuLinks()}
     <p class="mobile-menu-heading">Community</p>
@@ -280,14 +284,14 @@ function render() {
   if (!site) return;
   if (!site.innerHTML.trim()) site.innerHTML = `<main id="top">
     <header class="site-nav">
-      <div class="wordmark" aria-label="London Advanced">
+      <a class="wordmark" href="#top" aria-label="London Advanced home — back to top">
         <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
           <circle cx="18" cy="18" r="15.5"/>
           <path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/>
           <circle class="brand-centre" cx="18" cy="18" r="2.2"/>
         </svg>
         <span class="brand-name">London Advanced</span>
-      </div>
+      </a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <details class="nav-dropdown tools-menu">
           <summary>Tools</summary>
@@ -308,6 +312,7 @@ function render() {
           </div>
         </details>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
+        <button class="nav-section-button contact-nav" type="button" data-scroll-target="contact">Contact</button>
         <details class="nav-dropdown project-menu">
           <summary>Project</summary>
           <div class="nav-menu-panel project-menu-panel">${projectMenuLinks()}</div>
@@ -350,18 +355,49 @@ function render() {
       <div class="story-grid">${storyCards()}</div>
     </section>
 
+    <section id="contact" class="contact-section section-wrap">
+      <div class="contact-intro">
+        <span class="eyebrow">04 / Get in touch</span>
+        <h2>Seen something worth sharing?</h2>
+        <p>Send a question, correction or London suggestion. I read every genuine message.</p>
+      </div>
+      <form class="contact-form" action="https://formsubmit.co/paolo.pastorino@gmail.com" method="POST" target="_blank">
+        <input type="hidden" name="_subject" value="New message from London Advanced">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://www.londonadvanced.com/?contact=sent#contact">
+        <label class="contact-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+        <div class="contact-fields">
+          <label>Name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <label>Message<textarea name="message" rows="6" required></textarea></label>
+        <div class="contact-submit">
+          <button class="button dark" type="submit">Send message</button>
+          <p>A short spam check opens when you send.</p>
+        </div>
+        <p class="contact-success" data-contact-success hidden role="status">Thank you — your message has been sent.</p>
+      </form>
+    </section>
+
     <section class="community-band"><p>London is better when knowledge is shared.</p>${socialLinks()}</section>
 
     <footer id="community">
       <div><strong>London Advanced</strong><span>Independent tools and field notes for a less obvious London.</span></div>
-      ${socialLinks()}
-      <small>© ${new Date().getFullYear()} Paolo Pastorino</small>
+      <div class="footer-meta"><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino</small></div>
     </footer>
   </main>`;
   bindSectionScrolling();
   bindDropdownMenus();
   bindTracking();
+  showContactStatus();
   loadEvents();
+}
+
+function showContactStatus() {
+  if (new URLSearchParams(window.location.search).get("contact") !== "sent") return;
+  const message = document.querySelector("[data-contact-success]");
+  if (message) message.hidden = false;
 }
 
 function bindSectionScrolling() {

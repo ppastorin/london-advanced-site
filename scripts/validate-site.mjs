@@ -271,6 +271,25 @@ try {
 if (!appText.includes('href="/about/"') || !appText.includes('href="/methodology/"')) {
   fail("The homepage navigation must link to About and Methodology.");
 }
+if (!homepageHtml.includes('class="wordmark" href="#top"') || !homepageHtml.includes('aria-label="London Advanced home — back to top"')) {
+  fail("The homepage wordmark must link back to the top of the page.");
+}
+for (const marker of [
+  'id="contact"',
+  'data-scroll-target="contact"',
+  'action="https://formsubmit.co/paolo.pastorino@gmail.com"',
+  'name="_captcha" value="true"',
+  'name="_honey"'
+]) {
+  if (!homepageHtml.includes(marker)) fail(`The contact experience is missing ${marker}.`);
+}
+for (const network of ["facebook", "instagram"]) {
+  const count = (homepageHtml.match(new RegExp(`data-track="social:${network}"`, "g")) || []).length;
+  if (count !== 1) fail(`The homepage must show the ${network} social link exactly once outside navigation; found ${count}.`);
+}
+const homepageFooter = homepageHtml.match(/<footer id="community">[\s\S]*?<\/footer>/)?.[0] || "";
+if (homepageFooter.includes('class="social-links"')) fail("The homepage footer must not repeat the social links.");
+if (!homepageFooter.includes('href="#contact"')) fail("The homepage footer must link to the contact form.");
 
 if (failures.length) {
   console.error("\nLondon Advanced validation failed:\n");
