@@ -99,6 +99,121 @@ function eventsStructuredData() {
   };
 }
 
+function renderToolMenuLinks(data) {
+  return data.apps.map(app => `
+    <a href="${app.href}" data-track="app-menu:${app.name}">
+      <span>${app.short}</span>
+      <strong>${app.name}</strong>
+    </a>`).join("");
+}
+
+function renderProjectMenuLinks() {
+  return `<a href="/about/" data-track="project:about">
+      <span>The person and purpose</span>
+      <strong>About</strong>
+    </a>
+    <a href="/methodology/" data-track="project:methodology">
+      <span>Sources, decisions and limits</span>
+      <strong>Methodology</strong>
+    </a>`;
+}
+
+function renderCommunityMenuLinks(data) {
+  return `
+    <a href="${data.links.facebook}" target="_blank" rel="noopener" data-track="social:menu-facebook">
+      <span>Join the discussion</span>
+      <strong>Facebook group ↗</strong>
+    </a>
+    <a href="${data.links.instagram}" target="_blank" rel="noopener" data-track="social:menu-instagram">
+      <span>Follow the photography</span>
+      <strong>Instagram ↗</strong>
+    </a>`;
+}
+
+function renderEventsHeader(data) {
+  const tools = renderToolMenuLinks(data);
+  const project = renderProjectMenuLinks();
+  const community = renderCommunityMenuLinks(data);
+
+  return `<header class="site-nav">
+    <a class="wordmark" href="/" aria-label="London Advanced home">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+        <circle cx="18" cy="18" r="15.5"/>
+        <path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/>
+        <circle class="brand-centre" cx="18" cy="18" r="2.2"/>
+      </svg>
+      <span class="brand-name">London Advanced</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <details class="nav-dropdown tools-menu">
+        <summary>Tools</summary>
+        <div class="nav-menu-panel tools-menu-panel">${tools}</div>
+      </details>
+      <a href="${data.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
+      <details class="nav-dropdown week-menu">
+        <summary>This week</summary>
+        <div class="nav-menu-panel week-menu-panel">
+          <a href="/#events" data-track="events:menu-highlights">
+            <span>Three featured selections</span>
+            <strong>Highlights</strong>
+          </a>
+          <a href="/events/" aria-current="page" data-track="events:menu-all">
+            <span>The complete weekend edit</span>
+            <strong>All events</strong>
+          </a>
+        </div>
+      </details>
+      <a href="/#journal">Journal</a>
+      <a class="contact-nav" href="/#contact">Contact</a>
+      <details class="nav-dropdown project-menu">
+        <summary>Project</summary>
+        <div class="nav-menu-panel project-menu-panel">${project}</div>
+      </details>
+      <details class="nav-dropdown community-menu">
+        <summary>Community</summary>
+        <div class="nav-menu-panel community-menu-panel">${community}</div>
+      </details>
+    </nav>
+    <details class="nav-dropdown mobile-menu">
+      <summary aria-label="Open navigation menu"><span>Menu</span></summary>
+      <div class="nav-menu-panel mobile-menu-panel">
+        <p class="mobile-menu-heading">Tools</p>
+        ${tools.trim()}
+        <p class="mobile-menu-heading">Explore</p>
+        <a href="${data.links.guideStore}" target="_blank" rel="noopener noreferrer" data-track="guide:mobile-menu">
+          <span>The Other London</span>
+          <strong>Guide ↗</strong>
+        </a>
+        <details class="mobile-week-menu">
+          <summary><span>Weekend selections</span><strong>This week</strong></summary>
+          <div>
+            <a href="/#events" data-track="events:mobile-highlights">
+              <span>Three featured selections</span>
+              <strong>Highlights</strong>
+            </a>
+            <a href="/events/" aria-current="page" data-track="events:mobile-all">
+              <span>The complete weekend edit</span>
+              <strong>All events</strong>
+            </a>
+          </div>
+        </details>
+        <a href="/#journal">
+          <span>Places and ideas</span>
+          <strong>Journal</strong>
+        </a>
+        <a href="/#contact">
+          <span>Questions and suggestions</span>
+          <strong>Contact me</strong>
+        </a>
+        <p class="mobile-menu-heading">Project</p>
+        ${project}
+        <p class="mobile-menu-heading">Community</p>
+        ${community.trim()}
+      </div>
+    </details>
+  </header>`;
+}
+
 async function renderHomepage(feed) {
   const contentSource = await readFile(path.join(distRoot, "content.js"), "utf8");
   const appSource = await readFile(path.join(distRoot, "app.js"), "utf8");
@@ -249,20 +364,7 @@ ${safeJson(eventsStructuredData())}
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="events-page">
-  <header class="site-nav">
-    <a class="wordmark" href="/" aria-label="London Advanced home">
-      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
-        <circle cx="18" cy="18" r="15.5"/>
-        <path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/>
-        <circle class="brand-centre" cx="18" cy="18" r="2.2"/>
-      </svg>
-      <span class="brand-name">London Advanced</span>
-    </a>
-    <nav class="events-page-nav" aria-label="Events navigation">
-      <a href="/#tools">Tools</a>
-      <a href="/">Home</a>
-    </nav>
-  </header>
+  ${renderEventsHeader(data)}
 
   <main>
     <section class="events-page-hero">

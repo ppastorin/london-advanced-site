@@ -170,6 +170,25 @@ async function loadEvents() {
   }
 }
 
+function bindDropdownMenus() {
+  const menus = [...document.querySelectorAll(".nav-dropdown")];
+  menus.forEach(menu => {
+    menu.addEventListener("toggle", () => {
+      if (menu.open) menus.filter(other => other !== menu).forEach(other => other.removeAttribute("open"));
+    });
+    menu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => menu.removeAttribute("open")));
+  });
+  document.addEventListener("click", event => {
+    menus.forEach(menu => {
+      if (!menu.contains(event.target)) menu.removeAttribute("open");
+    });
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") menus.forEach(menu => menu.removeAttribute("open"));
+  });
+}
+
 document.querySelector("[data-facebook-link]").href = DATA.links.facebook;
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
+bindDropdownMenus();
 loadEvents();
