@@ -1,7 +1,6 @@
-// Use the directly monitored inbox. The previously configured forwarding
-// address could not receive FormSubmit's one-time activation message, so the
-// provider rejected every otherwise-valid submission in production.
-const PROVIDER_ENDPOINT = atob("aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgvcHBhc3RvcmluQGdtYWlsLmNvbQ==");
+// Use FormSubmit's activated opaque endpoint so the recipient address is not
+// exposed in the Worker source or transmitted as part of the request URL.
+const PROVIDER_ENDPOINT = atob("aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgvYzA2M2YzZTY1ODEyMjJhNTA0ZGIzNTY4OTg5YjdiMjI=");
 const MAX_BODY_BYTES = 12_000;
 const MIN_COMPLETION_MS = 2_000;
 const MAX_COMPLETION_MS = 2 * 60 * 60 * 1_000;

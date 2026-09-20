@@ -39,7 +39,7 @@ test("accepts a valid contact submission only after the delivery provider accept
   assert.equal(deliveredPayload.name, "Delivery Test");
   assert.equal(deliveredPayload.email, "visitor@example.com");
   assert.equal(deliveredPayload._captcha, "false");
-  assert.equal(deliveryUrl, "https://formsubmit.co/ajax/ppastorin@gmail.com");
+  assert.equal(deliveryUrl, "https://formsubmit.co/ajax/c063f3e6581222a504db3568989b7b22");
   assert.equal(deliveryHeaders.Origin, "https://www.londonadvanced.com");
   assert.equal(deliveryHeaders.Referer, "https://www.londonadvanced.com/");
 });
