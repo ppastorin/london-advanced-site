@@ -1,6 +1,5 @@
-// Deliver directly to the monitored inbox. The former forwarding address could not
-// receive the provider's activation message, so every submission was rejected.
-const PROVIDER_ENDPOINT = atob("aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgvcHBhc3RvcmluQGdtYWlsLmNvbQ==");
+const CONTACT_DESTINATION = "ppastorin@gmail.com";
+const CONTACT_SENDER = "website@londonadvanced.com";
 const MAX_BODY_BYTES = 12_000;
 const MIN_COMPLETION_MS = 2_000;
 const MAX_COMPLETION_MS = 2 * 60 * 60 * 1_000;
@@ -50,7 +49,7 @@ function reject(request, status, code) {
     : redirectResponse(request, "/?contact=error#contact");
 }
 
-export async function handleContact(request, providerFetch = fetch) {
+export async function handleContact(request, emailBinding) {
   if (request.method !== "POST") {
     return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "POST" });
   }
@@ -83,57 +82,46 @@ export async function handleContact(request, providerFetch = fetch) {
   const name = clean(form.get("name"), 100);
   const email = clean(form.get("email"), 254);
   const message = clean(form.get("message"), 5_000);
-  const humanAnswer = clean(form.get("human_answer"), 30).toLowerCase();
   const startedAt = Number(form.get("started_at"));
   const completionTime = Date.now() - startedAt;
 
   if (name.length < 2 || !isValidEmail(email) || message.length < 10) {
     return reject(request, 400, "invalid_fields");
   }
-  if (humanAnswer !== "london") return reject(request, 400, "human_check_failed");
   if (!Number.isFinite(startedAt) || completionTime < MIN_COMPLETION_MS || completionTime > MAX_COMPLETION_MS) {
     return reject(request, 400, "timing_check_failed");
   }
 
-  let providerResponse;
-  let providerPayload;
-  try {
-    providerResponse = await providerFetch(PROVIDER_ENDPOINT, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Origin: "https://www.londonadvanced.com",
-        Referer: "https://www.londonadvanced.com/"
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message,
-        _replyto: email,
-        _subject: "New message from London Advanced",
-        _template: "table",
-        _captcha: "false",
-        _url: "https://www.londonadvanced.com/#contact"
-      })
-    });
-    providerPayload = await providerResponse.json();
-  } catch (error) {
-    console.error(JSON.stringify({ event: "contact_delivery_error", reason: "provider_unavailable" }));
-    return reject(request, 502, "delivery_failed");
+  if (!emailBinding || typeof emailBinding.send !== "function") {
+    console.error(JSON.stringify({ event: "contact_delivery_error", reason: "binding_unavailable" }));
+    return reject(request, 503, "delivery_unavailable");
   }
 
-  const providerAccepted = providerResponse.ok &&
-    (providerPayload?.success === true || providerPayload?.success === "true");
-  if (!providerAccepted) {
-    console.warn(JSON.stringify({
-      event: "contact_delivery_rejected",
-      providerStatus: providerResponse.status
+  try {
+    const delivery = await emailBinding.send({
+      to: CONTACT_DESTINATION,
+      from: { email: CONTACT_SENDER, name: "London Advanced" },
+      replyTo: { email, name },
+      subject: "New message from London Advanced",
+      text: [
+        "New message from the London Advanced website",
+        "",
+        `Name: ${name}`,
+        `Email: ${email}`,
+        "",
+        "Message:",
+        message
+      ].join("\n")
+    });
+    console.log(JSON.stringify({ event: "contact_delivery_accepted", messageId: delivery?.messageId ?? null }));
+  } catch (error) {
+    console.error(JSON.stringify({
+      event: "contact_delivery_error",
+      reason: "cloudflare_email_failed",
+      code: error?.code ?? "unknown"
     }));
     return reject(request, 502, "delivery_failed");
   }
-
-  console.log(JSON.stringify({ event: "contact_delivery_accepted", providerStatus: providerResponse.status }));
   const cookie = "la_contact_recent=1; Max-Age=60; Path=/; Secure; HttpOnly; SameSite=Lax";
   return wantsJson(request)
     ? jsonResponse({ ok: true, status: "accepted" }, 200, { "Set-Cookie": cookie })
@@ -143,7 +131,7 @@ export async function handleContact(request, providerFetch = fetch) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname === "/api/contact") return handleContact(request);
+    if (url.pathname === "/api/contact") return handleContact(request, env.CONTACT_EMAIL);
     return env.ASSETS.fetch(request);
   }
 };

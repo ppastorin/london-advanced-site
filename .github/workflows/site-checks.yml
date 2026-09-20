@@ -5,6 +5,8 @@ on:
     paths:
       - "dist/**"
       - "scripts/**"
+      - "tests/**"
+      - "worker/**"
       - "wrangler.jsonc"
       - "package.json"
   push:
@@ -13,6 +15,8 @@ on:
     paths:
       - "dist/**"
       - "scripts/**"
+      - "tests/**"
+      - "worker/**"
       - "wrangler.jsonc"
       - "package.json"
   workflow_dispatch:

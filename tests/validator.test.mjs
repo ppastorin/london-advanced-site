@@ -55,7 +55,7 @@ test('rejects more than eight events', () => {
 
 test('rejects more than three homepage selections', () => {
   const candidate = expandTo(structuredClone(valid), 4);
-  candidate.homepage_event_ids.push(candidate.events[3].id);
+  candidate.homepage_event_ids = candidate.events.slice(0, 4).map((event) => event.id);
   assert.ok(validateDigest(candidate).some((error) => error.includes('homepage_event_ids')));
 });
 

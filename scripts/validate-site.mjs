@@ -61,6 +61,10 @@ try {
   if (wrangler.assets?.binding !== "ASSETS") fail('wrangler.jsonc must expose the static assets as the "ASSETS" binding.');
   if (!wrangler.assets?.run_worker_first?.includes("/api/contact")) fail("The contact endpoint must run through the Worker.");
   if (wrangler.assets?.not_found_handling !== "404-page") fail('wrangler.jsonc must use not_found_handling "404-page".');
+  const contactEmail = wrangler.send_email?.find((binding) => binding.name === "CONTACT_EMAIL");
+  if (contactEmail?.destination_address !== "ppastorin@gmail.com") {
+    fail("wrangler.jsonc must bind CONTACT_EMAIL to the verified contact destination.");
+  }
 } catch (error) {
   fail(`wrangler.jsonc is not valid JSON: ${error.message}`);
 }
@@ -283,7 +287,6 @@ for (const marker of [
   'data-scroll-target="contact"',
   'action="/api/contact"',
   'name="started_at"',
-  'name="human_answer"',
   'name="_honey"',
   'data-contact-form'
 ]) {
@@ -305,7 +308,7 @@ if (!thankYouHtml.includes("Thank you") || !thankYouHtml.includes('href="/"')) {
   fail("The thank-you page must confirm submission and link back to the homepage.");
 }
 const contactWorker = requireFile("worker/index.mjs");
-for (const marker of ["/api/contact", "human_answer", "started_at", "ASSETS.fetch", "PROVIDER_ENDPOINT", "atob("]) {
+for (const marker of ["/api/contact", "started_at", "ASSETS.fetch", "env.CONTACT_EMAIL", "CONTACT_DESTINATION"]) {
   if (!contactWorker.includes(marker)) fail(`The contact Worker is missing ${marker}.`);
 }
 

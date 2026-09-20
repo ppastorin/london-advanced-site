@@ -499,10 +499,9 @@ section[id] { scroll-margin-top: 76px; }
 .contact-form input:focus,
 .contact-form textarea:focus { outline: 2px solid var(--gold); outline-offset: 2px; border-color: var(--ink); }
 .contact-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-.contact-check { max-width: 360px; }
-.contact-check span { color: #666; font-weight: 400; }
 .contact-submit { display: flex; align-items: center; gap: 18px; }
 .contact-submit p { margin: 0; color: #666; font-size: 12px; line-height: 1.4; }
+.contact-submit button:disabled { cursor: wait; opacity: .65; }
 .contact-error { margin: 18px 0 0; padding: 12px 14px; border-left: 3px solid #a23a32; background: #fff; font-size: 14px; }
 
 .thank-you-page { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
