@@ -1,4 +1,6 @@
-const PROVIDER_ENDPOINT = atob("aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgvcGFvbG8ucGFzdG9yaW5vQGdtYWlsLmNvbQ==");
+// Deliver directly to the monitored inbox. The former forwarding address could not
+// receive the provider's activation message, so every submission was rejected.
+const PROVIDER_ENDPOINT = atob("aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgvcHBhc3RvcmluQGdtYWlsLmNvbQ==");
 const MAX_BODY_BYTES = 12_000;
 const MIN_COMPLETION_MS = 2_000;
 const MAX_COMPLETION_MS = 2 * 60 * 60 * 1_000;
