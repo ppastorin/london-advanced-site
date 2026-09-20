@@ -369,10 +369,9 @@ function render() {
           <label>Email<input type="email" name="email" autocomplete="email" maxlength="254" required></label>
         </div>
         <label>Message<textarea name="message" rows="6" minlength="10" maxlength="5000" required></textarea></label>
-        <label class="contact-check">Human check <span>What city is this website about?</span><input type="text" name="human_answer" autocomplete="off" maxlength="30" required></label>
         <div class="contact-submit">
           <button class="button dark" type="submit">Send message</button>
-          <p>Your message is checked securely without leaving the site.</p>
+          <p>Protected by invisible spam checks. No CAPTCHA.</p>
         </div>
         <p class="contact-error" data-contact-error hidden role="alert">The message could not be sent. Please check the form and try again.</p>
       </form>
@@ -395,8 +394,45 @@ function render() {
 
 function bindContactForm() {
   const form = document.querySelector("[data-contact-form]");
+  if (!form) return;
   const startedAt = form?.querySelector('[name="started_at"]');
   if (startedAt) startedAt.value = String(Date.now());
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    const submitButton = form.querySelector('[type="submit"]');
+    const errorMessage = form.querySelector("[data-contact-error]");
+    const originalLabel = submitButton?.textContent;
+
+    if (errorMessage) errorMessage.hidden = true;
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending…";
+    }
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form)
+      });
+      const result = await response.json();
+      if (!response.ok || !result.ok) throw new Error(result.code || "delivery_failed");
+      window.location.assign("/thank-you/");
+    } catch (error) {
+      if (errorMessage) {
+        errorMessage.textContent = error.message === "please_wait"
+          ? "Please wait a minute before sending another message."
+          : "The message could not be sent. Your text has been kept, so you can try again.";
+        errorMessage.hidden = false;
+      }
+      if (startedAt) startedAt.value = String(Date.now());
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+      }
+    }
+  });
 }
 
 function showContactStatus() {
