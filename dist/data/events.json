@@ -1,24 +1,23 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-09-17T11:01:20+01:00",
-  "valid_from": "2026-09-17",
-  "valid_until": "2026-09-20",
+  "generated_at": "2026-09-20T11:01:32+01:00",
+  "valid_from": "2026-09-20",
+  "valid_until": "2026-09-27",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "hello-earth-crossness-2026-09-19",
-    "costermongers-harvest-festival-2026-09-20",
-    "reviving-craft-somerset-house-2026-09-18"
+    "reviving-craft-somerset-house-2026-09-25",
+    "sacred-treasures-kyiv-va-2026-09-25"
   ],
   "events": [
     {
-      "id": "sacred-treasures-kyiv-va-2026-09-18",
+      "id": "sacred-treasures-kyiv-va-2026-09-25",
       "title_en": "Sacred Treasures from Kyiv at the V&A",
       "title_it": "Sacred Treasures from Kyiv al V&A",
       "summary_en": "Seven Ukrainian Baroque sacred works from the Kyiv-Pechersk Lavra are shown in the UK for the first time, including an icon, altar Gospel and silver chalice.",
       "summary_it": "Sette opere sacre del barocco ucraino dalla Kyiv-Pechersk Lavra arrivano per la prima volta nel Regno Unito, tra cui un’icona, un Vangelo da altare e un calice d’argento.",
-      "start": "2026-09-18T10:00:00+01:00",
-      "end": "2026-09-20T17:45:00+01:00",
+      "start": "2026-09-25T10:00:00+01:00",
+      "end": "2026-09-27T17:45:00+01:00",
       "venue": {
         "name": "V&A South Kensington",
         "address": "Cromwell Road, London",
@@ -50,23 +49,23 @@
       "newsletter_sources": ["Londonist"],
       "official_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv",
       "verification": {
-        "verified_at": "2026-09-17T11:01:20+01:00",
+        "verified_at": "2026-09-20T11:01:32+01:00",
         "confidence": "high",
         "source_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-17T11:01:20+01:00",
-      "expire_at": "2026-09-20T18:00:00+01:00",
-      "duplicate_key": "va-south-kensington|2026-09-18|sacred-treasures-kyiv"
+      "publish_at": "2026-09-20T11:01:32+01:00",
+      "expire_at": "2026-09-27T18:00:00+01:00",
+      "duplicate_key": "va-south-kensington|2026-09-25|sacred-treasures-kyiv"
     },
     {
-      "id": "reviving-craft-somerset-house-2026-09-18",
+      "id": "reviving-craft-somerset-house-2026-09-25",
       "title_en": "Reviving Craft at Somerset House",
       "title_it": "Reviving Craft a Somerset House",
       "summary_en": "More than 70 artists trace China’s living craft heritage through ceramics, glass, textiles, jewellery, furniture and immersive digital work in the South Wing galleries.",
       "summary_it": "Oltre 70 artisti raccontano il patrimonio artigianale cinese attraverso ceramica, vetro, tessuti, gioielli, arredi e opere digitali immersive nelle gallerie South Wing.",
-      "start": "2026-09-18T11:00:00+01:00",
-      "end": "2026-09-18T18:00:00+01:00",
+      "start": "2026-09-25T11:00:00+01:00",
+      "end": "2026-09-27T18:00:00+01:00",
       "venue": {
         "name": "Somerset House, Embankment Galleries South Wing",
         "address": "Somerset House, Strand, London",
@@ -98,302 +97,14 @@
       "newsletter_sources": ["Londonist"],
       "official_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind",
       "verification": {
-        "verified_at": "2026-09-17T11:01:20+01:00",
+        "verified_at": "2026-09-20T11:01:32+01:00",
         "confidence": "high",
         "source_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-17T11:01:20+01:00",
-      "expire_at": "2026-09-18T18:15:00+01:00",
-      "duplicate_key": "somerset-house|2026-09-18|reviving-craft"
-    },
-    {
-      "id": "visit-my-mosque-east-london-2026-09-19",
-      "title_en": "Visit My Mosque at East London Mosque",
-      "title_it": "Visit My Mosque alla East London Mosque",
-      "summary_en": "An open day at one of Britain’s best-known mosques, with guided building tours, East End stories, exhibitions, conversations with the community, tea and refreshments.",
-      "summary_it": "Una giornata aperta in una delle moschee più note del Regno Unito, con visite guidate, storie dell’East End, mostre, conversazioni con la comunità, tè e ristoro.",
-      "start": "2026-09-19T11:00:00+01:00",
-      "end": "2026-09-19T15:00:00+01:00",
-      "venue": {
-        "name": "London Muslim Centre",
-        "address": "46 Whitechapel Road, London",
-        "postcode": "E1 1JX",
-        "borough": "Tower Hamlets"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "recommended",
-        "url": "https://www.eastlondonmosque.org.uk/forms/visit-my-mosque-2026"
-      },
-      "category": "local-culture",
-      "advanced": {
-        "score": 9,
-        "reason": "A welcoming open-door format with building access, local religious history and direct community conversation at no cost.",
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.eastlondonmosque.org.uk/Event/visit-my-mosque-2026-open-day",
-      "verification": {
-        "verified_at": "2026-09-17T11:01:20+01:00",
-        "confidence": "high",
-        "source_url": "https://www.eastlondonmosque.org.uk/Event/visit-my-mosque-2026-open-day"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-17T11:01:20+01:00",
-      "expire_at": "2026-09-19T15:15:00+01:00",
-      "duplicate_key": "london-muslim-centre|2026-09-19|visit-my-mosque-open-day"
-    },
-    {
-      "id": "crossing-borders-horniman-2026-09-19",
-      "title_en": "Crossing Borders at the Horniman Museum",
-      "title_it": "Crossing Borders all’Horniman Museum",
-      "summary_en": "A day shaped with refugees and people seeking protection, bringing together Afghan kite-making, Honduran dance, Ukrainian music, workshops, art and live podcasting.",
-      "summary_it": "Una giornata creata con rifugiati e persone in cerca di protezione, tra aquiloni afghani, danza honduregna, musica ucraina, laboratori, arte e podcast dal vivo.",
-      "start": "2026-09-19T11:00:00+01:00",
-      "end": "2026-09-19T16:00:00+01:00",
-      "venue": {
-        "name": "Horniman Museum and Gardens",
-        "address": "100 London Road, Forest Hill, London",
-        "postcode": "SE23 3PQ",
-        "borough": "Lewisham"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "community",
-      "advanced": {
-        "score": 8,
-        "reason": "A locally shaped cultural programme with distinctive traditions, direct community participation and excellent free access.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 1,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.horniman.ac.uk/event/crossing-borders/",
-      "verification": {
-        "verified_at": "2026-09-17T11:01:20+01:00",
-        "confidence": "high",
-        "source_url": "https://www.horniman.ac.uk/event/crossing-borders/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-17T11:01:20+01:00",
-      "expire_at": "2026-09-19T16:15:00+01:00",
-      "duplicate_key": "horniman-museum|2026-09-19|crossing-borders"
-    },
-    {
-      "id": "hello-earth-crossness-2026-09-19",
-      "title_en": "HELLO EARTH at Crossness Pumping Station",
-      "title_it": "HELLO EARTH alla Crossness Pumping Station",
-      "summary_en": "Artists, ecologists and local groups launch a new Bexley programme inside the Victorian “Cathedral of Sewage”, with talks, films, music, children’s workshops and rare station tours.",
-      "summary_it": "Artisti, ecologisti e realtà locali lanciano un nuovo programma di Bexley nella “cattedrale delle acque reflue” vittoriana, tra incontri, film, musica, laboratori e visite.",
-      "start": "2026-09-19T17:00:00+01:00",
-      "end": "2026-09-19T21:00:00+01:00",
-      "venue": {
-        "name": "Crossness Pumping Station",
-        "address": "Bazalgette Way, Thamesmead, London",
-        "postcode": "SE2 9AQ",
-        "borough": "Bexley"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.eventbrite.co.uk/e/hello-earth-launch-party-tickets-1998365867103"
-      },
-      "category": "urban-exploration",
-      "advanced": {
-        "score": 10,
-        "reason": "Exceptional access to major Victorian infrastructure, combined with local ecological culture and a free one-off programme.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://threeriversbexley.org/",
-      "verification": {
-        "verified_at": "2026-09-17T11:01:20+01:00",
-        "confidence": "high",
-        "source_url": "https://threeriversbexley.org/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-17T11:01:20+01:00",
-      "expire_at": "2026-09-19T21:15:00+01:00",
-      "duplicate_key": "crossness-pumping-station|2026-09-19|hello-earth-launch"
-    },
-    {
-      "id": "city-cycling-festival-hub-2026-09-20",
-      "title_en": "City Cycling Festival Hub at St Paul’s",
-      "title_it": "City Cycling Festival Hub a St Paul’s",
-      "summary_en": "Peter’s Hill hosts adapted cycles, free minor repairs, security marking, music and guided rides, including handcycles and cycles able to carry a wheelchair.",
-      "summary_it": "Peter’s Hill ospita biciclette adattate, piccole riparazioni gratuite, marcatura antifurto, musica e percorsi guidati, inclusi handcycle e mezzi per sedie a rotelle.",
-      "start": "2026-09-20T10:00:00+01:00",
-      "end": "2026-09-20T16:00:00+01:00",
-      "venue": {
-        "name": "Peter’s Hill",
-        "address": "Carter Lane, Peter’s Hill, London",
-        "postcode": "EC4V 5EY",
-        "borough": "City of London"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "recommended",
-        "url": "https://lcc.org.uk/events/festival_hub_cityoflondon/"
-      },
-      "category": "community",
-      "advanced": {
-        "score": 7,
-        "reason": "Inclusive cycling and neighbourhood rides in an unusual City setting, with accessible equipment and free practical support.",
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 1,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://lcc.org.uk/events/festival_hub_cityoflondon/",
-      "verification": {
-        "verified_at": "2026-09-17T11:01:20+01:00",
-        "confidence": "high",
-        "source_url": "https://lcc.org.uk/events/festival_hub_cityoflondon/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-17T11:01:20+01:00",
-      "expire_at": "2026-09-20T16:15:00+01:00",
-      "duplicate_key": "peters-hill|2026-09-20|city-cycling-festival-hub"
-    },
-    {
-      "id": "brick-lane-curry-festival-2026-09-20",
-      "title_en": "Brick Lane Curry Festival",
-      "title_it": "Brick Lane Curry Festival",
-      "summary_en": "Banglatown’s food history takes over Brick Lane with music, dance, giant puppets, cookery demonstrations, family activities and offers from participating restaurants.",
-      "summary_it": "La storia gastronomica di Banglatown anima Brick Lane con musica, danza, grandi pupazzi, dimostrazioni di cucina, attività per famiglie e offerte nei ristoranti partecipanti.",
-      "start": "2026-09-20T12:00:00+01:00",
-      "end": "2026-09-20T19:00:00+01:00",
-      "venue": {
-        "name": "Brick Lane",
-        "address": "Brick Lane, London",
-        "postcode": "E1 6QR",
-        "borough": "Tower Hamlets"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "recommended",
-        "url": "https://www.eventbrite.co.uk/e/brick-lane-curry-festival-2026-tickets-1993902630442"
-      },
-      "category": "local-culture",
-      "advanced": {
-        "score": 7,
-        "reason": "A free celebration rooted in Banglatown’s food heritage and independent restaurants, with a strong East End neighbourhood identity.",
-        "breakdown": {
-          "non_obvious": 1,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist", "Londonfy"],
-      "official_url": "https://www.towerhamlets.gov.uk/News_events/2026/August/Bigger-Better-and-Spicier.aspx",
-      "verification": {
-        "verified_at": "2026-09-17T11:01:20+01:00",
-        "confidence": "high",
-        "source_url": "https://www.towerhamlets.gov.uk/News_events/2026/August/Bigger-Better-and-Spicier.aspx"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-17T11:01:20+01:00",
-      "expire_at": "2026-09-20T19:15:00+01:00",
-      "duplicate_key": "brick-lane|2026-09-20|curry-festival"
-    },
-    {
-      "id": "costermongers-harvest-festival-2026-09-20",
-      "title_en": "Costermongers’ Pearly Harvest Festival",
-      "title_it": "Festa del raccolto dei Pearly Kings and Queens",
-      "summary_en": "London’s Pearly Kings and Queens gather in button-covered finery for maypole and Morris dancing, Cockney songs and a procession from Guildhall Yard to St Mary-le-Bow.",
-      "summary_it": "I Pearly Kings and Queens si ritrovano nei loro abiti ricoperti di bottoni, tra danze tradizionali, canti cockney e una processione da Guildhall Yard a St Mary-le-Bow.",
-      "start": "2026-09-20T13:30:00+01:00",
-      "end": "2026-09-20T16:00:00+01:00",
-      "venue": {
-        "name": "Guildhall Yard",
-        "address": "Guildhall Yard, London",
-        "postcode": "EC2V 5AE",
-        "borough": "City of London"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 10,
-        "reason": "A deeply London-specific charitable tradition, presented as a free annual procession and ceremony in the historic City.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://pearlysociety.org.uk/event/costermongers-harvest-festival/",
-      "verification": {
-        "verified_at": "2026-09-17T11:01:20+01:00",
-        "confidence": "high",
-        "source_url": "https://pearlysociety.org.uk/event/costermongers-harvest-festival/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-17T11:01:20+01:00",
-      "expire_at": "2026-09-20T16:15:00+01:00",
-      "duplicate_key": "guildhall-yard|2026-09-20|costermongers-harvest-festival"
+      "publish_at": "2026-09-20T11:01:32+01:00",
+      "expire_at": "2026-09-27T18:15:00+01:00",
+      "duplicate_key": "somerset-house|2026-09-25|reviving-craft"
     }
   ]
 }
