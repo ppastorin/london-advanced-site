@@ -10,6 +10,12 @@
       "head_sampling_rate": 1
     }
   },
+  "send_email": [
+    {
+      "name": "CONTACT_EMAIL",
+      "destination_address": "ppastorin@gmail.com"
+    }
+  ],
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
