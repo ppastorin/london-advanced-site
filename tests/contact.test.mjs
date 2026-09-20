@@ -7,7 +7,6 @@ function contactRequest(overrides = {}, headers = {}) {
     name: "Delivery Test",
     email: "visitor@example.com",
     message: "This is a valid London Advanced contact form test.",
-    human_answer: "London",
     started_at: String(Date.now() - 5_000),
     _honey: "",
     ...overrides
@@ -25,9 +24,11 @@ function contactRequest(overrides = {}, headers = {}) {
 }
 
 test("accepts a valid contact submission only after the delivery provider accepts it", async () => {
+  let deliveryUrl;
   let deliveredPayload;
   let deliveryHeaders;
-  const response = await handleContact(contactRequest(), async (_url, options) => {
+  const response = await handleContact(contactRequest(), async (url, options) => {
+    deliveryUrl = url;
     deliveredPayload = JSON.parse(options.body);
     deliveryHeaders = options.headers;
     return Response.json({ success: "true", message: "submitted" });
@@ -38,6 +39,7 @@ test("accepts a valid contact submission only after the delivery provider accept
   assert.equal(deliveredPayload.name, "Delivery Test");
   assert.equal(deliveredPayload.email, "visitor@example.com");
   assert.equal(deliveredPayload._captcha, "false");
+  assert.equal(deliveryUrl, "https://formsubmit.co/ajax/ppastorin@gmail.com");
   assert.equal(deliveryHeaders.Origin, "https://www.londonadvanced.com");
   assert.equal(deliveryHeaders.Referer, "https://www.londonadvanced.com/");
 });
@@ -51,16 +53,16 @@ test("redirects a successful browser submission to the local thank-you page", as
   assert.equal(response.headers.get("Location"), "https://www.londonadvanced.com/thank-you/");
 });
 
-test("rejects a failed human check without contacting the delivery provider", async () => {
+test("rejects a submission completed too quickly without contacting the delivery provider", async () => {
   let providerCalled = false;
-  const response = await handleContact(contactRequest({ human_answer: "Paris" }), async () => {
+  const response = await handleContact(contactRequest({ started_at: String(Date.now()) }), async () => {
     providerCalled = true;
     return Response.json({ success: true });
   });
 
   assert.equal(response.status, 400);
   assert.equal(providerCalled, false);
-  assert.equal((await response.json()).code, "human_check_failed");
+  assert.equal((await response.json()).code, "timing_check_failed");
 });
 
 test("silently accepts honeypot spam without forwarding it", async () => {
