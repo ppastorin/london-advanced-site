@@ -283,7 +283,6 @@ for (const marker of [
   'data-scroll-target="contact"',
   'action="/api/contact"',
   'name="started_at"',
-  'name="human_answer"',
   'name="_honey"',
   'data-contact-form'
 ]) {
@@ -305,7 +304,7 @@ if (!thankYouHtml.includes("Thank you") || !thankYouHtml.includes('href="/"')) {
   fail("The thank-you page must confirm submission and link back to the homepage.");
 }
 const contactWorker = requireFile("worker/index.mjs");
-for (const marker of ["/api/contact", "human_answer", "started_at", "ASSETS.fetch", "PROVIDER_ENDPOINT", "atob("]) {
+for (const marker of ["/api/contact", "started_at", "ASSETS.fetch", "PROVIDER_ENDPOINT", "atob("]) {
   if (!contactWorker.includes(marker)) fail(`The contact Worker is missing ${marker}.`);
 }
 
