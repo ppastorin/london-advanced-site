@@ -1,5 +1,6 @@
-// Deliver directly to the monitored inbox. The former forwarding address could not
-// receive the provider's activation message, so every submission was rejected.
+// Use the directly monitored inbox. The previously configured forwarding
+// address could not receive FormSubmit's one-time activation message, so the
+// provider rejected every otherwise-valid submission in production.
 const PROVIDER_ENDPOINT = atob("aHR0cHM6Ly9mb3Jtc3VibWl0LmNvL2FqYXgvcHBhc3RvcmluQGdtYWlsLmNvbQ==");
 const MAX_BODY_BYTES = 12_000;
 const MIN_COMPLETION_MS = 2_000;
@@ -83,14 +84,12 @@ export async function handleContact(request, providerFetch = fetch) {
   const name = clean(form.get("name"), 100);
   const email = clean(form.get("email"), 254);
   const message = clean(form.get("message"), 5_000);
-  const humanAnswer = clean(form.get("human_answer"), 30).toLowerCase();
   const startedAt = Number(form.get("started_at"));
   const completionTime = Date.now() - startedAt;
 
   if (name.length < 2 || !isValidEmail(email) || message.length < 10) {
     return reject(request, 400, "invalid_fields");
   }
-  if (humanAnswer !== "london") return reject(request, 400, "human_check_failed");
   if (!Number.isFinite(startedAt) || completionTime < MIN_COMPLETION_MS || completionTime > MAX_COMPLETION_MS) {
     return reject(request, 400, "timing_check_failed");
   }
