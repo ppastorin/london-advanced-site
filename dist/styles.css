@@ -50,9 +50,8 @@ section[id] { scroll-margin-top: 76px; }
 .desktop-nav > a:hover,
 .desktop-nav > button:hover,
 .desktop-nav > details > summary:hover { text-decoration: underline; text-underline-offset: 5px; }
-.desktop-nav > a[aria-current="page"],
-.desktop-nav > button[aria-current="page"],
-.desktop-nav > details > summary[aria-current="page"] {
+.desktop-nav > .newsletter-nav[aria-current="page"],
+.desktop-nav > .contact-nav[aria-current="page"] {
   padding-bottom: 3px;
   border-bottom: 1px solid var(--gold);
 }
