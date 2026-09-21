@@ -36,6 +36,8 @@ const requiredAssets = [
   "dist/events/events.js",
   "dist/about/index.html",
   "dist/methodology/index.html",
+  "dist/newsletter/index.html",
+  "dist/newsletter/thanks/index.html",
   "dist/thank-you/index.html",
   "dist/editorial.css",
   "dist/editorial.js",
@@ -60,6 +62,8 @@ try {
   if (wrangler.assets?.directory !== "./dist") fail('wrangler.jsonc must set assets.directory to "./dist".');
   if (wrangler.assets?.binding !== "ASSETS") fail('wrangler.jsonc must expose the static assets as the "ASSETS" binding.');
   if (!wrangler.assets?.run_worker_first?.includes("/api/contact")) fail("The contact endpoint must run through the Worker.");
+  if (!wrangler.assets?.run_worker_first?.includes("/api/subscribe")) fail("The newsletter endpoint must run through the Worker.");
+  if (wrangler.keep_vars !== true) fail("wrangler.jsonc must preserve dashboard variables and secrets during deployment.");
   if (wrangler.assets?.not_found_handling !== "404-page") fail('wrangler.jsonc must use not_found_handling "404-page".');
   const contactEmail = wrangler.send_email?.find((binding) => binding.name === "CONTACT_EMAIL");
   if (contactEmail?.destination_address !== "ppastorin@gmail.com") {
@@ -199,6 +203,7 @@ const sitemap = requireFile("dist/sitemap.xml");
 if (!sitemap.includes("https://www.londonadvanced.com/events/")) fail("Sitemap is missing /events/.");
 if (!sitemap.includes("https://www.londonadvanced.com/about/")) fail("Sitemap is missing /about/.");
 if (!sitemap.includes("https://www.londonadvanced.com/methodology/")) fail("Sitemap is missing /methodology/.");
+if (!sitemap.includes("https://www.londonadvanced.com/newsletter/")) fail("Sitemap is missing /newsletter/.");
 for (const { href } of expectedTools.values()) {
   if (!sitemap.includes(`https://www.londonadvanced.com${href}`)) fail(`Sitemap is missing ${href}`);
 }
@@ -303,6 +308,33 @@ const homepageFooter = homepageHtml.match(/<footer id="community">[\s\S]*?<\/foo
 if (homepageFooter.includes('class="social-links"')) fail("The homepage footer must not repeat the social links.");
 if (!homepageFooter.includes('href="#contact"')) fail("The homepage footer must link to the contact form.");
 
+for (const marker of [
+  'id="newsletter"',
+  'action="/api/subscribe"',
+  'data-newsletter-form',
+  'name="source" value="homepage"',
+  'No spam',
+  'never more than two or three times in a month'
+]) {
+  if (!homepageHtml.includes(marker)) fail(`The homepage newsletter experience is missing ${marker}.`);
+}
+
+const newsletterHtml = requireFile("dist/newsletter/index.html");
+for (const marker of [
+  '<link rel="canonical" href="https://www.londonadvanced.com/newsletter/">',
+  'action="/api/subscribe"',
+  'data-newsletter-form',
+  'name="source" value="newsletter-page"',
+  'No spam',
+  'no fixed weekly schedule'
+]) {
+  if (!newsletterHtml.includes(marker)) fail(`The newsletter landing page is missing ${marker}.`);
+}
+const newsletterThanksHtml = requireFile("dist/newsletter/thanks/index.html");
+if (!newsletterThanksHtml.includes("Check your inbox") || !newsletterThanksHtml.includes('href="/"')) {
+  fail("The newsletter confirmation page must explain the next step and link home.");
+}
+
 const thankYouHtml = requireFile("dist/thank-you/index.html");
 if (!thankYouHtml.includes("Thank you") || !thankYouHtml.includes('href="/"')) {
   fail("The thank-you page must confirm submission and link back to the homepage.");
@@ -310,6 +342,9 @@ if (!thankYouHtml.includes("Thank you") || !thankYouHtml.includes('href="/"')) {
 const contactWorker = requireFile("worker/index.mjs");
 for (const marker of ["/api/contact", "started_at", "ASSETS.fetch", "env.CONTACT_EMAIL", "CONTACT_DESTINATION"]) {
   if (!contactWorker.includes(marker)) fail(`The contact Worker is missing ${marker}.`);
+}
+for (const marker of ["/api/subscribe", "handleSubscribe", "EMAILOCTOPUS_API_KEY", "EMAILOCTOPUS_LIST_ID", "MEMBER_EXISTS_WITH_EMAIL_ADDRESS"]) {
+  if (!contactWorker.includes(marker)) fail(`The newsletter Worker is missing ${marker}.`);
 }
 
 if (failures.length) {

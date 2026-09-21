@@ -164,6 +164,7 @@ function renderEventsHeader(data) {
         </div>
       </details>
       <a href="/#journal">Journal</a>
+      <a class="newsletter-nav" href="/newsletter/">Newsletter</a>
       <a class="contact-nav" href="/#contact">Contact</a>
       <details class="nav-dropdown project-menu">
         <summary>Project</summary>
@@ -201,6 +202,10 @@ function renderEventsHeader(data) {
           <span>Places and ideas</span>
           <strong>Journal</strong>
         </a>
+        <a href="/newsletter/">
+          <span>Useful London, occasionally</span>
+          <strong>Newsletter</strong>
+        </a>
         <a href="/#contact">
           <span>Questions and suggestions</span>
           <strong>Contact me</strong>
@@ -222,7 +227,7 @@ async function renderHomepage(feed) {
 
   vm.runInContext(contentSource, context, { filename: "dist/content.js" });
   const executable = appSource.replace(
-    /\nrender\(\);\s*\ninitAnalytics\(\);\s*$/,
+    /\nrender\(\);\s*\nbindNewsletterForms\(\);\s*\nshowNewsletterStatus\(\);\s*\ninitAnalytics\(\);\s*$/,
     "\nwindow.__PRERENDER__ = { render, activeDigest, renderEventCard };"
   );
   vm.runInContext(executable, context, { filename: "dist/app.js" });
@@ -403,7 +408,7 @@ ${safeJson(eventsStructuredData())}
 
   <footer>
     <div><strong>London Advanced</strong><span>Independent tools and field notes for a less obvious London.</span></div>
-    <a href="/">Back to the homepage</a>
+    <div class="footer-meta"><a href="/newsletter/">Newsletter</a><a href="/">Back to the homepage</a></div>
     <small>© <span data-year>${new Date().getFullYear()}</span> Paolo Pastorino</small>
   </footer>
 

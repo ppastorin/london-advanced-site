@@ -111,6 +111,10 @@ function mobileMenuContent() {
       <span>Places and ideas</span>
       <strong>Journal</strong>
     </button>
+    <a href="/newsletter/" data-track="newsletter:mobile-menu">
+      <span>Useful London, occasionally</span>
+      <strong>Newsletter</strong>
+    </a>
     <button class="mobile-section-link" type="button" data-scroll-target="contact">
       <span>Questions and suggestions</span>
       <strong>Contact me</strong>
@@ -312,6 +316,7 @@ function render() {
           </div>
         </details>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
+        <a class="newsletter-nav" href="/newsletter/" data-track="newsletter:menu">Newsletter</a>
         <button class="nav-section-button contact-nav" type="button" data-scroll-target="contact">Contact</button>
         <details class="nav-dropdown project-menu">
           <summary>Project</summary>
@@ -355,9 +360,31 @@ function render() {
       <div class="story-grid">${storyCards()}</div>
     </section>
 
+    <section id="newsletter" class="newsletter-section section-wrap">
+      <div class="newsletter-copy">
+        <span class="eyebrow">04 / The London letter</span>
+        <h2>Useful London, only when it’s worth sending.</h2>
+        <p>There is no weekly quota. I send an occasional, carefully edited note when I have genuinely useful places, routes or events to share—never more than two or three times in a month.</p>
+        <div class="newsletter-promises" aria-label="Newsletter promise">
+          <p><strong>No spam</strong><span>No filler and no inbox-filling schedule.</span></p>
+          <p><strong>Properly curated</strong><span>Selected, checked and written by Paolo.</span></p>
+          <p><strong>Useful by design</strong><span>Places, routes and events worth acting on.</span></p>
+        </div>
+      </div>
+      <form class="newsletter-form" action="/api/subscribe" method="POST" data-newsletter-form>
+        <input type="hidden" name="started_at" value="">
+        <input type="hidden" name="source" value="homepage">
+        <label class="contact-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+        <label>Email address<input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com" required></label>
+        <button class="button dark" type="submit">Join the newsletter</button>
+        <p class="newsletter-consent">By subscribing, you agree to receive occasional emails from London Advanced. No spam. Unsubscribe at any time.</p>
+        <p class="newsletter-error" data-newsletter-error hidden role="alert">Subscription is temporarily unavailable. Please try again.</p>
+      </form>
+    </section>
+
     <section id="contact" class="contact-section section-wrap">
       <div class="contact-intro">
-        <span class="eyebrow">04 / Get in touch</span>
+        <span class="eyebrow">05 / Get in touch</span>
         <h2>Seen something worth sharing?</h2>
         <p>Send a question, correction or London suggestion. I read every genuine message.</p>
       </div>
@@ -381,7 +408,7 @@ function render() {
 
     <footer id="community">
       <div><strong>London Advanced</strong><span>Independent tools and field notes for a less obvious London.</span></div>
-      <div class="footer-meta"><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino</small></div>
+      <div class="footer-meta"><a href="/newsletter/">Newsletter</a><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino</small></div>
     </footer>
   </main>`;
   bindSectionScrolling();
@@ -438,6 +465,57 @@ function bindContactForm() {
 function showContactStatus() {
   if (new URLSearchParams(window.location.search).get("contact") !== "error") return;
   const message = document.querySelector("[data-contact-error]");
+  if (message) message.hidden = false;
+}
+
+function bindNewsletterForms() {
+  document.querySelectorAll("[data-newsletter-form]").forEach(form => {
+    const startedAt = form.querySelector('[name="started_at"]');
+    if (startedAt) startedAt.value = String(Date.now());
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      const submitButton = form.querySelector('[type="submit"]');
+      const errorMessage = form.querySelector("[data-newsletter-error]");
+      const originalLabel = submitButton?.textContent;
+
+      if (errorMessage) errorMessage.hidden = true;
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Joining…";
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form)
+        });
+        const result = await response.json();
+        if (!response.ok || !result.ok) throw new Error(result.code || "subscription_failed");
+        window.location.assign("/newsletter/thanks/");
+      } catch (error) {
+        if (errorMessage) {
+          errorMessage.textContent = error.message === "please_wait"
+            ? "Please wait a minute before trying again."
+            : error.message === "invalid_email"
+              ? "Enter a valid email address."
+              : "Subscription is temporarily unavailable. Please try again.";
+          errorMessage.hidden = false;
+        }
+        if (startedAt) startedAt.value = String(Date.now());
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalLabel;
+        }
+      }
+    });
+  });
+}
+
+function showNewsletterStatus() {
+  if (new URLSearchParams(window.location.search).get("subscribe") !== "error") return;
+  const message = document.querySelector("[data-newsletter-error]");
   if (message) message.hidden = false;
 }
 
@@ -523,4 +601,6 @@ function bindTracking(root = document) {
 }
 
 render();
+bindNewsletterForms();
+showNewsletterStatus();
 initAnalytics();
