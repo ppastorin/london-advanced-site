@@ -262,14 +262,23 @@ for (const [toolId, { href }] of expectedTools) {
     'class="panel-close"',
     'class="step-grid"',
     'class="evidence-grid"',
+    'class="worked-example"',
+    'class="tool-questions"',
+    'class="question-list"',
     'class="related-grid"',
     '"@type": "WebApplication"',
     '"@type": "BreadcrumbList"',
+    '"@type": "FAQPage"',
     '<meta name="author" content="Paolo Pastorino">',
     '<meta property="og:site_name" content="London Advanced">',
     '<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">'
   ]) {
     if (!toolHtml.includes(marker)) fail(`The enriched ${toolId} page is missing ${marker}.`);
+  }
+  const visibleQuestionCount = (toolHtml.match(/<details><summary>/g) || []).length;
+  const schemaQuestionCount = (toolHtml.match(/"@type": "Question"/g) || []).length;
+  if (visibleQuestionCount !== 3 || schemaQuestionCount !== 3) {
+    fail(`${href} must contain three visible questions and three matching FAQ schema questions.`);
   }
   for (const internalHref of ["/methodology/", toolId === "london-dashboard" || toolId === "travel-fare-calculator" ? "/newsletter/" : "/events/"]) {
     if (!toolHtml.includes(`href="${internalHref}"`)) fail(`${href} is missing the contextual internal link to ${internalHref}`);

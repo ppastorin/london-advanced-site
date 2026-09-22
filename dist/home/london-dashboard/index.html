@@ -59,6 +59,17 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How live is the London Dashboard?", "acceptedAnswer": { "@type": "Answer", "text": "The dashboard requests current information from its external sources, with short caching where needed for speed and reliability. Update timing varies by provider, so time-critical details should be confirmed with the relevant operator." } },
+      { "@type": "Question", "name": "Can the dashboard replace a journey planner?", "acceptedAnswer": { "@type": "Answer", "text": "No. It gives a rapid overview of weather, disruption, airports, air quality and events. Use TfL, National Rail or the relevant operator for a detailed route and final departure information." } },
+      { "@type": "Question", "name": "Does the Events tab show everything happening in London?", "acceptedAnswer": { "@type": "Answer", "text": "No. It shows bookable events supplied through Ticketmaster and is useful for date and category searches, but it is not a complete cultural calendar. The separate London Advanced Events page provides a smaller independently selected edit." } }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -151,6 +162,29 @@
         <p>The air-quality figure is the highest current index reported across participating London monitoring sites, not a street-level reading. Ticketmaster is useful for bookable events but is not a complete list of everything happening in London.</p>
       </section>
     </div>
+
+    <section class="worked-example" aria-labelledby="dashboard-example-title">
+      <span class="section-kicker">Worked example</span>
+      <h2 id="dashboard-example-title">Checking a Saturday plan before leaving.</h2>
+      <p class="example-scenario">You plan to cross London for an afternoon museum visit and have an evening booking, but the forecast looks unsettled.</p>
+      <ol>
+        <li>Open <strong>Now</strong> to compare the next few hours of weather with the current air-quality reading.</li>
+        <li>Check <strong>Travel</strong> for disruption on the lines and rail services that could affect both journeys.</li>
+        <li>If an airport transfer is part of the day, review <strong>Flights</strong> and then confirm the final timing with the airport or carrier.</li>
+        <li>Use <strong>Events</strong> only if you need another bookable option; use the independent Events edit for a smaller selection beyond the obvious.</li>
+      </ol>
+      <p class="example-outcome"><strong>The useful result:</strong> one quick risk check identifies what needs changing and which details still require an official source.</p>
+    </section>
+
+    <section class="tool-questions" aria-labelledby="dashboard-questions-title">
+      <span class="section-kicker">Common questions</span>
+      <h2 id="dashboard-questions-title">What the dashboard can—and cannot—tell you.</h2>
+      <div class="question-list">
+        <details><summary>How live is the London Dashboard?</summary><p>The dashboard requests current information from its external sources, with short caching where needed for speed and reliability. Update timing varies by provider, so time-critical details should be confirmed with the relevant operator.</p></details>
+        <details><summary>Can the dashboard replace a journey planner?</summary><p>No. It gives a rapid overview of weather, disruption, airports, air quality and events. Use TfL, National Rail or the relevant operator for a detailed route and final departure information.</p></details>
+        <details><summary>Does the Events tab show everything happening in London?</summary><p>No. It shows bookable events supplied through Ticketmaster and is useful for date and category searches, but it is not a complete cultural calendar. The separate <a href="/events/">London Advanced Events page</a> provides a smaller independently selected edit.</p></details>
+      </div>
+    </section>
 
     <section class="related-tools" aria-labelledby="dashboard-related-title">
       <div class="information-heading">
