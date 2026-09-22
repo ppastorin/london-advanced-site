@@ -340,7 +340,7 @@ function render() {
         <p>Trova luoghi insoliti, organizza spostamenti più intelligenti e scopri l’atmosfera di Londra prima di partire.</p>
         <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Esplora the tools</button><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:hero">Scopri la guida →</a></div>
       </div>
-      <figure class="map-window"><img src="assets/london-map.jpg" alt="Mappa di Londra con i luoghi inclusi in London Advanced"><figcaption><b>1,100+</b> luoghi oltre le solite liste</figcaption></figure>
+      <figure class="map-window"><img src="/assets/london-map.jpg" alt="Mappa di Londra con i luoghi inclusi in London Advanced"><figcaption><b>1,100+</b> luoghi oltre le solite liste</figcaption></figure>
     </section>
 
     <section id="tools" class="tools section-wrap">
@@ -351,7 +351,7 @@ function render() {
     ${eventsSection()}
 
     <section id="guide" class="guide-split section-wrap">
-      <div class="guide-cover-wrap"><img src="assets/guide-cover.jpg" alt="Cover of The Other London guide"><span>124 pages</span></div>
+      <div class="guide-cover-wrap"><img src="/assets/guide-cover.jpg" alt="Cover of The Other London guide"><span>124 pages</span></div>
       <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>Una guida sul campo per chi preferisce guardare due volte.</h2><p>Luoghi selezionati, dettagli pratici, fotografie originali e mappe per trovare la Londra che le guide standard trascurano.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Acquista la guida completa</a><a class="text-link" href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:sample">Guarda l’anteprima gratuita →</a></div></div>
     </section>
 

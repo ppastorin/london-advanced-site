@@ -340,7 +340,7 @@ function render() {
         <p>Find unusual places, make smarter journeys and see what London feels like before you set out.</p>
         <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Explore the tools</button><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:hero">Discover the guide →</a></div>
       </div>
-      <figure class="map-window"><img src="assets/london-map.jpg" alt="Map of London showing places included in London Advanced"><figcaption><b>1,100+</b> places beyond the standard lists</figcaption></figure>
+      <figure class="map-window"><img src="/assets/london-map.jpg" alt="Map of London showing places included in London Advanced"><figcaption><b>1,100+</b> places beyond the standard lists</figcaption></figure>
     </section>
 
     <section id="tools" class="tools section-wrap">
@@ -351,7 +351,7 @@ function render() {
     ${eventsSection()}
 
     <section id="guide" class="guide-split section-wrap">
-      <div class="guide-cover-wrap"><img src="assets/guide-cover.jpg" alt="Cover of The Other London guide"><span>124 pages</span></div>
+      <div class="guide-cover-wrap"><img src="/assets/guide-cover.jpg" alt="Cover of The Other London guide"><span>124 pages</span></div>
       <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>A field guide for people who would rather look twice.</h2><p>Handpicked places, practical details, original photography and map links—designed to help you find the London that standard guides miss.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Buy the full guide</a><a class="text-link" href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:sample">See the free sample →</a></div></div>
     </section>
 

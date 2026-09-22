@@ -105,10 +105,19 @@ const expectedTools = new Map([
 ]);
 
 const homepageHtml = requireFile("dist/index.html");
+const italianHomepageHtml = requireFile("dist/it/index.html");
 const contentText = requireFile("dist/content.js");
 const appText = requireFile("dist/app.js");
 const stylesText = requireFile("dist/styles.css");
 const prerenderText = requireFile("scripts/prerender.mjs");
+
+for (const [label, html] of [["English homepage", homepageHtml], ["Italian homepage", italianHomepageHtml]]) {
+  if (!html.includes('src="/assets/london-map.jpg"')) fail(`${label} must use the root-relative London map asset.`);
+  if (!html.includes('src="/assets/guide-cover.jpg"')) fail(`${label} must use the root-relative guide cover asset.`);
+  if (html.includes('src="assets/london-map.jpg"') || html.includes('src="assets/guide-cover.jpg"')) {
+    fail(`${label} must not use route-relative homepage images.`);
+  }
+}
 
 if (!homepageHtml.includes('<main id="top">') || homepageHtml.includes('<div id="site"></div>')) {
   fail("The homepage must contain pre-rendered content instead of an empty JavaScript shell.");
