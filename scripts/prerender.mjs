@@ -397,6 +397,20 @@ ${safeJson(eventsStructuredData())}
       </div>
     </section>
 
+    <section class="events-page-pathways" aria-labelledby="events-pathways-title">
+      <div class="events-pathways-heading">
+        <span class="eyebrow">Plan the rest of the day</span>
+        <h2 id="events-pathways-title">Turn an event into a better London route.</h2>
+        <p>Check live conditions before leaving, find an interesting detour, or compare likely crowd pressure around your destination.</p>
+      </div>
+      <div class="events-pathways-grid">
+        <a href="/home/london-dashboard/"><span>Weather, transport and air quality</span><strong>Check the London Dashboard →</strong></a>
+        <a href="/home/smart-navigation/"><span>Interesting places close to your journey</span><strong>Build a smarter route →</strong></a>
+        <a href="/home/escape-the-crowds/"><span>Expected pressure now and later</span><strong>Compare crowd levels →</strong></a>
+      </div>
+      <p class="events-method-link">Read <a href="/methodology/">how events are selected, verified and kept independent</a>.</p>
+    </section>
+
     <section class="events-page-community">
       <div>
         <span class="eyebrow">Continue the conversation</span>
@@ -408,7 +422,7 @@ ${safeJson(eventsStructuredData())}
 
   <footer>
     <div><strong>London Advanced</strong><span>Independent tools and field notes for a less obvious London.</span></div>
-    <div class="footer-meta"><a href="/newsletter/">Newsletter</a><a href="/">Back to the homepage</a></div>
+    <div class="footer-meta"><a href="/newsletter/">Newsletter</a><a href="/about/">About</a><a href="/methodology/">Methodology</a><a href="/">Homepage</a></div>
     <small>© <span data-year>${new Date().getFullYear()}</span> Paolo Pastorino</small>
   </footer>
 

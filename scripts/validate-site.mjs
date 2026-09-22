@@ -251,6 +251,9 @@ for (const [toolId, { href }] of expectedTools) {
   ]) {
     if (!toolHtml.includes(marker)) fail(`The enriched ${toolId} page is missing ${marker}.`);
   }
+  for (const internalHref of ["/methodology/", toolId === "london-dashboard" || toolId === "travel-fare-calculator" ? "/newsletter/" : "/events/"]) {
+    if (!toolHtml.includes(`href="${internalHref}"`)) fail(`${href} is missing the contextual internal link to ${internalHref}`);
+  }
 }
 
 for (const page of [
@@ -283,6 +286,31 @@ try {
 
 if (!appText.includes('href="/about/"') || !appText.includes('href="/methodology/"')) {
   fail("The homepage navigation must link to About and Methodology.");
+}
+
+for (const { href } of expectedTools.values()) {
+  if (!requireFile("dist/about/index.html").includes(`href="${href}"`)) fail(`The About page is missing a contextual link to ${href}`);
+}
+
+for (const marker of [
+  'class="events-page-pathways"',
+  'href="/home/london-dashboard/"',
+  'href="/home/smart-navigation/"',
+  'href="/home/escape-the-crowds/"',
+  'href="/methodology/"'
+]) {
+  if (!eventsHtml.includes(marker)) fail(`The events page internal-linking section is missing ${marker}.`);
+}
+
+const newsletterInternalHtml = requireFile("dist/newsletter/index.html");
+for (const marker of [
+  'class="newsletter-discovery section-wrap"',
+  'href="/events/"',
+  'href="/home/london-by-mood/"',
+  'href="/home/london-dashboard/"',
+  'href="/about/"'
+]) {
+  if (!newsletterInternalHtml.includes(marker)) fail(`The newsletter internal-linking section is missing ${marker}.`);
 }
 if (!homepageHtml.includes('class="wordmark" href="#top"') || !homepageHtml.includes('aria-label="London Advanced home — back to top"')) {
   fail("The homepage wordmark must link back to the top of the page.");

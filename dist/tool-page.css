@@ -386,6 +386,17 @@ a { color: inherit; }
 }
 .related-grid span { color: #6c6862; font-size: 12px; }
 .related-grid strong { font: 400 21px/1.15 var(--serif); }
+.related-support {
+  margin: 22px 0 0;
+  color: #55514c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.related-support a {
+  color: var(--ink);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
 
 .guide-strip {
   min-height: 52px;

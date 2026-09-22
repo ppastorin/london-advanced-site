@@ -408,7 +408,7 @@ function render() {
 
     <footer id="community">
       <div><strong>London Advanced</strong><span>Independent tools and field notes for a less obvious London.</span></div>
-      <div class="footer-meta"><a href="/newsletter/">Newsletter</a><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino</small></div>
+      <div class="footer-meta"><a href="/events/">This week</a><a href="/newsletter/">Newsletter</a><a href="/about/">About</a><a href="/methodology/">Methodology</a><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino</small></div>
     </footer>
   </main>`;
   bindSectionScrolling();
