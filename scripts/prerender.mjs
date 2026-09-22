@@ -84,18 +84,94 @@ function homeStructuredData() {
   };
 }
 
-function eventsStructuredData() {
+function eventStructuredData(event) {
+  return {
+    "@type": "Event",
+    "@id": `${canonicalOrigin}/events/#event-${event.id}`,
+    name: event.title_en,
+    description: event.summary_en,
+    startDate: event.start,
+    endDate: event.end,
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    url: event.official_url,
+    mainEntityOfPage: { "@id": `${canonicalOrigin}/events/#webpage` },
+    location: {
+      "@type": "Place",
+      name: event.venue.name,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: event.venue.address,
+        postalCode: event.venue.postcode,
+        addressLocality: "London",
+        addressRegion: event.venue.borough,
+        addressCountry: "GB"
+      }
+    },
+    isAccessibleForFree: event.price.amount_gbp === 0,
+    offers: {
+      "@type": "Offer",
+      url: event.booking.url || event.official_url,
+      price: event.price.amount_gbp,
+      priceCurrency: "GBP",
+      availability: "https://schema.org/InStock",
+      validFrom: event.publish_at
+    }
+  };
+}
+
+function eventsStructuredData(events, feed) {
+  const eventEntities = events.map(eventStructuredData);
   return {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": `${canonicalOrigin}/events/#webpage`,
-    url: `${canonicalOrigin}/events/`,
-    name: "This week, beyond the obvious",
-    description: "A twice-weekly edit of unusual, free and low-cost London events, independently verified by London Advanced.",
-    inLanguage: "en-GB",
-    isPartOf: { "@id": `${canonicalOrigin}/#website` },
-    publisher: { "@id": `${canonicalOrigin}/#organization` },
-    author: { "@id": `${canonicalOrigin}/#paolo-pastorino` }
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${canonicalOrigin}/events/#webpage`,
+        url: `${canonicalOrigin}/events/`,
+        name: "Unusual London Events This Week",
+        headline: "Unusual London events this week",
+        description: "A twice-weekly edit of unusual, free and affordable London events, checked against official organisers.",
+        inLanguage: "en-GB",
+        dateModified: feed.generated_at,
+        isPartOf: { "@id": `${canonicalOrigin}/#website` },
+        publisher: { "@id": `${canonicalOrigin}/#organization` },
+        author: { "@id": `${canonicalOrigin}/#paolo-pastorino` },
+        breadcrumb: { "@id": `${canonicalOrigin}/events/#breadcrumb` },
+        mainEntity: { "@id": `${canonicalOrigin}/events/#event-list` }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalOrigin}/events/#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "London Advanced",
+            item: `${canonicalOrigin}/`
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Unusual London events this week",
+            item: `${canonicalOrigin}/events/`
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${canonicalOrigin}/events/#event-list`,
+        name: "Verified unusual London events this week",
+        numberOfItems: eventEntities.length,
+        itemListOrder: "https://schema.org/ItemListOrderAscending",
+        itemListElement: eventEntities.map((event, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: { "@id": event["@id"] }
+        }))
+      },
+      ...eventEntities
+    ]
   };
 }
 
@@ -347,21 +423,21 @@ async function renderEventsPage(feed, data) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A twice-weekly edit of unusual, free and low-cost London events, independently verified by London Advanced.">
+  <meta name="description" content="Discover unusual London events this week and weekend: a twice-weekly edit of free and affordable things to do, checked against official organisers.">
   <meta name="author" content="Paolo Pastorino">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="London Advanced">
-  <meta property="og:title" content="This week, beyond the obvious — London Advanced">
-  <meta property="og:description" content="Verified London events selected for unusual access, local character and exceptional value.">
+  <meta property="og:title" content="Unusual London Events This Week | London Advanced">
+  <meta property="og:description" content="Discover unusual, free and affordable London events this week and weekend, independently checked against official organisers.">
   <meta property="og:url" content="${canonicalOrigin}/events/">
   <meta property="og:image" content="${canonicalOrigin}/assets/london-map.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="${canonicalOrigin}/events/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <title>This week, beyond the obvious — London Advanced</title>
+  <title>Unusual London Events This Week | London Advanced</title>
   <script type="application/ld+json">
-${safeJson(eventsStructuredData())}
+${safeJson(eventsStructuredData(events, feed))}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -374,11 +450,11 @@ ${safeJson(eventsStructuredData())}
   <main>
     <section class="events-page-hero">
       <div>
-        <span class="eyebrow">Twice-weekly London edit</span>
-        <h1>This week,<br><em>beyond the obvious.</em></h1>
+        <span class="eyebrow">Beyond the obvious · twice-weekly edit</span>
+        <h1>Unusual London events,<br><em>this week.</em></h1>
       </div>
       <div class="events-page-intro">
-        <p>Free and low-cost events selected for unusual access, local character and a London story worth following.</p>
+        <p>Discover free and affordable things to do in London this week and weekend, selected for unusual access, local character and a story worth following. Every listing is checked against the official organiser before publication.</p>
         <span data-events-range>${rangeLabel}</span>
       </div>
     </section>

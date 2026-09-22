@@ -223,6 +223,26 @@ if (!eventsHtml.includes('<meta property="og:site_name" content="London Advanced
     !eventsHtml.includes('<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">')) {
   fail("The events page is missing site identity metadata.");
 }
+for (const marker of [
+  '<title>Unusual London Events This Week | London Advanced</title>',
+  '<h1>Unusual London events,<br><em>this week.</em></h1>',
+  'things to do in London this week and weekend',
+  'checked against the official organiser',
+  '"@type": "CollectionPage"',
+  '"@type": "BreadcrumbList"',
+  '"@type": "ItemList"',
+  '"@type": "Event"',
+  '"@type": "PostalAddress"',
+  '"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"',
+  '"eventStatus": "https://schema.org/EventScheduled"'
+]) {
+  if (!eventsHtml.includes(marker)) fail(`The events page search targeting or structured data is missing ${marker}.`);
+}
+const eventSchemaCount = (eventsHtml.match(/"@type": "Event"/g) || []).length;
+const renderedEventCount = (eventsHtml.match(/class="events-list-card"/g) || []).length;
+if (eventSchemaCount !== renderedEventCount) {
+  fail(`The events page has ${renderedEventCount} rendered events but ${eventSchemaCount} Event schema entities.`);
+}
 if (!eventsScript.includes('fetch("/data/events.json"') || !eventsScript.includes('schema_version !== "1.1"')) {
   fail("The full events page does not use the version 1.1 events feed.");
 }
