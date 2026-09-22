@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
+import { buildItalian } from "./build-italian.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
@@ -529,7 +530,9 @@ export async function prerender() {
     writeFile(path.join(distRoot, "events/index.html"), eventsPage, "utf8")
   ]);
 
-  console.log(`Pre-rendered the homepage and ${feed.events.length} event records into static HTML.`);
+  await buildItalian();
+
+  console.log(`Pre-rendered the bilingual homepage and ${feed.events.length} event records into static HTML.`);
 }
 
 const directRun = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));

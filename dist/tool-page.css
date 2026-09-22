@@ -72,6 +72,7 @@ a { color: inherit; }
 }
 
 .tool-actions { display: flex; align-items: center; gap: 10px; }
+.tool-language-switch { align-items: center; border: 1px solid currentColor; border-radius: 999px; display: inline-flex; font: 700 .68rem/1 "IBM Plex Mono", monospace; justify-content: center; letter-spacing: .08em; min-height: 34px; min-width: 36px; padding: .45rem .55rem; text-decoration: none; }
 .tool-switcher {
   max-width: 190px;
   min-height: 38px;

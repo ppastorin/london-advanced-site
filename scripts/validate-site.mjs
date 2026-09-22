@@ -36,6 +36,14 @@ const requiredAssets = [
   "dist/events/events.js",
   "dist/about/index.html",
   "dist/methodology/index.html",
+  "dist/it/index.html",
+  "dist/it/chi-sono/index.html",
+  "dist/it/metodologia/index.html",
+  "dist/it/eventi/index.html",
+  "dist/it/content.js",
+  "dist/it/app.js",
+  "dist/it/tool-page.js",
+  "dist/it/eventi/events.js",
   "dist/newsletter/index.html",
   "dist/newsletter/thanks/index.html",
   "dist/thank-you/index.html",
@@ -206,6 +214,28 @@ if (!sitemap.includes("https://www.londonadvanced.com/methodology/")) fail("Site
 if (!sitemap.includes("https://www.londonadvanced.com/newsletter/")) fail("Sitemap is missing /newsletter/.");
 for (const { href } of expectedTools.values()) {
   if (!sitemap.includes(`https://www.londonadvanced.com${href}`)) fail(`Sitemap is missing ${href}`);
+}
+
+const italianRoutes = [
+  "/it/", "/it/chi-sono/", "/it/metodologia/", "/it/eventi/",
+  "/it/strumenti/dashboard-londra/", "/it/strumenti/evita-la-folla/",
+  "/it/strumenti/calcolatore-tariffe-trasporti/",
+  "/it/strumenti/navigazione-intelligente/", "/it/strumenti/londra-per-umore/"
+];
+for (const route of italianRoutes) {
+  if (!sitemap.includes(`https://www.londonadvanced.com${route}`)) fail(`Sitemap is missing ${route}`);
+  const file = route === "/it/"
+    ? path.join(distRoot, "it/index.html")
+    : path.join(distRoot, route.replace(/^\//, ""), "index.html");
+  if (!fs.existsSync(file)) { fail(`Missing Italian route ${route}`); continue; }
+  const html = fs.readFileSync(file, "utf8");
+  if (!html.includes('<html lang="it-IT">')) fail(`${route} must declare it-IT.`);
+  if (!html.includes('hreflang="en-GB"') || !html.includes('hreflang="it-IT"') || !html.includes('hreflang="x-default"')) {
+    fail(`${route} is missing paired hreflang links.`);
+  }
+  if (!html.includes(`<link rel="canonical" href="https://www.londonadvanced.com${route}">`)) {
+    fail(`${route} has the wrong canonical URL.`);
+  }
 }
 
 const eventsHtml = requireFile("dist/events/index.html");
