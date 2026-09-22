@@ -27,7 +27,7 @@ window.LONDON_ADVANCED={
       "short": "Valuta la pressione prima di partire",
       "description": "Confronta la pressione prevista intorno ai luoghi di Londra adesso e nelle prossime ore.",
       "href": "/it/strumenti/evita-la-folla/",
-      "embedUrl": "https://london-advanced-crowd-pressure.ppastorin.workers.dev/",
+      "embedUrl": "https://london-advanced-crowd-pressure.ppastorin.workers.dev/?lang=it",
       "icon": "crowd"
     },
     {

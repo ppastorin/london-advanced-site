@@ -41,7 +41,7 @@ const tools = [
     id: "escape-the-crowds", route: routes["/home/escape-the-crowds/"], enRoute: "/home/escape-the-crowds/",
     name: "Evita la folla", short: "Valuta la pressione prima di partire", icon: "crowd",
     description: "Confronta la pressione prevista intorno ai luoghi di Londra adesso e nelle prossime ore.",
-    embedUrl: "https://london-advanced-crowd-pressure.ppastorin.workers.dev/",
+    embedUrl: "https://london-advanced-crowd-pressure.ppastorin.workers.dev/?lang=it",
     meta: "Confronta la pressione della folla prevista intorno a oltre 800 luoghi di Londra, ora e nelle prossime tre ore.",
     headline: "Confronta luoghi e orari, non cercare una promessa di silenzio.",
     intro: ["Evita la folla stima quanto potrebbe risultare intenso il contesto intorno a un luogo, ora e nelle tre ore successive.", "Non conta le persone dentro un edificio e non garantisce che una destinazione sia tranquilla. Serve soprattutto a confrontare alternative e momenti diversi."],
