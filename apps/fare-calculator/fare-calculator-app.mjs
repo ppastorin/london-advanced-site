@@ -4,6 +4,13 @@ import { COPY } from "./translations.mjs";
 
 const locale = document.body.dataset.locale === "it" ? "it" : "en";
 const t = COPY[locale];
+const displayLocale = locale === "it" ? "it-IT" : "en-GB";
+const fareLastChecked = new Intl.DateTimeFormat(displayLocale, {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC"
+}).format(new Date(`${FARE_CONFIG.fareLastChecked}T00:00:00Z`));
 const app = document.querySelector("#fare-calculator-app");
 
 document.documentElement.lang = t.lang;
@@ -53,7 +60,7 @@ function pageTemplate() {
       <div id="breakdown" class="breakdown"></div>
       <div class="how-to-read"><h3>${t.howToRead}</h3><div id="cardSummary" class="info-row"></div>${t.guidance.map(([title, text]) => `<div class="info-row"><strong>${title}:</strong> ${text}</div>`).join("")}<div class="info-row">${t.loadNote}</div></div>
     </section>
-    <footer><p>${t.footer}</p><p>${t.checked}: <strong>${FARE_CONFIG.fareLastChecked}</strong> · <a href="${FARE_CONFIG.sources.fares}" target="_blank" rel="noopener noreferrer">${t.sourceLink}</a></p></footer>
+    <footer><p>${t.footer}</p><p>${t.checked}: <strong>${fareLastChecked}</strong> · <a href="${FARE_CONFIG.sources.fares}" target="_blank" rel="noopener noreferrer">${t.sourceLink}</a></p></footer>
   </main>`;
 }
 
@@ -66,7 +73,7 @@ function stepper(id, min, max, value) {
 }
 
 function metric(id, label, help, detailId = "") {
-  return `<div class="metric"><div class="metric-label">${label}</div><div id="${id}" class="metric-value">£0.00</div><div${detailId ? ` id="${detailId}"` : ""} class="metric-detail">${help}</div></div>`;
+  return `<div class="metric"><div class="metric-label">${label}</div><div id="${id}" class="metric-value">${money(0)}</div><div${detailId ? ` id="${detailId}"` : ""} class="metric-detail">${help}</div></div>`;
 }
 
 function init() {
@@ -191,7 +198,7 @@ function buildPlanLines(recommendations) {
 function renderTravellerCard(row) {
   const label = travellerLabel(row);
   const age = travellerAge(row);
-  if (row.free) return `<article class="traveller-card"><div class="traveller-head"><div class="traveller-title">${label}</div><div class="traveller-subtitle">${age}</div></div><div class="method free-method"><div class="method-price">£0.00</div><span class="free-badge">${t.freeBadge}</span></div><div class="traveller-note">${t.notes.free}</div></article>`;
+  if (row.free) return `<article class="traveller-card"><div class="traveller-head"><div class="traveller-title">${label}</div><div class="traveller-subtitle">${age}</div></div><div class="method free-method"><div class="method-price">${money(0)}</div><span class="free-badge">${t.freeBadge}</span></div><div class="traveller-note">${t.notes.free}</div></article>`;
   const contactlessRecommended = row.recommended === "contactless";
   const oysterRecommended = row.recommended === "oyster";
   const oysterCardLine = oysterRecommended ? (row.usesExistingOyster ? t.existingCard : t.newCard(money(FARE_CONFIG.oysterCardCost))) : t.newCardAdds(money(FARE_CONFIG.oysterCardCost));
@@ -226,4 +233,3 @@ function hideError() {
   els.formError.textContent = "";
   els.formError.classList.add("hidden");
 }
-

@@ -1,7 +1,7 @@
 export const FARE_CONFIG = Object.freeze({
   version: "2026-09-23",
   zonesLabel: "Zones 1–2",
-  fareLastChecked: "23 September 2026",
+  fareLastChecked: "2026-09-23",
   oysterCardCost: 10.5,
   paygLoadIncrement: 5,
   adultDailyCap: 8.9,
@@ -20,4 +20,3 @@ export const FARE_CONFIG = Object.freeze({
     children: "https://tfl.gov.uk/fares/free-and-discounted-travel"
   })
 });
-

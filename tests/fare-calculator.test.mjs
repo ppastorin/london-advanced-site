@@ -10,7 +10,7 @@ test("published 2026 fare configuration is internally consistent", () => {
   assert.equal(FARE_CONFIG.adult7DayTravelcard, 44.7);
   assert.equal(FARE_CONFIG.youngVisitorDailyCap, FARE_CONFIG.adultDailyCap / 2);
   assert.equal(FARE_CONFIG.youngVisitorWeeklyCap, FARE_CONFIG.adultWeeklyCap / 2);
-  assert.equal(FARE_CONFIG.fareLastChecked, "23 September 2026");
+  assert.equal(FARE_CONFIG.fareLastChecked, "2026-09-23");
 });
 
 test("adult PAYG applies the Monday-Sunday cap", () => {
@@ -67,4 +67,3 @@ test("validation enforces accompanied under-11 limits and input boundaries", () 
   assert.equal(validateFareInputs({ adults: 1, ages: [], startDate: "bad", days: 2, oysterOwned: 0 }).code, "invalidDate");
   assert.equal(validateFareInputs({ adults: 1, ages: [], startDate: "2026-09-21", days: 15, oysterOwned: 0 }).code, "invalidDays");
 });
-
