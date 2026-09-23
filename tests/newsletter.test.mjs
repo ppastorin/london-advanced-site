@@ -80,6 +80,24 @@ test("does not disclose whether an address already exists", async () => {
   assert.equal((await response.json()).ok, true);
 });
 
+test("accepts an existing-address conflict even when the provider body is empty", async () => {
+  const response = await handleSubscribe(subscriptionRequest(), configuredEnv, async () =>
+    new Response(null, { status: 409 })
+  );
+
+  assert.equal(response.status, 200);
+  assert.equal((await response.json()).status, "already_registered");
+});
+
+test("accepts a nested existing-address provider error", async () => {
+  const response = await handleSubscribe(subscriptionRequest(), configuredEnv, async () =>
+    Response.json({ error: { code: "MEMBER_EXISTS_WITH_EMAIL_ADDRESS" } }, { status: 400 })
+  );
+
+  assert.equal(response.status, 200);
+  assert.equal((await response.json()).status, "already_registered");
+});
+
 test("rejects invalid addresses before calling the provider", async () => {
   let called = false;
   const response = await handleSubscribe(subscriptionRequest({ email: "not-an-email" }), configuredEnv, async () => {

@@ -207,7 +207,12 @@ export async function handleSubscribe(request, env, fetchImpl = fetch) {
     return acceptSubscription(request);
   }
 
-  if (result?.code === "MEMBER_EXISTS_WITH_EMAIL_ADDRESS") {
+  const providerCode = clean(
+    result?.code ?? result?.error?.code ?? result?.errors?.[0]?.code,
+    80
+  );
+
+  if (response.status === 409 || providerCode === "MEMBER_EXISTS_WITH_EMAIL_ADDRESS") {
     console.log(JSON.stringify({ event: "newsletter_subscription_existing", source }));
     return acceptSubscription(request, "already_registered");
   }
@@ -215,7 +220,7 @@ export async function handleSubscribe(request, env, fetchImpl = fetch) {
   console.error(JSON.stringify({
     event: "newsletter_subscription_error",
     reason: "provider_rejected",
-    code: clean(result?.code, 80) || `http_${response.status}`
+    code: providerCode || `http_${response.status}`
   }));
   return rejectSubscription(request, 502, "subscription_failed");
 }
