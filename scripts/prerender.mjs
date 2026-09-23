@@ -3,6 +3,7 @@ import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 import { buildItalian } from "./build-italian.mjs";
+import { buildFareCalculator } from "./build-fare-calculator.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
@@ -511,6 +512,7 @@ ${safeJson(eventsStructuredData(events, feed))}
 }
 
 export async function prerender() {
+  await buildFareCalculator();
   const feed = JSON.parse(await readFile(path.join(distRoot, "data/events.json"), "utf8"));
 
   const dataContext = browserContext();

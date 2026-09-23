@@ -59,7 +59,14 @@ const requiredAssets = [
   "dist/assets/guide-cover.jpg",
   "dist/assets/london-map.jpg",
   "dist/assets/favicon.svg",
-  "dist/assets/london-advanced-logo.svg"
+  "dist/assets/london-advanced-logo.svg",
+  "dist/apps/fare-calculator/en/index.html",
+  "dist/apps/fare-calculator/it/index.html",
+  "dist/apps/fare-calculator/fare-config.mjs",
+  "dist/apps/fare-calculator/fare-engine.mjs",
+  "dist/apps/fare-calculator/translations.mjs",
+  "dist/apps/fare-calculator/fare-calculator-app.mjs",
+  "dist/apps/fare-calculator/fare-calculator.css"
 ];
 requiredAssets.forEach(requireFile);
 
@@ -92,7 +99,7 @@ const expectedTools = new Map([
   }],
   ["travel-fare-calculator", {
     href: "/home/travel-fare-calculator/",
-    embedUrl: "https://script.google.com/macros/s/AKfycby3upcYSg-jR3idu9_aUbeT_ooAPLF5D-5fjxDbrERvULyLUsp1mxPGzEa9GyByX6WjPg/exec"
+    embedUrl: "/apps/fare-calculator/en/"
   }],
   ["smart-navigation", {
     href: "/home/smart-navigation/",
@@ -107,6 +114,7 @@ const expectedTools = new Map([
 const homepageHtml = requireFile("dist/index.html");
 const italianHomepageHtml = requireFile("dist/it/index.html");
 const contentText = requireFile("dist/content.js");
+const italianContentText = requireFile("dist/it/content.js");
 const appText = requireFile("dist/app.js");
 const stylesText = requireFile("dist/styles.css");
 const prerenderText = requireFile("scripts/prerender.mjs");
@@ -187,6 +195,19 @@ try {
   fail(`dist/content.js could not be evaluated: ${error.message}`);
 }
 
+const italianSandbox = { window: {} };
+try {
+  vm.runInNewContext(italianContentText, italianSandbox, { filename: "dist/it/content.js" });
+  const fareTool = italianSandbox.window.LONDON_ADVANCED?.apps?.find(tool => tool.id === "travel-fare-calculator");
+  if (!fareTool) {
+    fail("The Italian tool configuration is missing the fare calculator.");
+  } else if (fareTool.embedUrl !== "/apps/fare-calculator/it/") {
+    fail(`The Italian fare calculator has an incorrect embed URL: ${fareTool.embedUrl}`);
+  }
+} catch (error) {
+  fail(`dist/it/content.js could not be evaluated: ${error.message}`);
+}
+
 const textExtensions = new Set([".html", ".js", ".css", ".json", ".xml", ".txt"]);
 const textFiles = walk(distRoot).filter(file => textExtensions.has(path.extname(file)) || ["_headers", "_redirects"].includes(path.basename(file)));
 const navigableText = textFiles
@@ -195,6 +216,9 @@ const navigableText = textFiles
   .join("\n");
 
 if (/sites\.google\.com/i.test(navigableText)) fail("A navigable Google Sites URL remains under dist/.");
+if (/AKfycby3upcYSg-jR3idu9_aUbeT_ooAPLF5D-5fjxDbrERvULyLUsp1mxPGzEa9GyByX6WjPg/i.test(navigableText)) {
+  fail("The retired Apps Script fare calculator remains under dist/.");
+}
 if (/script\.google\.com\/macros\/s\/[^\s\"']+\/dev(?:[\s\"'?]|$)/i.test(navigableText)) {
   fail("An Apps Script /dev URL remains under dist/.");
 }

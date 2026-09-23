@@ -37,7 +37,7 @@ window.LONDON_ADVANCED = {
       short: "Pay the right fare",
       description: "Compare London travel costs for adults and children before you set out.",
       href: "/home/travel-fare-calculator/",
-      embedUrl: "https://script.google.com/macros/s/AKfycby3upcYSg-jR3idu9_aUbeT_ooAPLF5D-5fjxDbrERvULyLUsp1mxPGzEa9GyByX6WjPg/exec",
+      embedUrl: "/apps/fare-calculator/en/",
       icon: "ticket"
     },
     {

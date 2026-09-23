@@ -59,7 +59,7 @@ const tools = [
     id: "travel-fare-calculator", route: routes["/home/travel-fare-calculator/"], enRoute: "/home/travel-fare-calculator/",
     name: "Calcolatore tariffe", short: "Scegli come pagare", icon: "ticket",
     description: "Confronta i costi di viaggio a Londra per adulti e bambini prima di partire.",
-    embedUrl: "https://script.google.com/macros/s/AKfycby3upcYSg-jR3idu9_aUbeT_ooAPLF5D-5fjxDbrERvULyLUsp1mxPGzEa9GyByX6WjPg/exec",
+    embedUrl: "/apps/fare-calculator/it/",
     meta: "Confronta contactless, Oyster pay as you go e Travelcard per adulti e bambini che visitano Londra.",
     headline: "Confronta le opzioni prima di acquistare.",
     intro: ["Le tariffe londinesi sono semplici per un singolo viaggio adulto, ma diventano meno immediate per famiglie, bambini, soggiorni più lunghi e visite che attraversano il periodo di calcolo settimanale da lunedì a domenica.", "Il calcolatore confronta le principali opzioni usando i dati del gruppo e del soggiorno. Nessun dato del visitatore viene conservato."],

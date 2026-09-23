@@ -36,7 +36,7 @@ window.LONDON_ADVANCED={
       "short": "Scegli come pagare",
       "description": "Confronta i costi di viaggio a Londra per adulti e bambini prima di partire.",
       "href": "/it/strumenti/calcolatore-tariffe-trasporti/",
-      "embedUrl": "https://script.google.com/macros/s/AKfycby3upcYSg-jR3idu9_aUbeT_ooAPLF5D-5fjxDbrERvULyLUsp1mxPGzEa9GyByX6WjPg/exec",
+      "embedUrl": "/apps/fare-calculator/it/",
       "icon": "ticket"
     },
     {

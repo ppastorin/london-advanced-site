@@ -7,6 +7,7 @@
     "test": "node scripts/validate-site.mjs && node --test tests/*.test.mjs && node scripts/validate-events.mjs dist/data/events.json",
     "check": "npm test",
     "validate:events": "node scripts/validate-events.mjs dist/data/events.json",
+    "build:fare": "node scripts/build-fare-calculator.mjs",
     "prerender": "node scripts/prerender.mjs",
     "stage:events": "node scripts/stage-events.mjs",
     "preview": "npx wrangler dev",
