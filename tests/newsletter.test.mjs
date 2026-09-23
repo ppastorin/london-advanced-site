@@ -40,6 +40,22 @@ test("submits a valid address to EmailOctopus without bypassing double opt-in", 
   assert.equal("status" in payload, false);
 });
 
+test("accepts an immediate autofill signup", async () => {
+  let called = false;
+  const response = await handleSubscribe(
+    subscriptionRequest({ started_at: String(Date.now()) }),
+    configuredEnv,
+    async () => {
+      called = true;
+      return Response.json({ id: "contact-fast", status: "PENDING" });
+    }
+  );
+
+  assert.equal(response.status, 200);
+  assert.equal((await response.json()).status, "confirmation_requested");
+  assert.equal(called, true);
+});
+
 test("passes a validated signup source only when a source field is configured", async () => {
   let payload;
   const response = await handleSubscribe(

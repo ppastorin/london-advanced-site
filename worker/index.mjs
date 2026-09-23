@@ -172,13 +172,7 @@ export async function handleSubscribe(request, env, fetchImpl = fetch) {
   const email = clean(form.get("email"), 254).toLowerCase();
   const requestedSource = clean(form.get("source"), 40);
   const source = SUBSCRIBE_SOURCES.has(requestedSource) ? requestedSource : "unknown";
-  const startedAt = Number(form.get("started_at"));
-  const completionTime = Date.now() - startedAt;
-
   if (!isValidEmail(email)) return rejectSubscription(request, 400, "invalid_email");
-  if (!Number.isFinite(startedAt) || completionTime < MIN_COMPLETION_MS || completionTime > MAX_COMPLETION_MS) {
-    return rejectSubscription(request, 400, "timing_check_failed");
-  }
 
   const apiKey = clean(env.EMAILOCTOPUS_API_KEY, 500);
   const listId = clean(env.EMAILOCTOPUS_LIST_ID, 100);
