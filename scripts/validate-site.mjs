@@ -109,6 +109,8 @@ const expectedTools = new Map([
     href: "/home/london-by-mood/",
     embedUrl: "https://london-by-mood.ppastorin.workers.dev/"
   }]
+,
+  ["loo-finder", { href: "/loo/", embedUrl: "/loo/" }]
 ]);
 
 const homepageHtml = requireFile("dist/index.html");
