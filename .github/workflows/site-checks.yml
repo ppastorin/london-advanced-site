@@ -12,7 +12,6 @@ on:
   push:
     branches:
       - main
-      - loo-finder-mvp-v2
     paths:
       - "dist/**"
       - "scripts/**"
