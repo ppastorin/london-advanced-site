@@ -186,7 +186,8 @@ try {
           continue;
         }
         const routeHtml = fs.readFileSync(routeFile, "utf8");
-        if (!routeHtml.includes(`data-tool-id="${tool.id}"`)) fail(`${tool.href} has the wrong data-tool-id.`);
+        if (tool.id !== "loo-finder" && !routeHtml.includes(`data-tool-id="${tool.id}"`)) fail(`${tool.href} has the wrong data-tool-id.`);
+        if (tool.id === "loo-finder" && !routeHtml.includes('<html lang="en-GB">')) fail("/loo/ must declare en-GB.");
         if (!routeHtml.includes(`<link rel="canonical" href="https://www.londonadvanced.com${tool.href}">`)) {
           fail(`${tool.href} is missing its canonical URL.`);
         }
@@ -255,7 +256,8 @@ const italianRoutes = [
   "/it/", "/it/chi-sono/", "/it/metodologia/", "/it/eventi/",
   "/it/strumenti/dashboard-londra/", "/it/strumenti/evita-la-folla/",
   "/it/strumenti/calcolatore-tariffe-trasporti/",
-  "/it/strumenti/navigazione-intelligente/", "/it/strumenti/londra-per-umore/"
+  "/it/strumenti/navigazione-intelligente/", "/it/strumenti/londra-per-umore/",
+  "/it/strumenti/trova-un-bagno/"
 ];
 for (const route of italianRoutes) {
   if (!sitemap.includes(`https://www.londonadvanced.com${route}`)) fail(`Sitemap is missing ${route}`);
@@ -318,6 +320,7 @@ try {
 }
 
 for (const [toolId, { href }] of expectedTools) {
+  if (toolId === "loo-finder") continue;
   const toolHtml = requireFile(path.join("dist", href.replace(/^\//, ""), "index.html"));
   for (const marker of [
     '<html lang="en-GB">',
@@ -348,6 +351,29 @@ for (const [toolId, { href }] of expectedTools) {
   for (const internalHref of ["/methodology/", toolId === "london-dashboard" || toolId === "travel-fare-calculator" ? "/newsletter/" : "/events/"]) {
     if (!toolHtml.includes(`href="${internalHref}"`)) fail(`${href} is missing the contextual internal link to ${internalHref}`);
   }
+}
+
+const looFinderHtml = requireFile("dist/loo/index.html");
+for (const marker of [
+  '<html lang="en-GB">',
+  '<link rel="canonical" href="https://www.londonadvanced.com/loo/">',
+  'hreflang="it-IT"',
+  'href="/loo/about/"',
+  'id="nearby"',
+  'id="search"',
+  'id="results"',
+  '/loo/loo.js'
+]) {
+  if (!looFinderHtml.includes(marker)) fail(`The native Loo Finder page is missing ${marker}.`);
+}
+if (!requireFile("dist/loo/about/index.html").includes('href="/methodology/"')) {
+  fail("The Loo Finder About page must link to the wider Methodology page.");
+}
+if (!requireFile("dist/loo/about/index.html").includes('href="/loo/"')) {
+  fail("The Loo Finder About page must link back to the Loo Finder.");
+}
+if (!requireFile("dist/it/strumenti/trova-un-bagno/info/index.html").includes('href="/it/metodologia/"')) {
+  fail("The Italian Loo Finder About page must link to Italian Methodology.");
 }
 
 for (const page of [
