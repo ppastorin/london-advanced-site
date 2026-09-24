@@ -11,7 +11,7 @@ permissions:
 jobs:
   health:
     name: Check production endpoints
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
