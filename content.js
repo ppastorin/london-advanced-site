@@ -46,6 +46,15 @@ window.LONDON_ADVANCED = {
       description: "Choose a mood and discover places that fit it, rather than another generic list.",
       href: "https://www.londonadvanced.com/home/london-by-mood",
       icon: "spark"
+    },
+    {
+      id: "loo-finder",
+      name: "Loo Finder",
+      short: "Find a toilet you can actually use",
+      description: "Find verified public toilets, free facilities and useful venue toilets near you or any London place.",
+      href: "/loo/",
+      embedUrl: "/loo/",
+      icon: "loo"
     }
   ],
   stories: [

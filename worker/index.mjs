@@ -225,11 +225,98 @@ export async function handleSubscribe(request, env, fetchImpl = fetch) {
   return rejectSubscription(request, 502, "subscription_failed");
 }
 
+async function handleLoos(request, env) {
+  if (request.method !== "GET") {
+    return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
+  }
+
+  if (env.LOO_DB && typeof env.LOO_DB.prepare === "function") {
+    try {
+      const result = await env.LOO_DB.prepare(
+        `SELECT id,name,category,lat,lon,address,access_mode,fee_pence,fee_note,
+                accessible,baby_change,changing_places,radar,opening_hours_json,
+                hours_note,location_note,confidence,active,last_verified
+         FROM loos WHERE active = 1`
+      ).all();
+      const loos = (result.results || []).map(row => ({
+        ...row,
+        accessible: row.accessible == null ? null : Boolean(row.accessible),
+        baby_change: row.baby_change == null ? null : Boolean(row.baby_change),
+        changing_places: row.changing_places == null ? null : Boolean(row.changing_places),
+        radar: row.radar == null ? null : Boolean(row.radar),
+        active: Boolean(row.active),
+        opening_hours: row.opening_hours_json ? JSON.parse(row.opening_hours_json) : null
+      }));
+      return jsonResponse({ schema_version: "1.0", count: loos.length, source: "d1", loos }, 200, {
+        "Cache-Control": "public, max-age=300"
+      });
+    } catch (error) {
+      console.error(JSON.stringify({ event: "loo_db_error", message: String(error?.message || error) }));
+    }
+  }
+
+  const seedUrl = new URL("/data/loos.json", request.url);
+  const seedResponse = await env.ASSETS.fetch(new Request(seedUrl, request));
+  if (!seedResponse.ok) return jsonResponse({ ok: false, code: "loo_data_unavailable" }, 503);
+  const body = await seedResponse.text();
+  return new Response(body, {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=300"
+    }
+  });
+}
+
+async function handleLooGeocode(request, fetchImpl = fetch) {
+  if (request.method !== "GET") {
+    return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
+  }
+  const url = new URL(request.url);
+  const q = clean(url.searchParams.get("q"), 160);
+  if (q.length < 2) return jsonResponse({ ok: false, message: "Enter a London place or address." }, 400);
+
+  const endpoint = new URL("https://nominatim.openstreetmap.org/search");
+  endpoint.searchParams.set("q", q + ", London, UK");
+  endpoint.searchParams.set("format", "jsonv2");
+  endpoint.searchParams.set("limit", "5");
+  endpoint.searchParams.set("countrycodes", "gb");
+  endpoint.searchParams.set("addressdetails", "1");
+  endpoint.searchParams.set("viewbox", "-0.55,51.72,0.35,51.25");
+  endpoint.searchParams.set("bounded", "1");
+
+  try {
+    const response = await fetchImpl(endpoint, {
+      headers: {
+        "Accept": "application/json",
+        "User-Agent": "LondonAdvanced/1.0 (https://www.londonadvanced.com)"
+      },
+      cf: { cacheTtl: 86400, cacheEverything: true }
+    });
+    if (!response.ok) return jsonResponse({ ok: false, message: "Location search is temporarily unavailable." }, 502);
+    const results = await response.json();
+    const hit = Array.isArray(results) ? results[0] : null;
+    if (!hit) return jsonResponse({ ok: false, message: "I couldn't find that place in London." }, 404);
+    const lat = Number(hit.lat), lon = Number(hit.lon);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return jsonResponse({ ok: false, message: "I couldn't locate that place." }, 404);
+    return jsonResponse({
+      ok: true,
+      lat,
+      lon,
+      label: clean(hit.display_name, 180).replace(/, United Kingdom$/, "")
+    }, 200, { "Cache-Control": "public, max-age=86400" });
+  } catch {
+    return jsonResponse({ ok: false, message: "Location search is temporarily unavailable." }, 502);
+  }
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/api/contact") return handleContact(request, env.CONTACT_EMAIL);
     if (url.pathname === "/api/subscribe") return handleSubscribe(request, env);
+    if (url.pathname === "/api/loos") return handleLoos(request, env);
+    if (url.pathname === "/api/loo-geocode") return handleLooGeocode(request);
     return env.ASSETS.fetch(request);
   }
 };

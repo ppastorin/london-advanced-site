@@ -57,6 +57,15 @@ window.LONDON_ADVANCED = {
       href: "/home/london-by-mood/",
       embedUrl: "https://london-by-mood.ppastorin.workers.dev/",
       icon: "spark"
+    },
+    {
+      id: "loo-finder",
+      name: "Loo Finder",
+      short: "Find a toilet you can actually use",
+      description: "Find verified public toilets, free facilities and useful venue toilets near you or any London place.",
+      href: "/loo/",
+      embedUrl: "/loo/",
+      icon: "loo"
     }
   ],
   stories: [

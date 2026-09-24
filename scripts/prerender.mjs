@@ -363,7 +363,7 @@ async function renderHomepage(feed) {
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="London Advanced">
   <meta property="og:title" content="London Advanced — London beyond the obvious">
-  <meta property="og:description" content="Five independent tools, field notes and an unusual London guide for discovering London beyond the obvious.">
+  <meta property="og:description" content="Six independent tools, field notes and an unusual London guide for discovering London beyond the obvious.">
   <meta property="og:url" content="${canonicalOrigin}/">
   <meta property="og:image" content="${canonicalOrigin}/assets/london-map.jpg">
   <meta name="twitter:card" content="summary_large_image">
