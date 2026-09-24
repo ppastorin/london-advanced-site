@@ -15,7 +15,8 @@ const routes = {
   "/home/escape-the-crowds/": "/it/strumenti/evita-la-folla/",
   "/home/travel-fare-calculator/": "/it/strumenti/calcolatore-tariffe-trasporti/",
   "/home/smart-navigation/": "/it/strumenti/navigazione-intelligente/",
-  "/home/london-by-mood/": "/it/strumenti/londra-per-umore/"
+  "/home/london-by-mood/": "/it/strumenti/londra-per-umore/",
+  "/loo/": "/it/strumenti/trova-un-bagno/"
 };
 
 const tools = [
@@ -108,6 +109,24 @@ const tools = [
     example: ["Seleziona “Tranquillo”.","Inserisci la posizione di partenza e il tempo disponibile.","Confronta le proposte e il motivo per cui corrispondono all’umore.","Verifica apertura e percorso della scelta finale."],
     outcome: "una rosa breve di luoghi coerenti con il momento, non una classifica valida per chiunque.",
     faqs: [["Come viene stabilito l’umore di un luogo?","È un giudizio editoriale basato su atmosfera, carattere, contesto e esperienza della visita."],["I risultati più vicini appaiono sempre per primi?","No. La distanza conta, ma viene bilanciata con qualità, corrispondenza all’umore, accesso e varietà."],["Perché un luogo può non apparire?","Potrebbe essere troppo lontano, probabilmente chiuso, poco compatibile con l’umore o escluso per evitare risultati troppo simili."]]
+  },
+  {
+    id: "loo-finder", route: routes["/loo/"], enRoute: "/loo/",
+    name: "Trova un bagno", short: "Un bagno vicino, senza tentativi", icon: "loo",
+    description: "Trova bagni pubblici verificati, servizi gratuiti e toilette utili vicino a te o a qualsiasi luogo di Londra.",
+    embedUrl: "/it/loo/",
+    meta: "Trova un bagno pubblico o una toilette utilizzabile vicino a te a Londra, con informazioni verificate su accesso, costi, orari e accessibilità.",
+    headline: "Trova un bagno che puoi davvero usare.",
+    intro: ["Trova un bagno parte da una domanda semplice: dove posso andare adesso senza perdere tempo con luoghi incerti?", "La selezione privilegia bagni pubblici, stazioni, musei gratuiti, grandi negozi e centri commerciali con servizi documentati. Pub e caffè sono esclusi salvo programmi pubblici verificati."],
+    facts: ["Bagni vicino alla posizione attuale", "Ricerca vicino a un indirizzo o luogo", "Costi e condizioni di accesso", "Accessibilità e baby changing quando verificati"],
+    steps: [["Scegli la ricerca","Usa la posizione attuale oppure inserisci un luogo, una stazione o un indirizzo di Londra."],["Confronta i risultati","La distanza conta più di tutto; un piccolo correttivo penalizza solo i servizi a pagamento o meno certi."],["Leggi le condizioni","Controlla costo, accesso, orari e posizione pratica prima di muoverti."],["Apri le indicazioni","Usa il collegamento per raggiungere il servizio e, se necessario, verifica la fonte ufficiale."]],
+    includes: "La base dati combina fonti ufficiali TfL, amministrazioni locali, musei e gallerie, grandi negozi, centri commerciali e altre sedi con servizi verificabili. Ogni record conserva fonte, data di verifica, coordinate e attributi di accesso.",
+    limits: "Un bagno può chiudere temporaneamente, essere fuori servizio o cambiare politica senza preavviso. Nei negozi e nelle sedi culturali la presenza del bagno non equivale sempre a un diritto formale di accesso senza acquisto.",
+    exampleTitle: "Trovare rapidamente un bagno vicino a Westminster.",
+    scenario: "Sei vicino a Westminster e vuoi evitare di entrare in locali a caso.",
+    example: ["Cerca Westminster oppure usa la posizione attuale.","Confronta le opzioni ordinate per distanza reale.","Controlla se il servizio è gratuito, a pagamento o all’interno di una sede.","Apri le indicazioni e usa la fonte ufficiale se l’accesso è critico."],
+    outcome: "una scelta pratica e trasparente, con meno tentativi e meno ambiguità.",
+    faqs: [["Sono inclusi pub e caffè?","No, salvo sedi che partecipano a programmi pubblici o comunitari verificati."],["I bagni dei grandi negozi sono davvero pubblici?","Sono servizi presenti nel negozio; quando la fonte non garantisce accesso senza acquisto, l’app lo segnala invece di definirli bagni pubblici."],["Le informazioni sono in tempo reale?","No. Sono verificate e datate, ma guasti e chiusure temporanee possono sempre verificarsi."]]
   }
 ];
 
