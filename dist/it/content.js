@@ -56,6 +56,15 @@ window.LONDON_ADVANCED={
       "href": "/it/strumenti/londra-per-umore/",
       "embedUrl": "https://london-by-mood.ppastorin.workers.dev/?lang=it",
       "icon": "spark"
+    },
+    {
+      "id": "loo-finder",
+      "name": "Trova un bagno",
+      "short": "Un bagno vicino, senza tentativi",
+      "description": "Trova bagni pubblici verificati, servizi gratuiti e toilette utili vicino a te o a qualsiasi luogo di Londra.",
+      "href": "/it/strumenti/trova-un-bagno/",
+      "embedUrl": "/it/loo/",
+      "icon": "loo"
     }
   ],
   "stories": [
