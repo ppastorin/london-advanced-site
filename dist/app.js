@@ -337,7 +337,7 @@ function render() {
 
     <section class="hero">
       <div class="hero-intro">
-        <span class="eyebrow">Independent London guide · 5 free tools</span>
+        <span class="eyebrow">Independent London guide · 6 free tools</span>
         <h1>The city beyond<br><em>the obvious.</em></h1>
         <p>Find unusual places, make smarter journeys and see what London feels like before you set out.</p>
         <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Explore the tools</button><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:hero">Discover the guide →</a></div>
@@ -346,7 +346,7 @@ function render() {
     </section>
 
     <section id="tools" class="tools section-wrap">
-      <div class="section-heading tool-heading"><div><span>01 / Practical London</span><h2>Choose what you need now.</h2></div><p>Five focused tools. No account, no app download and no generic recommendations.</p></div>
+      <div class="section-heading tool-heading"><div><span>01 / Practical London</span><h2>Choose what you need now.</h2></div><p>Six focused tools. No account, no app download and no generic recommendations.</p></div>
       <div class="app-grid">${appCards()}</div>
     </section>
 
