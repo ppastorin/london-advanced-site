@@ -12,6 +12,7 @@ on:
   push:
     branches:
       - main
+      - loo-production-generated-sync
     paths:
       - "dist/**"
       - "scripts/**"
