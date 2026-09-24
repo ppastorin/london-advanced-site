@@ -107,7 +107,7 @@ button, a { touch-action: manipulation; }
 }
 .app-card:hover { transform: translateY(-4px); background: #fff; }
 .app-card.app-1, .app-card.app-2 { grid-column: span 3; }
-.app-card.app-3, .app-card.app-4, .app-card.app-5 { grid-column: span 2; }
+.app-card.app-3, .app-card.app-4, .app-card.app-5, .app-card.app-6 { grid-column: span 3; }
 .app-card > div { grid-column: 1 / -1; margin-top: 38px; }
 .app-card h3 { margin: 8px 0; font-size: 22px; }
 .app-card p { margin: 0; padding-right: 24px; color: #5d5d5d; line-height: 1.55; }
