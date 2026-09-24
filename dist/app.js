@@ -19,7 +19,7 @@ const visualMotifs = {
   ticket: `<div class="ticket-graphic" aria-hidden="true"><span>ZONE 1–6</span><b>£</b><small>FARE CHECK</small></div>`,
   route: `<svg class="route-map" viewBox="0 0 220 100" aria-hidden="true"><path d="M12 77c28 0 28-49 58-49s26 51 57 51 31-55 78-55"/><circle cx="12" cy="77" r="6"/><circle cx="205" cy="24" r="6"/></svg><span class="route-label route-a">A</span><span class="route-label route-b">B</span>`,
   spark: `<div class="mood-orbit" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="mood-word mood-one">QUIET</span><span class="mood-word mood-two">CURIOUS</span>`,
-  loo: `<div class="loo-graphic" aria-hidden="true"><span>WC</span><i></i></div><span class="visual-chip">117 VERIFIED</span>`
+  loo: `<div class="loo-graphic" aria-hidden="true"><span>WC</span><i></i></div><span class="visual-chip">123 VERIFIED</span>`
 };
 
 function appCards() {
