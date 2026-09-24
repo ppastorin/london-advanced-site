@@ -1,15 +1,64 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-09-20T11:01:32+01:00",
-  "valid_from": "2026-09-20",
+  "generated_at": "2026-09-24T15:01:55+01:00",
+  "valid_from": "2026-09-24",
   "valid_until": "2026-09-27",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "reviving-craft-somerset-house-2026-09-25",
-    "sacred-treasures-kyiv-va-2026-09-25"
+    "woolmen-sheep-drive-livery-fair-2026-09-27",
+    "drawn-into-your-presence-clapham-2026-09-25",
+    "brixton-windmill-harvest-festival-2026-09-27"
   ],
   "events": [
+    {
+      "id": "gift-to-the-future-southbank-2026-09-25",
+      "title_en": "Gift to the Future at Southbank Centre",
+      "title_it": "Gift to the Future al Southbank Centre",
+      "summary_en": "More than 90 lines written with thousands of school pupils turn the Southbank Centre’s brutalist exterior into a site-wide poetry installation inspired by the 1951 Festival of Britain.",
+      "summary_it": "Oltre 90 versi creati con migliaia di studenti trasformano gli edifici brutalisti del Southbank Centre in un’installazione poetica ispirata al Festival of Britain del 1951.",
+      "start": "2026-09-25T00:00:00+01:00",
+      "end": "2026-09-27T23:59:00+01:00",
+      "venue": {
+        "name": "Southbank Centre, Riverside Terrace",
+        "address": "Belvedere Road, London",
+        "postcode": "SE1 8XX",
+        "borough": "Lambeth"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 8,
+        "reason": "A temporary intervention connects children’s voices, brutalist architecture and the Festival of Britain legacy across a major public site.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.southbankcentre.co.uk/whats-on/gift-to-the-future/",
+      "verification": {
+        "verified_at": "2026-09-24T15:01:55+01:00",
+        "confidence": "high",
+        "source_url": "https://www.southbankcentre.co.uk/whats-on/gift-to-the-future/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-24T15:01:55+01:00",
+      "expire_at": "2026-09-28T00:14:00+01:00",
+      "duplicate_key": "southbank-centre|2026-09-25|gift-to-the-future"
+    },
     {
       "id": "sacred-treasures-kyiv-va-2026-09-25",
       "title_en": "Sacred Treasures from Kyiv at the V&A",
@@ -49,14 +98,158 @@
       "newsletter_sources": ["Londonist"],
       "official_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv",
       "verification": {
-        "verified_at": "2026-09-20T11:01:32+01:00",
+        "verified_at": "2026-09-24T15:01:55+01:00",
         "confidence": "high",
         "source_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-20T11:01:32+01:00",
+      "publish_at": "2026-09-24T15:01:55+01:00",
       "expire_at": "2026-09-27T18:00:00+01:00",
       "duplicate_key": "va-south-kensington|2026-09-25|sacred-treasures-kyiv"
+    },
+    {
+      "id": "amar-kanwar-serpentine-2026-09-25",
+      "title_en": "Amar Kanwar at Serpentine North",
+      "title_it": "Amar Kanwar alla Serpentine North",
+      "summary_en": "A darkened, site-specific environment brings together lyrical films on decolonisation, displacement and Partition, including the premiere of the seven-screen work The Charcoal Man.",
+      "summary_it": "Un ambiente immersivo e oscurato riunisce film lirici su decolonizzazione, migrazione e Partizione, inclusa la prima dell’opera a sette schermi The Charcoal Man.",
+      "start": "2026-09-25T10:00:00+01:00",
+      "end": "2026-09-27T18:00:00+01:00",
+      "venue": {
+        "name": "Serpentine North Gallery",
+        "address": "West Carriage Drive, Kensington Gardens, London",
+        "postcode": "W2 2AR",
+        "borough": "Westminster"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "recommended",
+        "url": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list"
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 8,
+        "reason": "A substantial free moving-image installation uses an unusual gallery environment to explore powerful histories of place, violence and memory.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.serpentinegalleries.org/whats-on/amar-kanwar-exhibition/",
+      "verification": {
+        "verified_at": "2026-09-24T15:01:55+01:00",
+        "confidence": "high",
+        "source_url": "https://www.serpentinegalleries.org/whats-on/amar-kanwar-exhibition/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-24T15:01:55+01:00",
+      "expire_at": "2026-09-27T18:15:00+01:00",
+      "duplicate_key": "serpentine-north|2026-09-25|amar-kanwar"
+    },
+    {
+      "id": "japanese-women-photographers-2026-09-25",
+      "title_en": "Japanese Women Photographers: From 1950s to Now",
+      "title_it": "Fotografe giapponesi: dagli anni Cinquanta a oggi",
+      "summary_en": "The final weekend brings together more than 200 photographs, videos, installations and rare books by 27 women whose work challenges a male-dominated account of Japanese photography.",
+      "summary_it": "L’ultimo weekend riunisce oltre 200 fotografie, video, installazioni e libri rari di 27 autrici che riscrivono una storia della fotografia giapponese dominata dagli uomini.",
+      "start": "2026-09-25T10:30:00+01:00",
+      "end": "2026-09-27T18:00:00+01:00",
+      "venue": {
+        "name": "The Photographers’ Gallery",
+        "address": "16-18 Ramillies Street, London",
+        "postcode": "W1F 7LW",
+        "borough": "Westminster"
+      },
+      "price": {
+        "amount_gbp": 10,
+        "display": "£10 online, donation excluded",
+        "classification": "cheap"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://thephotographersgallery.ticketsolve.com/ticketbooth/shows/1173687757"
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 8,
+        "reason": "A major corrective to photographic history, with 27 artists and more than 200 works available for £10 on its final weekend.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist", "The Times"],
+      "official_url": "https://thephotographersgallery.org.uk/whats-on/japanese-women-photographers-1950s-now",
+      "verification": {
+        "verified_at": "2026-09-24T15:01:55+01:00",
+        "confidence": "high",
+        "source_url": "https://thephotographersgallery.org.uk/whats-on/japanese-women-photographers-1950s-now"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-24T15:01:55+01:00",
+      "expire_at": "2026-09-27T18:15:00+01:00",
+      "duplicate_key": "photographers-gallery|2026-09-25|japanese-women-photographers"
+    },
+    {
+      "id": "drawn-into-your-presence-clapham-2026-09-25",
+      "title_en": "Drawn into Your Presence in Clapham",
+      "title_it": "Drawn into Your Presence a Clapham",
+      "summary_en": "A local photographer pairs 30 enlarged Victorian Bible engravings with 30 contemporary images of south London church life inside a Grade II-listed post-war church.",
+      "summary_it": "Un fotografo locale abbina 30 incisioni bibliche vittoriane ingrandite a 30 immagini della vita religiosa nel sud di Londra, in una chiesa modernista di Grade II.",
+      "start": "2026-09-25T11:00:00+01:00",
+      "end": "2026-09-27T18:00:00+01:00",
+      "venue": {
+        "name": "St James’ Church, Clapham",
+        "address": "Park Hill, Clapham, London",
+        "postcode": "SW4 9PB",
+        "borough": "Lambeth"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 9,
+        "reason": "A one-month local exhibition connects Victorian print culture, south London social history and access to a notable post-war church.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.stjamesclapham.org.uk/programme",
+      "verification": {
+        "verified_at": "2026-09-24T15:01:55+01:00",
+        "confidence": "high",
+        "source_url": "https://www.stjamesclapham.org.uk/new-page-3"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-24T15:01:55+01:00",
+      "expire_at": "2026-09-27T18:15:00+01:00",
+      "duplicate_key": "st-james-clapham|2026-09-25|drawn-into-your-presence"
     },
     {
       "id": "reviving-craft-somerset-house-2026-09-25",
@@ -97,14 +290,110 @@
       "newsletter_sources": ["Londonist"],
       "official_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind",
       "verification": {
-        "verified_at": "2026-09-20T11:01:32+01:00",
+        "verified_at": "2026-09-24T15:01:55+01:00",
         "confidence": "high",
         "source_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-20T11:01:32+01:00",
+      "publish_at": "2026-09-24T15:01:55+01:00",
       "expire_at": "2026-09-27T18:15:00+01:00",
       "duplicate_key": "somerset-house|2026-09-25|reviving-craft"
+    },
+    {
+      "id": "woolmen-sheep-drive-livery-fair-2026-09-27",
+      "title_en": "Woolmen Sheep Drive and Livery Fair",
+      "title_it": "Woolmen Sheep Drive e Livery Fair",
+      "summary_en": "Freemen revive their ancient right to drive sheep over the Thames while the public explores livery trades, wool crafts, blade shearing and rare breeds beside Southwark Bridge.",
+      "summary_it": "I Freemen rievocano l’antico diritto di condurre pecore sul Tamigi, mentre il pubblico scopre corporazioni, artigianato della lana, tosatura e razze rare presso Southwark Bridge.",
+      "start": "2026-09-27T10:00:00+01:00",
+      "end": "2026-09-27T16:00:00+01:00",
+      "venue": {
+        "name": "Southwark Bridge and Woolmen Livery Fair",
+        "address": "Queen Street and Queen Street Place, London",
+        "postcode": "EC4R 1BE",
+        "borough": "City of London"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free to watch and visit",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 10,
+        "reason": "An exceptionally London-specific livery tradition combines an ancient City right, a one-day spectacle and free public access.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist", "Londonfy"],
+      "official_url": "https://woolmensheepdrive.london/",
+      "verification": {
+        "verified_at": "2026-09-24T15:01:55+01:00",
+        "confidence": "high",
+        "source_url": "https://woolmensheepdrive.london/wool-fair/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-24T15:01:55+01:00",
+      "expire_at": "2026-09-27T16:15:00+01:00",
+      "duplicate_key": "southwark-bridge|2026-09-27|woolmen-sheep-drive-livery-fair"
+    },
+    {
+      "id": "brixton-windmill-harvest-festival-2026-09-27",
+      "title_en": "Harvest Festival at Brixton Windmill",
+      "title_it": "Festa del raccolto al Brixton Windmill",
+      "summary_en": "Inner London’s only working windmill celebrates the wheat harvest with milling demonstrations, baking and craft workshops, hand querns, Morris dancing and local live music.",
+      "summary_it": "L’unico mulino a vento funzionante dell’Inner London celebra il raccolto con dimostrazioni di macinazione, laboratori, macine manuali, Morris dance e musica locale.",
+      "start": "2026-09-27T13:00:00+01:00",
+      "end": "2026-09-27T17:00:00+01:00",
+      "venue": {
+        "name": "Brixton Windmill Centre",
+        "address": "100 Blenheim Gardens, Brixton Hill, London",
+        "postcode": "SW2 5DA",
+        "borough": "Lambeth"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "local-culture",
+      "advanced": {
+        "score": 9,
+        "reason": "A free neighbourhood celebration offers working-mill demonstrations, local history and traditional harvest activities at a rare London landmark.",
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.lambeth.gov.uk/events/harvest-festival-brixton-windmill-festival",
+      "verification": {
+        "verified_at": "2026-09-24T15:01:55+01:00",
+        "confidence": "high",
+        "source_url": "https://www.lambeth.gov.uk/events/harvest-festival-brixton-windmill-festival"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-24T15:01:55+01:00",
+      "expire_at": "2026-09-27T17:15:00+01:00",
+      "duplicate_key": "brixton-windmill|2026-09-27|harvest-festival"
     }
   ]
 }
