@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import vm from "node:vm";
 
+const PRODUCTION_BASE_URL = "https://www.londonadvanced.com/";
 const contentText = fs.readFileSync("dist/content.js", "utf8");
 const sandbox = { window: {} };
 vm.runInNewContext(contentText, sandbox, { filename: "dist/content.js" });
@@ -14,17 +15,25 @@ for (const tool of tools) {
   const started = Date.now();
 
   try {
-    const response = await fetch(tool.embedUrl, {
+    if (!tool.embedUrl) {
+      throw new Error("missing embedUrl");
+    }
+
+    // App URLs may be absolute (external tools) or site-relative (native apps).
+    // Resolve both forms against the production origin before calling fetch().
+    const endpointUrl = new URL(tool.embedUrl, PRODUCTION_BASE_URL).href;
+
+    const response = await fetch(endpointUrl, {
       redirect: "follow",
       signal: controller.signal,
-      headers: { "User-Agent": "London-Advanced-endpoint-check/2.0" }
+      headers: { "User-Agent": "London-Advanced-endpoint-check/3.0" }
     });
     const elapsed = Date.now() - started;
     if (!response.ok) {
       failures.push(`${tool.name}: HTTP ${response.status} from ${response.url}`);
       console.error(`FAIL ${tool.name}: HTTP ${response.status} (${elapsed} ms)`);
     } else {
-      console.log(`OK   ${tool.name}: HTTP ${response.status} (${elapsed} ms)`);
+      console.log(`OK   ${tool.name}: HTTP ${response.status} (${elapsed} ms) -> ${endpointUrl}`);
     }
   } catch (error) {
     const reason = error.name === "AbortError" ? "timed out after 25 seconds" : error.message;
