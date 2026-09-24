@@ -354,6 +354,12 @@ for (const [toolId, { href }] of expectedTools) {
 }
 
 const looFinderHtml = requireFile("dist/loo/index.html");
+const looFinderScript = requireFile("dist/loo/loo.js");
+try {
+  new vm.Script(looFinderScript, { filename: "dist/loo/loo.js" });
+} catch (error) {
+  fail(`dist/loo/loo.js has invalid JavaScript: ${error.message}`);
+}
 for (const marker of [
   '<html lang="en-GB">',
   '<link rel="canonical" href="https://www.londonadvanced.com/loo/">',
