@@ -5,8 +5,9 @@ import vm from 'node:vm';
 
 const script = await readFile(new URL('../dist/loo/loo.js', import.meta.url), 'utf8');
 const sample = {
-  active: true, name: 'Test public toilet', category: 'public_toilet',
-  lat: 51.50, lon: -0.12, fee_pence: 0, source_url: 'https://example.org',
+  active: true, name: 'Test shopping toilet', category: 'shopping_centre',
+  lat: 51.50, lon: -0.12, fee_pence: 150, accessible: true, baby_change: true,
+  source_url: 'https://example.org',
   source_name: 'Council', last_verified: '2026-09-24'
 };
 
@@ -42,7 +43,12 @@ for (const [language, page] of [
       assert.equal(prevented, true, `${action} must prevent navigation`);
       assert.equal(elements.get('#where').value, 'Trafalgar Square');
       assert.equal(elements.get('#results-section').hidden, false);
-      assert.match(elements.get('#results').innerHTML, /Test public toilet/);
+      const card = elements.get('#results').innerHTML;
+      assert.match(card, /Test shopping toilet/);
+      assert.match(card, /£1\.50/);
+      assert.match(card, new RegExp(language === 'it-IT' ? 'Accessibile' : 'Accessible'));
+      assert.match(card, new RegExp(language === 'it-IT' ? 'Fasciatoio' : 'Baby change'));
+      assert.doesNotMatch(card, /\$\{IT\?|no charge stated|nessun costo indicato/);
     }
     assert.ok(requests.some(url => url.startsWith('/api/loo-geocode?q=')));
     elements.get('#map-toggle').onclick();
