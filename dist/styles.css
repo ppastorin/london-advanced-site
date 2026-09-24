@@ -252,7 +252,7 @@ section[id] { scroll-margin-top: 76px; }
 }
 .app-card:hover { z-index: 2; transform: translateY(-4px); border-color: rgba(23, 23, 23, .38); box-shadow: 0 18px 38px rgba(36, 27, 23, .11); }
 .app-card.app-1, .app-card.app-2 { grid-column: span 3; }
-.app-card.app-3, .app-card.app-4, .app-card.app-5 { grid-column: span 2; }
+.app-card.app-3, .app-card.app-4, .app-card.app-5, .app-card.app-6 { grid-column: span 3; }
 .app-visual {
   position: relative;
   height: 118px;
@@ -274,6 +274,10 @@ section[id] { scroll-margin-top: 76px; }
 .visual-ticket { --visual-bg: #eee1bd; }
 .visual-route { --visual-bg: #d9e2ec; }
 .visual-spark { --visual-bg: #e4dceb; }
+.visual-loo { --visual-bg: #dfe8d8; }
+.loo-graphic { position:absolute; right:54px; bottom:14px; width:112px; height:74px; border:1px solid rgba(23,23,23,.55); background:rgba(255,255,255,.52); display:grid; place-items:center; }
+.loo-graphic span { font:700 28px var(--sans); letter-spacing:.12em; }
+.loo-graphic i { position:absolute; width:34px; height:2px; background:rgba(23,23,23,.55); bottom:12px; }
 .app-copy { min-height: 154px; padding: 20px 22px 18px; display: flex; flex: 1; flex-direction: column; }
 .app-card h3 { margin: 5px 0 7px; font-size: 21px; line-height: 1.15; }
 .app-card p { margin: 0; color: #5d5d5d; font-size: 14px; line-height: 1.48; }
