@@ -353,6 +353,13 @@ for (const [toolId, { href }] of expectedTools) {
   }
 }
 
+const looFinderScript = requireFile("dist/loo/loo.js");
+try {
+  new vm.Script(looFinderScript, { filename: "dist/loo/loo.js" });
+} catch (error) {
+  fail(`dist/loo/loo.js has invalid JavaScript: ${error.message}`);
+}
+
 const looFinderHtml = requireFile("dist/loo/index.html");
 for (const marker of [
   '<html lang="en-GB">',
