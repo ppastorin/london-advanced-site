@@ -37,6 +37,63 @@ function browserContext(site = null) {
   return context;
 }
 
+function siteNavigation(homepage, locale) {
+  const header = homepage.match(/<header class="site-nav">[\s\S]*?<\/header>/)?.[0];
+  if (!header) throw new Error(`Could not extract the ${locale} site navigation for the Loo Finder.`);
+
+  let nav = header;
+  if (locale === "en") {
+    nav = nav
+      .replace('class="wordmark" href="#top"', 'class="wordmark" href="/"')
+      .replaceAll('href="#events"', 'href="/#events"')
+      .replace('<button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>', '<a href="/#journal">Journal</a>')
+      .replace('<button class="nav-section-button contact-nav" type="button" data-scroll-target="contact">Contact</button>', '<a class="contact-nav" href="/#contact">Contact</a>')
+      .replace(/<button class="mobile-section-link" type="button" data-scroll-target="journal">([\s\S]*?)<\/button>/, '<a href="/#journal">$1</a>')
+      .replace(/<button class="mobile-section-link" type="button" data-scroll-target="contact">([\s\S]*?)<\/button>/, '<a href="/#contact">$1</a>')
+      .replace('class="language-switch" href="/it/"', 'class="language-switch" href="/it/strumenti/trova-un-bagno/"')
+      .replace('class="mobile-language-switch" href="/it/"', 'class="mobile-language-switch" href="/it/strumenti/trova-un-bagno/"')
+      .replace('href="/loo/" data-track="app-menu:Loo Finder"', 'href="/loo/" aria-current="page" data-track="app-menu:Loo Finder"');
+  } else {
+    nav = nav
+      .replace('class="language-switch" href="/"', 'class="language-switch" href="/loo/"')
+      .replace('class="mobile-language-switch" href="/"', 'class="mobile-language-switch" href="/loo/"')
+      .replace('href="/it/strumenti/trova-un-bagno/"', 'href="/it/strumenti/trova-un-bagno/" aria-current="page"');
+  }
+  return nav;
+}
+
+function nativeLooPage(template, nav, locale) {
+  let page = template
+    .replace(/<body><header class="site-nav">[\s\S]*?<\/header>/, "<body>")
+    .replace(/<main class="shell"><header class="top">[\s\S]*?<\/header>/, '<main class="shell">')
+    .replace("<body>", `<body>${nav}`);
+
+  if (!page.includes('<link rel="stylesheet" href="/styles.css">')) {
+    page = page.replace('<link rel="stylesheet" href="/loo/loo.css">', '<link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/loo/loo.css">');
+  }
+
+  const aboutHref = locale === "en" ? "/loo/about/" : "/it/strumenti/trova-un-bagno/info/";
+  const aboutText = locale === "en" ? "About this tool" : "Come funziona questo strumento";
+  page = page.replace(/<p class="tool-context-link">[\s\S]*?<\/p>/, "");
+  page = page.replace('</p><div class="actions">', `</p><p class="tool-context-link"><a href="${aboutHref}">${aboutText} <span aria-hidden="true">→</span></a></p><div class="actions">`);
+  return page.replace(/[ \t]+$/gm, "");
+}
+
+async function buildNativeLooPages() {
+  const englishHomepage = await readFile(path.join(distRoot, "index.html"), "utf8");
+  const italianHomepage = await readFile(path.join(distRoot, "it/index.html"), "utf8");
+  const englishTemplate = await readFile(path.join(distRoot, "loo/index.html"), "utf8");
+  const italianTemplate = await readFile(path.join(distRoot, "it/loo/index.html"), "utf8");
+  const englishPage = nativeLooPage(englishTemplate, siteNavigation(englishHomepage, "en"), "en");
+  const italianPage = nativeLooPage(italianTemplate, siteNavigation(italianHomepage, "it"), "it");
+
+  await Promise.all([
+    writeFile(path.join(distRoot, "loo/index.html"), englishPage, "utf8"),
+    writeFile(path.join(distRoot, "it/loo/index.html"), italianPage, "utf8"),
+    writeFile(path.join(distRoot, "it/strumenti/trova-un-bagno/index.html"), italianPage, "utf8")
+  ]);
+}
+
 function safeJson(value) {
   return JSON.stringify(value, null, 2).replaceAll("<", "\\u003c");
 }
@@ -533,6 +590,7 @@ export async function prerender() {
   ]);
 
   await buildItalian();
+  await buildNativeLooPages();
 
   console.log(`Pre-rendered the bilingual homepage and ${feed.events.length} event records into static HTML.`);
 }

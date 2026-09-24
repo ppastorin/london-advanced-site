@@ -354,6 +354,7 @@ for (const [toolId, { href }] of expectedTools) {
 }
 
 const looFinderHtml = requireFile("dist/loo/index.html");
+const italianLooFinderHtml = requireFile("dist/it/strumenti/trova-un-bagno/index.html");
 const looFinderScript = requireFile("dist/loo/loo.js");
 try {
   new vm.Script(looFinderScript, { filename: "dist/loo/loo.js" });
@@ -380,6 +381,17 @@ if (!requireFile("dist/loo/about/index.html").includes('href="/loo/"')) {
 }
 if (!requireFile("dist/it/strumenti/trova-un-bagno/info/index.html").includes('href="/it/metodologia/"')) {
   fail("The Italian Loo Finder About page must link to Italian Methodology.");
+}
+for (const [label, html, aboutHref] of [
+  ["English Loo Finder", looFinderHtml, "/loo/about/"],
+  ["Italian Loo Finder", italianLooFinderHtml, "/it/strumenti/trova-un-bagno/info/"]
+]) {
+  for (const marker of ['class="site-nav"', 'class="desktop-nav"', 'class="nav-dropdown mobile-menu"', `href="${aboutHref}"`]) {
+    if (!html.includes(marker)) fail(`${label} is missing ${marker}.`);
+  }
+  if (html.includes("Open directly") || html.includes("Apri direttamente") || html.includes('class="direct-link"')) {
+    fail(`${label} must not show a redundant direct link.`);
+  }
 }
 
 for (const page of [

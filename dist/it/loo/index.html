@@ -1,1 +1,157 @@
-<!doctype html><html lang="it-IT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Trova bagni pubblici verificati, servizi nelle stazioni, musei gratuiti, grandi magazzini e centri commerciali vicino a te a Londra."><meta name="robots" content="index,follow"><link rel="canonical" href="https://www.londonadvanced.com/it/strumenti/trova-un-bagno/"><link rel="alternate" hreflang="en-GB" href="https://www.londonadvanced.com/loo/"><link rel="alternate" hreflang="it-IT" href="https://www.londonadvanced.com/it/strumenti/trova-un-bagno/"><link rel="alternate" hreflang="x-default" href="https://www.londonadvanced.com/loo/"><title>Trova un bagno pubblico a Londra | London Advanced</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""><link rel="stylesheet" href="/loo/loo.css"></head><body><main class="shell"><header class="top"><a class="brand" href="/it/"><span class="mark">⌁</span><span>London Advanced</span></a><a class="dev" href="/loo/" lang="en" hreflang="en-GB">EN</a></header><section class="hero"><p class="eyebrow">Londra pratica</p><h1>Trova un bagno.</h1><p class="intro">Una lista verificata di bagni pubblici, stazioni, musei gratuiti, grandi negozi e centri commerciali. Niente tentativi casuali in pub o caffè.</p><div class="actions"><button id="nearby" class="primary" type="button">Un bagno vicino <span>↗</span></button><form id="search"><label for="where">Oppure vicino a…</label><div class="searchrow"><input id="where" autocomplete="street-address" placeholder="Luogo o negozio, es. Liberty…" required><button type="submit">Trova</button></div></form></div><p id="status" class="status" aria-live="polite"></p></section><section id="results-section" class="results-section" hidden><div class="result-head"><div><p class="eyebrow">Opzioni più vicine</p><h2 id="result-title">Bagni più vicini</h2></div><button id="map-toggle" class="quiet" type="button" aria-expanded="false">Mostra mappa</button></div><div id="map-wrap" hidden><div id="map"></div></div><div class="legend"><span><i class="dot free"></i>Gratuito verificato</span><span><i class="dot public"></i>Pubblico / costo incerto</span><span><i class="dot paid"></i>A pagamento o condizionato</span></div><div id="results" class="results"></div><div class="results-controls"><p id="result-count" aria-live="polite"></p><button id="show-more" class="quiet" type="button" hidden></button></div></section><footer><p><strong>Sui dati.</strong> Le fonti includono TfL, amministrazioni locali e informazioni ufficiali di musei, negozi e centri commerciali. Una struttura elencata può comunque avere chiusure temporanee.</p><p>La fonte è indicata in ogni risultato. <a href="/it/strumenti/trova-un-bagno/info/">Come funziona questo strumento →</a></p></footer></main><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="/loo/loo.js"></script></body></html>
+<!doctype html><html lang="it-IT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Trova bagni pubblici verificati, servizi nelle stazioni, musei gratuiti, grandi magazzini e centri commerciali vicino a te a Londra."><meta name="robots" content="index,follow"><link rel="canonical" href="https://www.londonadvanced.com/it/strumenti/trova-un-bagno/"><link rel="alternate" hreflang="en-GB" href="https://www.londonadvanced.com/loo/"><link rel="alternate" hreflang="it-IT" href="https://www.londonadvanced.com/it/strumenti/trova-un-bagno/"><link rel="alternate" hreflang="x-default" href="https://www.londonadvanced.com/loo/"><title>Trova un bagno pubblico a Londra | London Advanced</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/loo/loo.css"></head><body><header class="site-nav">
+      <a class="wordmark" href="#top" aria-label="London Advanced home — back to top">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+          <circle cx="18" cy="18" r="15.5"/>
+          <path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/>
+          <circle class="brand-centre" cx="18" cy="18" r="2.2"/>
+        </svg>
+        <span class="brand-name">London Advanced</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <details class="nav-dropdown tools-menu">
+          <summary>Strumenti</summary>
+          <div class="nav-menu-panel tools-menu-panel">
+    <a href="/it/strumenti/dashboard-londra/" data-track="app-menu:Dashboard di Londra">
+      <span>Londra oggi, in sintesi</span>
+      <strong>Dashboard di Londra</strong>
+    </a>
+    <a href="/it/strumenti/evita-la-folla/" data-track="app-menu:Evita la folla">
+      <span>Valuta la pressione prima di partire</span>
+      <strong>Evita la folla</strong>
+    </a>
+    <a href="/it/strumenti/calcolatore-tariffe-trasporti/" data-track="app-menu:Calcolatore tariffe">
+      <span>Scegli come pagare</span>
+      <strong>Calcolatore tariffe</strong>
+    </a>
+    <a href="/it/strumenti/navigazione-intelligente/" data-track="app-menu:Navigazione intelligente">
+      <span>Trasforma il tragitto in una scoperta</span>
+      <strong>Navigazione intelligente</strong>
+    </a>
+    <a href="/it/strumenti/londra-per-umore/" data-track="app-menu:Londra secondo l’umore">
+      <span>Parti da come ti senti</span>
+      <strong>Londra secondo l’umore</strong>
+    </a>
+    <a href="/it/strumenti/trova-un-bagno/" aria-current="page" data-track="app-menu:Trova un bagno">
+      <span>Un bagno vicino, senza tentativi</span>
+      <strong>Trova un bagno</strong>
+    </a></div>
+        </details>
+        <a href="https://payhip.com/TheOtherLondon" target="_blank" rel="noopener" data-track="guide:menu">Guida</a>
+        <details class="nav-dropdown week-menu" data-events-nav>
+          <summary>Questa settimana</summary>
+          <div class="nav-menu-panel week-menu-panel">
+            <a href="#eventi" data-track="events:menu-highlights">
+              <span>Tre proposte in evidenza</span>
+              <strong>Highlights</strong>
+            </a>
+            <a href="/it/eventi/" data-track="events:menu-all">
+              <span>La selezione completa</span>
+              <strong>Tutti gli eventi</strong>
+            </a>
+          </div>
+        </details>
+        <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
+        <a class="newsletter-nav" href="/it/#newsletter" data-track="newsletter:menu">Newsletter</a>
+        <button class="nav-section-button contact-nav" type="button" data-scroll-target="contatti">Contact</button>
+        <details class="nav-dropdown project-menu">
+          <summary>Project</summary>
+          <div class="nav-menu-panel project-menu-panel"><a href="/it/chi-sono/" data-track="project:about">
+      <span>La persona e lo scopo</span>
+      <strong>Chi sono</strong>
+    </a>
+    <a href="/it/metodologia/" data-track="project:methodology">
+      <span>Fonti, decisioni e limiti</span>
+      <strong>Metodologia</strong>
+    </a></div>
+        </details>
+        <details class="nav-dropdown community-menu">
+          <summary>Community</summary>
+          <div class="nav-menu-panel community-menu-panel">
+    <a href="https://www.facebook.com/groups/223988130303794/" target="_blank" rel="noopener" data-track="social:menu-facebook">
+      <span>Partecipa alla conversazione</span>
+      <strong>Gruppo Facebook ↗</strong>
+    </a>
+    <a href="https://www.instagram.com/londonadvanced" target="_blank" rel="noopener" data-track="social:menu-instagram">
+      <span>Segui le fotografie</span>
+      <strong>Instagram ↗</strong>
+    </a></div>
+        </details>
+      <a class="language-switch" href="/loo/" lang="en" hreflang="en-GB" aria-label="View this page in English">EN</a></nav>
+      <details class="nav-dropdown mobile-menu">
+        <summary aria-label="Open navigation menu"><span>Menu</span></summary>
+        <div class="nav-menu-panel mobile-menu-panel">
+    <p class="mobile-menu-heading">Strumenti</p>
+
+    <a href="/it/strumenti/dashboard-londra/" data-track="app-menu:Dashboard di Londra">
+      <span>Londra oggi, in sintesi</span>
+      <strong>Dashboard di Londra</strong>
+    </a>
+    <a href="/it/strumenti/evita-la-folla/" data-track="app-menu:Evita la folla">
+      <span>Valuta la pressione prima di partire</span>
+      <strong>Evita la folla</strong>
+    </a>
+    <a href="/it/strumenti/calcolatore-tariffe-trasporti/" data-track="app-menu:Calcolatore tariffe">
+      <span>Scegli come pagare</span>
+      <strong>Calcolatore tariffe</strong>
+    </a>
+    <a href="/it/strumenti/navigazione-intelligente/" data-track="app-menu:Navigazione intelligente">
+      <span>Trasforma il tragitto in una scoperta</span>
+      <strong>Navigazione intelligente</strong>
+    </a>
+    <a href="/it/strumenti/londra-per-umore/" data-track="app-menu:Londra secondo l’umore">
+      <span>Parti da come ti senti</span>
+      <strong>Londra secondo l’umore</strong>
+    </a>
+    <a href="/it/strumenti/trova-un-bagno/" data-track="app-menu:Trova un bagno">
+      <span>Un bagno vicino, senza tentativi</span>
+      <strong>Trova un bagno</strong>
+    </a>
+    <p class="mobile-menu-heading">Esplora</p>
+    <a href="https://payhip.com/TheOtherLondon" target="_blank" rel="noopener noreferrer" data-track="guide:mobile-menu">
+      <span>The Other London</span>
+      <strong>Guide ↗</strong>
+    </a>
+    <details class="mobile-week-menu" data-events-nav>
+      <summary><span>Selezione del weekend</span><strong>Questa settimana</strong></summary>
+      <div>
+        <a href="#eventi" data-track="events:mobile-highlights">
+          <span>Tre proposte in evidenza</span>
+          <strong>Highlights</strong>
+        </a>
+        <a href="/it/eventi/" data-track="events:mobile-all">
+          <span>La selezione completa</span>
+          <strong>Tutti gli eventi</strong>
+        </a>
+      </div>
+    </details>
+    <button class="mobile-section-link" type="button" data-scroll-target="journal">
+      <span>Luoghi e idee</span>
+      <strong>Journal</strong>
+    </button>
+    <a href="/it/#newsletter" data-track="newsletter:mobile-menu">
+      <span>Londra utile, ogni tanto</span>
+      <strong>Newsletter</strong>
+    </a>
+    <button class="mobile-section-link" type="button" data-scroll-target="contatti">
+      <span>Domande e suggerimenti</span>
+      <strong>Contatti</strong>
+    </button>
+    <p class="mobile-menu-heading">Project</p>
+    <a href="/it/chi-sono/" data-track="project:about">
+      <span>La persona e lo scopo</span>
+      <strong>Chi sono</strong>
+    </a>
+    <a href="/it/metodologia/" data-track="project:methodology">
+      <span>Fonti, decisioni e limiti</span>
+      <strong>Metodologia</strong>
+    </a>
+    <p class="mobile-menu-heading">Community</p>
+
+    <a href="https://www.facebook.com/groups/223988130303794/" target="_blank" rel="noopener" data-track="social:menu-facebook">
+      <span>Partecipa alla conversazione</span>
+      <strong>Gruppo Facebook ↗</strong>
+    </a>
+    <a href="https://www.instagram.com/londonadvanced" target="_blank" rel="noopener" data-track="social:menu-instagram">
+      <span>Segui le fotografie</span>
+      <strong>Instagram ↗</strong>
+    </a><a class="mobile-language-switch" href="/loo/" lang="en" hreflang="en-GB"><span>Language</span><strong>English</strong></a></div></details></header><main class="shell"><section class="hero"><p class="eyebrow">Londra pratica</p><h1>Trova un bagno.</h1><p class="intro">Una lista verificata di bagni pubblici, stazioni, musei gratuiti, grandi negozi e centri commerciali. Niente tentativi casuali in pub o caffè.</p><p class="tool-context-link"><a href="/it/strumenti/trova-un-bagno/info/">Come funziona questo strumento <span aria-hidden="true">→</span></a></p><div class="actions"><button id="nearby" class="primary" type="button">Un bagno vicino <span>↗</span></button><form id="search"><label for="where">Oppure vicino a…</label><div class="searchrow"><input id="where" autocomplete="street-address" placeholder="Luogo o negozio, es. Liberty…" required><button type="submit">Trova</button></div></form></div><p id="status" class="status" aria-live="polite"></p></section><section id="results-section" class="results-section" hidden><div class="result-head"><div><p class="eyebrow">Opzioni più vicine</p><h2 id="result-title">Bagni più vicini</h2></div><button id="map-toggle" class="quiet" type="button" aria-expanded="false">Mostra mappa</button></div><div id="map-wrap" hidden><div id="map"></div></div><div class="legend"><span><i class="dot free"></i>Gratuito verificato</span><span><i class="dot public"></i>Pubblico / costo incerto</span><span><i class="dot paid"></i>A pagamento o condizionato</span></div><div id="results" class="results"></div><div class="results-controls"><p id="result-count" aria-live="polite"></p><button id="show-more" class="quiet" type="button" hidden></button></div></section><footer><p><strong>Sui dati.</strong> Le fonti includono TfL, amministrazioni locali e informazioni ufficiali di musei, negozi e centri commerciali. Una struttura elencata può comunque avere chiusure temporanee.</p><p>La fonte è indicata in ogni risultato. <a href="/it/strumenti/trova-un-bagno/info/">Come funziona questo strumento →</a></p></footer></main><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="/loo/loo.js"></script></body></html>
