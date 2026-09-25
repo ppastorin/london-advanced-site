@@ -386,8 +386,11 @@ for (const [label, html, aboutHref] of [
   ["English Loo Finder", looFinderHtml, "/loo/about/"],
   ["Italian Loo Finder", italianLooFinderHtml, "/it/strumenti/trova-un-bagno/info/"]
 ]) {
-  for (const marker of ['class="site-nav"', 'class="desktop-nav"', 'class="nav-dropdown mobile-menu"', `href="${aboutHref}"`]) {
+  for (const marker of ['class="site-nav"', 'class="desktop-nav"', 'class="nav-dropdown mobile-menu"', 'class="loo-hero"', 'class="loo-footer"', `href="${aboutHref}"`]) {
     if (!html.includes(marker)) fail(`${label} is missing ${marker}.`);
+  }
+  if (html.includes('<section class="hero">')) {
+    fail(`${label} must not reuse the homepage hero class.`);
   }
   if (html.includes("Open directly") || html.includes("Apri direttamente") || html.includes('class="direct-link"')) {
     fail(`${label} must not show a redundant direct link.`);

@@ -67,6 +67,8 @@ function nativeLooPage(template, nav, locale) {
   let page = template
     .replace(/<body><header class="site-nav">[\s\S]*?<\/header>/, "<body>")
     .replace(/<main class="shell"><header class="top">[\s\S]*?<\/header>/, '<main class="shell">')
+    .replace('class="hero"', 'class="loo-hero"')
+    .replace('<footer>', '<footer class="loo-footer">')
     .replace("<body>", `<body>${nav}`);
 
   if (!page.includes('<link rel="stylesheet" href="/styles.css">')) {
