@@ -328,9 +328,9 @@ function render() {
           <summary>Social</summary>
           <div class="nav-menu-panel community-menu-panel">${communityMenuLinks()}</div>
         </details>
-        <a class="language-switch" href="${DATA.links.home === '/it/' ? '/' : '/it/'}" lang="${DATA.links.home === '/it/' ? 'en' : 'it'}" hreflang="${DATA.links.home === '/it/' ? 'it-IT' : 'it-IT'}" aria-label="${DATA.links.home === '/it/' ? 'Passa alla versione inglese' : 'Switch to the Italian version'}"><span aria-hidden="true">🌐</span>${DATA.links.home === '/it/' ? 'English' : 'Italiano'}</a>
+        <a class="language-switch" href="${DATA.links.home === '/it/' ? '/' : '/it/'}" lang="${DATA.links.home === '/it/' ? 'en' : 'it'}" hreflang="${DATA.links.home === '/it/' ? 'en-GB' : 'it-IT'}" aria-label="${DATA.links.home === '/it/' ? 'Passa alla versione inglese' : 'Switch to the Italian version'}"><span aria-hidden="true">🌐</span>${DATA.links.home === '/it/' ? 'English' : 'Italiano'}</a>
       </nav>
-      <a class="mobile-language-switch" href="${DATA.links.home === '/it/' ? '/' : '/it/'}" lang="${DATA.links.home === '/it/' ? 'en' : 'it'}" hreflang="${DATA.links.home === '/it/' ? 'it-IT' : 'it-IT'}" aria-label="${DATA.links.home === '/it/' ? 'Passa alla versione inglese' : 'Switch to the Italian version'}"><span aria-hidden="true">🌐</span>${DATA.links.home === '/it/' ? 'English' : 'Italiano'}</a>
+      <a class="mobile-language-switch" href="${DATA.links.home === '/it/' ? '/' : '/it/'}" lang="${DATA.links.home === '/it/' ? 'en' : 'it'}" hreflang="${DATA.links.home === '/it/' ? 'en-GB' : 'it-IT'}" aria-label="${DATA.links.home === '/it/' ? 'Passa alla versione inglese' : 'Switch to the Italian version'}"><span aria-hidden="true">🌐</span>${DATA.links.home === '/it/' ? 'English' : 'Italiano'}</a>
       <details class="nav-dropdown mobile-menu">
         <summary aria-label="Open navigation menu"><span>Menu</span></summary>
         <div class="nav-menu-panel mobile-menu-panel">${mobileMenuContent()}</div>
