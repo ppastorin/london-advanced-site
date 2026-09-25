@@ -648,9 +648,8 @@ footer span, footer small { font-size: 12px; }
   .hero, .guide-split { grid-template-columns: 1fr; }
   .hero-intro { padding-top: 56px; padding-bottom: 56px; }
   .map-window { min-height: 390px; }
-  .app-grid { grid-template-columns: 1fr 1fr; }
-  .app-card.app-1, .app-card.app-2, .app-card.app-3, .app-card.app-4 { grid-column: span 1; }
-  .app-card.app-5 { grid-column: span 2; }
+  .app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-grid > .app-card { grid-column: span 1; min-width: 0; }
   .section-heading.horizontal { align-items: start; flex-direction: column; }
   .events-grid { grid-template-columns: 1fr; }
   .event-card { min-height: 0; }
@@ -680,8 +679,8 @@ footer span, footer small { font-size: 12px; }
   .map-window { min-height: 300px; }
   .section-heading { margin-bottom: 26px; }
   .section-heading h2 { font-size: 42px; }
-  .app-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
-  .app-card.app-1, .app-card.app-2, .app-card.app-3, .app-card.app-4, .app-card.app-5 { grid-column: span 1; }
+  .app-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .app-grid > .app-card { grid-column: span 1; min-width: 0; }
   .app-card { min-height: 0; display: grid; grid-template-columns: 104px minmax(0, 1fr); }
   .app-visual { width: 104px; height: auto; min-height: 148px; border-right: 1px solid rgba(23,23,23,.13); border-bottom: 0; }
   .app-visual::before { background-size: 18px 18px; }
