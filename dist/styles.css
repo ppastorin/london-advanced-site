@@ -47,8 +47,10 @@ section[id] { scroll-margin-top: 76px; }
 .brand-centre { fill: var(--ink); }
 .brand-name { white-space: nowrap; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(18px, 2vw, 30px); font-size: 14px; }
-.language-switch { align-items: center; border: 1px solid currentColor; border-radius: 999px; display: inline-flex; font: 700 .68rem/1 "IBM Plex Mono", monospace; justify-content: center; letter-spacing: .08em; min-height: 30px; min-width: 36px; padding: .45rem .55rem !important; text-decoration: none !important; }
-.mobile-language-switch { border-top: 1px solid rgba(16,42,56,.14); margin-top: .35rem; }
+.language-switch { align-items: center; border: 1px solid currentColor; border-radius: 999px; display: inline-flex; gap: 5px; font: 700 12px/1 var(--sans); justify-content: center; min-height: 36px; padding: 8px 11px !important; text-decoration: none !important; white-space: nowrap; }
+.mobile-language-switch { display: none; }
+.language-switch:hover, .mobile-language-switch:hover { background: var(--cream); }
+.language-switch:focus-visible, .mobile-language-switch:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .desktop-nav > a:hover,
 .desktop-nav > button:hover,
 .desktop-nav > details > summary:hover { text-decoration: underline; text-underline-offset: 5px; }
@@ -633,8 +635,9 @@ footer span, footer small { font-size: 12px; }
 .consent button:last-child { color: #fff; background: #111; }
 
 @media (max-width: 900px) {
-  .site-nav { grid-template-columns: 1fr auto; }
+  .site-nav { grid-template-columns: minmax(0, 1fr) auto auto; column-gap: 8px; }
   .desktop-nav { display: none; }
+  .mobile-language-switch { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; font: 700 12px var(--sans); text-decoration: none; white-space: nowrap; }
   .mobile-menu { display: block; }
   .mobile-menu-panel a,
   .mobile-menu-panel .mobile-section-link { min-height: 44px; padding: 9px 10px; align-content: center; }

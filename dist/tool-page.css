@@ -72,7 +72,7 @@ a { color: inherit; }
 }
 
 .tool-actions { display: flex; align-items: center; gap: 10px; }
-.tool-language-switch { align-items: center; border: 1px solid currentColor; border-radius: 999px; display: inline-flex; font: 700 .68rem/1 "IBM Plex Mono", monospace; justify-content: center; letter-spacing: .08em; min-height: 34px; min-width: 36px; padding: .45rem .55rem; text-decoration: none; }
+.tool-language-switch { align-items: center; border: 1px solid currentColor; border-radius: 999px; display: inline-flex; gap: 5px; font: 700 12px/1 var(--sans); justify-content: center; min-height: 38px; padding: 8px 11px; text-decoration: none; white-space: nowrap; }
 .tool-switcher {
   max-width: 190px;
   min-height: 38px;
@@ -535,7 +535,7 @@ a { color: inherit; }
   }
   .tool-brand .brand-name { display: none; }
   .tool-title h1 { font-size: 25px; }
-  .tool-actions { grid-column: 1 / -1; }
+  .tool-actions { grid-column: 1 / -1; flex-wrap: wrap; }
   .tool-switcher { min-width: 0; max-width: none; flex: 1; }
   .direct-link { padding: 0 12px; }
   .guide-strip { min-height: 48px; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 7px 14px; }
