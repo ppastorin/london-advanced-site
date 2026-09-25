@@ -273,6 +273,11 @@ for (const route of italianRoutes) {
   if (!html.includes(`<link rel="canonical" href="https://www.londonadvanced.com${route}">`)) {
     fail(`${route} has the wrong canonical URL.`);
   }
+  if (html.includes('class="site-nav"')) {
+    for (const label of [">Contatti<", ">Il Progetto<", ">Social<"]) {
+      if (!html.includes(label)) fail(`${route} is missing the Italian navigation label ${label}.`);
+    }
+  }
 }
 
 const eventsHtml = requireFile("dist/events/index.html");

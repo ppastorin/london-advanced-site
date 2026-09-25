@@ -195,6 +195,17 @@ function transformAppJs(source){
 
 function transformEventsJs(source){const pairs=[["en-GB","it-IT"],["title_en","title_it"],["summary_en","summary_it"],["Booking required","Prenotazione obbligatoria"],["Booking recommended","Prenotazione consigliata"],["Drop in","Ingresso libero"],["Architecture","Architettura"],["Art & design","Arte e design"],["Community","Community"],["Heritage & history","Patrimonio e storia"],["Local culture","Cultura locale"],["Nature","Natura"],["Talk","Incontro"],["Urban exploration","Esplorazione urbana"],["Ad · Book on Ticketmaster","Pubblicità · Prenota su Ticketmaster"],["Check official details","Controlla i dettagli ufficiali"],["We may earn a commission at no extra cost to you.","Potremmo ricevere una commissione senza costi aggiuntivi per te."],[">Venue<",">Luogo<"],[">Address<",">Indirizzo<"],[">Access<",">Accesso<"],[" event"," evento"],["s</small>","i</small>"],["No current events","Nessun evento attuale"],[" verified event"," eventi verificati"],["Last edited","Ultimo aggiornamento"],["Events temporarily unavailable","Eventi temporaneamente non disponibili"]];let out=source;for(const[a,b]of pairs)out=out.split(a).join(b);return out;}
 
+function localizeItalianNavigation(source) {
+  return source
+    .replaceAll('data-scroll-target="contatti">Contact</button>', 'data-scroll-target="contatti">Contatti</button>')
+    .replaceAll('>Project</summary>', '>Il Progetto</summary>')
+    .replaceAll('>Progetto</summary>', '>Il Progetto</summary>')
+    .replaceAll('mobile-menu-heading">Project</p>', 'mobile-menu-heading">Il Progetto</p>')
+    .replaceAll('mobile-menu-heading">Progetto</p>', 'mobile-menu-heading">Il Progetto</p>')
+    .replaceAll('>Community</summary>', '>Social</summary>')
+    .replaceAll('mobile-menu-heading">Community</p>', 'mobile-menu-heading">Social</p>');
+}
+
 function activeItalianEvents(feed) {
   const now = Date.parse(feed.generated_at);
   return feed.events.filter(event => event.publication_status === "approved" &&
@@ -263,7 +274,7 @@ export async function buildItalian(){
   const files=new Map([["it/content.js",itContent],["it/app.js",itApp],["it/tool-page.js",await readFile(path.join(root,"scripts/italian-tool-page.js"),"utf8")],["it/eventi/events.js",itEvents],["it/chi-sono/index.html",aboutPage()],["it/metodologia/index.html",methodologyPage()],["it/eventi/index.html",eventsPage(feed)]]);
   for(const t of tools) files.set(`${t.route.replace(/^\//,"")}index.html`,toolPage(t));
   files.set("it/index.html",await homePage(itApp,itContent,feed));
-  for(const [relative,data] of files){const target=path.join(dist,relative);await mkdir(path.dirname(target),{recursive:true});await writeFile(target,data,"utf8");}
+  for(const [relative,data] of files){const target=path.join(dist,relative);await mkdir(path.dirname(target),{recursive:true});await writeFile(target,localizeItalianNavigation(data),"utf8");}
   for(const [enRoute,itRoute] of Object.entries(routes)){const file=enRoute==="/"?path.join(dist,"index.html"):path.join(dist,enRoute.replace(/^\//,""),"index.html");const html=await readFile(file,"utf8");await writeFile(file,injectEnglishPair(html,enRoute,itRoute),"utf8");}
   console.log(`Built ${files.size} Italian portal assets and paired ${Object.keys(routes).length} English routes.`);
 }

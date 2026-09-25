@@ -121,9 +121,9 @@ function mobileMenuContent() {
       <span>Domande e suggerimenti</span>
       <strong>Contatti</strong>
     </button>
-    <p class="mobile-menu-heading">Project</p>
+    <p class="mobile-menu-heading">Il Progetto</p>
     ${projectMenuLinks()}
-    <p class="mobile-menu-heading">Community</p>
+    <p class="mobile-menu-heading">Social</p>
     ${communityMenuLinks()}`;
 }
 
@@ -319,13 +319,13 @@ function render() {
         </details>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
         <a class="newsletter-nav" href="/it/#newsletter" data-track="newsletter:menu">Newsletter</a>
-        <button class="nav-section-button contact-nav" type="button" data-scroll-target="contatti">Contact</button>
+        <button class="nav-section-button contact-nav" type="button" data-scroll-target="contatti">Contatti</button>
         <details class="nav-dropdown project-menu">
-          <summary>Project</summary>
+          <summary>Il Progetto</summary>
           <div class="nav-menu-panel project-menu-panel">${projectMenuLinks()}</div>
         </details>
         <details class="nav-dropdown community-menu">
-          <summary>Community</summary>
+          <summary>Social</summary>
           <div class="nav-menu-panel community-menu-panel">${communityMenuLinks()}</div>
         </details>
       </nav>
