@@ -359,8 +359,16 @@ for (const [toolId, { href }] of expectedTools) {
 }
 
 for (const [label, file] of [
+  ["English Dashboard", "dist/home/london-dashboard/index.html"],
+  ["English Escape the Crowds", "dist/home/escape-the-crowds/index.html"],
   ["English fare calculator", "dist/home/travel-fare-calculator/index.html"],
-  ["Italian fare calculator", "dist/it/strumenti/calcolatore-tariffe-trasporti/index.html"]
+  ["English Smart Navigation", "dist/home/smart-navigation/index.html"],
+  ["English London by Mood", "dist/home/london-by-mood/index.html"],
+  ["Italian Dashboard", "dist/it/strumenti/dashboard-londra/index.html"],
+  ["Italian Escape the Crowds", "dist/it/strumenti/evita-la-folla/index.html"],
+  ["Italian fare calculator", "dist/it/strumenti/calcolatore-tariffe-trasporti/index.html"],
+  ["Italian Smart Navigation", "dist/it/strumenti/navigazione-intelligente/index.html"],
+  ["Italian London by Mood", "dist/it/strumenti/londra-per-umore/index.html"]
 ]) {
   const html = requireFile(file);
   if (html.includes("Open directly") || html.includes("Apri direttamente") || html.includes('class="direct-link"')) {
