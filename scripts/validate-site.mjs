@@ -358,6 +358,16 @@ for (const [toolId, { href }] of expectedTools) {
   }
 }
 
+for (const [label, file] of [
+  ["English fare calculator", "dist/home/travel-fare-calculator/index.html"],
+  ["Italian fare calculator", "dist/it/strumenti/calcolatore-tariffe-trasporti/index.html"]
+]) {
+  const html = requireFile(file);
+  if (html.includes("Open directly") || html.includes("Apri direttamente") || html.includes('class="direct-link"')) {
+    fail(`${label} must not show a redundant direct link.`);
+  }
+}
+
 const looFinderHtml = requireFile("dist/loo/index.html");
 const italianLooFinderHtml = requireFile("dist/it/strumenti/trova-un-bagno/index.html");
 const looFinderScript = requireFile("dist/loo/loo.js");

@@ -10,8 +10,10 @@
   const switcher = document.querySelector("#tool-switcher");
   frame.title = tool.name;
   frame.src = tool.embedUrl;
-  direct.href = tool.embedUrl;
-  direct.setAttribute("aria-label", `Apri ${tool.name} in una nuova scheda`);
+  if (direct) {
+    direct.href = tool.embedUrl;
+    direct.setAttribute("aria-label", `Apri ${tool.name} in una nuova scheda`);
+  }
   DATA.apps.forEach(item => { const option=document.createElement("option"); option.value=item.href; option.textContent=item.name; option.selected=item.id===toolId; switcher.appendChild(option); });
   switcher.addEventListener("change", event => window.location.assign(event.target.value));
   frame.addEventListener("load", () => stage.classList.add("is-loaded"));
