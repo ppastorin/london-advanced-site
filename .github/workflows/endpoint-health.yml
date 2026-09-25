@@ -3,6 +3,14 @@ name: Application endpoint health
 on:
   schedule:
     - cron: "15 6 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/check-endpoints.mjs"
+      - "scripts/check-canonical-redirects.mjs"
+      - "dist/content.js"
+      - ".github/workflows/endpoint-health.yml"
   workflow_dispatch:
 
 permissions:
