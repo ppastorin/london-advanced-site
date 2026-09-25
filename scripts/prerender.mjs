@@ -63,22 +63,119 @@ function siteNavigation(homepage, locale) {
   return nav;
 }
 
+function looAboutPanel(locale) {
+  const copy = locale === "en" ? {
+    panelTitle: "About this tool",
+    close: "Close",
+    kicker: "Loo Finder · methodology",
+    title: "Useful because it is specific.",
+    intro: [
+      "The Loo Finder is a curated London toilet directory built around a practical question: can you actually use the facility when you get there?",
+      "It favours documented access over large, speculative lists of pins."
+    ],
+    usefulFor: "Coverage",
+    facts: ["123 verified locations at launch", "Public and transport toilets", "Free cultural venues", "Major shops and centres"],
+    howKicker: "How it works",
+    howTitle: "Search, compare, then check the conditions.",
+    steps: [
+      ["Search", "Use your current position or enter a London place, station or venue."],
+      ["Compare", "Results are ordered mainly by distance, with a modest access and fee adjustment."],
+      ["Check", "Read the access, cost, hours and practical location notes before moving."],
+      ["Confirm", "Use the linked official source when access is time-sensitive or essential."]
+    ],
+    includedKicker: "What is included",
+    includedTitle: "A smaller list with stronger evidence.",
+    included: "The database prioritises dedicated public toilets, TfL and rail facilities, free museums and galleries, major department stores, shopping centres and a small number of churches where access is documented. Ordinary pubs and cafés are excluded unless they participate in an official community toilet scheme.",
+    limitsKicker: "What to know",
+    limitsTitle: "Verified does not mean live.",
+    limits: "Toilets can close temporarily, become unavailable for cleaning or maintenance, or change access policy. Where a venue confirms toilets but does not promise access without purchase, the finder says so instead of presenting the facility as publicly guaranteed.",
+    questionsKicker: "Common questions",
+    questionsTitle: "Before using a result.",
+    faqs: [
+      ["Are pubs and cafés included?", "No, unless they participate in a documented public or community toilet scheme."],
+      ["Are toilets in major shops public toilets?", "They are facilities inside the venue. When free access is not formally guaranteed, the result states that condition."],
+      ["Is the information live?", "No. Records are verified and dated, but temporary faults, cleaning and closures can still happen."]
+    ],
+    relatedKicker: "Continue exploring",
+    relatedTitle: "Plan the rest of the journey.",
+    related: [
+      ["See pressure before you go", "Escape the Crowds →", "/home/escape-the-crowds/"],
+      ["Make the journey part of the visit", "Smart Navigation →", "/home/smart-navigation/"],
+      ["Start with how you feel", "London by Mood →", "/home/london-by-mood/"]
+    ],
+    methodPrefix: "Read",
+    methodText: "the wider London Advanced methodology",
+    methodHref: "/methodology/"
+  } : {
+    panelTitle: "Informazioni sullo strumento",
+    close: "Chiudi",
+    kicker: "Trova un bagno · metodologia",
+    title: "Utile perché è specifico.",
+    intro: [
+      "Trova un bagno è una selezione curata di servizi a Londra costruita attorno a una domanda pratica: potrai davvero usare il bagno quando arrivi?",
+      "Privilegia l’accesso documentato rispetto a grandi elenchi di pin basati su supposizioni."
+    ],
+    usefulFor: "Copertura",
+    facts: ["123 luoghi verificati al lancio", "Bagni pubblici e nei trasporti", "Sedi culturali gratuite", "Grandi negozi e centri"],
+    howKicker: "Come funziona",
+    howTitle: "Cerca, confronta e controlla le condizioni.",
+    steps: [
+      ["Cerca", "Usa la posizione attuale oppure inserisci un luogo, una stazione o una sede di Londra."],
+      ["Confronta", "I risultati sono ordinati soprattutto per distanza, con un piccolo correttivo per accesso e costo."],
+      ["Controlla", "Leggi accesso, costo, orari e posizione pratica prima di muoverti."],
+      ["Conferma", "Usa la fonte ufficiale collegata quando l’accesso è urgente o essenziale."]
+    ],
+    includedKicker: "Cosa include",
+    includedTitle: "Una lista più piccola, con prove migliori.",
+    included: "La base dati privilegia bagni pubblici dedicati, strutture TfL e ferroviarie, musei e gallerie gratuiti, grandi magazzini, centri commerciali e poche chiese dove l’accesso è documentato. Pub e caffè ordinari sono esclusi, salvo partecipazione a un programma pubblico ufficiale.",
+    limitsKicker: "Cosa sapere",
+    limitsTitle: "Verificato non significa in tempo reale.",
+    limits: "Un bagno può chiudere temporaneamente per pulizia o manutenzione oppure cambiare condizioni di accesso. Quando una sede conferma i servizi ma non garantisce l’accesso senza acquisto, il risultato dichiara questa condizione invece di presentare il bagno come pubblico.",
+    questionsKicker: "Domande frequenti",
+    questionsTitle: "Prima di usare un risultato.",
+    faqs: [
+      ["Sono inclusi pub e caffè?", "No, salvo partecipazione a un programma pubblico o comunitario documentato."],
+      ["I bagni dei grandi negozi sono bagni pubblici?", "Sono servizi interni alla sede. Quando l’accesso gratuito non è garantito formalmente, il risultato lo indica."],
+      ["Le informazioni sono in tempo reale?", "No. I dati sono verificati e datati, ma guasti, pulizie e chiusure temporanee possono comunque verificarsi."]
+    ],
+    relatedKicker: "Continua a esplorare",
+    relatedTitle: "Organizza il resto del percorso.",
+    related: [
+      ["Valuta la pressione prima di partire", "Evita la folla →", "/it/strumenti/evita-la-folla/"],
+      ["Trasforma il tragitto in una scoperta", "Navigazione intelligente →", "/it/strumenti/navigazione-intelligente/"],
+      ["Parti da come ti senti", "Londra secondo l’umore →", "/it/strumenti/londra-per-umore/"]
+    ],
+    methodPrefix: "Leggi",
+    methodText: "la metodologia generale di London Advanced",
+    methodHref: "/it/metodologia/"
+  };
+
+  const steps = copy.steps.map(([title, text], index) => `<li><span>${String(index + 1).padStart(2, "0")}</span><h3>${title}</h3><p>${text}</p></li>`).join("");
+  const faqs = copy.faqs.map(([question, answer]) => `<details><summary>${question}</summary><p>${answer}</p></details>`).join("");
+  const related = copy.related.map(([label, title, href]) => `<a href="${href}"><span>${label}</span><strong>${title}</strong></a>`).join("");
+
+  return `<dialog class="about-panel loo-about-panel" id="loo-about-panel" aria-labelledby="loo-about-title"><header class="panel-header"><div><span class="section-kicker">London Advanced</span><strong>${copy.panelTitle}</strong></div><button class="panel-close" type="button">${copy.close} <span aria-hidden="true">×</span></button></header><div class="panel-scroll"><article class="tool-information"><div class="information-lead"><div><span class="section-kicker">${copy.kicker}</span><h2 id="loo-about-title">${copy.title}</h2>${copy.intro.map(paragraph => `<p>${paragraph}</p>`).join("")}</div><aside class="quick-facts" aria-label="${copy.usefulFor}"><span>${copy.usefulFor}</span><ul>${copy.facts.map(fact => `<li>${fact}</li>`).join("")}</ul></aside></div><section class="information-section"><div class="information-heading"><span class="section-kicker">${copy.howKicker}</span><h2>${copy.howTitle}</h2></div><ol class="step-grid">${steps}</ol></section><div class="evidence-grid"><section><span class="section-kicker">${copy.includedKicker}</span><h2>${copy.includedTitle}</h2><p>${copy.included}</p></section><section><span class="section-kicker">${copy.limitsKicker}</span><h2>${copy.limitsTitle}</h2><p>${copy.limits}</p></section></div><section class="tool-questions"><span class="section-kicker">${copy.questionsKicker}</span><h2>${copy.questionsTitle}</h2><div class="question-list">${faqs}</div></section><section class="related-tools"><div class="information-heading"><span class="section-kicker">${copy.relatedKicker}</span><h2>${copy.relatedTitle}</h2></div><div class="related-grid">${related}</div><p class="related-support">${copy.methodPrefix} <a href="${copy.methodHref}">${copy.methodText}</a>.</p></section></article></div></dialog>`;
+}
+
 function nativeLooPage(template, nav, locale) {
   let page = template
     .replace(/<body><header class="site-nav">[\s\S]*?<\/header>/, "<body>")
+    .replace(/<dialog class="about-panel loo-about-panel"[\s\S]*?<\/dialog>/, "")
     .replace(/<main class="shell"><header class="top">[\s\S]*?<\/header>/, '<main class="shell">')
     .replace('class="hero"', 'class="loo-hero"')
     .replace('<footer>', '<footer class="loo-footer">')
     .replace("<body>", `<body>${nav}`);
 
-  if (!page.includes('<link rel="stylesheet" href="/styles.css">')) {
-    page = page.replace('<link rel="stylesheet" href="/loo/loo.css">', '<link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/loo/loo.css">');
-  }
+  if (!page.includes('<link rel="stylesheet" href="/styles.css">')) page = page.replace('<link rel="stylesheet" href="/loo/loo.css">', '<link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/loo/loo.css">');
+  if (!page.includes('<link rel="stylesheet" href="/tool-page.css">')) page = page.replace('<link rel="stylesheet" href="/loo/loo.css">', '<link rel="stylesheet" href="/tool-page.css"><link rel="stylesheet" href="/loo/loo.css">');
 
-  const aboutHref = locale === "en" ? "/loo/about/" : "/it/strumenti/trova-un-bagno/info/";
   const aboutText = locale === "en" ? "About this tool" : "Come funziona questo strumento";
+  const footerText = locale === "en" ? "How this tool works" : "Come funziona questo strumento";
+  const footerPrefix = locale === "en" ? "Source information is shown on each result." : "La fonte è indicata in ogni risultato.";
   page = page.replace(/<p class="tool-context-link">[\s\S]*?<\/p>/, "");
-  page = page.replace('</p><div class="actions">', `</p><p class="tool-context-link"><a href="${aboutHref}">${aboutText} <span aria-hidden="true">→</span></a></p><div class="actions">`);
+  page = page.replace('</p><div class="actions">', `</p><p class="tool-context-link"><button class="about-trigger" type="button" data-loo-about aria-haspopup="dialog" aria-controls="loo-about-panel">${aboutText} <span aria-hidden="true">→</span></button></p><div class="actions">`);
+  page = page.replace(/<p>(?:Source information is shown on each result\.|La fonte è indicata in ogni risultato\.)[\s\S]*?<\/p>/, `<p>${footerPrefix} <button class="loo-about-text-button" type="button" data-loo-about aria-haspopup="dialog" aria-controls="loo-about-panel">${footerText} →</button></p>`);
+  page = page.replace('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"', `${looAboutPanel(locale)}<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"`);
   return page.replace(/[ \t]+$/gm, "");
 }
 

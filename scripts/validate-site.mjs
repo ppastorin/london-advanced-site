@@ -370,7 +370,7 @@ for (const marker of [
   '<html lang="en-GB">',
   '<link rel="canonical" href="https://www.londonadvanced.com/loo/">',
   'hreflang="it-IT"',
-  'href="/loo/about/"',
+  '<link rel="stylesheet" href="/tool-page.css">',
   'id="nearby"',
   'id="search"',
   'id="results"',
@@ -378,21 +378,18 @@ for (const marker of [
 ]) {
   if (!looFinderHtml.includes(marker)) fail(`The native Loo Finder page is missing ${marker}.`);
 }
-if (!requireFile("dist/loo/about/index.html").includes('href="/methodology/"')) {
-  fail("The Loo Finder About page must link to the wider Methodology page.");
+for (const retiredPage of ["dist/loo/about/index.html", "dist/it/strumenti/trova-un-bagno/info/index.html"]) {
+  if (fs.existsSync(path.join(projectRoot, retiredPage))) fail(`${retiredPage} must be retired in favour of the Loo Finder side panel.`);
 }
-if (!requireFile("dist/loo/about/index.html").includes('href="/loo/"')) {
-  fail("The Loo Finder About page must link back to the Loo Finder.");
-}
-if (!requireFile("dist/it/strumenti/trova-un-bagno/info/index.html").includes('href="/it/metodologia/"')) {
-  fail("The Italian Loo Finder About page must link to Italian Methodology.");
-}
-for (const [label, html, aboutHref] of [
-  ["English Loo Finder", looFinderHtml, "/loo/about/"],
-  ["Italian Loo Finder", italianLooFinderHtml, "/it/strumenti/trova-un-bagno/info/"]
+for (const [label, html, methodologyHref] of [
+  ["English Loo Finder", looFinderHtml, "/methodology/"],
+  ["Italian Loo Finder", italianLooFinderHtml, "/it/metodologia/"]
 ]) {
-  for (const marker of ['class="site-nav"', 'class="desktop-nav"', 'class="nav-dropdown mobile-menu"', 'class="loo-hero"', 'class="loo-footer"', `href="${aboutHref}"`]) {
+  for (const marker of ['class="site-nav"', 'class="desktop-nav"', 'class="nav-dropdown mobile-menu"', 'class="loo-hero"', 'class="loo-footer"', 'class="about-panel loo-about-panel"', 'class="panel-close"', 'data-loo-about', `href="${methodologyHref}"`]) {
     if (!html.includes(marker)) fail(`${label} is missing ${marker}.`);
+  }
+  if (html.includes('/loo/about/') || html.includes('/trova-un-bagno/info/')) {
+    fail(`${label} must not navigate to a standalone About page.`);
   }
   if (html.includes('<section class="hero">')) {
     fail(`${label} must not reuse the homepage hero class.`);
@@ -400,6 +397,13 @@ for (const [label, html, aboutHref] of [
   if (html.includes("Open directly") || html.includes("Apri direttamente") || html.includes('class="direct-link"')) {
     fail(`${label} must not show a redundant direct link.`);
   }
+}
+const redirects = requireFile("dist/_redirects");
+for (const redirect of ["/loo/about/ /loo/?about=1 301", "/it/strumenti/trova-un-bagno/info/ /it/strumenti/trova-un-bagno/?about=1 301"]) {
+  if (!redirects.includes(redirect)) fail(`The retired Loo Finder About route is missing redirect: ${redirect}`);
+}
+if (sitemap.includes("/loo/about/") || sitemap.includes("/trova-un-bagno/info/")) {
+  fail("The sitemap must not list retired standalone Loo Finder About pages.");
 }
 
 for (const page of [

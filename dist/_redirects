@@ -3,3 +3,7 @@
 /london-travel-fare-calculator /home/travel-fare-calculator/ 301
 /london-travel-fare-calculator/ /home/travel-fare-calculator/ 301
 /it/loo/ /it/strumenti/trova-un-bagno/ 301
+/loo/about /loo/?about=1 301
+/loo/about/ /loo/?about=1 301
+/it/strumenti/trova-un-bagno/info /it/strumenti/trova-un-bagno/?about=1 301
+/it/strumenti/trova-un-bagno/info/ /it/strumenti/trova-un-bagno/?about=1 301
