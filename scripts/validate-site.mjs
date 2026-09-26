@@ -464,6 +464,17 @@ if (!appText.includes('href="/about/"') || !appText.includes('href="/methodology
 for (const { href } of expectedTools.values()) {
   if (!requireFile("dist/about/index.html").includes(`href="${href}"`)) fail(`The About page is missing a contextual link to ${href}`);
 }
+const aboutHtml = requireFile("dist/about/index.html");
+const italianAboutHtml = requireFile("dist/it/chi-sono/index.html");
+if (!aboutHtml.includes("website’s six free tools") || !aboutHtml.includes("Six practical ways to plan")) {
+  fail("The English About page must describe all six tools.");
+}
+if (!italianAboutHtml.includes("I sei strumenti gratuiti") || !italianAboutHtml.includes('href="/it/strumenti/trova-un-bagno/"')) {
+  fail("The Italian About page must describe and link all six tools.");
+}
+if (/five free tools|Five practical ways/i.test(aboutHtml) || /I cinque strumenti gratuiti/i.test(italianAboutHtml)) {
+  fail("The About pages still contain the retired five-tool wording.");
+}
 
 for (const marker of [
   'class="events-page-pathways"',

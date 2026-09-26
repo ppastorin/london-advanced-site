@@ -83,7 +83,7 @@ Use a real phone if possible. Also test in Chrome DevTools with both a narrow An
 
 1. Reload the published page at a width below 900 px.
 2. Confirm that the desktop navigation is hidden and the **Menu** pill is visible.
-3. Tap **Menu** and verify all five tools, Guide, Journal, Facebook, and Instagram are present.
+3. Tap **Menu** and verify all six tools, Guide, Journal, Facebook, and Instagram are present.
 4. Tap each external item one at a time. It must open a new browser tab/view automatically.
 5. Return to the homepage after each test and reopen the menu. The menu should close after a selection.
 6. Tap **Journal**. It must close the menu and scroll within the embedded homepage.

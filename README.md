@@ -22,7 +22,7 @@ This release keeps the Google Sites-compatible navigation from v1.5 and redesign
 - Desktop cards are substantially shorter and contain less dead space.
 - Mobile cards become compact horizontal rows; the secondary description is hidden while the tool name and purpose remain visible.
 - The navigation is sticky inside the embedded page, making the mobile menu easier to reach after scrolling.
-- The mobile menu is denser and keeps all five tools, Guide, Journal, Facebook, and Instagram.
+- The mobile menu is denser and keeps all six tools, Guide, Journal, Facebook, and Instagram.
 - Hero, Tools, Guide, Journal, Community, and footer spacing has been reduced.
 - All v1.5 navigation protections remain: external destinations open automatically in a new tab, while Journal and Explore the tools scroll within the current view.
 - Cloudflare deploys only `dist/`.
