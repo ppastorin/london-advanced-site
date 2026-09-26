@@ -466,13 +466,13 @@ for (const { href } of expectedTools.values()) {
 }
 const aboutHtml = requireFile("dist/about/index.html");
 const italianAboutHtml = requireFile("dist/it/chi-sono/index.html");
-if (!aboutHtml.includes("website’s six free tools") || !aboutHtml.includes("Six practical ways to plan")) {
+if (!aboutHtml.includes("website’s six free tools") || !aboutHtml.includes("Six practical ways to plan") || !aboutHtml.includes("6 free tools")) {
   fail("The English About page must describe all six tools.");
 }
 if (!italianAboutHtml.includes("I sei strumenti gratuiti") || !italianAboutHtml.includes('href="/it/strumenti/trova-un-bagno/"')) {
   fail("The Italian About page must describe and link all six tools.");
 }
-if (/five free tools|Five practical ways/i.test(aboutHtml) || /I cinque strumenti gratuiti/i.test(italianAboutHtml)) {
+if (/five free tools|Five practical ways|5 free tools/i.test(aboutHtml) || /I cinque strumenti gratuiti/i.test(italianAboutHtml)) {
   fail("The About pages still contain the retired five-tool wording.");
 }
 
