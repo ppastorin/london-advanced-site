@@ -45,7 +45,7 @@ window.LONDON_ADVANCED={
       "short": "Trasforma il tragitto in una scoperta",
       "description": "Trova deviazioni interessanti tra il punto di partenza e la destinazione.",
       "href": "/it/strumenti/navigazione-intelligente/",
-      "embedUrl": "https://london-by-mood.ppastorin.workers.dev/smart-navigation/",
+      "embedUrl": "https://london-by-mood.ppastorin.workers.dev/smart-navigation/?lang=it",
       "icon": "route"
     },
     {
