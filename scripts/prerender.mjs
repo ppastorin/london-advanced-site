@@ -74,7 +74,7 @@ function looAboutPanel(locale) {
       "It favours documented access over large, speculative lists of pins."
     ],
     usefulFor: "Coverage",
-    facts: ["123 verified locations at launch", "Public and transport toilets", "Free cultural venues", "Major shops and centres"],
+    facts: ["165 verified locations", "Public parks and transport toilets", "Free cultural venues", "Major shops and centres"],
     howKicker: "How it works",
     howTitle: "Search, compare, then check the conditions.",
     steps: [
@@ -85,7 +85,7 @@ function looAboutPanel(locale) {
     ],
     includedKicker: "What is included",
     includedTitle: "A smaller list with stronger evidence.",
-    included: "The database prioritises dedicated public toilets, TfL and rail facilities, free museums and galleries, major department stores, shopping centres and a small number of churches where access is documented. Ordinary pubs and cafés are excluded unless they participate in an official community toilet scheme.",
+    included: "The database prioritises dedicated public toilets, verified park facilities, TfL and rail facilities, free museums and galleries, major department stores, shopping centres and a small number of churches where access is documented. Ordinary pubs and cafés are excluded unless their toilets are explicitly mapped for public park visitors or they participate in an official community toilet scheme.",
     limitsKicker: "What to know",
     limitsTitle: "Verified does not mean live.",
     limits: "Toilets can close temporarily, become unavailable for cleaning or maintenance, or change access policy. Where a venue confirms toilets but does not promise access without purchase, the finder says so instead of presenting the facility as publicly guaranteed.",
@@ -116,7 +116,7 @@ function looAboutPanel(locale) {
       "Privilegia l’accesso documentato rispetto a grandi elenchi di pin basati su supposizioni."
     ],
     usefulFor: "Copertura",
-    facts: ["123 luoghi verificati al lancio", "Bagni pubblici e nei trasporti", "Sedi culturali gratuite", "Grandi negozi e centri"],
+    facts: ["165 luoghi verificati", "Bagni nei parchi pubblici e nei trasporti", "Sedi culturali gratuite", "Grandi negozi e centri"],
     howKicker: "Come funziona",
     howTitle: "Cerca, confronta e controlla le condizioni.",
     steps: [
@@ -127,7 +127,7 @@ function looAboutPanel(locale) {
     ],
     includedKicker: "Cosa include",
     includedTitle: "Una lista più piccola, con prove migliori.",
-    included: "La base dati privilegia bagni pubblici dedicati, strutture TfL e ferroviarie, musei e gallerie gratuiti, grandi magazzini, centri commerciali e poche chiese dove l’accesso è documentato. Pub e caffè ordinari sono esclusi, salvo partecipazione a un programma pubblico ufficiale.",
+    included: "La base dati privilegia bagni pubblici dedicati, strutture verificate nei parchi, strutture TfL e ferroviarie, musei e gallerie gratuiti, grandi magazzini, centri commerciali e poche chiese dove l’accesso è documentato. Pub e caffè ordinari sono esclusi, salvo quando i loro bagni sono indicati esplicitamente per i visitatori di un parco pubblico o partecipano a un programma pubblico ufficiale.",
     limitsKicker: "Cosa sapere",
     limitsTitle: "Verificato non significa in tempo reale.",
     limits: "Un bagno può chiudere temporaneamente per pulizia o manutenzione oppure cambiare condizioni di accesso. Quando una sede conferma i servizi ma non garantisce l’accesso senza acquisto, il risultato dichiara questa condizione invece di presentare il bagno come pubblico.",

@@ -1,8 +1,7 @@
-# Loo Finder MVP — dev preview
+# Loo Finder
 
-Branch-only MVP. It intentionally does not add the tool to production navigation.
-
-- 65 curated entries
+- 165 curated entries
+- 42 verified public-park facilities
 - “A loo nearby” browser geolocation
 - “A loo near xyz” geocoding
 - mobile-first nearest-results list plus optional map
