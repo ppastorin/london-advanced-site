@@ -207,6 +207,12 @@ try {
   } else if (fareTool.embedUrl !== "/apps/fare-calculator/it/") {
     fail(`The Italian fare calculator has an incorrect embed URL: ${fareTool.embedUrl}`);
   }
+  const navigationTool = italianSandbox.window.LONDON_ADVANCED?.apps?.find(tool => tool.id === "smart-navigation");
+  if (!navigationTool) {
+    fail("The Italian tool configuration is missing Smart Navigation.");
+  } else if (navigationTool.embedUrl !== "https://london-by-mood.ppastorin.workers.dev/smart-navigation/?lang=it") {
+    fail(`Italian Smart Navigation has an incorrect embed URL: ${navigationTool.embedUrl}`);
+  }
 } catch (error) {
   fail(`dist/it/content.js could not be evaluated: ${error.message}`);
 }
