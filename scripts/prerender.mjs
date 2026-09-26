@@ -4,6 +4,7 @@ import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 import { buildItalian } from "./build-italian.mjs";
 import { buildFareCalculator } from "./build-fare-calculator.mjs";
+import { buildJournal } from "./build-journal.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
@@ -46,9 +47,9 @@ function siteNavigation(homepage, locale) {
     nav = nav
       .replace('class="wordmark" href="#top" aria-label="London Advanced home — back to top"', 'class="wordmark" href="/" aria-label="London Advanced homepage"')
       .replaceAll('href="#events"', 'href="/#events"')
-      .replace('<button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>', '<a href="/#journal">Journal</a>')
+      .replace('<button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>', '<a href="/journal/">Journal</a>')
       .replace('<button class="nav-section-button contact-nav" type="button" data-scroll-target="contact">Contact</button>', '<a class="contact-nav" href="/#contact">Contact</a>')
-      .replace(/<button class="mobile-section-link" type="button" data-scroll-target="journal">([\s\S]*?)<\/button>/, '<a href="/#journal">$1</a>')
+      .replace(/<button class="mobile-section-link" type="button" data-scroll-target="journal">([\s\S]*?)<\/button>/, '<a href="/journal/">$1</a>')
       .replace(/<button class="mobile-section-link" type="button" data-scroll-target="contact">([\s\S]*?)<\/button>/, '<a href="/#contact">$1</a>')
       .replace('class="language-switch" href="/it/"', 'class="language-switch" href="/it/strumenti/trova-un-bagno/"')
       .replace('class="mobile-language-switch" href="/it/"', 'class="mobile-language-switch" href="/it/strumenti/trova-un-bagno/"')
@@ -56,6 +57,8 @@ function siteNavigation(homepage, locale) {
   } else {
     nav = nav
       .replace('class="wordmark" href="#top" aria-label="London Advanced home — back to top"', 'class="wordmark" href="/it/" aria-label="Homepage London Advanced"')
+      .replace('<button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>', '<a href="/it/journal/">Journal</a>')
+      .replace(/<button class="mobile-section-link" type="button" data-scroll-target="journal">([\s\S]*?)<\/button>/, '<a href="/it/journal/">$1</a>')
       .replace('class="language-switch" href="/"', 'class="language-switch" href="/loo/"')
       .replace('class="mobile-language-switch" href="/"', 'class="mobile-language-switch" href="/loo/"')
       .replace('href="/it/strumenti/trova-un-bagno/"', 'href="/it/strumenti/trova-un-bagno/" aria-current="page"');
@@ -690,9 +693,10 @@ export async function prerender() {
   ]);
 
   await buildItalian();
+  await buildJournal({ includeDrafts: process.argv.includes("--drafts") });
   await buildNativeLooPages();
 
-  console.log(`Pre-rendered the bilingual homepage and ${feed.events.length} event records into static HTML.`);
+  console.log(`Pre-rendered the bilingual homepage, Journal and ${feed.events.length} event records into static HTML.`);
 }
 
 const directRun = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));

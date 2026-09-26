@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /studio/
+Disallow: /journal/_preview/
+Disallow: /it/journal/_preview/
 
 Sitemap: https://www.londonadvanced.com/sitemap.xml

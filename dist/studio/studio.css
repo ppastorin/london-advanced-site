@@ -1,0 +1,14 @@
+html, body { min-height: 100%; background: #f7efed; }
+body::before {
+  content: "LONDON ADVANCED · JOURNAL STUDIO";
+  position: fixed;
+  z-index: 9999;
+  left: 18px;
+  bottom: 14px;
+  padding: 7px 10px;
+  color: rgba(255,255,255,.88);
+  background: rgba(23,23,23,.92);
+  font: 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .08em;
+  pointer-events: none;
+}

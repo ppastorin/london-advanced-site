@@ -9,6 +9,11 @@ on:
       - "worker/**"
       - "wrangler.jsonc"
       - "package.json"
+      - "content/journal/**"
+      - "studio/**"
+      - "journal.css"
+      - "journal.js"
+      - ".github/workflows/site-checks.yml"
   push:
     branches:
       - main
@@ -19,6 +24,10 @@ on:
       - "worker/**"
       - "wrangler.jsonc"
       - "package.json"
+      - "content/journal/**"
+      - "studio/**"
+      - "journal.css"
+      - "journal.js"
       - ".github/workflows/site-checks.yml"
   workflow_dispatch:
 
@@ -39,14 +48,19 @@ jobs:
           node-version: "22"
 
       - name: Refresh static pre-rendering
-        run: npm run prerender
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            npm run prerender:preview
+          else
+            npm run prerender
+          fi
 
       - name: Reject stale generated pages in pull requests
         if: github.event_name == 'pull_request'
         run: |
-          if ! git diff --quiet -- dist/index.html dist/events/index.html dist/it; then
-            echo "Generated pages/assets are stale. Run npm run prerender and commit the generated output."
-            git diff -- dist/index.html dist/events/index.html dist/it
+          if ! git diff --quiet -- dist/index.html dist/events/index.html dist/it dist/journal dist/studio dist/journal.css dist/journal.js dist/sitemap.xml; then
+            echo "Generated pages/assets are stale. Run npm run prerender:preview and commit the generated output."
+            git diff -- dist/index.html dist/events/index.html dist/it dist/journal dist/studio dist/journal.css dist/journal.js dist/sitemap.xml
             exit 1
           fi
 
@@ -62,13 +76,13 @@ jobs:
       - name: Sync generated pages on main
         if: github.event_name == 'push'
         run: |
-          if git diff --quiet -- dist/index.html dist/events/index.html dist/it; then
+          if git diff --quiet -- dist/index.html dist/events/index.html dist/it dist/journal dist/studio dist/journal.css dist/journal.js dist/sitemap.xml; then
             echo "Generated pages/assets are already current."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/index.html dist/events/index.html dist/it
+          git add dist/index.html dist/events/index.html dist/it dist/journal dist/studio dist/journal.css dist/journal.js dist/sitemap.xml
           git commit -m "build: refresh generated bilingual pages and assets"
           git push

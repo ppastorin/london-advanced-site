@@ -1,0 +1,237 @@
+backend:
+  name: github
+  repo: ppastorin/london-advanced-site
+  branch: main
+  base_url: https://www.londonadvanced.com
+  auth_endpoint: /api/decap/auth
+  site_domain: www.londonadvanced.com
+  cms_label_prefix: journal/
+  commit_messages:
+    create: "journal: create {{slug}}"
+    update: "journal: update {{slug}}"
+    delete: "journal: delete {{slug}}"
+    uploadMedia: "journal: upload {{path}}"
+    deleteMedia: "journal: delete {{path}}"
+    openAuthoring: "journal: propose {{slug}}"
+
+local_backend: true
+publish_mode: editorial_workflow
+site_url: https://www.londonadvanced.com
+display_url: https://www.londonadvanced.com
+logo:
+  src: /assets/london-advanced-logo.svg
+  show_in_header: true
+show_preview_links: true
+search: true
+
+i18n:
+  structure: multiple_files
+  locales: [en, it]
+  default_locale: en
+
+media_folder: assets/journal
+public_folder: /assets/journal
+media_processing:
+  enabled: true
+  format:
+    enabled: true
+    default: webp
+  quality: 86
+  strip_metadata: true
+  width: 2400
+  height: null
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: journal
+    label: Journal articles
+    label_singular: Journal article
+    description: One paired English and Italian article. Drafts never reach the public Journal until both languages are explicitly approved and marked Published.
+    folder: content/journal
+    create: true
+    delete: false
+    extension: json
+    format: json
+    slug: "{{fields.article_id}}"
+    identifier_field: article_id
+    summary: "{{title}} · {{editorial_status}}"
+    preview_path: "journal/{{fields.slug}}"
+    i18n: true
+    sortable_fields: [commit_date, title, editorial_status, published_at, updated_at]
+    view_filters:
+      - { label: Drafts, field: editorial_status, pattern: draft }
+      - { label: Ready for review, field: editorial_status, pattern: review }
+      - { label: Approved, field: editorial_status, pattern: approved }
+      - { label: Published, field: editorial_status, pattern: published }
+    fields:
+      - label: Workflow
+        name: workflow_help
+        widget: hidden
+        default: Draft → Review → Approved → Published
+        i18n: duplicate
+      - label: Permanent article ID
+        name: article_id
+        widget: string
+        hint: Lowercase letters, numbers and hyphens only. Never change this after the first save.
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase words separated by hyphens.']
+        i18n: duplicate
+      - label: Editorial status
+        name: editorial_status
+        widget: select
+        options:
+          - { label: Draft, value: draft }
+          - { label: Ready for Paolo, value: review }
+          - { label: Approved, value: approved }
+          - { label: Published, value: published }
+        default: draft
+        hint: Published content is still blocked unless the approval record and both languages are complete.
+        i18n: duplicate
+      - label: Approval record
+        name: approval
+        widget: object
+        collapsed: true
+        i18n: duplicate
+        fields:
+          - label: Approval status
+            name: status
+            widget: select
+            options: [pending, changes-requested, approved]
+            default: pending
+          - { label: Approved by, name: approved_by, widget: string, required: false, hint: Use Paolo Pastorino for publication approval. }
+          - { label: Approved at, name: approved_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm }
+      - label: Headline
+        name: title
+        widget: string
+        i18n: true
+      - label: Stable URL slug
+        name: slug
+        widget: string
+        hint: Translate when natural, but do not change it after publication without adding a redirect.
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase words separated by hyphens.']
+        i18n: true
+      - label: Search title
+        name: seo_title
+        widget: string
+        required: false
+        hint: Aim for 45–60 characters. The headline is used when this is empty.
+        i18n: true
+      - label: Search description
+        name: description
+        widget: text
+        hint: Aim for 140–160 characters. The build rejects more than 165.
+        i18n: true
+      - label: Section label
+        name: eyebrow
+        widget: string
+        default: Field notes
+        i18n: true
+      - label: Standfirst
+        name: dek
+        widget: text
+        hint: One or two sentences under the headline. Do not repeat the search description.
+        i18n: true
+      - label: Article
+        name: body
+        widget: markdown
+        modes: [rich_text, raw]
+        hint: Start with the strongest observation. Use H2 headings, short paragraphs and practical judgement rather than generic history.
+        i18n: true
+      - label: Photographs
+        name: images
+        widget: list
+        collapsed: true
+        summary: "{{fields.role}} · {{fields.caption}}"
+        min: 1
+        max: 6
+        i18n: true
+        fields:
+          - label: Image
+            name: src
+            widget: image
+            choose_url: false
+            allow_multiple: false
+            media_folder: /assets/journal
+            public_folder: /assets/journal
+          - label: Role
+            name: role
+            widget: select
+            options: [hero, inline, detail, closing]
+            default: inline
+          - { label: Alternative text, name: alt, widget: text, hint: Describe what is visible; do not repeat the caption. }
+          - { label: Caption, name: caption, widget: text }
+          - { label: Credit, name: credit, widget: string, default: Paolo Pastorino }
+          - { label: Width, name: width, widget: number, value_type: int, default: 2400 }
+          - { label: Height, name: height, widget: number, value_type: int, default: 1600 }
+      - label: Practical information
+        name: practical
+        widget: list
+        collapsed: true
+        required: false
+        summary: "{{fields.label}}: {{fields.value}}"
+        i18n: true
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Value, name: value, widget: string }
+          - { label: Optional link, name: url, widget: string, required: false }
+      - label: Related tools
+        name: related_tools
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: London Dashboard, value: london-dashboard }
+          - { label: Escape the Crowds, value: escape-the-crowds }
+          - { label: Travel Fare Calculator, value: travel-fare-calculator }
+          - { label: Smart Navigation, value: smart-navigation }
+          - { label: London by Mood, value: london-by-mood }
+          - { label: Loo Finder, value: loo-finder }
+        i18n: duplicate
+      - label: Related article IDs
+        name: related_articles
+        widget: list
+        required: false
+        i18n: duplicate
+        field: { label: Article ID, name: article_id, widget: string }
+      - label: Topics
+        name: tags
+        widget: list
+        required: false
+        i18n: true
+        field: { label: Topic, name: topic, widget: string }
+      - label: Verification sources
+        name: sources
+        widget: list
+        collapsed: true
+        required: false
+        summary: "{{fields.label}}"
+        i18n: duplicate
+        fields:
+          - { label: Source, name: label, widget: string }
+          - { label: URL, name: url, widget: string }
+          - { label: Checked on, name: checked_at, widget: date, format: YYYY-MM-DD }
+      - label: Reading time
+        name: reading_minutes
+        widget: number
+        value_type: int
+        min: 1
+        max: 30
+        default: 6
+        i18n: duplicate
+      - label: First publication
+        name: published_at
+        widget: datetime
+        required: false
+        date_format: YYYY-MM-DD
+        time_format: HH:mm
+        i18n: duplicate
+      - label: Last substantive update
+        name: updated_at
+        widget: datetime
+        required: false
+        date_format: YYYY-MM-DD
+        time_format: HH:mm
+        i18n: duplicate

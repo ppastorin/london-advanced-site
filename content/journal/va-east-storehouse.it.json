@@ -1,0 +1,46 @@
+{
+  "workflow_help": "Draft → Review → Approved → Published",
+  "article_id": "va-east-storehouse",
+  "editorial_status": "draft",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": ""
+  },
+  "title": "V&A East Storehouse: il museo che mostra come funziona",
+  "slug": "va-east-storehouse",
+  "seo_title": "V&A East Storehouse: cosa vedere e sapere",
+  "description": "Guida indipendente al V&A East Storehouse di Hackney Wick: perché è diverso, cosa osservare e come organizzare una visita che valga il tempo.",
+  "eyebrow": "Hackney Wick · Musei",
+  "dek": "Mezzo milione di oggetti, depositi aperti e un museo che trasforma il lavoro dietro le quinte in parte della visita. La scala colpisce; la libertà di seguire la propria curiosità è il vero punto.",
+  "body": "Il V&A East Storehouse non si comporta come un museo convenzionale. Non esiste una sequenza obbligata di gallerie e non c’è alcun tentativo di far apparire la collezione come qualcosa di concluso. L’edificio rende invece visibili i sistemi di deposito, il lavoro di conservazione e gli accostamenti improbabili che normalmente restano dietro la facciata pubblica di un museo.\n\nLa differenza è sostanziale. La prima impressione è architettonica — un grande spazio centrale, scaffalature industriali e oggetti visibili su più livelli — ma il cambiamento più interessante è editoriale. Non vieni accompagnato lungo una sola tesi. Sei invitato a trovare da solo relazioni e deviazioni.\n\n## Un deposito che i visitatori possono davvero attraversare\n\nLo Storehouse ha aperto nel 2025 a Here East, sul lato occidentale del Queen Elizabeth Olympic Park. Conserva oltre 500.000 oggetti, circa 1.000 archivi e centinaia di migliaia di libri. Sono numeri che spiegano la scala, ma non l’esperienza.\n\nLa Weston Collections Hall è il centro del percorso pubblico. Piccole esposizioni sono inserite dentro e attorno al deposito operativo, mescolando nomi familiari con oggetti che difficilmente potrebbero giustificare una galleria permanente tutta loro. Un interno storico può trovarsi vicino a moda, mobili, materiali teatrali o frammenti di architettura. L’assenza di una gerarchia ordinata è produttiva: la collezione sembra meno un manuale e più un insieme di prove su come le persone costruiscono e immaginano le cose.\n\nNon si tratta semplicemente di un magazzino a cui sono state aggiunte delle didascalie. Passerelle, aperture e linee di vista rendono leggibile una collezione ancora in funzione, senza fingere che ogni oggetto sia sempre esposto. Alcune aree restano operative; altre permettono di vedere da vicino opere di grandi dimensioni che difficilmente troverebbero spazio a South Kensington.\n\n## Dove vale la pena rallentare\n\nL’errore sarebbe trasformare l’edificio in una lista da completare. Il suo valore nasce dal vagare, guardare verso l’alto e permettere a un oggetto di cambiare la direzione della visita. Le piccole esposizioni attorno alla sala centrale sono buoni punti di partenza, ma i momenti più memorabili possono nascere dagli accostamenti casuali fra una sezione e l’altra.\n\nOsserva i cambi di scala. L’edificio passa bruscamente da qualcosa di monumentale a un piccolo dettaglio di lavoro: un’etichetta, un supporto da imballaggio, un indizio di conservazione o un oggetto collocato temporaneamente in vista. Questi passaggi ricordano che i musei non sono contenitori neutrali. Le decisioni su deposito, accesso, interpretazione e cura determinano ciò che il pubblico può vedere.\n\nLo Study Centre porta oltre questa idea. Con il servizio Order an Object del V&A è possibile richiedere, su appuntamento, materiale che non è esposto. Qui si trova anche il David Bowie Centre, sede permanente dell’archivio e spazio per selezioni che cambiano nel tempo. Entrambi richiedono più preparazione di una visita casuale: controlla le modalità aggiornate prima di partire.\n\n## Quanto tempo dedicare\n\nUna prima visita può funzionare in novanta minuti, ma due o tre ore sono più realistiche se vuoi seguire diversi fili senza correre. La disposizione aperta fa sottovalutare facilmente il tempo: una vetrina che sembra piccola dall’altro lato della sala può contenere dettagli sufficienti per trattenerti venti minuti.\n\nNon c’è alcun obbligo di essere esaustivi. Scegli un livello, segui un materiale o un tema che attira l’attenzione e lascia qualcosa per una visita successiva. L’ingresso gratuito rende le visite ripetute una strategia migliore del tentativo di assorbire mezzo milione di oggetti in un pomeriggio.\n\n## Arrivare senza trasformare la visita in un esercizio di trasporto\n\nHackney Wick è la stazione ferroviaria più naturale per lo Storehouse. Il percorso attraverso Here East è semplice quando ci si trova sul lato corretto del canale, ma questa è ancora una zona in cui nomi di edifici e grandi complessi possono rendere meno evidente un tragitto breve. Controlla il percorso pedonale finale invece di affidarti soltanto al codice postale.\n\nStratford offre più collegamenti ferroviari e Underground, seguiti da una passeggiata più lunga, un autobus locale o la navetta di Here East quando è in servizio. Con il bel tempo, attraversare l’Olympic Park può diventare parte della visita anziché tempo morto.\n\n## Per chi funziona meglio\n\nLo Storehouse funziona particolarmente bene per chi si interessa di design, architettura, archivi o della vita pratica dei musei. È utile anche per chi conosce già le gallerie principali di South Kensington e vuole un rapporto diverso con la stessa collezione.\n\nPuò risultare meno soddisfacente per chi cerca una breve lista di capolavori e un percorso chiaro che li colleghi. La libertà è reale, ma chiede al visitatore di fare parte del lavoro di selezione. Non è un difetto: è la proposta.\n\n> Vieni per la scala visibile. Rimani per la scoperta più piccola: ogni esposizione museale è l’ultimo passaggio di una catena molto più lunga di scelte.\n\nIl V&A East Storehouse è insolito non perché gli oggetti non siano mai stati visti, ma perché cambia ciò che consideriamo museo. Deposito, ricerca, catalogazione e conservazione non sono più funzioni di supporto nascoste. Diventano parte dell’esperienza pubblica — incompleta, a volte travolgente e proprio per questo molto più interessante.",
+  "images": [
+    {
+      "src": "/assets/london-map.jpg",
+      "role": "hero",
+      "alt": "Mappa temporanea di London Advanced usata per provare il layout dell’articolo",
+      "caption": "Immagine temporanea per il layout — da sostituire con una fotografia originale di Paolo del V&A East Storehouse prima della revisione.",
+      "credit": "Paolo Pastorino",
+      "width": 1560,
+      "height": 1140
+    }
+  ],
+  "practical": [
+    { "label": "Dove", "value": "Here East, Hackney Wick", "url": "https://www.vam.ac.uk/east/storehouse/visit" },
+    { "label": "Ingresso", "value": "Gratuito; alcuni servizi richiedono prenotazione", "url": "https://www.vam.ac.uk/east/storehouse/visit" },
+    { "label": "Tempo", "value": "Da 90 minuti a 3 ore", "url": "" },
+    { "label": "Ideale per", "value": "Design, archivi e dietro le quinte dei musei", "url": "" }
+  ],
+  "related_tools": ["london-dashboard", "smart-navigation", "escape-the-crowds", "loo-finder"],
+  "related_articles": [],
+  "tags": ["V&A East", "Hackney Wick", "Musei", "Design", "Londra gratuita"],
+  "sources": [
+    { "label": "V&A — Visit V&A East Storehouse", "url": "https://www.vam.ac.uk/east/storehouse/visit", "checked_at": "2026-09-27" },
+    { "label": "V&A — About V&A East Storehouse", "url": "https://www.vam.ac.uk/articles/about-va-east-storehouse", "checked_at": "2026-09-27" },
+    { "label": "V&A — Order an Object", "url": "https://www.vam.ac.uk/info/order-an-object", "checked_at": "2026-09-27" },
+    { "label": "V&A — Access at V&A East Storehouse", "url": "https://www.vam.ac.uk/info/access-at-east-storehouse/", "checked_at": "2026-09-27" }
+  ],
+  "reading_minutes": 7,
+  "published_at": "",
+  "updated_at": "2026-09-27T00:00:00+01:00"
+}
