@@ -46,7 +46,7 @@ window.LONDON_ADVANCED = {
       short: "Make the journey part of the visit",
       description: "Find worthwhile detours between where you are and where you are going.",
       href: "/home/smart-navigation/",
-      embedUrl: "https://script.google.com/macros/s/AKfycbxcjGjLqBgTqItDVRKspQTDE__wL6y7WAd2Lr617vOfhzrqMX9tvKEXW6_OxbfK2Yz34w/exec",
+      embedUrl: "https://london-by-mood.ppastorin.workers.dev/smart-navigation/",
       icon: "route"
     },
     {

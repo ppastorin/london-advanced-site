@@ -78,7 +78,7 @@ const tools = [
     id: "smart-navigation", route: routes["/home/smart-navigation/"], enRoute: "/home/smart-navigation/",
     name: "Navigazione intelligente", short: "Trasforma il tragitto in una scoperta", icon: "route",
     description: "Trova deviazioni interessanti tra il punto di partenza e la destinazione.",
-    embedUrl: "https://script.google.com/macros/s/AKfycbxcjGjLqBgTqItDVRKspQTDE__wL6y7WAd2Lr617vOfhzrqMX9tvKEXW6_OxbfK2Yz34w/exec",
+    embedUrl: "https://london-by-mood.ppastorin.workers.dev/smart-navigation/",
     meta: "Trova luoghi insoliti e deviazioni utili lungo un percorso a piedi a Londra.",
     headline: "Fai diventare il percorso parte della visita.",
     intro: ["Navigazione intelligente cerca luoghi London Advanced vicini al tragitto tra partenza e arrivo.", "Non sostituisce un navigatore turn-by-turn: aiuta a decidere quali deviazioni meritano tempo, con distanze configurabili e filtri per categoria."],

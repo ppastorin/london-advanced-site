@@ -103,7 +103,7 @@ const expectedTools = new Map([
   }],
   ["smart-navigation", {
     href: "/home/smart-navigation/",
-    embedUrl: "https://script.google.com/macros/s/AKfycbxcjGjLqBgTqItDVRKspQTDE__wL6y7WAd2Lr617vOfhzrqMX9tvKEXW6_OxbfK2Yz34w/exec"
+    embedUrl: "https://london-by-mood.ppastorin.workers.dev/smart-navigation/"
   }],
   ["london-by-mood", {
     href: "/home/london-by-mood/",
@@ -237,8 +237,7 @@ if (!headers.includes("/data/events.json") || !headers.includes("max-age=300")) 
 for (const requiredFrameHost of [
   "london-now.ppastorin.workers.dev",
   "london-advanced-crowd-pressure.ppastorin.workers.dev",
-  "london-by-mood.ppastorin.workers.dev",
-  "script.google.com"
+  "london-by-mood.ppastorin.workers.dev"
 ]) {
   if (!headers.includes(requiredFrameHost)) fail(`dist/_headers does not allow iframe host: ${requiredFrameHost}`);
 }

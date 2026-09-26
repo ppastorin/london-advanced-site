@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: frame-ancestors 'self' https://www.londonadvanced.com https://sites.google.com https://*.googleusercontent.com; frame-src 'self' https://london-now.ppastorin.workers.dev https://london-advanced-crowd-pressure.ppastorin.workers.dev https://london-by-mood.ppastorin.workers.dev https://script.google.com https://*.googleusercontent.com;
+  Content-Security-Policy: frame-ancestors 'self' https://www.londonadvanced.com https://sites.google.com https://*.googleusercontent.com; frame-src 'self' https://london-now.ppastorin.workers.dev https://london-advanced-crowd-pressure.ppastorin.workers.dev https://london-by-mood.ppastorin.workers.dev https://*.googleusercontent.com;
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
 
