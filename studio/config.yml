@@ -94,7 +94,7 @@ collections:
         name: approval
         widget: object
         collapsed: true
-        i18n: duplicate
+        i18n: true
         fields:
           - label: Approval status
             name: status
@@ -194,7 +194,7 @@ collections:
         name: related_articles
         widget: list
         required: false
-        i18n: duplicate
+        i18n: true
         field: { label: Article ID, name: article_id, widget: string }
       - label: Topics
         name: tags
@@ -208,7 +208,7 @@ collections:
         collapsed: true
         required: false
         summary: "{{fields.label}}"
-        i18n: duplicate
+        i18n: true
         fields:
           - { label: Source, name: label, widget: string }
           - { label: URL, name: url, widget: string }
