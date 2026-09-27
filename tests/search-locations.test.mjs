@@ -22,7 +22,7 @@ test("location search merges a shared place into links for all applicable tools"
   };
   const fetchImpl = async () => Response.json({ places: [{
     id: "M1",
-    name: "British Museum",
+    name: "The British Museum",
     description: "A major museum in Bloomsbury.",
     hook: "A collection spanning world history."
   }] });
@@ -35,6 +35,7 @@ test("location search merges a shared place into links for all applicable tools"
 
   assert.equal(response.status, 200);
   assert.equal(payload.count, 1);
+  assert.equal(payload.records[0].title, "The British Museum");
   assert.deepEqual(payload.records[0].links.map(link => link.id), [
     "smart-navigation",
     "london-by-mood",

@@ -324,6 +324,10 @@ function searchKey(value) {
     .trim();
 }
 
+function locationMergeKey(value) {
+  return searchKey(value).replace(/^(?:the|il|lo|la|i|gli|le)\s+/, "");
+}
+
 function locationScore(name, query, supportingText = "") {
   const candidate = searchKey(name);
   const needle = searchKey(query);
@@ -447,7 +451,7 @@ async function searchLoos(request, env, query, locale) {
 function mergeLocationResults(records) {
   const merged = new Map();
   for (const record of records) {
-    const key = searchKey(record.title);
+    const key = locationMergeKey(record.title);
     const current = merged.get(key);
     if (!current) {
       merged.set(key, record);
