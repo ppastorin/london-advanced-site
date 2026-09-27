@@ -161,6 +161,14 @@ collections:
             widget: select
             options: [hero, inline, detail, closing]
             default: inline
+          - label: Image presentation
+            name: display_mode
+            widget: select
+            options:
+              - { label: Fill the frame (crop around the focal point), value: crop }
+              - { label: Show the complete photograph (original ratio), value: natural }
+            default: crop
+            required: false
           - { label: Alternative text, name: alt, widget: text, hint: Describe what is visible; do not repeat the caption. }
           - { label: Caption, name: caption, widget: text }
           - { label: Credit, name: credit, widget: string, default: Paolo Pastorino }
