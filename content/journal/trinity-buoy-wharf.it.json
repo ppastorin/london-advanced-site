@@ -1,36 +1,114 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
+  "body": "Trinity Buoy Wharf somiglia meno a un’attrazione tradizionale che a una parte di Londra sfuggita alla normalizzazione. I container sono diventati studi, costruzioni sperimentali convivono con l’ingegneria vittoriana e il Tamigi incontra il Lea di fronte all’O2. Al centro di tutto c’è l’unico faro di Londra.\n\nNon aspettarti un complesso storico perfettamente confezionato. Qui si lavora, gli eventi occupano a turno diversi spazi e alcune porte saranno chiuse il giorno della tua visita. È proprio questa natura incompleta a rendere il luogo interessante.\n\n## Un faro nato per sperimentare\n\nL’Experimental Lighthouse attuale fu costruito nel 1864 per Trinity House. Non serviva a segnalare una costa pericolosa: qui si provavano lampade e attrezzature e si formavano i guardiani dei fari. Michael Faraday, consulente scientifico di Trinity House, lavorò sul sito; oggi una piccola costruzione ospita *The Faraday Effect*, un’installazione di Ana Ospina.\n\nIl faro è normalmente aperto nei fine settimana, con orari stagionali e ingresso gratuito. Le scale sono strette e l’accesso è limitato, quindi conviene controllare la pagina ufficiale prima di affrontare il viaggio apposta. Dall’alto si vede una Londra insolita: il fiume, il Lea, i Docklands e l’O2 si allineano da un punto che sembra ancora fuori dal copione del centro.\n\n## Ascoltare una composizione lunga mille anni\n\nDentro il faro, *Longplayer* cambia la scala temporale della visita. Ideata da Jem Finer, la composizione è iniziata alla mezzanotte del 31 dicembre 1999 ed è pensata per suonare senza ripetersi per mille anni. Il punto d’ascolto utilizza campane tibetane disposte in cerchio; la stanza sembra a metà fra uno strumento e un osservatorio.\n\nSulla carta potrebbe sembrare una trovata. Nel faro l’idea diventa molto più convincente. La storia industriale, l’acqua delle maree e una musica destinata a sopravvivere a chiunque la ascolti rendono il tempo quasi materiale. Dedicale qualche minuto di silenzio invece di lasciarla come semplice sottofondo.\n\n## Che altro c’è sul molo\n\nIl sito premia chi lo percorre senza fretta. Cerca la nave-faro rossa, gli studi nei container, le sculture e l’installazione dedicata a Faraday. Fatboy’s Diner aggiunge un frammento di immaginario americano, mentre il bordo del fiume offre una delle viste meno consuete verso l’O2.\n\nNon tutte le opere e le attività commerciali osservano gli stessi orari del wharf. Considera affidabili gli spazi esterni e tutto ciò che trovi aperto al coperto come un’aggiunta, a meno che tu non abbia verificato in anticipo. Il complesso è accessibile ogni giorno, tranne Natale.\n\n## Come arrivare\n\nEast India sulla DLR è la stazione più comoda. Da lì si attraversa un paesaggio fatto di strade, nuovi edifici residenziali e residui industriali. Vicino al Lea il percorso può sembrare poco intuitivo: salva l’ultimo tratto della mappa prima di lasciare la stazione. Anche Canning Town è possibile, ma di solito allunga l’avvicinamento.\n\nArrivare a piedi è coerente con il luogo: il passaggio dalle strade ordinarie al vecchio molo è parte dell’esperienza. Trinity Buoy Wharf può anche diventare una tappa di un itinerario più ampio fra Leamouth, il Lower Lea e i Royal Docks.\n\n## Quanto tempo dedicargli\n\nCalcola almeno un’ora per gli esterni e più vicino alle due se il faro è aperto, vuoi fermarti con *Longplayer* o mangiare qualcosa. Una giornata luminosa offre le viste migliori; il cielo grigio, però, si adatta bene alle superfici industriali. Più del sole conta il vento.\n\n> Trinity Buoy Wharf non è davvero nascosto. È semplicemente collocato dove molti itinerari londinesi smettono di guardare.\n\nVieni per la curiosità di un faro a Londra. Resta per un luogo in cui ingegneria, arte e fiume occupano ancora lo stesso terreno senza troppo ordine.",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": ""
+  },
+  "published_at": "",
   "article_id": "trinity-buoy-wharf",
-  "editorial_status": "draft",
-  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
-  "title": "Trinity Buoy Wharf: il faro di Londra ai margini del Tamigi",
-  "slug": "trinity-buoy-wharf-faro-londra",
-  "seo_title": "Trinity Buoy Wharf: guida al faro e a Longplayer",
-  "description": "Guida a Trinity Buoy Wharf: il faro di Londra, Longplayer, le viste sul fiume, l’arte pubblica e tutte le informazioni pratiche.",
+  "related_tools": [
+    "london-dashboard",
+    "smart-navigation",
+    "travel-fare-calculator",
+    "loo-finder"
+  ],
   "eyebrow": "Leamouth · Londra industriale",
   "dek": "Un faro che non ha mai guidato le navi verso il mare, una composizione destinata a durare mille anni e uno degli angoli più strani dell’East London.",
-  "body": "Trinity Buoy Wharf somiglia meno a un’attrazione tradizionale che a una parte di Londra sfuggita alla normalizzazione. I container sono diventati studi, costruzioni sperimentali convivono con l’ingegneria vittoriana e il Tamigi incontra il Lea di fronte all’O2. Al centro di tutto c’è l’unico faro di Londra.\n\nNon aspettarti un complesso storico perfettamente confezionato. Qui si lavora, gli eventi occupano a turno diversi spazi e alcune porte saranno chiuse il giorno della tua visita. È proprio questa natura incompleta a rendere il luogo interessante.\n\n## Un faro nato per sperimentare\n\nL’Experimental Lighthouse attuale fu costruito nel 1864 per Trinity House. Non serviva a segnalare una costa pericolosa: qui si provavano lampade e attrezzature e si formavano i guardiani dei fari. Michael Faraday, consulente scientifico di Trinity House, lavorò sul sito; oggi una piccola costruzione ospita *The Faraday Effect*, un’installazione di Ana Ospina.\n\nIl faro è normalmente aperto nei fine settimana, con orari stagionali e ingresso gratuito. Le scale sono strette e l’accesso è limitato, quindi conviene controllare la pagina ufficiale prima di affrontare il viaggio apposta. Dall’alto si vede una Londra insolita: il fiume, il Lea, i Docklands e l’O2 si allineano da un punto che sembra ancora fuori dal copione del centro.\n\n## Ascoltare una composizione lunga mille anni\n\nDentro il faro, *Longplayer* cambia la scala temporale della visita. Ideata da Jem Finer, la composizione è iniziata alla mezzanotte del 31 dicembre 1999 ed è pensata per suonare senza ripetersi per mille anni. Il punto d’ascolto utilizza campane tibetane disposte in cerchio; la stanza sembra a metà fra uno strumento e un osservatorio.\n\nSulla carta potrebbe sembrare una trovata. Nel faro l’idea diventa molto più convincente. La storia industriale, l’acqua delle maree e una musica destinata a sopravvivere a chiunque la ascolti rendono il tempo quasi materiale. Dedicale qualche minuto di silenzio invece di lasciarla come semplice sottofondo.\n\n## Che altro c’è sul molo\n\nIl sito premia chi lo percorre senza fretta. Cerca la nave-faro rossa, gli studi nei container, le sculture e l’installazione dedicata a Faraday. Fatboy’s Diner aggiunge un frammento di immaginario americano, mentre il bordo del fiume offre una delle viste meno consuete verso l’O2.\n\nNon tutte le opere e le attività commerciali osservano gli stessi orari del wharf. Considera affidabili gli spazi esterni e tutto ciò che trovi aperto al coperto come un’aggiunta, a meno che tu non abbia verificato in anticipo. Il complesso è accessibile ogni giorno, tranne Natale.\n\n## Come arrivare\n\nEast India sulla DLR è la stazione più comoda. Da lì si attraversa un paesaggio fatto di strade, nuovi edifici residenziali e residui industriali. Vicino al Lea il percorso può sembrare poco intuitivo: salva l’ultimo tratto della mappa prima di lasciare la stazione. Anche Canning Town è possibile, ma di solito allunga l’avvicinamento.\n\nArrivare a piedi è coerente con il luogo: il passaggio dalle strade ordinarie al vecchio molo è parte dell’esperienza. Trinity Buoy Wharf può anche diventare una tappa di un itinerario più ampio fra Leamouth, il Lower Lea e i Royal Docks.\n\n## Quanto tempo dedicargli\n\nCalcola almeno un’ora per gli esterni e più vicino alle due se il faro è aperto, vuoi fermarti con *Longplayer* o mangiare qualcosa. Una giornata luminosa offre le viste migliori; il cielo grigio, però, si adatta bene alle superfici industriali. Più del sole conta il vento.\n\n> Trinity Buoy Wharf non è davvero nascosto. È semplicemente collocato dove molti itinerari londinesi smettono di guardare.\n\nVieni per la curiosità di un faro a Londra. Resta per un luogo in cui ingegneria, arte e fiume occupano ancora lo stesso terreno senza troppo ordine.",
-  "images": [
-    { "src": "/assets/journal/trinity-buoy-wharf-01.webp", "role": "hero", "alt": "L’Experimental Lighthouse in mattoni a Trinity Buoy Wharf", "caption": "Il faro del 1864 serviva a esperimenti e formazione, non a guidare le navi in mare.", "credit": "Paolo Pastorino", "width": 2048, "height": 1536 },
-    { "src": "/assets/journal/trinity-buoy-wharf-02.webp", "role": "inline", "alt": "L’O2 e i Docklands visti da una finestra del faro", "caption": "Dalla torre, Lea, Tamigi, O2 e Docklands si riuniscono in un panorama decisamente industriale.", "credit": "Paolo Pastorino", "width": 2048, "height": 1536 },
-    { "src": "/assets/journal/trinity-buoy-wharf-03.webp", "role": "detail", "alt": "La disposizione circolare delle campane tibetane usate per Longplayer", "caption": "Longplayer suona dal 1999 ed è progettata per non ripetersi per mille anni.", "credit": "Paolo Pastorino", "width": 1536, "height": 2048 },
-    { "src": "/assets/journal/trinity-buoy-wharf-04.webp", "role": "closing", "alt": "Nave-faro rossa ormeggiata accanto a Trinity Buoy Wharf", "caption": "Imbarcazioni, studi e opere pubbliche mantengono visibile il carattere operativo del sito.", "credit": "Paolo Pastorino", "width": 2048, "height": 1536 }
+  "editorial_status": "draft",
+  "slug": "trinity-buoy-wharf-faro-londra",
+  "reading_minutes": 6,
+  "related_articles": [
+    "va-east-storehouse",
+    "blackheath-greenwich-walk"
   ],
   "practical": [
-    { "label": "Dove", "value": "64 Orchard Place, Poplar, E14 0JW", "url": "https://www.trinitybuoywharf.com/visit" },
-    { "label": "Orari del wharf", "value": "Ogni giorno 07:00–19:00, escluso Natale", "url": "https://www.trinitybuoywharf.com/visit" },
-    { "label": "Faro", "value": "Weekend: apr–set 11:00–17:00; ott–mar 11:00–16:00", "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse" },
-    { "label": "Ingresso", "value": "Gratuito; accesso al faro limitato", "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse" }
+    {
+      "label": "Dove",
+      "value": "64 Orchard Place, Poplar, E14 0JW",
+      "url": "https://www.trinitybuoywharf.com/visit"
+    },
+    {
+      "label": "Orari del wharf",
+      "value": "Ogni giorno 07:00–19:00, escluso Natale",
+      "url": "https://www.trinitybuoywharf.com/visit"
+    },
+    {
+      "label": "Faro",
+      "value": "Weekend: apr–set 11:00–17:00; ott–mar 11:00–16:00",
+      "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse"
+    },
+    {
+      "label": "Ingresso",
+      "value": "Gratuito; accesso al faro limitato",
+      "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse"
+    }
   ],
-  "related_tools": ["london-dashboard", "smart-navigation", "travel-fare-calculator", "loo-finder"],
-  "related_articles": ["va-east-storehouse", "blackheath-greenwich-walk"],
-  "tags": ["Trinity Buoy Wharf", "Faro", "Longplayer", "East London", "Archeologia industriale"],
+  "seo_title": "Trinity Buoy Wharf: guida al faro e a Longplayer",
+  "updated_at": "2026-09-27T00:00:00+01:00",
+  "title": "Trinity Buoy Wharf: il faro di Londra ai margini del Tamigi",
+  "images": [
+    {
+      "src": "/assets/journal/trinity-buoy-wharf-01.webp",
+      "role": "hero",
+      "alt": "L’Experimental Lighthouse in mattoni a Trinity Buoy Wharf",
+      "caption": "Il faro del 1864 serviva a esperimenti e formazione, non a guidare le navi in mare.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "src": "/assets/journal/trinity-buoy-wharf-02.webp",
+      "role": "inline",
+      "alt": "L’O2 e i Docklands visti da una finestra del faro",
+      "caption": "Dalla torre, Lea, Tamigi, O2 e Docklands si riuniscono in un panorama decisamente industriale.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "src": "/assets/journal/trinity-buoy-wharf-03.webp",
+      "role": "detail",
+      "alt": "La disposizione circolare delle campane tibetane usate per Longplayer",
+      "caption": "Longplayer suona dal 1999 ed è progettata per non ripetersi per mille anni.",
+      "credit": "Paolo Pastorino",
+      "width": 1536,
+      "height": 2048
+    },
+    {
+      "src": "/assets/journal/trinity-buoy-wharf-04.webp",
+      "role": "closing",
+      "alt": "Nave-faro rossa ormeggiata accanto a Trinity Buoy Wharf",
+      "caption": "Imbarcazioni, studi e opere pubbliche mantengono visibile il carattere operativo del sito.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536
+    }
+  ],
   "sources": [
-    { "label": "Trinity Buoy Wharf — Visit", "url": "https://www.trinitybuoywharf.com/visit", "checked_at": "2026-09-27" },
-    { "label": "Trinity Buoy Wharf — Lighthouse", "url": "https://www.trinitybuoywharf.com/architecture/lighthouse", "checked_at": "2026-09-27" },
-    { "label": "Trinity Buoy Wharf — Longplayer", "url": "https://www.trinitybuoywharf.com/whats-on/longplayer", "checked_at": "2026-09-27" }
+    {
+      "label": "Trinity Buoy Wharf — Visit",
+      "url": "https://www.trinitybuoywharf.com/visit",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "Trinity Buoy Wharf — Lighthouse",
+      "url": "https://www.trinitybuoywharf.com/architecture/lighthouse",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "Trinity Buoy Wharf — Longplayer",
+      "url": "https://www.trinitybuoywharf.com/whats-on/longplayer",
+      "checked_at": "2026-09-27"
+    }
   ],
-  "reading_minutes": 6,
-  "published_at": "",
-  "updated_at": "2026-09-27T00:00:00+01:00"
+  "tags": [
+    "Trinity Buoy Wharf",
+    "Faro",
+    "Longplayer",
+    "East London",
+    "Archeologia industriale"
+  ],
+  "description": "Guida a Trinity Buoy Wharf: il faro di Londra, Longplayer, le viste sul fiume, l’arte pubblica e tutte le informazioni pratiche."
 }

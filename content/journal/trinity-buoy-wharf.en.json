@@ -1,36 +1,114 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
+  "body": "Trinity Buoy Wharf feels less like a conventional attraction than a pocket of London that avoided being tidied up. Shipping containers have become studios, experimental structures sit beside Victorian engineering and the Thames meets the Lea under the shadow of the O2. At the centre is London’s only lighthouse.\n\nIt is not a polished heritage complex. People work here, events take over parts of the site and some doors will be closed when you visit. That incompleteness is part of the appeal.\n\n## A lighthouse built for experiments\n\nThe current Experimental Lighthouse was built in 1864 for Trinity House. Rather than warning ships from a dangerous coast, it was used to test lamps and equipment and to train lighthouse keepers. Michael Faraday, scientific adviser to Trinity House, carried out work on the site; a small structure nearby now houses *The Faraday Effect*, an installation by Ana Ospina.\n\nThe lighthouse is normally open to visitors at weekends, with seasonal hours and free entry. The stairs are narrow and access is limited, so check the official listing before making a dedicated journey. Reaching the lantern level is worth it for the unusual view: the river, the Lea, Docklands and the O2 line up from a place that still feels slightly outside central London’s script.\n\n## Listen to a thousand-year composition\n\nInside the lighthouse, *Longplayer* changes the scale of the visit. Conceived by Jem Finer, the composition began at midnight on 31 December 1999 and is designed to play without repetition for a thousand years. Its live listening post uses Tibetan singing bowls and a circular arrangement that makes the room feel part instrument, part observatory.\n\nThe idea could have been a gimmick. In the lighthouse it becomes more persuasive. Industrial history, tidal water and a piece of music intended to outlast everyone listening to it make time feel unusually physical. Give it several quiet minutes rather than treating it as background sound.\n\n## What else is on the wharf\n\nThe site rewards a slow circuit. Look for the red lightship, container studios, public sculpture and the Faraday installation. Fatboy’s Diner adds a piece of American roadside fantasy, while the river’s edge provides one of the least familiar views towards the O2.\n\nNot every artwork or business keeps the same hours as the wharf. Think of the outdoor site as the reliable part and anything indoors as a bonus unless you have checked in advance. The wharf itself is open daily, except Christmas Day.\n\n## Getting there\n\nEast India on the DLR is the simplest station, followed by a walk through a landscape of roads, new housing and surviving industry. The route can feel counter-intuitive near the Lea crossing, so save the final map section before leaving the station. Canning Town is another option but generally makes the approach longer.\n\nArriving on foot is appropriate: the transition from ordinary streets to the buoy wharf is part of the experience. The site is also a strong addition to a wider walk around Leamouth, the Lower Lea and the Royal Docks.\n\n## How long to allow\n\nAllow at least an hour for the outdoor site and closer to two if the lighthouse is open, you sit with *Longplayer* or stop for food. A bright day gives the clearest views; grey weather arguably suits the industrial textures better. Wind is the more important variable.\n\n> Trinity Buoy Wharf is not hidden, exactly. It is simply placed where most London itineraries stop looking.\n\nCome for the novelty of a lighthouse in London. Stay for a site where engineering, art and the river still occupy the same untidy ground.",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": ""
+  },
+  "published_at": "",
   "article_id": "trinity-buoy-wharf",
-  "editorial_status": "draft",
-  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
-  "title": "Trinity Buoy Wharf: London’s lighthouse at the edge of the Thames",
-  "slug": "trinity-buoy-wharf-lighthouse",
-  "seo_title": "Trinity Buoy Wharf: Lighthouse and Longplayer Guide",
-  "description": "A field guide to Trinity Buoy Wharf: London’s only lighthouse, Longplayer, riverside views, public art and the practical details for visiting.",
+  "related_tools": [
+    "london-dashboard",
+    "smart-navigation",
+    "travel-fare-calculator",
+    "loo-finder"
+  ],
   "eyebrow": "Leamouth · Industrial London",
   "dek": "A lighthouse that never guided ships to sea, a composition designed to last a thousand years and one of east London’s strangest riverside corners.",
-  "body": "Trinity Buoy Wharf feels less like a conventional attraction than a pocket of London that avoided being tidied up. Shipping containers have become studios, experimental structures sit beside Victorian engineering and the Thames meets the Lea under the shadow of the O2. At the centre is London’s only lighthouse.\n\nIt is not a polished heritage complex. People work here, events take over parts of the site and some doors will be closed when you visit. That incompleteness is part of the appeal.\n\n## A lighthouse built for experiments\n\nThe current Experimental Lighthouse was built in 1864 for Trinity House. Rather than warning ships from a dangerous coast, it was used to test lamps and equipment and to train lighthouse keepers. Michael Faraday, scientific adviser to Trinity House, carried out work on the site; a small structure nearby now houses *The Faraday Effect*, an installation by Ana Ospina.\n\nThe lighthouse is normally open to visitors at weekends, with seasonal hours and free entry. The stairs are narrow and access is limited, so check the official listing before making a dedicated journey. Reaching the lantern level is worth it for the unusual view: the river, the Lea, Docklands and the O2 line up from a place that still feels slightly outside central London’s script.\n\n## Listen to a thousand-year composition\n\nInside the lighthouse, *Longplayer* changes the scale of the visit. Conceived by Jem Finer, the composition began at midnight on 31 December 1999 and is designed to play without repetition for a thousand years. Its live listening post uses Tibetan singing bowls and a circular arrangement that makes the room feel part instrument, part observatory.\n\nThe idea could have been a gimmick. In the lighthouse it becomes more persuasive. Industrial history, tidal water and a piece of music intended to outlast everyone listening to it make time feel unusually physical. Give it several quiet minutes rather than treating it as background sound.\n\n## What else is on the wharf\n\nThe site rewards a slow circuit. Look for the red lightship, container studios, public sculpture and the Faraday installation. Fatboy’s Diner adds a piece of American roadside fantasy, while the river’s edge provides one of the least familiar views towards the O2.\n\nNot every artwork or business keeps the same hours as the wharf. Think of the outdoor site as the reliable part and anything indoors as a bonus unless you have checked in advance. The wharf itself is open daily, except Christmas Day.\n\n## Getting there\n\nEast India on the DLR is the simplest station, followed by a walk through a landscape of roads, new housing and surviving industry. The route can feel counter-intuitive near the Lea crossing, so save the final map section before leaving the station. Canning Town is another option but generally makes the approach longer.\n\nArriving on foot is appropriate: the transition from ordinary streets to the buoy wharf is part of the experience. The site is also a strong addition to a wider walk around Leamouth, the Lower Lea and the Royal Docks.\n\n## How long to allow\n\nAllow at least an hour for the outdoor site and closer to two if the lighthouse is open, you sit with *Longplayer* or stop for food. A bright day gives the clearest views; grey weather arguably suits the industrial textures better. Wind is the more important variable.\n\n> Trinity Buoy Wharf is not hidden, exactly. It is simply placed where most London itineraries stop looking.\n\nCome for the novelty of a lighthouse in London. Stay for a site where engineering, art and the river still occupy the same untidy ground.",
-  "images": [
-    { "src": "/assets/journal/trinity-buoy-wharf-01.webp", "role": "hero", "alt": "The brick Experimental Lighthouse at Trinity Buoy Wharf", "caption": "The 1864 lighthouse was built for testing and training rather than guiding ships at sea.", "credit": "Paolo Pastorino", "width": 2048, "height": 1536 },
-    { "src": "/assets/journal/trinity-buoy-wharf-02.webp", "role": "inline", "alt": "The O2 and Docklands seen through a lighthouse window", "caption": "From the tower, the Lea, Thames, O2 and Docklands meet in one unusually industrial view.", "credit": "Paolo Pastorino", "width": 2048, "height": 1536 },
-    { "src": "/assets/journal/trinity-buoy-wharf-03.webp", "role": "detail", "alt": "Circular arrangement of singing bowls used for Longplayer", "caption": "Longplayer has been sounding since 1999 and is designed not to repeat for one thousand years.", "credit": "Paolo Pastorino", "width": 1536, "height": 2048 },
-    { "src": "/assets/journal/trinity-buoy-wharf-04.webp", "role": "closing", "alt": "Red lightship moored beside Trinity Buoy Wharf", "caption": "Vessels, studios and public art keep the site’s working-river character visible.", "credit": "Paolo Pastorino", "width": 2048, "height": 1536 }
+  "editorial_status": "draft",
+  "slug": "trinity-buoy-wharf-lighthouse",
+  "reading_minutes": 6,
+  "related_articles": [
+    "va-east-storehouse",
+    "blackheath-greenwich-walk"
   ],
   "practical": [
-    { "label": "Where", "value": "64 Orchard Place, Poplar, E14 0JW", "url": "https://www.trinitybuoywharf.com/visit" },
-    { "label": "Wharf hours", "value": "Daily 07:00–19:00, except Christmas Day", "url": "https://www.trinitybuoywharf.com/visit" },
-    { "label": "Lighthouse", "value": "Weekends: Apr–Sep 11:00–17:00; Oct–Mar 11:00–16:00", "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse" },
-    { "label": "Admission", "value": "Free; lighthouse access is limited", "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse" }
+    {
+      "label": "Where",
+      "value": "64 Orchard Place, Poplar, E14 0JW",
+      "url": "https://www.trinitybuoywharf.com/visit"
+    },
+    {
+      "label": "Wharf hours",
+      "value": "Daily 07:00–19:00, except Christmas Day",
+      "url": "https://www.trinitybuoywharf.com/visit"
+    },
+    {
+      "label": "Lighthouse",
+      "value": "Weekends: Apr–Sep 11:00–17:00; Oct–Mar 11:00–16:00",
+      "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse"
+    },
+    {
+      "label": "Admission",
+      "value": "Free; lighthouse access is limited",
+      "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse"
+    }
   ],
-  "related_tools": ["london-dashboard", "smart-navigation", "travel-fare-calculator", "loo-finder"],
-  "related_articles": ["va-east-storehouse", "blackheath-greenwich-walk"],
-  "tags": ["Trinity Buoy Wharf", "Lighthouse", "Longplayer", "East London", "Industrial heritage"],
+  "seo_title": "Trinity Buoy Wharf: Lighthouse and Longplayer Guide",
+  "updated_at": "2026-09-27T00:00:00+01:00",
+  "title": "Trinity Buoy Wharf: London’s lighthouse at the edge of the Thames",
+  "images": [
+    {
+      "src": "/assets/journal/trinity-buoy-wharf-01.webp",
+      "role": "hero",
+      "alt": "The brick Experimental Lighthouse at Trinity Buoy Wharf",
+      "caption": "The 1864 lighthouse was built for testing and training rather than guiding ships at sea.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "src": "/assets/journal/trinity-buoy-wharf-02.webp",
+      "role": "inline",
+      "alt": "The O2 and Docklands seen through a lighthouse window",
+      "caption": "From the tower, the Lea, Thames, O2 and Docklands meet in one unusually industrial view.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "src": "/assets/journal/trinity-buoy-wharf-03.webp",
+      "role": "detail",
+      "alt": "Circular arrangement of singing bowls used for Longplayer",
+      "caption": "Longplayer has been sounding since 1999 and is designed not to repeat for one thousand years.",
+      "credit": "Paolo Pastorino",
+      "width": 1536,
+      "height": 2048
+    },
+    {
+      "src": "/assets/journal/trinity-buoy-wharf-04.webp",
+      "role": "closing",
+      "alt": "Red lightship moored beside Trinity Buoy Wharf",
+      "caption": "Vessels, studios and public art keep the site’s working-river character visible.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536
+    }
+  ],
   "sources": [
-    { "label": "Trinity Buoy Wharf — Visit", "url": "https://www.trinitybuoywharf.com/visit", "checked_at": "2026-09-27" },
-    { "label": "Trinity Buoy Wharf — Lighthouse", "url": "https://www.trinitybuoywharf.com/architecture/lighthouse", "checked_at": "2026-09-27" },
-    { "label": "Trinity Buoy Wharf — Longplayer", "url": "https://www.trinitybuoywharf.com/whats-on/longplayer", "checked_at": "2026-09-27" }
+    {
+      "label": "Trinity Buoy Wharf — Visit",
+      "url": "https://www.trinitybuoywharf.com/visit",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "Trinity Buoy Wharf — Lighthouse",
+      "url": "https://www.trinitybuoywharf.com/architecture/lighthouse",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "Trinity Buoy Wharf — Longplayer",
+      "url": "https://www.trinitybuoywharf.com/whats-on/longplayer",
+      "checked_at": "2026-09-27"
+    }
   ],
-  "reading_minutes": 6,
-  "published_at": "",
-  "updated_at": "2026-09-27T00:00:00+01:00"
+  "tags": [
+    "Trinity Buoy Wharf",
+    "Lighthouse",
+    "Longplayer",
+    "East London",
+    "Industrial heritage"
+  ],
+  "description": "A field guide to Trinity Buoy Wharf: London’s only lighthouse, Longplayer, riverside views, public art and the practical details for visiting."
 }
