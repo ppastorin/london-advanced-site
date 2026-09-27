@@ -1,8 +1,12 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
   "article_id": "quentin-blake-centre",
-  "editorial_status": "draft",
-  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-09-27T17:23:43+01:00"
+  },
   "title": "Quentin Blake Centre for Illustration: oltre i disegni più noti",
   "slug": "quentin-blake-centre-illustrazione",
   "seo_title": "Quentin Blake Centre: guida alla visita",
@@ -11,26 +15,100 @@
   "dek": "La nuova casa londinese dell’illustrazione occupa un complesso industriale restaurato e dimostra che i disegni non sono un semplice accompagnamento. Sono la storia.",
   "body": "Il nome all’ingresso è quello di Quentin Blake, ma il Centre non è il monumento a un unico illustratore. Il suo vero argomento è il territorio mobile fra un’idea e un’immagine: libri illustrati, fumetti, reportage, murales, teatro e tutti quei disegni che non arrivano mai alla versione definitiva.\n\nÈ proprio questa ampiezza a rendere la visita interessante. Si può entrare pensando soprattutto ai tratti d’inchiostro associati ai libri di Roald Dahl e uscire riflettendo sull’illustrazione come gesto, racconto o presa di posizione.\n\n## Una nuova vita per New River Head\n\nIl Centre ha aperto nel giugno 2026 a New River Head, a Clerkenwell. Gli edifici dell’antico impianto idrico danno alla visita un carattere che una galleria completamente neutra non avrebbe. Mattoni, cortili e tracce del passato industriale incorniciano le mostre senza rubare loro la scena.\n\nGli spazi sono raccolti ma non minuscoli: si capiscono bene in una visita sola, senza dare l’impressione di aver pagato il biglietto per una stanza. Oltre alle gallerie ci sono una biblioteca, uno studio creativo, un caffè e un negozio. L’insieme assomiglia più a un centro vivo che a un santuario ben lucidato.\n\n## Parti da Quentin Blake, poi allarga lo sguardo\n\nLa mostra inaugurale di lunga durata, *Quentin Blake: Performance*, riunisce oltre cento lavori originali e indaga l’influenza del teatro sulla sua pratica. La sorpresa è vedere quanto velocemente uno stile familiare torni a sembrare nuovo. Quelle linee che paiono improvvisate rivelano un lavoro preciso su ritmo, movimento e ripetizione.\n\nSarebbe un peccato ridurre Blake alle collaborazioni con Dahl. I progetti per gli ospedali, i libri indipendenti, i lavori rivolti agli adulti e gli esperimenti di scala raccontano una carriera molto più larga. Visti insieme, i personaggi sembrano entrare in scena anziché aspettare docilmente sulla pagina.\n\nLe altre gallerie cambiano prospettiva e programma. Le esposizioni temporanee sono uno dei motivi per cui il Centre non va considerato una meta da visitare una volta soltanto. Prima di partire controlla sempre cosa c’è in corso, soprattutto se una mostra specifica è il motivo principale della visita.\n\n## Guarda da vicino, non di fretta\n\nL’illustrazione può sembrare facile perché l’immagine finale ha già risolto tutti i suoi problemi. Gli originali, invece, lasciano affiorare esitazioni e ripensamenti: la matita sotto l’inchiostro, una postura corretta, uno spazio vuoto che fa più lavoro del previsto. Un foglio incorniciato merita diversi minuti, soprattutto se accanto c’è un’altra versione della stessa idea.\n\nLa tentazione è fotografare ogni immagine divertente e passare oltre. Meglio scegliere pochi disegni e osservare come la linea detta il ritmo, da quale punto l’occhio entra nella pagina e che cosa è stato lasciato fuori. Il Centre dà il meglio quando insegna a leggere un’immagine con la stessa pazienza che riserviamo a un testo.\n\n## Quanto tempo dedicargli\n\nCalcola circa novanta minuti per le mostre, qualcosa in più se vuoi usare la biblioteca, fermarti al caffè o arrivare con bambini. Le dimensioni permettono di abbinare la visita al London Canal Museum, a Exmouth Market o a una passeggiata per Clerkenwell. Inserirla in fretta fra due musei più grandi, invece, le toglierebbe molto.\n\nIl Centre apre dal mercoledì alla domenica. Le mostre sono a pagamento, con riduzioni, mentre alcune attività ed eventi sono gratuiti. Programma, prezzi e ultimo ingresso possono cambiare: meglio consultare il sito ufficiale e non una vecchia scheda trovata online.\n\n## Per chi vale la visita\n\nIllustratori, designer e famiglie sono il pubblico più ovvio, ma non l’unico. Chiunque sia curioso di capire come un’idea prende forma troverà qualcosa: la sicurezza soltanto apparente di una linea finita, la comicità di un gesto minuscolo o la forza politica di un’immagine prima ancora che intervenga una didascalia.\n\n> Il risultato migliore del Centre è semplice: più a lungo guardi un disegno, meno semplice ti appare.\n\nVai pure per Quentin Blake, se è il richiamo che ti serve. Resta per scoprire che l’illustrazione non decora una storia: molto spesso è la parte che ci insegna come leggerla.",
   "images": [
-    { "src": "/assets/journal/quentin-blake-centre-01.webp", "role": "hero", "alt": "Disegno di paesaggio di Quentin Blake esposto in una cornice", "caption": "Gli originali rallentano lo sguardo e mostrano quanto lavoro si nasconde dietro una linea apparentemente spontanea.", "credit": "Paolo Pastorino", "width": 2400, "height": 1600 },
-    { "src": "/assets/journal/quentin-blake-centre-02.webp", "role": "inline", "alt": "Una visitatrice davanti alla sezione Community and Unity", "caption": "Il programma va oltre un solo nome e presenta l’illustrazione come una forma viva e pubblica.", "credit": "Paolo Pastorino", "width": 1800, "height": 2400 },
-    { "src": "/assets/journal/quentin-blake-centre-03.webp", "role": "detail", "alt": "Scena di strada londinese ricca di dettagli, esposta in galleria", "caption": "Scelte minute di scala, sequenza e spazio vuoto premiano chi si ferma a osservare.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800 },
-    { "src": "/assets/journal/quentin-blake-centre-04.webp", "role": "closing", "alt": "Installazione contemporanea dai colori vivaci all’interno del Centre", "caption": "Le mostre temporanee portano la visita dal libro illustrato alla cultura visiva contemporanea.", "credit": "Paolo Pastorino", "width": 1800, "height": 2400 }
+    {
+      "src": "/assets/journal/quentin-blake-centre-01.webp",
+      "role": "hero",
+      "alt": "Disegno di paesaggio di Quentin Blake esposto in una cornice",
+      "caption": "Gli originali rallentano lo sguardo e mostrano quanto lavoro si nasconde dietro una linea apparentemente spontanea.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/assets/journal/quentin-blake-centre-02.webp",
+      "role": "inline",
+      "alt": "Una visitatrice davanti alla sezione Community and Unity",
+      "caption": "Il programma va oltre un solo nome e presenta l’illustrazione come una forma viva e pubblica.",
+      "credit": "Paolo Pastorino",
+      "width": 1800,
+      "height": 2400
+    },
+    {
+      "src": "/assets/journal/quentin-blake-centre-03.webp",
+      "role": "detail",
+      "alt": "Scena di strada londinese ricca di dettagli, esposta in galleria",
+      "caption": "Scelte minute di scala, sequenza e spazio vuoto premiano chi si ferma a osservare.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/quentin-blake-centre-04.webp",
+      "role": "closing",
+      "alt": "Installazione contemporanea dai colori vivaci all’interno del Centre",
+      "caption": "Le mostre temporanee portano la visita dal libro illustrato alla cultura visiva contemporanea.",
+      "credit": "Paolo Pastorino",
+      "width": 1800,
+      "height": 2400
+    }
   ],
   "practical": [
-    { "label": "Dove", "value": "1 Myddelton Passage, Clerkenwell, EC1R 1AG", "url": "https://qbcentre.org.uk/your-visit" },
-    { "label": "Orari", "value": "Da mercoledì a domenica, 10:00–17:00; ultimo ingresso alle mostre 16:00", "url": "https://qbcentre.org.uk/your-visit" },
-    { "label": "Biglietti", "value": "Mostre a pagamento; riduzioni e alcune attività gratuite", "url": "https://qbcentre.org.uk/whats-on" },
-    { "label": "Tempo", "value": "Da 90 minuti a 2 ore", "url": "" }
+    {
+      "label": "Dove",
+      "value": "1 Myddelton Passage, Clerkenwell, EC1R 1AG",
+      "url": "https://qbcentre.org.uk/your-visit"
+    },
+    {
+      "label": "Orari",
+      "value": "Da mercoledì a domenica, 10:00–17:00; ultimo ingresso alle mostre 16:00",
+      "url": "https://qbcentre.org.uk/your-visit"
+    },
+    {
+      "label": "Biglietti",
+      "value": "Mostre a pagamento; riduzioni e alcune attività gratuite",
+      "url": "https://qbcentre.org.uk/whats-on"
+    },
+    {
+      "label": "Tempo",
+      "value": "Da 90 minuti a 2 ore",
+      "url": ""
+    }
   ],
-  "related_tools": ["london-dashboard", "smart-navigation", "travel-fare-calculator", "loo-finder"],
-  "related_articles": ["va-east-storehouse", "city-dragon-walk"],
-  "tags": ["Quentin Blake", "Clerkenwell", "Illustrazione", "Musei", "Arte"],
+  "related_tools": [
+    "london-dashboard",
+    "smart-navigation",
+    "travel-fare-calculator",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "va-east-storehouse",
+    "city-dragon-walk"
+  ],
+  "tags": [
+    "Quentin Blake",
+    "Clerkenwell",
+    "Illustrazione",
+    "Musei",
+    "Arte"
+  ],
   "sources": [
-    { "label": "Quentin Blake Centre — Visit", "url": "https://qbcentre.org.uk/your-visit", "checked_at": "2026-09-27" },
-    { "label": "Quentin Blake Centre — What’s on", "url": "https://qbcentre.org.uk/whats-on", "checked_at": "2026-09-27" },
-    { "label": "Quentin Blake: Performance", "url": "https://qbcentre.org.uk/exhibitions/quentin-blake-performance", "checked_at": "2026-09-27" }
+    {
+      "label": "Quentin Blake Centre — Visit",
+      "url": "https://qbcentre.org.uk/your-visit",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "Quentin Blake Centre — What’s on",
+      "url": "https://qbcentre.org.uk/whats-on",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "Quentin Blake: Performance",
+      "url": "https://qbcentre.org.uk/exhibitions/quentin-blake-performance",
+      "checked_at": "2026-09-27"
+    }
   ],
   "reading_minutes": 6,
-  "published_at": "",
-  "updated_at": "2026-09-27T00:00:00+01:00"
+  "published_at": "2026-09-27T17:23:43+01:00",
+  "updated_at": "2026-09-27T17:23:43+01:00"
 }

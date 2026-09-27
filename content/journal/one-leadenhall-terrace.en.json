@@ -1,35 +1,109 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
   "article_id": "one-leadenhall-terrace",
-  "editorial_status": "draft",
-  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-09-27T17:23:43+01:00"
+  },
   "title": "One Leadenhall terrace: London’s best new low-level view?",
   "slug": "one-leadenhall-public-terrace",
   "seo_title": "One Leadenhall Public Terrace: Free London View",
   "description": "A practical guide to the free public terrace at One Leadenhall: access, opening hours, views and why its low height is part of the appeal.",
   "eyebrow": "City of London · Free viewpoints",
   "dek": "This is not another race to the top of the skyline. Four floors above Leadenhall Market, the terrace succeeds because the City remains close enough to read.",
-  "body": "London’s newest viewpoints usually sell altitude. The Terrace at One Leadenhall offers something more useful: proximity. From Level 4, Leadenhall Market is directly below, church towers sit among office blocks and the modern City feels less like a postcard than a complicated piece of urban machinery.\n\nIt is free, requires no ticket under normal arrangements and takes only a few minutes to reach from street level. That makes it easy to add to a City walk without arranging the day around it.\n\n## Why a low terrace works\n\nAt first, four floors may not sound much in a district of towers. Yet that is precisely the advantage. High viewing platforms flatten London into a distant panorama; here, the relationships between buildings remain visible. You can see the roof of Leadenhall Market, the stone and brick fragments that survived around it, and the much larger forms that now crowd the same streets.\n\nThe planting and seating soften the space without turning it into a destination restaurant. It feels like a public terrace rather than a bar with an inconvenient obligation to buy something. Stay for ten minutes on a busy day or bring a coffee and give the view longer. Both approaches make sense.\n\n## Finding the entrance\n\nThe dedicated entrance is on Whittington Avenue at number 8. Two lifts run directly to the terrace lobby on Level 4. This matters because approaching from Leadenhall Street can make the access look more mysterious than it is; do not wander through unrelated office entrances.\n\nThere is no standard advance booking and entry is free. Capacity is limited, however, and security or temporary closures can affect access. The terrace is outdoors, so strong wind or poor weather may also change the experience. Check the official page if you are making a special trip.\n\n## What to look for\n\nBegin with Leadenhall Market. From above, its Victorian roof reads as a complete structure rather than a decorative ceiling glimpsed between shops. Then look beyond it: the Walkie Talkie, older church towers and a compressed collection of roofs show how little empty space the City contains.\n\nThe view changes rapidly with the light. Midday reveals detail; late afternoon brings reflections and sharper contrasts between stone and glass. After dark, the terrace becomes more atmospheric, although the historic fabric below is harder to read.\n\nPhotographers should bring a moderate wide-angle lens rather than expecting an unobstructed 360-degree panorama. Railings, planting and the surrounding tower all shape the composition. They are not defects; they explain where you are.\n\n## Make it part of a better City walk\n\nA standalone visit can be brief, so pair it with places that benefit from the same close-looking. Walk through Leadenhall Market, inspect the medieval street pattern around St Michael Cornhill, or continue to the Monument and the riverside. The boundary dragons offer another ready-made thread through the district.\n\nThe terrace also works as a pause between Liverpool Street and London Bridge. Instead of treating the City as a zone to cross quickly, use the elevated view to choose what deserves attention at ground level.\n\n## Is it worth going out of your way?\n\nYes, if you are already in central London or enjoy architecture. No, if what you want is the highest possible view or a grand indoor observatory. One Leadenhall is modest by skyscraper standards and better for it.\n\n> The pleasure is not seeing more of London. It is seeing a small, dense part of it more clearly.\n\nFree viewpoints often become popular because they mimic paid attractions. This one is more distinctive: it gives the City back its scale, layers and awkward collisions. Four floors are enough.",
+  "body": "London’s newest viewpoints usually sell altitude. The Terrace at One Leadenhall offers something more useful: proximity. From Level 4, Leadenhall Market is directly below, church towers sit among office blocks and the modern City feels less like a postcard than a complicated piece of urban machinery.\n\nIt is free, requires no ticket under normal arrangements and takes only a few minutes to reach from street level. That makes it easy to add to a City walk without arranging the day around it.\n\n## Why a low terrace works\n\nAt first, four floors may not sound much in a district of towers. Yet that is precisely the advantage. High viewing platforms flatten London into a distant panorama; here, the relationships between buildings remain visible. You can see the roof of Leadenhall Market, the stone and brick fragments that survived around it, and the much larger forms that now crowd the same streets.\n\nThe planting and seating soften the space without turning it into a destination restaurant. It feels like a public terrace rather than a bar with an inconvenient obligation to buy something. Stay for ten minutes on a busy day or bring a coffee and give the view longer. Both approaches make sense.\n\n## Finding the entrance\n\nThe dedicated entrance is on Whittington Avenue at number 8. Two lifts run directly to the terrace lobby on Level 4. This matters because approaching from Leadenhall Street can make the access look more mysterious than it is; do not wander through unrelated office entrances.\n\nThere is no standard advance booking and entry is free. Capacity is limited, however, and security or temporary closures can affect access. The terrace is outdoors, so strong wind or poor weather may also change the experience. Check the official page if you are making a special trip.\n\n## What to look for\n\nBegin with Leadenhall Market. From above, its Victorian roof reads as a complete structure rather than a decorative ceiling glimpsed between shops. Then look beyond it: the Walkie Talkie, older church towers and a compressed collection of roofs show how little empty space the City contains. Look for St Paul’s Cathedral playing hide-and-seek between the buildings.\n\nThe view changes rapidly with the light. Midday reveals detail; late afternoon brings reflections and sharper contrasts between stone and glass. After dark, the terrace becomes more atmospheric, although the historic fabric below is harder to read.\n\nPhotographers should bring a moderate wide-angle lens rather than expecting an unobstructed 360-degree panorama. Railings, planting and the surrounding tower all shape the composition. They are not defects; they explain where you are.\n\n## Make it part of a better City walk\n\nA standalone visit can be brief, so pair it with places that benefit from the same close-looking. Walk through Leadenhall Market, inspect the medieval street pattern around St Michael Cornhill, or continue to the Monument and the riverside. The boundary dragons offer another ready-made thread through the district.\n\nThe terrace also works as a pause between Liverpool Street and London Bridge. Instead of treating the City as a zone to cross quickly, use the elevated view to choose what deserves attention at ground level.\n\n## Is it worth going out of your way?\n\nYes, if you are already in central London or enjoy architecture. No, if what you want is the highest possible view or a grand indoor observatory. One Leadenhall is modest by skyscraper standards and better for it.\n\n> The pleasure is not seeing more of London. It is seeing a small, dense part of it more clearly.\n\nFree viewpoints often become popular because they mimic paid attractions. This one is more distinctive: it gives the City back its scale, layers and awkward collisions. Four floors are enough.",
   "images": [
-    { "src": "/assets/journal/one-leadenhall-terrace-01.webp", "role": "hero", "alt": "City skyline and church towers seen from the One Leadenhall terrace", "caption": "The low viewpoint keeps church towers, market roofs and office blocks in the same frame.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800 },
-    { "src": "/assets/journal/one-leadenhall-terrace-02.webp", "role": "inline", "alt": "Landscaped seating and planting on the public terrace", "caption": "Planting and seats make the space useful as a pause, not merely a photo stop.", "credit": "Paolo Pastorino", "width": 1800, "height": 2400 },
-    { "src": "/assets/journal/one-leadenhall-terrace-03.webp", "role": "detail", "alt": "View towards the Walkie Talkie and surrounding City towers", "caption": "Modern towers remain close enough to read against the older City below.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800 },
-    { "src": "/assets/journal/one-leadenhall-terrace-04.webp", "role": "closing", "alt": "One Leadenhall tower rising beside the covered market", "caption": "The entrance on Whittington Avenue is easier to find than the building’s scale suggests.", "credit": "Paolo Pastorino", "width": 1800, "height": 2400 }
+    {
+      "src": "/assets/journal/one-leadenhall-terrace-01.webp",
+      "role": "hero",
+      "alt": "City skyline and church towers seen from the One Leadenhall terrace",
+      "caption": "The low viewpoint keeps church towers, market roofs and office blocks in the same frame.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/one-leadenhall-terrace-02.webp",
+      "role": "inline",
+      "alt": "Landscaped seating and planting on the public terrace",
+      "caption": "Planting and seats make the space useful as a pause, not merely a photo stop.",
+      "credit": "Paolo Pastorino",
+      "width": 1800,
+      "height": 2400
+    },
+    {
+      "src": "/assets/journal/one-leadenhall-terrace-03.webp",
+      "role": "detail",
+      "alt": "View towards the Walkie Talkie and surrounding City towers",
+      "caption": "Modern towers remain close enough to read against the older City below.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/one-leadenhall-terrace-04.webp",
+      "role": "closing",
+      "alt": "One Leadenhall tower rising beside the covered market",
+      "caption": "The entrance on Whittington Avenue is easier to find than the building’s scale suggests.",
+      "credit": "Paolo Pastorino",
+      "width": 1800,
+      "height": 2400
+    }
   ],
   "practical": [
-    { "label": "Entrance", "value": "8 Whittington Avenue, EC3V 1LE", "url": "https://oneleadenhall.co.uk/the-terrace/" },
-    { "label": "Hours", "value": "Mon–Fri 09:30–22:30; weekends and bank holidays 10:00–22:30", "url": "https://oneleadenhall.co.uk/the-terrace/" },
-    { "label": "Admission", "value": "Free; no standard booking required", "url": "https://oneleadenhall.co.uk/the-terrace/" },
-    { "label": "Allow", "value": "20–45 minutes", "url": "" }
+    {
+      "label": "Entrance",
+      "value": "8 Whittington Avenue, EC3V 1LE",
+      "url": "https://oneleadenhall.co.uk/the-terrace/"
+    },
+    {
+      "label": "Hours",
+      "value": "Mon–Fri 09:30–22:30; weekends and bank holidays 10:00–22:30",
+      "url": "https://oneleadenhall.co.uk/the-terrace/"
+    },
+    {
+      "label": "Admission",
+      "value": "Free; no standard booking required",
+      "url": "https://oneleadenhall.co.uk/the-terrace/"
+    },
+    {
+      "label": "Allow",
+      "value": "20–45 minutes",
+      "url": ""
+    }
   ],
-  "related_tools": ["london-dashboard", "smart-navigation", "escape-the-crowds", "loo-finder"],
-  "related_articles": ["city-dragon-walk", "trinity-buoy-wharf"],
-  "tags": ["One Leadenhall", "City of London", "Free viewpoints", "Architecture", "Leadenhall Market"],
+  "related_tools": [
+    "london-dashboard",
+    "smart-navigation",
+    "escape-the-crowds",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "city-dragon-walk",
+    "trinity-buoy-wharf"
+  ],
+  "tags": [
+    "One Leadenhall",
+    "City of London",
+    "Free viewpoints",
+    "Architecture",
+    "Leadenhall Market"
+  ],
   "sources": [
-    { "label": "One Leadenhall — The Terrace", "url": "https://oneleadenhall.co.uk/the-terrace/", "checked_at": "2026-09-27" },
-    { "label": "One Leadenhall — Building", "url": "https://oneleadenhall.co.uk/", "checked_at": "2026-09-27" }
+    {
+      "label": "One Leadenhall — The Terrace",
+      "url": "https://oneleadenhall.co.uk/the-terrace/",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "One Leadenhall — Building",
+      "url": "https://oneleadenhall.co.uk/",
+      "checked_at": "2026-09-27"
+    }
   ],
   "reading_minutes": 6,
-  "published_at": "",
-  "updated_at": "2026-09-27T00:00:00+01:00"
+  "published_at": "2026-09-27T17:23:43+01:00",
+  "updated_at": "2026-09-27T17:23:43+01:00"
 }

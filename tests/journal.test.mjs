@@ -22,15 +22,26 @@ test("publication gate requires two fully approved language records", () => {
   assert.equal(isPublicPair(approved, null), false);
 });
 
-test("the seed article remains unpublished", async () => {
-  const [english, italian] = await Promise.all([
-    readFile(new URL("../content/journal/va-east-storehouse.en.json", import.meta.url), "utf8").then(JSON.parse),
-    readFile(new URL("../content/journal/va-east-storehouse.it.json", import.meta.url), "utf8").then(JSON.parse)
-  ]);
-  assert.equal(english.article_id, italian.article_id);
-  assert.equal(isPublicPair(english, italian), false);
-  assert.equal(english.editorial_status, "draft");
-  assert.equal(italian.editorial_status, "draft");
+test("the approved bilingual launch articles pass the publication gate", async () => {
+  const articleIds = [
+    "blackheath-greenwich-walk",
+    "city-dragon-walk",
+    "one-leadenhall-terrace",
+    "quentin-blake-centre",
+    "trinity-buoy-wharf",
+    "va-east-storehouse"
+  ];
+
+  for (const articleId of articleIds) {
+    const [english, italian] = await Promise.all([
+      readFile(new URL(`../content/journal/${articleId}.en.json`, import.meta.url), "utf8").then(JSON.parse),
+      readFile(new URL(`../content/journal/${articleId}.it.json`, import.meta.url), "utf8").then(JSON.parse)
+    ]);
+    assert.equal(english.article_id, italian.article_id);
+    assert.equal(isPublicPair(english, italian), true);
+    assert.equal(english.editorial_status, "published");
+    assert.equal(italian.editorial_status, "published");
+  }
 });
 
 test("Decap OAuth starts with state protection and exchanges a valid callback", async () => {

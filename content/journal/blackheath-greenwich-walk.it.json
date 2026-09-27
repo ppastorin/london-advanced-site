@@ -1,36 +1,114 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
   "article_id": "blackheath-greenwich-walk",
-  "editorial_status": "draft",
-  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-09-27T17:23:43+01:00"
+  },
   "title": "Da Blackheath a Greenwich: la strada più lenta verso il Tamigi",
   "slug": "passeggiata-blackheath-greenwich",
   "seo_title": "Passeggiata da Blackheath a Greenwich: itinerario",
-  "description": "Itinerario a piedi da Blackheath a Greenwich attraverso la brughiera e il parco reale, con belvedere tranquilli, alberi storici e deviazioni utili.",
+  "description": "Itinerario a piedi da Blackheath a Greenwich attraverso la brughiera e il parco reale, con un belvedere tranquillo, alberi storici e deviazioni utili.",
   "eyebrow": "Londra sud-est · Passeggiate",
   "dek": "Si parte dai negozi di quartiere, si attraversa lo spazio aperto della brughiera e si entra a Greenwich Park dall’alto. Il panorama famoso arriva dopo; la parte più bella è il percorso per raggiungerlo.",
-  "body": "Quasi tutti visitano Greenwich partendo dal fiume e salendo verso l’Osservatorio. Cominciare da Blackheath rovescia la fatica e migliora il racconto. Si arriva rapidamente dal centro, si dedica un po’ di tempo a un quartiere con un ritmo tutto suo, si attraversa una grande porzione di cielo e infine si scende nel parco mentre Londra compare a poco a poco.\n\nL’itinerario è abbastanza semplice da lasciare spazio all’improvvisazione. La sua forza sta nelle deviazioni facoltative: una libreria dell’usato, il giardino fiorito, una quercia antica, un belvedere meno affollato e, alla fine, uno o due interni eccezionali.\n\n## Comincia da Blackheath, non dall’uscita della stazione\n\nBlackheath dista circa quindici minuti di treno da London Bridge, ma non avere fretta di puntare subito verso il parco. Le strade attorno alla stazione meritano un piccolo giro fra negozi indipendenti, caffè e una libreria in cui curiosare può facilmente diventare il primo ritardo della giornata.\n\nPoi attraversa la brughiera. È l’apertura dello spazio a fare la differenza. Canary Wharf e la City compaiono all’orizzonte, ma il paesaggio immediato rifiuta la densità che associamo a Londra. Quando tira vento l’esposizione si sente davvero: porta uno strato in più anche se in centro la temperatura sembra mite.\n\nRanger’s House segna il margine di Greenwich Park e, quando è aperta, può diventare una visita a parte. In alternativa funziona semplicemente come riferimento per entrare nel parco poco distante.\n\n## Scegli il lato più tranquillo di Greenwich Park\n\nLa strada diretta verso l’Osservatorio è evidente e spesso affollata. Meglio cominciare dal Flower Garden, dove i sentieri sono più raccolti e il parco si rivela gradualmente. Da lì cerca Queen Elizabeth’s Oak. L’albero antico è caduto da tempo, ma i resti e le storie che lo circondano creano una sosta sorprendentemente efficace.\n\nOne Tree Hill è la deviazione da non perdere. Il belvedere si trova a est della collina dell’Osservatorio e guarda il Tamigi da un’angolazione più tranquilla. Il sentiero è ripido, ma conserva più paesaggio in primo piano e non dà l’impressione di una coda per scattare tutti la stessa foto. Le nuove sedute invitano a fermarsi.\n\nSe il tempo o la mobilità sono limitati, resta sui percorsi principali e dirigiti verso il belvedere del generale Wolfe. L’itinerario continua a funzionare, soltanto in modo più diretto.\n\n## Scendere attraverso gli strati di Greenwich\n\nDall’alto, la geometria della Queen’s House e dell’Old Royal Naval College si allinea verso il fiume. Scendere trasforma un panorama famoso in una sequenza di luoghi reali. La Queen’s House merita una visita quando è aperta, soprattutto per le Tulip Stairs: la spirale azzurra è molto più delicata di quanto faccia immaginare l’esterno formale.\n\nProsegui verso l’Old Royal Naval College. Attraversare i cortili è gratuito e l’insieme resta grandioso anche senza biglietto. La Chapel of St Peter and St Paul è normalmente aperta durante gli orari di visita; il Painted Hall richiede un biglietto, oggi valido anche per tornare durante l’anno. Le dimensioni della sala ne fanno un finale memorabile, se hai ancora energie.\n\nGreenwich Market è a pochi passi, ma conviene considerarlo un premio facoltativo e non un finale obbligato. Nei fine settimana più affollati, una passeggiata sul fiume o un caffè tranquillo possono essere scelte migliori.\n\n## Distanza e tempi\n\nIl percorso base misura circa 5 chilometri, a seconda del tracciato scelto nel parco. Con Flower Garden, One Tree Hill, visite agli interni e soste a Blackheath si arriva facilmente a 7 chilometri e si riempie gran parte della giornata. Calcola almeno due ore senza fermate e da tre a cinque per la versione che rende davvero giustizia all’itinerario.\n\nLa direzione generale è in discesa, ma restano alcune brevi salite e sentieri ripidi. Dopo piogge intense, i tratti più morbidi possono diventare fangosi. Gli orari dei cancelli pedonali cambiano con le stagioni: controlla il sito dei Royal Parks se vuoi partire molto presto o finire tardi.\n\n## Perché questo verso è migliore\n\nConcludere a Greenwich offre più possibilità per il ritorno: treni, DLR, autobus oppure il battello verso il centro. Soprattutto, il percorso cresce in modo naturale. Comincia nella vita quotidiana di un quartiere, si apre sul paesaggio e termina fra alcune delle architetture più solenni di Londra.\n\n> Il celebre panorama di Greenwich non è la destinazione. È il momento in cui l’intera passeggiata rivela finalmente dove stava andando.\n\nPrendi la strada lenta verso il basso. I monumenti saranno ancora lì, ma arriveranno con un contesto invece di presentarsi tutti insieme.",
+  "body": "Quasi tutti visitano Greenwich partendo dal fiume e salendo verso l’Osservatorio. Cominciare da Blackheath rovescia la fatica e migliora il racconto. Si arriva rapidamente dal centro, si dedica un po’ di tempo a un quartiere con un ritmo tutto suo, si attraversa una grande porzione di cielo e prato, e infine si scende nel parco mentre Londra compare a poco a poco.\n\nL’itinerario è abbastanza semplice da lasciare spazio all’improvvisazione. La sua forza sta nelle deviazioni facoltative: una libreria dell’usato, il giardino fiorito, una quercia antica, un belvedere meno affollato e, alla fine, uno o due interni eccezionali.\n\n## Comincia da Blackheath, non dall’uscita della stazione\n\nBlackheath dista circa quindici minuti di treno da London Bridge, ma non avere fretta di puntare subito verso il parco. Le strade attorno alla stazione meritano un piccolo giro fra negozi indipendenti, caffè e una libreria in cui curiosare può facilmente diventare il primo ritardo della giornata.\n\nPoi attraversa la brughiera. È l’apertura dello spazio a fare la differenza. Canary Wharf e la City compaiono all’orizzonte, ma il paesaggio immediato rifiuta la densità che associamo a Londra. Quando tira vento l’esposizione si sente davvero: porta uno strato in più anche se in centro la temperatura sembra mite.\n\nLa Ranger’s House segna il margine di Greenwich Park e, quando è aperta, può diventare una visita a parte. In alternativa funziona semplicemente come riferimento per entrare nel parco poco distante.\n\n## Scegli il lato più tranquillo di Greenwich Park\n\nLa strada diretta verso l’Osservatorio è evidente e spesso affollata. Meglio cominciare dal Flower Garden, dove i sentieri sono più raccolti e il parco si rivela gradualmente. Da lì cerca Queen Elizabeth’s Oak. L’albero antico è caduto da tempo, ma i resti e le storie che lo circondano creano una sosta sorprendentemente efficace.\n\nOne Tree Hill è la deviazione da non perdere. Il belvedere si trova a est della collina dell’Osservatorio e guarda il Tamigi da un’angolazione più tranquilla. Il sentiero è ripido, ma conserva più paesaggio in primo piano e non dà l’impressione di una coda per scattare tutti la stessa foto. Le nuove sedute invitano a fermarsi.\n\nSe il tempo o la mobilità sono limitati, resta sui percorsi principali e dirigiti verso il belvedere del generale Wolfe. L’itinerario continua a funzionare, soltanto in modo più diretto.\n\n## Scendere attraverso gli strati di Greenwich\n\nDall’alto, la geometria della Queen’s House e dell’Old Royal Naval College si allinea verso il fiume. Scendere trasforma un panorama famoso in una sequenza di luoghi reali. La Queen’s House merita una visita quando è aperta, soprattutto per le Tulip Stairs: la spirale azzurra è molto più delicata di quanto faccia immaginare l’esterno formale.\n\nProsegui verso l’Old Royal Naval College. Attraversare i cortili è gratuito e l’insieme resta grandioso anche senza biglietto. La Chapel of St Peter and St Paul è normalmente aperta durante gli orari di visita; la Painted Hall richiede un biglietto, oggi valido anche per tornare durante l’anno. Le dimensioni della sala ne fanno un finale memorabile, se hai ancora energie.\n\nGreenwich Market è a pochi passi, ma conviene considerarlo un premio facoltativo e non un finale obbligato. Nei fine settimana più affollati, una passeggiata sul fiume o un caffè tranquillo possono essere scelte migliori.\n\n## Distanza e tempi\n\nIl percorso base misura circa 5 chilometri, a seconda del tracciato scelto nel parco. Con Flower Garden, One Tree Hill, visite agli interni e soste a Blackheath si arriva facilmente a 7 chilometri e si riempie gran parte della giornata. Calcola almeno due ore senza fermate e da tre a cinque per la versione che rende davvero giustizia all’itinerario.\n\nLa direzione generale è in discesa, ma restano alcune brevi salite e sentieri ripidi. Dopo piogge intense, i tratti più morbidi possono diventare fangosi. Gli orari dei cancelli pedonali cambiano con le stagioni: controlla il sito dei Royal Parks se vuoi partire molto presto o finire tardi.\n\n## Perché questo verso è migliore\n\nConcludere a Greenwich offre più possibilità per il ritorno: treni, DLR, autobus oppure il battello verso il centro. Soprattutto, il percorso cresce in modo naturale. Comincia nella vita quotidiana di un quartiere, si apre sul paesaggio e termina fra alcune delle architetture più solenni di Londra.\n\n> Il celebre panorama di Greenwich non è la destinazione. È il momento in cui l’intera passeggiata rivela finalmente dove stava andando.\n\nPrendi la strada lenta verso il basso. I monumenti saranno ancora lì, ma arriveranno con un contesto invece di presentarsi tutti insieme.",
   "images": [
-    { "src": "/assets/journal/blackheath-greenwich-walk-01.webp", "role": "hero", "alt": "Lo skyline di Canary Wharf oltre lo spazio aperto di Blackheath", "caption": "La passeggiata comincia con un cielo enorme e lo skyline in lontananza, prima che Greenwich Park restringa la visuale.", "credit": "Paolo Pastorino", "width": 750, "height": 1334 },
-    { "src": "/assets/journal/blackheath-greenwich-walk-02.webp", "role": "inline", "alt": "Facciata azzurra di una libreria dell’usato a Blackheath", "caption": "I negozi indipendenti di Blackheath sono un buon motivo per non dirigersi subito verso il parco.", "credit": "Paolo Pastorino", "width": 1800, "height": 2400 },
-    { "src": "/assets/journal/blackheath-greenwich-walk-03.webp", "role": "detail", "alt": "Cartello informativo accanto ai resti di Queen Elizabeth’s Oak", "caption": "Queen Elizabeth’s Oak aggiunge una piccola deviazione ricca di storie, lontana dai sentieri più affollati.", "credit": "Paolo Pastorino", "width": 1350, "height": 1800 },
-    { "src": "/assets/journal/blackheath-greenwich-walk-04.webp", "role": "closing", "alt": "La spirale azzurra delle Tulip Stairs nella Queen’s House", "caption": "Le Tulip Stairs premiano un’ultima deviazione al coperto prima di raggiungere il fiume.", "credit": "Paolo Pastorino", "width": 1800, "height": 2400 }
+    {
+      "src": "/assets/journal/blackheath-greenwich-walk-01.webp",
+      "role": "hero",
+      "alt": "Lo skyline di Canary Wharf oltre lo spazio aperto di Blackheath",
+      "caption": "La passeggiata comincia con un cielo enorme e lo skyline in lontananza, prima che Greenwich Park restringa la visuale.",
+      "credit": "Paolo Pastorino",
+      "width": 750,
+      "height": 1334
+    },
+    {
+      "src": "/assets/journal/blackheath-greenwich-walk-02.webp",
+      "role": "inline",
+      "alt": "Facciata azzurra di una libreria dell’usato a Blackheath",
+      "caption": "I negozi indipendenti di Blackheath sono un buon motivo per non dirigersi subito verso il parco.",
+      "credit": "Paolo Pastorino",
+      "width": 1800,
+      "height": 2400
+    },
+    {
+      "src": "/assets/journal/blackheath-greenwich-walk-03.webp",
+      "role": "detail",
+      "alt": "Cartello informativo accanto ai resti di Queen Elizabeth’s Oak",
+      "caption": "Queen Elizabeth’s Oak aggiunge una piccola deviazione ricca di storie, lontana dai sentieri più affollati.",
+      "credit": "Paolo Pastorino",
+      "width": 1350,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/blackheath-greenwich-walk-04.webp",
+      "role": "closing",
+      "alt": "La spirale azzurra delle Tulip Stairs nella Queen’s House",
+      "caption": "Le Tulip Stairs premiano un’ultima deviazione al coperto prima di raggiungere il fiume.",
+      "credit": "Paolo Pastorino",
+      "width": 1800,
+      "height": 2400
+    }
   ],
   "practical": [
-    { "label": "Partenza", "value": "Stazione di Blackheath", "url": "" },
-    { "label": "Arrivo", "value": "Stazione, DLR o molo di Greenwich", "url": "" },
-    { "label": "Distanza", "value": "Circa 5–7 km, secondo le deviazioni", "url": "" },
-    { "label": "Tempo", "value": "2 ore dirette; 3–5 ore con le soste", "url": "https://www.royalparks.org.uk/visit/parks/greenwich-park" }
+    {
+      "label": "Partenza",
+      "value": "Stazione di Blackheath",
+      "url": ""
+    },
+    {
+      "label": "Arrivo",
+      "value": "Stazione, DLR o molo di Greenwich",
+      "url": ""
+    },
+    {
+      "label": "Distanza",
+      "value": "Circa 5–7 km, secondo le deviazioni",
+      "url": ""
+    },
+    {
+      "label": "Tempo",
+      "value": "2 ore dirette; 3–5 ore con le soste",
+      "url": "https://www.royalparks.org.uk/visit/parks/greenwich-park"
+    }
   ],
-  "related_tools": ["london-dashboard", "smart-navigation", "travel-fare-calculator", "loo-finder"],
-  "related_articles": ["trinity-buoy-wharf", "city-dragon-walk"],
-  "tags": ["Blackheath", "Greenwich", "Passeggiate", "Greenwich Park", "Londra sud-est"],
+  "related_tools": [
+    "london-dashboard",
+    "smart-navigation",
+    "travel-fare-calculator",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "trinity-buoy-wharf",
+    "city-dragon-walk"
+  ],
+  "tags": [
+    "Blackheath",
+    "Greenwich",
+    "Passeggiate",
+    "Greenwich Park",
+    "Londra sud-est"
+  ],
   "sources": [
-    { "label": "The Royal Parks — Greenwich Park", "url": "https://www.royalparks.org.uk/visit/parks/greenwich-park", "checked_at": "2026-09-27" },
-    { "label": "The Royal Parks — Queen Elizabeth’s Oak", "url": "https://www.royalparks.org.uk/read-watch-listen/queen-elizabeth-oak-greenwich-park", "checked_at": "2026-09-27" },
-    { "label": "Old Royal Naval College — Plan a visit", "url": "https://ornc.org/plan-a-visit/", "checked_at": "2026-09-27" }
+    {
+      "label": "The Royal Parks — Greenwich Park",
+      "url": "https://www.royalparks.org.uk/visit/parks/greenwich-park",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "The Royal Parks — Queen Elizabeth’s Oak",
+      "url": "https://www.royalparks.org.uk/read-watch-listen/queen-elizabeth-oak-greenwich-park",
+      "checked_at": "2026-09-27"
+    },
+    {
+      "label": "Old Royal Naval College — Plan a visit",
+      "url": "https://ornc.org/plan-a-visit/",
+      "checked_at": "2026-09-27"
+    }
   ],
   "reading_minutes": 6,
-  "published_at": "",
-  "updated_at": "2026-09-27T00:00:00+01:00"
+  "published_at": "2026-09-27T17:23:43+01:00",
+  "updated_at": "2026-09-27T17:23:43+01:00"
 }
