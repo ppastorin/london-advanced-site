@@ -36,6 +36,15 @@ const requiredAssets = [
   "dist/events/events.js",
   "dist/about/index.html",
   "dist/methodology/index.html",
+  "dist/journal/index.html",
+  "dist/journal/feed.xml",
+  "dist/it/journal/index.html",
+  "dist/journal.css",
+  "dist/journal.js",
+  "dist/studio/index.html",
+  "dist/studio/config.yml",
+  "dist/studio/preview.js",
+  "dist/studio/preview.css",
   "dist/it/index.html",
   "dist/it/chi-sono/index.html",
   "dist/it/metodologia/index.html",
@@ -81,8 +90,9 @@ try {
   if (wrangler.keep_vars !== true) fail("wrangler.jsonc must preserve dashboard variables and secrets during deployment.");
   if (wrangler.assets?.not_found_handling !== "404-page") fail('wrangler.jsonc must use not_found_handling "404-page".');
   const contactEmail = wrangler.send_email?.find((binding) => binding.name === "CONTACT_EMAIL");
-  if (contactEmail?.destination_address !== "ppastorin@gmail.com") {
-    fail("wrangler.jsonc must bind CONTACT_EMAIL to the verified contact destination.");
+  if (!contactEmail) fail("wrangler.jsonc must expose the CONTACT_EMAIL binding.");
+  if (contactEmail?.destination_address || contactEmail?.allowed_destination_addresses) {
+    fail("Contact destinations must be stored as Worker secrets, not committed in wrangler.jsonc.");
   }
 } catch (error) {
   fail(`wrangler.jsonc is not valid JSON: ${error.message}`);
@@ -461,6 +471,55 @@ if (!appText.includes('href="/about/"') || !appText.includes('href="/methodology
   fail("The homepage navigation must link to About and Methodology.");
 }
 
+const journalIndex = requireFile("dist/journal/index.html");
+const italianJournalIndex = requireFile("dist/it/journal/index.html");
+for (const [label, html, canonical, alternate] of [
+  ["English Journal", journalIndex, "https://www.londonadvanced.com/journal/", "https://www.londonadvanced.com/it/journal/"],
+  ["Italian Journal", italianJournalIndex, "https://www.londonadvanced.com/it/journal/", "https://www.londonadvanced.com/journal/"]
+]) {
+  for (const marker of [
+    `<link rel="canonical" href="${canonical}">`,
+    `hreflang="en-GB"`,
+    `hreflang="it-IT"`,
+    `hreflang="x-default"`,
+    '"@type": "CollectionPage"',
+    '"@type": "ItemList"',
+    '"@type": "BreadcrumbList"',
+    'href="/journal.css"',
+    `href="${new URL(alternate).pathname}"`
+  ]) {
+    if (!html.includes(marker)) fail(`${label} is missing ${marker}.`);
+  }
+}
+for (const [label, html] of [["English homepage", homepageHtml], ["Italian homepage", italianHomepageHtml]]) {
+  if (!html.includes('href="/journal.css"')) fail(`${label} must load the Journal card styles.`);
+}
+if (!homepageHtml.includes('href="/journal/"') || !italianHomepageHtml.includes('href="/it/journal/"')) {
+  fail("Homepage Journal pathways must use the bilingual Journal indexes.");
+}
+if (!sitemap.includes("https://www.londonadvanced.com/journal/") || !sitemap.includes("https://www.londonadvanced.com/it/journal/")) {
+  fail("The sitemap must include both Journal indexes.");
+}
+if (sitemap.includes("/_preview/")) fail("The sitemap must never expose draft Journal previews.");
+const studioConfig = requireFile("dist/studio/config.yml");
+for (const marker of [
+  "publish_mode: editorial_workflow",
+  "structure: multiple_files",
+  "locales: [en, it]",
+  "format: json",
+  "editorial_status",
+  "approval",
+  "media_processing:"
+]) {
+  if (!studioConfig.includes(marker)) fail(`Journal Studio config is missing ${marker}.`);
+}
+if (!headers.includes("/studio/*") || !headers.includes("X-Robots-Tag: noindex")) {
+  fail("Journal Studio must be excluded from indexing at the HTTP header level.");
+}
+if (!wranglerText.includes('"/api/decap/auth"') || !wranglerText.includes('"/api/decap/callback"')) {
+  fail("The Decap OAuth endpoints must run through the Worker.");
+}
+
 for (const { href } of expectedTools.values()) {
   if (!requireFile("dist/about/index.html").includes(`href="${href}"`)) fail(`The About page is missing a contextual link to ${href}`);
 }
@@ -509,7 +568,7 @@ for (const marker of [
 ]) {
   if (!homepageHtml.includes(marker)) fail(`The contact experience is missing ${marker}.`);
 }
-if (homepageHtml.includes("formsubmit.co") || homepageHtml.includes("paolo.pastorino@gmail.com")) {
+if (homepageHtml.includes("formsubmit.co") || /mailto:[^\"']+@/i.test(homepageHtml)) {
   fail("The public homepage must not expose the delivery provider or target email address.");
 }
 for (const network of ["facebook", "instagram"]) {

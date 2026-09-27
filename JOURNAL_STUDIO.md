@@ -49,7 +49,7 @@ This means a mistaken click or incomplete translation does not silently publish 
 
 ## Image intake
 
-For the initial six articles, Google Drive is the source archive. No manifest is required. Images are visually reviewed, selected and imported into `assets/journal/` with captions and alternative text prepared in the Studio.
+For the initial article batch, Google Drive is the source archive. No manifest is required. Images are visually reviewed, selected and imported into `assets/journal/` with captions and alternative text prepared in the Studio.
 
 For later self-managed articles, images can be uploaded in the Studio. Decap converts supported uploads to WebP, limits them to 2400 pixels wide, compresses them at 86% quality and removes embedded metadata. Originals should remain in Google Drive.
 
@@ -76,9 +76,14 @@ Add the resulting values to the `london-advanced-site` Worker as encrypted secre
 - `GITHUB_OAUTH_ID`
 - `GITHUB_OAUTH_SECRET`
 
+The contact-form addresses are also kept out of the repository. Add these encrypted secrets in the same Worker environment:
+
+- `CONTACT_DESTINATION` — the verified inbox that should receive website enquiries.
+- `CONTACT_SENDER` — the verified sending address for the website.
+
 The OAuth implementation uses a short-lived, HttpOnly state cookie and rejects callbacks with missing or mismatched state.
 
-Finally, extend the existing Cloudflare Access application to protect `/studio/*` for the site owner. GitHub authentication is still required inside the protected route because it supplies the repository permission used by Decap.
+Finally, extend the existing Cloudflare Access application to protect both `/studio` and `/studio/*` for the site owner. Do not protect `/api/decap/*`, because the OAuth callback must be reachable after GitHub authorization. GitHub authentication is still required inside the protected route because it supplies the repository permission used by Decap.
 
 ## First design proof
 

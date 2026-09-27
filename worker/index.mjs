@@ -1,5 +1,3 @@
-const CONTACT_DESTINATION = "ppastorin@gmail.com";
-const CONTACT_SENDER = "website@londonadvanced.com";
 const MAX_BODY_BYTES = 12_000;
 const MIN_COMPLETION_MS = 2_000;
 const MAX_COMPLETION_MS = 2 * 60 * 60 * 1_000;
@@ -10,6 +8,8 @@ const ALLOWED_ORIGINS = new Set([
   "https://londonadvanced.com",
   "https://london-advanced-site.ppastorin.workers.dev"
 ]);
+const DECAP_CALLBACK_PATH = "/api/decap/callback";
+const DECAP_STATE_COOKIE = "la_decap_oauth_state";
 
 function jsonResponse(body, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(body), {
@@ -64,7 +64,7 @@ function acceptSubscription(request, status = "confirmation_requested") {
     : redirectResponse(request, "/newsletter/thanks/", 303, { "Set-Cookie": cookie });
 }
 
-export async function handleContact(request, emailBinding) {
+export async function handleContact(request, emailBinding, contactConfig = {}) {
   if (request.method !== "POST") {
     return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "POST" });
   }
@@ -107,15 +107,17 @@ export async function handleContact(request, emailBinding) {
     return reject(request, 400, "timing_check_failed");
   }
 
-  if (!emailBinding || typeof emailBinding.send !== "function") {
-    console.error(JSON.stringify({ event: "contact_delivery_error", reason: "binding_unavailable" }));
+  const destination = clean(contactConfig.destination, 254);
+  const sender = clean(contactConfig.sender, 254);
+  if (!emailBinding || typeof emailBinding.send !== "function" || !isValidEmail(destination) || !isValidEmail(sender)) {
+    console.error(JSON.stringify({ event: "contact_delivery_error", reason: "configuration_unavailable" }));
     return reject(request, 503, "delivery_unavailable");
   }
 
   try {
     const delivery = await emailBinding.send({
-      to: CONTACT_DESTINATION,
-      from: { email: CONTACT_SENDER, name: "London Advanced" },
+      to: destination,
+      from: { email: sender, name: "London Advanced" },
       replyTo: { email, name },
       subject: "New message from London Advanced",
       text: [
@@ -310,13 +312,104 @@ async function handleLooGeocode(request, fetchImpl = fetch) {
   }
 }
 
+function randomHex(byteLength = 24) {
+  const bytes = new Uint8Array(byteLength);
+  crypto.getRandomValues(bytes);
+  return [...bytes].map(byte => byte.toString(16).padStart(2, "0")).join("");
+}
+
+function cookieValue(request, name) {
+  const cookie = request.headers.get("Cookie") || "";
+  const match = cookie.match(new RegExp(`(?:^|;\\s*)${name}=([^;]+)`));
+  return match ? decodeURIComponent(match[1]) : "";
+}
+
+function decapCallbackHtml(status, payload, targetOrigin = "https://www.londonadvanced.com") {
+  const message = `authorization:github:${status}:${JSON.stringify(payload)}`;
+  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Journal Studio sign-in</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f7efed;color:#171717;font:16px system-ui}.card{max-width:420px;padding:32px;border:1px solid rgba(0,0,0,.2);background:#fff}.card strong{display:block;margin-bottom:8px;font:32px Georgia,serif}</style></head><body><div class="card"><strong>${status === "success" ? "Access confirmed" : "Sign-in failed"}</strong><span>${status === "success" ? "Returning to Journal Studio…" : "Close this window and try again."}</span></div><script>const receiveMessage=()=>{window.opener.postMessage(${JSON.stringify(message)},${JSON.stringify(targetOrigin)});window.removeEventListener("message",receiveMessage,false)};window.addEventListener("message",receiveMessage,false);window.opener.postMessage("authorizing:github",${JSON.stringify(targetOrigin)});</script></body></html>`;
+}
+
+export async function handleDecapAuth(request, env) {
+  if (request.method !== "GET") return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
+  if (!env.GITHUB_OAUTH_ID || !env.GITHUB_OAUTH_SECRET) {
+    return new Response("Journal Studio authentication is not activated yet.", { status: 503 });
+  }
+  const url = new URL(request.url);
+  const provider = url.searchParams.get("provider") || "github";
+  if (provider !== "github") return new Response("Invalid provider", { status: 400 });
+  const state = randomHex();
+  const callback = new URL(`${DECAP_CALLBACK_PATH}?provider=github`, request.url).href;
+  const authorize = new URL("https://github.com/login/oauth/authorize");
+  authorize.searchParams.set("client_id", env.GITHUB_OAUTH_ID);
+  authorize.searchParams.set("redirect_uri", callback);
+  authorize.searchParams.set("scope", "public_repo");
+  authorize.searchParams.set("state", state);
+  return new Response(null, {
+    status: 302,
+    headers: {
+      Location: authorize.href,
+      "Cache-Control": "no-store",
+      "Set-Cookie": `${DECAP_STATE_COOKIE}=${state}; Max-Age=600; Path=/api/decap/; Secure; HttpOnly; SameSite=Lax`
+    }
+  });
+}
+
+export async function handleDecapCallback(request, env, fetchImpl = fetch) {
+  if (request.method !== "GET") return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
+  const url = new URL(request.url);
+  const state = clean(url.searchParams.get("state"), 128);
+  const expectedState = cookieValue(request, DECAP_STATE_COOKIE);
+  const clearCookie = `${DECAP_STATE_COOKIE}=; Max-Age=0; Path=/api/decap/; Secure; HttpOnly; SameSite=Lax`;
+  const headers = {
+    "Content-Type": "text/html; charset=utf-8",
+    "Cache-Control": "no-store",
+    "Set-Cookie": clearCookie,
+    "Content-Security-Policy": "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'"
+  };
+  if (!state || !expectedState || state !== expectedState) {
+    return new Response(decapCallbackHtml("error", { message: "Invalid OAuth state" }), { status: 400, headers });
+  }
+  const code = clean(url.searchParams.get("code"), 300);
+  if (!code || !env.GITHUB_OAUTH_ID || !env.GITHUB_OAUTH_SECRET) {
+    return new Response(decapCallbackHtml("error", { message: "Missing OAuth configuration" }), { status: 400, headers });
+  }
+  const callback = new URL(`${DECAP_CALLBACK_PATH}?provider=github`, request.url).href;
+  let tokenResponse;
+  try {
+    tokenResponse = await fetchImpl("https://github.com/login/oauth/access_token", {
+      method: "POST",
+      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      body: JSON.stringify({
+        client_id: env.GITHUB_OAUTH_ID,
+        client_secret: env.GITHUB_OAUTH_SECRET,
+        code,
+        redirect_uri: callback
+      })
+    });
+  } catch {
+    return new Response(decapCallbackHtml("error", { message: "GitHub could not be reached" }), { status: 502, headers });
+  }
+  const tokenPayload = await tokenResponse.json().catch(() => ({}));
+  if (!tokenResponse.ok || !tokenPayload.access_token) {
+    return new Response(decapCallbackHtml("error", { message: "GitHub rejected the sign-in" }), { status: 502, headers });
+  }
+  return new Response(decapCallbackHtml("success", { token: tokenPayload.access_token }), { status: 200, headers });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname === "/api/contact") return handleContact(request, env.CONTACT_EMAIL);
+    if (url.pathname === "/api/contact") {
+      return handleContact(request, env.CONTACT_EMAIL, {
+        destination: env.CONTACT_DESTINATION,
+        sender: env.CONTACT_SENDER
+      });
+    }
     if (url.pathname === "/api/subscribe") return handleSubscribe(request, env);
     if (url.pathname === "/api/loos") return handleLoos(request, env);
     if (url.pathname === "/api/loo-geocode") return handleLooGeocode(request);
+    if (url.pathname === "/api/decap/auth") return handleDecapAuth(request, env);
+    if (url.pathname === DECAP_CALLBACK_PATH) return handleDecapCallback(request, env);
     return env.ASSETS.fetch(request);
   }
 };
