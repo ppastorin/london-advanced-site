@@ -147,8 +147,9 @@ function imageFigure(image, className = "journal-figure") {
   const width = Number(image.width) || 1600;
   const height = Number(image.height) || 1067;
   const focalStyle = imageFocalStyle(image);
+  const figureClass = image.display_mode === "natural" ? `${className} journal-image-natural` : className;
   const caption = image.caption ? `<figcaption>${escapeHtml(image.caption)}${image.credit ? ` <span>© ${escapeHtml(image.credit)}</span>` : ""}</figcaption>` : "";
-  return `<figure class="${className}"><img src="${escapeHtml(safeUrl(image.src))}" alt="${escapeHtml(image.alt || "")}" width="${width}" height="${height}" loading="${className.includes("hero") ? "eager" : "lazy"}" decoding="async"${focalStyle}>${caption}</figure>`;
+  return `<figure class="${figureClass}"><img src="${escapeHtml(safeUrl(image.src))}" alt="${escapeHtml(image.alt || "")}" width="${width}" height="${height}" loading="${className.includes("hero") ? "eager" : "lazy"}" decoding="async"${focalStyle}>${caption}</figure>`;
 }
 
 function injectFigures(bodyHtml, images) {

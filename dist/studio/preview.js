@@ -36,7 +36,9 @@ const JournalPreview = window.createClass({
         h("img", {
           src: this.props.getAsset(hero.src)?.toString() || hero.src,
           alt: hero.alt || "",
-          style: { objectPosition: `${focalX}% ${focalY}%` }
+          style: hero.display_mode === "natural"
+            ? { objectPosition: `${focalX}% ${focalY}%`, height: "auto", maxHeight: "none", objectFit: "contain" }
+            : { objectPosition: `${focalX}% ${focalY}%` }
         }),
         h("figcaption", null, hero.caption || "Caption to be added")
       ) : h("div", { className: "studio-preview-placeholder" }, "The hero photograph will appear here"),

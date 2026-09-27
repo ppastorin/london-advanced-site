@@ -18,6 +18,7 @@
     {
       "src": "/assets/journal/trinity-buoy-wharf-01.webp",
       "role": "hero",
+      "display_mode": "natural",
       "focal_x": 50,
       "focal_y": 0,
       "alt": "The brick Experimental Lighthouse at Trinity Buoy Wharf",
