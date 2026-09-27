@@ -138,8 +138,13 @@ function imageFigure(image, className = "journal-figure") {
   if (!image?.src) return "";
   const width = Number(image.width) || 1600;
   const height = Number(image.height) || 1067;
+  const focalX = Number.isFinite(Number(image.focal_x)) ? Math.min(100, Math.max(0, Number(image.focal_x))) : 50;
+  const focalY = Number.isFinite(Number(image.focal_y)) ? Math.min(100, Math.max(0, Number(image.focal_y))) : 50;
+  const focalStyle = image.focal_x != null || image.focal_y != null
+    ? ` style="object-position: ${focalX}% ${focalY}%"`
+    : "";
   const caption = image.caption ? `<figcaption>${escapeHtml(image.caption)}${image.credit ? ` <span>© ${escapeHtml(image.credit)}</span>` : ""}</figcaption>` : "";
-  return `<figure class="${className}"><img src="${escapeHtml(safeUrl(image.src))}" alt="${escapeHtml(image.alt || "")}" width="${width}" height="${height}" loading="${className.includes("hero") ? "eager" : "lazy"}" decoding="async">${caption}</figure>`;
+  return `<figure class="${className}"><img src="${escapeHtml(safeUrl(image.src))}" alt="${escapeHtml(image.alt || "")}" width="${width}" height="${height}" loading="${className.includes("hero") ? "eager" : "lazy"}" decoding="async"${focalStyle}>${caption}</figure>`;
 }
 
 function injectFigures(bodyHtml, images) {
