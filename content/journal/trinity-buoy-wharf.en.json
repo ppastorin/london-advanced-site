@@ -18,6 +18,8 @@
     {
       "src": "/assets/journal/trinity-buoy-wharf-01.webp",
       "role": "hero",
+      "focal_x": 50,
+      "focal_y": 0,
       "alt": "The brick Experimental Lighthouse at Trinity Buoy Wharf",
       "caption": "The 1864 lighthouse was built for testing and training rather than guiding ships at sea.",
       "credit": "Paolo Pastorino",

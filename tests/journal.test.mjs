@@ -45,14 +45,26 @@ test("the approved bilingual launch articles pass the publication gate", async (
 });
 
 test("article heroes preserve their configured crop focus in both languages", async () => {
-  const [english, italian] = await Promise.all([
+  const [english, italian, dragonEnglish, dragonItalian, trinityEnglish, trinityItalian, styles] = await Promise.all([
     readFile(new URL("../dist/journal/blackheath-to-greenwich-walk/index.html", import.meta.url), "utf8"),
-    readFile(new URL("../dist/it/journal/passeggiata-blackheath-greenwich/index.html", import.meta.url), "utf8")
+    readFile(new URL("../dist/it/journal/passeggiata-blackheath-greenwich/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dist/journal/city-of-london-dragon-walk/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dist/it/journal/passeggiata-draghi-city-of-london/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dist/journal/trinity-buoy-wharf-lighthouse/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dist/it/journal/trinity-buoy-wharf-faro-londra/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dist/journal.css", import.meta.url), "utf8")
   ]);
   for (const html of [english, italian]) {
     assert.match(html, /class="journal-figure journal-hero-image"/);
     assert.match(html, /style="object-position: 50% 78%"/);
   }
+  for (const html of [dragonEnglish, dragonItalian]) {
+    assert.match(html, /style="object-position: 50% 12%"/);
+  }
+  for (const html of [trinityEnglish, trinityItalian]) {
+    assert.match(html, /style="object-position: 50% 0%"/);
+  }
+  assert.match(styles, /\.article-body \.journal-figure img \{ height: auto; max-height: none; object-fit: contain; \}/);
 });
 
 test("Decap OAuth starts with state protection and exchanges a valid callback", async () => {

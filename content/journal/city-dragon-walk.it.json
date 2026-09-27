@@ -18,6 +18,8 @@
     {
       "src": "/assets/journal/city-dragon-walk-01.webp",
       "role": "hero",
+      "focal_x": 50,
+      "focal_y": 12,
       "alt": "Grande monumento con drago argentato sopra un basamento in pietra",
       "caption": "I draghi più grandi trasformano gli accessi importanti alla City in porte cerimoniali.",
       "credit": "Paolo Pastorino",

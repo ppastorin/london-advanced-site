@@ -165,6 +165,7 @@
 .article-body blockquote { margin: 52px 0; padding: 30px 0 30px 34px; border-left: 3px solid var(--journal-gold); font: italic 400 30px/1.35 var(--serif); }
 .article-body a { text-decoration: underline; }
 .article-body .journal-figure { width: min(980px, calc(100vw - 44px)); margin-left: 0; }
+.article-body .journal-figure img { height: auto; max-height: none; object-fit: contain; }
 
 .article-rail { position: sticky; top: 30px; display: grid; gap: 24px; }
 .author-card, .article-share { padding: 26px; border: 1px solid var(--journal-line); background: rgba(255,255,255,.22); }

@@ -18,6 +18,8 @@
     {
       "src": "/assets/journal/city-dragon-walk-01.webp",
       "role": "hero",
+      "focal_x": 50,
+      "focal_y": 12,
       "alt": "Large silver City dragon monument above a stone pedestal",
       "caption": "The largest dragons turn important approaches to the City into ceremonial gateways.",
       "credit": "Paolo Pastorino",
