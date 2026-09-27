@@ -52,6 +52,10 @@
 .search-result h2 a::after { content: ""; position: absolute; inset: 0; }
 .search-result p { max-width: 680px; margin: 0; color: #5d5d5d; font: 14px/1.55 "DM Sans", Arial, sans-serif; }
 .search-result-action { position: absolute; z-index: 1; top: 50%; right: 24px; font: 700 13px "DM Sans", Arial, sans-serif; transform: translateY(-50%); }
+.search-result-has-links { padding-right: 24px; }
+.search-result-links { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.search-result-links a { padding: 8px 11px; border: 1px solid #171717; border-radius: 999px; font: 700 12px "DM Sans", Arial, sans-serif; }
+.search-result-links a:hover { color: #fff; background: #171717; }
 
 @media (max-width: 900px) {
   .site-nav { grid-template-columns: minmax(0, 1fr) auto auto auto; }

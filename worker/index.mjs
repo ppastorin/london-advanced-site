@@ -10,6 +10,7 @@ const ALLOWED_ORIGINS = new Set([
 ]);
 const DECAP_CALLBACK_PATH = "/api/decap/callback";
 const DECAP_STATE_COOKIE = "la_decap_oauth_state";
+const PLACES_API_ORIGIN = "https://london-by-mood.ppastorin.workers.dev";
 
 function jsonResponse(body, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(body), {
@@ -312,6 +313,177 @@ async function handleLooGeocode(request, fetchImpl = fetch) {
   }
 }
 
+function searchKey(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function locationScore(name, query, supportingText = "") {
+  const candidate = searchKey(name);
+  const needle = searchKey(query);
+  if (candidate === needle) return 1200;
+  if (candidate.startsWith(needle)) return 800;
+  if (candidate.includes(needle)) return 520;
+  const tokens = needle.split(" ").filter(Boolean);
+  if (tokens.length && tokens.every(token => candidate.includes(token))) return 300;
+  const searchable = `${candidate} ${searchKey(supportingText)}`;
+  return tokens.length && tokens.every(token => searchable.includes(token)) ? 180 : 0;
+}
+
+function toolLink(id, locale) {
+  const italian = locale === "it";
+  const tools = {
+    "smart-navigation": italian
+      ? ["Navigazione intelligente", "/it/strumenti/navigazione-intelligente/"]
+      : ["Smart Navigation", "/home/smart-navigation/"],
+    "london-by-mood": italian
+      ? ["Londra secondo l’umore", "/it/strumenti/londra-per-umore/"]
+      : ["London by Mood", "/home/london-by-mood/"],
+    "escape-the-crowds": italian
+      ? ["Evita la folla", "/it/strumenti/evita-la-folla/"]
+      : ["Escape the Crowds", "/home/escape-the-crowds/"],
+    "loo-finder": italian
+      ? ["Trova un bagno", "/it/strumenti/trova-un-bagno/"]
+      : ["Loo Finder", "/loo/"]
+  };
+  const [title, url] = tools[id];
+  return { id, title, url };
+}
+
+async function searchPublishedPlaces(query, locale, fetchImpl) {
+  const endpoint = new URL("/api/places", PLACES_API_ORIGIN);
+  endpoint.searchParams.set("q", query);
+  endpoint.searchParams.set("limit", "12");
+  try {
+    const response = await fetchImpl(endpoint, {
+      headers: { Accept: "application/json" },
+      cf: { cacheTtl: 60, cacheEverything: true }
+    });
+    if (!response.ok) throw new Error(`places_${response.status}`);
+    const payload = await response.json();
+    return (Array.isArray(payload.places) ? payload.places : []).map(place => {
+      const summary = locale === "it"
+        ? (place.hookIt || place.descriptionIt || place.hook || place.description || "Luogo presente negli strumenti London Advanced.")
+        : (place.hook || place.description || "A place available in the London Advanced tools.");
+      return {
+        id: `location:${place.id}`,
+        type: "location",
+        locale,
+        title: place.name,
+        summary,
+        url: toolLink("smart-navigation", locale).url,
+        links: [
+          toolLink("smart-navigation", locale),
+          toolLink("london-by-mood", locale),
+          toolLink("escape-the-crowds", locale)
+        ],
+        score: locationScore(place.name, query, summary),
+        source: "places-d1"
+      };
+    });
+  } catch (error) {
+    console.error(JSON.stringify({ event: "location_search_upstream_error", source: "places-d1", message: String(error?.message || error) }));
+    return [];
+  }
+}
+
+function escapeLike(value) {
+  return String(value).replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
+}
+
+function looSearchRecord(row, query, locale) {
+  const detail = [row.address, row.location_note].filter(Boolean).join(" · ");
+  return {
+    id: `location:loo:${row.id}`,
+    type: "location",
+    locale,
+    title: row.name,
+    summary: detail || (locale === "it" ? "Bagno verificato presente in Trova un bagno." : "Verified facility available in Loo Finder."),
+    url: toolLink("loo-finder", locale).url,
+    links: [toolLink("loo-finder", locale)],
+    score: locationScore(row.name, query, detail),
+    source: "loo-d1"
+  };
+}
+
+async function searchLoos(request, env, query, locale) {
+  if (env.LOO_DB && typeof env.LOO_DB.prepare === "function") {
+    try {
+      const needle = `%${escapeLike(query)}%`;
+      const result = await env.LOO_DB.prepare(
+        `SELECT id,name,address,location_note FROM loos
+         WHERE active = 1 AND (name LIKE ? ESCAPE '\\' OR address LIKE ? ESCAPE '\\' OR location_note LIKE ? ESCAPE '\\')
+         ORDER BY CASE WHEN lower(name) = lower(?) THEN 0 WHEN lower(name) LIKE lower(?) THEN 1 ELSE 2 END,
+                  name COLLATE NOCASE LIMIT 10`
+      ).bind(needle, needle, needle, query, `${escapeLike(query)}%`).all();
+      return (result.results || []).map(row => looSearchRecord(row, query, locale));
+    } catch (error) {
+      console.error(JSON.stringify({ event: "location_search_upstream_error", source: "loo-d1", message: String(error?.message || error) }));
+    }
+  }
+
+  try {
+    const seedUrl = new URL("/data/loos.json", request.url);
+    const response = await env.ASSETS.fetch(new Request(seedUrl, request));
+    if (!response.ok) return [];
+    const payload = await response.json();
+    const needle = searchKey(query);
+    return (payload.loos || [])
+      .filter(row => row.active && searchKey(`${row.name} ${row.address || ""} ${row.location_note || ""}`).includes(needle))
+      .map(row => looSearchRecord(row, query, locale))
+      .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
+      .slice(0, 10);
+  } catch {
+    return [];
+  }
+}
+
+function mergeLocationResults(records) {
+  const merged = new Map();
+  for (const record of records) {
+    const key = searchKey(record.title);
+    const current = merged.get(key);
+    if (!current) {
+      merged.set(key, record);
+      continue;
+    }
+    const links = new Map([...current.links, ...record.links].map(link => [link.id, link]));
+    current.links = [...links.values()];
+    current.score = Math.max(current.score, record.score);
+    if (record.summary.length > current.summary.length) current.summary = record.summary;
+  }
+  return [...merged.values()];
+}
+
+export async function handleLocationSearch(request, env, fetchImpl = fetch) {
+  if (request.method !== "GET") {
+    return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
+  }
+  const url = new URL(request.url);
+  const query = clean(url.searchParams.get("q"), 48);
+  const locale = url.searchParams.get("locale") === "it" ? "it" : "en";
+  if (searchKey(query).length < 2) return jsonResponse({ ok: true, query, count: 0, records: [] }, 200);
+
+  const [places, loos] = await Promise.all([
+    searchPublishedPlaces(query, locale, fetchImpl),
+    searchLoos(request, env, query, locale)
+  ]);
+  const records = mergeLocationResults([...places, ...loos])
+    .filter(record => record.score > 0)
+    .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
+    .slice(0, 15);
+
+  return jsonResponse({ ok: true, query, locale, count: records.length, records }, 200, {
+    "Cache-Control": "public, max-age=60, stale-while-revalidate=300"
+  });
+}
+
 function randomHex(byteLength = 24) {
   const bytes = new Uint8Array(byteLength);
   crypto.getRandomValues(bytes);
@@ -408,6 +580,7 @@ export default {
     if (url.pathname === "/api/subscribe") return handleSubscribe(request, env);
     if (url.pathname === "/api/loos") return handleLoos(request, env);
     if (url.pathname === "/api/loo-geocode") return handleLooGeocode(request);
+    if (url.pathname === "/api/search-locations") return handleLocationSearch(request, env);
     if (url.pathname === "/api/decap/auth") return handleDecapAuth(request, env);
     if (url.pathname === DECAP_CALLBACK_PATH) return handleDecapCallback(request, env);
     return env.ASSETS.fetch(request);

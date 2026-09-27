@@ -6,6 +6,7 @@ const copy = pageLocale === "it" ? {
   count: count => `${count} ${count === 1 ? "risultato" : "risultati"}`,
   article: "Articolo",
   tool: "Strumento",
+  location: "Luogo",
   open: "Apri",
   error: "La ricerca non è disponibile in questo momento."
 } : {
@@ -15,6 +16,7 @@ const copy = pageLocale === "it" ? {
   count: count => `${count} ${count === 1 ? "result" : "results"}`,
   article: "Article",
   tool: "Tool",
+  location: "Place",
   open: "Open",
   error: "Search is unavailable at the moment."
 };
@@ -24,6 +26,10 @@ const input = document.querySelector("[data-search-input]");
 const summary = document.querySelector("[data-search-summary]");
 const results = document.querySelector("[data-search-results]");
 let catalogue = [];
+let locationRecords = [];
+let locationTimer;
+let locationRequest = 0;
+let locationController;
 
 function normalize(value) {
   return String(value || "")
@@ -75,7 +81,7 @@ function renderResults(query) {
     return;
   }
 
-  const matches = catalogue
+  const matches = [...catalogue, ...locationRecords]
     .map(record => ({ record, score: scoreRecord(record, query) }))
     .filter(match => match.score > 0)
     .sort((a, b) => b.score - a.score || a.record.title.localeCompare(b.record.title))
@@ -88,7 +94,7 @@ function renderResults(query) {
 
     const meta = document.createElement("span");
     meta.className = "search-result-type";
-    meta.textContent = record.type === "tool" ? copy.tool : copy.article;
+    meta.textContent = record.type === "tool" ? copy.tool : record.type === "location" ? copy.location : copy.article;
 
     const title = document.createElement("h2");
     const link = document.createElement("a");
@@ -99,18 +105,62 @@ function renderResults(query) {
     const description = document.createElement("p");
     description.textContent = record.summary;
 
-    const action = document.createElement("a");
-    action.className = "search-result-action";
-    action.href = record.url;
-    action.textContent = `${copy.open} →`;
-
-    item.append(meta, title, description, action);
+    item.append(meta, title, description);
+    if (Array.isArray(record.links) && record.links.length) {
+      item.classList.add("search-result-has-links");
+      const actions = document.createElement("div");
+      actions.className = "search-result-links";
+      for (const destination of record.links) {
+        const action = document.createElement("a");
+        action.href = destination.url;
+        action.textContent = `${destination.title} →`;
+        actions.append(action);
+      }
+      item.append(actions);
+    } else {
+      const action = document.createElement("a");
+      action.className = "search-result-action";
+      action.href = record.url;
+      action.textContent = `${copy.open} →`;
+      item.append(action);
+    }
     results.append(item);
   }
 }
 
+async function loadLocations(value) {
+  const requestNumber = ++locationRequest;
+  locationController?.abort();
+  locationController = new AbortController();
+  try {
+    const params = new URLSearchParams({ q: value.trim(), locale: pageLocale });
+    const response = await fetch(`/api/search-locations?${params}`, {
+      headers: { Accept: "application/json" },
+      signal: locationController.signal
+    });
+    if (!response.ok) throw new Error(`Location search returned ${response.status}`);
+    const payload = await response.json();
+    if (requestNumber !== locationRequest) return;
+    locationRecords = Array.isArray(payload.records) ? payload.records : [];
+    renderResults(normalize(value));
+  } catch (error) {
+    if (error.name !== "AbortError") console.warn("London Advanced location search failed.", error);
+  }
+}
+
+function scheduleLocations(value, immediate = false) {
+  clearTimeout(locationTimer);
+  if (normalize(value).length < 2) {
+    locationRecords = [];
+    locationController?.abort();
+    return;
+  }
+  locationTimer = setTimeout(() => loadLocations(value), immediate ? 0 : 220);
+}
+
 function updateSearch(value, pushHistory = false) {
   const query = normalize(value);
+  locationRecords = [];
   renderResults(query);
   if (pushHistory) {
     const url = new URL(window.location.href);
@@ -123,9 +173,13 @@ function updateSearch(value, pushHistory = false) {
 form.addEventListener("submit", event => {
   event.preventDefault();
   updateSearch(input.value, true);
+  scheduleLocations(input.value, true);
 });
 
-input.addEventListener("input", () => updateSearch(input.value, true));
+input.addEventListener("input", () => {
+  updateSearch(input.value, true);
+  scheduleLocations(input.value);
+});
 
 async function initialise() {
   summary.textContent = copy.loading;
@@ -137,6 +191,7 @@ async function initialise() {
     const query = new URL(window.location.href).searchParams.get("q") || "";
     input.value = query;
     updateSearch(query);
+    scheduleLocations(query, true);
     input.focus();
   } catch (error) {
     console.warn("London Advanced search failed to load.", error);

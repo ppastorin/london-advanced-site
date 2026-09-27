@@ -110,6 +110,7 @@ try {
   if (wrangler.assets?.binding !== "ASSETS") fail('wrangler.jsonc must expose the static assets as the "ASSETS" binding.');
   if (!wrangler.assets?.run_worker_first?.includes("/api/contact")) fail("The contact endpoint must run through the Worker.");
   if (!wrangler.assets?.run_worker_first?.includes("/api/subscribe")) fail("The newsletter endpoint must run through the Worker.");
+  if (!wrangler.assets?.run_worker_first?.includes("/api/search-locations")) fail("The live location search endpoint must run through the Worker.");
   if (wrangler.keep_vars !== true) fail("wrangler.jsonc must preserve dashboard variables and secrets during deployment.");
   if (wrangler.assets?.not_found_handling !== "404-page") fail('wrangler.jsonc must use not_found_handling "404-page".');
   const contactEmail = wrangler.send_email?.find((binding) => binding.name === "CONTACT_EMAIL");
