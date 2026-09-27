@@ -15,6 +15,8 @@ const JournalPreview = window.createClass({
     const entry = this.props.entry;
     const images = list(entry, "images");
     const hero = images.find(image => image.role === "hero") || images[0];
+    const focalX = Number.isFinite(Number(hero?.focal_x)) ? Math.min(100, Math.max(0, Number(hero.focal_x))) : 50;
+    const focalY = Number.isFinite(Number(hero?.focal_y)) ? Math.min(100, Math.max(0, Number(hero.focal_y))) : 50;
     const practical = list(entry, "practical");
     const status = value(entry, "editorial_status", "draft");
     return h("div", { className: "studio-preview" },
@@ -31,7 +33,11 @@ const JournalPreview = window.createClass({
         )) : null
       ),
       hero?.src ? h("figure", { className: "studio-preview-hero" },
-        h("img", { src: this.props.getAsset(hero.src)?.toString() || hero.src, alt: hero.alt || "" }),
+        h("img", {
+          src: this.props.getAsset(hero.src)?.toString() || hero.src,
+          alt: hero.alt || "",
+          style: { objectPosition: `${focalX}% ${focalY}%` }
+        }),
         h("figcaption", null, hero.caption || "Caption to be added")
       ) : h("div", { className: "studio-preview-placeholder" }, "The hero photograph will appear here"),
       h("div", { className: "studio-preview-body" }, this.props.widgetFor("body")),
