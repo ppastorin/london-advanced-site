@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { buildItalian } from "./build-italian.mjs";
 import { buildFareCalculator } from "./build-fare-calculator.mjs";
 import { buildJournal } from "./build-journal.mjs";
+import { buildSearch } from "./build-search.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
@@ -695,8 +696,9 @@ export async function prerender() {
   await buildItalian();
   await buildJournal({ includeDrafts: process.argv.includes("--drafts") });
   await buildNativeLooPages();
+  await buildSearch();
 
-  console.log(`Pre-rendered the bilingual homepage, Journal and ${feed.events.length} event records into static HTML.`);
+  console.log(`Pre-rendered the bilingual homepage, Journal, search and ${feed.events.length} event records into static HTML.`);
 }
 
 const directRun = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));

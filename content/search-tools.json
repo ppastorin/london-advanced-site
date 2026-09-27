@@ -1,0 +1,44 @@
+[
+  {
+    "id": "london-dashboard",
+    "keywords": {
+      "en": ["weather", "forecast", "temperature", "rain", "air quality", "pollution", "tube status", "underground status", "transport status", "rail status", "trains", "airports", "flights", "events", "disruptions"],
+      "it": ["meteo", "previsioni", "temperatura", "pioggia", "qualità dell'aria", "inquinamento", "stato metro", "stato trasporti", "stato treni", "treni", "aeroporti", "voli", "eventi", "disservizi"]
+    }
+  },
+  {
+    "id": "escape-the-crowds",
+    "keywords": {
+      "en": ["crowds", "crowded", "busy", "quiet time", "visitor pressure", "avoid crowds", "best time to visit"],
+      "it": ["folla", "affollato", "affollamento", "orario tranquillo", "pressione visitatori", "evitare la folla", "momento migliore"]
+    }
+  },
+  {
+    "id": "travel-fare-calculator",
+    "keywords": {
+      "en": ["oyster", "contactless", "travelcard", "fare", "fares", "ticket", "tickets", "daily cap", "weekly cap", "child fare", "young visitor discount", "zones"],
+      "it": ["oyster", "contactless", "travelcard", "tariffa", "tariffe", "biglietto", "biglietti", "tetto giornaliero", "tetto settimanale", "tariffa bambini", "young visitor", "zone"]
+    }
+  },
+  {
+    "id": "smart-navigation",
+    "keywords": {
+      "en": ["route", "walking route", "walk", "detour", "directions", "near my route", "santander cycles", "bike hire", "journey"],
+      "it": ["percorso", "percorso a piedi", "passeggiata", "deviazione", "indicazioni", "vicino al percorso", "santander cycles", "noleggio bici", "tragitto"]
+    }
+  },
+  {
+    "id": "london-by-mood",
+    "keywords": {
+      "en": ["mood", "quiet", "unexpected", "beautiful", "weird", "local", "green", "atmospheric", "wander", "inspiration", "what to do"],
+      "it": ["umore", "tranquillo", "inaspettato", "bello", "strano", "locale", "verde", "atmosferico", "vagare", "ispirazione", "cosa fare"]
+    }
+  },
+  {
+    "id": "loo-finder",
+    "keywords": {
+      "en": ["toilet", "toilets", "loo", "public toilet", "accessible toilet", "baby changing", "wc", "restroom"],
+      "it": ["bagno", "bagni", "toilette", "bagno pubblico", "bagno accessibile", "fasciatoio", "wc", "servizi igienici"]
+    }
+  }
+]

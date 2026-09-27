@@ -32,6 +32,12 @@ const requiredAssets = [
   "dist/app.js",
   "dist/content.js",
   "dist/data/events.json",
+  "dist/data/search-index.en.json",
+  "dist/data/search-index.it.json",
+  "dist/search/index.html",
+  "dist/it/cerca/index.html",
+  "dist/search.js",
+  "dist/search.css",
   "dist/events/index.html",
   "dist/events/events.js",
   "dist/about/index.html",
@@ -78,6 +84,23 @@ const requiredAssets = [
   "dist/apps/fare-calculator/fare-calculator.css"
 ];
 requiredAssets.forEach(requireFile);
+
+for (const locale of ["en", "it"]) {
+  const searchText = requireFile(`dist/data/search-index.${locale}.json`);
+  try {
+    const search = JSON.parse(searchText);
+    if (search.locale !== locale) fail(`The ${locale} search index has the wrong locale.`);
+    if (!Array.isArray(search.records) || !search.records.length) fail(`The ${locale} search index is empty.`);
+    for (const type of ["tool", "article"]) {
+      if (!search.records.some(record => record.type === type)) fail(`The ${locale} search index has no ${type} records.`);
+    }
+    if (search.records.some(record => !record.id || !record.title || !record.url || !record.summary)) {
+      fail(`The ${locale} search index contains an incomplete record.`);
+    }
+  } catch (error) {
+    fail(`The ${locale} search index is invalid JSON: ${error.message}`);
+  }
+}
 
 const wranglerText = requireFile("wrangler.jsonc");
 try {
