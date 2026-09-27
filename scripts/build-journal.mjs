@@ -134,15 +134,19 @@ function formatDate(value, locale) {
   }).format(parsed);
 }
 
+function imageFocalStyle(image) {
+  const focalX = Number.isFinite(Number(image.focal_x)) ? Math.min(100, Math.max(0, Number(image.focal_x))) : 50;
+  const focalY = Number.isFinite(Number(image.focal_y)) ? Math.min(100, Math.max(0, Number(image.focal_y))) : 50;
+  return image.focal_x != null || image.focal_y != null
+    ? ` style="object-position: ${focalX}% ${focalY}%"`
+    : "";
+}
+
 function imageFigure(image, className = "journal-figure") {
   if (!image?.src) return "";
   const width = Number(image.width) || 1600;
   const height = Number(image.height) || 1067;
-  const focalX = Number.isFinite(Number(image.focal_x)) ? Math.min(100, Math.max(0, Number(image.focal_x))) : 50;
-  const focalY = Number.isFinite(Number(image.focal_y)) ? Math.min(100, Math.max(0, Number(image.focal_y))) : 50;
-  const focalStyle = image.focal_x != null || image.focal_y != null
-    ? ` style="object-position: ${focalX}% ${focalY}%"`
-    : "";
+  const focalStyle = imageFocalStyle(image);
   const caption = image.caption ? `<figcaption>${escapeHtml(image.caption)}${image.credit ? ` <span>© ${escapeHtml(image.credit)}</span>` : ""}</figcaption>` : "";
   return `<figure class="${className}"><img src="${escapeHtml(safeUrl(image.src))}" alt="${escapeHtml(image.alt || "")}" width="${width}" height="${height}" loading="${className.includes("hero") ? "eager" : "lazy"}" decoding="async"${focalStyle}>${caption}</figure>`;
 }
@@ -312,7 +316,7 @@ function card(article, locale, preview = false) {
   const it = locale === "it";
   const image = (article.images || []).find(item => item.role === "hero") || (article.images || [])[0];
   const route = articleRoute(article, locale, preview);
-  return `<article class="journal-card"><a class="journal-card-image" href="${route}">${image?.src ? `<img src="${escapeHtml(safeUrl(image.src))}" alt="${escapeHtml(image.alt || "")}" width="${Number(image.width) || 1200}" height="${Number(image.height) || 800}" loading="lazy">` : `<span aria-hidden="true">LA</span>`}</a><div><span class="journal-kicker">${escapeHtml(article.eyebrow || (it ? "Appunti sul campo" : "Field notes"))}</span><h2><a href="${route}">${escapeHtml(article.title)}</a></h2><p>${escapeHtml(article.dek || article.description)}</p><div class="journal-card-meta"><span>${formatDate(article.published_at || article.updated_at, locale)}</span><a href="${route}">${it ? "Leggi" : "Read"} →</a></div></div></article>`;
+  return `<article class="journal-card"><a class="journal-card-image" href="${route}">${image?.src ? `<img src="${escapeHtml(safeUrl(image.src))}" alt="${escapeHtml(image.alt || "")}" width="${Number(image.width) || 1200}" height="${Number(image.height) || 800}" loading="lazy"${imageFocalStyle(image)}>` : `<span aria-hidden="true">LA</span>`}</a><div><span class="journal-kicker">${escapeHtml(article.eyebrow || (it ? "Appunti sul campo" : "Field notes"))}</span><h2><a href="${route}">${escapeHtml(article.title)}</a></h2><p>${escapeHtml(article.dek || article.description)}</p><div class="journal-card-meta"><span>${formatDate(article.published_at || article.updated_at, locale)}</span><a href="${route}">${it ? "Leggi" : "Read"} →</a></div></div></article>`;
 }
 
 function collectionSchema(locale, route, articles) {
