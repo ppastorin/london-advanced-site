@@ -63,6 +63,7 @@ test("article heroes preserve their configured crop focus in both languages", as
   }
   for (const html of [trinityEnglish, trinityItalian]) {
     assert.match(html, /style="object-position: 50% 0%"/);
+    assert.match(html, /class="journal-figure journal-hero-image journal-image-natural"/);
   }
   assert.match(styles, /\.article-body \.journal-figure img \{ height: auto; max-height: none; object-fit: contain; \}/);
 });
