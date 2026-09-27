@@ -44,6 +44,17 @@ test("the approved bilingual launch articles pass the publication gate", async (
   }
 });
 
+test("article heroes preserve their configured crop focus in both languages", async () => {
+  const [english, italian] = await Promise.all([
+    readFile(new URL("../dist/journal/blackheath-to-greenwich-walk/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dist/it/journal/passeggiata-blackheath-greenwich/index.html", import.meta.url), "utf8")
+  ]);
+  for (const html of [english, italian]) {
+    assert.match(html, /class="journal-figure journal-hero-image"/);
+    assert.match(html, /style="object-position: 50% 78%"/);
+  }
+});
+
 test("Decap OAuth starts with state protection and exchanges a valid callback", async () => {
   const env = { GITHUB_OAUTH_ID: "client-id", GITHUB_OAUTH_SECRET: "client-secret" };
   const auth = await handleDecapAuth(new Request("https://www.londonadvanced.com/api/decap/auth?provider=github"), env);
