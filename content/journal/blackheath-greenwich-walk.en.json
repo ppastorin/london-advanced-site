@@ -18,6 +18,8 @@
     {
       "src": "/assets/journal/blackheath-greenwich-walk-01.webp",
       "role": "hero",
+      "focal_x": 50,
+      "focal_y": 78,
       "alt": "Canary Wharf skyline seen across the open grass of Blackheath",
       "caption": "The walk begins with open sky and a distant skyline before Greenwich Park narrows the view.",
       "credit": "Paolo Pastorino",
