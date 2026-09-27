@@ -12,5 +12,17 @@
 /assets/*
   Cache-Control: public, max-age=604800
 
+/studio/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/journal/_preview/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
+/it/journal/_preview/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+
 https://london-advanced-site.ppastorin.workers.dev/*
   X-Robots-Tag: noindex

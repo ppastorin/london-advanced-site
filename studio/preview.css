@@ -1,0 +1,26 @@
+:root { --ink:#171717; --paper:#f7efed; --cream:#eee5d4; --gold:#a98c55; --serif:Georgia,serif; --sans:Arial,sans-serif; --mono:Consolas,monospace; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--sans); }
+.studio-preview-status { padding:9px 18px; color:#fff; background:#7b332e; font:11px var(--mono); text-transform:uppercase; }
+.studio-preview-header { padding:75px 7vw 55px; display:grid; grid-template-columns:1fr 280px; gap:70px; align-items:end; }
+.studio-preview-kicker { font:11px var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+.studio-preview h1 { margin:20px 0; font:400 clamp(52px,8vw,100px)/.92 var(--serif); letter-spacing:-.045em; }
+.studio-preview-dek { max-width:720px; font-size:22px; line-height:1.55; }
+.studio-preview-meta { color:#555; font:11px var(--mono); text-transform:uppercase; }
+.studio-preview-practical { margin:0; border-top:1px solid; }
+.studio-preview-practical div { padding:12px 0; display:grid; grid-template-columns:.7fr 1.3fr; gap:12px; border-bottom:1px solid rgba(0,0,0,.18); }
+.studio-preview-practical dt { color:#666; font-size:11px; }
+.studio-preview-practical dd { margin:0; font-size:12px; font-weight:bold; }
+.studio-preview-hero { margin:0 4vw; }
+.studio-preview-hero img { width:100%; max-height:700px; object-fit:cover; }
+.studio-preview-hero figcaption { margin-top:8px; color:#666; font-size:11px; }
+.studio-preview-placeholder { min-height:480px; margin:0 4vw; display:grid; place-items:center; color:#806d4a; background:var(--cream); font:28px var(--serif); }
+.studio-preview-body { max-width:760px; margin:80px auto; padding:0 24px; font-size:18px; line-height:1.8; }
+.studio-preview-body > div > p:first-child { font-size:23px; }
+.studio-preview-body h2 { margin:70px 0 20px; font:400 52px/1 var(--serif); }
+.studio-preview-body h3 { font:400 30px var(--serif); }
+.studio-preview-body blockquote { margin:40px 0; padding-left:25px; border-left:3px solid var(--gold); font:italic 28px/1.4 var(--serif); }
+.studio-preview-tools { padding:65px 7vw; color:#fff; background:var(--ink); }
+.studio-preview-tools h2 { max-width:850px; margin:18px 0; font:400 50px/1 var(--serif); }
+.studio-preview-tools p { max-width:700px; color:#bbb; line-height:1.6; }
+@media(max-width:750px){.studio-preview-header{grid-template-columns:1fr;padding:55px 22px}.studio-preview h1{font-size:54px}.studio-preview-hero,.studio-preview-placeholder{margin:0}.studio-preview-placeholder{min-height:300px}.studio-preview-tools h2{font-size:38px}}

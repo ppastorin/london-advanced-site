@@ -1,0 +1,36 @@
+{
+  "workflow_help": "Draft → Review → Approved → Published",
+  "article_id": "quentin-blake-centre",
+  "editorial_status": "draft",
+  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
+  "title": "Quentin Blake Centre for Illustration: beyond the familiar drawings",
+  "slug": "quentin-blake-centre-for-illustration",
+  "seo_title": "Quentin Blake Centre for Illustration Guide",
+  "description": "What to see at the Quentin Blake Centre for Illustration in Clerkenwell, how long to allow and why it is much more than a gallery for one artist.",
+  "eyebrow": "Clerkenwell · Illustration",
+  "dek": "London’s new home for illustration uses a beautifully restored industrial site to make the case that drawings are not the supporting act. They are the story.",
+  "body": "The name above the door may be Quentin Blake’s, but the Centre is not a monument to one illustrator. Its real subject is the restless territory between an idea and an image: picture books, comics, reportage, murals, theatre work and the drawings that never become finished publications.\n\nThat breadth is what makes the visit worthwhile. You may arrive expecting the loose ink lines most closely associated with Roald Dahl and leave thinking about illustration as performance, argument or private experiment.\n\n## A new use for New River Head\n\nThe Centre opened in June 2026 at New River Head in Clerkenwell. The former waterworks buildings give the visit an atmosphere that a neutral white gallery would struggle to create. Brick, courtyards and traces of industry frame the exhibitions without overpowering them.\n\nIt is compact enough to understand in one visit but not so small that the ticket feels like an entrance fee for a single room. Alongside the galleries there is a library, a creative studio, a café and a shop. The result feels closer to a working centre than a polished shrine.\n\n## Start with Quentin Blake, then keep going\n\nThe long-running opening exhibition, *Quentin Blake: Performance*, brings together more than a hundred original works and looks at the influence of theatre on Blake’s practice. The useful surprise is how quickly the familiar style becomes unfamiliar again. Rough lines that seem spontaneous are shown as the product of timing, movement and repeated decisions.\n\nDo not reduce Blake to his collaborations with Dahl. His hospital commissions, independent books, adult work and experiments with scale show a much wider practice. Seen together, the drawings have the energy of people entering a stage rather than characters waiting obediently on a page.\n\nThe other galleries widen the lens. Their exhibitions change, which is exactly why the Centre should not be treated as a one-off destination. Check what is current before travelling, especially if a temporary show is the main reason for your visit.\n\n## Look closely, not quickly\n\nIllustration often appears effortless because the final image has already solved its problems. Here, original drawings make hesitation visible: pencil marks beneath ink, changes in posture, empty space doing more work than expected. A framed sheet can reward several minutes, particularly when it sits beside another version of the same idea.\n\nThe temptation is to photograph every witty image and move on. Resist it. Choose a handful of drawings and look at how the line controls pace, where the eye enters the page and what has deliberately been left out. The Centre is at its best when it teaches you to read an image with the patience usually reserved for text.\n\n## How much time to allow\n\nAllow around 90 minutes for the exhibitions and longer if you plan to use the library, stop at the café or visit with children. The scale makes it easy to combine with the London Canal Museum, Exmouth Market or a walk through Clerkenwell, but cramming it between two larger museums would miss the point.\n\nThe building is open Wednesday to Sunday. Exhibition admission is paid, with concessions, while some events and activities are free. Current exhibitions, prices and last-entry times can change, so use the official visit page rather than an old listing.\n\n## Who should go\n\nThis is an obvious destination for illustrators, designers and families, but that description is too narrow. Anyone interested in how ideas become visible will find something here: the false confidence of a finished line, the comedy of a tiny gesture, or the politics carried by an image before a caption says anything.\n\n> The Centre’s best trick is to make a drawing look less simple the longer you spend with it.\n\nGo for Quentin Blake if that is the hook you need. Stay for the evidence that illustration is not decoration around a story; very often, it is the part that tells us how to read it.",
+  "images": [
+    { "src": "/assets/journal/quentin-blake-centre-01.webp", "role": "hero", "alt": "Framed Quentin Blake landscape drawing displayed in the Centre", "caption": "Original drawings slow the eye down and reveal how much work sits behind an apparently spontaneous line.", "credit": "Paolo Pastorino", "width": 2400, "height": 1600 },
+    { "src": "/assets/journal/quentin-blake-centre-02.webp", "role": "inline", "alt": "Visitor beside the Community and Unity exhibition display", "caption": "The programme looks beyond one name and treats illustration as a public, changing form.", "credit": "Paolo Pastorino", "width": 1800, "height": 2400 },
+    { "src": "/assets/journal/quentin-blake-centre-03.webp", "role": "detail", "alt": "Detailed illustrated London street scene in a gallery frame", "caption": "Small decisions about scale, sequence and empty space reward close looking.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800 },
+    { "src": "/assets/journal/quentin-blake-centre-04.webp", "role": "closing", "alt": "Colourful contemporary illustration installation inside the Centre", "caption": "Temporary exhibitions extend the visit from picture books to contemporary visual culture.", "credit": "Paolo Pastorino", "width": 1800, "height": 2400 }
+  ],
+  "practical": [
+    { "label": "Where", "value": "1 Myddelton Passage, Clerkenwell, EC1R 1AG", "url": "https://qbcentre.org.uk/your-visit" },
+    { "label": "Hours", "value": "Wednesday–Sunday, 10:00–17:00; last exhibition entry 16:00", "url": "https://qbcentre.org.uk/your-visit" },
+    { "label": "Tickets", "value": "Paid exhibitions; concessions and some free activities", "url": "https://qbcentre.org.uk/whats-on" },
+    { "label": "Allow", "value": "90 minutes to 2 hours", "url": "" }
+  ],
+  "related_tools": ["london-dashboard", "smart-navigation", "travel-fare-calculator", "loo-finder"],
+  "related_articles": ["va-east-storehouse", "city-dragon-walk"],
+  "tags": ["Quentin Blake", "Clerkenwell", "Illustration", "Museums", "Art"],
+  "sources": [
+    { "label": "Quentin Blake Centre — Visit", "url": "https://qbcentre.org.uk/your-visit", "checked_at": "2026-09-27" },
+    { "label": "Quentin Blake Centre — What’s on", "url": "https://qbcentre.org.uk/whats-on", "checked_at": "2026-09-27" },
+    { "label": "Quentin Blake: Performance", "url": "https://qbcentre.org.uk/exhibitions/quentin-blake-performance", "checked_at": "2026-09-27" }
+  ],
+  "reading_minutes": 6,
+  "published_at": "",
+  "updated_at": "2026-09-27T00:00:00+01:00"
+}

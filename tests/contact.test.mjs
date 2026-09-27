@@ -2,6 +2,11 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { handleContact } from "../worker/index.mjs";
 
+const CONTACT_CONFIG = {
+  destination: "owner@example.com",
+  sender: "website@example.com"
+};
+
 function contactRequest(overrides = {}, headers = {}) {
   const body = new URLSearchParams({
     name: "Delivery Test",
@@ -28,12 +33,12 @@ test("accepts a valid contact submission only after Cloudflare Email accepts it"
   const response = await handleContact(contactRequest(), { async send(message) {
     deliveredMessage = message;
     return { messageId: "test-message-id" };
-  }});
+  }}, CONTACT_CONFIG);
 
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), { ok: true, status: "accepted" });
-  assert.equal(deliveredMessage.to, "ppastorin@gmail.com");
-  assert.equal(deliveredMessage.from.email, "website@londonadvanced.com");
+  assert.equal(deliveredMessage.to, CONTACT_CONFIG.destination);
+  assert.equal(deliveredMessage.from.email, CONTACT_CONFIG.sender);
   assert.equal(deliveredMessage.replyTo.email, "visitor@example.com");
   assert.match(deliveredMessage.text, /Delivery Test/);
   assert.match(deliveredMessage.text, /valid London Advanced contact form test/);
@@ -42,7 +47,7 @@ test("accepts a valid contact submission only after Cloudflare Email accepts it"
 test("redirects a successful browser submission to the local thank-you page", async () => {
   const response = await handleContact(contactRequest({}, { Accept: "text/html" }), {
     async send() { return { messageId: "test-message-id" }; }
-  });
+  }, CONTACT_CONFIG);
 
   assert.equal(response.status, 303);
   assert.equal(response.headers.get("Location"), "https://www.londonadvanced.com/thank-you/");
@@ -52,7 +57,7 @@ test("rejects a submission completed too quickly without sending email", async (
   let emailSent = false;
   const response = await handleContact(contactRequest({ started_at: String(Date.now()) }), {
     async send() { emailSent = true; }
-  });
+  }, CONTACT_CONFIG);
 
   assert.equal(response.status, 400);
   assert.equal(emailSent, false);
@@ -63,7 +68,7 @@ test("silently accepts honeypot spam without forwarding it", async () => {
   let emailSent = false;
   const response = await handleContact(contactRequest({ _honey: "spam" }), {
     async send() { emailSent = true; }
-  });
+  }, CONTACT_CONFIG);
 
   assert.equal(response.status, 200);
   assert.equal(emailSent, false);
@@ -73,15 +78,26 @@ test("silently accepts honeypot spam without forwarding it", async () => {
 test("reports delivery failure when Cloudflare Email rejects the submission", async () => {
   const response = await handleContact(contactRequest(), {
     async send() { throw Object.assign(new Error("rejected"), { code: "E_TEST_REJECTED" }); }
-  });
+  }, CONTACT_CONFIG);
 
   assert.equal(response.status, 502);
   assert.equal((await response.json()).code, "delivery_failed");
 });
 
 test("reports unavailable delivery when the email binding is missing", async () => {
-  const response = await handleContact(contactRequest(), undefined);
+  const response = await handleContact(contactRequest(), undefined, CONTACT_CONFIG);
 
   assert.equal(response.status, 503);
   assert.equal((await response.json()).code, "delivery_unavailable");
+});
+
+test("reports unavailable delivery when the contact secrets are missing", async () => {
+  let emailSent = false;
+  const response = await handleContact(contactRequest(), {
+    async send() { emailSent = true; }
+  });
+
+  assert.equal(response.status, 503);
+  assert.equal((await response.json()).code, "delivery_unavailable");
+  assert.equal(emailSent, false);
 });

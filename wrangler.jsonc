@@ -13,14 +13,13 @@
   },
   "send_email": [
     {
-      "name": "CONTACT_EMAIL",
-      "destination_address": "ppastorin@gmail.com"
+      "name": "CONTACT_EMAIL"
     }
   ],
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/contact", "/api/subscribe", "/api/loos", "/api/loo-geocode"],
+    "run_worker_first": ["/api/contact", "/api/subscribe", "/api/loos", "/api/loo-geocode", "/api/decap/auth", "/api/decap/callback"],
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }
