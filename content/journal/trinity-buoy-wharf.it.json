@@ -18,6 +18,8 @@
     {
       "src": "/assets/journal/trinity-buoy-wharf-01.webp",
       "role": "hero",
+      "focal_x": 50,
+      "focal_y": 0,
       "alt": "L’Experimental Lighthouse in mattoni a Trinity Buoy Wharf",
       "caption": "Il faro del 1864 serviva a esperimenti e formazione, non a guidare le navi in mare.",
       "credit": "Paolo Pastorino",
