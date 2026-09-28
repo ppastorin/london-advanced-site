@@ -5,6 +5,7 @@ const copy = pageLocale === "it" ? {
   prompt: "Cerca un luogo, un articolo o ciò che ti serve a Londra.",
   count: count => `${count} ${count === 1 ? "risultato" : "risultati"}`,
   article: "Articolo",
+  event: "Evento",
   tool: "Strumento",
   location: "Luogo",
   open: "Apri",
@@ -15,6 +16,7 @@ const copy = pageLocale === "it" ? {
   prompt: "Search for a place, an article or something you need in London.",
   count: count => `${count} ${count === 1 ? "result" : "results"}`,
   article: "Article",
+  event: "Event",
   tool: "Tool",
   location: "Place",
   open: "Open",
@@ -82,6 +84,7 @@ function renderResults(query) {
   }
 
   const matches = [...catalogue, ...locationRecords]
+    .filter(record => !record.expires_at || Date.parse(record.expires_at) > Date.now())
     .map(record => ({ record, score: scoreRecord(record, query) }))
     .filter(match => match.score > 0)
     .sort((a, b) => b.score - a.score || a.record.title.localeCompare(b.record.title))
@@ -94,7 +97,7 @@ function renderResults(query) {
 
     const meta = document.createElement("span");
     meta.className = "search-result-type";
-    meta.textContent = record.type === "tool" ? copy.tool : record.type === "location" ? copy.location : copy.article;
+    meta.textContent = record.type === "tool" ? copy.tool : record.type === "location" ? copy.location : record.type === "event" ? copy.event : copy.article;
 
     const title = document.createElement("h2");
     const link = document.createElement("a");

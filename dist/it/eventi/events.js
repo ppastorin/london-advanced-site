@@ -79,7 +79,7 @@ function renderEvent(event) {
     ? '<p class="affiliate-note">Potremmo ricevere una commissione senza costi aggiuntivi per te.</p>'
     : "";
   return `
-    <article class="events-list-card">
+    <article class="events-list-card" id="event-${escapeHtml(event.id)}">
       <div class="events-list-meta">
         <span>${escapeHtml(categoryLabel(event.category))}</span>
         <strong>${escapeHtml(event.price.display)}</strong>
@@ -106,8 +106,8 @@ function activeEvents(data, now) {
   const today = londonDayKey(now);
   if (today < data.valid_from || today > data.valid_until) return [];
   return data.events.filter(event =>
-    evento.publication_status === "approved" &&
-    Number.isInteger(event.advanced?.score) && evento.advanced.score >= 7 &&
+    event.publication_status === "approved" &&
+    Number.isInteger(event.advanced?.score) && event.advanced.score >= 7 &&
     Date.parse(event.publish_at) <= now.getTime() &&
     Date.parse(event.expire_at) > now.getTime() &&
     safeHttpsUrl(event.official_url)
@@ -116,15 +116,15 @@ function activeEvents(data, now) {
 
 function renderGroups(events) {
   const groups = new Map();
-  for (const evento of eventos) {
+  for (const event of events) {
     const start = new Date(event.start);
     const key = londonDayKey(start);
-    if (!groups.has(key)) groups.set(key, { label: formatDay(start), eventos: [] });
+    if (!groups.has(key)) groups.set(key, { label: formatDay(start), events: [] });
     groups.get(key).events.push(event);
   }
   return [...groups.values()].map(group => `
     <section class="events-day">
-      <div class="events-day-heading"><span>${escapeHtml(group.label)}</span><small>${group.events.length} evento${group.events.length === 1 ? "" : "s"}</small></div>
+      <div class="events-day-heading"><span>${escapeHtml(group.label)}</span><small>${group.events.length} evento${group.events.length === 1 ? "" : "i"}</small></div>
       <div class="events-day-grid">${group.events.map(renderEvent).join("")}</div>
     </section>`).join("");
 }
@@ -146,18 +146,18 @@ async function loadEvents() {
     const now = demoRequested && (localPreview || cloudflarePreview)
       ? new Date(`${data.valid_from}T12:00:00Z`)
       : new Date();
-    const eventos = activeEvents(data, now);
+    const events = activeEvents(data, now);
     if (!events.length) {
       list.innerHTML = "";
       list.hidden = true;
-      count.textContent = "No current eventos";
+      count.textContent = "Nessun evento attuale";
       empty.hidden = false;
       return;
     }
     list.hidden = false;
     empty.hidden = true;
     list.innerHTML = renderGroups(events);
-    count.textContent = `${events.length} eventi verificatio${events.length === 1 ? "" : "s"}`;
+    count.textContent = `${events.length} ${events.length === 1 ? "evento verificato" : "eventi verificati"}`;
     const from = new Date(Math.min(...events.map(event => Date.parse(event.start))));
     const until = new Date(Math.max(...events.map(event => Date.parse(event.end))));
     document.querySelector("[data-events-range]").textContent = `${formatDay(from)} – ${formatDay(until)} · Ultimo aggiornamento ${new Intl.DateTimeFormat("it-IT", {
@@ -166,7 +166,7 @@ async function loadEvents() {
   } catch (error) {
     count.textContent = "Eventi temporaneamente non disponibili";
     empty.hidden = false;
-    console.warn("London Advanced eventos feed is unavailable.", error);
+    console.warn("London Advanced events feed is unavailable.", error);
   }
 }
 
@@ -178,12 +178,12 @@ function bindDropdownMenus() {
     });
     menu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => menu.removeAttribute("open")));
   });
-  document.addEventListener("click", evento => {
+  document.addEventListener("click", event => {
     menus.forEach(menu => {
       if (!menu.contains(event.target)) menu.removeAttribute("open");
     });
   });
-  document.addEventListener("keydown", evento => {
+  document.addEventListener("keydown", event => {
     if (event.key === "Escape") menus.forEach(menu => menu.removeAttribute("open"));
   });
 }

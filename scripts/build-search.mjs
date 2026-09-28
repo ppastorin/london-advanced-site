@@ -54,6 +54,70 @@ async function loadPublishedArticles() {
   return articles;
 }
 
+function activeEvents(feed) {
+  const referenceTime = Date.parse(feed.generated_at);
+  if (!Number.isFinite(referenceTime) || !Array.isArray(feed.events)) return [];
+  return feed.events.filter(event =>
+    event.publication_status === "approved" &&
+    Number.isInteger(event.advanced?.score) && event.advanced.score >= 7 &&
+    Date.parse(event.publish_at) <= referenceTime &&
+    Date.parse(event.expire_at) > referenceTime
+  );
+}
+
+function eventRecords(locale, feed) {
+  const it = locale === "it";
+  const categories = it ? {
+    "architecture": "Architettura",
+    "art-design": "Arte e design",
+    "community": "Community",
+    "heritage-history": "Patrimonio e storia",
+    "local-culture": "Cultura locale",
+    "nature": "Natura",
+    "talk": "Incontro",
+    "urban-exploration": "Esplorazione urbana"
+  } : {
+    "architecture": "Architecture",
+    "art-design": "Art and design",
+    "community": "Community",
+    "heritage-history": "Heritage and history",
+    "local-culture": "Local culture",
+    "nature": "Nature",
+    "talk": "Talk",
+    "urban-exploration": "Urban exploration"
+  };
+  const date = new Intl.DateTimeFormat(it ? "it-IT" : "en-GB", {
+    weekday: "short", day: "numeric", month: "short", timeZone: "Europe/London"
+  });
+
+  return activeEvents(feed).map(event => {
+    const title = it ? (event.title_it || event.title_en) : event.title_en;
+    const description = it ? (event.summary_it || event.summary_en) : event.summary_en;
+    const price = event.price.amount_gbp === 0 ? (it ? "Gratuito" : "Free") : event.price.display;
+    const category = categories[event.category] || event.category;
+    const context = `${date.format(new Date(event.start))} · ${event.venue.name} · ${price}`;
+    return {
+      id: `event:${event.id}:${locale}`,
+      type: "event",
+      locale,
+      title,
+      summary: `${context} — ${description}`,
+      url: `${it ? "/it/eventi/" : "/events/"}#event-${event.id}`,
+      tags: [category, price, event.venue.borough, event.price.classification],
+      keywords: [
+        event.venue.name,
+        event.venue.address,
+        event.venue.postcode,
+        event.venue.borough,
+        it ? "evento eventi questa settimana weekend gratuito economico" : "event events this week weekend free affordable"
+      ],
+      content: it ? description : `${description} ${event.advanced?.reason || ""}`,
+      updated_at: feed.generated_at,
+      expires_at: event.expire_at
+    };
+  });
+}
+
 function toolRecords(locale, portal, searchConfig) {
   const definitions = new Map(searchConfig.map(tool => [tool.id, tool]));
   const records = portal.apps.map(tool => {
@@ -133,14 +197,17 @@ async function integrateSearchLinks() {
 }
 
 export async function buildSearch() {
-  const [englishPortal, italianPortal, searchConfig, articles] = await Promise.all([
+  const [englishPortal, italianPortal, searchConfig, articles, eventsFeed] = await Promise.all([
     loadPortalData("content.js"),
     loadPortalData("it/content.js"),
     readFile(path.join(root, "content", "search-tools.json"), "utf8").then(JSON.parse),
-    loadPublishedArticles()
+    loadPublishedArticles(),
+    readFile(path.join(dist, "data", "events.json"), "utf8").then(JSON.parse)
   ]);
-  const english = [...toolRecords("en", englishPortal, searchConfig), ...articles.filter(article => article.locale === "en")];
-  const italian = [...toolRecords("it", italianPortal, searchConfig), ...articles.filter(article => article.locale === "it")];
+  const englishEvents = eventRecords("en", eventsFeed);
+  const italianEvents = eventRecords("it", eventsFeed);
+  const english = [...toolRecords("en", englishPortal, searchConfig), ...articles.filter(article => article.locale === "en"), ...englishEvents];
+  const italian = [...toolRecords("it", italianPortal, searchConfig), ...articles.filter(article => article.locale === "it"), ...italianEvents];
 
   await Promise.all([
     mkdir(path.join(dist, "search"), { recursive: true }),
@@ -156,5 +223,5 @@ export async function buildSearch() {
     copyFile(path.join(root, "search", "search.css"), path.join(dist, "search.css"))
   ]);
   await integrateSearchLinks();
-  console.log(`Built bilingual search with ${english.length} English and ${italian.length} Italian records.`);
+  console.log(`Built bilingual search with ${english.length} English and ${italian.length} Italian records, including ${englishEvents.length} current events.`);
 }

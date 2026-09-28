@@ -79,7 +79,7 @@ function renderEvent(event) {
     ? '<p class="affiliate-note">We may earn a commission at no extra cost to you.</p>'
     : "";
   return `
-    <article class="events-list-card">
+    <article class="events-list-card" id="event-${escapeHtml(event.id)}">
       <div class="events-list-meta">
         <span>${escapeHtml(categoryLabel(event.category))}</span>
         <strong>${escapeHtml(event.price.display)}</strong>
