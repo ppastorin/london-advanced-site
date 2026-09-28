@@ -1,7 +1,8 @@
 # Loo Finder
 
-- 165 curated entries
+- 177 curated entries
 - 42 verified public-park facilities
+- 40 verified shopping-centre destinations
 - “A loo nearby” browser geolocation
 - “A loo near xyz” geocoding
 - mobile-first nearest-results list plus optional map

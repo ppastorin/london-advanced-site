@@ -78,7 +78,7 @@ function looAboutPanel(locale) {
       "It favours documented access over large, speculative lists of pins."
     ],
     usefulFor: "Coverage",
-    facts: ["165 verified locations", "Public parks and transport toilets", "Free cultural venues", "Major shops and centres"],
+    facts: ["177 verified locations", "Public parks and transport toilets", "Free cultural venues", "Major shops and centres"],
     howKicker: "How it works",
     howTitle: "Search, compare, then check the conditions.",
     steps: [
@@ -120,7 +120,7 @@ function looAboutPanel(locale) {
       "Privilegia l’accesso documentato rispetto a grandi elenchi di pin basati su supposizioni."
     ],
     usefulFor: "Copertura",
-    facts: ["165 luoghi verificati", "Bagni nei parchi pubblici e nei trasporti", "Sedi culturali gratuite", "Grandi negozi e centri"],
+    facts: ["177 luoghi verificati", "Bagni nei parchi pubblici e nei trasporti", "Sedi culturali gratuite", "Grandi negozi e centri"],
     howKicker: "Come funziona",
     howTitle: "Cerca, confronta e controlla le condizioni.",
     steps: [

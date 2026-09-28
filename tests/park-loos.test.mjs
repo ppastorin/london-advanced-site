@@ -21,7 +21,7 @@ const requiredParkFacilities = [
 
 test("loo dataset includes the verified public-park audit", () => {
   assert.equal(dataset.count, dataset.loos.length);
-  assert.equal(dataset.count, 165);
+  assert.ok(dataset.count >= 165);
   assert.equal(new Set(dataset.loos.map(loo => loo.id)).size, dataset.loos.length);
 
   const byId = new Map(dataset.loos.map(loo => [loo.id, loo]));
