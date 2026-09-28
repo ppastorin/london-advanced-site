@@ -1,321 +1,81 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-09-24T15:01:55+01:00",
-  "valid_from": "2026-09-24",
-  "valid_until": "2026-09-27",
+  "generated_at": "2026-09-28T09:43:22+01:00",
+  "valid_from": "2026-09-28",
+  "valid_until": "2026-10-04",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "woolmen-sheep-drive-livery-fair-2026-09-27",
-    "drawn-into-your-presence-clapham-2026-09-25",
-    "brixton-windmill-harvest-festival-2026-09-27"
+    "route-106-heritage-buses-2026-10-03",
+    "london-sewing-machine-museum-2026-10-03",
+    "little-holland-house-open-day-2026-10-04"
   ],
   "events": [
     {
-      "id": "gift-to-the-future-southbank-2026-09-25",
-      "title_en": "Gift to the Future at Southbank Centre",
-      "title_it": "Gift to the Future al Southbank Centre",
-      "summary_en": "More than 90 lines written with thousands of school pupils turn the Southbank Centre’s brutalist exterior into a site-wide poetry installation inspired by the 1951 Festival of Britain.",
-      "summary_it": "Oltre 90 versi creati con migliaia di studenti trasformano gli edifici brutalisti del Southbank Centre in un’installazione poetica ispirata al Festival of Britain del 1951.",
-      "start": "2026-09-25T00:00:00+01:00",
-      "end": "2026-09-27T23:59:00+01:00",
+      "id": "spotlight-nigeria-va-2026-10-02",
+      "title_en": "Spotlight on Nigeria at the V&A",
+      "title_it": "Spotlight sulla Nigeria al V&A",
+      "summary_en": "A six-hour programme of curator talks, object handling, artist conversations and gallery tours explores Nigerian textiles, ceramics, design, photography and cultural histories.",
+      "summary_it": "Sei ore di incontri con curatori e artisti, oggetti da osservare da vicino e visite alle gallerie esplorano tessuti, ceramica, design e fotografia della Nigeria.",
+      "start": "2026-10-02T12:00:00+01:00",
+      "end": "2026-10-02T18:00:00+01:00",
       "venue": {
-        "name": "Southbank Centre, Riverside Terrace",
-        "address": "Belvedere Road, London",
-        "postcode": "SE1 8XX",
-        "borough": "Lambeth"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "art-design",
-      "advanced": {
-        "score": 8,
-        "reason": "A temporary intervention connects children’s voices, brutalist architecture and the Festival of Britain legacy across a major public site.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 0,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.southbankcentre.co.uk/whats-on/gift-to-the-future/",
-      "verification": {
-        "verified_at": "2026-09-24T15:01:55+01:00",
-        "confidence": "high",
-        "source_url": "https://www.southbankcentre.co.uk/whats-on/gift-to-the-future/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-24T15:01:55+01:00",
-      "expire_at": "2026-09-28T00:14:00+01:00",
-      "duplicate_key": "southbank-centre|2026-09-25|gift-to-the-future"
-    },
-    {
-      "id": "sacred-treasures-kyiv-va-2026-09-25",
-      "title_en": "Sacred Treasures from Kyiv at the V&A",
-      "title_it": "Sacred Treasures from Kyiv al V&A",
-      "summary_en": "Seven Ukrainian Baroque sacred works from the Kyiv-Pechersk Lavra are shown in the UK for the first time, including an icon, altar Gospel and silver chalice.",
-      "summary_it": "Sette opere sacre del barocco ucraino dalla Kyiv-Pechersk Lavra arrivano per la prima volta nel Regno Unito, tra cui un’icona, un Vangelo da altare e un calice d’argento.",
-      "start": "2026-09-25T10:00:00+01:00",
-      "end": "2026-09-27T17:45:00+01:00",
-      "venue": {
-        "name": "V&A South Kensington",
+        "name": "V&A South Kensington, Learning Centre",
         "address": "Cromwell Road, London",
         "postcode": "SW7 2RL",
         "borough": "Kensington and Chelsea"
       },
       "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 8,
-        "reason": "A rare first UK display that connects Ukrainian religious heritage, Baroque craft and cultural preservation at no cost.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 0,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv",
-      "verification": {
-        "verified_at": "2026-09-24T15:01:55+01:00",
-        "confidence": "high",
-        "source_url": "https://www.vam.ac.uk/exhibitions/sacred-treasures-from-kyiv"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-24T15:01:55+01:00",
-      "expire_at": "2026-09-27T18:00:00+01:00",
-      "duplicate_key": "va-south-kensington|2026-09-25|sacred-treasures-kyiv"
-    },
-    {
-      "id": "amar-kanwar-serpentine-2026-09-25",
-      "title_en": "Amar Kanwar at Serpentine North",
-      "title_it": "Amar Kanwar alla Serpentine North",
-      "summary_en": "A darkened, site-specific environment brings together lyrical films on decolonisation, displacement and Partition, including the premiere of the seven-screen work The Charcoal Man.",
-      "summary_it": "Un ambiente immersivo e oscurato riunisce film lirici su decolonizzazione, migrazione e Partizione, inclusa la prima dell’opera a sette schermi The Charcoal Man.",
-      "start": "2026-09-25T10:00:00+01:00",
-      "end": "2026-09-27T18:00:00+01:00",
-      "venue": {
-        "name": "Serpentine North Gallery",
-        "address": "West Carriage Drive, Kensington Gardens, London",
-        "postcode": "W2 2AR",
-        "borough": "Westminster"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "recommended",
-        "url": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list"
-      },
-      "category": "art-design",
-      "advanced": {
-        "score": 8,
-        "reason": "A substantial free moving-image installation uses an unusual gallery environment to explore powerful histories of place, violence and memory.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 0,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.serpentinegalleries.org/whats-on/amar-kanwar-exhibition/",
-      "verification": {
-        "verified_at": "2026-09-24T15:01:55+01:00",
-        "confidence": "high",
-        "source_url": "https://www.serpentinegalleries.org/whats-on/amar-kanwar-exhibition/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-24T15:01:55+01:00",
-      "expire_at": "2026-09-27T18:15:00+01:00",
-      "duplicate_key": "serpentine-north|2026-09-25|amar-kanwar"
-    },
-    {
-      "id": "japanese-women-photographers-2026-09-25",
-      "title_en": "Japanese Women Photographers: From 1950s to Now",
-      "title_it": "Fotografe giapponesi: dagli anni Cinquanta a oggi",
-      "summary_en": "The final weekend brings together more than 200 photographs, videos, installations and rare books by 27 women whose work challenges a male-dominated account of Japanese photography.",
-      "summary_it": "L’ultimo weekend riunisce oltre 200 fotografie, video, installazioni e libri rari di 27 autrici che riscrivono una storia della fotografia giapponese dominata dagli uomini.",
-      "start": "2026-09-25T10:30:00+01:00",
-      "end": "2026-09-27T18:00:00+01:00",
-      "venue": {
-        "name": "The Photographers’ Gallery",
-        "address": "16-18 Ramillies Street, London",
-        "postcode": "W1F 7LW",
-        "borough": "Westminster"
-      },
-      "price": {
-        "amount_gbp": 10,
-        "display": "£10 online, donation excluded",
-        "classification": "cheap"
+        "amount_gbp": 15,
+        "display": "£15",
+        "classification": "exceptional"
       },
       "booking": {
         "required": true,
         "status": "required",
-        "url": "https://thephotographersgallery.ticketsolve.com/ticketbooth/shows/1173687757"
+        "url": "https://www.vam.ac.uk/event/X6Yglwm7Dq/p26055-spotlight-on-nigeria-at-the-v-a"
       },
-      "category": "art-design",
+      "category": "local-culture",
       "advanced": {
-        "score": 8,
-        "reason": "A major corrective to photographic history, with 27 artists and more than 200 works available for £10 on its final weekend.",
+        "score": 7,
+        "reason": "An unusually substantial six-hour programme offers close access to Nigerian objects, curators and artists at the upper price limit.",
         "breakdown": {
           "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
+          "place_story": 1,
+          "unusual_access": 2,
           "local_character": 0,
-          "value": 2
+          "value": 1
         }
       },
-      "newsletter_sources": ["Londonist", "The Times"],
-      "official_url": "https://thephotographersgallery.org.uk/whats-on/japanese-women-photographers-1950s-now",
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.vam.ac.uk/event/X6Yglwm7Dq/p26055-spotlight-on-nigeria-at-the-v-a",
       "verification": {
-        "verified_at": "2026-09-24T15:01:55+01:00",
+        "verified_at": "2026-09-28T09:43:22+01:00",
         "confidence": "high",
-        "source_url": "https://thephotographersgallery.org.uk/whats-on/japanese-women-photographers-1950s-now"
+        "source_url": "https://www.vam.ac.uk/event/X6Yglwm7Dq/p26055-spotlight-on-nigeria-at-the-v-a"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-24T15:01:55+01:00",
-      "expire_at": "2026-09-27T18:15:00+01:00",
-      "duplicate_key": "photographers-gallery|2026-09-25|japanese-women-photographers"
+      "publish_at": "2026-09-28T09:43:22+01:00",
+      "expire_at": "2026-10-02T18:15:00+01:00",
+      "duplicate_key": "va-south-kensington|2026-10-02|spotlight-nigeria"
     },
     {
-      "id": "drawn-into-your-presence-clapham-2026-09-25",
-      "title_en": "Drawn into Your Presence in Clapham",
-      "title_it": "Drawn into Your Presence a Clapham",
-      "summary_en": "A local photographer pairs 30 enlarged Victorian Bible engravings with 30 contemporary images of south London church life inside a Grade II-listed post-war church.",
-      "summary_it": "Un fotografo locale abbina 30 incisioni bibliche vittoriane ingrandite a 30 immagini della vita religiosa nel sud di Londra, in una chiesa modernista di Grade II.",
-      "start": "2026-09-25T11:00:00+01:00",
-      "end": "2026-09-27T18:00:00+01:00",
+      "id": "route-106-heritage-buses-2026-10-03",
+      "title_en": "Free Heritage Buses on Route 106",
+      "title_it": "Autobus storici gratuiti sulla linea 106",
+      "summary_en": "Routemasters, RTs and other preserved buses from the 1950s to 1970s carry passengers free between Finsbury Park and Ash Grove, with real conductors and no booking.",
+      "summary_it": "Routemaster, RT e altri autobus conservati dagli anni Cinquanta ai Settanta trasportano gratuitamente i passeggeri tra Finsbury Park e Ash Grove, con veri controllori.",
+      "start": "2026-10-03T10:00:00+01:00",
+      "end": "2026-10-03T17:00:00+01:00",
       "venue": {
-        "name": "St James’ Church, Clapham",
-        "address": "Park Hill, Clapham, London",
-        "postcode": "SW4 9PB",
-        "borough": "Lambeth"
+        "name": "Route 106: Finsbury Park to Ash Grove",
+        "address": "Finsbury Park Interchange, Station Place to Ash Grove Garage, Mare Street",
+        "postcode": "N4 2DH",
+        "borough": "Islington and Hackney"
       },
       "price": {
         "amount_gbp": 0,
         "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 9,
-        "reason": "A one-month local exhibition connects Victorian print culture, south London social history and access to a notable post-war church.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.stjamesclapham.org.uk/programme",
-      "verification": {
-        "verified_at": "2026-09-24T15:01:55+01:00",
-        "confidence": "high",
-        "source_url": "https://www.stjamesclapham.org.uk/new-page-3"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-24T15:01:55+01:00",
-      "expire_at": "2026-09-27T18:15:00+01:00",
-      "duplicate_key": "st-james-clapham|2026-09-25|drawn-into-your-presence"
-    },
-    {
-      "id": "reviving-craft-somerset-house-2026-09-25",
-      "title_en": "Reviving Craft at Somerset House",
-      "title_it": "Reviving Craft a Somerset House",
-      "summary_en": "More than 70 artists trace China’s living craft heritage through ceramics, glass, textiles, jewellery, furniture and immersive digital work in the South Wing galleries.",
-      "summary_it": "Oltre 70 artisti raccontano il patrimonio artigianale cinese attraverso ceramica, vetro, tessuti, gioielli, arredi e opere digitali immersive nelle gallerie South Wing.",
-      "start": "2026-09-25T11:00:00+01:00",
-      "end": "2026-09-27T18:00:00+01:00",
-      "venue": {
-        "name": "Somerset House, Embankment Galleries South Wing",
-        "address": "Somerset House, Strand, London",
-        "postcode": "WC2R 1LA",
-        "borough": "Westminster"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "art-design",
-      "advanced": {
-        "score": 8,
-        "reason": "A substantial free exhibition links living craft traditions with contemporary and immersive design in a distinctive London setting.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 0,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind",
-      "verification": {
-        "verified_at": "2026-09-24T15:01:55+01:00",
-        "confidence": "high",
-        "source_url": "https://www.somersethouse.org.uk/whats-on/reviving-craft-reflection-of-the-mind"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-09-24T15:01:55+01:00",
-      "expire_at": "2026-09-27T18:15:00+01:00",
-      "duplicate_key": "somerset-house|2026-09-25|reviving-craft"
-    },
-    {
-      "id": "woolmen-sheep-drive-livery-fair-2026-09-27",
-      "title_en": "Woolmen Sheep Drive and Livery Fair",
-      "title_it": "Woolmen Sheep Drive e Livery Fair",
-      "summary_en": "Freemen revive their ancient right to drive sheep over the Thames while the public explores livery trades, wool crafts, blade shearing and rare breeds beside Southwark Bridge.",
-      "summary_it": "I Freemen rievocano l’antico diritto di condurre pecore sul Tamigi, mentre il pubblico scopre corporazioni, artigianato della lana, tosatura e razze rare presso Southwark Bridge.",
-      "start": "2026-09-27T10:00:00+01:00",
-      "end": "2026-09-27T16:00:00+01:00",
-      "venue": {
-        "name": "Southwark Bridge and Woolmen Livery Fair",
-        "address": "Queen Street and Queen Street Place, London",
-        "postcode": "EC4R 1BE",
-        "borough": "City of London"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free to watch and visit",
         "classification": "free"
       },
       "booking": {
@@ -326,7 +86,7 @@
       "category": "heritage-history",
       "advanced": {
         "score": 10,
-        "reason": "An exceptionally London-specific livery tradition combines an ancient City right, a one-day spectacle and free public access.",
+        "reason": "A one-day moving museum restores historic London buses to a working route, combining transport history, unusual access and exceptional value.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
@@ -335,31 +95,31 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist", "Londonfy"],
-      "official_url": "https://woolmensheepdrive.london/",
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.londonbusmuseum.com/route-106-heritage-day/",
       "verification": {
-        "verified_at": "2026-09-24T15:01:55+01:00",
+        "verified_at": "2026-09-28T09:43:22+01:00",
         "confidence": "high",
-        "source_url": "https://woolmensheepdrive.london/wool-fair/"
+        "source_url": "https://www.londonbusmuseum.com/route-106-heritage-day/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-24T15:01:55+01:00",
-      "expire_at": "2026-09-27T16:15:00+01:00",
-      "duplicate_key": "southwark-bridge|2026-09-27|woolmen-sheep-drive-livery-fair"
+      "publish_at": "2026-09-28T09:43:22+01:00",
+      "expire_at": "2026-10-03T17:15:00+01:00",
+      "duplicate_key": "route-106-finsbury-park-ash-grove|2026-10-03|heritage-buses"
     },
     {
-      "id": "brixton-windmill-harvest-festival-2026-09-27",
-      "title_en": "Harvest Festival at Brixton Windmill",
-      "title_it": "Festa del raccolto al Brixton Windmill",
-      "summary_en": "Inner London’s only working windmill celebrates the wheat harvest with milling demonstrations, baking and craft workshops, hand querns, Morris dancing and local live music.",
-      "summary_it": "L’unico mulino a vento funzionante dell’Inner London celebra il raccolto con dimostrazioni di macinazione, laboratori, macine manuali, Morris dance e musica locale.",
-      "start": "2026-09-27T13:00:00+01:00",
-      "end": "2026-09-27T17:00:00+01:00",
+      "id": "morden-hall-harvest-festival-2026-10-03",
+      "title_en": "Harvest Festival at Morden Hall Park",
+      "title_it": "Festa del raccolto a Morden Hall Park",
+      "summary_en": "Apple pressing, Black Swan Border Morris, folk music, pollinator displays, crafts and a nature-themed Punch and Judy animate the Stableyard and park.",
+      "summary_it": "Spremitura delle mele, Morris dance, musica folk, attività sugli impollinatori, laboratori e Punch and Judy animano lo Stableyard e il parco.",
+      "start": "2026-10-03T11:00:00+01:00",
+      "end": "2026-10-03T15:30:00+01:00",
       "venue": {
-        "name": "Brixton Windmill Centre",
-        "address": "100 Blenheim Gardens, Brixton Hill, London",
-        "postcode": "SW2 5DA",
-        "borough": "Lambeth"
+        "name": "Morden Hall Park, Stableyard",
+        "address": "Morden Hall Road, Morden, London",
+        "postcode": "SM4 5JD",
+        "borough": "Merton"
       },
       "price": {
         "amount_gbp": 0,
@@ -373,10 +133,58 @@
       },
       "category": "local-culture",
       "advanced": {
-        "score": 9,
-        "reason": "A free neighbourhood celebration offers working-mill demonstrations, local history and traditional harvest activities at a rare London landmark.",
+        "score": 8,
+        "reason": "A free neighbourhood harvest day combines local landscape, traditional performance, working apple presses and community participation.",
         "breakdown": {
           "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.nationaltrust.org.uk/visit/london/morden-hall-park/events/98219906-127a-436d-801f-1cdba2fd44ae",
+      "verification": {
+        "verified_at": "2026-09-28T09:43:22+01:00",
+        "confidence": "high",
+        "source_url": "https://www.nationaltrust.org.uk/visit/london/morden-hall-park/events/98219906-127a-436d-801f-1cdba2fd44ae"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-28T09:43:22+01:00",
+      "expire_at": "2026-10-03T15:45:00+01:00",
+      "duplicate_key": "morden-hall-park|2026-10-03|harvest-festival"
+    },
+    {
+      "id": "london-sewing-machine-museum-2026-10-03",
+      "title_en": "London Sewing Machine Museum Open Day",
+      "title_it": "Apertura del London Sewing Machine Museum",
+      "summary_en": "Balham's rarely opened private museum reveals more than 600 machines, including an 1865 model presented to Queen Victoria's eldest daughter, in its monthly three-hour opening.",
+      "summary_it": "Il museo privato di Balham, aperto solo una volta al mese, mostra oltre 600 macchine, incluso un modello del 1865 donato alla figlia maggiore della regina Vittoria.",
+      "start": "2026-10-03T14:00:00+01:00",
+      "end": "2026-10-03T17:00:00+01:00",
+      "venue": {
+        "name": "London Sewing Machine Museum",
+        "address": "308 Balham High Road, London",
+        "postcode": "SW17 7AA",
+        "borough": "Wandsworth"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free; donations welcome",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 10,
+        "reason": "A little-known private collection opens for only three hours a month, offering rare access, a strong local story and free admission.",
+        "breakdown": {
+          "non_obvious": 3,
           "place_story": 2,
           "unusual_access": 2,
           "local_character": 1,
@@ -384,16 +192,160 @@
         }
       },
       "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.lambeth.gov.uk/events/harvest-festival-brixton-windmill-festival",
+      "official_url": "https://www.craftysewer.com/acatalog/London_Sewing_Machine_Museum.html",
       "verification": {
-        "verified_at": "2026-09-24T15:01:55+01:00",
+        "verified_at": "2026-09-28T09:43:22+01:00",
         "confidence": "high",
-        "source_url": "https://www.lambeth.gov.uk/events/harvest-festival-brixton-windmill-festival"
+        "source_url": "https://www.craftysewer.com/acatalog/Opening-Times-30803.html"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-24T15:01:55+01:00",
-      "expire_at": "2026-09-27T17:15:00+01:00",
-      "duplicate_key": "brixton-windmill|2026-09-27|harvest-festival"
+      "publish_at": "2026-09-28T09:43:22+01:00",
+      "expire_at": "2026-10-03T17:15:00+01:00",
+      "duplicate_key": "london-sewing-machine-museum|2026-10-03|monthly-open-day"
+    },
+    {
+      "id": "japan-matsuri-trafalgar-square-2026-10-04",
+      "title_en": "Japan Matsuri at Trafalgar Square",
+      "title_it": "Japan Matsuri a Trafalgar Square",
+      "summary_en": "A one-day festival fills Trafalgar Square with taiko, traditional dance, martial arts, workshops, an anime cosplay catwalk and Japanese food and craft stalls.",
+      "summary_it": "Un festival di un solo giorno riempie Trafalgar Square di taiko, danza tradizionale, arti marziali, laboratori, cosplay anime e stand giapponesi.",
+      "start": "2026-10-04T10:00:00+01:00",
+      "end": "2026-10-04T20:00:00+01:00",
+      "venue": {
+        "name": "Trafalgar Square",
+        "address": "Trafalgar Square, London",
+        "postcode": "WC2N 5DS",
+        "borough": "Westminster"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "local-culture",
+      "advanced": {
+        "score": 7,
+        "reason": "A one-day celebration links London's Japanese community with a broad public programme in one of the city's defining civic spaces.",
+        "breakdown": {
+          "non_obvious": 1,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://japanmatsuri.com/",
+      "verification": {
+        "verified_at": "2026-09-28T09:43:22+01:00",
+        "confidence": "high",
+        "source_url": "https://japanmatsuri.com/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-28T09:43:22+01:00",
+      "expire_at": "2026-10-04T20:15:00+01:00",
+      "duplicate_key": "trafalgar-square|2026-10-04|japan-matsuri"
+    },
+    {
+      "id": "little-holland-house-open-day-2026-10-04",
+      "title_en": "Little Holland House Open Day",
+      "title_it": "Apertura di Little Holland House",
+      "summary_en": "Step inside Frank Dickinson's self-built Arts and Crafts home, where his handmade furniture, paintings, carvings, metalwork and Art Nouveau interiors remain in place.",
+      "summary_it": "Si entra nella casa Arts and Crafts costruita da Frank Dickinson, dove mobili, dipinti, intagli, metalli e interni Art Nouveau fatti a mano sono ancora al loro posto.",
+      "start": "2026-10-04T10:30:00+01:00",
+      "end": "2026-10-04T16:30:00+01:00",
+      "venue": {
+        "name": "Little Holland House",
+        "address": "40 Beeches Avenue, Carshalton",
+        "postcode": "SM5 3LW",
+        "borough": "Sutton"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "recommended",
+        "url": "https://events.sutton.gov.uk/event?id=313446"
+      },
+      "category": "architecture",
+      "advanced": {
+        "score": 10,
+        "reason": "A monthly opening gives free access to an intact, hand-built Arts and Crafts home with an exceptional local design story.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://events.sutton.gov.uk/event?id=313446",
+      "verification": {
+        "verified_at": "2026-09-28T09:43:22+01:00",
+        "confidence": "high",
+        "source_url": "https://events.sutton.gov.uk/event?id=313446"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-28T09:43:22+01:00",
+      "expire_at": "2026-10-04T16:45:00+01:00",
+      "duplicate_key": "little-holland-house|2026-10-04|monthly-open-day"
+    },
+    {
+      "id": "fulham-palace-apple-day-2026-10-04",
+      "title_en": "Apple Day at Fulham Palace",
+      "title_it": "Apple Day a Fulham Palace",
+      "summary_en": "Orchard tours reveal Fulham Palace's heritage apple varieties alongside the harvest market, garden games, baking competition, local food, crafts and live music.",
+      "summary_it": "Le visite al frutteto svelano le varietà storiche di mele di Fulham Palace, insieme a mercato, giochi, gara di dolci, artigianato e musica dal vivo.",
+      "start": "2026-10-04T11:00:00+01:00",
+      "end": "2026-10-04T16:00:00+01:00",
+      "venue": {
+        "name": "Fulham Palace",
+        "address": "Bishop's Avenue, Fulham, London",
+        "postcode": "SW6 6EA",
+        "borough": "Hammersmith and Fulham"
+      },
+      "price": {
+        "amount_gbp": 3,
+        "display": "£3 adult advance; £4 door",
+        "classification": "cheap"
+      },
+      "booking": {
+        "required": false,
+        "status": "recommended",
+        "url": "https://fulhampalace.digitickets.co.uk/event-tickets/41510?catID=41565"
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 8,
+        "reason": "A low-cost harvest celebration connects a historic episcopal estate, its working orchard and local makers through guided access and activities.",
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.fulhampalace.org/whats-on/events/apple-day/",
+      "verification": {
+        "verified_at": "2026-09-28T09:43:22+01:00",
+        "confidence": "high",
+        "source_url": "https://www.fulhampalace.org/whats-on/events/apple-day/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-09-28T09:43:22+01:00",
+      "expire_at": "2026-10-04T16:15:00+01:00",
+      "duplicate_key": "fulham-palace|2026-10-04|apple-day"
     }
   ]
 }
