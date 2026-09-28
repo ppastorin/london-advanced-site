@@ -72,3 +72,7 @@
   .search-result { padding: 20px; }
   .search-result-action { position: static; display: inline-block; margin-top: 14px; transform: none; }
 }
+@media (max-width: 520px) {
+  .site-nav .brand-name { display: none; }
+  .site-nav .wordmark { min-width: 30px; }
+}
