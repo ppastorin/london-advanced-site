@@ -273,28 +273,28 @@
       "updated_at": "2026-09-27T17:23:43+01:00"
     },
     {
-      "id": "event:spotlight-nigeria-va-2026-10-02:it",
+      "id": "event:ronald-moody-sculpting-life-2026-10-02:it",
       "type": "event",
       "locale": "it",
-      "title": "Spotlight sulla Nigeria al V&A",
-      "summary": "ven 2 ott · V&A South Kensington, Learning Centre · £15 — Sei ore di incontri con curatori e artisti, oggetti da osservare da vicino e visite alle gallerie esplorano tessuti, ceramica, design e fotografia della Nigeria.",
-      "url": "/it/eventi/#event-spotlight-nigeria-va-2026-10-02",
+      "title": "Ronald Moody: Sculpting Life",
+      "summary": "ven 2 ott · Orleans House Gallery · Gratuito — Una grande mostra gratuita riporta a Londra l'opera dello scultore giamaicano Ronald Moody, tra sculture, poesia, scritti e registrazioni audio.",
+      "url": "/it/eventi/#event-ronald-moody-sculpting-life-2026-10-02",
       "tags": [
-        "Cultura locale",
-        "£15",
-        "Kensington and Chelsea",
-        "exceptional"
+        "Arte e design",
+        "Gratuito",
+        "Richmond upon Thames",
+        "free"
       ],
       "keywords": [
-        "V&A South Kensington, Learning Centre",
-        "Cromwell Road, London",
-        "SW7 2RL",
-        "Kensington and Chelsea",
+        "Orleans House Gallery",
+        "Orleans Road, Twickenham",
+        "TW1 3BL",
+        "Richmond upon Thames",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "Sei ore di incontri con curatori e artisti, oggetti da osservare da vicino e visite alle gallerie esplorano tessuti, ceramica, design e fotografia della Nigeria.",
-      "updated_at": "2026-09-28T09:43:22+01:00",
-      "expires_at": "2026-10-02T18:15:00+01:00"
+      "content": "Una grande mostra gratuita riporta a Londra l'opera dello scultore giamaicano Ronald Moody, tra sculture, poesia, scritti e registrazioni audio.",
+      "updated_at": "2026-10-01T15:01:11+01:00",
+      "expires_at": "2026-10-04T17:15:00+01:00"
     },
     {
       "id": "event:route-106-heritage-buses-2026-10-03:it",
@@ -317,8 +317,32 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Routemaster, RT e altri autobus conservati dagli anni Cinquanta ai Settanta trasportano gratuitamente i passeggeri tra Finsbury Park e Ash Grove, con veri controllori.",
-      "updated_at": "2026-09-28T09:43:22+01:00",
+      "updated_at": "2026-10-01T15:01:11+01:00",
       "expires_at": "2026-10-03T17:15:00+01:00"
+    },
+    {
+      "id": "event:ceramics-in-the-city-2026-10-03:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Ceramics in the City",
+      "summary": "sab 3 ott · Museum of the Home, The Hive · Gratuito — Una fiera gratuita al Museum of the Home riunisce ceramisti indipendenti a Hackney, con incontri con gli artisti, tecniche e artigianato locale.",
+      "url": "/it/eventi/#event-ceramics-in-the-city-2026-10-03",
+      "tags": [
+        "Arte e design",
+        "Gratuito",
+        "Hackney",
+        "free"
+      ],
+      "keywords": [
+        "Museum of the Home, The Hive",
+        "136 Kingsland Road, London",
+        "E2 8EA",
+        "Hackney",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Una fiera gratuita al Museum of the Home riunisce ceramisti indipendenti a Hackney, con incontri con gli artisti, tecniche e artigianato locale.",
+      "updated_at": "2026-10-01T15:01:11+01:00",
+      "expires_at": "2026-10-04T17:15:00+01:00"
     },
     {
       "id": "event:morden-hall-harvest-festival-2026-10-03:it",
@@ -341,32 +365,32 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Spremitura delle mele, Morris dance, musica folk, attività sugli impollinatori, laboratori e Punch and Judy animano lo Stableyard e il parco.",
-      "updated_at": "2026-09-28T09:43:22+01:00",
+      "updated_at": "2026-10-01T15:01:11+01:00",
       "expires_at": "2026-10-03T15:45:00+01:00"
     },
     {
-      "id": "event:london-sewing-machine-museum-2026-10-03:it",
+      "id": "event:croydon-harvest-2026-10-03:it",
       "type": "event",
       "locale": "it",
-      "title": "Apertura del London Sewing Machine Museum",
-      "summary": "sab 3 ott · London Sewing Machine Museum · Gratuito — Il museo privato di Balham, aperto solo una volta al mese, mostra oltre 600 macchine, incluso un modello del 1865 donato alla figlia maggiore della regina Vittoria.",
-      "url": "/it/eventi/#event-london-sewing-machine-museum-2026-10-03",
+      "title": "Croydon Harvest e Walnut Fair",
+      "summary": "sab 3 ott · Croydon town centre · Gratuito — Un festival gratuito rievoca la Walnut Fair di Croydon del 1314 con circo rurale, tradizioni folk, storia locale, danze globali e arte partecipativa.",
+      "url": "/it/eventi/#event-croydon-harvest-2026-10-03",
       "tags": [
         "Patrimonio e storia",
         "Gratuito",
-        "Wandsworth",
+        "Croydon",
         "free"
       ],
       "keywords": [
-        "London Sewing Machine Museum",
-        "308 Balham High Road, London",
-        "SW17 7AA",
-        "Wandsworth",
+        "Croydon town centre",
+        "The Queen's Gardens, Katharine Street, High Street and Croydon Clocktower",
+        "CR9 1ET",
+        "Croydon",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "Il museo privato di Balham, aperto solo una volta al mese, mostra oltre 600 macchine, incluso un modello del 1865 donato alla figlia maggiore della regina Vittoria.",
-      "updated_at": "2026-09-28T09:43:22+01:00",
-      "expires_at": "2026-10-03T17:15:00+01:00"
+      "content": "Un festival gratuito rievoca la Walnut Fair di Croydon del 1314 con circo rurale, tradizioni folk, storia locale, danze globali e arte partecipativa.",
+      "updated_at": "2026-10-01T15:01:11+01:00",
+      "expires_at": "2026-10-04T17:15:00+01:00"
     },
     {
       "id": "event:japan-matsuri-trafalgar-square-2026-10-04:it",
@@ -389,7 +413,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Un festival di un solo giorno riempie Trafalgar Square di taiko, danza tradizionale, arti marziali, laboratori, cosplay anime e stand giapponesi.",
-      "updated_at": "2026-09-28T09:43:22+01:00",
+      "updated_at": "2026-10-01T15:01:11+01:00",
       "expires_at": "2026-10-04T20:15:00+01:00"
     },
     {
@@ -413,7 +437,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Si entra nella casa Arts and Crafts costruita da Frank Dickinson, dove mobili, dipinti, intagli, metalli e interni Art Nouveau fatti a mano sono ancora al loro posto.",
-      "updated_at": "2026-09-28T09:43:22+01:00",
+      "updated_at": "2026-10-01T15:01:11+01:00",
       "expires_at": "2026-10-04T16:45:00+01:00"
     },
     {
@@ -437,7 +461,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Le visite al frutteto svelano le varietà storiche di mele di Fulham Palace, insieme a mercato, giochi, gara di dolci, artigianato e musica dal vivo.",
-      "updated_at": "2026-09-28T09:43:22+01:00",
+      "updated_at": "2026-10-01T15:01:11+01:00",
       "expires_at": "2026-10-04T16:15:00+01:00"
     }
   ]
