@@ -1,63 +1,65 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-09-28T09:43:22+01:00",
-  "valid_from": "2026-09-28",
+  "generated_at": "2026-10-01T15:01:11+01:00",
+  "valid_from": "2026-10-01",
   "valid_until": "2026-10-04",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
     "route-106-heritage-buses-2026-10-03",
-    "london-sewing-machine-museum-2026-10-03",
+    "croydon-harvest-2026-10-03",
     "little-holland-house-open-day-2026-10-04"
   ],
   "events": [
     {
-      "id": "spotlight-nigeria-va-2026-10-02",
-      "title_en": "Spotlight on Nigeria at the V&A",
-      "title_it": "Spotlight sulla Nigeria al V&A",
-      "summary_en": "A six-hour programme of curator talks, object handling, artist conversations and gallery tours explores Nigerian textiles, ceramics, design, photography and cultural histories.",
-      "summary_it": "Sei ore di incontri con curatori e artisti, oggetti da osservare da vicino e visite alle gallerie esplorano tessuti, ceramica, design e fotografia della Nigeria.",
-      "start": "2026-10-02T12:00:00+01:00",
-      "end": "2026-10-02T18:00:00+01:00",
+      "id": "ronald-moody-sculpting-life-2026-10-02",
+      "title_en": "Ronald Moody: Sculpting Life",
+      "title_it": "Ronald Moody: Sculpting Life",
+      "summary_en": "A major free exhibition returns the overlooked Jamaican-born, West London-based sculptor's work to the city, spanning sculpture, poetry, writing and audio broadcasts.",
+      "summary_it": "Una grande mostra gratuita riporta a Londra l'opera dello scultore giamaicano Ronald Moody, tra sculture, poesia, scritti e registrazioni audio.",
+      "start": "2026-10-02T10:00:00+01:00",
+      "end": "2026-10-04T17:00:00+01:00",
       "venue": {
-        "name": "V&A South Kensington, Learning Centre",
-        "address": "Cromwell Road, London",
-        "postcode": "SW7 2RL",
-        "borough": "Kensington and Chelsea"
+        "name": "Orleans House Gallery",
+        "address": "Orleans Road, Twickenham",
+        "postcode": "TW1 3BL",
+        "borough": "Richmond upon Thames"
       },
       "price": {
-        "amount_gbp": 15,
-        "display": "£15",
-        "classification": "exceptional"
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
       },
       "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.vam.ac.uk/event/X6Yglwm7Dq/p26055-spotlight-on-nigeria-at-the-v-a"
+        "required": false,
+        "status": "drop-in",
+        "url": null
       },
-      "category": "local-culture",
+      "category": "art-design",
       "advanced": {
-        "score": 7,
-        "reason": "An unusually substantial six-hour programme offers close access to Nigerian objects, curators and artists at the upper price limit.",
+        "score": 9,
+        "reason": "A major free retrospective restores an overlooked West London modernist to the city where he worked for more than fifty years.",
         "breakdown": {
           "non_obvious": 3,
-          "place_story": 1,
-          "unusual_access": 2,
-          "local_character": 0,
-          "value": 1
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.vam.ac.uk/event/X6Yglwm7Dq/p26055-spotlight-on-nigeria-at-the-v-a",
+      "newsletter_sources": [
+        "Londonfy"
+      ],
+      "official_url": "https://orleanshousegallery.org/events/ronald-moody-sculpting-life/",
       "verification": {
-        "verified_at": "2026-09-28T09:43:22+01:00",
+        "verified_at": "2026-10-01T15:01:11+01:00",
         "confidence": "high",
-        "source_url": "https://www.vam.ac.uk/event/X6Yglwm7Dq/p26055-spotlight-on-nigeria-at-the-v-a"
+        "source_url": "https://orleanshousegallery.org/events/ronald-moody-sculpting-life/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-28T09:43:22+01:00",
-      "expire_at": "2026-10-02T18:15:00+01:00",
-      "duplicate_key": "va-south-kensington|2026-10-02|spotlight-nigeria"
+      "publish_at": "2026-10-01T15:01:11+01:00",
+      "expire_at": "2026-10-04T17:15:00+01:00",
+      "duplicate_key": "orleans-house-gallery|2026-10-02|ronald-moody-sculpting-life"
     },
     {
       "id": "route-106-heritage-buses-2026-10-03",
@@ -95,17 +97,69 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
+      "newsletter_sources": [
+        "Londonist"
+      ],
       "official_url": "https://www.londonbusmuseum.com/route-106-heritage-day/",
       "verification": {
-        "verified_at": "2026-09-28T09:43:22+01:00",
+        "verified_at": "2026-10-01T15:01:11+01:00",
         "confidence": "high",
         "source_url": "https://www.londonbusmuseum.com/route-106-heritage-day/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-28T09:43:22+01:00",
+      "publish_at": "2026-10-01T15:01:11+01:00",
       "expire_at": "2026-10-03T17:15:00+01:00",
       "duplicate_key": "route-106-finsbury-park-ash-grove|2026-10-03|heritage-buses"
+    },
+    {
+      "id": "ceramics-in-the-city-2026-10-03",
+      "title_en": "Ceramics in the City",
+      "title_it": "Ceramics in the City",
+      "summary_en": "A free weekend fair at the Museum of the Home brings independent ceramic artists together in Hackney, with makers, techniques and locally rooted craft on view.",
+      "summary_it": "Una fiera gratuita al Museum of the Home riunisce ceramisti indipendenti a Hackney, con incontri con gli artisti, tecniche e artigianato locale.",
+      "start": "2026-10-03T10:00:00+01:00",
+      "end": "2026-10-04T17:00:00+01:00",
+      "venue": {
+        "name": "Museum of the Home, The Hive",
+        "address": "136 Kingsland Road, London",
+        "postcode": "E2 8EA",
+        "borough": "Hackney"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 8,
+        "reason": "A free, independently focused craft fair with deep Hackney roots offers direct access to makers and a wide range of ceramic practice.",
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://museumofthehome.org.uk/whats-on/ceramics-in-the-city-2026/",
+      "verification": {
+        "verified_at": "2026-10-01T15:01:11+01:00",
+        "confidence": "high",
+        "source_url": "https://museumofthehome.org.uk/whats-on/ceramics-in-the-city-2026/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-01T15:01:11+01:00",
+      "expire_at": "2026-10-04T17:15:00+01:00",
+      "duplicate_key": "museum-of-the-home|2026-10-03|ceramics-in-the-city"
     },
     {
       "id": "morden-hall-harvest-festival-2026-10-03",
@@ -143,35 +197,37 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
+      "newsletter_sources": [
+        "Londonist"
+      ],
       "official_url": "https://www.nationaltrust.org.uk/visit/london/morden-hall-park/events/98219906-127a-436d-801f-1cdba2fd44ae",
       "verification": {
-        "verified_at": "2026-09-28T09:43:22+01:00",
+        "verified_at": "2026-10-01T15:01:11+01:00",
         "confidence": "high",
         "source_url": "https://www.nationaltrust.org.uk/visit/london/morden-hall-park/events/98219906-127a-436d-801f-1cdba2fd44ae"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-28T09:43:22+01:00",
+      "publish_at": "2026-10-01T15:01:11+01:00",
       "expire_at": "2026-10-03T15:45:00+01:00",
       "duplicate_key": "morden-hall-park|2026-10-03|harvest-festival"
     },
     {
-      "id": "london-sewing-machine-museum-2026-10-03",
-      "title_en": "London Sewing Machine Museum Open Day",
-      "title_it": "Apertura del London Sewing Machine Museum",
-      "summary_en": "Balham's rarely opened private museum reveals more than 600 machines, including an 1865 model presented to Queen Victoria's eldest daughter, in its monthly three-hour opening.",
-      "summary_it": "Il museo privato di Balham, aperto solo una volta al mese, mostra oltre 600 macchine, incluso un modello del 1865 donato alla figlia maggiore della regina Vittoria.",
-      "start": "2026-10-03T14:00:00+01:00",
-      "end": "2026-10-03T17:00:00+01:00",
+      "id": "croydon-harvest-2026-10-03",
+      "title_en": "Croydon Harvest and Walnut Fair",
+      "title_it": "Croydon Harvest e Walnut Fair",
+      "summary_en": "A free town-centre festival revives Croydon's 1314 Walnut Fair through farmyard circus, folk traditions, local history, global dance and participatory street art.",
+      "summary_it": "Un festival gratuito rievoca la Walnut Fair di Croydon del 1314 con circo rurale, tradizioni folk, storia locale, danze globali e arte partecipativa.",
+      "start": "2026-10-03T12:00:00+01:00",
+      "end": "2026-10-04T17:00:00+01:00",
       "venue": {
-        "name": "London Sewing Machine Museum",
-        "address": "308 Balham High Road, London",
-        "postcode": "SW17 7AA",
-        "borough": "Wandsworth"
+        "name": "Croydon town centre",
+        "address": "The Queen's Gardens, Katharine Street, High Street and Croydon Clocktower",
+        "postcode": "CR9 1ET",
+        "borough": "Croydon"
       },
       "price": {
         "amount_gbp": 0,
-        "display": "Free; donations welcome",
+        "display": "Free",
         "classification": "free"
       },
       "booking": {
@@ -182,7 +238,7 @@
       "category": "heritage-history",
       "advanced": {
         "score": 10,
-        "reason": "A little-known private collection opens for only three hours a month, offering rare access, a strong local story and free admission.",
+        "reason": "A vivid free reinvention of Croydon's 1314 Walnut Fair combines unusually specific local history, neighbourhood participation and one-off street performance.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
@@ -191,17 +247,19 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.craftysewer.com/acatalog/London_Sewing_Machine_Museum.html",
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://news.croydon.gov.uk/croydon-harvest-brings-folk-farmyard-and-fun-to-the-town-centre/",
       "verification": {
-        "verified_at": "2026-09-28T09:43:22+01:00",
+        "verified_at": "2026-10-01T15:01:11+01:00",
         "confidence": "high",
-        "source_url": "https://www.craftysewer.com/acatalog/Opening-Times-30803.html"
+        "source_url": "https://news.croydon.gov.uk/croydon-harvest-brings-folk-farmyard-and-fun-to-the-town-centre/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-28T09:43:22+01:00",
-      "expire_at": "2026-10-03T17:15:00+01:00",
-      "duplicate_key": "london-sewing-machine-museum|2026-10-03|monthly-open-day"
+      "publish_at": "2026-10-01T15:01:11+01:00",
+      "expire_at": "2026-10-04T17:15:00+01:00",
+      "duplicate_key": "croydon-town-centre|2026-10-03|harvest-walnut-fair"
     },
     {
       "id": "japan-matsuri-trafalgar-square-2026-10-04",
@@ -239,15 +297,17 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
+      "newsletter_sources": [
+        "Londonist"
+      ],
       "official_url": "https://japanmatsuri.com/",
       "verification": {
-        "verified_at": "2026-09-28T09:43:22+01:00",
+        "verified_at": "2026-10-01T15:01:11+01:00",
         "confidence": "high",
         "source_url": "https://japanmatsuri.com/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-28T09:43:22+01:00",
+      "publish_at": "2026-10-01T15:01:11+01:00",
       "expire_at": "2026-10-04T20:15:00+01:00",
       "duplicate_key": "trafalgar-square|2026-10-04|japan-matsuri"
     },
@@ -273,7 +333,7 @@
       "booking": {
         "required": false,
         "status": "recommended",
-        "url": "https://events.sutton.gov.uk/event?id=313446"
+        "url": "https://events.sutton.gov.uk/event?id=313423"
       },
       "category": "architecture",
       "advanced": {
@@ -287,15 +347,17 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://events.sutton.gov.uk/event?id=313446",
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://events.sutton.gov.uk/event?id=313423",
       "verification": {
-        "verified_at": "2026-09-28T09:43:22+01:00",
+        "verified_at": "2026-10-01T15:01:11+01:00",
         "confidence": "high",
-        "source_url": "https://events.sutton.gov.uk/event?id=313446"
+        "source_url": "https://events.sutton.gov.uk/event?id=313423"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-28T09:43:22+01:00",
+      "publish_at": "2026-10-01T15:01:11+01:00",
       "expire_at": "2026-10-04T16:45:00+01:00",
       "duplicate_key": "little-holland-house|2026-10-04|monthly-open-day"
     },
@@ -335,15 +397,17 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
+      "newsletter_sources": [
+        "Londonist"
+      ],
       "official_url": "https://www.fulhampalace.org/whats-on/events/apple-day/",
       "verification": {
-        "verified_at": "2026-09-28T09:43:22+01:00",
+        "verified_at": "2026-10-01T15:01:11+01:00",
         "confidence": "high",
         "source_url": "https://www.fulhampalace.org/whats-on/events/apple-day/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-09-28T09:43:22+01:00",
+      "publish_at": "2026-10-01T15:01:11+01:00",
       "expire_at": "2026-10-04T16:15:00+01:00",
       "duplicate_key": "fulham-palace|2026-10-04|apple-day"
     }
