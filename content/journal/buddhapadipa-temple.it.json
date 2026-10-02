@@ -1,8 +1,12 @@
 {
   "workflow_help": "Bozza → Revisione → Approvato → Pubblicato",
   "article_id": "buddhapadipa-temple",
-  "editorial_status": "draft",
-  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
+  },
   "title": "Buddhapadipa Temple: come visitare il santuario thailandese di Wimbledon",
   "slug": "buddhapadipa-temple-wimbledon-visita",
   "seo_title": "Buddhapadipa Temple: visitare il tempio Thai di Wimbledon",
@@ -11,26 +15,121 @@
   "dek": "Dietro un cancello suburbano di Wimbledon sorge il primo tempio buddhista thailandese costruito appositamente in Gran Bretagna: un monastero attivo da visitare con calma.",
   "body": "La prima sorpresa del Buddhapadipa Temple non è vedere un tetto thailandese ornato fra le grandi case di Wimbledon. È la rapidità con cui la strada suburbana scompare appena entrati. Oro, pareti bianche e ripidi spioventi rossi incorniciano il santuario principale; i sentieri scendono fra gli alberi verso uno stagno, un ponte e piccoli spazi devozionali.\n\nNon è una curiosità architettonica trapiantata per essere esposta. Buddhapadipa è un monastero buddhista Theravada attivo, casa di monaci e centro di culto, insegnamento, meditazione e vita della comunità thailandese. I visitatori sono benvenuti, ma la qualità della visita dipende dal comprendere questa differenza.\n\n## Leggere prima il tempio dall’esterno\n\nIl tempio fu fondato a Londra nel 1965 e in seguito trasferito a Wimbledon. L’edificio principale, l’ubosot o sala delle ordinazioni, fu il primo tempio buddhista thailandese costruito appositamente in Gran Bretagna. La geometria è immediata: tetto alto a più livelli, terminali ricurvi e basamento bianco fanno apparire l’edificio più leggero della sua massa.\n\nFate il giro prima di entrare. Recinzioni decorative, figure guardiane e piccoli santuari definiscono un recinto sacro, non una singola facciata fotogenica. Riflessi e dislivelli collegano l’edificio formale al giardino boscoso sottostante.\n\nAll’interno il Buddha dorato è il centro visivo, ma lasciate agli occhi il tempo di adattarsi. Le pareti sono coperte dai murales degli artisti thailandesi Chalermchai Kositpipat e Panya Vijinthanasarn. Le narrazioni buddhiste tradizionali condividono la superficie con immagini moderne sorprendenti: non una ricostruzione storica tranquilla, ma un discorso su tentazione, sofferenza e vita contemporanea.\n\n## Entrare come ospiti, non come spettatori\n\nTogliete le scarpe prima della sala e vestite con spalle e ginocchia coperte. Parlate piano, silenziate il telefono e non rivolgete le piante dei piedi verso un’immagine del Buddha o un monaco. Se sono in corso preghiere o cerimonie, aspettate e seguite i comportamenti locali invece di muovervi per ottenere una fotografia.\n\nLe regole sulle foto possono cambiare secondo eventi e spazi. In caso di dubbio chiedete, e non fotografate fedeli o monaci senza permesso. La visita resta ricca anche quando alcune parti sono chiuse: il giardino non è un ripiego, ma una componente essenziale.\n\n## Seguire il giardino verso il basso\n\nI terreni sciolgono la formalità dell’ubosot. Un percorso passa fra alberi maturi, acqua e un piccolo ponte; figure dorate e santuari emergono dalle foglie. L’ambiente incoraggia un passo più lento e offre una pausa dopo l’intensità dei murales.\n\nIl ponte non è soltanto pittoresco. Attraversare l’acqua, cambiare direzione e risalire trasforma il giardino in una sequenza. In autunno o dopo la pioggia, foglie bagnate e oro riflesso mostrano un tempio molto diverso dalle luminose immagini delle feste.\n\n## Le feste rendono visibile la comunità\n\nSongkran, il capodanno thailandese, e le altre ricorrenze trasformano il luogo. Danze, bancarelle, offerte e folle mostrano la vita comunitaria che sostiene il monastero. Sono momenti eccellenti per conoscere il tempio, meno adatti se cercate contemplazione solitaria.\n\nControllate il programma ufficiale e arrivate presto. Le celebrazioni possono cambiare accesso, parcheggio e aspettative sulla fotografia. Movimento, costumi e musica fanno parte del culto e della comunità, non sono uno spettacolo organizzato soltanto per chi visita.\n\n## Scegliere il ritmo della visita\n\nIl tempio indica accesso quotidiano con orari stagionali; le sessioni di meditazione del fine settimana si tengono normalmente dalle 15 alle 17 senza prenotazione. I dettagli possono cambiare, quindi consultate il sito ufficiale. L’ingresso è in genere gratuito e le donazioni sostengono il monastero.\n\nCalcolate un’ora per edificio e giardino, di più per meditazione o feste. Trasporto pubblico e una passeggiata sono spesso più semplici del parcheggio limitato. Soprattutto, lasciate tempo non programmato. Il luogo funziona attraverso pause: scarpe sulla soglia, occhi che si abituano ai murales, una svolta al ponte, una campana o una voce fra gli alberi.\n\n> Buddhapadipa è memorabile non perché la Thailandia appaia inaspettatamente a Wimbledon, ma perché una comunità religiosa viva ha reso pienamente proprio questo angolo di Londra.\n\nAll’uscita, il sobborgo ritorna quasi all’istante. Il contrasto conta, ma il tempio non va descritto come una fuga da Londra: è uno dei modi in cui Londra esiste.",
   "images": [
-    { "src": "/assets/journal/11-buddhapadipa-temple-01.webp", "role": "hero", "display_mode": "crop", "focal_x": 50, "focal_y": 48, "alt": "Tempio buddhista thailandese bianco e oro con tetto rosso a più livelli a Wimbledon", "caption": "L’ubosot fu il primo tempio buddhista thailandese costruito appositamente in Gran Bretagna.", "credit": "Paolo Pastorino", "width": 2400, "height": 1602 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-03.webp", "role": "inline", "display_mode": "natural", "alt": "Interno affrescato della sala delle ordinazioni del Buddhapadipa Temple", "caption": "I murales uniscono narrazioni buddhiste e immagini incisive della vita moderna.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-02.webp", "role": "detail", "display_mode": "natural", "alt": "Buddha dorato seduto all’interno del Buddhapadipa Temple", "caption": "L’immagine del Buddha dà centro a un interno pensato per il culto, non per il turismo.", "credit": "Paolo Pastorino", "width": 2400, "height": 3596 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-07.webp", "role": "inline", "display_mode": "natural", "alt": "Piccolo ponte sull’acqua nel giardino boscoso del tempio", "caption": "Acqua, ponti e dislivelli trasformano il giardino in una sequenza contemplativa.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-04.webp", "role": "inline", "display_mode": "natural", "alt": "Danzatrici thailandesi in abiti tradizionali colorati durante Songkran", "caption": "I giorni di festa rendono visibile la vita della comunità che sostiene il monastero.", "credit": "Paolo Pastorino", "width": 2400, "height": 1600 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-05.webp", "role": "closing", "display_mode": "natural", "alt": "Piccolo santuario buddhista dorato fra gli alberi del tempio", "caption": "Gli spazi devozionali minori estendono il recinto sacro nel giardino.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200 }
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-01.webp",
+      "role": "hero",
+      "display_mode": "crop",
+      "focal_x": 50,
+      "focal_y": 48,
+      "alt": "Tempio buddhista thailandese bianco e oro con tetto rosso a più livelli a Wimbledon",
+      "caption": "L’ubosot fu il primo tempio buddhista thailandese costruito appositamente in Gran Bretagna.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1602
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-03.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Interno affrescato della sala delle ordinazioni del Buddhapadipa Temple",
+      "caption": "I murales uniscono narrazioni buddhiste e immagini incisive della vita moderna.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-02.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Buddha dorato seduto all’interno del Buddhapadipa Temple",
+      "caption": "L’immagine del Buddha dà centro a un interno pensato per il culto, non per il turismo.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3596
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-07.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Piccolo ponte sull’acqua nel giardino boscoso del tempio",
+      "caption": "Acqua, ponti e dislivelli trasformano il giardino in una sequenza contemplativa.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-04.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Danzatrici thailandesi in abiti tradizionali colorati durante Songkran",
+      "caption": "I giorni di festa rendono visibile la vita della comunità che sostiene il monastero.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-05.webp",
+      "role": "closing",
+      "display_mode": "natural",
+      "alt": "Piccolo santuario buddhista dorato fra gli alberi del tempio",
+      "caption": "Gli spazi devozionali minori estendono il recinto sacro nel giardino.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    }
   ],
   "practical": [
-    { "label": "Accesso", "value": "Quotidiano con orari stagionali; controllare prima", "url": "https://buddhapadipa.com/" },
-    { "label": "Meditazione", "value": "Normalmente nel weekend, 15–17, senza prenotazione", "url": "https://buddhapadipa.com/" },
-    { "label": "Etichetta", "value": "Abiti sobri, scarpe fuori, comportamento silenzioso", "url": "https://buddhapadipa.com/" },
-    { "label": "Tempo", "value": "Circa un’ora; di più per meditazione o feste", "url": "" }
+    {
+      "label": "Accesso",
+      "value": "Quotidiano con orari stagionali; controllare prima",
+      "url": "https://buddhapadipa.com/"
+    },
+    {
+      "label": "Meditazione",
+      "value": "Normalmente nel weekend, 15–17, senza prenotazione",
+      "url": "https://buddhapadipa.com/"
+    },
+    {
+      "label": "Etichetta",
+      "value": "Abiti sobri, scarpe fuori, comportamento silenzioso",
+      "url": "https://buddhapadipa.com/"
+    },
+    {
+      "label": "Tempo",
+      "value": "Circa un’ora; di più per meditazione o feste",
+      "url": ""
+    }
   ],
-  "related_tools": ["smart-navigation", "london-dashboard", "escape-the-crowds", "loo-finder"],
-  "related_articles": ["wandle-trail", "blackheath-greenwich-walk"],
-  "tags": ["Wimbledon", "Buddhismo thailandese", "Spazi sacri", "Giardini", "South-west London"],
+  "related_tools": [
+    "smart-navigation",
+    "london-dashboard",
+    "escape-the-crowds",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "wandle-trail",
+    "blackheath-greenwich-walk"
+  ],
+  "tags": [
+    "Wimbledon",
+    "Buddhismo thailandese",
+    "Spazi sacri",
+    "Giardini",
+    "South-west London"
+  ],
   "sources": [
-    { "label": "Buddhapadipa Temple — Sito ufficiale", "url": "https://buddhapadipa.com/", "checked_at": "2026-10-01" },
-    { "label": "Wandsworth Council — Buddhapadipa Temple", "url": "https://www.wandsworth.gov.uk/leisure-and-culture/places-of-worship/all-places-of-worship-in-the-borough/the-buddhapadipa-temple/", "checked_at": "2026-10-01" }
+    {
+      "label": "Buddhapadipa Temple — Sito ufficiale",
+      "url": "https://buddhapadipa.com/",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Wandsworth Council — Buddhapadipa Temple",
+      "url": "https://www.wandsworth.gov.uk/leisure-and-culture/places-of-worship/all-places-of-worship-in-the-borough/the-buddhapadipa-temple/",
+      "checked_at": "2026-10-01"
+    }
   ],
   "reading_minutes": 7,
-  "updated_at": "2026-10-01T22:30:00+01:00"
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
 }
