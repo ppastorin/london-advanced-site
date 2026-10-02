@@ -45,6 +45,11 @@ function escapeHtml(value = "") {
     .replaceAll("'", "&#39;");
 }
 
+function sitemapTimestamp(value) {
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? "" : parsed.toISOString();
+}
+
 function safeUrl(value = "") {
   const url = String(value).trim();
   if (url.startsWith("/") || /^https:\/\//i.test(url) || /^mailto:/i.test(url)) return url;
@@ -221,7 +226,7 @@ function pageHead({ locale, route, alternateRoute, title, description, image, ty
   const canonical = `${canonicalOrigin}${route}`;
   const alternate = `${canonicalOrigin}${alternateRoute}`;
   const xDefault = locale === "en" ? canonical : alternate;
-  return `<!doctype html><html lang="${it ? "it-IT" : "en-GB"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${escapeHtml(description)}"><meta name="author" content="Paolo Pastorino"><meta name="robots" content="${noindex ? "noindex,nofollow" : "index,follow,max-image-preview:large"}"><meta property="og:type" content="${type}"><meta property="og:site_name" content="London Advanced"><meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${escapeHtml(image || `${canonicalOrigin}/assets/london-map.jpg`)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="${canonical}"><link rel="alternate" hreflang="en-GB" href="${it ? alternate : canonical}"><link rel="alternate" hreflang="it-IT" href="${it ? canonical : alternate}"><link rel="alternate" hreflang="x-default" href="${xDefault}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><title>${escapeHtml(title)}</title><script type="application/ld+json">${safeJson(schema)}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/journal.css"></head>`;
+  return `<!doctype html><html lang="${it ? "it-IT" : "en-GB"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${escapeHtml(description)}"><meta name="author" content="Paolo Pastorino"><meta name="robots" content="${noindex ? "noindex,nofollow" : "index,follow,max-image-preview:large"}"><meta property="og:type" content="${type}"><meta property="og:site_name" content="London Advanced"><meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${escapeHtml(image || `${canonicalOrigin}/assets/london-map.jpg`)}"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="${canonical}"><link rel="alternate" hreflang="en-GB" href="${it ? alternate : canonical}"><link rel="alternate" hreflang="it-IT" href="${it ? canonical : alternate}"><link rel="alternate" hreflang="x-default" href="${xDefault}"><link rel="alternate" type="application/atom+xml" title="London Advanced Journal" href="${canonicalOrigin}/journal/feed.xml"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><title>${escapeHtml(title)}</title><script type="application/ld+json">${safeJson(schema)}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/journal.css"></head>`;
 }
 
 function articleSchema(article, pair, locale, route, alternateRoute, hero) {
@@ -286,6 +291,14 @@ function renderRelatedTools(article, locale) {
   return `<section class="journal-tools"><div><span class="journal-kicker">${it ? "Pianifica la visita" : "Plan the visit"}</span><h2>${it ? "Usa il Journal insieme agli strumenti." : "Use the Journal with the tools."}</h2></div><div class="journal-tool-grid">${tools.map(([name, href, description]) => `<a href="${href}"><span>${escapeHtml(description)}</span><strong>${escapeHtml(name)} →</strong></a>`).join("")}</div></section>`;
 }
 
+function renderRelatedArticles(article, locale, publishedArticles, preview) {
+  const byId = new Map(publishedArticles.map(item => [item.article_id, item]));
+  const related = (article.related_articles || []).map(id => byId.get(id)).filter(Boolean);
+  if (!related.length) return "";
+  const it = locale === "it";
+  return `<section class="journal-tools journal-related-articles"><div><span class="journal-kicker">${it ? "Continua a leggere" : "Continue reading"}</span><h2>${it ? "Altri luoghi che meritano una deviazione." : "More places worth a detour."}</h2></div><div class="journal-tool-grid">${related.map(item => `<a href="${articleRoute(item, locale, false)}"><span>${escapeHtml(item.dek || item.description)}</span><strong>${escapeHtml(item.title)} →</strong></a>`).join("")}</div></section>`;
+}
+
 function renderSources(article, locale) {
   const sources = article.sources || [];
   if (!sources.length) return "";
@@ -298,7 +311,7 @@ function articleRoute(article, locale, preview) {
   return preview ? `${base}_preview/${article.article_id}/` : `${base}${article.slug}/`;
 }
 
-function renderArticle(article, pair, locale, preview = false) {
+function renderArticle(article, pair, locale, preview = false, publishedArticles = []) {
   const it = locale === "it";
   const route = articleRoute(article, locale, preview);
   const alternateRoute = articleRoute(pair, it ? "en" : "it", preview);
@@ -310,7 +323,7 @@ function renderArticle(article, pair, locale, preview = false) {
   const publishedLabel = formatDate(article.published_at || article.updated_at, locale);
   const readLabel = article.reading_minutes ? `${article.reading_minutes} ${it ? "min di lettura" : "min read"}` : "";
   const previewBanner = preview ? `<div class="journal-preview-banner"><strong>${it ? "Anteprima non pubblicata" : "Unpublished preview"}</strong><span>${it ? "Questa pagina non è indicizzata e non appare nel Journal pubblico." : "This page is not indexed and does not appear in the public Journal."}</span></div>` : "";
-  return `${pageHead({ locale, route, alternateRoute, title, description: article.description, image: hero?.src ? `${canonicalOrigin}${hero.src}` : undefined, type: "article", schema, noindex: preview })}<body class="journal-page journal-article-page">${previewBanner}${navigation(locale, "journal", alternateRoute)}<main><nav class="journal-breadcrumbs" aria-label="${it ? "Percorso" : "Breadcrumb"}"><a href="${it ? "/it/" : "/"}">London Advanced</a><span>/</span><a href="${it ? "/it/journal/" : "/journal/"}">Journal</a><span>/</span><span>${escapeHtml(article.title)}</span></nav><article><header class="article-header"><div class="article-heading"><span class="journal-kicker">${escapeHtml(article.eyebrow || (it ? "Appunti sul campo" : "Field notes"))}</span><h1>${escapeHtml(article.title)}</h1><p class="article-dek">${escapeHtml(article.dek)}</p><div class="article-meta"><span>${it ? "Di" : "By"} <a href="${it ? "/it/chi-sono/" : "/about/"}">Paolo Pastorino</a></span>${publishedLabel ? `<span>${publishedLabel}</span>` : ""}${readLabel ? `<span>${readLabel}</span>` : ""}</div></div>${renderPractical(article, locale)}</header>${imageFigure(hero, "journal-figure journal-hero-image")}<div class="article-layout"><div class="article-body">${body}${renderSources(article, locale)}</div><aside class="article-rail"><div class="author-card"><span>${it ? "Scritto e fotografato da" : "Written and photographed by"}</span><strong>Paolo Pastorino</strong><p>${it ? "Vive a Londra dal 2018 e raccoglie luoghi che meritano di essere guardati due volte." : "Living in London since 2018 and collecting places that reward a second look."}</p><a href="${it ? "/it/chi-sono/" : "/about/"}">${it ? "Chi sono" : "About Paolo"} →</a></div><div class="article-share"><span>${it ? "Lingua" : "Language"}</span><a href="${alternateRoute}" hreflang="${it ? "en-GB" : "it-IT"}">${it ? "Read in English" : "Leggi in italiano"} →</a></div></aside></div></article>${renderRelatedTools(article, locale)}<section class="journal-newsletter"><span class="journal-kicker">${it ? "La lettera da Londra" : "The London letter"}</span><h2>${it ? "Nuovi luoghi, solo quando meritano una mail." : "New places, only when they deserve an email."}</h2><p>${it ? "Una nota occasionale e curata con luoghi, percorsi ed eventi utili. Mai riempitivi." : "An occasional, carefully edited note with useful places, routes and events. No filler."}</p><a class="button dark" href="${it ? "/it/#newsletter" : "/newsletter/"}">${it ? "Iscriviti" : "Join the newsletter"}</a></section></main>${footer(locale)}<script src="/journal.js"></script></body></html>`;
+  return `${pageHead({ locale, route, alternateRoute, title, description: article.description, image: hero?.src ? `${canonicalOrigin}${hero.src}` : undefined, type: "article", schema, noindex: preview })}<body class="journal-page journal-article-page">${previewBanner}${navigation(locale, "journal", alternateRoute)}<main><nav class="journal-breadcrumbs" aria-label="${it ? "Percorso" : "Breadcrumb"}"><a href="${it ? "/it/" : "/"}">London Advanced</a><span>/</span><a href="${it ? "/it/journal/" : "/journal/"}">Journal</a><span>/</span><span>${escapeHtml(article.title)}</span></nav><article><header class="article-header"><div class="article-heading"><span class="journal-kicker">${escapeHtml(article.eyebrow || (it ? "Appunti sul campo" : "Field notes"))}</span><h1>${escapeHtml(article.title)}</h1><p class="article-dek">${escapeHtml(article.dek)}</p><div class="article-meta"><span>${it ? "Di" : "By"} <a href="${it ? "/it/chi-sono/" : "/about/"}">Paolo Pastorino</a></span>${publishedLabel ? `<span>${publishedLabel}</span>` : ""}${readLabel ? `<span>${readLabel}</span>` : ""}</div></div>${renderPractical(article, locale)}</header>${imageFigure(hero, "journal-figure journal-hero-image")}<div class="article-layout"><div class="article-body">${body}${renderSources(article, locale)}</div><aside class="article-rail"><div class="author-card"><span>${it ? "Scritto e fotografato da" : "Written and photographed by"}</span><strong>Paolo Pastorino</strong><p>${it ? "Vive a Londra dal 2018 e raccoglie luoghi che meritano di essere guardati due volte." : "Living in London since 2018 and collecting places that reward a second look."}</p><a href="${it ? "/it/chi-sono/" : "/about/"}">${it ? "Chi sono" : "About Paolo"} →</a></div><div class="article-share"><span>${it ? "Lingua" : "Language"}</span><a href="${alternateRoute}" hreflang="${it ? "en-GB" : "it-IT"}">${it ? "Read in English" : "Leggi in italiano"} →</a></div></aside></div></article>${renderRelatedArticles(article, locale, publishedArticles, preview)}${renderRelatedTools(article, locale)}<section class="journal-newsletter"><span class="journal-kicker">${it ? "La lettera da Londra" : "The London letter"}</span><h2>${it ? "Nuovi luoghi, solo quando meritano una mail." : "New places, only when they deserve an email."}</h2><p>${it ? "Una nota occasionale e curata con luoghi, percorsi ed eventi utili. Mai riempitivi." : "An occasional, carefully edited note with useful places, routes and events. No filler."}</p><a class="button dark" href="${it ? "/it/#newsletter" : "/newsletter/"}">${it ? "Iscriviti" : "Join the newsletter"}</a></section></main>${footer(locale)}<script src="/journal.js"></script></body></html>`;
 }
 
 function card(article, locale, preview = false) {
@@ -450,11 +463,37 @@ async function integrateAllNavigation() {
 async function updateSitemap(publishedPairs) {
   const file = path.join(dist, "sitemap.xml");
   let sitemap = await readFile(file, "utf8");
-  const routes = ["/journal/", "/it/journal/"];
-  for (const pair of publishedPairs) routes.push(articleRoute(pair.en, "en", false), articleRoute(pair.it, "it", false));
-  sitemap = sitemap.replace(/\n?<url><loc>https:\/\/www\.londonadvanced\.com\/(?:it\/)?journal\/[^<]*<\/loc><\/url>/g, "");
+  const events = JSON.parse(await readFile(path.join(dist, "data", "events.json"), "utf8"));
+  const allArticles = publishedPairs.flatMap(pair => [pair.en, pair.it]);
+  const latestJournalUpdate = allArticles.map(article => sitemapTimestamp(article.updated_at || article.published_at)).filter(Boolean).sort().at(-1);
+  const latestEventsUpdate = sitemapTimestamp(events.generated_at);
+  const latestHomepageUpdate = [latestJournalUpdate, latestEventsUpdate].filter(Boolean).sort().at(-1);
+  for (const [route, lastmod] of [
+    ["/", latestHomepageUpdate],
+    ["/it/", latestHomepageUpdate],
+    ["/events/", latestEventsUpdate],
+    ["/it/eventi/", latestEventsUpdate]
+  ]) {
+    if (!lastmod) continue;
+    const loc = `${canonicalOrigin}${route}`.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    sitemap = sitemap.replace(
+      new RegExp(`(<url><loc>${loc}<\\/loc>)(?:<lastmod>[^<]+<\\/lastmod>)?(<\\/url>)`),
+      `$1<lastmod>${lastmod}</lastmod>$2`
+    );
+  }
+  const routes = [
+    ["/journal/", latestJournalUpdate],
+    ["/it/journal/", latestJournalUpdate]
+  ];
+  for (const pair of publishedPairs) {
+    routes.push(
+      [articleRoute(pair.en, "en", false), sitemapTimestamp(pair.en.updated_at || pair.en.published_at)],
+      [articleRoute(pair.it, "it", false), sitemapTimestamp(pair.it.updated_at || pair.it.published_at)]
+    );
+  }
+  sitemap = sitemap.replace(/\n?\s*<url>\s*<loc>https:\/\/www\.londonadvanced\.com\/(?:it\/)?journal\/[^<]*<\/loc>[\s\S]*?<\/url>/g, "");
   sitemap = sitemap.replace(/^\s+$/gm, "").replace(/\n{2,}/g, "\n");
-  const entries = routes.map(route => `  <url><loc>${canonicalOrigin}${route}</loc></url>`).join("\n");
+  const entries = routes.map(([route, lastmod]) => `  <url><loc>${canonicalOrigin}${route}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}</url>`).join("\n");
   sitemap = sitemap.replace("</urlset>", `${entries}\n</urlset>`);
   await writeFile(file, sitemap, "utf8");
 }
@@ -501,14 +540,14 @@ export async function buildJournal({ includeDrafts = false } = {}) {
   ]);
 
   for (const pair of publishedPairs) {
-    await writePage(articleRoute(pair.en, "en", false), renderArticle(pair.en, pair.it, "en", false));
-    await writePage(articleRoute(pair.it, "it", false), renderArticle(pair.it, pair.en, "it", false));
+    await writePage(articleRoute(pair.en, "en", false), renderArticle(pair.en, pair.it, "en", false, englishPublished));
+    await writePage(articleRoute(pair.it, "it", false), renderArticle(pair.it, pair.en, "it", false, italianPublished));
   }
 
   if (includeDrafts) {
     for (const pair of pairs.filter(pair => !isPublicPair(pair.en, pair.it))) {
-      await writePage(articleRoute(pair.en, "en", true), renderArticle(pair.en, pair.it, "en", true));
-      await writePage(articleRoute(pair.it, "it", true), renderArticle(pair.it, pair.en, "it", true));
+      await writePage(articleRoute(pair.en, "en", true), renderArticle(pair.en, pair.it, "en", true, englishPublished));
+      await writePage(articleRoute(pair.it, "it", true), renderArticle(pair.it, pair.en, "it", true, italianPublished));
     }
   } else {
     await rm(path.join(dist, "journal", "_preview"), { recursive: true, force: true });

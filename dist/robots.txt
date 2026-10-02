@@ -5,3 +5,4 @@ Disallow: /journal/_preview/
 Disallow: /it/journal/_preview/
 
 Sitemap: https://www.londonadvanced.com/sitemap.xml
+Sitemap: https://www.londonadvanced.com/journal/feed.xml
