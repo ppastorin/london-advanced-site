@@ -19,6 +19,15 @@ function requireFile(relativePath) {
   return fs.readFileSync(absolutePath, "utf8");
 }
 
+function requireExistingFile(relativePath) {
+  const absolutePath = path.join(projectRoot, relativePath);
+  if (!fs.existsSync(absolutePath) || !fs.statSync(absolutePath).isFile()) {
+    fail(`Missing required file: ${relativePath}`);
+    return false;
+  }
+  return true;
+}
+
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
     const entryPath = path.join(directory, entry.name);
@@ -84,6 +93,26 @@ const requiredAssets = [
   "dist/apps/fare-calculator/fare-calculator.css"
 ];
 requiredAssets.forEach(requireFile);
+
+const journalContentRoot = path.join(projectRoot, "content", "journal");
+for (const filename of fs.readdirSync(journalContentRoot).filter(name => name.endsWith(".json"))) {
+  const relativeContentPath = path.join("content", "journal", filename);
+  try {
+    const article = JSON.parse(fs.readFileSync(path.join(journalContentRoot, filename), "utf8"));
+    for (const image of article.images || []) {
+      if (!image.src?.startsWith("/assets/journal/")) {
+        fail(`${relativeContentPath} has an invalid Journal image path: ${image.src || "(missing)"}`);
+        continue;
+      }
+      const sourcePath = image.src.replace(/^\//, "");
+      const deployedPath = path.join("dist", sourcePath);
+      requireExistingFile(sourcePath);
+      requireExistingFile(deployedPath);
+    }
+  } catch (error) {
+    fail(`${relativeContentPath} is invalid JSON: ${error.message}`);
+  }
+}
 
 for (const locale of ["en", "it"]) {
   const searchText = requireFile(`dist/data/search-index.${locale}.json`);
