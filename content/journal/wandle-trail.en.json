@@ -1,0 +1,140 @@
+{
+  "workflow_help": "Draft → Review → Approved → Published",
+  "article_id": "wandle-trail",
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
+  },
+  "title": "The Wandle Trail: London’s other river, from mills to the Thames",
+  "slug": "wandle-trail-london-river-walk",
+  "seo_title": "Wandle Trail: Walk London’s Other River",
+  "description": "Follow the River Wandle from Croydon to the Thames through wetlands, old mills, Merton Priory and the industrial landscape of south London.",
+  "eyebrow": "South London · River route",
+  "dek": "The Wandle is only about 20 kilometres long, but it compresses an extraordinary amount of London into its course: chalk-stream nature, suburban parks, lost industries and a working river mouth.",
+  "body": "Enough of the Thames. London has other rivers, and the Wandle is the one that best explains how nature, industry and suburbia became entangled south of the centre. It rises around Croydon, surfaces and disappears through a changing urban landscape, then reaches the Thames at Wandsworth after roughly 20 kilometres.\n\nFollowing it is not a continuous rural idyll. That is precisely why the route works. Reeds and kingfishers give way to retail parks, old mill channels, concrete edges and remnants of factories. At times the river is the obvious protagonist; elsewhere you have to look for it behind buildings or beneath roads.\n\n## Do not treat the whole trail as a single test\n\nThe official walking and cycling routes run from Croydon to the Thames and coincide for much of the way, but not everywhere. Completing the trail in one day is possible, especially by bicycle, yet it can turn the river into an endurance exercise. Walking it in sections reveals more.\n\nA strong first section begins around Wandle Park in Croydon and continues through Beddington and Carshalton. Another can focus on Morden Hall Park, Merton Abbey and Colliers Wood. The northern stretch through Earlsfield and Wandsworth shows the river becoming harder-edged before it enters the Thames. Tram, Tube and rail connections make these smaller journeys easy to assemble over several visits.\n\nWayfinding is not perfect. The water divides into channels, paths change sides and busy roads interrupt the logic. Keep a map available, but accept that the Wandle sometimes behaves less like a marked attraction than a river you are trying to rediscover.\n\n## Morden Hall Park: the generous middle\n\nMorden Hall Park sits near the middle of the trail and offers its most relaxed sequence. The Wandle and its mill leats divide the National Trust estate into islands of meadow, wetland and garden. Footbridges repeatedly change your relationship with the water: one moment it is a narrow channel beneath trees, the next a broad reflective surface beside open grass.\n\nThe former snuff mill is the clearest reminder that this landscape was productive long before it became recreational. The rose garden, bookshop, café and garden centre can make the park a destination in its own right, but on the trail they serve a more useful purpose: a comfortable pause before the route becomes urban again.\n\nThis is also where the river’s ecological recovery is easiest to appreciate. The Wandle was once heavily polluted by the industries that depended on it. Today its vegetation and bird life can make parts of the park feel improbably detached from the Northern line terminus nearby.\n\n## Merton Abbey: history beneath a road\n\nNorth of the park, the route reaches one of its strangest concentrations of history. Merton Abbey Mills preserves a working waterwheel and the memory of textile production associated with William Morris and Liberty. The present complex of workshops, places to eat and market activity is pleasant, but the more revealing stop is almost hidden next door.\n\nThe remains of Merton Priory’s Chapter House survive beneath the A24. The setting—between a shopping complex, an underpass and a major road—is initially absurd. Inside, the surviving foundations and interpretation reconstruct an Augustinian priory founded in the early twelfth century, a place connected with Thomas Becket and the Statute of Merton. The museum is volunteer-run and opens seasonally, so check before building a section of the walk around it.\n\nThe contrast is the point. Medieval masonry, nineteenth-century industry and present-day retail infrastructure occupy almost the same patch of ground because the river kept attracting successive forms of activity.\n\n## A river that worked for London\n\nThe Wandle’s clear, fast water powered an exceptional concentration of mills. Flour, copper, paper, leather, snuff and printed textiles all appeared along its banks. William Morris chose the river for textile printing; Arthur Liberty’s works also became part of the industrial landscape.\n\nVery little now resembles a preserved industrial valley. Some structures have disappeared, others have been converted, and several stretches feel deliberately ordinary. Look for mill races, weirs, changes in water level and buildings positioned unusually close to the channel. These fragments make more sense collectively than any one surviving wheel.\n\nThe route is strongest when it refuses nostalgia. The Wandle did not simply lose an attractive past; industry damaged the river even as it depended on it. Its present combination of restored habitat and leftover infrastructure is a more honest story.\n\n## The last kilometres to the Thames\n\nBeyond Earlsfield, the balance shifts again. Housing, railway lines and industrial land press closer. The river remains surprisingly lively in places, then seems to vanish inside the city’s machinery. At Wandsworth it finally meets the Thames beside modern development and working infrastructure rather than a ceremonial viewpoint.\n\nThat ending can feel abrupt after the green middle of the route. It should. The Wandle has spent its whole journey negotiating between the natural and the manufactured. A polished riverside finale would tell the wrong story.\n\nAllow a full day for the complete trail on foot, and longer if you intend to visit the priory remains, mills or parks properly. By bicycle, slow down around shared paths and narrower sections. After rain, expect mud and check for temporary diversions.\n\n> The Wandle is not an escape from urban London. It is a cross-section through the way urban London was made.\n\nWalk one section first. Once you have learned how to spot the river’s channels, weirs and hidden turns, the remaining pieces begin to connect themselves.",
+  "images": [
+    {
+      "src": "/assets/journal/07-wandle-trail-03.webp",
+      "role": "hero",
+      "display_mode": "crop",
+      "focal_x": 50,
+      "focal_y": 48,
+      "alt": "The River Wandle passing beneath a low red-brick footbridge in a park",
+      "caption": "The Wandle repeatedly changes character, from open parkland to narrow urban channels.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/assets/journal/07-wandle-trail-01.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Narrow River Wandle channel running through reeds and dense vegetation between modern buildings",
+      "caption": "Wetland vegetation survives surprisingly close to housing and busy transport routes.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/07-wandle-trail-04.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Large black waterwheel turning beside brick mill buildings on the Wandle",
+      "caption": "The surviving wheel at Merton Abbey Mills makes the river’s industrial purpose visible.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3601
+    },
+    {
+      "src": "/assets/journal/07-wandle-trail-05.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Excavated stone foundations displayed inside the Merton Priory Chapter House museum",
+      "caption": "Merton Priory’s remains survive in an unlikely museum beneath the A24.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1602
+    },
+    {
+      "src": "/assets/journal/07-wandle-trail-02.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Urban section of the Wandle with a weir, pipes, bridge and apartment buildings",
+      "caption": "The route is not consistently picturesque; infrastructure is part of its character.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/07-wandle-trail-06.webp",
+      "role": "closing",
+      "display_mode": "natural",
+      "alt": "River Wandle meeting the Thames beside red industrial buildings and riverside structures",
+      "caption": "The Wandle reaches the Thames at a working, unceremonious edge of Wandsworth.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1600
+    }
+  ],
+  "practical": [
+    {
+      "label": "Route",
+      "value": "About 20 km from Croydon to the Thames at Wandsworth",
+      "url": "https://www.merton.gov.uk/leisure-recreation-and-culture/local-attractions/the-wandle-trail"
+    },
+    {
+      "label": "Best approach",
+      "value": "Walk in sections; the complete trail suits a long day or a bicycle",
+      "url": ""
+    },
+    {
+      "label": "Useful stops",
+      "value": "Morden Hall Park, Merton Priory and Merton Abbey Mills",
+      "url": "https://www.nationaltrust.org.uk/visit/london/morden-hall-park"
+    },
+    {
+      "label": "Terrain",
+      "value": "Mostly easy, with shared paths, road interruptions and possible mud",
+      "url": ""
+    }
+  ],
+  "related_tools": [
+    "smart-navigation",
+    "loo-finder",
+    "london-dashboard",
+    "travel-fare-calculator"
+  ],
+  "related_articles": [
+    "blackheath-greenwich-walk",
+    "trinity-buoy-wharf"
+  ],
+  "tags": [
+    "River Wandle",
+    "Walking route",
+    "Industrial heritage",
+    "Merton",
+    "South London"
+  ],
+  "sources": [
+    {
+      "label": "Merton Council — Wandle Trail",
+      "url": "https://www.merton.gov.uk/leisure-recreation-and-culture/local-attractions/the-wandle-trail",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "National Trust — Morden Hall Park",
+      "url": "https://www.nationaltrust.org.uk/visit/london/morden-hall-park",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Merton Priory Trust — Visit the Chapter House",
+      "url": "https://www.mertonpriory.org/visit/",
+      "checked_at": "2026-10-01"
+    }
+  ],
+  "reading_minutes": 8,
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
+}
