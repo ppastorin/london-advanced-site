@@ -1,11 +1,11 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
   "article_id": "wandle-trail",
-  "editorial_status": "draft",
+  "editorial_status": "published",
   "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": ""
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
   },
   "title": "The Wandle Trail: London’s other river, from mills to the Thames",
   "slug": "wandle-trail-london-river-walk",
@@ -24,7 +24,8 @@
       "alt": "The River Wandle passing beneath a low red-brick footbridge in a park",
       "caption": "The Wandle repeatedly changes character, from open parkland to narrow urban channels.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 1600
+      "width": 2400,
+      "height": 1600
     },
     {
       "src": "/assets/journal/07-wandle-trail-01.webp",
@@ -33,7 +34,8 @@
       "alt": "Narrow River Wandle channel running through reeds and dense vegetation between modern buildings",
       "caption": "Wetland vegetation survives surprisingly close to housing and busy transport routes.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 3200
+      "width": 2400,
+      "height": 3200
     },
     {
       "src": "/assets/journal/07-wandle-trail-04.webp",
@@ -42,7 +44,8 @@
       "alt": "Large black waterwheel turning beside brick mill buildings on the Wandle",
       "caption": "The surviving wheel at Merton Abbey Mills makes the river’s industrial purpose visible.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 3601
+      "width": 2400,
+      "height": 3601
     },
     {
       "src": "/assets/journal/07-wandle-trail-05.webp",
@@ -51,7 +54,8 @@
       "alt": "Excavated stone foundations displayed inside the Merton Priory Chapter House museum",
       "caption": "Merton Priory’s remains survive in an unlikely museum beneath the A24.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 1602
+      "width": 2400,
+      "height": 1602
     },
     {
       "src": "/assets/journal/07-wandle-trail-02.webp",
@@ -60,7 +64,8 @@
       "alt": "Urban section of the Wandle with a weir, pipes, bridge and apartment buildings",
       "caption": "The route is not consistently picturesque; infrastructure is part of its character.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 3200
+      "width": 2400,
+      "height": 3200
     },
     {
       "src": "/assets/journal/07-wandle-trail-06.webp",
@@ -69,7 +74,8 @@
       "alt": "River Wandle meeting the Thames beside red industrial buildings and riverside structures",
       "caption": "The Wandle reaches the Thames at a working, unceremonious edge of Wandsworth.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 1600
+      "width": 2400,
+      "height": 1600
     }
   ],
   "practical": [
@@ -129,5 +135,6 @@
     }
   ],
   "reading_minutes": 8,
-  "updated_at": "2026-10-01T22:30:00+01:00"
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
 }
