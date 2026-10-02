@@ -1,8 +1,12 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
   "article_id": "crystal-palace-park",
-  "editorial_status": "draft",
-  "approval": {"status": "pending", "approved_by": "", "approved_at": ""},
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
+  },
   "title": "Crystal Palace Park: reconstructing a vanished palace",
   "slug": "crystal-palace-park-dinosaurs-sphinxes-subway",
   "seo_title": "Crystal Palace Park: Dinosaurs, Sphinxes and Subway",
@@ -11,26 +15,116 @@
   "dek": "Dinosaurs, sphinxes, a tiled subway and a vast transmitter look unrelated. Together they reveal the scale and ambition of the Crystal Palace destroyed in 1936.",
   "body": "Crystal Palace Park makes more sense when you stop treating it as a list of attractions. The dinosaurs, sphinxes, terraces, museum, subway and open spaces are surviving clues to a building that no longer exists. Read together, they allow you to reconstruct the palace through absence.\n\nThe original Crystal Palace was created for the Great Exhibition in Hyde Park in 1851. It was then dismantled, enlarged and rebuilt on this south London hill, reopening in 1854. The glass-and-iron structure dominated the landscape until a catastrophic fire destroyed it in 1936. Nothing comparable replaced it, but its scale still governs the park.\n\n## Begin with the dinosaurs, before the palace\n\nMore than 30 sculptures of prehistoric animals were unveiled beside the lakes in 1854, years before Darwin published *On the Origin of Species*. Designed by Benjamin Waterhouse Hawkins with scientific guidance from Richard Owen, they translated the best available nineteenth-century thinking into full-size public spectacle.\n\nTheir anatomy is outdated; that is not a defect to laugh away. The models show science in motion—confident, inventive and provisional. They are also landscape theatre. Partly hidden by vegetation and positioned across water, the creatures appear as discoveries rather than museum objects.\n\nThe lake, café and city farm give the lower park an easy family rhythm, but inspect the geological setting as well as the animals. The display was conceived as an account of deep time, not simply a collection of large reptiles.\n\n## Climb towards what is missing\n\nMove uphill towards the terraces. The palace has gone, yet broad steps, retaining walls, foundations and pairs of sphinxes occupy spaces too grand for an ordinary park. The sphinxes were part of the Victorian spectacle rather than Egyptian antiquities; their weathered surfaces now mark the transition to the platform of a lost building.\n\nThe transmitter is the unavoidable vertical landmark. From distant hills it can look, for a second, like an Eiffel Tower. It belongs to a different technological age, yet continues the site’s habit of declaring itself across London. The palace announced modernity through glass and prefabrication; the transmitter does it through broadcast infrastructure.\n\n## Use the museum as the missing room\n\nCrystal Palace Museum is compact, which suits the visit. Models, photographs and surviving objects restore enough visual information to make the terraces legible without pretending the palace can be fully recovered. Look at the building’s dimensions, then return outside and compare them with the empty ground. The absence becomes measurable.\n\nThe museum covers both the Hyde Park building and its larger Sydenham successor. It is free, but currently opens only on Fridays and Sundays. Access is by a steep flight of stairs and is not wheelchair accessible, so check the official page before building the day around it.\n\n## The subway was an entrance, not a secret\n\nThe Crystal Palace Subway is often marketed as a hidden place, but in 1865 it was designed to make arrival spectacular. First-class passengers crossed beneath Crystal Palace Parade through patterned brick vaults before emerging at the palace. A practical connection became a ceremonial threshold.\n\nRestoration has repaired the structure and protected the east courtyard. Access, however, remains limited to advertised open days and events, normally with advance booking. Do not arrive expecting to enter. Even closed, its position beside the former High Level station explains how visitors reached the site.\n\n## Build a circuit, not a checklist\n\nA useful route begins with the dinosaurs and lake, climbs past the museum and terraces, reaches the sphinxes and palace platform, then continues towards the subway and transmitter. The park is large and hilly; allow at least half a day, more if the museum or subway is open.\n\nCurrent conservation work can redirect paths or alter access. Check the park’s own pages rather than relying on an old map: the dinosaurs, museum and subway all have different conditions.\n\n> The vanished palace is still the largest object in the park. You see it through the distances, stairs and surviving fragments it left behind.\n\nCrystal Palace is not a ruin in the conventional sense. It is a landscape whose miscellaneous attractions become coherent once you understand what is missing from the centre.",
   "images": [
-    {"src": "/assets/journal/08-crystal-palace-park-01.webp", "role": "hero", "display_mode": "crop", "focal_x": 47, "focal_y": 50, "alt": "Victorian dinosaur sculptures rising above dense planting in Crystal Palace Park", "caption": "The dinosaurs were part of the park’s original programme of public science and spectacle.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800},
-    {"src": "/assets/journal/08-crystal-palace-park-05.webp", "role": "inline", "display_mode": "natural", "alt": "Two red stone sphinxes flanking broad steps covered with autumn leaves", "caption": "The sphinxes and terraces preserve the ceremonial scale of the lost palace.", "credit": "Paolo Pastorino", "width": 2400, "height": 1588},
-    {"src": "/assets/journal/08-crystal-palace-park-02.webp", "role": "detail", "display_mode": "natural", "alt": "Crystal Palace transmitting tower seen from below through trees", "caption": "The transmitter continues the site’s tradition of declaring modernity across the skyline.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200},
-    {"src": "/assets/journal/08-crystal-palace-park-03.webp", "role": "inline", "display_mode": "natural", "alt": "Patterned red-and-cream brick vaults inside Crystal Palace Subway", "caption": "The 1865 subway made the railway arrival theatrical; entry is now limited to open days.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200},
-    {"src": "/assets/journal/08-crystal-palace-park-04.webp", "role": "closing", "display_mode": "natural", "alt": "Goats and other animals in timber shelters at the Crystal Palace Park farm", "caption": "The lower park also works as an ordinary local space, with a farm, lake and family facilities.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800}
+    {
+      "src": "/assets/journal/08-crystal-palace-park-01.webp",
+      "role": "hero",
+      "display_mode": "crop",
+      "focal_x": 47,
+      "focal_y": 50,
+      "alt": "Victorian dinosaur sculptures rising above dense planting in Crystal Palace Park",
+      "caption": "The dinosaurs were part of the park’s original programme of public science and spectacle.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/08-crystal-palace-park-05.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Two red stone sphinxes flanking broad steps covered with autumn leaves",
+      "caption": "The sphinxes and terraces preserve the ceremonial scale of the lost palace.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1588
+    },
+    {
+      "src": "/assets/journal/08-crystal-palace-park-02.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Crystal Palace transmitting tower seen from below through trees",
+      "caption": "The transmitter continues the site’s tradition of declaring modernity across the skyline.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/08-crystal-palace-park-03.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Patterned red-and-cream brick vaults inside Crystal Palace Subway",
+      "caption": "The 1865 subway made the railway arrival theatrical; entry is now limited to open days.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/08-crystal-palace-park-04.webp",
+      "role": "closing",
+      "display_mode": "natural",
+      "alt": "Goats and other animals in timber shelters at the Crystal Palace Park farm",
+      "caption": "The lower park also works as an ordinary local space, with a farm, lake and family facilities.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    }
   ],
   "practical": [
-    {"label": "Allow", "value": "At least half a day for a useful circuit", "url": ""},
-    {"label": "Museum", "value": "Free; currently Friday and Sunday, 10am–4pm", "url": "https://www.crystalpalacepark.org.uk/explore-museum-b51d"},
-    {"label": "Subway", "value": "Only accessible on advertised open days and events", "url": "https://www.crystalpalacepark.org.uk/subway-trlc"},
-    {"label": "Terrain", "value": "Large, hilly park; check current diversions", "url": "https://www.crystalpalacepark.org.uk/visit-opening-times-69nb"}
+    {
+      "label": "Allow",
+      "value": "At least half a day for a useful circuit",
+      "url": ""
+    },
+    {
+      "label": "Museum",
+      "value": "Free; currently Friday and Sunday, 10am–4pm",
+      "url": "https://www.crystalpalacepark.org.uk/explore-museum-b51d"
+    },
+    {
+      "label": "Subway",
+      "value": "Only accessible on advertised open days and events",
+      "url": "https://www.crystalpalacepark.org.uk/subway-trlc"
+    },
+    {
+      "label": "Terrain",
+      "value": "Large, hilly park; check current diversions",
+      "url": "https://www.crystalpalacepark.org.uk/visit-opening-times-69nb"
+    }
   ],
-  "related_tools": ["smart-navigation", "london-dashboard", "escape-the-crowds", "loo-finder"],
-  "related_articles": ["blackheath-greenwich-walk", "trinity-buoy-wharf"],
-  "tags": ["Crystal Palace", "Victorian London", "Dinosaurs", "Lost architecture", "South London"],
+  "related_tools": [
+    "smart-navigation",
+    "london-dashboard",
+    "escape-the-crowds",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "blackheath-greenwich-walk",
+    "trinity-buoy-wharf"
+  ],
+  "tags": [
+    "Crystal Palace",
+    "Victorian London",
+    "Dinosaurs",
+    "Lost architecture",
+    "South London"
+  ],
   "sources": [
-    {"label": "Crystal Palace Park Trust — Explore", "url": "https://www.crystalpalacepark.org.uk/explore-mbrx", "checked_at": "2026-10-01"},
-    {"label": "Crystal Palace Park Trust — Museum", "url": "https://www.crystalpalacepark.org.uk/explore-museum-b51d", "checked_at": "2026-10-01"},
-    {"label": "Crystal Palace Park Trust — Subway", "url": "https://www.crystalpalacepark.org.uk/subway-trlc", "checked_at": "2026-10-01"}
+    {
+      "label": "Crystal Palace Park Trust — Explore",
+      "url": "https://www.crystalpalacepark.org.uk/explore-mbrx",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Crystal Palace Park Trust — Museum",
+      "url": "https://www.crystalpalacepark.org.uk/explore-museum-b51d",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Crystal Palace Park Trust — Subway",
+      "url": "https://www.crystalpalacepark.org.uk/subway-trlc",
+      "checked_at": "2026-10-01"
+    }
   ],
   "reading_minutes": 7,
-  "updated_at": "2026-10-01T22:30:00+01:00"
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
 }
