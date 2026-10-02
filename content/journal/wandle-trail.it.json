@@ -1,11 +1,11 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
   "article_id": "wandle-trail",
-  "editorial_status": "draft",
+  "editorial_status": "published",
   "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": ""
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
   },
   "title": "Il Wandle Trail: l’altro fiume di Londra, dai mulini al Tamigi",
   "slug": "wandle-trail-fiume-londra",
@@ -24,7 +24,8 @@
       "alt": "Il fiume Wandle passa sotto un basso ponte pedonale di mattoni rossi in un parco",
       "caption": "Il Wandle cambia continuamente carattere, dai parchi aperti ai canali urbani più stretti.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 1600
+      "width": 2400,
+      "height": 1600
     },
     {
       "src": "/assets/journal/07-wandle-trail-01.webp",
@@ -33,7 +34,8 @@
       "alt": "Stretto canale del Wandle fra canneti e vegetazione fitta, con edifici moderni sullo sfondo",
       "caption": "La vegetazione delle zone umide sopravvive sorprendentemente vicino alle case e alle vie di comunicazione.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 3200
+      "width": 2400,
+      "height": 3200
     },
     {
       "src": "/assets/journal/07-wandle-trail-04.webp",
@@ -42,7 +44,8 @@
       "alt": "Grande ruota idraulica nera fra gli edifici in mattoni di un mulino sul Wandle",
       "caption": "La ruota di Merton Abbey Mills rende visibile la funzione industriale del fiume.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 3601
+      "width": 2400,
+      "height": 3601
     },
     {
       "src": "/assets/journal/07-wandle-trail-05.webp",
@@ -51,7 +54,8 @@
       "alt": "Fondazioni in pietra esposte nel museo della Chapter House di Merton Priory",
       "caption": "I resti di Merton Priory sopravvivono in un museo improbabile sotto la A24.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 1602
+      "width": 2400,
+      "height": 1602
     },
     {
       "src": "/assets/journal/07-wandle-trail-02.webp",
@@ -60,7 +64,8 @@
       "alt": "Tratto urbano del Wandle con una chiusa, tubature, un ponte e palazzi residenziali",
       "caption": "Il percorso non è sempre pittoresco: le infrastrutture fanno parte del suo carattere.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 3200
+      "width": 2400,
+      "height": 3200
     },
     {
       "src": "/assets/journal/07-wandle-trail-06.webp",
@@ -69,7 +74,8 @@
       "alt": "Il Wandle incontra il Tamigi accanto a edifici industriali rossi e strutture fluviali",
       "caption": "Il Wandle raggiunge il Tamigi in un angolo operativo e poco cerimoniale di Wandsworth.",
       "credit": "Paolo Pastorino",
-      "width": 2400, "height": 1600
+      "width": 2400,
+      "height": 1600
     }
   ],
   "practical": [
@@ -129,5 +135,6 @@
     }
   ],
   "reading_minutes": 8,
-  "updated_at": "2026-10-01T22:30:00+01:00"
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
 }
