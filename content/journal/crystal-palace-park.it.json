@@ -1,0 +1,130 @@
+{
+  "workflow_help": "Draft → Review → Approved → Published",
+  "article_id": "crystal-palace-park",
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
+  },
+  "title": "Crystal Palace Park: ricostruire un palazzo scomparso",
+  "slug": "crystal-palace-park-dinosauri-sfingi-subway",
+  "seo_title": "Crystal Palace Park: dinosauri, sfingi e subway",
+  "description": "Leggi Crystal Palace Park come traccia di un palazzo vittoriano scomparso, attraverso dinosauri, sfingi, terrazze, museo e subway restaurata.",
+  "eyebrow": "Londra sud · Architetture scomparse",
+  "dek": "Dinosauri, sfingi, un sottopassaggio decorato e un enorme trasmettitore sembrano scollegati. Insieme rivelano la scala del Crystal Palace distrutto nel 1936.",
+  "body": "Crystal Palace Park diventa più comprensibile quando si smette di considerarlo una lista di attrazioni. Dinosauri, sfingi, terrazze, museo, subway e spazi aperti sono indizi superstiti di un edificio che non esiste più. Letti insieme permettono di ricostruire il palazzo attraverso la sua assenza.\n\nIl Crystal Palace originale fu creato per la Great Exhibition di Hyde Park nel 1851. Terminata l’esposizione, venne smontato, ampliato e ricostruito su questa collina della Londra meridionale, dove riaprì nel 1854. La struttura di vetro e ferro dominò il paesaggio fino al gigantesco incendio che la distrusse nel 1936. Nulla di paragonabile la sostituì, ma la sua scala continua a determinare il parco.\n\n## Comincia dai dinosauri, prima del palazzo\n\nPiù di 30 sculture di animali preistorici furono inaugurate accanto ai laghi nel 1854, anni prima della pubblicazione de *L’origine delle specie* di Darwin. Realizzate da Benjamin Waterhouse Hawkins con la consulenza di Richard Owen, trasformavano le migliori conoscenze ottocentesche disponibili in uno spettacolo pubblico a grandezza naturale.\n\nLa loro anatomia è superata, ma non è un difetto da liquidare con una risata. I modelli mostrano la scienza in movimento: sicura, inventiva e provvisoria. Sono anche teatro paesaggistico. Nascoste in parte dalla vegetazione e collocate oltre l’acqua, le creature sembrano scoperte anziché oggetti da museo.\n\nLago, caffè e city farm danno alla parte bassa un ritmo familiare, ma osserva anche l’ambientazione geologica. Il progetto voleva raccontare il tempo profondo, non soltanto mostrare grandi rettili.\n\n## Sali verso ciò che non c’è più\n\nProsegui verso le terrazze. Il palazzo è scomparso, ma scalinate, muri di contenimento, fondazioni e coppie di sfingi occupano spazi troppo solenni per un normale parco. Le sfingi facevano parte dello spettacolo vittoriano; oggi le superfici invecchiate segnano il passaggio alla piattaforma dell’edificio perduto.\n\nIl trasmettitore è il riferimento verticale impossibile da ignorare. Da lontano può sembrare per un attimo una Torre Eiffel. Appartiene a un’altra epoca tecnologica, ma prosegue l’abitudine del luogo a dichiararsi sullo skyline. Il palazzo annunciava la modernità con vetro e prefabbricazione; il trasmettitore con le infrastrutture della comunicazione.\n\n## Usa il museo come stanza mancante\n\nCrystal Palace Museum è piccolo, e questa è una qualità. Modelli, fotografie e oggetti restituiscono informazioni sufficienti per leggere le terrazze senza fingere che il palazzo possa essere recuperato interamente. Osserva le dimensioni dell’edificio, poi torna all’aperto: il vuoto diventa misurabile.\n\nIl museo racconta sia Hyde Park sia il successore più grande a Sydenham. È gratuito, ma attualmente apre soltanto venerdì e domenica. L’accesso avviene tramite una ripida scalinata e non è adatto alle sedie a rotelle: controlla la pagina ufficiale prima di organizzare la giornata.\n\n## La subway era un ingresso, non un segreto\n\nLa Crystal Palace Subway viene spesso presentata come gemma nascosta, ma nel 1865 era progettata per rendere spettacolare l’arrivo. I passeggeri di prima classe attraversavano volte in mattoni policromi prima di emergere nel palazzo. Un collegamento pratico diventava una soglia cerimoniale.\n\nIl restauro ha consolidato la struttura e protetto il cortile orientale. L’accesso resta però limitato a giornate ed eventi annunciati, normalmente con prenotazione. Non presentarti dando per scontato di entrare. Anche chiusa, la sua posizione accanto alla vecchia High Level station spiega come arrivavano i visitatori.\n\n## Costruisci un circuito, non una checklist\n\nUn buon percorso parte da dinosauri e lago, sale verso museo e terrazze, raggiunge sfingi e piattaforma del palazzo, quindi continua verso subway e trasmettitore. Il parco è vasto e collinare: prevedi almeno mezza giornata, di più se museo o subway sono aperti.\n\nI lavori di conservazione possono deviare i sentieri o modificare gli accessi. Controlla le pagine ufficiali: dinosauri, museo e subway hanno condizioni diverse.\n\n> Il palazzo scomparso è ancora l’oggetto più grande del parco. Lo si vede attraverso distanze, scalinate e frammenti superstiti.\n\nCrystal Palace non è una rovina in senso tradizionale. È un paesaggio le cui attrazioni apparentemente casuali diventano coerenti quando si capisce che cosa manca al centro.",
+  "images": [
+    {
+      "src": "/assets/journal/08-crystal-palace-park-01.webp",
+      "role": "hero",
+      "display_mode": "crop",
+      "focal_x": 47,
+      "focal_y": 50,
+      "alt": "Sculture vittoriane di dinosauri emergono dalla vegetazione di Crystal Palace Park",
+      "caption": "I dinosauri facevano parte del programma originale di scienza pubblica e spettacolo.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/08-crystal-palace-park-05.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Due sfingi in pietra rossa ai lati di una scalinata coperta di foglie",
+      "caption": "Sfingi e terrazze conservano la scala cerimoniale del palazzo perduto.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1588
+    },
+    {
+      "src": "/assets/journal/08-crystal-palace-park-02.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Il trasmettitore di Crystal Palace visto dal basso attraverso gli alberi",
+      "caption": "Il trasmettitore continua la tradizione del luogo di dichiarare la modernità sullo skyline.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/08-crystal-palace-park-03.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Volte in mattoni rossi e crema nella Crystal Palace Subway",
+      "caption": "La subway del 1865 rendeva teatrale l’arrivo; oggi si entra soltanto nelle giornate annunciate.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/08-crystal-palace-park-04.webp",
+      "role": "closing",
+      "display_mode": "natural",
+      "alt": "Capre e altri animali nei ricoveri della farm di Crystal Palace Park",
+      "caption": "La parte bassa funziona anche come normale parco locale, con farm, lago e servizi per famiglie.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    }
+  ],
+  "practical": [
+    {
+      "label": "Tempo",
+      "value": "Almeno mezza giornata per un circuito utile",
+      "url": ""
+    },
+    {
+      "label": "Museo",
+      "value": "Gratuito; attualmente venerdì e domenica, 10–16",
+      "url": "https://www.crystalpalacepark.org.uk/explore-museum-b51d"
+    },
+    {
+      "label": "Subway",
+      "value": "Accessibile soltanto durante giornate ed eventi annunciati",
+      "url": "https://www.crystalpalacepark.org.uk/subway-trlc"
+    },
+    {
+      "label": "Terreno",
+      "value": "Parco vasto e collinare; controlla le deviazioni",
+      "url": "https://www.crystalpalacepark.org.uk/visit-opening-times-69nb"
+    }
+  ],
+  "related_tools": [
+    "smart-navigation",
+    "london-dashboard",
+    "escape-the-crowds",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "blackheath-greenwich-walk",
+    "trinity-buoy-wharf"
+  ],
+  "tags": [
+    "Crystal Palace",
+    "Londra vittoriana",
+    "Dinosauri",
+    "Architetture scomparse",
+    "Londra sud"
+  ],
+  "sources": [
+    {
+      "label": "Crystal Palace Park Trust — Esplora",
+      "url": "https://www.crystalpalacepark.org.uk/explore-mbrx",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Crystal Palace Park Trust — Museo",
+      "url": "https://www.crystalpalacepark.org.uk/explore-museum-b51d",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Crystal Palace Park Trust — Subway",
+      "url": "https://www.crystalpalacepark.org.uk/subway-trlc",
+      "checked_at": "2026-10-01"
+    }
+  ],
+  "reading_minutes": 7,
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
+}
