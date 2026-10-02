@@ -1,0 +1,140 @@
+{
+  "workflow_help": "Draft → Review → Approved → Published",
+  "article_id": "highgate-cemetery",
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
+  },
+  "title": "Highgate Cemetery beyond Marx: what East and West reveal",
+  "slug": "highgate-cemetery-east-west-guide",
+  "seo_title": "Highgate Cemetery: East and West Guide",
+  "description": "A field guide to Highgate Cemetery’s contrasting East and West sides, from Karl Marx and Malcolm McLaren to the Egyptian Avenue and Circle of Lebanon.",
+  "eyebrow": "North London · Cemetery landscapes",
+  "dek": "Karl Marx is the famous name, but Highgate is most rewarding when read as two different landscapes: the open East Cemetery and the theatrical, wooded West.",
+  "body": "Highgate Cemetery is often reduced to one grave: Karl Marx, photographed beneath a monumental bronze head. That is an understandable first stop, but it can flatten a place whose real subject is how London remembers its dead. The East and West cemeteries sit opposite each other across Swain’s Lane, yet they offer strikingly different experiences.\n\nOpened in 1839, Highgate was one of the great private cemeteries created around Victorian London. It provided a landscaped alternative to overcrowded urban churchyards. Fashion, religion, class and changing ideas about commemoration are all written into its monuments. Nature has added another layer, softening stone and turning planned avenues into woodland.\n\n## Begin in the East: names in an open landscape\n\nThe East Cemetery is the easier side to navigate independently. Paths are broader, the ground feels more open and many prominent twentieth-century figures are buried here. Marx draws the largest audience, but pause before moving on. The monument dates from 1956, long after his death, and its public, declarative character is unlike the more intimate stones around it.\n\nNearby memorials widen the story. Malcolm McLaren’s grave carries the provocation associated with the Sex Pistols’ manager. Artist Patrick Caulfield, novelist George Eliot, scientist Michael Faraday and many others make the East a compressed cultural map. Harry Thornton’s piano-shaped memorial is quieter: a stone keyboard and open score made for a musician who died in 1918.\n\nThese graves are not a celebrity checklist. Their variety shows how memorial language changed—from Victorian symbolism to graphic modern design and personal humour. Look also at apparently anonymous details: weathered lettering, ivy entering a border, or a tree root slowly redirecting a path.\n\n## Cross to the West: architecture becomes theatre\n\nThe West Cemetery is older, denser and more architecturally dramatic. Its landscape was designed to turn burial into procession. Paths curve, views close and reopen, and monuments emerge through vegetation. The Egyptian Avenue narrows the approach between massive gateways; above it, the Circle of Lebanon arranges mausoleums around the hollow left by an ancient cedar.\n\nThis is where Highgate most resembles the romantic image people bring with them. Yet the atmosphere is not accidental decay. Conservation must balance historic structures, wildlife and safe access in a landscape that has been recovering from years of neglect since the Friends of Highgate Cemetery took responsibility in the 1970s.\n\nThe contrast with the East is useful. East Highgate is biographical: names, lives and individual markers. West Highgate is spatial: enclosure, ascent, shadow and revelation. Seeing both prevents either side from becoming a cliché.\n\n## Let the details interrupt the famous route\n\nSome of the most affecting moments have no famous name attached. Roots grip low headstones; angels lose features; polished granite stands beside porous sandstone. A pair of curved mausoleums can create a small urban street for the dead. Even repeated forms—urns, broken columns, clasped hands—change meaning as the woodland absorbs them.\n\nPhotography works best slowly. Wider frames explain how monuments sit in the landscape; closer details reveal the negotiation between material and time. Treat every grave as someone’s memorial, not a prop. Stay on paths, do not lean on or climb structures, and avoid obstructing mourners or tours.\n\n## Plan the visit rather than improvising at the gate\n\nHighgate is a working cemetery with paid admission. Tickets for the East Cemetery, West Cemetery and guided tours are sold through the official site; availability and closing times vary by season. A day ticket permits self-guided access under the current rules, while tours add areas and interpretation that are easy to miss.\n\nAllow two to three hours for both sides without rushing. The terrain includes slopes, uneven surfaces and steps, particularly in the West. Wear footwear for damp ground even when central London is dry, and check the official ticket page on the day of travel.\n\n> Marx may bring you to Highgate, but the dialogue between stone, woodland and changing memory is what makes the cemetery worth crossing London for.\n\nLeave by walking a short stretch of Swain’s Lane. The boundary walls and sudden return to ordinary houses make the cemetery’s constructed world newly visible.",
+  "images": [
+    {
+      "src": "/assets/journal/09-highgate-cemetery-04.webp",
+      "role": "hero",
+      "display_mode": "crop",
+      "focal_x": 52,
+      "focal_y": 50,
+      "alt": "Ornate Victorian tombs and Gothic monuments among trees in Highgate Cemetery West",
+      "caption": "In the West Cemetery, architecture, procession and woodland form a single landscape.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/09-highgate-cemetery-03.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Karl Marx memorial with its large bronze portrait in Highgate Cemetery East",
+      "caption": "Marx is Highgate’s best-known resident, but his public monument tells only one part of the story.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/09-highgate-cemetery-01.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Piano-shaped memorial to musician Harry Thornton in Highgate Cemetery",
+      "caption": "Harry Thornton’s piano memorial turns a profession into an immediately legible personal symbol.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/09-highgate-cemetery-06.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Distinctive modern gravestones including memorials to Malcolm McLaren and Goff Upton",
+      "caption": "Modern memorials continue Highgate’s long argument about how a life should be represented.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/09-highgate-cemetery-05.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Tree roots and vegetation growing around old gravestones at Highgate Cemetery",
+      "caption": "The cemetery’s character comes from the continuing negotiation between monument and woodland.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/assets/journal/09-highgate-cemetery-07.webp",
+      "role": "closing",
+      "display_mode": "natural",
+      "alt": "Curving row of stone mausoleums in the wooded West Cemetery",
+      "caption": "Curved mausoleums make the West Cemetery feel like a small city shaped for the dead.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    }
+  ],
+  "practical": [
+    {
+      "label": "Admission",
+      "value": "Paid; book the appropriate cemetery or tour",
+      "url": "https://connect.highgatecemetery.org/sales/tickets-and-events"
+    },
+    {
+      "label": "Allow",
+      "value": "Two to three hours for East and West",
+      "url": ""
+    },
+    {
+      "label": "Terrain",
+      "value": "Slopes, steps and uneven paths; sturdy shoes advised",
+      "url": "https://connect.highgatecemetery.org/sales/tickets-and-events/day-ticket/day-ticket"
+    },
+    {
+      "label": "Conduct",
+      "value": "Stay on paths and respect graves, mourners and tours",
+      "url": "https://connect.highgatecemetery.org/sales/tickets-and-events/day-ticket/day-ticket"
+    }
+  ],
+  "related_tools": [
+    "smart-navigation",
+    "london-dashboard",
+    "escape-the-crowds",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "quentin-blake-centre",
+    "one-leadenhall-terrace"
+  ],
+  "tags": [
+    "Highgate",
+    "Cemeteries",
+    "Victorian London",
+    "Architecture",
+    "North London"
+  ],
+  "sources": [
+    {
+      "label": "Highgate Cemetery — Tickets and events",
+      "url": "https://connect.highgatecemetery.org/sales/tickets-and-events",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Highgate Cemetery — Day ticket and visitor rules",
+      "url": "https://connect.highgatecemetery.org/sales/tickets-and-events/day-ticket/day-ticket",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Highgate Cemetery — Highlights tour",
+      "url": "https://connect.highgatecemetery.org/sales/tickets-and-events/tours/highlights-tour",
+      "checked_at": "2026-10-01"
+    }
+  ],
+  "reading_minutes": 7,
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
+}
