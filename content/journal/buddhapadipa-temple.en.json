@@ -1,8 +1,12 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
   "article_id": "buddhapadipa-temple",
-  "editorial_status": "draft",
-  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
+  },
   "title": "Buddhapadipa Temple: how to visit Wimbledon’s Thai sanctuary",
   "slug": "buddhapadipa-temple-wimbledon-visit",
   "seo_title": "Buddhapadipa Temple: Visiting Wimbledon’s Thai Temple",
@@ -11,26 +15,121 @@
   "dek": "Behind a suburban gate in Wimbledon stands Britain’s first purpose-built Thai Buddhist temple: an active monastery where architecture, murals and gardens reward a quiet visit.",
   "body": "The first surprise at Buddhapadipa Temple is not that an ornate Thai roof rises among Wimbledon’s large detached houses. It is how quickly the suburban street falls away once you enter. Gold, white walls and steep red gables frame the main shrine; paths descend through trees towards a pond, a bridge and smaller devotional spaces.\n\nThis is not an architectural curiosity transplanted for display. Buddhapadipa is an active Theravada Buddhist monastery, home to monks and a centre for worship, teaching, meditation and the Thai community. Visitors are welcome, but the quality of the visit depends on understanding that distinction.\n\n## Read the temple from outside first\n\nThe temple was established in London in 1965 and later moved to Wimbledon. Its main building, the ubosot or ordination hall, was the first purpose-built Thai Buddhist temple in Britain. The geometry is immediately legible: a high tiered roof, upward-curving finials and a brilliant white base make the building appear lighter than its mass.\n\nWalk around before entering. Decorative boundaries, guardian figures and small shrines establish a sacred precinct rather than a single photogenic façade. Reflections and changing levels connect the formal building to the wooded garden below.\n\nThe gold Buddha image is the visual centre inside, but allow your eyes to adjust. The walls are covered with murals by Thai artists Chalermchai Kositpipat and Panya Vijinthanasarn. Traditional Buddhist narratives share the surface with startling modern imagery. The result is not a quiet historical reconstruction; it is an argument about temptation, suffering and contemporary life.\n\n## Enter as a guest, not a spectator\n\nRemove shoes before entering the shrine hall and dress with shoulders and knees covered. Speak quietly, silence the phone and never point the soles of your feet towards a Buddha image or a monk. If people are praying or a ceremony is underway, wait and follow local cues rather than moving to secure a photograph.\n\nPhotography rules can change with events and spaces. Ask when uncertain, and avoid photographing worshippers or monks without permission. A respectful visit is possible even when parts of the complex are closed: the garden is not a consolation prize but an essential part of the experience.\n\n## Follow the garden downhill\n\nThe grounds loosen the formality of the ubosot. A path passes mature trees, water and a small bridge; gold figures and shrines appear between leaves. The setting encourages slower movement and offers a useful pause after the intensity of the murals.\n\nThe bridge is more than a picturesque element. Crossing water, changing direction and ascending again make the grounds feel like a sequence rather than a lawn around a building. In autumn or after rain, wet leaves and reflected gold produce a very different temple from the bright festival images commonly circulated.\n\n## Festivals reveal the community\n\nSongkran, the Thai New Year, and other festival days transform the site. Dancers, food stalls, offerings and large crowds make visible the community life that sustains the monastery. These are excellent times to experience the temple, but not ideal if your aim is solitary contemplation.\n\nCheck the official programme and arrive early. Public celebrations may alter normal access, parking and photography expectations. The movement, costume and music are part of worship and community, not a performance staged solely for visitors.\n\n## Choose the pace of your visit\n\nThe temple lists daily access with seasonal hours, and weekend meditation sessions are normally held from 3pm to 5pm without advance booking. Details can change, so consult the official website before travelling. Entry is generally free; donations support the monastery.\n\nAllow an hour for the building and garden, longer if attending meditation or a festival. Public transport and a walk are usually easier than relying on limited local parking. Most importantly, leave unscheduled time. The site works through pauses: shoes at the threshold, eyes adjusting to the murals, a turn at the bridge, a bell or voice carrying through trees.\n\n> Buddhapadipa is memorable not because Thailand appears unexpectedly in Wimbledon, but because a living religious community has made this corner of London fully its own.\n\nOn leaving, the surrounding suburb returns almost instantly. That contrast is part of the experience, but the temple should not be described as an escape from London. It is one of the ways London exists.",
   "images": [
-    { "src": "/assets/journal/11-buddhapadipa-temple-01.webp", "role": "hero", "display_mode": "crop", "focal_x": 50, "focal_y": 48, "alt": "White and gold Thai Buddhist temple with a tiered red roof in Wimbledon", "caption": "The ubosot was the first purpose-built Thai Buddhist temple in Britain.", "credit": "Paolo Pastorino", "width": 2400, "height": 1602 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-03.webp", "role": "inline", "display_mode": "natural", "alt": "Mural-covered interior of Buddhapadipa Temple’s ordination hall", "caption": "The murals combine Buddhist narratives with forceful images of modern life.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-02.webp", "role": "detail", "display_mode": "natural", "alt": "Golden seated Buddha image inside Buddhapadipa Temple", "caption": "The Buddha image anchors an interior designed for worship rather than sightseeing.", "credit": "Paolo Pastorino", "width": 2400, "height": 3596 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-07.webp", "role": "inline", "display_mode": "natural", "alt": "Small bridge crossing water in the wooded temple garden", "caption": "Water, bridges and changing levels turn the grounds into a contemplative sequence.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-04.webp", "role": "inline", "display_mode": "natural", "alt": "Thai dancers in colourful traditional dress during a Songkran celebration", "caption": "Festival days reveal the community life that sustains the monastery.", "credit": "Paolo Pastorino", "width": 2400, "height": 1600 },
-    { "src": "/assets/journal/11-buddhapadipa-temple-05.webp", "role": "closing", "display_mode": "natural", "alt": "Small golden Buddhist shrine among trees in the temple grounds", "caption": "Smaller devotional spaces extend the sacred precinct into the garden.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200 }
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-01.webp",
+      "role": "hero",
+      "display_mode": "crop",
+      "focal_x": 50,
+      "focal_y": 48,
+      "alt": "White and gold Thai Buddhist temple with a tiered red roof in Wimbledon",
+      "caption": "The ubosot was the first purpose-built Thai Buddhist temple in Britain.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1602
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-03.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Mural-covered interior of Buddhapadipa Temple’s ordination hall",
+      "caption": "The murals combine Buddhist narratives with forceful images of modern life.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-02.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Golden seated Buddha image inside Buddhapadipa Temple",
+      "caption": "The Buddha image anchors an interior designed for worship rather than sightseeing.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3596
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-07.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Small bridge crossing water in the wooded temple garden",
+      "caption": "Water, bridges and changing levels turn the grounds into a contemplative sequence.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-04.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Thai dancers in colourful traditional dress during a Songkran celebration",
+      "caption": "Festival days reveal the community life that sustains the monastery.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1600
+    },
+    {
+      "src": "/assets/journal/11-buddhapadipa-temple-05.webp",
+      "role": "closing",
+      "display_mode": "natural",
+      "alt": "Small golden Buddhist shrine among trees in the temple grounds",
+      "caption": "Smaller devotional spaces extend the sacred precinct into the garden.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    }
   ],
   "practical": [
-    { "label": "Access", "value": "Daily with seasonal hours; check before travel", "url": "https://buddhapadipa.com/" },
-    { "label": "Meditation", "value": "Weekend sessions normally 3–5pm, no booking", "url": "https://buddhapadipa.com/" },
-    { "label": "Etiquette", "value": "Modest dress, shoes off inside, quiet conduct", "url": "https://buddhapadipa.com/" },
-    { "label": "Allow", "value": "About one hour; longer for meditation or festivals", "url": "" }
+    {
+      "label": "Access",
+      "value": "Daily with seasonal hours; check before travel",
+      "url": "https://buddhapadipa.com/"
+    },
+    {
+      "label": "Meditation",
+      "value": "Weekend sessions normally 3–5pm, no booking",
+      "url": "https://buddhapadipa.com/"
+    },
+    {
+      "label": "Etiquette",
+      "value": "Modest dress, shoes off inside, quiet conduct",
+      "url": "https://buddhapadipa.com/"
+    },
+    {
+      "label": "Allow",
+      "value": "About one hour; longer for meditation or festivals",
+      "url": ""
+    }
   ],
-  "related_tools": ["smart-navigation", "london-dashboard", "escape-the-crowds", "loo-finder"],
-  "related_articles": ["wandle-trail", "blackheath-greenwich-walk"],
-  "tags": ["Wimbledon", "Thai Buddhism", "Sacred spaces", "Gardens", "South-west London"],
+  "related_tools": [
+    "smart-navigation",
+    "london-dashboard",
+    "escape-the-crowds",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "wandle-trail",
+    "blackheath-greenwich-walk"
+  ],
+  "tags": [
+    "Wimbledon",
+    "Thai Buddhism",
+    "Sacred spaces",
+    "Gardens",
+    "South-west London"
+  ],
   "sources": [
-    { "label": "Buddhapadipa Temple — Official website", "url": "https://buddhapadipa.com/", "checked_at": "2026-10-01" },
-    { "label": "Wandsworth Council — Buddhapadipa Temple", "url": "https://www.wandsworth.gov.uk/leisure-and-culture/places-of-worship/all-places-of-worship-in-the-borough/the-buddhapadipa-temple/", "checked_at": "2026-10-01" }
+    {
+      "label": "Buddhapadipa Temple — Official website",
+      "url": "https://buddhapadipa.com/",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Wandsworth Council — Buddhapadipa Temple",
+      "url": "https://www.wandsworth.gov.uk/leisure-and-culture/places-of-worship/all-places-of-worship-in-the-borough/the-buddhapadipa-temple/",
+      "checked_at": "2026-10-01"
+    }
   ],
   "reading_minutes": 7,
-  "updated_at": "2026-10-01T22:30:00+01:00"
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
 }
