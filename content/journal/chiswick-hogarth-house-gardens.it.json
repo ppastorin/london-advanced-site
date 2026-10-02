@@ -1,0 +1,140 @@
+{
+  "workflow_help": "Bozza → Revisione → Approvato → Pubblicato",
+  "article_id": "chiswick-hogarth-house-gardens",
+  "editorial_status": "published",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-02T11:07:49+01:00"
+  },
+  "title": "Chiswick oltre la High Road: Hogarth, Palladio e una casa di mosaici",
+  "slug": "chiswick-hogarth-house-gardens-mosaic-house",
+  "seo_title": "Chiswick: Hogarth’s House, giardini e mosaici",
+  "description": "Una passeggiata a Chiswick fra Hogarth’s House, la villa palladiana con i suoi giardini e la sorprendente Mosaic House di Carrie Reichardt.",
+  "eyebrow": "West London · Arte e paesaggio",
+  "dek": "Un breve circuito unisce tre idee molto diverse di casa: il rifugio modesto di Hogarth, una villa palladiana nel paesaggio e un’abitazione ricoperta di mosaici contemporanei.",
+  "body": "Chiswick viene avvicinata di solito attraverso i caffè e la lunga linea commerciale della High Road. Una passeggiata più rivelatrice inizia a sud, dove tre case raccontano storie molto diverse su arte, prestigio e vita privata: Hogarth’s House, Chiswick House e la Mosaic House di Carrie Reichardt.\n\nSono abbastanza vicine da poter essere collegate a piedi, ma non vanno ridotte a una lista. Il piacere è nei passaggi: da un interno domestico del Settecento a un paesaggio aristocratico, poi a un’opera d’arte viva in una normale strada residenziale.\n\n## La casa di Hogarth: satira dietro il muro\n\nWilliam Hogarth acquistò questa piccola casa in mattoni rossi nel 1749 come rifugio di campagna dal centro di Londra. Il moderno incrocio stradale all’esterno rende la sua sopravvivenza quasi improbabile. Oltre il muro del giardino la scala cambia subito: le stanze sono raccolte, i pavimenti scricchiolano e l’edificio resta domestico, non monumentale.\n\nHogarth osservava Londra con la precisione di un cronista e il morso di un satirico. Stampe come *The Enraged Musician* comprimono strade, finestre ed espressioni in una discussione comica sulla vita urbana. Viste qui, non appartengono a un generico stile “georgiano”, ma a una persona che si muoveva fra città e sobborgo, commercio e ritiro privato.\n\nIl museo è gratuito e attualmente apre da martedì a domenica, dalle 12 alle 17. Nel giardino cresce un vecchio gelso tradizionalmente associato a Hogarth. Anche se l’attribuzione non è certa, l’albero lega la casa al tempo vivo meglio di qualsiasi didascalia.\n\n## Chiswick House: una villa progettata come idea\n\nUna breve camminata conduce a Chiswick House and Gardens. La villa di Lord Burlington, completata negli anni Venti del Settecento, è compatta ma intellettualmente ambiziosa. Ispirata a Palladio e all’antica Roma, nacque meno come abitazione familiare che come ambiente per arte, architettura e ospitalità.\n\nL’approccio migliore parte da lontano. Lasciate che cupola, portico e facciate equilibrate si compongano fra gli alberi prima di guardare i dettagli. All’interno, sale dai colori intensi e geometrie controllate trasformano il movimento in sequenza; fuori, lo stesso principio si espande nel paesaggio.\n\nI giardini furono importanti nel passaggio dalla rigidità formale allo stile paesaggistico inglese. Percorsi, acqua, ponti, statue e vedute incorniciate furono composti per apparire naturali, guidando però ogni incontro. Girate attorno al lago e voltatevi più volte: la villa cambia da oggetto a fondale, poi ad accento lontano.\n\nLa serra e il kitchen garden introducono un altro ritmo. Ricordano che le grandi proprietà erano sistemi produttivi oltre che composizioni visive. I giardini aprono ogni giorno, in genere dalle 7 fino al tramonto; la casa ha orari stagionali separati e ingresso a pagamento.\n\n## Mosaic House: la facciata risponde\n\nMosaic House è l’abitazione privata che Carrie Reichardt ha trasformato in decenni di lavoro in un’opera rivolta al pubblico. Quasi ogni superficie esterna è coperta da mosaici: ritratti, slogan, memoriali, riferimenti alla giustizia sociale e frammenti realizzati con collaboratori di tutto il mondo.\n\nDopo il simbolismo controllato dell’architettura palladiana, la sua densità è elettrizzante. La casa rifiuta l’idea che la decorazione sia neutrale. Le immagini discutono di pena di morte, guerra, comunità, femminismo e resistenza; l’umorismo impedisce al lavoro di diventare una lezione.\n\nResta però la casa di qualcuno, in una strada residenziale. L’esterno si può osservare e fotografare con rispetto dallo spazio pubblico, senza bloccare ingressi, toccare il lavoro o trattare i vicini come parte di un’attrazione. Non esiste un accesso interno garantito.\n\n## Una passeggiata su chi produce cultura\n\nInsieme, i tre luoghi rovesciano una gerarchia semplice. Hogarth creava immagini riproducibili per un pubblico in crescita; Burlington usava architettura e paesaggio per esprimere potere colto; Reichardt trasforma l’involucro domestico in arte collettiva e politica. Ognuno usa una casa come qualcosa di più di un riparo.\n\nCalcolate mezza giornata: partite da Hogarth’s House, attraversate i giardini e terminate a Mosaic House. L’ordine conduce dal museo al paesaggio fino al quartiere attivo, lasciando tempo per fermarsi al lago o tornare su un dettaglio che all’arrivo sembrava secondario.\n\n> Il contrasto più utile di Chiswick non è vecchio contro nuovo, ma tre risposte alla domanda su come uno spazio privato possa parlare al pubblico.\n\nTornate poi sulla High Road. Il suo movimento quotidiano apparirà diverso dopo aver visto quanta storia culturale sopravvive appena alle sue spalle.",
+  "images": [
+    {
+      "src": "/assets/journal/10-chiswick-hogarth-house-gardens-01.webp",
+      "role": "hero",
+      "display_mode": "crop",
+      "focal_x": 50,
+      "focal_y": 48,
+      "alt": "Facciata palladiana di Chiswick House incorniciata dagli alberi e dal prato",
+      "caption": "Chiswick House fu concepita come un’idea architettonica dentro un paesaggio attentamente composto.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/10-chiswick-hogarth-house-gardens-05.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Esterno in mattoni rossi di Hogarth’s House dietro il giardino",
+      "caption": "Il modesto rifugio di campagna di Hogarth sopravvive accanto a uno degli incroci più trafficati di West London.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 3200
+    },
+    {
+      "src": "/assets/journal/10-chiswick-hogarth-house-gardens-03.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Dettaglio della stampa The Enraged Musician di William Hogarth",
+      "caption": "Hogarth condensava rumore, volti e attriti della strada londinese in scene osservate con minuzia.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/10-chiswick-hogarth-house-gardens-04.webp",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Lago, alberi e architetture classiche nei giardini di Chiswick House",
+      "caption": "Il paesaggio apparentemente naturale nasce da percorsi, acqua e vedute incorniciate con precisione.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/10-chiswick-hogarth-house-gardens-06.webp",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "Serra storica e giardino produttivo a Chiswick House",
+      "caption": "Serra e kitchen garden mostrano la proprietà come sistema produttivo oltre che composizione.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/assets/journal/10-chiswick-hogarth-house-gardens-02.webp",
+      "role": "closing",
+      "display_mode": "natural",
+      "alt": "Esterno colorato della Mosaic House di Carrie Reichardt coperto di immagini e testi",
+      "caption": "Mosaic House trasforma una facciata privata in un’opera pubblica densa, collettiva e politica.",
+      "credit": "Paolo Pastorino",
+      "width": 2400,
+      "height": 1800
+    }
+  ],
+  "practical": [
+    {
+      "label": "Hogarth’s House",
+      "value": "Gratis; attualmente martedì–domenica, 12–17",
+      "url": "https://hogarthshouse.org/visit-us/"
+    },
+    {
+      "label": "Chiswick Gardens",
+      "value": "Gratis; ogni giorno dalle 7 al tramonto",
+      "url": "https://chiswickhouseandgardens.org.uk/plan-your-visit/opening-times-and-prices/"
+    },
+    {
+      "label": "Chiswick House",
+      "value": "Apertura stagionale e ingresso a pagamento",
+      "url": "https://chiswickhouseandgardens.org.uk/plan-your-visit/opening-times-and-prices/"
+    },
+    {
+      "label": "Mosaic House",
+      "value": "Osservare la casa privata con rispetto dallo spazio pubblico",
+      "url": "https://carriereichardt.com/mosaic-house"
+    }
+  ],
+  "related_tools": [
+    "smart-navigation",
+    "london-dashboard",
+    "escape-the-crowds",
+    "loo-finder"
+  ],
+  "related_articles": [
+    "wandle-trail",
+    "blackheath-greenwich-walk"
+  ],
+  "tags": [
+    "Chiswick",
+    "William Hogarth",
+    "Architettura palladiana",
+    "Giardini",
+    "Arte pubblica"
+  ],
+  "sources": [
+    {
+      "label": "Hogarth’s House — Visit us",
+      "url": "https://hogarthshouse.org/visit-us/",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Chiswick House & Gardens — Orari e prezzi",
+      "url": "https://chiswickhouseandgardens.org.uk/plan-your-visit/opening-times-and-prices/",
+      "checked_at": "2026-10-01"
+    },
+    {
+      "label": "Carrie Reichardt — Mosaic House",
+      "url": "https://carriereichardt.com/mosaic-house",
+      "checked_at": "2026-10-01"
+    }
+  ],
+  "reading_minutes": 7,
+  "published_at": "2026-10-02T11:07:49+01:00",
+  "updated_at": "2026-10-02T11:07:49+01:00"
+}
