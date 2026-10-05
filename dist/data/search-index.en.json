@@ -400,196 +400,124 @@
       "updated_at": "2026-10-02T11:07:49+01:00"
     },
     {
-      "id": "event:ronald-moody-sculpting-life-2026-10-02:en",
+      "id": "event:power-of-patronage-contemporary-art:en",
       "type": "event",
       "locale": "en",
-      "title": "Ronald Moody: Sculpting Life",
-      "summary": "Fri 2 Oct · Orleans House Gallery · Free — A major free exhibition returns the overlooked Jamaican-born, West London-based sculptor's work to the city, spanning sculpture, poetry, writing and audio broadcasts.",
-      "url": "/events/#event-ronald-moody-sculpting-life-2026-10-02",
+      "title": "The Power of Patronage: Supporting Contemporary Art",
+      "summary": "Fri 9 Oct · The Minster Building · Free — A free panel asks how collectors, organisations and micro-patrons can create a more sustainable and accessible future for contemporary artists.",
+      "url": "/events/#event-power-of-patronage-contemporary-art",
       "tags": [
         "Art and design",
         "Free",
-        "Richmond upon Thames",
+        "City of London",
         "free"
       ],
       "keywords": [
-        "Orleans House Gallery",
-        "Orleans Road, Twickenham",
-        "TW1 3BL",
-        "Richmond upon Thames",
+        "The Minster Building",
+        "21 Mincing Lane, London",
+        "EC3R 7AG",
+        "City of London",
         "event events this week weekend free affordable"
       ],
-      "content": "A major free exhibition returns the overlooked Jamaican-born, West London-based sculptor's work to the city, spanning sculpture, poetry, writing and audio broadcasts. A major free retrospective restores an overlooked West London modernist to the city where he worked for more than fifty years.",
-      "updated_at": "2026-10-01T15:01:11+01:00",
-      "expires_at": "2026-10-04T17:15:00+01:00"
+      "content": "A free panel asks how collectors, organisations and micro-patrons can create a more sustainable and accessible future for contemporary artists. A focused free discussion connecting an unusual City venue with practical support for independent contemporary artists.",
+      "updated_at": "2026-10-05T09:38:14+01:00",
+      "expires_at": "2026-10-09T12:15:00+01:00"
     },
     {
-      "id": "event:route-106-heritage-buses-2026-10-03:en",
+      "id": "event:local-london-guiding-day-city-walk:en",
       "type": "event",
       "locale": "en",
-      "title": "Free Heritage Buses on Route 106",
-      "summary": "Sat 3 Oct · Route 106: Finsbury Park to Ash Grove · Free — Routemasters, RTs and other preserved buses from the 1950s to 1970s carry passengers free between Finsbury Park and Ash Grove, with real conductors and no booking.",
-      "url": "/events/#event-route-106-heritage-buses-2026-10-03",
+      "title": "Local London Guiding Day: City Walk",
+      "summary": "Sat 10 Oct · Outside M&S Food, Cannon Street Station · Free — Qualified City guides lead free hourly walks showing how Roman plans, medieval street names, Wren architecture and livery companies still shape modern London.",
+      "url": "/events/#event-local-london-guiding-day-city-walk",
       "tags": [
         "Heritage and history",
         "Free",
-        "Islington and Hackney",
+        "City of London",
         "free"
       ],
       "keywords": [
-        "Route 106: Finsbury Park to Ash Grove",
-        "Finsbury Park Interchange, Station Place to Ash Grove Garage, Mare Street",
-        "N4 2DH",
-        "Islington and Hackney",
+        "Outside M&S Food, Cannon Street Station",
+        "Cannon Street Station, Cannon Street, London",
+        "EC4N 6AP",
+        "City of London",
         "event events this week weekend free affordable"
       ],
-      "content": "Routemasters, RTs and other preserved buses from the 1950s to 1970s carry passengers free between Finsbury Park and Ash Grove, with real conductors and no booking. A one-day moving museum restores historic London buses to a working route, combining transport history, unusual access and exceptional value.",
-      "updated_at": "2026-10-01T15:01:11+01:00",
-      "expires_at": "2026-10-03T17:15:00+01:00"
+      "content": "Qualified City guides lead free hourly walks showing how Roman plans, medieval street names, Wren architecture and livery companies still shape modern London. A one-day programme of free, expert-led walks reveals how layers of London history continue to govern the modern City.",
+      "updated_at": "2026-10-05T09:38:14+01:00",
+      "expires_at": "2026-10-10T17:15:00+01:00"
     },
     {
-      "id": "event:ceramics-in-the-city-2026-10-03:en",
+      "id": "event:hampton-court-free-garden-open-days:en",
       "type": "event",
       "locale": "en",
-      "title": "Ceramics in the City",
-      "summary": "Sat 3 Oct · Museum of the Home, The Hive · Free — A free weekend fair at the Museum of the Home brings independent ceramic artists together in Hackney, with makers, techniques and locally rooted craft on view.",
-      "url": "/events/#event-ceramics-in-the-city-2026-10-03",
+      "title": "Hampton Court Palace Free Garden Open Days",
+      "summary": "Sat 10 Oct · Hampton Court Palace Gardens · Free — Explore the Great Fountain, Kitchen and Pond Gardens without the normal admission charge during one of Hampton Court's limited free garden weekends.",
+      "url": "/events/#event-hampton-court-free-garden-open-days",
       "tags": [
-        "Art and design",
+        "Heritage and history",
         "Free",
-        "Hackney",
+        "Elmbridge",
         "free"
       ],
       "keywords": [
-        "Museum of the Home, The Hive",
-        "136 Kingsland Road, London",
-        "E2 8EA",
-        "Hackney",
+        "Hampton Court Palace Gardens",
+        "Hampton Court Way, East Molesey",
+        "KT8 9AU",
+        "Elmbridge",
         "event events this week weekend free affordable"
       ],
-      "content": "A free weekend fair at the Museum of the Home brings independent ceramic artists together in Hackney, with makers, techniques and locally rooted craft on view. A free, independently focused craft fair with deep Hackney roots offers direct access to makers and a wide range of ceramic practice.",
-      "updated_at": "2026-10-01T15:01:11+01:00",
-      "expires_at": "2026-10-04T17:15:00+01:00"
+      "content": "Explore the Great Fountain, Kitchen and Pond Gardens without the normal admission charge during one of Hampton Court's limited free garden weekends. Rare free access opens a major historic royal landscape normally covered by paid palace admission.",
+      "updated_at": "2026-10-05T09:38:14+01:00",
+      "expires_at": "2026-10-11T17:45:00+01:00"
     },
     {
-      "id": "event:morden-hall-harvest-festival-2026-10-03:en",
+      "id": "event:rewind-grime-on-camera:en",
       "type": "event",
       "locale": "en",
-      "title": "Harvest Festival at Morden Hall Park",
-      "summary": "Sat 3 Oct · Morden Hall Park, Stableyard · Free — Apple pressing, Black Swan Border Morris, folk music, pollinator displays, crafts and a nature-themed Punch and Judy animate the Stableyard and park.",
-      "url": "/events/#event-morden-hall-harvest-festival-2026-10-03",
+      "title": "Rewind: Grime on Camera",
+      "summary": "Sat 10 Oct · V&A East Museum · Free — The filmmakers behind grime's independent visual culture discuss clashes, freestyles, pirate media networks and footage that has never been publicly shown.",
+      "url": "/events/#event-rewind-grime-on-camera",
       "tags": [
         "Local culture",
         "Free",
-        "Merton",
+        "Newham",
         "free"
       ],
       "keywords": [
-        "Morden Hall Park, Stableyard",
-        "Morden Hall Road, Morden, London",
-        "SM4 5JD",
-        "Merton",
+        "V&A East Museum",
+        "East Bank, 107 Carpenters Road, Queen Elizabeth Olympic Park, London",
+        "E20 2AR",
+        "Newham",
         "event events this week weekend free affordable"
       ],
-      "content": "Apple pressing, Black Swan Border Morris, folk music, pollinator displays, crafts and a nature-themed Punch and Judy animate the Stableyard and park. A free neighbourhood harvest day combines local landscape, traditional performance, working apple presses and community participation.",
-      "updated_at": "2026-10-01T15:01:11+01:00",
-      "expires_at": "2026-10-03T15:45:00+01:00"
+      "content": "The filmmakers behind grime's independent visual culture discuss clashes, freestyles, pirate media networks and footage that has never been publicly shown. A free one-off East London event reunites the independent chroniclers who created grime's visual archive, including unseen footage.",
+      "updated_at": "2026-10-05T09:38:14+01:00",
+      "expires_at": "2026-10-10T21:15:00+01:00"
     },
     {
-      "id": "event:croydon-harvest-2026-10-03:en",
+      "id": "event:surbiton-ski-sunday:en",
       "type": "event",
       "locale": "en",
-      "title": "Croydon Harvest and Walnut Fair",
-      "summary": "Sat 3 Oct · Croydon town centre · Free — A free town-centre festival revives Croydon's 1314 Walnut Fair through farmyard circus, folk traditions, local history, global dance and participatory street art.",
-      "url": "/events/#event-croydon-harvest-2026-10-03",
+      "title": "Surbiton Ski Sunday",
+      "summary": "Sun 11 Oct · St Mark's Hill · Free — Surbiton's eccentric annual race sends costumed competitors downhill on blocks of ice, with a luge, community spectacle and free participation or viewing.",
+      "url": "/events/#event-surbiton-ski-sunday",
       "tags": [
-        "Heritage and history",
+        "Community",
         "Free",
-        "Croydon",
+        "Kingston upon Thames",
         "free"
       ],
       "keywords": [
-        "Croydon town centre",
-        "The Queen's Gardens, Katharine Street, High Street and Croydon Clocktower",
-        "CR9 1ET",
-        "Croydon",
+        "St Mark's Hill",
+        "Central Parade, St Mark's Hill, Surbiton",
+        "KT6 4PJ",
+        "Kingston upon Thames",
         "event events this week weekend free affordable"
       ],
-      "content": "A free town-centre festival revives Croydon's 1314 Walnut Fair through farmyard circus, folk traditions, local history, global dance and participatory street art. A vivid free reinvention of Croydon's 1314 Walnut Fair combines unusually specific local history, neighbourhood participation and one-off street performance.",
-      "updated_at": "2026-10-01T15:01:11+01:00",
-      "expires_at": "2026-10-04T17:15:00+01:00"
-    },
-    {
-      "id": "event:japan-matsuri-trafalgar-square-2026-10-04:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Japan Matsuri at Trafalgar Square",
-      "summary": "Sun 4 Oct · Trafalgar Square · Free — A one-day festival fills Trafalgar Square with taiko, traditional dance, martial arts, workshops, an anime cosplay catwalk and Japanese food and craft stalls.",
-      "url": "/events/#event-japan-matsuri-trafalgar-square-2026-10-04",
-      "tags": [
-        "Local culture",
-        "Free",
-        "Westminster",
-        "free"
-      ],
-      "keywords": [
-        "Trafalgar Square",
-        "Trafalgar Square, London",
-        "WC2N 5DS",
-        "Westminster",
-        "event events this week weekend free affordable"
-      ],
-      "content": "A one-day festival fills Trafalgar Square with taiko, traditional dance, martial arts, workshops, an anime cosplay catwalk and Japanese food and craft stalls. A one-day celebration links London's Japanese community with a broad public programme in one of the city's defining civic spaces.",
-      "updated_at": "2026-10-01T15:01:11+01:00",
-      "expires_at": "2026-10-04T20:15:00+01:00"
-    },
-    {
-      "id": "event:little-holland-house-open-day-2026-10-04:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Little Holland House Open Day",
-      "summary": "Sun 4 Oct · Little Holland House · Free — Step inside Frank Dickinson's self-built Arts and Crafts home, where his handmade furniture, paintings, carvings, metalwork and Art Nouveau interiors remain in place.",
-      "url": "/events/#event-little-holland-house-open-day-2026-10-04",
-      "tags": [
-        "Architecture",
-        "Free",
-        "Sutton",
-        "free"
-      ],
-      "keywords": [
-        "Little Holland House",
-        "40 Beeches Avenue, Carshalton",
-        "SM5 3LW",
-        "Sutton",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Step inside Frank Dickinson's self-built Arts and Crafts home, where his handmade furniture, paintings, carvings, metalwork and Art Nouveau interiors remain in place. A monthly opening gives free access to an intact, hand-built Arts and Crafts home with an exceptional local design story.",
-      "updated_at": "2026-10-01T15:01:11+01:00",
-      "expires_at": "2026-10-04T16:45:00+01:00"
-    },
-    {
-      "id": "event:fulham-palace-apple-day-2026-10-04:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Apple Day at Fulham Palace",
-      "summary": "Sun 4 Oct · Fulham Palace · £3 adult advance; £4 door — Orchard tours reveal Fulham Palace's heritage apple varieties alongside the harvest market, garden games, baking competition, local food, crafts and live music.",
-      "url": "/events/#event-fulham-palace-apple-day-2026-10-04",
-      "tags": [
-        "Heritage and history",
-        "£3 adult advance; £4 door",
-        "Hammersmith and Fulham",
-        "cheap"
-      ],
-      "keywords": [
-        "Fulham Palace",
-        "Bishop's Avenue, Fulham, London",
-        "SW6 6EA",
-        "Hammersmith and Fulham",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Orchard tours reveal Fulham Palace's heritage apple varieties alongside the harvest market, garden games, baking competition, local food, crafts and live music. A low-cost harvest celebration connects a historic episcopal estate, its working orchard and local makers through guided access and activities.",
-      "updated_at": "2026-10-01T15:01:11+01:00",
-      "expires_at": "2026-10-04T16:15:00+01:00"
+      "content": "Surbiton's eccentric annual race sends costumed competitors downhill on blocks of ice, with a luge, community spectacle and free participation or viewing. A genuinely odd, free and deeply local tradition turns a Surbiton hill into a one-day community ski slope.",
+      "updated_at": "2026-10-05T09:38:14+01:00",
+      "expires_at": "2026-10-11T13:15:00+01:00"
     }
   ]
 }
