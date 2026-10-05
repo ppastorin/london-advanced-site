@@ -1,29 +1,29 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-01T15:01:11+01:00",
-  "valid_from": "2026-10-01",
-  "valid_until": "2026-10-04",
+  "generated_at": "2026-10-05T09:38:14+01:00",
+  "valid_from": "2026-10-05",
+  "valid_until": "2026-10-11",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "route-106-heritage-buses-2026-10-03",
-    "croydon-harvest-2026-10-03",
-    "little-holland-house-open-day-2026-10-04"
+    "local-london-guiding-day-city-walk",
+    "rewind-grime-on-camera",
+    "surbiton-ski-sunday"
   ],
   "events": [
     {
-      "id": "ronald-moody-sculpting-life-2026-10-02",
-      "title_en": "Ronald Moody: Sculpting Life",
-      "title_it": "Ronald Moody: Sculpting Life",
-      "summary_en": "A major free exhibition returns the overlooked Jamaican-born, West London-based sculptor's work to the city, spanning sculpture, poetry, writing and audio broadcasts.",
-      "summary_it": "Una grande mostra gratuita riporta a Londra l'opera dello scultore giamaicano Ronald Moody, tra sculture, poesia, scritti e registrazioni audio.",
-      "start": "2026-10-02T10:00:00+01:00",
-      "end": "2026-10-04T17:00:00+01:00",
+      "id": "power-of-patronage-contemporary-art",
+      "title_en": "The Power of Patronage: Supporting Contemporary Art",
+      "title_it": "Il potere del mecenatismo nell'arte contemporanea",
+      "summary_en": "A free panel asks how collectors, organisations and micro-patrons can create a more sustainable and accessible future for contemporary artists.",
+      "summary_it": "Un panel gratuito esplora come collezionisti, organizzazioni e micro-mecenati possano sostenere un futuro più accessibile e duraturo per gli artisti contemporanei.",
+      "start": "2026-10-09T11:00:00+01:00",
+      "end": "2026-10-09T12:00:00+01:00",
       "venue": {
-        "name": "Orleans House Gallery",
-        "address": "Orleans Road, Twickenham",
-        "postcode": "TW1 3BL",
-        "borough": "Richmond upon Thames"
+        "name": "The Minster Building",
+        "address": "21 Mincing Lane, London",
+        "postcode": "EC3R 7AG",
+        "borough": "City of London"
       },
       "price": {
         "amount_gbp": 0,
@@ -31,267 +31,17 @@
         "classification": "free"
       },
       "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
+        "required": true,
+        "status": "required",
+        "url": "https://visual-artists.org/event/the-power-of-patronage-supporting-the-future-of-contemporary-art/"
       },
       "category": "art-design",
-      "advanced": {
-        "score": 9,
-        "reason": "A major free retrospective restores an overlooked West London modernist to the city where he worked for more than fifty years.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonfy"
-      ],
-      "official_url": "https://orleanshousegallery.org/events/ronald-moody-sculpting-life/",
-      "verification": {
-        "verified_at": "2026-10-01T15:01:11+01:00",
-        "confidence": "high",
-        "source_url": "https://orleanshousegallery.org/events/ronald-moody-sculpting-life/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-01T15:01:11+01:00",
-      "expire_at": "2026-10-04T17:15:00+01:00",
-      "duplicate_key": "orleans-house-gallery|2026-10-02|ronald-moody-sculpting-life"
-    },
-    {
-      "id": "route-106-heritage-buses-2026-10-03",
-      "title_en": "Free Heritage Buses on Route 106",
-      "title_it": "Autobus storici gratuiti sulla linea 106",
-      "summary_en": "Routemasters, RTs and other preserved buses from the 1950s to 1970s carry passengers free between Finsbury Park and Ash Grove, with real conductors and no booking.",
-      "summary_it": "Routemaster, RT e altri autobus conservati dagli anni Cinquanta ai Settanta trasportano gratuitamente i passeggeri tra Finsbury Park e Ash Grove, con veri controllori.",
-      "start": "2026-10-03T10:00:00+01:00",
-      "end": "2026-10-03T17:00:00+01:00",
-      "venue": {
-        "name": "Route 106: Finsbury Park to Ash Grove",
-        "address": "Finsbury Park Interchange, Station Place to Ash Grove Garage, Mare Street",
-        "postcode": "N4 2DH",
-        "borough": "Islington and Hackney"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 10,
-        "reason": "A one-day moving museum restores historic London buses to a working route, combining transport history, unusual access and exceptional value.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.londonbusmuseum.com/route-106-heritage-day/",
-      "verification": {
-        "verified_at": "2026-10-01T15:01:11+01:00",
-        "confidence": "high",
-        "source_url": "https://www.londonbusmuseum.com/route-106-heritage-day/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-01T15:01:11+01:00",
-      "expire_at": "2026-10-03T17:15:00+01:00",
-      "duplicate_key": "route-106-finsbury-park-ash-grove|2026-10-03|heritage-buses"
-    },
-    {
-      "id": "ceramics-in-the-city-2026-10-03",
-      "title_en": "Ceramics in the City",
-      "title_it": "Ceramics in the City",
-      "summary_en": "A free weekend fair at the Museum of the Home brings independent ceramic artists together in Hackney, with makers, techniques and locally rooted craft on view.",
-      "summary_it": "Una fiera gratuita al Museum of the Home riunisce ceramisti indipendenti a Hackney, con incontri con gli artisti, tecniche e artigianato locale.",
-      "start": "2026-10-03T10:00:00+01:00",
-      "end": "2026-10-04T17:00:00+01:00",
-      "venue": {
-        "name": "Museum of the Home, The Hive",
-        "address": "136 Kingsland Road, London",
-        "postcode": "E2 8EA",
-        "borough": "Hackney"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "art-design",
-      "advanced": {
-        "score": 8,
-        "reason": "A free, independently focused craft fair with deep Hackney roots offers direct access to makers and a wide range of ceramic practice.",
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://museumofthehome.org.uk/whats-on/ceramics-in-the-city-2026/",
-      "verification": {
-        "verified_at": "2026-10-01T15:01:11+01:00",
-        "confidence": "high",
-        "source_url": "https://museumofthehome.org.uk/whats-on/ceramics-in-the-city-2026/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-01T15:01:11+01:00",
-      "expire_at": "2026-10-04T17:15:00+01:00",
-      "duplicate_key": "museum-of-the-home|2026-10-03|ceramics-in-the-city"
-    },
-    {
-      "id": "morden-hall-harvest-festival-2026-10-03",
-      "title_en": "Harvest Festival at Morden Hall Park",
-      "title_it": "Festa del raccolto a Morden Hall Park",
-      "summary_en": "Apple pressing, Black Swan Border Morris, folk music, pollinator displays, crafts and a nature-themed Punch and Judy animate the Stableyard and park.",
-      "summary_it": "Spremitura delle mele, Morris dance, musica folk, attività sugli impollinatori, laboratori e Punch and Judy animano lo Stableyard e il parco.",
-      "start": "2026-10-03T11:00:00+01:00",
-      "end": "2026-10-03T15:30:00+01:00",
-      "venue": {
-        "name": "Morden Hall Park, Stableyard",
-        "address": "Morden Hall Road, Morden, London",
-        "postcode": "SM4 5JD",
-        "borough": "Merton"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "local-culture",
-      "advanced": {
-        "score": 8,
-        "reason": "A free neighbourhood harvest day combines local landscape, traditional performance, working apple presses and community participation.",
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.nationaltrust.org.uk/visit/london/morden-hall-park/events/98219906-127a-436d-801f-1cdba2fd44ae",
-      "verification": {
-        "verified_at": "2026-10-01T15:01:11+01:00",
-        "confidence": "high",
-        "source_url": "https://www.nationaltrust.org.uk/visit/london/morden-hall-park/events/98219906-127a-436d-801f-1cdba2fd44ae"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-01T15:01:11+01:00",
-      "expire_at": "2026-10-03T15:45:00+01:00",
-      "duplicate_key": "morden-hall-park|2026-10-03|harvest-festival"
-    },
-    {
-      "id": "croydon-harvest-2026-10-03",
-      "title_en": "Croydon Harvest and Walnut Fair",
-      "title_it": "Croydon Harvest e Walnut Fair",
-      "summary_en": "A free town-centre festival revives Croydon's 1314 Walnut Fair through farmyard circus, folk traditions, local history, global dance and participatory street art.",
-      "summary_it": "Un festival gratuito rievoca la Walnut Fair di Croydon del 1314 con circo rurale, tradizioni folk, storia locale, danze globali e arte partecipativa.",
-      "start": "2026-10-03T12:00:00+01:00",
-      "end": "2026-10-04T17:00:00+01:00",
-      "venue": {
-        "name": "Croydon town centre",
-        "address": "The Queen's Gardens, Katharine Street, High Street and Croydon Clocktower",
-        "postcode": "CR9 1ET",
-        "borough": "Croydon"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 10,
-        "reason": "A vivid free reinvention of Croydon's 1314 Walnut Fair combines unusually specific local history, neighbourhood participation and one-off street performance.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://news.croydon.gov.uk/croydon-harvest-brings-folk-farmyard-and-fun-to-the-town-centre/",
-      "verification": {
-        "verified_at": "2026-10-01T15:01:11+01:00",
-        "confidence": "high",
-        "source_url": "https://news.croydon.gov.uk/croydon-harvest-brings-folk-farmyard-and-fun-to-the-town-centre/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-01T15:01:11+01:00",
-      "expire_at": "2026-10-04T17:15:00+01:00",
-      "duplicate_key": "croydon-town-centre|2026-10-03|harvest-walnut-fair"
-    },
-    {
-      "id": "japan-matsuri-trafalgar-square-2026-10-04",
-      "title_en": "Japan Matsuri at Trafalgar Square",
-      "title_it": "Japan Matsuri a Trafalgar Square",
-      "summary_en": "A one-day festival fills Trafalgar Square with taiko, traditional dance, martial arts, workshops, an anime cosplay catwalk and Japanese food and craft stalls.",
-      "summary_it": "Un festival di un solo giorno riempie Trafalgar Square di taiko, danza tradizionale, arti marziali, laboratori, cosplay anime e stand giapponesi.",
-      "start": "2026-10-04T10:00:00+01:00",
-      "end": "2026-10-04T20:00:00+01:00",
-      "venue": {
-        "name": "Trafalgar Square",
-        "address": "Trafalgar Square, London",
-        "postcode": "WC2N 5DS",
-        "borough": "Westminster"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "local-culture",
       "advanced": {
         "score": 7,
-        "reason": "A one-day celebration links London's Japanese community with a broad public programme in one of the city's defining civic spaces.",
+        "reason": "A focused free discussion connecting an unusual City venue with practical support for independent contemporary artists.",
         "breakdown": {
-          "non_obvious": 1,
-          "place_story": 2,
+          "non_obvious": 2,
+          "place_story": 1,
           "unusual_access": 1,
           "local_character": 1,
           "value": 2
@@ -300,30 +50,30 @@
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://japanmatsuri.com/",
+      "official_url": "https://visual-artists.org/event/the-power-of-patronage-supporting-the-future-of-contemporary-art/",
       "verification": {
-        "verified_at": "2026-10-01T15:01:11+01:00",
+        "verified_at": "2026-10-05T09:38:14+01:00",
         "confidence": "high",
-        "source_url": "https://japanmatsuri.com/"
+        "source_url": "https://visual-artists.org/event/the-power-of-patronage-supporting-the-future-of-contemporary-art/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-01T15:01:11+01:00",
-      "expire_at": "2026-10-04T20:15:00+01:00",
-      "duplicate_key": "trafalgar-square|2026-10-04|japan-matsuri"
+      "publish_at": "2026-10-05T09:38:14+01:00",
+      "expire_at": "2026-10-09T12:15:00+01:00",
+      "duplicate_key": "power-of-patronage-minster-building-2026-10-09"
     },
     {
-      "id": "little-holland-house-open-day-2026-10-04",
-      "title_en": "Little Holland House Open Day",
-      "title_it": "Apertura di Little Holland House",
-      "summary_en": "Step inside Frank Dickinson's self-built Arts and Crafts home, where his handmade furniture, paintings, carvings, metalwork and Art Nouveau interiors remain in place.",
-      "summary_it": "Si entra nella casa Arts and Crafts costruita da Frank Dickinson, dove mobili, dipinti, intagli, metalli e interni Art Nouveau fatti a mano sono ancora al loro posto.",
-      "start": "2026-10-04T10:30:00+01:00",
-      "end": "2026-10-04T16:30:00+01:00",
+      "id": "local-london-guiding-day-city-walk",
+      "title_en": "Local London Guiding Day: City Walk",
+      "title_it": "Local London Guiding Day: passeggiata nella City",
+      "summary_en": "Qualified City guides lead free hourly walks showing how Roman plans, medieval street names, Wren architecture and livery companies still shape modern London.",
+      "summary_it": "Guide qualificate conducono passeggiate gratuite ogni ora, mostrando come piante romane, vie medievali, architettura di Wren e corporazioni plasmino ancora la City.",
+      "start": "2026-10-10T10:00:00+01:00",
+      "end": "2026-10-10T17:00:00+01:00",
       "venue": {
-        "name": "Little Holland House",
-        "address": "40 Beeches Avenue, Carshalton",
-        "postcode": "SM5 3LW",
-        "borough": "Sutton"
+        "name": "Outside M&S Food, Cannon Street Station",
+        "address": "Cannon Street Station, Cannon Street, London",
+        "postcode": "EC4N 6AP",
+        "borough": "City of London"
       },
       "price": {
         "amount_gbp": 0,
@@ -332,13 +82,13 @@
       },
       "booking": {
         "required": false,
-        "status": "recommended",
-        "url": "https://events.sutton.gov.uk/event?id=313423"
+        "status": "drop-in",
+        "url": null
       },
-      "category": "architecture",
+      "category": "heritage-history",
       "advanced": {
         "score": 10,
-        "reason": "A monthly opening gives free access to an intact, hand-built Arts and Crafts home with an exceptional local design story.",
+        "reason": "A one-day programme of free, expert-led walks reveals how layers of London history continue to govern the modern City.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
@@ -350,49 +100,99 @@
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://events.sutton.gov.uk/event?id=313423",
+      "official_url": "https://www.cityoflondonguides.com/tours/local-london-guiding-day-1",
       "verification": {
-        "verified_at": "2026-10-01T15:01:11+01:00",
+        "verified_at": "2026-10-05T09:38:14+01:00",
         "confidence": "high",
-        "source_url": "https://events.sutton.gov.uk/event?id=313423"
+        "source_url": "https://www.cityoflondonguides.com/tours/local-london-guiding-day-1"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-01T15:01:11+01:00",
-      "expire_at": "2026-10-04T16:45:00+01:00",
-      "duplicate_key": "little-holland-house|2026-10-04|monthly-open-day"
+      "publish_at": "2026-10-05T09:38:14+01:00",
+      "expire_at": "2026-10-10T17:15:00+01:00",
+      "duplicate_key": "local-london-guiding-day-city-walk-2026-10-10"
     },
     {
-      "id": "fulham-palace-apple-day-2026-10-04",
-      "title_en": "Apple Day at Fulham Palace",
-      "title_it": "Apple Day a Fulham Palace",
-      "summary_en": "Orchard tours reveal Fulham Palace's heritage apple varieties alongside the harvest market, garden games, baking competition, local food, crafts and live music.",
-      "summary_it": "Le visite al frutteto svelano le varietà storiche di mele di Fulham Palace, insieme a mercato, giochi, gara di dolci, artigianato e musica dal vivo.",
-      "start": "2026-10-04T11:00:00+01:00",
-      "end": "2026-10-04T16:00:00+01:00",
+      "id": "hampton-court-free-garden-open-days",
+      "title_en": "Hampton Court Palace Free Garden Open Days",
+      "title_it": "Giardini gratuiti a Hampton Court Palace",
+      "summary_en": "Explore the Great Fountain, Kitchen and Pond Gardens without the normal admission charge during one of Hampton Court's limited free garden weekends.",
+      "summary_it": "Esplora gratuitamente Great Fountain Garden, Kitchen Garden e Pond Gardens durante uno dei rari fine settimana ad accesso libero di Hampton Court.",
+      "start": "2026-10-10T10:00:00+01:00",
+      "end": "2026-10-11T17:30:00+01:00",
       "venue": {
-        "name": "Fulham Palace",
-        "address": "Bishop's Avenue, Fulham, London",
-        "postcode": "SW6 6EA",
-        "borough": "Hammersmith and Fulham"
+        "name": "Hampton Court Palace Gardens",
+        "address": "Hampton Court Way, East Molesey",
+        "postcode": "KT8 9AU",
+        "borough": "Elmbridge"
       },
       "price": {
-        "amount_gbp": 3,
-        "display": "£3 adult advance; £4 door",
-        "classification": "cheap"
+        "amount_gbp": 0,
+        "display": "Free gardens",
+        "classification": "free"
       },
       "booking": {
         "required": false,
-        "status": "recommended",
-        "url": "https://fulhampalace.digitickets.co.uk/event-tickets/41510?catID=41565"
+        "status": "drop-in",
+        "url": null
       },
       "category": "heritage-history",
       "advanced": {
         "score": 8,
-        "reason": "A low-cost harvest celebration connects a historic episcopal estate, its working orchard and local makers through guided access and activities.",
+        "reason": "Rare free access opens a major historic royal landscape normally covered by paid palace admission.",
         "breakdown": {
           "non_obvious": 2,
           "place_story": 2,
-          "unusual_access": 1,
+          "unusual_access": 2,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.hrp.org.uk/hampton-court-palace/visit/opening-and-closing-times/",
+      "verification": {
+        "verified_at": "2026-10-05T09:38:14+01:00",
+        "confidence": "high",
+        "source_url": "https://www.hrp.org.uk/hampton-court-palace/visit/opening-and-closing-times/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-05T09:38:14+01:00",
+      "expire_at": "2026-10-11T17:45:00+01:00",
+      "duplicate_key": "hampton-court-free-garden-open-days-2026-10-10-11"
+    },
+    {
+      "id": "rewind-grime-on-camera",
+      "title_en": "Rewind: Grime on Camera",
+      "title_it": "Rewind: il grime davanti alla telecamera",
+      "summary_en": "The filmmakers behind grime's independent visual culture discuss clashes, freestyles, pirate media networks and footage that has never been publicly shown.",
+      "summary_it": "I filmmaker della cultura visiva indipendente del grime raccontano clash, freestyle, reti mediatiche pirata e filmati mai mostrati pubblicamente.",
+      "start": "2026-10-10T19:00:00+01:00",
+      "end": "2026-10-10T21:00:00+01:00",
+      "venue": {
+        "name": "V&A East Museum",
+        "address": "East Bank, 107 Carpenters Road, Queen Elizabeth Olympic Park, London",
+        "postcode": "E20 2AR",
+        "borough": "Newham"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://www.vam.ac.uk/event/wr0RqKd5MB/rewind-grime-on-camera-oct-2026"
+      },
+      "category": "local-culture",
+      "advanced": {
+        "score": 10,
+        "reason": "A free one-off East London event reunites the independent chroniclers who created grime's visual archive, including unseen footage.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
           "local_character": 1,
           "value": 2
         }
@@ -400,16 +200,66 @@
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.fulhampalace.org/whats-on/events/apple-day/",
+      "official_url": "https://www.vam.ac.uk/event/wr0RqKd5MB/rewind-grime-on-camera-oct-2026",
       "verification": {
-        "verified_at": "2026-10-01T15:01:11+01:00",
+        "verified_at": "2026-10-05T09:38:14+01:00",
         "confidence": "high",
-        "source_url": "https://www.fulhampalace.org/whats-on/events/apple-day/"
+        "source_url": "https://www.vam.ac.uk/event/wr0RqKd5MB/rewind-grime-on-camera-oct-2026"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-01T15:01:11+01:00",
-      "expire_at": "2026-10-04T16:15:00+01:00",
-      "duplicate_key": "fulham-palace|2026-10-04|apple-day"
+      "publish_at": "2026-10-05T09:38:14+01:00",
+      "expire_at": "2026-10-10T21:15:00+01:00",
+      "duplicate_key": "rewind-grime-on-camera-va-east-2026-10-10"
+    },
+    {
+      "id": "surbiton-ski-sunday",
+      "title_en": "Surbiton Ski Sunday",
+      "title_it": "Surbiton Ski Sunday",
+      "summary_en": "Surbiton's eccentric annual race sends costumed competitors downhill on blocks of ice, with a luge, community spectacle and free participation or viewing.",
+      "summary_it": "L'eccentrica gara annuale di Surbiton lancia concorrenti in costume giù dalla collina su blocchi di ghiaccio, con slittino e partecipazione gratuita.",
+      "start": "2026-10-11T11:00:00+01:00",
+      "end": "2026-10-11T13:00:00+01:00",
+      "venue": {
+        "name": "St Mark's Hill",
+        "address": "Central Parade, St Mark's Hill, Surbiton",
+        "postcode": "KT6 4PJ",
+        "borough": "Kingston upon Thames"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "community",
+      "advanced": {
+        "score": 10,
+        "reason": "A genuinely odd, free and deeply local tradition turns a Surbiton hill into a one-day community ski slope.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.thecommunitybrain.org/event-details/surbiton-ski-sunday-1",
+      "verification": {
+        "verified_at": "2026-10-05T09:38:14+01:00",
+        "confidence": "high",
+        "source_url": "https://www.thecommunitybrain.org/event-details/surbiton-ski-sunday-1"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-05T09:38:14+01:00",
+      "expire_at": "2026-10-11T13:15:00+01:00",
+      "duplicate_key": "surbiton-ski-sunday-2026-10-11"
     }
   ]
 }
