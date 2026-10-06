@@ -6,6 +6,7 @@ import { buildItalian } from "./build-italian.mjs";
 import { buildFareCalculator } from "./build-fare-calculator.mjs";
 import { buildJournal } from "./build-journal.mjs";
 import { buildSearch } from "./build-search.mjs";
+import { buildGuidePages } from "./build-guide-pages.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
@@ -388,7 +389,7 @@ function renderEventsHeader(data) {
         <summary>Tools</summary>
         <div class="nav-menu-panel tools-menu-panel">${tools}</div>
       </details>
-      <a href="${data.links.guideStore}" target="_blank" rel="noopener" data-track="guide:menu">Guide</a>
+      <a href="${data.links.guideLanding}" data-track="guide:menu">Guide</a>
       <details class="nav-dropdown week-menu">
         <summary>This week</summary>
         <div class="nav-menu-panel week-menu-panel">
@@ -420,9 +421,9 @@ function renderEventsHeader(data) {
         <p class="mobile-menu-heading">Tools</p>
         ${tools.trim()}
         <p class="mobile-menu-heading">Explore</p>
-        <a href="${data.links.guideStore}" target="_blank" rel="noopener noreferrer" data-track="guide:mobile-menu">
+        <a href="${data.links.guideLanding}" data-track="guide:mobile-menu">
           <span>The Other London</span>
-          <strong>Guide ↗</strong>
+          <strong>Guide</strong>
         </a>
         <details class="mobile-week-menu">
           <summary><span>Weekend selections</span><strong>This week</strong></summary>
@@ -696,6 +697,7 @@ export async function prerender() {
   await buildItalian();
   await buildJournal({ includeDrafts: process.argv.includes("--drafts") });
   await buildNativeLooPages();
+  await buildGuidePages();
   await buildSearch();
 
   console.log(`Pre-rendered the bilingual homepage, Journal, search and ${feed.events.length} event records into static HTML.`);

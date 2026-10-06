@@ -2,6 +2,27 @@
   "locale": "en",
   "records": [
     {
+      "id": "guide:the-other-london:en",
+      "type": "guide",
+      "locale": "en",
+      "title": "The Other London",
+      "summary": "110 unusual places beyond the obvious: an independent field guide with original photography, practical details and maps.",
+      "url": "/the-other-london/",
+      "tags": [
+        "Guide",
+        "Places",
+        "Unusual London"
+      ],
+      "keywords": [
+        "the other london",
+        "London guide",
+        "hidden London",
+        "unusual places",
+        "Paolo Pastorino"
+      ],
+      "content": "Areas buildings museums oddities parks religious places shopping views free sampler"
+    },
+    {
       "id": "tool:london-dashboard:en",
       "type": "tool",
       "locale": "en",

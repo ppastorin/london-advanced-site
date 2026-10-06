@@ -143,6 +143,27 @@ function toolRecords(locale, portal, searchConfig) {
   return records;
 }
 
+function guideRecord(locale) {
+  const it = locale === "it";
+  return {
+    id: `guide:the-other-london:${locale}`,
+    type: "guide",
+    locale,
+    title: "The Other London",
+    summary: it
+      ? "110 luoghi insoliti oltre l’ovvio: guida indipendente con fotografie originali, dettagli pratici e mappe."
+      : "110 unusual places beyond the obvious: an independent field guide with original photography, practical details and maps.",
+    url: it ? "/it/the-other-london/" : "/the-other-london/",
+    tags: it ? ["Guida", "Luoghi", "Londra insolita"] : ["Guide", "Places", "Unusual London"],
+    keywords: it
+      ? ["the other london", "guida londra", "luoghi segreti", "londra insolita", "paolo pastorino"]
+      : ["the other london", "London guide", "hidden London", "unusual places", "Paolo Pastorino"],
+    content: it
+      ? "Aree edifici musei curiosità parchi luoghi religiosi shopping panorami anteprima gratuita"
+      : "Areas buildings museums oddities parks religious places shopping views free sampler"
+  };
+}
+
 function escapeHtml(value = "") {
   return String(value).replace(/[&<>"']/g, character => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -206,8 +227,8 @@ export async function buildSearch() {
   ]);
   const englishEvents = eventRecords("en", eventsFeed);
   const italianEvents = eventRecords("it", eventsFeed);
-  const english = [...toolRecords("en", englishPortal, searchConfig), ...articles.filter(article => article.locale === "en"), ...englishEvents];
-  const italian = [...toolRecords("it", italianPortal, searchConfig), ...articles.filter(article => article.locale === "it"), ...italianEvents];
+  const english = [guideRecord("en"), ...toolRecords("en", englishPortal, searchConfig), ...articles.filter(article => article.locale === "en"), ...englishEvents];
+  const italian = [guideRecord("it"), ...toolRecords("it", italianPortal, searchConfig), ...articles.filter(article => article.locale === "it"), ...italianEvents];
 
   await Promise.all([
     mkdir(path.join(dist, "search"), { recursive: true }),
