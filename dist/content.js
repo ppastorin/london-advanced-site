@@ -8,6 +8,7 @@ window.LONDON_ADVANCED = {
     home: "/",
     guide: "https://payhip.com/b/DrBE5",
     guideStore: "https://payhip.com/TheOtherLondon",
+    guideLanding: "/the-other-london/",
     marketGuide: "https://www.rexby.com/LondonAdvanced/theotherlondon",
     facebook: "https://www.facebook.com/groups/223988130303794/",
     instagram: "https://www.instagram.com/londonadvanced"

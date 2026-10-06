@@ -2,6 +2,27 @@
   "locale": "it",
   "records": [
     {
+      "id": "guide:the-other-london:it",
+      "type": "guide",
+      "locale": "it",
+      "title": "The Other London",
+      "summary": "110 luoghi insoliti oltre l’ovvio: guida indipendente con fotografie originali, dettagli pratici e mappe.",
+      "url": "/it/the-other-london/",
+      "tags": [
+        "Guida",
+        "Luoghi",
+        "Londra insolita"
+      ],
+      "keywords": [
+        "the other london",
+        "guida londra",
+        "luoghi segreti",
+        "londra insolita",
+        "paolo pastorino"
+      ],
+      "content": "Aree edifici musei curiosità parchi luoghi religiosi shopping panorami anteprima gratuita"
+    },
+    {
       "id": "tool:london-dashboard:it",
       "type": "tool",
       "locale": "it",

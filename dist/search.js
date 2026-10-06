@@ -6,6 +6,7 @@ const copy = pageLocale === "it" ? {
   count: count => `${count} ${count === 1 ? "risultato" : "risultati"}`,
   article: "Articolo",
   event: "Evento",
+  guide: "Guida",
   tool: "Strumento",
   location: "Luogo",
   open: "Apri",
@@ -17,6 +18,7 @@ const copy = pageLocale === "it" ? {
   count: count => `${count} ${count === 1 ? "result" : "results"}`,
   article: "Article",
   event: "Event",
+  guide: "Guide",
   tool: "Tool",
   location: "Place",
   open: "Open",
@@ -97,7 +99,7 @@ function renderResults(query) {
 
     const meta = document.createElement("span");
     meta.className = "search-result-type";
-    meta.textContent = record.type === "tool" ? copy.tool : record.type === "location" ? copy.location : record.type === "event" ? copy.event : copy.article;
+    meta.textContent = record.type === "tool" ? copy.tool : record.type === "guide" ? copy.guide : record.type === "location" ? copy.location : record.type === "event" ? copy.event : copy.article;
 
     const title = document.createElement("h2");
     const link = document.createElement("a");

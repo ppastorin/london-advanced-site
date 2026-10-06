@@ -33,7 +33,7 @@ function storyCards() {
       <span>${story.category}</span>
       <h3>${story.title}</h3>
       <p>${story.text}</p>
-      <a href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="story:${story.title}">Find it in the guide <b aria-hidden="true">→</b></a>
+      <a href="${DATA.links.guideLanding}" data-track="story:${story.title}">Find it in the guide <b aria-hidden="true">→</b></a>
     </article>`).join("");
 }
 
@@ -49,7 +49,7 @@ function render() {
     <header class="site-nav">
       <a class="wordmark" href="#top" aria-label="London Advanced home">LA<span>•</span></a>
       <nav aria-label="Main navigation">
-        <a href="#tools">Tools</a><a href="#guide">Guide</a><a href="#journal">Journal</a><a href="#community">Community</a>
+        <a href="#tools">Tools</a><a href="${DATA.links.guideLanding}">Guide</a><a href="#journal">Journal</a><a href="#community">Community</a>
       </nav>
       <a class="nav-cta" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:nav">Get the guide</a>
     </header>
@@ -59,7 +59,7 @@ function render() {
         <span class="eyebrow">Independent London guide · 6 free tools</span>
         <h1>The city beyond<br><em>the obvious.</em></h1>
         <p>Find unusual places, make smarter journeys and see what London feels like before you set out.</p>
-        <div class="hero-actions"><a class="button primary" href="#tools">Explore the tools</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:hero">Discover the guide →</a></div>
+        <div class="hero-actions"><a class="button primary" href="#tools">Explore the tools</a><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Discover the guide →</a></div>
       </div>
       <figure class="map-window"><img src="assets/london-map.jpg" alt="Map of London showing places included in London Advanced"><figcaption><b>1,100+</b> places beyond the standard lists</figcaption></figure>
     </section>
@@ -71,7 +71,7 @@ function render() {
 
     <section id="guide" class="guide-split section-wrap">
       <div class="guide-cover-wrap"><img src="assets/guide-cover.jpg" alt="Cover of The Other London guide"><span>124 pages</span></div>
-      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>A field guide for people who would rather look twice.</h2><p>Handpicked places, practical details, original photography and map links—designed to help you find the London that standard guides miss.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Buy the full guide</a><a class="text-link" href="${DATA.links.guideStore}" target="_blank" rel="noopener" data-track="guide:sample">See the free sample →</a></div></div>
+      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>A field guide for people who would rather look twice.</h2><p>Handpicked places, practical details, original photography and map links—designed to help you find the London that standard guides miss.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Explore the guide</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Buy the full guide →</a></div></div>
     </section>
 
     <section id="journal" class="journal section-wrap">

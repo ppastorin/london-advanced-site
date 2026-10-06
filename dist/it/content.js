@@ -8,6 +8,7 @@ window.LONDON_ADVANCED={
     "home": "/it/",
     "guide": "https://payhip.com/b/DrBE5",
     "guideStore": "https://payhip.com/TheOtherLondon",
+    "guideLanding": "/it/the-other-london/",
     "facebook": "https://www.facebook.com/groups/223988130303794/",
     "instagram": "https://www.instagram.com/londonadvanced"
   },
