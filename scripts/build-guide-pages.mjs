@@ -82,9 +82,26 @@ function escape(value = "") {
   return String(value).replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[character]);
 }
 
-function nav(locale) {
+let siteNavigation = {};
+
+function guideNavigation(page, locale) {
+  const header = page.match(/<header class="site-nav">[\s\S]*?<\/header>/)?.[0];
+  if (!header) throw new Error(`Could not extract the ${locale} site navigation for The Other London.`);
+
   const it = locale === "it";
-  return `<header class="site-nav"><a class="wordmark" href="${it ? "/it/" : "/"}" aria-label="London Advanced homepage"><svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/><circle class="brand-centre" cx="18" cy="18" r="2.2"/></svg><span class="brand-name">London Advanced</span></a><nav class="desktop-nav" aria-label="${it ? "Navigazione principale" : "Primary navigation"}"><a href="${it ? "/it/#strumenti" : "/#tools"}">${it ? "Strumenti" : "Tools"}</a><a href="${it ? "/it/eventi/" : "/events/"}">${it ? "Eventi" : "Events"}</a><a href="${it ? "/it/journal/" : "/journal/"}">Journal</a><a href="${it ? "/it/chi-sono/" : "/about/"}">${it ? "Chi sono" : "About"}</a><a href="${it ? "/it/metodologia/" : "/methodology/"}">${it ? "Metodologia" : "Methodology"}</a><a href="${it ? "/it/the-other-london/" : "/the-other-london/"}" aria-current="page">${it ? "Guida" : "Guide"}</a></nav><div class="nav-actions"><a class="language-switch" href="${it ? "/the-other-london/" : "/it/the-other-london/"}" hreflang="${it ? "en-GB" : "it-IT"}">${it ? "EN" : "IT"}</a><a class="nav-cta" href="${it ? "/it/#contatti" : "/#contact"}">${it ? "Contatti" : "Contact"}</a></div></header>`;
+  const guideHref = it ? "/it/the-other-london/" : "/the-other-london/";
+  const alternateHref = it ? "/the-other-london/" : "/it/the-other-london/";
+
+  return header
+    .replaceAll(' aria-current="page"', "")
+    .replaceAll(`href="${guideHref}"`, `href="${guideHref}" aria-current="page"`)
+    .replace(/(<a class="language-switch" href=")[^"]+("[^>]*>)/, `$1${alternateHref}$2`)
+    .replace(/(<a class="mobile-language-switch" href=")[^"]+("[^>]*>)/, `$1${alternateHref}$2`);
+}
+
+function nav(locale) {
+  if (!siteNavigation[locale]) throw new Error(`The ${locale} site navigation has not been initialised.`);
+  return siteNavigation[locale];
 }
 
 function head(locale, c) {
@@ -141,6 +158,15 @@ async function updateSitemap() {
 }
 
 export async function buildGuidePages() {
+  const [englishEventsPage, italianEventsPage] = await Promise.all([
+    readFile(path.join(dist, "events", "index.html"), "utf8"),
+    readFile(path.join(dist, "it", "eventi", "index.html"), "utf8")
+  ]);
+  siteNavigation = {
+    en: guideNavigation(englishEventsPage, "en"),
+    it: guideNavigation(italianEventsPage, "it")
+  };
+
   await Promise.all([
     mkdir(path.join(dist, "the-other-london"), { recursive: true }),
     mkdir(path.join(dist, "it", "the-other-london"), { recursive: true })
