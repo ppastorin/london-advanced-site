@@ -6,6 +6,7 @@ import { buildItalian } from "./build-italian.mjs";
 import { buildFareCalculator } from "./build-fare-calculator.mjs";
 import { buildJournal } from "./build-journal.mjs";
 import { buildSearch } from "./build-search.mjs";
+import { buildSitemap } from "./build-sitemap.mjs";
 import { buildGuidePages } from "./build-guide-pages.mjs";
 
 const projectRoot = process.cwd();
@@ -699,8 +700,9 @@ export async function prerender() {
   await buildNativeLooPages();
   await buildGuidePages();
   await buildSearch();
+  const sitemapEntries = await buildSitemap();
 
-  console.log(`Pre-rendered the bilingual homepage, Journal, search and ${feed.events.length} event records into static HTML.`);
+  console.log(`Pre-rendered the bilingual homepage, Journal, search, ${feed.events.length} event records and ${sitemapEntries.length} sitemap URLs into static HTML.`);
 }
 
 const directRun = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
