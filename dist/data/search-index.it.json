@@ -440,7 +440,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Un panel gratuito esplora come collezionisti, organizzazioni e micro-mecenati possano sostenere un futuro più accessibile e duraturo per gli artisti contemporanei.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
+      "updated_at": "2026-10-08T15:03:54+01:00",
       "expires_at": "2026-10-09T12:15:00+01:00"
     },
     {
@@ -464,7 +464,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Guide qualificate conducono passeggiate gratuite ogni ora, mostrando come piante romane, vie medievali, architettura di Wren e corporazioni plasmino ancora la City.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
+      "updated_at": "2026-10-08T15:03:54+01:00",
       "expires_at": "2026-10-10T17:15:00+01:00"
     },
     {
@@ -488,32 +488,56 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Esplora gratuitamente Great Fountain Garden, Kitchen Garden e Pond Gardens durante uno dei rari fine settimana ad accesso libero di Hampton Court.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
+      "updated_at": "2026-10-08T15:03:54+01:00",
       "expires_at": "2026-10-11T17:45:00+01:00"
     },
     {
-      "id": "event:rewind-grime-on-camera:it",
+      "id": "event:starquest-maya-man-performance-lecture:it",
       "type": "event",
       "locale": "it",
-      "title": "Rewind: il grime davanti alla telecamera",
-      "summary": "sab 10 ott · V&A East Museum · Gratuito — I filmmaker della cultura visiva indipendente del grime raccontano clash, freestyle, reti mediatiche pirata e filmati mai mostrati pubblicamente.",
-      "url": "/it/eventi/#event-rewind-grime-on-camera",
+      "title": "StarQuest: performance-lecture di Maya Man",
+      "summary": "sab 10 ott · V&A South Kensington, Lecture Theatre · Gratuito — La prima londinese di Maya Man mescola software generativo, coreografia e cultura online per indagare la danza competitiva e la performance algoritmica del sé.",
+      "url": "/it/eventi/#event-starquest-maya-man-performance-lecture",
       "tags": [
-        "Cultura locale",
+        "Arte e design",
         "Gratuito",
-        "Newham",
+        "Kensington and Chelsea",
         "free"
       ],
       "keywords": [
-        "V&A East Museum",
-        "East Bank, 107 Carpenters Road, Queen Elizabeth Olympic Park, London",
-        "E20 2AR",
-        "Newham",
+        "V&A South Kensington, Lecture Theatre",
+        "Cromwell Road, London",
+        "SW7 2RL",
+        "Kensington and Chelsea",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "I filmmaker della cultura visiva indipendente del grime raccontano clash, freestyle, reti mediatiche pirata e filmati mai mostrati pubblicamente.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
-      "expires_at": "2026-10-10T21:15:00+01:00"
+      "content": "La prima londinese di Maya Man mescola software generativo, coreografia e cultura online per indagare la danza competitiva e la performance algoritmica del sé.",
+      "updated_at": "2026-10-08T15:03:54+01:00",
+      "expires_at": "2026-10-10T13:15:00+01:00"
+    },
+    {
+      "id": "event:william-morris-gallery-welcome-home-family-day:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Welcome Home: giornata per famiglie alla William Morris Gallery",
+      "summary": "sab 10 ott · William Morris Gallery · Gratuito — Una giornata per la riapertura propone serigrafia, la collezione permanente riallestita e un nuovo percorso nella casa storica di William Morris.",
+      "url": "/it/eventi/#event-william-morris-gallery-welcome-home-family-day",
+      "tags": [
+        "Community",
+        "Gratuito",
+        "Waltham Forest",
+        "free"
+      ],
+      "keywords": [
+        "William Morris Gallery",
+        "Lloyd Park, Forest Road, Walthamstow, London",
+        "E17 4PP",
+        "Waltham Forest",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Una giornata per la riapertura propone serigrafia, la collezione permanente riallestita e un nuovo percorso nella casa storica di William Morris.",
+      "updated_at": "2026-10-08T15:03:54+01:00",
+      "expires_at": "2026-10-10T16:15:00+01:00"
     },
     {
       "id": "event:surbiton-ski-sunday:it",
@@ -536,7 +560,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "L'eccentrica gara annuale di Surbiton lancia concorrenti in costume giù dalla collina su blocchi di ghiaccio, con slittino e partecipazione gratuita.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
+      "updated_at": "2026-10-08T15:03:54+01:00",
       "expires_at": "2026-10-11T13:15:00+01:00"
     }
   ]

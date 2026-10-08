@@ -441,7 +441,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "A free panel asks how collectors, organisations and micro-patrons can create a more sustainable and accessible future for contemporary artists. A focused free discussion connecting an unusual City venue with practical support for independent contemporary artists.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
+      "updated_at": "2026-10-08T15:03:54+01:00",
       "expires_at": "2026-10-09T12:15:00+01:00"
     },
     {
@@ -465,7 +465,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "Qualified City guides lead free hourly walks showing how Roman plans, medieval street names, Wren architecture and livery companies still shape modern London. A one-day programme of free, expert-led walks reveals how layers of London history continue to govern the modern City.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
+      "updated_at": "2026-10-08T15:03:54+01:00",
       "expires_at": "2026-10-10T17:15:00+01:00"
     },
     {
@@ -489,32 +489,56 @@
         "event events this week weekend free affordable"
       ],
       "content": "Explore the Great Fountain, Kitchen and Pond Gardens without the normal admission charge during one of Hampton Court's limited free garden weekends. Rare free access opens a major historic royal landscape normally covered by paid palace admission.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
+      "updated_at": "2026-10-08T15:03:54+01:00",
       "expires_at": "2026-10-11T17:45:00+01:00"
     },
     {
-      "id": "event:rewind-grime-on-camera:en",
+      "id": "event:starquest-maya-man-performance-lecture:en",
       "type": "event",
       "locale": "en",
-      "title": "Rewind: Grime on Camera",
-      "summary": "Sat 10 Oct · V&A East Museum · Free — The filmmakers behind grime's independent visual culture discuss clashes, freestyles, pirate media networks and footage that has never been publicly shown.",
-      "url": "/events/#event-rewind-grime-on-camera",
+      "title": "StarQuest: A Performance-Lecture by Maya Man",
+      "summary": "Sat 10 Oct · V&A South Kensington, Lecture Theatre · Free — Maya Man's London-premiere performance-lecture mixes generative software, choreography and online culture to probe competitive dance and algorithmic self-performance.",
+      "url": "/events/#event-starquest-maya-man-performance-lecture",
       "tags": [
-        "Local culture",
+        "Art and design",
         "Free",
-        "Newham",
+        "Kensington and Chelsea",
         "free"
       ],
       "keywords": [
-        "V&A East Museum",
-        "East Bank, 107 Carpenters Road, Queen Elizabeth Olympic Park, London",
-        "E20 2AR",
-        "Newham",
+        "V&A South Kensington, Lecture Theatre",
+        "Cromwell Road, London",
+        "SW7 2RL",
+        "Kensington and Chelsea",
         "event events this week weekend free affordable"
       ],
-      "content": "The filmmakers behind grime's independent visual culture discuss clashes, freestyles, pirate media networks and footage that has never been publicly shown. A free one-off East London event reunites the independent chroniclers who created grime's visual archive, including unseen footage.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
-      "expires_at": "2026-10-10T21:15:00+01:00"
+      "content": "Maya Man's London-premiere performance-lecture mixes generative software, choreography and online culture to probe competitive dance and algorithmic self-performance. A free London premiere uses an unusual performance-lecture format to connect digital art, choreography and algorithmic culture.",
+      "updated_at": "2026-10-08T15:03:54+01:00",
+      "expires_at": "2026-10-10T13:15:00+01:00"
+    },
+    {
+      "id": "event:william-morris-gallery-welcome-home-family-day:en",
+      "type": "event",
+      "locale": "en",
+      "title": "William Morris Gallery Family Day: Welcome Home",
+      "summary": "Sat 10 Oct · William Morris Gallery · Free — A reopening family day offers screenprinting, a first look at the redisplayed permanent collection and a new trail through William Morris's former home.",
+      "url": "/events/#event-william-morris-gallery-welcome-home-family-day",
+      "tags": [
+        "Community",
+        "Free",
+        "Waltham Forest",
+        "free"
+      ],
+      "keywords": [
+        "William Morris Gallery",
+        "Lloyd Park, Forest Road, Walthamstow, London",
+        "E17 4PP",
+        "Waltham Forest",
+        "event events this week weekend free affordable"
+      ],
+      "content": "A reopening family day offers screenprinting, a first look at the redisplayed permanent collection and a new trail through William Morris's former home. A free neighbourhood reopening day offers early access to a redisplayed collection inside William Morris's historic home.",
+      "updated_at": "2026-10-08T15:03:54+01:00",
+      "expires_at": "2026-10-10T16:15:00+01:00"
     },
     {
       "id": "event:surbiton-ski-sunday:en",
@@ -537,7 +561,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "Surbiton's eccentric annual race sends costumed competitors downhill on blocks of ice, with a luge, community spectacle and free participation or viewing. A genuinely odd, free and deeply local tradition turns a Surbiton hill into a one-day community ski slope.",
-      "updated_at": "2026-10-05T09:38:14+01:00",
+      "updated_at": "2026-10-08T15:03:54+01:00",
       "expires_at": "2026-10-11T13:15:00+01:00"
     }
   ]
