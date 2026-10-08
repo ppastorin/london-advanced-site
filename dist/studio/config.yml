@@ -245,3 +245,212 @@ collections:
         date_format: YYYY-MM-DD
         time_format: HH:mm
         i18n: duplicate
+  - name: itineraries
+    label: Itineraries
+    label_singular: Itinerary
+    description: Bilingual one-day routes. Drafts can be reviewed without photographs or a finished map; publication requires both languages, approval, a hero image, a route map and a Google Maps link.
+    folder: content/itineraries
+    create: true
+    delete: false
+    extension: json
+    format: json
+    slug: "{{fields.itinerary_id}}"
+    identifier_field: itinerary_id
+    summary: "{{title}} · {{editorial_status}}"
+    preview_path: "itineraries/_preview/{{fields.itinerary_id}}"
+    i18n: true
+    sortable_fields: [commit_date, title, editorial_status, published_at, updated_at]
+    view_filters:
+      - { label: Drafts, field: editorial_status, pattern: draft }
+      - { label: Ready for review, field: editorial_status, pattern: review }
+      - { label: Approved, field: editorial_status, pattern: approved }
+      - { label: Published, field: editorial_status, pattern: published }
+    fields:
+      - label: Permanent itinerary ID
+        name: itinerary_id
+        widget: string
+        hint: Lowercase letters, numbers and hyphens only. Never change this after the first save.
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase words separated by hyphens.']
+        i18n: duplicate
+      - label: Editorial status
+        name: editorial_status
+        widget: select
+        options:
+          - { label: Draft, value: draft }
+          - { label: Ready for Paolo, value: review }
+          - { label: Approved, value: approved }
+          - { label: Published, value: published }
+        default: draft
+        i18n: duplicate
+      - label: Approval record
+        name: approval
+        widget: object
+        collapsed: true
+        i18n: true
+        fields:
+          - label: Approval status
+            name: status
+            widget: select
+            options: [pending, changes-requested, approved]
+            default: pending
+          - { label: Approved by, name: approved_by, widget: string, required: false }
+          - { label: Approved at, name: approved_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm }
+      - { label: Headline, name: title, widget: string, i18n: true }
+      - label: Stable URL slug
+        name: slug
+        widget: string
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase words separated by hyphens.']
+        i18n: true
+      - { label: Search title, name: seo_title, widget: string, required: false, i18n: true }
+      - { label: Search description, name: description, widget: text, hint: Maximum 165 characters., i18n: true }
+      - { label: Section label, name: eyebrow, widget: string, default: One-day itinerary, i18n: true }
+      - { label: Standfirst, name: dek, widget: text, i18n: true }
+      - label: Theme
+        name: theme
+        widget: select
+        options:
+          - { label: Sacred spaces, gardens and local history, value: sacred-gardens-local-history }
+          - { label: Industrial afterlives, value: industrial-afterlives }
+          - { label: Nature and infrastructure, value: nature-and-infrastructure }
+          - { label: Craft and design, value: craft-and-design }
+          - { label: Layers of history, value: layers-of-history }
+        i18n: duplicate
+      - label: London area
+        name: area
+        widget: select
+        options:
+          - { label: South-west London, value: south-west }
+          - { label: North London, value: north }
+          - { label: East London, value: east }
+          - { label: North-west London, value: north-west }
+        i18n: duplicate
+      - label: Best day
+        name: best_day
+        widget: select
+        options:
+          - { label: Any day, value: any-day }
+          - { label: Sunday, value: sunday }
+          - { label: Saturday, value: saturday }
+          - { label: Weekend, value: weekend }
+          - { label: Weekday, value: weekday }
+        i18n: duplicate
+      - label: Indoor and outdoor balance
+        name: environment
+        widget: select
+        options:
+          - { label: Indoor and outdoor, value: mixed }
+          - { label: Mostly outdoors, value: outdoor }
+          - { label: Mostly indoors, value: indoor }
+        i18n: duplicate
+      - label: Walking level
+        name: walking_level
+        widget: select
+        options:
+          - { label: Easy, value: easy }
+          - { label: Moderate, value: moderate }
+          - { label: Active, value: active }
+        i18n: duplicate
+      - label: Public transport level
+        name: transit_level
+        widget: select
+        options:
+          - { label: None, value: none }
+          - { label: One or two short rides, value: light }
+          - { label: Several short rides, value: moderate }
+        i18n: duplicate
+      - { label: Door-to-door duration, name: duration, widget: string, hint: Example: 10:00–17:00 / 7 hours, i18n: true }
+      - { label: Walking distance (km), name: distance_km, widget: number, value_type: float, min: 0, max: 30, step: 0.1, i18n: duplicate }
+      - { label: Season note, name: season, widget: string, required: false, i18n: true }
+      - { label: Accessibility and limitations, name: accessibility_notes, widget: text, required: false, i18n: true }
+      - label: Stops
+        name: stops
+        widget: list
+        min: 2
+        collapsed: true
+        summary: "{{fields.arrival}} · {{fields.name}}"
+        i18n: true
+        fields:
+          - { label: Order, name: order, widget: number, value_type: int, min: 1 }
+          - { label: Location database ID, name: location_id, widget: string, hint: Stable ID from the London locations database. }
+          - { label: Place name, name: name, widget: string }
+          - { label: Planned arrival, name: arrival, widget: string, hint: Use local time such as 10:00. }
+          - { label: Visit duration (minutes), name: duration_minutes, widget: number, value_type: int, min: 10, max: 360 }
+          - { label: Why this stop is here, name: summary, widget: text }
+          - { label: Opening-hours note, name: opening_note, widget: text, required: false }
+          - { label: Linked Journal article ID, name: article_id, widget: string, required: false }
+          - { label: Linked Journal URL, name: article_url, widget: string, required: false }
+          - { label: Travel to next stop, name: transport_to_next, widget: text, required: false }
+          - { label: Travel time to next stop (minutes), name: travel_minutes, widget: number, value_type: int, required: false, min: 0, max: 180 }
+      - label: Editorial introduction and judgement
+        name: body
+        widget: markdown
+        modes: [rich_text, raw]
+        i18n: true
+      - label: Google Maps itinerary URL
+        name: google_maps_url
+        widget: string
+        required: false
+        hint: Optional in draft; required by the build before publication.
+        i18n: duplicate
+      - label: Editorial route map
+        name: map
+        widget: object
+        collapsed: true
+        required: false
+        i18n: true
+        fields:
+          - { label: Map image, name: src, widget: image, choose_url: false, required: false, media_folder: /assets/itineraries, public_folder: /assets/itineraries }
+          - { label: Alternative text, name: alt, widget: text, required: false }
+          - { label: Caption, name: caption, widget: text, required: false }
+          - { label: Credit, name: credit, widget: string, default: London Advanced, required: false }
+          - { label: Width, name: width, widget: number, value_type: int, default: 1600, required: false }
+          - { label: Height, name: height, widget: number, value_type: int, default: 1000, required: false }
+      - label: Photographs
+        name: images
+        widget: list
+        collapsed: true
+        required: false
+        max: 8
+        i18n: true
+        fields:
+          - { label: Image, name: src, widget: image, choose_url: false, allow_multiple: false, media_folder: /assets/itineraries, public_folder: /assets/itineraries }
+          - { label: Role, name: role, widget: select, options: [hero, stop, detail, closing], default: stop }
+          - { label: Related stop number, name: stop_order, widget: number, value_type: int, min: 1, max: 12, required: false, hint: Used to place stop photographs in the schedule. }
+          - { label: Alternative text, name: alt, widget: text }
+          - { label: Caption, name: caption, widget: text }
+          - { label: Credit, name: credit, widget: string, default: Paolo Pastorino }
+          - { label: Width, name: width, widget: number, value_type: int, default: 2400 }
+          - { label: Height, name: height, widget: number, value_type: int, default: 1600 }
+          - { label: Horizontal crop focus (%), name: focal_x, widget: number, value_type: int, min: 0, max: 100, default: 50, required: false }
+          - { label: Vertical crop focus (%), name: focal_y, widget: number, value_type: int, min: 0, max: 100, default: 50, required: false }
+      - label: Related article IDs
+        name: related_articles
+        widget: list
+        required: false
+        i18n: duplicate
+        field: { label: Article ID, name: article_id, widget: string }
+      - label: Related itinerary IDs
+        name: related_itineraries
+        widget: list
+        required: false
+        i18n: duplicate
+        field: { label: Itinerary ID, name: itinerary_id, widget: string }
+      - label: Topics
+        name: tags
+        widget: list
+        required: false
+        i18n: true
+        field: { label: Topic, name: topic, widget: string }
+      - label: Verification sources
+        name: sources
+        widget: list
+        collapsed: true
+        required: false
+        summary: "{{fields.label}}"
+        i18n: true
+        fields:
+          - { label: Source, name: label, widget: string }
+          - { label: URL, name: url, widget: string }
+          - { label: Checked on, name: checked_at, widget: date, format: YYYY-MM-DD }
+      - { label: First publication, name: published_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm, i18n: duplicate }
+      - { label: Last substantive update, name: updated_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm, i18n: duplicate }

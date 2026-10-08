@@ -5,6 +5,7 @@ import vm from "node:vm";
 const root = process.cwd();
 const dist = path.join(root, "dist");
 const journal = path.join(root, "content", "journal");
+const itineraries = path.join(root, "content", "itineraries");
 const canonicalOrigin = "https://www.londonadvanced.com";
 
 function publicArticle(article) {
@@ -52,6 +53,29 @@ async function loadPublishedArticles() {
     });
   }
   return articles;
+}
+
+async function loadPublishedItineraries() {
+  const files = (await readdir(itineraries)).filter(file => /\.(en|it)\.json$/.test(file));
+  const records = [];
+  for (const file of files) {
+    const locale = file.endsWith(".it.json") ? "it" : "en";
+    const itinerary = JSON.parse(await readFile(path.join(itineraries, file), "utf8"));
+    if (!publicArticle(itinerary)) continue;
+    records.push({
+      id: `itinerary:${itinerary.itinerary_id}:${locale}`,
+      type: "itinerary",
+      locale,
+      title: itinerary.title,
+      summary: itinerary.dek || itinerary.description,
+      url: locale === "it" ? `/it/itinerari/${itinerary.slug}/` : `/itineraries/${itinerary.slug}/`,
+      tags: [itinerary.theme, itinerary.area, itinerary.best_day, itinerary.environment, ...(itinerary.tags || [])],
+      keywords: [itinerary.walking_level, itinerary.transit_level, itinerary.season, ...(itinerary.stops || []).flatMap(stop => [stop.name, stop.location_id])].filter(Boolean),
+      content: cleanMarkdown(`${itinerary.body || ""} ${(itinerary.stops || []).map(stop => `${stop.name} ${stop.summary || ""}`).join(" ")}`),
+      updated_at: itinerary.updated_at || itinerary.published_at
+    });
+  }
+  return records;
 }
 
 function activeEvents(feed) {
@@ -218,17 +242,18 @@ async function integrateSearchLinks() {
 }
 
 export async function buildSearch() {
-  const [englishPortal, italianPortal, searchConfig, articles, eventsFeed] = await Promise.all([
+  const [englishPortal, italianPortal, searchConfig, articles, itineraryRecords, eventsFeed] = await Promise.all([
     loadPortalData("content.js"),
     loadPortalData("it/content.js"),
     readFile(path.join(root, "content", "search-tools.json"), "utf8").then(JSON.parse),
     loadPublishedArticles(),
+    loadPublishedItineraries(),
     readFile(path.join(dist, "data", "events.json"), "utf8").then(JSON.parse)
   ]);
   const englishEvents = eventRecords("en", eventsFeed);
   const italianEvents = eventRecords("it", eventsFeed);
-  const english = [guideRecord("en"), ...toolRecords("en", englishPortal, searchConfig), ...articles.filter(article => article.locale === "en"), ...englishEvents];
-  const italian = [guideRecord("it"), ...toolRecords("it", italianPortal, searchConfig), ...articles.filter(article => article.locale === "it"), ...italianEvents];
+  const english = [guideRecord("en"), ...toolRecords("en", englishPortal, searchConfig), ...articles.filter(article => article.locale === "en"), ...itineraryRecords.filter(item => item.locale === "en"), ...englishEvents];
+  const italian = [guideRecord("it"), ...toolRecords("it", italianPortal, searchConfig), ...articles.filter(article => article.locale === "it"), ...itineraryRecords.filter(item => item.locale === "it"), ...italianEvents];
 
   await Promise.all([
     mkdir(path.join(dist, "search"), { recursive: true }),

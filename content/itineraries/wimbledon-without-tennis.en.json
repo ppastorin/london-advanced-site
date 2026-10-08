@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "itinerary_id": "wimbledon-without-tennis",
+  "editorial_status": "review",
+  "approval": { "status": "pending", "approved_by": "", "approved_at": "" },
+  "title": "Wimbledon Without Tennis",
+  "slug": "wimbledon-without-tennis",
+  "seo_title": "Wimbledon Without Tennis: a one-day itinerary",
+  "description": "A one-day walk through Thai architecture, Wimbledon Village, the Common, its windmill, Cannizaro Park and local history.",
+  "eyebrow": "One-day itinerary · South-west London",
+  "dek": "A side of Wimbledon that has nothing to do with Centre Court: Thai sacred architecture, secluded gardens, common land and local history, paced for an unhurried day.",
+  "theme": "sacred-gardens-local-history",
+  "area": "south-west",
+  "best_day": "any-day",
+  "environment": "mixed",
+  "walking_level": "moderate",
+  "transit_level": "none",
+  "duration": "09:45–16:30 · about 6¾ hours",
+  "distance_km": 5.3,
+  "season": "A year-round route. Short winter days reduce the time available in Cannizaro Park, while museum interiors have more limited opening days and seasons.",
+  "accessibility_notes": "The day includes woodland and Common paths that can be muddy or uneven. Wimbledon Museum is on the first floor and reached by stairs. Temple access should be checked before an essential visit.",
+  "stops": [
+    {
+      "order": 1,
+      "location_id": "LA-CB46D5B1",
+      "name": "Wimbledon Museum",
+      "arrival": "09:45",
+      "duration_minutes": 20,
+      "summary": "Begin outside the local museum and use Ridgway as a short historical preface. When the museum is open, return after Cannizaro Park for the interior collection.",
+      "opening_note": "The museum normally opens Friday, Saturday and Sunday from 14:30 to 17:00. The collection is on the first floor via stairs. Check the current hours before setting out.",
+      "transport_to_next": "Walk west along Ridgway to the Wimbledon Village Clock Tower",
+      "travel_minutes": 5
+    },
+    {
+      "order": 2,
+      "location_id": "LA-EF9044C2",
+      "name": "Wimbledon Village",
+      "arrival": "10:10",
+      "duration_minutes": 45,
+      "summary": "Use the quiet morning to look above the shopfronts, read the older façades and pause for coffee before the landscape-led part of the route.",
+      "transport_to_next": "Walk through the northern side of the Village to Calonne Road and the Buddhapadipa Temple",
+      "travel_minutes": 15
+    },
+    {
+      "order": 3,
+      "location_id": "R4",
+      "name": "Buddhapadipa Temple",
+      "arrival": "11:10",
+      "duration_minutes": 55,
+      "summary": "Explore the white-and-gold Thai architecture and ornamental grounds. If the main hall is open, enter quietly to see its mural cycle.",
+      "opening_note": "The grounds and main hall can have different access arrangements, and ceremonies take priority. Check the temple before visiting and remember that it is an active place of worship.",
+      "article_id": "buddhapadipa-temple",
+      "article_url": "/journal/buddhapadipa-temple-wimbledon-visit/",
+      "transport_to_next": "Walk north-west through the edge of Wimbledon Common towards the Windmill",
+      "travel_minutes": 30
+    },
+    {
+      "order": 4,
+      "location_id": "M4",
+      "name": "Wimbledon Common and Windmill",
+      "arrival": "12:35",
+      "duration_minutes": 85,
+      "summary": "Give the Windmill and surrounding Common enough time to feel like a landscape rather than a corridor. This is also the natural lunch stop on the route.",
+      "opening_note": "The Windmill Museum normally opens on Sundays during the British Summer Time season. The windmill exterior and Common remain worthwhile when the museum is closed; check current museum dates and hours.",
+      "transport_to_next": "Continue south through Wimbledon Common to Cannizaro Park, choosing firmer paths after rain",
+      "travel_minutes": 25
+    },
+    {
+      "order": 5,
+      "location_id": "LA-EFAC4DE1",
+      "name": "Cannizaro Park",
+      "arrival": "14:25",
+      "duration_minutes": 70,
+      "summary": "Finish the main circuit through the park’s contrasting garden rooms, from formal planting and Cannizaro House to woodland paths and quieter clearings.",
+      "opening_note": "Merton Council normally lists opening from 08:00 on weekdays and 09:00 at weekends and on bank holidays, closing at dusk. Confirm seasonal arrangements before visiting.",
+      "transport_to_next": "Walk back along West Side Common to Wimbledon Village; visit Wimbledon Museum if it is open, or finish with the Village heritage loop",
+      "travel_minutes": 20
+    }
+  ],
+  "body": "## Wimbledon, seen from the edges\n\nWimbledon is known around the world for tennis. Yet beyond the courts lies a more surprising landscape: a Thai Buddhist temple decorated with gold and colour, a sequence of secluded gardens, a village that still feels distinct from London, and one of the capital’s largest surviving commons.\n\nThis itinerary explores that other Wimbledon at a comfortable pace. It works on any day of the week because its essential experiences are outdoors. When the temple halls and local museums are open, they add another layer to the day; when they are closed, the architecture, gardens, landscape and village remain well worth the journey.\n\n## 09:45 — Wimbledon Museum: begin with context\n\nBegin outside Wimbledon Museum on Ridgway. The compact local collection is valuable because it reconnects the landscapes seen during the day with the people, buildings and events that shaped them. Its exterior and location provide a useful historical starting point even when the museum is closed.\n\nThe museum normally opens only on Friday, Saturday and Sunday afternoons. On those days, treat this first stop as a short introduction and return after Cannizaro Park for the interior collection. On other days, the opening stop remains a brief architectural and historical marker rather than a failed museum visit.\n\n## 10:10 — Wimbledon Village\n\nWalk west along Ridgway to the Wimbledon Village Clock Tower. The village retains a recognisable identity: its smaller scale, historic buildings and relationship with the Common distinguish it from the busier streets around Wimbledon station.\n\nTake a short architectural walk rather than treating the Village simply as a row of shops. Look above the contemporary shopfronts: upper floors, rooflines and older façades reveal more of the area’s history. This is a good moment for coffee and to buy water before the Common, where facilities are more dispersed.\n\n## 11:10 — Buddhapadipa Temple\n\nContinue to the Buddhapadipa Temple, one of the most unexpected buildings in south-west London. Its white walls, steep red roof and gilded ornamentation appear gradually through a leafy residential landscape. The contrast is part of the experience: this is not a historic English building repurposed for worship, but a purpose-built Thai Buddhist temple and an active religious community.\n\nAllow almost an hour. Walk slowly through the grounds, paying attention to the guardian figures, roof decorations and the way the building is framed by mature trees. If the main hall is open, remove your shoes, enter quietly and look at the extraordinary mural cycle surrounding the Buddha image.\n\nThe murals combine scenes from the Buddha’s life with references to modern society. They reward close observation, but visitors should remember that this is first and foremost a place of worship. Ceremonies and community activities always take precedence, and interior photography may be restricted. If the hall is closed, the exterior and grounds still provide a complete architectural stop.\n\n## 12:35 — Wimbledon Common and Windmill\n\nFrom the temple, move north-west onto Wimbledon Common. The Common is not a landscaped park. Its mixture of woodland, heath, grassland and informal paths creates a less controlled environment than Cannizaro. That contrast is central to the itinerary.\n\nThe windmill has stood on the Common since the nineteenth century and provides the day’s strongest visual landmark. Its dark weatherboarded form and white sails belong convincingly to the landscape, even though central London is only a few miles away.\n\nAllow time for lunch and the surrounding paths. If the Windmill Museum is open, its displays explain the history of milling and the building itself. The museum normally operates on Sundays during the British Summer Time season, but dates and hours should always be checked. On other days, the windmill remains a strong exterior stop.\n\n## 14:25 — Cannizaro Park\n\nContinue south across the Common to Cannizaro Park. Cannizaro is often described simply as a public park, but it is better understood as a succession of garden rooms.\n\nRather than attempting to cover every path, spend around seventy minutes following a loose circuit through its contrasting spaces. Look for formal planting near Cannizaro House, the enclosed Italian Garden, wooded paths, ornamental trees and quieter clearings towards the edge of the park.\n\nThe pleasure comes from the changes in scale and atmosphere. One moment feels carefully composed; the next resembles woodland. Cannizaro Park normally opens at 08:00 on weekdays and 09:00 at weekends and on bank holidays, closing at dusk. Confirm seasonal arrangements before visiting.\n\n## 15:55 — Return to Wimbledon Village\n\nWalk back to Wimbledon Village along West Side Common. If Wimbledon Museum is open, return to the collection before it closes. Otherwise, use the same time for a final heritage loop around Ridgway, the High Street and the village edge of the Common.\n\nThe route ends where its different versions of Wimbledon meet: Buddhist architecture and English village streets, formal gardens and common land, international culture and intensely local history. Buses from the Village return to Wimbledon station for Underground, National Rail and tram connections.\n\n## Before setting out\n\nThe outdoor route works every day. Interior visits should be regarded as valuable additions rather than conditions for a successful itinerary. Check current access to the Buddhapadipa Temple, Cannizaro Park’s seasonal closing time, the Windmill Museum’s operating season and Wimbledon Museum’s afternoon opening days. Wear suitable footwear after rain, dress respectfully for the temple and ask before photographing people or ceremonies.",
+  "google_maps_url": "https://www.google.com/maps/dir/?api=1&origin=Wimbledon+Museum%2C+22+Ridgway%2C+London+SW19+4QN&destination=Wimbledon+Village+Clock+Tower%2C+70B+High+Street+Wimbledon%2C+London+SW19+5EE&waypoints=Wimbledon+Village+Clock+Tower%2C+70B+High+Street+Wimbledon%2C+London+SW19+5EE%7CBuddhapadipa+Temple%2C+14+Calonne+Road%2C+London+SW19+5HJ%7CWimbledon+Windmill+Museum%2C+Windmill+Road%2C+London+SW19+5NR%7CCannizaro+Park%2C+35+High+Street%2C+London+SW19+4UE&travelmode=walking",
+  "map": {
+    "src": "/assets/itineraries/it01-wimbledon-route-map.webp",
+    "alt": "Street map of the walking route from Wimbledon Museum through Wimbledon Village, Buddhapadipa Temple, Wimbledon Windmill and Cannizaro Park, returning to the Village.",
+    "caption": "The route follows real streets and mapped paths; conditions and access on Wimbledon Common may change.",
+    "credit": "London Advanced · OpenStreetMap contributors",
+    "width": 1400,
+    "height": 1582
+  },
+  "images": [
+    { "src": "/assets/itineraries/it01-wimbledon-01-museum.webp", "role": "stop", "stop_order": 1, "alt": "Displays about Wimbledon’s historic grand houses inside Wimbledon Museum.", "caption": "Wimbledon Museum reconnects the Village and Common with the people who shaped them.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800, "focal_x": 50, "focal_y": 50 },
+    { "src": "/assets/itineraries/it01-wimbledon-02-village.webp", "role": "stop", "stop_order": 2, "alt": "Wimbledon Village High Street and clock tower in the early evening.", "caption": "The Village provides the route’s architectural hinge and its natural finish.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800, "focal_x": 50, "focal_y": 50 },
+    { "src": "/assets/itineraries/it01-wimbledon-03-temple.webp", "role": "hero", "stop_order": 3, "alt": "The white, red and gold Buddhapadipa Thai temple framed by mature trees.", "caption": "Thai sacred architecture is the most unexpected landmark on this Wimbledon route.", "credit": "Paolo Pastorino", "width": 2400, "height": 1602, "focal_x": 54, "focal_y": 48 },
+    { "src": "/assets/itineraries/it01-wimbledon-04-windmill.webp", "role": "stop", "stop_order": 4, "alt": "Wimbledon Windmill seen from below against a clear blue sky.", "caption": "The nineteenth-century windmill is the Common’s strongest visual landmark.", "credit": "Paolo Pastorino", "width": 2400, "height": 3200, "focal_x": 50, "focal_y": 45 },
+    { "src": "/assets/itineraries/it01-wimbledon-05-cannizaro.webp", "role": "stop", "stop_order": 5, "alt": "Cannizaro House overlooking formal spring planting in Cannizaro Park.", "caption": "Cannizaro Park moves between formal garden rooms and woodland edges.", "credit": "Paolo Pastorino", "width": 2400, "height": 1800, "focal_x": 50, "focal_y": 50 }
+  ],
+  "related_articles": ["buddhapadipa-temple"],
+  "related_itineraries": [],
+  "tags": ["Wimbledon", "Thai Buddhism", "gardens", "local history", "free museums", "walking itinerary"],
+  "sources": [
+    { "label": "Buddhapadipa Temple — official website and contact", "url": "https://buddhapadipa.com/", "checked_at": "2026-10-08" },
+    { "label": "Merton Council — Cannizaro Park opening hours", "url": "https://www.merton.gov.uk/leisure-recreation-and-culture/parks-and-open-spaces/parks-and-recreation-grounds/wimbledon/cannizaro-park", "checked_at": "2026-10-08" },
+    { "label": "Wimbledon Windmill Museum — opening hours", "url": "https://www.wimbledonwindmill.org.uk/", "checked_at": "2026-10-08" },
+    { "label": "Wimbledon Museum — visit information", "url": "https://wimbledonsociety.org.uk/museum/visit/", "checked_at": "2026-10-08" }
+  ],
+  "published_at": "",
+  "updated_at": "2026-10-08T23:30:00+01:00"
+}

@@ -12,7 +12,7 @@ npm test
 
 Cloudflare publishes only `dist/` as configured in `wrangler.jsonc`.
 
-The bilingual Journal and its private Decap editor are documented in [`JOURNAL_STUDIO.md`](JOURNAL_STUDIO.md). Journal source content lives under `content/journal/`; generated pages remain under `dist/journal/` and `dist/it/journal/`.
+The bilingual Journal, one-day itineraries and their private Decap editor are documented in [`JOURNAL_STUDIO.md`](JOURNAL_STUDIO.md). Journal source content lives under `content/journal/`; itinerary source content lives under `content/itineraries/`. Generated public pages remain under `dist/journal/`, `dist/it/journal/`, `dist/itineraries/` and `dist/it/itinerari/`.
 
 ## Previous v1.6 design release
 

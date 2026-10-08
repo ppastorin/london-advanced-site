@@ -36,7 +36,7 @@ const TOOL_PATHS = {
 
 const NAV_TOOLS = Object.values(TOOL_PATHS);
 
-function escapeHtml(value = "") {
+export function escapeHtml(value = "") {
   return String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -50,7 +50,7 @@ function sitemapTimestamp(value) {
   return Number.isNaN(parsed.getTime()) ? "" : parsed.toISOString();
 }
 
-function safeUrl(value = "") {
+export function safeUrl(value = "") {
   const url = String(value).trim();
   if (url.startsWith("/") || /^https:\/\//i.test(url) || /^mailto:/i.test(url)) return url;
   return "#";
@@ -65,7 +65,7 @@ function renderInline(value = "") {
   return html;
 }
 
-function renderMarkdown(markdown = "") {
+export function renderMarkdown(markdown = "") {
   const lines = String(markdown).replace(/\r/g, "").split("\n");
   const output = [];
   let paragraph = [];
@@ -182,7 +182,7 @@ function toolLinks(locale) {
   }).join("");
 }
 
-function navigation(locale, active = "journal", alternatePath = locale === "en" ? "/it/journal/" : "/journal/") {
+export function navigation(locale, active = "journal", alternatePath = locale === "en" ? "/it/journal/" : "/journal/") {
   const it = locale === "it";
   const home = it ? "/it/" : "/";
   const tools = toolLinks(locale);
@@ -216,7 +216,7 @@ function navigation(locale, active = "journal", alternatePath = locale === "en" 
   return `<header class="site-nav"><a class="wordmark" href="${home}" aria-label="${it ? "Homepage London Advanced" : "London Advanced homepage"}"><svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5"/><path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/><circle class="brand-centre" cx="18" cy="18" r="2.2"/></svg><span class="brand-name">London Advanced</span></a><nav class="desktop-nav" aria-label="${labels.nav}"><details class="nav-dropdown tools-menu"><summary>${labels.tools}</summary><div class="nav-menu-panel tools-menu-panel">${tools}</div></details><a href="${guide}">${labels.guide}</a><details class="nav-dropdown week-menu"><summary>${labels.week}</summary><div class="nav-menu-panel week-menu-panel"><a href="${eventHighlights}"><span>${it ? "Tre proposte in evidenza" : "Three featured selections"}</span><strong>${labels.highlights}</strong></a><a href="${eventsPath}"><span>${labels.eventsIntro}</span><strong>${labels.allEvents}</strong></a></div></details><a href="${journalPath}"${active === "journal" ? ' aria-current="page"' : ""}>${labels.journal}</a><a class="newsletter-nav" href="${newsletterPath}">${labels.newsletter}</a><a class="contact-nav" href="${contactPath}">${labels.contact}</a><details class="nav-dropdown project-menu"><summary>${labels.project}</summary><div class="nav-menu-panel project-menu-panel">${projectLinks}</div></details><details class="nav-dropdown community-menu"><summary>${labels.community}</summary><div class="nav-menu-panel community-menu-panel">${communityLinks}</div></details><a class="language-switch" href="${alternatePath}" lang="${it ? "en" : "it"}" hreflang="${it ? "en-GB" : "it-IT"}" aria-label="${labels.switchLabel}"><span aria-hidden="true">🌐</span>${labels.switchText}</a></nav><a class="mobile-language-switch" href="${alternatePath}" lang="${it ? "en" : "it"}" hreflang="${it ? "en-GB" : "it-IT"}" aria-label="${labels.switchLabel}"><span aria-hidden="true">🌐</span>${labels.switchText}</a><details class="nav-dropdown mobile-menu"><summary aria-label="${it ? "Apri il menu" : "Open navigation menu"}"><span>${labels.menu}</span></summary><div class="nav-menu-panel mobile-menu-panel"><p class="mobile-menu-heading">${labels.tools}</p>${tools}<p class="mobile-menu-heading">${labels.explore}</p><a href="${guide}"><span>The Other London</span><strong>${labels.guide}</strong></a><a href="${eventsPath}"><span>${labels.eventsIntro}</span><strong>${it ? "Eventi" : "This week"}</strong></a><a href="${journalPath}" aria-current="page"><span>${labels.places}</span><strong>Journal</strong></a><a href="${newsletterPath}"><span>${it ? "Londra utile, ogni tanto" : "Useful London, occasionally"}</span><strong>Newsletter</strong></a><a href="${contactPath}"><span>${labels.questions}</span><strong>${labels.contact}</strong></a><p class="mobile-menu-heading">${labels.projectHeading}</p>${projectLinks}</div></details></header>`;
 }
 
-function footer(locale) {
+export function footer(locale) {
   const it = locale === "it";
   return `<footer><div><strong>London Advanced</strong><span>${it ? "Strumenti indipendenti e appunti sul campo per una Londra meno ovvia." : "Independent tools and field notes for a less obvious London."}</span></div><div class="footer-meta"><a href="${it ? "/it/journal/" : "/journal/"}">Journal</a><a href="${it ? "/it/eventi/" : "/events/"}">${it ? "Questa settimana" : "This week"}</a><a href="${it ? "/it/chi-sono/" : "/about/"}">${it ? "Chi sono" : "About"}</a><a href="${it ? "/it/metodologia/" : "/methodology/"}">${it ? "Metodologia" : "Methodology"}</a></div><small>© ${new Date().getFullYear()} Paolo Pastorino</small></footer>`;
 }

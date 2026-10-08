@@ -56,6 +56,10 @@ const requiredAssets = [
   "dist/it/journal/index.html",
   "dist/journal.css",
   "dist/journal.js",
+  "dist/itineraries/index.html",
+  "dist/it/itinerari/index.html",
+  "dist/itineraries.css",
+  "dist/itineraries.js",
   "dist/studio/index.html",
   "dist/studio/config.yml",
   "dist/studio/preview.js",
@@ -108,6 +112,25 @@ for (const filename of fs.readdirSync(journalContentRoot).filter(name => name.en
       const deployedPath = path.join("dist", sourcePath);
       requireExistingFile(sourcePath);
       requireExistingFile(deployedPath);
+    }
+  } catch (error) {
+    fail(`${relativeContentPath} is invalid JSON: ${error.message}`);
+  }
+}
+
+const itineraryContentRoot = path.join(projectRoot, "content", "itineraries");
+for (const filename of fs.readdirSync(itineraryContentRoot).filter(name => name.endsWith(".json"))) {
+  const relativeContentPath = path.join("content", "itineraries", filename);
+  try {
+    const itinerary = JSON.parse(fs.readFileSync(path.join(itineraryContentRoot, filename), "utf8"));
+    for (const image of [...(itinerary.images || []), ...(itinerary.map?.src ? [itinerary.map] : [])]) {
+      if (!image.src?.startsWith("/assets/itineraries/")) {
+        fail(`${relativeContentPath} has an invalid itinerary asset path: ${image.src || "(missing)"}`);
+        continue;
+      }
+      const sourcePath = image.src.replace(/^\//, "");
+      requireExistingFile(sourcePath);
+      requireExistingFile(path.join("dist", sourcePath));
     }
   } catch (error) {
     fail(`${relativeContentPath} is invalid JSON: ${error.message}`);
@@ -554,6 +577,26 @@ if (!sitemap.includes("https://www.londonadvanced.com/journal/") || !sitemap.inc
   fail("The sitemap must include both Journal indexes.");
 }
 if (sitemap.includes("/_preview/")) fail("The sitemap must never expose draft Journal previews.");
+const itineraryIndex = requireFile("dist/itineraries/index.html");
+const italianItineraryIndex = requireFile("dist/it/itinerari/index.html");
+for (const [label, html, canonical, alternate] of [
+  ["English itineraries", itineraryIndex, "https://www.londonadvanced.com/itineraries/", "/it/itinerari/"],
+  ["Italian itineraries", italianItineraryIndex, "https://www.londonadvanced.com/it/itinerari/", "/itineraries/"]
+]) {
+  for (const marker of [
+    `<link rel="canonical" href="${canonical}">`,
+    `href="${alternate}"`,
+    '"@type": "CollectionPage"',
+    '"@type": "ItemList"',
+    'href="/itineraries.css"',
+    'data-itinerary-search'
+  ]) {
+    if (!html.includes(marker)) fail(`${label} is missing ${marker}.`);
+  }
+}
+if (!sitemap.includes("https://www.londonadvanced.com/itineraries/") || !sitemap.includes("https://www.londonadvanced.com/it/itinerari/")) {
+  fail("The sitemap must include both itinerary indexes.");
+}
 const studioConfig = requireFile("dist/studio/config.yml");
 for (const marker of [
   "publish_mode: editorial_workflow",
@@ -562,7 +605,10 @@ for (const marker of [
   "format: json",
   "editorial_status",
   "approval",
-  "media_processing:"
+  "media_processing:",
+  "name: itineraries",
+  "folder: content/itineraries",
+  "preview_path: \"itineraries/_preview/{{fields.itinerary_id}}\""
 ]) {
   if (!studioConfig.includes(marker)) fail(`Journal Studio config is missing ${marker}.`);
 }

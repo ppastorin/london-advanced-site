@@ -1,4 +1,4 @@
-# London Advanced Journal Studio
+# London Advanced Journal and Itineraries Studio
 
 ## What this adds
 
@@ -6,6 +6,8 @@
 - One bilingual article entry with English and Italian shown in the same editorial workflow.
 - GitHub-backed drafts, review branches and revision history.
 - Static English and Italian Journal indexes and article pages.
+- A separate bilingual itinerary collection with public indexes at `/itineraries/` and `/it/itinerari/`.
+- Structured itinerary classification, stop timing, location-database IDs, maps and Journal cross-links.
 - Article, Person, CollectionPage, ItemList and BreadcrumbList structured data.
 - Canonical, `en-GB`, `it-IT` and `x-default` links.
 - Automatic homepage cards, sitemap entries, Atom feed and relevant-tool pathways.
@@ -31,6 +33,22 @@ Published output is generated under:
 /it/journal/<italian-slug>/
 ```
 
+Itineraries use a separate locale pair:
+
+```text
+content/itineraries/<itinerary-id>.en.json
+content/itineraries/<itinerary-id>.it.json
+```
+
+and publish under:
+
+```text
+/itineraries/<english-slug>/
+/it/itinerari/<italian-slug>/
+```
+
+The itinerary model keeps controlled discovery fields for theme, London area, best day, indoor/outdoor balance, walking level and public-transport level. Each stop carries a canonical location-database ID, planned arrival, comfortable visit duration, opening-hours note and onward travel time. Related Journal article IDs create explicit cross-links in both directions.
+
 ## Workflow
 
 1. **Draft** — writing and image selection are incomplete.
@@ -46,6 +64,8 @@ The site compiler independently enforces publication. A record appears publicly 
 - `approved_by`, `approved_at` and `published_at` are present.
 
 This means a mistaken click or incomplete translation does not silently publish an article.
+
+Itineraries add three more publication requirements: a hero photograph, an editorial route map and a Google Maps itinerary URL. Those fields remain optional while the route and writing are in Draft or Review, so editorial approval can happen before the final photographic selection without allowing an incomplete page to go live.
 
 ## Image intake
 

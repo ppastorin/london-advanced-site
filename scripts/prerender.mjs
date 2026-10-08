@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { buildItalian } from "./build-italian.mjs";
 import { buildFareCalculator } from "./build-fare-calculator.mjs";
 import { buildJournal } from "./build-journal.mjs";
+import { buildItineraries } from "./build-itineraries.mjs";
 import { buildSearch } from "./build-search.mjs";
 import { buildSitemap } from "./build-sitemap.mjs";
 import { buildGuidePages } from "./build-guide-pages.mjs";
@@ -697,12 +698,13 @@ export async function prerender() {
 
   await buildItalian();
   await buildJournal({ includeDrafts: process.argv.includes("--drafts") });
+  await buildItineraries({ includeDrafts: process.argv.includes("--drafts") });
   await buildNativeLooPages();
   await buildGuidePages();
   await buildSearch();
   const sitemapEntries = await buildSitemap();
 
-  console.log(`Pre-rendered the bilingual homepage, Journal, search, ${feed.events.length} event records and ${sitemapEntries.length} sitemap URLs into static HTML.`);
+  console.log(`Pre-rendered the bilingual homepage, Journal, Itineraries, search, ${feed.events.length} event records and ${sitemapEntries.length} sitemap URLs into static HTML.`);
 }
 
 const directRun = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
