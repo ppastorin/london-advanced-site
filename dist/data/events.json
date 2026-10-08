@@ -1,13 +1,13 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-05T09:38:14+01:00",
-  "valid_from": "2026-10-05",
+  "generated_at": "2026-10-08T15:03:54+01:00",
+  "valid_from": "2026-10-08",
   "valid_until": "2026-10-11",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
     "local-london-guiding-day-city-walk",
-    "rewind-grime-on-camera",
+    "starquest-maya-man-performance-lecture",
     "surbiton-ski-sunday"
   ],
   "events": [
@@ -47,17 +47,15 @@
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
+      "newsletter_sources": ["Londonist"],
       "official_url": "https://visual-artists.org/event/the-power-of-patronage-supporting-the-future-of-contemporary-art/",
       "verification": {
-        "verified_at": "2026-10-05T09:38:14+01:00",
+        "verified_at": "2026-10-08T15:03:54+01:00",
         "confidence": "high",
         "source_url": "https://visual-artists.org/event/the-power-of-patronage-supporting-the-future-of-contemporary-art/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-05T09:38:14+01:00",
+      "publish_at": "2026-10-08T15:03:54+01:00",
       "expire_at": "2026-10-09T12:15:00+01:00",
       "duplicate_key": "power-of-patronage-minster-building-2026-10-09"
     },
@@ -97,17 +95,15 @@
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
+      "newsletter_sources": ["Londonist"],
       "official_url": "https://www.cityoflondonguides.com/tours/local-london-guiding-day-1",
       "verification": {
-        "verified_at": "2026-10-05T09:38:14+01:00",
+        "verified_at": "2026-10-08T15:03:54+01:00",
         "confidence": "high",
         "source_url": "https://www.cityoflondonguides.com/tours/local-london-guiding-day-1"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-05T09:38:14+01:00",
+      "publish_at": "2026-10-08T15:03:54+01:00",
       "expire_at": "2026-10-10T17:15:00+01:00",
       "duplicate_key": "local-london-guiding-day-city-walk-2026-10-10"
     },
@@ -147,33 +143,31 @@
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
+      "newsletter_sources": ["Londonist"],
       "official_url": "https://www.hrp.org.uk/hampton-court-palace/visit/opening-and-closing-times/",
       "verification": {
-        "verified_at": "2026-10-05T09:38:14+01:00",
+        "verified_at": "2026-10-08T15:03:54+01:00",
         "confidence": "high",
         "source_url": "https://www.hrp.org.uk/hampton-court-palace/visit/opening-and-closing-times/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-05T09:38:14+01:00",
+      "publish_at": "2026-10-08T15:03:54+01:00",
       "expire_at": "2026-10-11T17:45:00+01:00",
       "duplicate_key": "hampton-court-free-garden-open-days-2026-10-10-11"
     },
     {
-      "id": "rewind-grime-on-camera",
-      "title_en": "Rewind: Grime on Camera",
-      "title_it": "Rewind: il grime davanti alla telecamera",
-      "summary_en": "The filmmakers behind grime's independent visual culture discuss clashes, freestyles, pirate media networks and footage that has never been publicly shown.",
-      "summary_it": "I filmmaker della cultura visiva indipendente del grime raccontano clash, freestyle, reti mediatiche pirata e filmati mai mostrati pubblicamente.",
-      "start": "2026-10-10T19:00:00+01:00",
-      "end": "2026-10-10T21:00:00+01:00",
+      "id": "starquest-maya-man-performance-lecture",
+      "title_en": "StarQuest: A Performance-Lecture by Maya Man",
+      "title_it": "StarQuest: performance-lecture di Maya Man",
+      "summary_en": "Maya Man's London-premiere performance-lecture mixes generative software, choreography and online culture to probe competitive dance and algorithmic self-performance.",
+      "summary_it": "La prima londinese di Maya Man mescola software generativo, coreografia e cultura online per indagare la danza competitiva e la performance algoritmica del sé.",
+      "start": "2026-10-10T12:00:00+01:00",
+      "end": "2026-10-10T13:00:00+01:00",
       "venue": {
-        "name": "V&A East Museum",
-        "address": "East Bank, 107 Carpenters Road, Queen Elizabeth Olympic Park, London",
-        "postcode": "E20 2AR",
-        "borough": "Newham"
+        "name": "V&A South Kensington, Lecture Theatre",
+        "address": "Cromwell Road, London",
+        "postcode": "SW7 2RL",
+        "borough": "Kensington and Chelsea"
       },
       "price": {
         "amount_gbp": 0,
@@ -183,33 +177,79 @@
       "booking": {
         "required": true,
         "status": "required",
-        "url": "https://www.vam.ac.uk/event/wr0RqKd5MB/rewind-grime-on-camera-oct-2026"
+        "url": "https://www.vam.ac.uk/event/47dlkJDWavM/maya-man-starquest-oct-2026"
       },
-      "category": "local-culture",
+      "category": "art-design",
       "advanced": {
-        "score": 10,
-        "reason": "A free one-off East London event reunites the independent chroniclers who created grime's visual archive, including unseen footage.",
+        "score": 8,
+        "reason": "A free London premiere uses an unusual performance-lecture format to connect digital art, choreography and algorithmic culture.",
         "breakdown": {
           "non_obvious": 3,
-          "place_story": 2,
+          "place_story": 1,
           "unusual_access": 2,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.vam.ac.uk/event/47dlkJDWavM/maya-man-starquest-oct-2026",
+      "verification": {
+        "verified_at": "2026-10-08T15:03:54+01:00",
+        "confidence": "high",
+        "source_url": "https://www.vam.ac.uk/event/47dlkJDWavM/maya-man-starquest-oct-2026"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-08T15:03:54+01:00",
+      "expire_at": "2026-10-10T13:15:00+01:00",
+      "duplicate_key": "starquest-maya-man-va-south-kensington-2026-10-10"
+    },
+    {
+      "id": "william-morris-gallery-welcome-home-family-day",
+      "title_en": "William Morris Gallery Family Day: Welcome Home",
+      "title_it": "Welcome Home: giornata per famiglie alla William Morris Gallery",
+      "summary_en": "A reopening family day offers screenprinting, a first look at the redisplayed permanent collection and a new trail through William Morris's former home.",
+      "summary_it": "Una giornata per la riapertura propone serigrafia, la collezione permanente riallestita e un nuovo percorso nella casa storica di William Morris.",
+      "start": "2026-10-10T13:00:00+01:00",
+      "end": "2026-10-10T16:00:00+01:00",
+      "venue": {
+        "name": "William Morris Gallery",
+        "address": "Lloyd Park, Forest Road, Walthamstow, London",
+        "postcode": "E17 4PP",
+        "borough": "Waltham Forest"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "community",
+      "advanced": {
+        "score": 8,
+        "reason": "A free neighbourhood reopening day offers early access to a redisplayed collection inside William Morris's historic home.",
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 1,
           "local_character": 1,
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.vam.ac.uk/event/wr0RqKd5MB/rewind-grime-on-camera-oct-2026",
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.wmgallery.org.uk/event/family-day-welcome-home/",
       "verification": {
-        "verified_at": "2026-10-05T09:38:14+01:00",
+        "verified_at": "2026-10-08T15:03:54+01:00",
         "confidence": "high",
-        "source_url": "https://www.vam.ac.uk/event/wr0RqKd5MB/rewind-grime-on-camera-oct-2026"
+        "source_url": "https://www.wmgallery.org.uk/event/family-day-welcome-home/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-05T09:38:14+01:00",
-      "expire_at": "2026-10-10T21:15:00+01:00",
-      "duplicate_key": "rewind-grime-on-camera-va-east-2026-10-10"
+      "publish_at": "2026-10-08T15:03:54+01:00",
+      "expire_at": "2026-10-10T16:15:00+01:00",
+      "duplicate_key": "william-morris-gallery-welcome-home-2026-10-10"
     },
     {
       "id": "surbiton-ski-sunday",
@@ -247,17 +287,15 @@
           "value": 2
         }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
+      "newsletter_sources": ["Londonist"],
       "official_url": "https://www.thecommunitybrain.org/event-details/surbiton-ski-sunday-1",
       "verification": {
-        "verified_at": "2026-10-05T09:38:14+01:00",
+        "verified_at": "2026-10-08T15:03:54+01:00",
         "confidence": "high",
         "source_url": "https://www.thecommunitybrain.org/event-details/surbiton-ski-sunday-1"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-05T09:38:14+01:00",
+      "publish_at": "2026-10-08T15:03:54+01:00",
       "expire_at": "2026-10-11T13:15:00+01:00",
       "duplicate_key": "surbiton-ski-sunday-2026-10-11"
     }
