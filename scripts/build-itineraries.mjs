@@ -57,6 +57,8 @@ function validatePair(en, it, id) {
     if (!isPublicItineraryPair(en, it)) errors.push(`${id} cannot publish until both languages are approved.`);
     for (const [locale, item] of [["en", en], ["it", it]]) {
       if (!item.google_maps_url) errors.push(`${id}.${locale} needs a Google Maps itinerary before publication.`);
+      if (!item.pace_note) errors.push(`${id}.${locale} needs an indicative-timing note before publication.`);
+      if (item.stops.some(stop => !stop.place_url)) errors.push(`${id}.${locale} needs an individual URL for every stop before publication.`);
       if (!item.map?.src) errors.push(`${id}.${locale} needs a finished route map before publication.`);
       if (!Array.isArray(item.images) || !item.images.some(image => image.role === "hero")) {
         errors.push(`${id}.${locale} needs a hero photograph before publication.`);
@@ -150,12 +152,15 @@ function routeMap(item) {
 
 function stopTimeline(item) {
   const it = item.locale === "it";
-  return `<section class="itinerary-timeline"><div class="itinerary-section-heading"><span class="journal-kicker">${it ? "Programma" : "Schedule"}</span><h2>${it ? "Dall’arrivo all’ultima sosta." : "From arrival to the final stop."}</h2></div><ol>${item.stops.map(stop => {
+  const paceNote = item.pace_note ? `<p class="itinerary-pace-note"><strong>${it ? "Segui il tuo ritmo." : "Set your own pace."}</strong> ${escapeHtml(item.pace_note)}</p>` : "";
+  return `<section class="itinerary-timeline"><div class="itinerary-section-heading"><span class="journal-kicker">${it ? "Programma" : "Schedule"}</span><h2>${it ? "Dall’arrivo all’ultima sosta." : "From arrival to the final stop."}</h2></div>${paceNote}<ol>${item.stops.map(stop => {
     const photo = (item.images || []).find(image => image.role !== "hero" && Number(image.stop_order) === Number(stop.order));
     const figure = photo?.src ? `<figure class="stop-photo"><img src="${escapeHtml(safeUrl(photo.src))}" alt="${escapeHtml(photo.alt || "")}" width="${Number(photo.width) || 1800}" height="${Number(photo.height) || 1200}" loading="lazy"${imageFocalStyle(photo)}><figcaption>${escapeHtml(photo.caption || "")}${photo.credit ? ` <span>© ${escapeHtml(photo.credit)}</span>` : ""}</figcaption></figure>` : "";
+    const place = stop.place_url ? `<a class="stop-place" href="${escapeHtml(safeUrl(stop.place_url))}" target="_blank" rel="noopener">${it ? "Apri questo luogo" : "Open this location"} ↗</a>` : "";
     const article = stop.article_url ? `<a class="stop-article" href="${escapeHtml(safeUrl(stop.article_url))}">${it ? "Leggi l’articolo collegato" : "Read the linked story"} →</a>` : "";
+    const links = place || article ? `<div class="stop-links">${place}${article}</div>` : "";
     const onward = stop.transport_to_next ? `<p class="stop-onward"><strong>${it ? "Poi" : "Next"}:</strong> ${escapeHtml(stop.transport_to_next)}${stop.travel_minutes ? ` · ${Number(stop.travel_minutes)} min` : ""}</p>` : "";
-    return `<li><div class="stop-time"><strong>${escapeHtml(stop.arrival || "")}</strong><span>${Number(stop.duration_minutes) || 0} min</span></div><div class="stop-copy"><span>${escapeHtml(stop.location_id || "")}</span><h3>${escapeHtml(stop.name)}</h3><p>${escapeHtml(stop.summary || "")}</p>${figure}${stop.opening_note ? `<p class="stop-hours">${escapeHtml(stop.opening_note)}</p>` : ""}${article}${onward}</div></li>`;
+    return `<li><div class="stop-time"><strong>${escapeHtml(stop.arrival || "")}</strong><span>${Number(stop.duration_minutes) || 0} min</span></div><div class="stop-copy"><span>${escapeHtml(stop.location_id || "")}</span><h3>${escapeHtml(stop.name)}</h3><p>${escapeHtml(stop.summary || "")}</p>${figure}${stop.opening_note ? `<p class="stop-hours">${escapeHtml(stop.opening_note)}</p>` : ""}${links}${onward}</div></li>`;
   }).join("")}</ol></section>`;
 }
 
@@ -190,7 +195,7 @@ function detailSchema(item, route, alternateRoute) {
           itemListElement: item.stops.map((stop, indexValue) => ({
             "@type": "ListItem",
             position: indexValue + 1,
-            item: { "@type": "TouristAttraction", name: stop.name, identifier: stop.location_id }
+            item: { "@type": "TouristAttraction", name: stop.name, identifier: stop.location_id, url: stop.place_url }
           }))
         },
         inLanguage: it ? "it-IT" : "en-GB"
@@ -208,7 +213,7 @@ function detailSchema(item, route, alternateRoute) {
   };
 }
 
-function renderDetail(item, pair, articles, preview) {
+export function renderItineraryDetail(item, pair, articles, preview) {
   const it = item.locale === "it";
   const route = routeFor(item, item.locale, preview);
   const alternateRoute = routeFor(pair, it ? "en" : "it", preview);
@@ -290,14 +295,14 @@ export async function buildItineraries({ includeDrafts = false } = {}) {
   ]);
 
   for (const pair of publishedPairs) {
-    await writePage(routeFor(pair.en, "en"), renderDetail({ ...pair.en, locale: "en" }, pair.it, englishJournal, false));
-    await writePage(routeFor(pair.it, "it"), renderDetail({ ...pair.it, locale: "it" }, pair.en, italianJournal, false));
+    await writePage(routeFor(pair.en, "en"), renderItineraryDetail({ ...pair.en, locale: "en" }, pair.it, englishJournal, false));
+    await writePage(routeFor(pair.it, "it"), renderItineraryDetail({ ...pair.it, locale: "it" }, pair.en, italianJournal, false));
   }
 
   if (includeDrafts) {
     for (const pair of pairs.filter(pair => !isPublicItineraryPair(pair.en, pair.it))) {
-      await writePage(routeFor(pair.en, "en", true), renderDetail({ ...pair.en, locale: "en" }, pair.it, englishJournal, true));
-      await writePage(routeFor(pair.it, "it", true), renderDetail({ ...pair.it, locale: "it" }, pair.en, italianJournal, true));
+      await writePage(routeFor(pair.en, "en", true), renderItineraryDetail({ ...pair.en, locale: "en" }, pair.it, englishJournal, true));
+      await writePage(routeFor(pair.it, "it", true), renderItineraryDetail({ ...pair.it, locale: "it" }, pair.en, italianJournal, true));
     }
   } else {
     await rm(path.join(dist, "itineraries", "_preview"), { recursive: true, force: true });
