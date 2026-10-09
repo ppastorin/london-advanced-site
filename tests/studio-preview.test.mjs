@@ -60,6 +60,9 @@ test("itinerary preview renders both Wimbledon locales with their map and hero",
     const rendered = JSON.stringify(render(template, data));
     assert.match(rendered, /it01-wimbledon-route-map\.webp/);
     assert.match(rendered, /it01-wimbledon-03-temple\.webp/);
+    assert.match(rendered, /Open the route in Google Maps/);
+    assert.match(rendered, /Wimbledon\+Village\+Clock\+Tower/);
+    assert.match(rendered, locale === "en" ? /times are indicative/i : /orari sono indicativi/i);
     assert.match(rendered, /Wimbledon Museum/);
     assert.match(rendered, /Cannizaro Park/);
   }
