@@ -360,6 +360,7 @@ collections:
         i18n: duplicate
       - { label: Door-to-door duration, name: duration, widget: string, hint: "Example: 10:00–17:00 / 7 hours", i18n: true }
       - { label: Walking distance (km), name: distance_km, widget: number, value_type: float, min: 0, max: 30, step: 0.1, i18n: duplicate }
+      - { label: Pace and timing note, name: pace_note, widget: text, hint: Explain that the schedule is indicative and can be adapted., i18n: true }
       - { label: Season note, name: season, widget: string, required: false, i18n: true }
       - { label: Accessibility and limitations, name: accessibility_notes, widget: text, required: false, i18n: true }
       - label: Stops
@@ -373,6 +374,7 @@ collections:
           - { label: Order, name: order, widget: number, value_type: int, min: 1 }
           - { label: Location database ID, name: location_id, widget: string, hint: Stable ID from the London locations database. }
           - { label: Place name, name: name, widget: string }
+          - { label: Individual location URL, name: place_url, widget: string, hint: Link to the exact place in Google Maps or to its official page. }
           - { label: Planned arrival, name: arrival, widget: string, hint: Use local time such as 10:00. }
           - { label: Visit duration (minutes), name: duration_minutes, widget: number, value_type: int, min: 10, max: 360 }
           - { label: Why this stop is here, name: summary, widget: text }
