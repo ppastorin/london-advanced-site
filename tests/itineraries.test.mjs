@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { isPublicItineraryPair } from "../scripts/build-itineraries.mjs";
+import { isPublicItineraryPair, renderItineraryDetail } from "../scripts/build-itineraries.mjs";
 
 const approved = {
   itinerary_id: "test-itinerary",
@@ -39,8 +39,29 @@ test("the Wimbledon pilot is paired, classified and remains unpublished", async 
   assert.ok(english.map.src.startsWith("/assets/itineraries/"));
   assert.equal(english.theme, "sacred-gardens-local-history");
   assert.ok(english.stops.every(stop => stop.location_id));
+  assert.ok(english.stops.every(stop => stop.place_url?.startsWith("https://www.google.com/maps/")));
+  assert.ok(italian.stops.every(stop => stop.place_url?.startsWith("https://www.google.com/maps/")));
+  assert.match(english.pace_note, /times are indicative/i);
+  assert.match(italian.pace_note, /orari sono indicativi/i);
   assert.doesNotMatch(englishIndex, /Wimbledon Without Tennis/);
   assert.doesNotMatch(italianIndex, /Wimbledon senza tennis/);
+});
+
+test("draft itinerary pages expose the full route, every location and the pace note", async () => {
+  const [englishData, italianData] = await Promise.all([
+    readFile(new URL("../content/itineraries/wimbledon-without-tennis.en.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../content/itineraries/wimbledon-without-tennis.it.json", import.meta.url), "utf8").then(JSON.parse)
+  ]);
+  const english = renderItineraryDetail({ ...englishData, locale: "en" }, italianData, new Map(), true);
+  const italian = renderItineraryDetail({ ...italianData, locale: "it" }, englishData, new Map(), true);
+  assert.match(english, /Open the route in Google Maps/);
+  assert.match(italian, /Apri l’itinerario in Google Maps/);
+  assert.equal((english.match(/Open this location/g) || []).length, 5);
+  assert.equal((italian.match(/Apri questo luogo/g) || []).length, 5);
+  assert.match(english, /The times are indicative/);
+  assert.match(italian, /Gli orari sono indicativi/);
+  assert.match(english, /Wimbledon\+Village\+Clock\+Tower/);
+  assert.match(italian, /Wimbledon\+Village\+Clock\+Tower/);
 });
 
 test("itinerary indexes provide bilingual metadata and client-side discovery controls", async () => {
