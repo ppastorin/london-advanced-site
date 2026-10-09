@@ -64,6 +64,8 @@ const ItineraryPreview = window.createClass({
     const images = list(entry, "images");
     const hero = images.find(image => image.role === "hero") || images[0];
     const map = object(entry, "map");
+    const googleMapsUrl = value(entry, "google_maps_url");
+    const paceNote = value(entry, "pace_note");
     const status = value(entry, "editorial_status", "draft");
     const distance = value(entry, "distance_km", "—");
     return h("div", { className: "studio-preview studio-itinerary-preview" },
@@ -85,13 +87,15 @@ const ItineraryPreview = window.createClass({
         h("img", { src: this.props.getAsset(hero.src)?.toString() || hero.src, alt: hero.alt || "" }),
         h("figcaption", null, hero.caption || "Caption to be added")
       ) : h("div", { className: "studio-preview-placeholder" }, "Choose the hero after the route and copy are approved"),
-      map?.src ? h("section", { className: "studio-preview-map" },
+      (map?.src || googleMapsUrl) ? h("section", { className: "studio-preview-map" },
         h("span", { className: "studio-preview-kicker" }, "Editorial route map"),
-        h("img", { src: this.props.getAsset(map.src)?.toString() || map.src, alt: map.alt || "" }),
-        h("p", null, map.caption || "Map caption to be added")
+        googleMapsUrl ? h("a", { className: "studio-preview-map-link", href: googleMapsUrl, target: "_blank", rel: "noopener" }, "Open the route in Google Maps ↗") : null,
+        map?.src ? h("img", { src: this.props.getAsset(map.src)?.toString() || map.src, alt: map.alt || "" }) : null,
+        map?.src ? h("p", null, map.caption || "Map caption to be added") : null
       ) : null,
       h("section", { className: "studio-preview-route" },
         h("span", { className: "studio-preview-kicker" }, "Draft schedule"),
+        paceNote ? h("p", { className: "studio-preview-pace" }, paceNote) : null,
         h("ol", null, stops.map((stop, index) => {
           const photo = images.find(image => image.role !== "hero" && Number(image.stop_order) === Number(stop.order));
           return h("li", { key: index },
@@ -99,6 +103,7 @@ const ItineraryPreview = window.createClass({
             h("div", null,
               h("strong", null, stop.name || "Untitled stop"),
               h("p", null, stop.summary || "Add the reason for this stop."),
+              stop.place_url ? h("a", { className: "studio-preview-place-link", href: stop.place_url, target: "_blank", rel: "noopener" }, "Open this location ↗") : null,
               photo?.src ? h("figure", { className: "studio-preview-stop-photo" },
                 h("img", { src: this.props.getAsset(photo.src)?.toString() || photo.src, alt: photo.alt || "" }),
                 h("figcaption", null, photo.caption || "Caption to be added")
