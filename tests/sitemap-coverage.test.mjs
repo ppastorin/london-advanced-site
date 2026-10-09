@@ -25,3 +25,18 @@ test("The Other London bilingual guide is included", async () => {
   assert(urls.has("https://www.londonadvanced.com/the-other-london/"));
   assert(urls.has("https://www.londonadvanced.com/it/the-other-london/"));
 });
+
+test("the bilingual itinerary indexes and Wimbledon pages are included", async () => {
+  const sitemap = parseSitemap(await readFile(path.join(dist, "sitemap.xml"), "utf8"));
+  const byUrl = new Map(sitemap.map(entry => [entry.loc, entry]));
+
+  for (const url of [
+    "https://www.londonadvanced.com/itineraries/",
+    "https://www.londonadvanced.com/it/itinerari/",
+    "https://www.londonadvanced.com/itineraries/wimbledon-without-tennis/",
+    "https://www.londonadvanced.com/it/itinerari/wimbledon-senza-tennis/"
+  ]) {
+    assert(byUrl.has(url), `${url} is missing from the sitemap`);
+    assert.ok(byUrl.get(url).lastmod, `${url} is missing lastmod`);
+  }
+});

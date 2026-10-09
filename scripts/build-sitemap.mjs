@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const defaultDist = path.join(root, "dist");
+const itineraryDirectory = path.join(root, "content", "itineraries");
 const canonicalOrigin = "https://www.londonadvanced.com";
 
 function attribute(tag, name) {
@@ -105,22 +106,47 @@ function renderEntry({ loc, lastmod, changefreq, priority }) {
   return `  <url><loc>${escapeXml(loc)}</loc>${lastmod ? `<lastmod>${escapeXml(lastmod)}</lastmod>` : ""}${changefreq ? `<changefreq>${escapeXml(changefreq)}</changefreq>` : ""}${priority ? `<priority>${escapeXml(priority)}</priority>` : ""}</url>`;
 }
 
+async function itineraryMetadata() {
+  const metadata = new Map();
+  const published = [];
+  for (const file of await readdir(itineraryDirectory)) {
+    if (!/\.(en|it)\.json$/.test(file)) continue;
+    const item = JSON.parse(await readFile(path.join(itineraryDirectory, file), "utf8"));
+    if (item.editorial_status !== "published" || item.approval?.status !== "approved" || !item.published_at) continue;
+    const date = new Date(item.updated_at || item.published_at);
+    if (Number.isNaN(date.getTime())) continue;
+    const locale = file.endsWith(".it.json") ? "it" : "en";
+    const route = locale === "it" ? `/it/itinerari/${item.slug}/` : `/itineraries/${item.slug}/`;
+    const lastmod = date.toISOString();
+    metadata.set(`${canonicalOrigin}${route}`, { loc: `${canonicalOrigin}${route}`, lastmod });
+    published.push(lastmod);
+  }
+  const latest = published.sort().at(-1);
+  if (latest) {
+    for (const route of ["/itineraries/", "/it/itinerari/"]) {
+      metadata.set(`${canonicalOrigin}${route}`, { loc: `${canonicalOrigin}${route}`, lastmod: latest });
+    }
+  }
+  return metadata;
+}
+
 export async function buildSitemap({ dist = defaultDist } = {}) {
   const file = path.join(dist, "sitemap.xml");
   const currentEntries = parseSitemap(await readFile(file, "utf8"));
   const canonicalUrls = await collectIndexableCanonicalUrls(dist);
   const metadata = new Map(currentEntries.map(entry => [entry.loc, entry]));
+  const itineraryEntries = await itineraryMetadata();
   const ordered = [];
   const seen = new Set();
 
   for (const entry of currentEntries) {
     if (canonicalUrls.has(entry.loc) && !seen.has(entry.loc)) {
-      ordered.push(entry);
+      ordered.push(itineraryEntries.get(entry.loc) || entry);
       seen.add(entry.loc);
     }
   }
   for (const loc of [...canonicalUrls].sort()) {
-    if (!seen.has(loc)) ordered.push(metadata.get(loc) || { loc });
+    if (!seen.has(loc)) ordered.push(itineraryEntries.get(loc) || metadata.get(loc) || { loc });
   }
 
   const xml = [

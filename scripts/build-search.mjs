@@ -211,6 +211,39 @@ function searchIconLink(locale, className) {
   return `<a class="${className}" href="${it ? "/it/cerca/" : "/search/"}" aria-label="${it ? "Cerca in London Advanced" : "Search London Advanced"}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span class="search-visually-hidden">${it ? "Cerca" : "Search"}</span></a>`;
 }
 
+function integrateItineraryMenuLink(html, locale) {
+  if (!html.includes('class="site-nav"')) return html;
+  const it = locale === "it";
+  const journalPath = it ? "/it/journal/" : "/journal/";
+  const itineraryPath = it ? "/it/itinerari/" : "/itineraries/";
+  const newsletterPath = it ? "/it/#newsletter" : "/newsletter/";
+  const label = it ? "Itinerari" : "Itineraries";
+  const description = it ? "Percorsi curati di una giornata" : "Curated one-day routes";
+
+  return html.replace(/<header class="site-nav">[\s\S]*?<\/header>/, header => {
+    let updated = header.replace(/<nav class="desktop-nav"[\s\S]*?<\/nav>/, nav => {
+      if (nav.includes(`href="${itineraryPath}"`)) return nav;
+      const journal = new RegExp(`(<a\\b[^>]*href="${journalPath}"[^>]*>Journal<\\/a>)`);
+      return nav.replace(journal, `$1<a href="${itineraryPath}">${label}</a>`);
+    });
+    const mobileStart = updated.indexOf('<div class="nav-menu-panel mobile-menu-panel">');
+    if (mobileStart >= 0) {
+      const menu = updated.slice(mobileStart);
+      if (!menu.includes(`href="${itineraryPath}"`)) {
+        const journal = new RegExp(`(<a\\b[^>]*href="${journalPath}"[^>]*>[\\s\\S]*?<strong>Journal<\\/strong>\\s*<\\/a>)`);
+        const itineraryLink = `<a href="${itineraryPath}"><span>${description}</span><strong>${label}</strong></a>`;
+        let linked = menu.replace(journal, `$1${itineraryLink}`);
+        if (linked === menu) {
+          const newsletter = new RegExp(`(<a\\b[^>]*href="${newsletterPath}"[^>]*>)`);
+          linked = menu.replace(newsletter, `${itineraryLink}$1`);
+        }
+        updated = `${updated.slice(0, mobileStart)}${linked}`;
+      }
+    }
+    return updated;
+  });
+}
+
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const files = [];
@@ -227,6 +260,7 @@ async function integrateSearchLinks() {
   for (const file of files) {
     let html = await readFile(file, "utf8");
     const locale = /<html lang="it(?:-IT)?"/i.test(html) || file.includes(`${path.sep}it${path.sep}`) ? "it" : "en";
+    html = integrateItineraryMenuLink(html, locale);
     if (!html.includes('href="/search.css"')) html = html.replace("</head>", '<link rel="stylesheet" href="/search.css"></head>');
     if (html.includes('class="desktop-nav"') && !html.includes('class="site-search-link"')) {
       html = html.replace(/(<nav class="desktop-nav"[\s\S]*?)(<\/nav>)/, `$1${searchIconLink(locale, "site-search-link")}$2`);

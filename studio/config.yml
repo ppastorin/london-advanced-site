@@ -206,6 +206,12 @@ collections:
         required: false
         i18n: true
         field: { label: Article ID, name: article_id, widget: string }
+      - label: Related itinerary IDs
+        name: related_itineraries
+        widget: list
+        required: false
+        i18n: true
+        field: { label: Itinerary ID, name: itinerary_id, widget: string }
       - label: Topics
         name: tags
         widget: list
