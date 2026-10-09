@@ -20,7 +20,6 @@ const JournalPreview = window.createClass({
     const entry = this.props.entry;
     const images = list(entry, "images");
     const hero = images.find(image => image.role === "hero") || images[0];
-    const map = object(entry, "map");
     const focalX = Number.isFinite(Number(hero?.focal_x)) ? Math.min(100, Math.max(0, Number(hero.focal_x))) : 50;
     const focalY = Number.isFinite(Number(hero?.focal_y)) ? Math.min(100, Math.max(0, Number(hero.focal_y))) : 50;
     const practical = list(entry, "practical");
@@ -64,6 +63,7 @@ const ItineraryPreview = window.createClass({
     const stops = list(entry, "stops");
     const images = list(entry, "images");
     const hero = images.find(image => image.role === "hero") || images[0];
+    const map = object(entry, "map");
     const status = value(entry, "editorial_status", "draft");
     const distance = value(entry, "distance_km", "—");
     return h("div", { className: "studio-preview studio-itinerary-preview" },
