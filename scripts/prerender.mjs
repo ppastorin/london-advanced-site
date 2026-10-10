@@ -215,7 +215,7 @@ function homeStructuredData() {
         url: `${canonicalOrigin}/`,
         name: "London Advanced",
         alternateName: "LondonAdvanced.com",
-        description: "Independent tools, field notes and an unusual London guide for discovering the city beyond the obvious.",
+        description: "Independent tools, field notes and guides to unusual things to do in London, from overlooked places and local walks to smarter ways to explore.",
         inLanguage: "en-GB",
         publisher: { "@id": `${canonicalOrigin}/#organization` },
         author: { "@id": `${canonicalOrigin}/#paolo-pastorino` }
@@ -521,19 +521,19 @@ async function renderHomepage(feed) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Independent tools, field notes and an unusual London guide for discovering the city beyond the obvious.">
+  <meta name="description" content="Independent tools, field notes and guides to unusual things to do in London, from overlooked places and local walks to smarter ways to explore.">
   <meta name="author" content="Paolo Pastorino">
   <meta name="robots" content="index,follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="London Advanced">
-  <meta property="og:title" content="London Advanced — London beyond the obvious">
-  <meta property="og:description" content="Six independent tools, field notes and an unusual London guide for discovering London beyond the obvious.">
+  <meta property="og:title" content="London Advanced — unusual places, tools and local guides">
+  <meta property="og:description" content="Find unusual things to do in London, original field notes, local routes and six practical tools for exploring the city more intelligently.">
   <meta property="og:url" content="${canonicalOrigin}/">
   <meta property="og:image" content="${canonicalOrigin}/assets/london-map.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="${canonicalOrigin}/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <title>London Advanced — London beyond the obvious</title>
+  <title>London Advanced — unusual places, tools and local guides</title>
   <script type="application/ld+json">
 ${safeJson(homeStructuredData())}
   </script>

@@ -341,8 +341,8 @@ function render() {
       <div class="hero-intro">
         <span class="eyebrow">Independent London guide · 6 free tools</span>
         <h1>The city beyond<br><em>the obvious.</em></h1>
-        <p>Find unusual places, make smarter journeys and see what London feels like before you set out.</p>
-        <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Explore the tools</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Discover the guide →</a></div>
+        <p>Find unusual places and things to do in London, make smarter journeys and see what the city feels like before you set out.</p>
+        <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Explore the tools</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Find unusual things to do →</a></div>
       </div>
       <figure class="map-window"><img src="/assets/london-map.jpg" alt="Map of London showing places included in London Advanced"><figcaption><b>1,100+</b> places beyond the standard lists</figcaption></figure>
     </section>
@@ -356,7 +356,7 @@ function render() {
 
     <section id="guide" class="guide-split section-wrap">
       <div class="guide-cover-wrap"><img src="/assets/guide-cover.jpg" alt="Cover of The Other London guide"><span>124 pages</span></div>
-      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>A field guide for people who would rather look twice.</h2><p>Handpicked places, practical details, original photography and map links—designed to help you find the London that standard guides miss.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Explore the guide</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Buy the full guide →</a></div></div>
+      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>110 unusual things to do and places to see across London.</h2><p>Handpicked walks, small museums, overlooked buildings, oddities, gardens, markets and viewpoints—with practical details, original photography and map links.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Explore 110 unusual London places</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Buy the full guide →</a></div></div>
     </section>
 
     <section id="journal" class="journal section-wrap">

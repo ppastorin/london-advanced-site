@@ -60,8 +60,27 @@ function pageIsNoindex(html) {
   );
 }
 
-export async function collectIndexableCanonicalUrls(dist = defaultDist) {
-  const urls = new Set();
+function pageAlternates(html) {
+  const alternates = [];
+  for (const tag of html.match(/<link\b[^>]*>/gi) || []) {
+    if (!attribute(tag, "rel").toLowerCase().split(/\s+/).includes("alternate")) continue;
+    const hreflang = attribute(tag, "hreflang");
+    const href = attribute(tag, "href");
+    if (!hreflang || !href) continue;
+    try {
+      const url = new URL(href);
+      if (url.origin === canonicalOrigin && !url.search && !url.hash) {
+        alternates.push({ hreflang, href: url.href });
+      }
+    } catch {
+      // Invalid alternate links are ignored here and caught by the page validators.
+    }
+  }
+  return alternates;
+}
+
+export async function collectIndexablePageMetadata(dist = defaultDist) {
+  const pages = new Map();
   for (const file of await htmlFiles(dist)) {
     const html = await readFile(file, "utf8");
     if (pageIsNoindex(html)) continue;
@@ -80,9 +99,17 @@ export async function collectIndexableCanonicalUrls(dist = defaultDist) {
     if (url.origin !== canonicalOrigin || url.search || url.hash) {
       throw new Error(`Non-canonical sitemap target in ${path.relative(root, file)}: ${canonical}`);
     }
-    urls.add(url.href);
+    pages.set(url.href, { loc: url.href, alternates: pageAlternates(html) });
   }
-  return urls;
+  const canonicalUrls = new Set(pages.keys());
+  for (const page of pages.values()) {
+    page.alternates = page.alternates.filter(alternate => canonicalUrls.has(alternate.href));
+  }
+  return pages;
+}
+
+export async function collectIndexableCanonicalUrls(dist = defaultDist) {
+  return new Set((await collectIndexablePageMetadata(dist)).keys());
 }
 
 export function parseSitemap(xml) {
@@ -96,14 +123,19 @@ export function parseSitemap(xml) {
       loc,
       lastmod: read("lastmod"),
       changefreq: read("changefreq"),
-      priority: read("priority")
+      priority: read("priority"),
+      alternates: (block.match(/<xhtml:link\b[^>]*>/gi) || []).map(tag => ({
+        hreflang: attribute(tag, "hreflang"),
+        href: decodeXml(attribute(tag, "href"))
+      })).filter(alternate => alternate.hreflang && alternate.href)
     });
   }
   return entries;
 }
 
-function renderEntry({ loc, lastmod, changefreq, priority }) {
-  return `  <url><loc>${escapeXml(loc)}</loc>${lastmod ? `<lastmod>${escapeXml(lastmod)}</lastmod>` : ""}${changefreq ? `<changefreq>${escapeXml(changefreq)}</changefreq>` : ""}${priority ? `<priority>${escapeXml(priority)}</priority>` : ""}</url>`;
+function renderEntry({ loc, lastmod, changefreq, priority, alternates = [] }) {
+  const links = alternates.map(({ hreflang, href }) => `<xhtml:link rel="alternate" hreflang="${escapeXml(hreflang)}" href="${escapeXml(href)}"/>`).join("");
+  return `  <url><loc>${escapeXml(loc)}</loc>${links}${lastmod ? `<lastmod>${escapeXml(lastmod)}</lastmod>` : ""}${changefreq ? `<changefreq>${escapeXml(changefreq)}</changefreq>` : ""}${priority ? `<priority>${escapeXml(priority)}</priority>` : ""}</url>`;
 }
 
 async function itineraryMetadata() {
@@ -133,7 +165,8 @@ async function itineraryMetadata() {
 export async function buildSitemap({ dist = defaultDist } = {}) {
   const file = path.join(dist, "sitemap.xml");
   const currentEntries = parseSitemap(await readFile(file, "utf8"));
-  const canonicalUrls = await collectIndexableCanonicalUrls(dist);
+  const pageMetadata = await collectIndexablePageMetadata(dist);
+  const canonicalUrls = new Set(pageMetadata.keys());
   const metadata = new Map(currentEntries.map(entry => [entry.loc, entry]));
   const itineraryEntries = await itineraryMetadata();
   const ordered = [];
@@ -141,17 +174,17 @@ export async function buildSitemap({ dist = defaultDist } = {}) {
 
   for (const entry of currentEntries) {
     if (canonicalUrls.has(entry.loc) && !seen.has(entry.loc)) {
-      ordered.push(itineraryEntries.get(entry.loc) || entry);
+      ordered.push({ ...(itineraryEntries.get(entry.loc) || entry), alternates: pageMetadata.get(entry.loc)?.alternates || [] });
       seen.add(entry.loc);
     }
   }
   for (const loc of [...canonicalUrls].sort()) {
-    if (!seen.has(loc)) ordered.push(itineraryEntries.get(loc) || metadata.get(loc) || { loc });
+    if (!seen.has(loc)) ordered.push({ ...(itineraryEntries.get(loc) || metadata.get(loc) || { loc }), alternates: pageMetadata.get(loc)?.alternates || [] });
   }
 
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
     '  <!-- Generated from every public, indexable canonical HTML page. -->',
     ...ordered.map(renderEntry),
     '</urlset>',

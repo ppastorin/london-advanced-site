@@ -26,6 +26,26 @@ test("The Other London bilingual guide is included", async () => {
   assert(urls.has("https://www.londonadvanced.com/it/the-other-london/"));
 });
 
+test("sitemap declares reciprocal hreflang alternates for The Other London", async () => {
+  const xml = await readFile(path.join(dist, "sitemap.xml"), "utf8");
+  assert.match(xml, /xmlns:xhtml="http:\/\/www\.w3\.org\/1999\/xhtml"/);
+  const sitemap = parseSitemap(xml);
+  const byUrl = new Map(sitemap.map(entry => [entry.loc, entry]));
+  const english = byUrl.get("https://www.londonadvanced.com/the-other-london/");
+  const italian = byUrl.get("https://www.londonadvanced.com/it/the-other-london/");
+
+  assert.deepEqual(new Map(english.alternates.map(item => [item.hreflang, item.href])), new Map([
+    ["en-GB", "https://www.londonadvanced.com/the-other-london/"],
+    ["it-IT", "https://www.londonadvanced.com/it/the-other-london/"],
+    ["x-default", "https://www.londonadvanced.com/the-other-london/"]
+  ]));
+  assert.deepEqual(new Map(italian.alternates.map(item => [item.hreflang, item.href])), new Map([
+    ["en-GB", "https://www.londonadvanced.com/the-other-london/"],
+    ["it-IT", "https://www.londonadvanced.com/it/the-other-london/"],
+    ["x-default", "https://www.londonadvanced.com/the-other-london/"]
+  ]));
+});
+
 test("the bilingual itinerary indexes and Wimbledon pages are included", async () => {
   const sitemap = parseSitemap(await readFile(path.join(dist, "sitemap.xml"), "utf8"));
   const byUrl = new Map(sitemap.map(entry => [entry.loc, entry]));

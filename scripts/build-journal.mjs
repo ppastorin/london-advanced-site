@@ -288,9 +288,12 @@ function renderPractical(article, locale) {
 
 function renderRelatedTools(article, locale) {
   const tools = (article.related_tools || []).map(id => TOOL_PATHS[id]?.[locale]).filter(Boolean);
-  if (!tools.length) return "";
   const it = locale === "it";
-  return `<section class="journal-tools"><div><span class="journal-kicker">${it ? "Pianifica la visita" : "Plan the visit"}</span><h2>${it ? "Usa il Journal insieme agli strumenti." : "Use the Journal with the tools."}</h2></div><div class="journal-tool-grid">${tools.map(([name, href, description]) => `<a href="${href}"><span>${escapeHtml(description)}</span><strong>${escapeHtml(name)} →</strong></a>`).join("")}</div></section>`;
+  const guide = it
+    ? ["The Other London", "/it/the-other-london/", "Scopri 110 luoghi insoliti di Londra fuori dai soliti itinerari."]
+    : ["The Other London", "/the-other-london/", "Explore 110 unusual things to do and places to see across London."];
+  const links = [guide, ...tools];
+  return `<section class="journal-tools"><div><span class="journal-kicker">${it ? "Continua a esplorare" : "Keep exploring"}</span><h2>${it ? "Passa dall’articolo alla prossima giornata londinese." : "Turn one field note into your next London day out."}</h2></div><div class="journal-tool-grid">${links.map(([name, href, description]) => `<a href="${href}"><span>${escapeHtml(description)}</span><strong>${escapeHtml(name)} →</strong></a>`).join("")}</div></section>`;
 }
 
 function renderRelatedArticles(article, locale, publishedArticles, preview) {
