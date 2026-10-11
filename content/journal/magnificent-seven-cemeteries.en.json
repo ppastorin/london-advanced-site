@@ -1,31 +1,66 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
-  "article_id": "magnificent-seven-cemeteries",
-  "editorial_status": "review",
+  "body": "The phrase ‘Magnificent Seven’ makes London’s Victorian cemeteries sound like a collection to be completed. They are better understood as seven different answers to the same urban crisis. In the early nineteenth century, London’s small churchyards could no longer cope with a rapidly growing population. Large, landscaped cemeteries were established outside the built-up centre, combining burial space with architecture, planting and the rituals of a public garden.\n\nHighgate became the celebrity of the group. Its Egyptian Avenue, Circle of Lebanon and famous residents deserve attention, and our [separate Highgate Cemetery guide](/journal/highgate-cemetery-east-west-guide/) explains how to read its East and West sides. But concentrating on Highgate alone misses the range of the Magnificent Seven. The other six move from formal avenues to dense woodland, from neoclassical mausoleums to East End social history.\n\n## Brompton Cemetery: the ceremonial avenue\n\nBrompton is the most composed of the seven. A long central avenue leads towards the domed chapel, while colonnades and side paths create the geometry of an open-air cathedral. The ground is flatter and less enclosed than Highgate or Abney Park, so monuments can be read as part of a deliberate urban plan rather than as discoveries in a wood.\n\nIt is also the cemetery most visibly absorbed into everyday London. People cross it on foot or bicycle, rest on benches and use it as a green route between Earl’s Court, Chelsea and Fulham. Among the best-known memorials are those of suffragette leader Emmeline Pankhurst and physician John Snow, whose investigation of the 1854 Soho cholera outbreak helped establish the link between contaminated water and disease. Brompton remains a working cemetery; its popularity as a park never cancels its primary purpose.\n\n[Official visitor information →](https://www.royalparks.org.uk/visit/parks/brompton-cemetery)\n\n## Kensal Green Cemetery: ambition in stone\n\nOpened in 1833, Kensal Green was the first of the seven. Its broad scale and neoclassical architecture set an early standard for the new garden cemeteries. This is the place for mausoleums, obelisks and monuments designed to project status long after death. The competition can feel excessive, but it gives the landscape its energy.\n\nThe Brunel family grave offers a useful contrast. Marc and Isambard Kingdom Brunel, engineers associated with tunnels, bridges, railways and ships, are commemorated by a comparatively restrained stone. Nearby monuments, including the tomb of politician Sir William Molesworth, show how architecture could turn a family plot into a miniature temple. The Friends of Kensal Green run tours that make the enormous site far easier to read.\n\n[Official visitor information →](https://www.kensalgreen.co.uk/)\n\n## West Norwood Cemetery: invention, publishing and the Greek Necropolis\n\nWest Norwood feels more concentrated. Its slopes, listed monuments and Greek Orthodox section create abrupt changes of scale: a modest headstone may sit close to a mausoleum built like an ancient temple. Recent conservation has restored important structures and added a visitor centre, while the Friends’ research connects the architecture to the people buried here.\n\nThree lives show the range. Hiram Maxim developed the machine gun that bears his name; Gideon Mantell helped identify the Iguanodon and shape early palaeontology; Isabella Beeton became inseparable from Victorian domestic publishing through *Mrs Beeton’s Book of Household Management*. Her grave is shared with her husband and publisher Samuel Orchart Beeton. Read the inscriptions as evidence rather than simply collecting famous names: careers, family losses and Victorian social codes are compressed into a few lines.\n\n[Official visitor information →](https://www.westnorwoodcemetery.org/)\n\n## Abney Park: cemetery, arboretum and dissenting ground\n\nAbney Park in Stoke Newington was conceived as both a cemetery and an arboretum. Its association with Nonconformist communities gave it a more inclusive identity than an Anglican churchyard, while its planting turned the burial ground into a botanical landscape. Today it is also a Local Nature Reserve, and many paths feel more like woodland than formal cemetery avenues.\n\nThe balance between monument and vegetation is the point. Ivy, roots and self-seeded trees do not merely provide atmosphere; they reveal the challenge of conserving fragile memorials within a living habitat. The lion on animal-showman Frank C. Bostock’s grave is a memorable landmark, but Abney rewards slower attention to its chapel, inscriptions, radical histories and changing ecology. The Abney Park Trust coordinates tours, events and volunteering with Hackney Council.\n\n[Official visitor information →](https://abneypark.org/)\n\n## Nunhead Cemetery: hills, woodland and a distant St Paul’s\n\nNunhead has the strongest sense of topography. Paths climb through open and wooded ground towards the roofless Anglican chapel, and from the higher western side a carefully framed gap in the trees reveals St Paul’s Cathedral. The view connects this quiet south London hill with the city whose overcrowding made the cemetery necessary.\n\nNature is never separate from the history here. Meadows, mature trees and uneven paths have made Nunhead an important habitat as well as a place of remembrance. The Friends of Nunhead Cemetery organise guided walks, conservation work and a well-loved annual open day. A tour is especially useful because many stories sit away from the obvious routes, and the site’s scale can otherwise reduce the visit to a pleasant woodland walk.\n\n[Official visitor information →](https://www.fonc.org.uk/)\n\n## Tower Hamlets Cemetery Park: the East End remembered through a nature reserve\n\nTower Hamlets is the least monumental-looking of the seven today, which is precisely why it matters. Heavy wartime damage, post-war clearance and decades of natural growth altered the formal cemetery. What survives is now read through a dense urban nature reserve managed with local volunteers.\n\nThe memorials record dockers, craftspeople, merchants, children and families shaped by migration and the industries of the East End. Here the story is less about a procession of grand tombs and more about population: who lived in east London, how communities formed, and how a burial ground became public green infrastructure. Friends of Tower Hamlets Cemetery Park combine heritage walks with wildlife work, demonstrating that conservation can protect both human memory and biodiversity.\n\n[Official visitor information →](https://fothcp.org/)\n\n## Do not attempt all seven in one day\n\nThe Magnificent Seven are not an efficient circuit. Choose one or two and connect them to their neighbourhoods: Abney Park with Stoke Newington, Brompton with Chelsea, Nunhead with Peckham, or Tower Hamlets with Bow and Mile End. Allow at least ninety minutes for a first visit and check the official site for seasonal gate times, tours and temporary works.\n\nThese are active cemeteries and memorial landscapes, not abandoned film sets. Stay on paths where requested, never climb monuments, avoid photographing mourners or recent graves, and keep group conversations quiet. A camera is useful, but the best record is often a name or inscription researched afterwards through the relevant Friends group.\n\n> The six cemeteries beyond Highgate show why the ‘Magnificent Seven’ label remains useful: not because the sites are interchangeable, but because each preserves a different relationship between London, death and public space.",
   "approval": {
     "status": "pending",
     "approved_by": "",
     "approved_at": ""
   },
-  "title": "London’s Magnificent Seven cemeteries: the six beyond Highgate",
-  "slug": "magnificent-seven-cemeteries-london",
-  "seo_title": "Magnificent Seven Cemeteries in London: A Guide",
-  "description": "Explore London’s six Magnificent Seven cemeteries beyond Highgate, from Brompton’s grand avenues to the woodland paths of Abney Park and Nunhead.",
+  "published_at": "",
+  "article_id": "magnificent-seven-cemeteries",
+  "related_tools": [
+    "london-by-mood",
+    "smart-navigation",
+    "escape-the-crowds",
+    "loo-finder"
+  ],
   "eyebrow": "Across London · Victorian cemeteries",
   "dek": "Highgate is only one chapter. London’s other six great Victorian cemeteries tell different stories about architecture, migration, reform, wildlife and local memory.",
-  "body": "The phrase ‘Magnificent Seven’ makes London’s Victorian cemeteries sound like a collection to be completed. They are better understood as seven different answers to the same urban crisis. In the early nineteenth century, London’s small churchyards could no longer cope with a rapidly growing population. Large, landscaped cemeteries were established outside the built-up centre, combining burial space with architecture, planting and the rituals of a public garden.\n\nHighgate became the celebrity of the group. Its Egyptian Avenue, Circle of Lebanon and famous residents deserve attention, and our [separate Highgate Cemetery guide](/journal/highgate-cemetery-east-west-guide/) explains how to read its East and West sides. But concentrating on Highgate alone misses the range of the Magnificent Seven. The other six move from formal avenues to dense woodland, from neoclassical mausoleums to East End social history.\n\n## Brompton Cemetery: the ceremonial avenue\n\nBrompton is the most composed of the seven. A long central avenue leads towards the domed chapel, while colonnades and side paths create the geometry of an open-air cathedral. The ground is flatter and less enclosed than Highgate or Abney Park, so monuments can be read as part of a deliberate urban plan rather than as discoveries in a wood.\n\nIt is also the cemetery most visibly absorbed into everyday London. People cross it on foot or bicycle, rest on benches and use it as a green route between Earl’s Court, Chelsea and Fulham. Among the best-known memorials are those of suffragette leader Emmeline Pankhurst and physician John Snow, whose investigation of the 1854 Soho cholera outbreak helped establish the link between contaminated water and disease. Brompton remains a working cemetery; its popularity as a park never cancels its primary purpose.\n\n[Official visitor information →](https://www.royalparks.org.uk/visit/parks/brompton-cemetery)\n\n## Kensal Green Cemetery: ambition in stone\n\nOpened in 1833, Kensal Green was the first of the seven. Its broad scale and neoclassical architecture set an early standard for the new garden cemeteries. This is the place for mausoleums, obelisks and monuments designed to project status long after death. The competition can feel excessive, but it gives the landscape its energy.\n\nThe Brunel family grave offers a useful contrast. Marc and Isambard Kingdom Brunel, engineers associated with tunnels, bridges, railways and ships, are commemorated by a comparatively restrained stone. Nearby monuments, including the tomb of politician Sir William Molesworth, show how architecture could turn a family plot into a miniature temple. The Friends of Kensal Green run tours that make the enormous site far easier to read.\n\n[Official visitor information →](https://www.kensalgreen.co.uk/)\n\n## West Norwood Cemetery: invention, publishing and the Greek Necropolis\n\nWest Norwood feels more concentrated. Its slopes, listed monuments and Greek Orthodox section create abrupt changes of scale: a modest headstone may sit close to a mausoleum built like an ancient temple. Recent conservation has restored important structures and added a visitor centre, while the Friends’ research connects the architecture to the people buried here.\n\nThree lives show the range. Hiram Maxim developed the machine gun that bears his name; Gideon Mantell helped identify the Iguanodon and shape early palaeontology; Isabella Beeton became inseparable from Victorian domestic publishing through *Mrs Beeton’s Book of Household Management*. Her grave is shared with her husband and publisher Samuel Orchart Beeton. Read the inscriptions as evidence rather than simply collecting famous names: careers, family losses and Victorian social codes are compressed into a few lines.\n\n[Official visitor information →](https://www.westnorwoodcemetery.org/)\n\n## Abney Park: cemetery, arboretum and dissenting ground\n\nAbney Park in Stoke Newington was conceived as both a cemetery and an arboretum. Its association with Nonconformist communities gave it a more inclusive identity than an Anglican churchyard, while its planting turned the burial ground into a botanical landscape. Today it is also a Local Nature Reserve, and many paths feel more like woodland than formal cemetery avenues.\n\nThe balance between monument and vegetation is the point. Ivy, roots and self-seeded trees do not merely provide atmosphere; they reveal the challenge of conserving fragile memorials within a living habitat. The lion on animal-showman Frank C. Bostock’s grave is a memorable landmark, but Abney rewards slower attention to its chapel, inscriptions, radical histories and changing ecology. The Abney Park Trust coordinates tours, events and volunteering with Hackney Council.\n\n[Official visitor information →](https://abneypark.org/)\n\n## Nunhead Cemetery: hills, woodland and a distant St Paul’s\n\nNunhead has the strongest sense of topography. Paths climb through open and wooded ground towards the roofless Anglican chapel, and from the higher western side a carefully framed gap in the trees reveals St Paul’s Cathedral. The view connects this quiet south London hill with the city whose overcrowding made the cemetery necessary.\n\nNature is never separate from the history here. Meadows, mature trees and uneven paths have made Nunhead an important habitat as well as a place of remembrance. The Friends of Nunhead Cemetery organise guided walks, conservation work and a well-loved annual open day. A tour is especially useful because many stories sit away from the obvious routes, and the site’s scale can otherwise reduce the visit to a pleasant woodland walk.\n\n[Official visitor information →](https://www.fonc.org.uk/)\n\n## Tower Hamlets Cemetery Park: the East End remembered through a nature reserve\n\nTower Hamlets is the least monumental-looking of the seven today, which is precisely why it matters. Heavy wartime damage, post-war clearance and decades of natural growth altered the formal cemetery. What survives is now read through a dense urban nature reserve managed with local volunteers.\n\nThe memorials record dockers, craftspeople, merchants, children and families shaped by migration and the industries of the East End. Here the story is less about a procession of grand tombs and more about population: who lived in east London, how communities formed, and how a burial ground became public green infrastructure. Friends of Tower Hamlets Cemetery Park combine heritage walks with wildlife work, demonstrating that conservation can protect both human memory and biodiversity.\n\n[Official visitor information →](https://fothcp.org/)\n\n## Do not attempt all seven in one day\n\nThe Magnificent Seven are not an efficient circuit. Choose one or two and connect them to their neighbourhoods: Abney Park with Stoke Newington, Brompton with Chelsea, Nunhead with Peckham, or Tower Hamlets with Bow and Mile End. Allow at least ninety minutes for a first visit and check the official site for seasonal gate times, tours and temporary works.\n\nThese are active cemeteries and memorial landscapes, not abandoned film sets. Stay on paths where requested, never climb monuments, avoid photographing mourners or recent graves, and keep group conversations quiet. A camera is useful, but the best record is often a name or inscription researched afterwards through the relevant Friends group.\n\n> The six cemeteries beyond Highgate show why the ‘Magnificent Seven’ label remains useful: not because the sites are interchangeable, but because each preserves a different relationship between London, death and public space.",
+  "editorial_status": "approved",
+  "slug": "magnificent-seven-cemeteries-london",
+  "reading_minutes": 8,
+  "related_articles": [
+    "highgate-cemetery",
+    "wesleys-chapel-bunhill-fields",
+    "city-dragon-walk"
+  ],
+  "practical": [
+    {
+      "label": "Admission",
+      "value": "The six cemeteries are generally free; tours and special access may be charged",
+      "url": "https://abneypark.org/"
+    },
+    {
+      "label": "Allow",
+      "value": "At least 90 minutes for one cemetery; do not plan all seven in one day",
+      "url": ""
+    },
+    {
+      "label": "Before visiting",
+      "value": "Check seasonal gate times, tours and conservation works",
+      "url": "https://www.royalparks.org.uk/visit/parks/brompton-cemetery"
+    },
+    {
+      "label": "Conduct",
+      "value": "Respect mourners and recent graves; stay off fragile monuments",
+      "url": ""
+    }
+  ],
+  "seo_title": "Magnificent Seven Cemeteries in London: A Guide",
+  "updated_at": "2026-10-12T00:20:00+01:00",
+  "title": "London’s Magnificent Seven cemeteries: the six beyond Highgate",
   "images": [
     {
-      "src": "/assets/journal/13-magnificent-01.webp",
-      "role": "hero",
       "display_mode": "crop",
-      "focal_x": 50,
-      "focal_y": 48,
-      "alt": "Sunlit cemetery avenue lined with crosses, headstones and mature trees",
-      "caption": "Brompton’s ordered avenues show the Victorian cemetery as a planned public landscape.",
-      "credit": "Paolo Pastorino",
+      "src": "/assets/journal/13-magnificent-01.webp",
       "width": 2400,
-      "height": 1600
+      "caption": "Brompton’s ordered avenues show the Victorian cemetery as a planned public landscape.",
+      "height": 1600,
+      "alt": "Sunlit cemetery avenue lined with crosses, headstones and mature trees",
+      "role": "hero",
+      "credit": "Paolo Pastorino",
+      "focal_x": 50,
+      "focal_y": 48
     },
     {
       "src": "/assets/journal/13-magnificent-02.webp",
@@ -68,46 +103,6 @@
       "height": 1602
     }
   ],
-  "practical": [
-    {
-      "label": "Admission",
-      "value": "The six cemeteries are generally free; tours and special access may be charged",
-      "url": "https://abneypark.org/"
-    },
-    {
-      "label": "Allow",
-      "value": "At least 90 minutes for one cemetery; do not plan all seven in one day",
-      "url": ""
-    },
-    {
-      "label": "Before visiting",
-      "value": "Check seasonal gate times, tours and conservation works",
-      "url": "https://www.royalparks.org.uk/visit/parks/brompton-cemetery"
-    },
-    {
-      "label": "Conduct",
-      "value": "Respect mourners and recent graves; stay off fragile monuments",
-      "url": ""
-    }
-  ],
-  "related_tools": [
-    "london-by-mood",
-    "smart-navigation",
-    "escape-the-crowds",
-    "loo-finder"
-  ],
-  "related_articles": [
-    "highgate-cemetery",
-    "wesleys-chapel-bunhill-fields",
-    "city-dragon-walk"
-  ],
-  "tags": [
-    "Magnificent Seven",
-    "Victorian cemeteries",
-    "London history",
-    "Architecture",
-    "Urban nature"
-  ],
   "sources": [
     {
       "label": "Abney Park Trust — visiting, heritage and ecology",
@@ -140,7 +135,12 @@
       "checked_at": "2026-10-11"
     }
   ],
-  "reading_minutes": 8,
-  "published_at": "",
-  "updated_at": "2026-10-12T00:20:00+01:00"
+  "tags": [
+    "Magnificent Seven",
+    "Victorian cemeteries",
+    "London history",
+    "Architecture",
+    "Urban nature"
+  ],
+  "description": "Explore London’s six Magnificent Seven cemeteries beyond Highgate, from Brompton’s grand avenues to the woodland paths of Abney Park and Nunhead."
 }
