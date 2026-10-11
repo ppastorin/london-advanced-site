@@ -29,7 +29,10 @@ test("the approved bilingual launch articles pass the publication gate", async (
     "one-leadenhall-terrace",
     "quentin-blake-centre",
     "trinity-buoy-wharf",
-    "va-east-storehouse"
+    "va-east-storehouse",
+    "magnificent-seven-cemeteries",
+    "london-city-farms",
+    "london-community-gardens"
   ];
 
   for (const articleId of articleIds) {
@@ -41,6 +44,38 @@ test("the approved bilingual launch articles pass the publication gate", async (
     assert.equal(isPublicPair(english, italian), true);
     assert.equal(english.editorial_status, "published");
     assert.equal(italian.editorial_status, "published");
+  }
+});
+
+test("new Journal articles expose indexable bilingual metadata and reciprocal links", async () => {
+  const pages = [
+    ["../dist/journal/magnificent-seven-cemeteries-london/index.html", "https://www.londonadvanced.com/journal/magnificent-seven-cemeteries-london/", "/it/journal/magnificent-seven-cimiteri-londra/"],
+    ["../dist/it/journal/magnificent-seven-cimiteri-londra/index.html", "https://www.londonadvanced.com/it/journal/magnificent-seven-cimiteri-londra/", "/journal/magnificent-seven-cemeteries-london/"],
+    ["../dist/journal/london-city-farms-free-community-guide/index.html", "https://www.londonadvanced.com/journal/london-city-farms-free-community-guide/", "/it/journal/city-farm-londra-gratuite-comunita/"],
+    ["../dist/it/journal/city-farm-londra-gratuite-comunita/index.html", "https://www.londonadvanced.com/it/journal/city-farm-londra-gratuite-comunita/", "/journal/london-city-farms-free-community-guide/"],
+    ["../dist/journal/london-community-gardens-hidden-green-spaces/index.html", "https://www.londonadvanced.com/journal/london-community-gardens-hidden-green-spaces/", "/it/journal/community-garden-londra-spazi-verdi-nascosti/"],
+    ["../dist/it/journal/community-garden-londra-spazi-verdi-nascosti/index.html", "https://www.londonadvanced.com/it/journal/community-garden-londra-spazi-verdi-nascosti/", "/journal/london-community-gardens-hidden-green-spaces/"]
+  ];
+
+  for (const [file, canonical, alternate] of pages) {
+    const html = await readFile(new URL(file, import.meta.url), "utf8");
+    assert.match(html, /<meta name="robots" content="index,follow,max-image-preview:large">/);
+    assert.match(html, /<meta property="og:type" content="article">/);
+    assert.match(html, /<meta property="article:published_time" content="2026-10-12T00:23:45\+01:00">/);
+    assert.match(html, /<meta name="twitter:image" content="https:\/\/www\.londonadvanced\.com\/assets\/journal\//);
+    assert.ok(html.includes(`<link rel="canonical" href="${canonical}">`));
+    assert.ok(html.includes(`href="${alternate}" hreflang=`));
+    assert.match(html, /"@type": "Article"/);
+  }
+
+  const reciprocalPages = [
+    ["../dist/journal/highgate-cemetery-east-west-guide/index.html", "/journal/magnificent-seven-cemeteries-london/"],
+    ["../dist/journal/wandle-trail-london-river-walk/index.html", "/journal/london-city-farms-free-community-guide/"],
+    ["../dist/journal/wesleys-chapel-bunhill-fields-guide/index.html", "/journal/london-community-gardens-hidden-green-spaces/"]
+  ];
+  for (const [file, target] of reciprocalPages) {
+    const html = await readFile(new URL(file, import.meta.url), "utf8");
+    assert.ok(html.includes(`href="${target}"`), `${file} must link to ${target}`);
   }
 });
 
