@@ -1,172 +1,29 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-08T15:03:54+01:00",
-  "valid_from": "2026-10-08",
-  "valid_until": "2026-10-11",
+  "generated_at": "2026-10-11T15:05:15+01:00",
+  "valid_from": "2026-10-11",
+  "valid_until": "2026-10-18",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "local-london-guiding-day-city-walk",
-    "starquest-maya-man-performance-lecture",
-    "surbiton-ski-sunday"
+    "costons-brook-water-vole-wildlife-walk",
+    "dexter-khan-carnival-60-finale",
+    "enfield-black-literature-festival"
   ],
   "events": [
     {
-      "id": "power-of-patronage-contemporary-art",
-      "title_en": "The Power of Patronage: Supporting Contemporary Art",
-      "title_it": "Il potere del mecenatismo nell'arte contemporanea",
-      "summary_en": "A free panel asks how collectors, organisations and micro-patrons can create a more sustainable and accessible future for contemporary artists.",
-      "summary_it": "Un panel gratuito esplora come collezionisti, organizzazioni e micro-mecenati possano sostenere un futuro più accessibile e duraturo per gli artisti contemporanei.",
-      "start": "2026-10-09T11:00:00+01:00",
-      "end": "2026-10-09T12:00:00+01:00",
+      "id": "kyotographie-japan-house-closing-weekend",
+      "duplicate_key": "kyotographie-japan-house-closing-2026-10-18",
+      "title_en": "Kyotographie: Kawada Kikuji x Iwane Ai — Closing Weekend",
+      "title_it": "Kyotographie: Kawada Kikuji x Iwane Ai — ultimo weekend",
+      "summary_en": "The final weekend of Japan House London's first photography exhibition pairs Kawada's postwar memory studies with Iwane's work on migration and Tohoku.",
+      "summary_it": "L'ultimo weekend della prima mostra fotografica di Japan House accosta gli studi di Kawada sulla memoria postbellica alle immagini di Iwane su migrazione e Tohoku.",
+      "start": "2026-10-16T10:00:00+01:00",
+      "end": "2026-10-18T18:00:00+01:00",
       "venue": {
-        "name": "The Minster Building",
-        "address": "21 Mincing Lane, London",
-        "postcode": "EC3R 7AG",
-        "borough": "City of London"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://visual-artists.org/event/the-power-of-patronage-supporting-the-future-of-contemporary-art/"
-      },
-      "category": "art-design",
-      "advanced": {
-        "score": 7,
-        "reason": "A focused free discussion connecting an unusual City venue with practical support for independent contemporary artists.",
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 1,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://visual-artists.org/event/the-power-of-patronage-supporting-the-future-of-contemporary-art/",
-      "verification": {
-        "verified_at": "2026-10-08T15:03:54+01:00",
-        "confidence": "high",
-        "source_url": "https://visual-artists.org/event/the-power-of-patronage-supporting-the-future-of-contemporary-art/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-08T15:03:54+01:00",
-      "expire_at": "2026-10-09T12:15:00+01:00",
-      "duplicate_key": "power-of-patronage-minster-building-2026-10-09"
-    },
-    {
-      "id": "local-london-guiding-day-city-walk",
-      "title_en": "Local London Guiding Day: City Walk",
-      "title_it": "Local London Guiding Day: passeggiata nella City",
-      "summary_en": "Qualified City guides lead free hourly walks showing how Roman plans, medieval street names, Wren architecture and livery companies still shape modern London.",
-      "summary_it": "Guide qualificate conducono passeggiate gratuite ogni ora, mostrando come piante romane, vie medievali, architettura di Wren e corporazioni plasmino ancora la City.",
-      "start": "2026-10-10T10:00:00+01:00",
-      "end": "2026-10-10T17:00:00+01:00",
-      "venue": {
-        "name": "Outside M&S Food, Cannon Street Station",
-        "address": "Cannon Street Station, Cannon Street, London",
-        "postcode": "EC4N 6AP",
-        "borough": "City of London"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 10,
-        "reason": "A one-day programme of free, expert-led walks reveals how layers of London history continue to govern the modern City.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.cityoflondonguides.com/tours/local-london-guiding-day-1",
-      "verification": {
-        "verified_at": "2026-10-08T15:03:54+01:00",
-        "confidence": "high",
-        "source_url": "https://www.cityoflondonguides.com/tours/local-london-guiding-day-1"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-08T15:03:54+01:00",
-      "expire_at": "2026-10-10T17:15:00+01:00",
-      "duplicate_key": "local-london-guiding-day-city-walk-2026-10-10"
-    },
-    {
-      "id": "hampton-court-free-garden-open-days",
-      "title_en": "Hampton Court Palace Free Garden Open Days",
-      "title_it": "Giardini gratuiti a Hampton Court Palace",
-      "summary_en": "Explore the Great Fountain, Kitchen and Pond Gardens without the normal admission charge during one of Hampton Court's limited free garden weekends.",
-      "summary_it": "Esplora gratuitamente Great Fountain Garden, Kitchen Garden e Pond Gardens durante uno dei rari fine settimana ad accesso libero di Hampton Court.",
-      "start": "2026-10-10T10:00:00+01:00",
-      "end": "2026-10-11T17:30:00+01:00",
-      "venue": {
-        "name": "Hampton Court Palace Gardens",
-        "address": "Hampton Court Way, East Molesey",
-        "postcode": "KT8 9AU",
-        "borough": "Elmbridge"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free gardens",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 8,
-        "reason": "Rare free access opens a major historic royal landscape normally covered by paid palace admission.",
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 0,
-          "value": 2
-        }
-      },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.hrp.org.uk/hampton-court-palace/visit/opening-and-closing-times/",
-      "verification": {
-        "verified_at": "2026-10-08T15:03:54+01:00",
-        "confidence": "high",
-        "source_url": "https://www.hrp.org.uk/hampton-court-palace/visit/opening-and-closing-times/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-08T15:03:54+01:00",
-      "expire_at": "2026-10-11T17:45:00+01:00",
-      "duplicate_key": "hampton-court-free-garden-open-days-2026-10-10-11"
-    },
-    {
-      "id": "starquest-maya-man-performance-lecture",
-      "title_en": "StarQuest: A Performance-Lecture by Maya Man",
-      "title_it": "StarQuest: performance-lecture di Maya Man",
-      "summary_en": "Maya Man's London-premiere performance-lecture mixes generative software, choreography and online culture to probe competitive dance and algorithmic self-performance.",
-      "summary_it": "La prima londinese di Maya Man mescola software generativo, coreografia e cultura online per indagare la danza competitiva e la performance algoritmica del sé.",
-      "start": "2026-10-10T12:00:00+01:00",
-      "end": "2026-10-10T13:00:00+01:00",
-      "venue": {
-        "name": "V&A South Kensington, Lecture Theatre",
-        "address": "Cromwell Road, London",
-        "postcode": "SW7 2RL",
+        "name": "Japan House London",
+        "address": "101-111 Kensington High Street, London",
+        "postcode": "W8 5SA",
         "borough": "Kensington and Chelsea"
       },
       "price": {
@@ -175,51 +32,103 @@
         "classification": "free"
       },
       "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.vam.ac.uk/event/47dlkJDWavM/maya-man-starquest-oct-2026"
+        "required": false,
+        "status": "recommended",
+        "url": "https://www.japanhouselondon.uk/whats-on/kyotographie-kawada-kikuji-x-iwane-ai/"
       },
       "category": "art-design",
       "advanced": {
-        "score": 8,
-        "reason": "A free London premiere uses an unusual performance-lecture format to connect digital art, choreography and algorithmic culture.",
+        "score": 7,
         "breakdown": {
-          "non_obvious": 3,
+          "non_obvious": 2,
           "place_story": 1,
           "unusual_access": 2,
           "local_character": 0,
           "value": 2
-        }
+        },
+        "reason": "A free final chance to see two major Japanese photographers together in Japan House London's first photography exhibition."
       },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.vam.ac.uk/event/47dlkJDWavM/maya-man-starquest-oct-2026",
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.japanhouselondon.uk/whats-on/kyotographie-kawada-kikuji-x-iwane-ai/",
       "verification": {
-        "verified_at": "2026-10-08T15:03:54+01:00",
-        "confidence": "high",
-        "source_url": "https://www.vam.ac.uk/event/47dlkJDWavM/maya-man-starquest-oct-2026"
+        "source_url": "https://www.japanhouselondon.uk/whats-on/kyotographie-kawada-kikuji-x-iwane-ai/",
+        "verified_at": "2026-10-11T15:05:15+01:00",
+        "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-08T15:03:54+01:00",
-      "expire_at": "2026-10-10T13:15:00+01:00",
-      "duplicate_key": "starquest-maya-man-va-south-kensington-2026-10-10"
+      "publish_at": "2026-10-11T15:05:15+01:00",
+      "expire_at": "2026-10-18T18:15:00+01:00"
     },
     {
-      "id": "william-morris-gallery-welcome-home-family-day",
-      "title_en": "William Morris Gallery Family Day: Welcome Home",
-      "title_it": "Welcome Home: giornata per famiglie alla William Morris Gallery",
-      "summary_en": "A reopening family day offers screenprinting, a first look at the redisplayed permanent collection and a new trail through William Morris's former home.",
-      "summary_it": "Una giornata per la riapertura propone serigrafia, la collezione permanente riallestita e un nuovo percorso nella casa storica di William Morris.",
-      "start": "2026-10-10T13:00:00+01:00",
-      "end": "2026-10-10T16:00:00+01:00",
+      "id": "costons-brook-water-vole-wildlife-walk",
+      "duplicate_key": "costons-brook-water-vole-walk-2026-10-16",
+      "title_en": "Wildlife Walk: Coston's Brook and Its Water Vole Potential",
+      "title_it": "Passeggiata naturalistica: Coston's Brook e il ritorno delle arvicole",
+      "summary_en": "Citizen Zoo leads a field walk along Coston's Brook to read the habitat and assess its potential for the return of London's water voles.",
+      "summary_it": "Citizen Zoo guida una passeggiata sul campo lungo Coston's Brook per leggere l'habitat e valutarne il potenziale per il ritorno delle arvicole acquatiche.",
+      "start": "2026-10-16T10:30:00+01:00",
+      "end": "2026-10-16T13:30:00+01:00",
       "venue": {
-        "name": "William Morris Gallery",
-        "address": "Lloyd Park, Forest Road, Walthamstow, London",
-        "postcode": "E17 4PP",
-        "borough": "Waltham Forest"
+        "name": "Pear Tree Park Bistro",
+        "address": "Stockdove Way, Perivale, Greenford",
+        "postcode": "UB6 8TJ",
+        "borough": "Ealing"
       },
       "price": {
         "amount_gbp": 0,
         "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://www.eventbrite.co.uk/e/wildlife-walk-exploring-costons-brook-its-water-vole-potential-tickets-1999501348358"
+      },
+      "category": "nature",
+      "advanced": {
+        "score": 10,
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        },
+        "reason": "A free, expert-led look at an overlooked west London waterway and the practical prospects for restoring a lost urban species."
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.eventbrite.co.uk/e/wildlife-walk-exploring-costons-brook-its-water-vole-potential-tickets-1999501348358",
+      "verification": {
+        "source_url": "https://www.eventbrite.co.uk/e/wildlife-walk-exploring-costons-brook-its-water-vole-potential-tickets-1999501348358",
+        "verified_at": "2026-10-11T15:05:15+01:00",
+        "confidence": "high"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-11T15:05:15+01:00",
+      "expire_at": "2026-10-16T13:45:00+01:00"
+    },
+    {
+      "id": "muswell-hill-creatives-make-and-mend",
+      "duplicate_key": "muswell-hill-creatives-make-mend-2026-10-17",
+      "title_en": "Muswell Hill Creatives: Make and Mend Festival",
+      "title_it": "Muswell Hill Creatives: festival Make and Mend",
+      "summary_en": "A free neighbourhood festival fills Hornsey Town Hall with repair, making and sustainable craft; paid workshops are optional.",
+      "summary_it": "Un festival di quartiere gratuito riempie Hornsey Town Hall di riparazione, artigianato e pratiche sostenibili; i workshop a pagamento sono facoltativi.",
+      "start": "2026-10-17T11:00:00+01:00",
+      "end": "2026-10-17T17:00:00+01:00",
+      "venue": {
+        "name": "Hornsey Town Hall",
+        "address": "The Broadway, Crouch End, London",
+        "postcode": "N8 9JJ",
+        "borough": "Haringey"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free admission; workshops extra",
         "classification": "free"
       },
       "booking": {
@@ -230,74 +139,177 @@
       "category": "community",
       "advanced": {
         "score": 8,
-        "reason": "A free neighbourhood reopening day offers early access to a redisplayed collection inside William Morris's historic home.",
         "breakdown": {
           "non_obvious": 2,
-          "place_story": 2,
-          "unusual_access": 1,
+          "place_story": 1,
+          "unusual_access": 2,
           "local_character": 1,
           "value": 2
-        }
+        },
+        "reason": "An independent Crouch End collective turns a landmark civic building into a free one-day celebration of repair and local making."
       },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.wmgallery.org.uk/event/family-day-welcome-home/",
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.muswellhillcreatives.com/make-and-mend.html",
       "verification": {
-        "verified_at": "2026-10-08T15:03:54+01:00",
-        "confidence": "high",
-        "source_url": "https://www.wmgallery.org.uk/event/family-day-welcome-home/"
+        "source_url": "https://www.muswellhillcreatives.com/make-and-mend.html",
+        "verified_at": "2026-10-11T15:05:15+01:00",
+        "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-08T15:03:54+01:00",
-      "expire_at": "2026-10-10T16:15:00+01:00",
-      "duplicate_key": "william-morris-gallery-welcome-home-2026-10-10"
+      "publish_at": "2026-10-11T15:05:15+01:00",
+      "expire_at": "2026-10-17T17:15:00+01:00"
     },
     {
-      "id": "surbiton-ski-sunday",
-      "title_en": "Surbiton Ski Sunday",
-      "title_it": "Surbiton Ski Sunday",
-      "summary_en": "Surbiton's eccentric annual race sends costumed competitors downhill on blocks of ice, with a luge, community spectacle and free participation or viewing.",
-      "summary_it": "L'eccentrica gara annuale di Surbiton lancia concorrenti in costume giù dalla collina su blocchi di ghiaccio, con slittino e partecipazione gratuita.",
-      "start": "2026-10-11T11:00:00+01:00",
-      "end": "2026-10-11T13:00:00+01:00",
+      "id": "marys-dress-keats-house",
+      "duplicate_key": "marys-dress-keats-house-2026-10-17",
+      "title_en": "A Conversation with Mary's Dress",
+      "title_it": "Una conversazione con l'abito di Mary",
+      "summary_en": "At Keats House, an interactive Georgian dress embedded with sound reveals the working lives and material culture behind the poet's circle.",
+      "summary_it": "A Keats House, un abito georgiano interattivo con suoni incorporati racconta lavoro e cultura materiale dietro la cerchia del poeta.",
+      "start": "2026-10-17T14:00:00+01:00",
+      "end": "2026-10-17T16:00:00+01:00",
       "venue": {
-        "name": "St Mark's Hill",
-        "address": "Central Parade, St Mark's Hill, Surbiton",
-        "postcode": "KT6 4PJ",
-        "borough": "Kingston upon Thames"
+        "name": "Keats House",
+        "address": "10 Keats Grove, Hampstead, London",
+        "postcode": "NW3 2RR",
+        "borough": "Camden"
       },
       "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
+        "amount_gbp": 15,
+        "display": "£15 (£12 concession)",
+        "classification": "exceptional"
       },
       "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
+        "required": true,
+        "status": "required",
+        "url": "https://www.eventbrite.co.uk/e/a-conversation-with-marys-dress-tickets-1997143252229"
       },
-      "category": "community",
+      "category": "heritage-history",
+      "advanced": {
+        "score": 9,
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 1
+        },
+        "reason": "The top-end price is justified by a one-off object-led performance and special attendee-only access to Keats House."
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.cityoflondon.gov.uk/events/a-conversation-with-marys-dress",
+      "verification": {
+        "source_url": "https://www.lovecamden.org/whats-on/a-conversation-with-mary-s-dress-35187135",
+        "verified_at": "2026-10-11T15:05:15+01:00",
+        "confidence": "high"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-11T15:05:15+01:00",
+      "expire_at": "2026-10-17T16:15:00+01:00"
+    },
+    {
+      "id": "dexter-khan-carnival-60-finale",
+      "duplicate_key": "dexter-khan-carnival-60-listening-lounge-2026-10-17",
+      "title_en": "Dexter Khan: Notting Hill Carnival 60 Finale",
+      "title_it": "Dexter Khan: finale di Notting Hill Carnival 60",
+      "summary_en": "Photographer Dexter Khan closes the Carnival 60 programme with images and first-hand stories from six decades of Notting Hill Carnival.",
+      "summary_it": "Il fotografo Dexter Khan chiude Carnival 60 con immagini e testimonianze dirette raccolte in sei decenni di Notting Hill Carnival.",
+      "start": "2026-10-17T18:00:00+01:00",
+      "end": "2026-10-17T20:00:00+01:00",
+      "venue": {
+        "name": "The Listening Lounge, Mason & Fifth",
+        "address": "11 Woodfield Road, London",
+        "postcode": "W9 2BA",
+        "borough": "City of Westminster"
+      },
+      "price": {
+        "amount_gbp": 6,
+        "display": "£6",
+        "classification": "cheap"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://www.eventbrite.co.uk/e/dexter-khan-notting-hill-carnival-60-tickets-1998660207483"
+      },
+      "category": "local-culture",
       "advanced": {
         "score": 10,
-        "reason": "A genuinely odd, free and deeply local tradition turns a Surbiton hill into a one-day community ski slope.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
           "unusual_access": 2,
           "local_character": 1,
           "value": 2
-        }
+        },
+        "reason": "A small-room finale combining a local photographer's archive, living testimony and six decades of one of London's defining cultural stories."
       },
-      "newsletter_sources": ["Londonist"],
-      "official_url": "https://www.thecommunitybrain.org/event-details/surbiton-ski-sunday-1",
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://nottinghillcarnival60.co.uk/",
       "verification": {
-        "verified_at": "2026-10-08T15:03:54+01:00",
-        "confidence": "high",
-        "source_url": "https://www.thecommunitybrain.org/event-details/surbiton-ski-sunday-1"
+        "source_url": "https://www.eventbrite.co.uk/e/dexter-khan-notting-hill-carnival-60-tickets-1998660207483",
+        "verified_at": "2026-10-11T15:05:15+01:00",
+        "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-08T15:03:54+01:00",
-      "expire_at": "2026-10-11T13:15:00+01:00",
-      "duplicate_key": "surbiton-ski-sunday-2026-10-11"
+      "publish_at": "2026-10-11T15:05:15+01:00",
+      "expire_at": "2026-10-17T20:15:00+01:00"
+    },
+    {
+      "id": "enfield-black-literature-festival",
+      "duplicate_key": "enfield-black-literature-festival-2026-10-18",
+      "title_en": "Enfield Black Literature Festival",
+      "title_it": "Enfield Black Literature Festival",
+      "summary_en": "Thirteen authors, readings, panels, workshops, a Windrush exhibition and a book swap come together for an independent borough-wide literary day.",
+      "summary_it": "Tredici autori, letture, panel, workshop, una mostra su Windrush e uno scambio di libri si incontrano in una giornata letteraria indipendente.",
+      "start": "2026-10-18T13:00:00+01:00",
+      "end": "2026-10-18T19:00:00+01:00",
+      "venue": {
+        "name": "Dugdale Arts Centre",
+        "address": "39 London Road, Enfield",
+        "postcode": "EN2 6DS",
+        "borough": "Enfield"
+      },
+      "price": {
+        "amount_gbp": 10,
+        "display": "£10 full programme (£5 workshops)",
+        "classification": "cheap"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://theeca.org.uk/event/black-history-month-enfield-black-literature-festival-18-october-2026/"
+      },
+      "category": "local-culture",
+      "advanced": {
+        "score": 9,
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        },
+        "reason": "A deeply local all-day programme makes Black British writing, Windrush memory and community exchange unusually accessible for £10."
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.dugdaleartscentre.co.uk/whats-on/enfield-black-literature-festival",
+      "verification": {
+        "source_url": "https://www.dugdaleartscentre.co.uk/whats-on/enfield-black-literature-festival",
+        "verified_at": "2026-10-11T15:05:15+01:00",
+        "confidence": "high"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-11T15:05:15+01:00",
+      "expire_at": "2026-10-18T19:15:00+01:00"
     }
   ]
 }
