@@ -457,84 +457,12 @@
       "updated_at": "2026-10-09T11:22:35+01:00"
     },
     {
-      "id": "event:power-of-patronage-contemporary-art:it",
+      "id": "event:kyotographie-japan-house-closing-weekend:it",
       "type": "event",
       "locale": "it",
-      "title": "Il potere del mecenatismo nell'arte contemporanea",
-      "summary": "ven 9 ott · The Minster Building · Gratuito — Un panel gratuito esplora come collezionisti, organizzazioni e micro-mecenati possano sostenere un futuro più accessibile e duraturo per gli artisti contemporanei.",
-      "url": "/it/eventi/#event-power-of-patronage-contemporary-art",
-      "tags": [
-        "Arte e design",
-        "Gratuito",
-        "City of London",
-        "free"
-      ],
-      "keywords": [
-        "The Minster Building",
-        "21 Mincing Lane, London",
-        "EC3R 7AG",
-        "City of London",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "Un panel gratuito esplora come collezionisti, organizzazioni e micro-mecenati possano sostenere un futuro più accessibile e duraturo per gli artisti contemporanei.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-09T12:15:00+01:00"
-    },
-    {
-      "id": "event:local-london-guiding-day-city-walk:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Local London Guiding Day: passeggiata nella City",
-      "summary": "sab 10 ott · Outside M&S Food, Cannon Street Station · Gratuito — Guide qualificate conducono passeggiate gratuite ogni ora, mostrando come piante romane, vie medievali, architettura di Wren e corporazioni plasmino ancora la City.",
-      "url": "/it/eventi/#event-local-london-guiding-day-city-walk",
-      "tags": [
-        "Patrimonio e storia",
-        "Gratuito",
-        "City of London",
-        "free"
-      ],
-      "keywords": [
-        "Outside M&S Food, Cannon Street Station",
-        "Cannon Street Station, Cannon Street, London",
-        "EC4N 6AP",
-        "City of London",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "Guide qualificate conducono passeggiate gratuite ogni ora, mostrando come piante romane, vie medievali, architettura di Wren e corporazioni plasmino ancora la City.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-10T17:15:00+01:00"
-    },
-    {
-      "id": "event:hampton-court-free-garden-open-days:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Giardini gratuiti a Hampton Court Palace",
-      "summary": "sab 10 ott · Hampton Court Palace Gardens · Gratuito — Esplora gratuitamente Great Fountain Garden, Kitchen Garden e Pond Gardens durante uno dei rari fine settimana ad accesso libero di Hampton Court.",
-      "url": "/it/eventi/#event-hampton-court-free-garden-open-days",
-      "tags": [
-        "Patrimonio e storia",
-        "Gratuito",
-        "Elmbridge",
-        "free"
-      ],
-      "keywords": [
-        "Hampton Court Palace Gardens",
-        "Hampton Court Way, East Molesey",
-        "KT8 9AU",
-        "Elmbridge",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "Esplora gratuitamente Great Fountain Garden, Kitchen Garden e Pond Gardens durante uno dei rari fine settimana ad accesso libero di Hampton Court.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-11T17:45:00+01:00"
-    },
-    {
-      "id": "event:starquest-maya-man-performance-lecture:it",
-      "type": "event",
-      "locale": "it",
-      "title": "StarQuest: performance-lecture di Maya Man",
-      "summary": "sab 10 ott · V&A South Kensington, Lecture Theatre · Gratuito — La prima londinese di Maya Man mescola software generativo, coreografia e cultura online per indagare la danza competitiva e la performance algoritmica del sé.",
-      "url": "/it/eventi/#event-starquest-maya-man-performance-lecture",
+      "title": "Kyotographie: Kawada Kikuji x Iwane Ai — ultimo weekend",
+      "summary": "ven 16 ott · Japan House London · Gratuito — L'ultimo weekend della prima mostra fotografica di Japan House accosta gli studi di Kawada sulla memoria postbellica alle immagini di Iwane su migrazione e Tohoku.",
+      "url": "/it/eventi/#event-kyotographie-japan-house-closing-weekend",
       "tags": [
         "Arte e design",
         "Gratuito",
@@ -542,63 +470,135 @@
         "free"
       ],
       "keywords": [
-        "V&A South Kensington, Lecture Theatre",
-        "Cromwell Road, London",
-        "SW7 2RL",
+        "Japan House London",
+        "101-111 Kensington High Street, London",
+        "W8 5SA",
         "Kensington and Chelsea",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "La prima londinese di Maya Man mescola software generativo, coreografia e cultura online per indagare la danza competitiva e la performance algoritmica del sé.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-10T13:15:00+01:00"
+      "content": "L'ultimo weekend della prima mostra fotografica di Japan House accosta gli studi di Kawada sulla memoria postbellica alle immagini di Iwane su migrazione e Tohoku.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-18T18:15:00+01:00"
     },
     {
-      "id": "event:william-morris-gallery-welcome-home-family-day:it",
+      "id": "event:costons-brook-water-vole-wildlife-walk:it",
       "type": "event",
       "locale": "it",
-      "title": "Welcome Home: giornata per famiglie alla William Morris Gallery",
-      "summary": "sab 10 ott · William Morris Gallery · Gratuito — Una giornata per la riapertura propone serigrafia, la collezione permanente riallestita e un nuovo percorso nella casa storica di William Morris.",
-      "url": "/it/eventi/#event-william-morris-gallery-welcome-home-family-day",
+      "title": "Passeggiata naturalistica: Coston's Brook e il ritorno delle arvicole",
+      "summary": "ven 16 ott · Pear Tree Park Bistro · Gratuito — Citizen Zoo guida una passeggiata sul campo lungo Coston's Brook per leggere l'habitat e valutarne il potenziale per il ritorno delle arvicole acquatiche.",
+      "url": "/it/eventi/#event-costons-brook-water-vole-wildlife-walk",
       "tags": [
-        "Community",
+        "Natura",
         "Gratuito",
-        "Waltham Forest",
+        "Ealing",
         "free"
       ],
       "keywords": [
-        "William Morris Gallery",
-        "Lloyd Park, Forest Road, Walthamstow, London",
-        "E17 4PP",
-        "Waltham Forest",
+        "Pear Tree Park Bistro",
+        "Stockdove Way, Perivale, Greenford",
+        "UB6 8TJ",
+        "Ealing",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "Una giornata per la riapertura propone serigrafia, la collezione permanente riallestita e un nuovo percorso nella casa storica di William Morris.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-10T16:15:00+01:00"
+      "content": "Citizen Zoo guida una passeggiata sul campo lungo Coston's Brook per leggere l'habitat e valutarne il potenziale per il ritorno delle arvicole acquatiche.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-16T13:45:00+01:00"
     },
     {
-      "id": "event:surbiton-ski-sunday:it",
+      "id": "event:muswell-hill-creatives-make-and-mend:it",
       "type": "event",
       "locale": "it",
-      "title": "Surbiton Ski Sunday",
-      "summary": "dom 11 ott · St Mark's Hill · Gratuito — L'eccentrica gara annuale di Surbiton lancia concorrenti in costume giù dalla collina su blocchi di ghiaccio, con slittino e partecipazione gratuita.",
-      "url": "/it/eventi/#event-surbiton-ski-sunday",
+      "title": "Muswell Hill Creatives: festival Make and Mend",
+      "summary": "sab 17 ott · Hornsey Town Hall · Gratuito — Un festival di quartiere gratuito riempie Hornsey Town Hall di riparazione, artigianato e pratiche sostenibili; i workshop a pagamento sono facoltativi.",
+      "url": "/it/eventi/#event-muswell-hill-creatives-make-and-mend",
       "tags": [
         "Community",
         "Gratuito",
-        "Kingston upon Thames",
+        "Haringey",
         "free"
       ],
       "keywords": [
-        "St Mark's Hill",
-        "Central Parade, St Mark's Hill, Surbiton",
-        "KT6 4PJ",
-        "Kingston upon Thames",
+        "Hornsey Town Hall",
+        "The Broadway, Crouch End, London",
+        "N8 9JJ",
+        "Haringey",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "L'eccentrica gara annuale di Surbiton lancia concorrenti in costume giù dalla collina su blocchi di ghiaccio, con slittino e partecipazione gratuita.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-11T13:15:00+01:00"
+      "content": "Un festival di quartiere gratuito riempie Hornsey Town Hall di riparazione, artigianato e pratiche sostenibili; i workshop a pagamento sono facoltativi.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-17T17:15:00+01:00"
+    },
+    {
+      "id": "event:marys-dress-keats-house:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Una conversazione con l'abito di Mary",
+      "summary": "sab 17 ott · Keats House · £15 (£12 concession) — A Keats House, un abito georgiano interattivo con suoni incorporati racconta lavoro e cultura materiale dietro la cerchia del poeta.",
+      "url": "/it/eventi/#event-marys-dress-keats-house",
+      "tags": [
+        "Patrimonio e storia",
+        "£15 (£12 concession)",
+        "Camden",
+        "exceptional"
+      ],
+      "keywords": [
+        "Keats House",
+        "10 Keats Grove, Hampstead, London",
+        "NW3 2RR",
+        "Camden",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "A Keats House, un abito georgiano interattivo con suoni incorporati racconta lavoro e cultura materiale dietro la cerchia del poeta.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-17T16:15:00+01:00"
+    },
+    {
+      "id": "event:dexter-khan-carnival-60-finale:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Dexter Khan: finale di Notting Hill Carnival 60",
+      "summary": "sab 17 ott · The Listening Lounge, Mason & Fifth · £6 — Il fotografo Dexter Khan chiude Carnival 60 con immagini e testimonianze dirette raccolte in sei decenni di Notting Hill Carnival.",
+      "url": "/it/eventi/#event-dexter-khan-carnival-60-finale",
+      "tags": [
+        "Cultura locale",
+        "£6",
+        "City of Westminster",
+        "cheap"
+      ],
+      "keywords": [
+        "The Listening Lounge, Mason & Fifth",
+        "11 Woodfield Road, London",
+        "W9 2BA",
+        "City of Westminster",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Il fotografo Dexter Khan chiude Carnival 60 con immagini e testimonianze dirette raccolte in sei decenni di Notting Hill Carnival.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-17T20:15:00+01:00"
+    },
+    {
+      "id": "event:enfield-black-literature-festival:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Enfield Black Literature Festival",
+      "summary": "dom 18 ott · Dugdale Arts Centre · £10 full programme (£5 workshops) — Tredici autori, letture, panel, workshop, una mostra su Windrush e uno scambio di libri si incontrano in una giornata letteraria indipendente.",
+      "url": "/it/eventi/#event-enfield-black-literature-festival",
+      "tags": [
+        "Cultura locale",
+        "£10 full programme (£5 workshops)",
+        "Enfield",
+        "cheap"
+      ],
+      "keywords": [
+        "Dugdale Arts Centre",
+        "39 London Road, Enfield",
+        "EN2 6DS",
+        "Enfield",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Tredici autori, letture, panel, workshop, una mostra su Windrush e uno scambio di libri si incontrano in una giornata letteraria indipendente.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-18T19:15:00+01:00"
     }
   ]
 }

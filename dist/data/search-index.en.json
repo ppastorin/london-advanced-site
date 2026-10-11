@@ -458,84 +458,12 @@
       "updated_at": "2026-10-09T11:22:35+01:00"
     },
     {
-      "id": "event:power-of-patronage-contemporary-art:en",
+      "id": "event:kyotographie-japan-house-closing-weekend:en",
       "type": "event",
       "locale": "en",
-      "title": "The Power of Patronage: Supporting Contemporary Art",
-      "summary": "Fri 9 Oct · The Minster Building · Free — A free panel asks how collectors, organisations and micro-patrons can create a more sustainable and accessible future for contemporary artists.",
-      "url": "/events/#event-power-of-patronage-contemporary-art",
-      "tags": [
-        "Art and design",
-        "Free",
-        "City of London",
-        "free"
-      ],
-      "keywords": [
-        "The Minster Building",
-        "21 Mincing Lane, London",
-        "EC3R 7AG",
-        "City of London",
-        "event events this week weekend free affordable"
-      ],
-      "content": "A free panel asks how collectors, organisations and micro-patrons can create a more sustainable and accessible future for contemporary artists. A focused free discussion connecting an unusual City venue with practical support for independent contemporary artists.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-09T12:15:00+01:00"
-    },
-    {
-      "id": "event:local-london-guiding-day-city-walk:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Local London Guiding Day: City Walk",
-      "summary": "Sat 10 Oct · Outside M&S Food, Cannon Street Station · Free — Qualified City guides lead free hourly walks showing how Roman plans, medieval street names, Wren architecture and livery companies still shape modern London.",
-      "url": "/events/#event-local-london-guiding-day-city-walk",
-      "tags": [
-        "Heritage and history",
-        "Free",
-        "City of London",
-        "free"
-      ],
-      "keywords": [
-        "Outside M&S Food, Cannon Street Station",
-        "Cannon Street Station, Cannon Street, London",
-        "EC4N 6AP",
-        "City of London",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Qualified City guides lead free hourly walks showing how Roman plans, medieval street names, Wren architecture and livery companies still shape modern London. A one-day programme of free, expert-led walks reveals how layers of London history continue to govern the modern City.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-10T17:15:00+01:00"
-    },
-    {
-      "id": "event:hampton-court-free-garden-open-days:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Hampton Court Palace Free Garden Open Days",
-      "summary": "Sat 10 Oct · Hampton Court Palace Gardens · Free — Explore the Great Fountain, Kitchen and Pond Gardens without the normal admission charge during one of Hampton Court's limited free garden weekends.",
-      "url": "/events/#event-hampton-court-free-garden-open-days",
-      "tags": [
-        "Heritage and history",
-        "Free",
-        "Elmbridge",
-        "free"
-      ],
-      "keywords": [
-        "Hampton Court Palace Gardens",
-        "Hampton Court Way, East Molesey",
-        "KT8 9AU",
-        "Elmbridge",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Explore the Great Fountain, Kitchen and Pond Gardens without the normal admission charge during one of Hampton Court's limited free garden weekends. Rare free access opens a major historic royal landscape normally covered by paid palace admission.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-11T17:45:00+01:00"
-    },
-    {
-      "id": "event:starquest-maya-man-performance-lecture:en",
-      "type": "event",
-      "locale": "en",
-      "title": "StarQuest: A Performance-Lecture by Maya Man",
-      "summary": "Sat 10 Oct · V&A South Kensington, Lecture Theatre · Free — Maya Man's London-premiere performance-lecture mixes generative software, choreography and online culture to probe competitive dance and algorithmic self-performance.",
-      "url": "/events/#event-starquest-maya-man-performance-lecture",
+      "title": "Kyotographie: Kawada Kikuji x Iwane Ai — Closing Weekend",
+      "summary": "Fri 16 Oct · Japan House London · Free — The final weekend of Japan House London's first photography exhibition pairs Kawada's postwar memory studies with Iwane's work on migration and Tohoku.",
+      "url": "/events/#event-kyotographie-japan-house-closing-weekend",
       "tags": [
         "Art and design",
         "Free",
@@ -543,63 +471,135 @@
         "free"
       ],
       "keywords": [
-        "V&A South Kensington, Lecture Theatre",
-        "Cromwell Road, London",
-        "SW7 2RL",
+        "Japan House London",
+        "101-111 Kensington High Street, London",
+        "W8 5SA",
         "Kensington and Chelsea",
         "event events this week weekend free affordable"
       ],
-      "content": "Maya Man's London-premiere performance-lecture mixes generative software, choreography and online culture to probe competitive dance and algorithmic self-performance. A free London premiere uses an unusual performance-lecture format to connect digital art, choreography and algorithmic culture.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-10T13:15:00+01:00"
+      "content": "The final weekend of Japan House London's first photography exhibition pairs Kawada's postwar memory studies with Iwane's work on migration and Tohoku. A free final chance to see two major Japanese photographers together in Japan House London's first photography exhibition.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-18T18:15:00+01:00"
     },
     {
-      "id": "event:william-morris-gallery-welcome-home-family-day:en",
+      "id": "event:costons-brook-water-vole-wildlife-walk:en",
       "type": "event",
       "locale": "en",
-      "title": "William Morris Gallery Family Day: Welcome Home",
-      "summary": "Sat 10 Oct · William Morris Gallery · Free — A reopening family day offers screenprinting, a first look at the redisplayed permanent collection and a new trail through William Morris's former home.",
-      "url": "/events/#event-william-morris-gallery-welcome-home-family-day",
+      "title": "Wildlife Walk: Coston's Brook and Its Water Vole Potential",
+      "summary": "Fri 16 Oct · Pear Tree Park Bistro · Free — Citizen Zoo leads a field walk along Coston's Brook to read the habitat and assess its potential for the return of London's water voles.",
+      "url": "/events/#event-costons-brook-water-vole-wildlife-walk",
       "tags": [
-        "Community",
+        "Nature",
         "Free",
-        "Waltham Forest",
+        "Ealing",
         "free"
       ],
       "keywords": [
-        "William Morris Gallery",
-        "Lloyd Park, Forest Road, Walthamstow, London",
-        "E17 4PP",
-        "Waltham Forest",
+        "Pear Tree Park Bistro",
+        "Stockdove Way, Perivale, Greenford",
+        "UB6 8TJ",
+        "Ealing",
         "event events this week weekend free affordable"
       ],
-      "content": "A reopening family day offers screenprinting, a first look at the redisplayed permanent collection and a new trail through William Morris's former home. A free neighbourhood reopening day offers early access to a redisplayed collection inside William Morris's historic home.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-10T16:15:00+01:00"
+      "content": "Citizen Zoo leads a field walk along Coston's Brook to read the habitat and assess its potential for the return of London's water voles. A free, expert-led look at an overlooked west London waterway and the practical prospects for restoring a lost urban species.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-16T13:45:00+01:00"
     },
     {
-      "id": "event:surbiton-ski-sunday:en",
+      "id": "event:muswell-hill-creatives-make-and-mend:en",
       "type": "event",
       "locale": "en",
-      "title": "Surbiton Ski Sunday",
-      "summary": "Sun 11 Oct · St Mark's Hill · Free — Surbiton's eccentric annual race sends costumed competitors downhill on blocks of ice, with a luge, community spectacle and free participation or viewing.",
-      "url": "/events/#event-surbiton-ski-sunday",
+      "title": "Muswell Hill Creatives: Make and Mend Festival",
+      "summary": "Sat 17 Oct · Hornsey Town Hall · Free — A free neighbourhood festival fills Hornsey Town Hall with repair, making and sustainable craft; paid workshops are optional.",
+      "url": "/events/#event-muswell-hill-creatives-make-and-mend",
       "tags": [
         "Community",
         "Free",
-        "Kingston upon Thames",
+        "Haringey",
         "free"
       ],
       "keywords": [
-        "St Mark's Hill",
-        "Central Parade, St Mark's Hill, Surbiton",
-        "KT6 4PJ",
-        "Kingston upon Thames",
+        "Hornsey Town Hall",
+        "The Broadway, Crouch End, London",
+        "N8 9JJ",
+        "Haringey",
         "event events this week weekend free affordable"
       ],
-      "content": "Surbiton's eccentric annual race sends costumed competitors downhill on blocks of ice, with a luge, community spectacle and free participation or viewing. A genuinely odd, free and deeply local tradition turns a Surbiton hill into a one-day community ski slope.",
-      "updated_at": "2026-10-08T15:03:54+01:00",
-      "expires_at": "2026-10-11T13:15:00+01:00"
+      "content": "A free neighbourhood festival fills Hornsey Town Hall with repair, making and sustainable craft; paid workshops are optional. An independent Crouch End collective turns a landmark civic building into a free one-day celebration of repair and local making.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-17T17:15:00+01:00"
+    },
+    {
+      "id": "event:marys-dress-keats-house:en",
+      "type": "event",
+      "locale": "en",
+      "title": "A Conversation with Mary's Dress",
+      "summary": "Sat 17 Oct · Keats House · £15 (£12 concession) — At Keats House, an interactive Georgian dress embedded with sound reveals the working lives and material culture behind the poet's circle.",
+      "url": "/events/#event-marys-dress-keats-house",
+      "tags": [
+        "Heritage and history",
+        "£15 (£12 concession)",
+        "Camden",
+        "exceptional"
+      ],
+      "keywords": [
+        "Keats House",
+        "10 Keats Grove, Hampstead, London",
+        "NW3 2RR",
+        "Camden",
+        "event events this week weekend free affordable"
+      ],
+      "content": "At Keats House, an interactive Georgian dress embedded with sound reveals the working lives and material culture behind the poet's circle. The top-end price is justified by a one-off object-led performance and special attendee-only access to Keats House.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-17T16:15:00+01:00"
+    },
+    {
+      "id": "event:dexter-khan-carnival-60-finale:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Dexter Khan: Notting Hill Carnival 60 Finale",
+      "summary": "Sat 17 Oct · The Listening Lounge, Mason & Fifth · £6 — Photographer Dexter Khan closes the Carnival 60 programme with images and first-hand stories from six decades of Notting Hill Carnival.",
+      "url": "/events/#event-dexter-khan-carnival-60-finale",
+      "tags": [
+        "Local culture",
+        "£6",
+        "City of Westminster",
+        "cheap"
+      ],
+      "keywords": [
+        "The Listening Lounge, Mason & Fifth",
+        "11 Woodfield Road, London",
+        "W9 2BA",
+        "City of Westminster",
+        "event events this week weekend free affordable"
+      ],
+      "content": "Photographer Dexter Khan closes the Carnival 60 programme with images and first-hand stories from six decades of Notting Hill Carnival. A small-room finale combining a local photographer's archive, living testimony and six decades of one of London's defining cultural stories.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-17T20:15:00+01:00"
+    },
+    {
+      "id": "event:enfield-black-literature-festival:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Enfield Black Literature Festival",
+      "summary": "Sun 18 Oct · Dugdale Arts Centre · £10 full programme (£5 workshops) — Thirteen authors, readings, panels, workshops, a Windrush exhibition and a book swap come together for an independent borough-wide literary day.",
+      "url": "/events/#event-enfield-black-literature-festival",
+      "tags": [
+        "Local culture",
+        "£10 full programme (£5 workshops)",
+        "Enfield",
+        "cheap"
+      ],
+      "keywords": [
+        "Dugdale Arts Centre",
+        "39 London Road, Enfield",
+        "EN2 6DS",
+        "Enfield",
+        "event events this week weekend free affordable"
+      ],
+      "content": "Thirteen authors, readings, panels, workshops, a Windrush exhibition and a book swap come together for an independent borough-wide literary day. A deeply local all-day programme makes Black British writing, Windrush memory and community exchange unusually accessible for £10.",
+      "updated_at": "2026-10-11T15:05:15+01:00",
+      "expires_at": "2026-10-18T19:15:00+01:00"
     }
   ]
 }
