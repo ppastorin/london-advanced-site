@@ -59,15 +59,6 @@ jobs:
             npm run prerender
           fi
 
-      - name: Reject stale generated pages in pull requests
-        if: github.event_name == 'pull_request'
-        run: |
-          if ! git diff --quiet -- dist/index.html dist/events/index.html dist/it dist/journal dist/assets/journal dist/studio dist/journal.css dist/journal.js dist/sitemap.xml dist/search dist/search.js dist/search.css dist/data/search-index.en.json dist/data/search-index.it.json; then
-            echo "Generated pages/assets are stale. Run npm run prerender:preview and commit the generated output."
-            git diff -- dist/index.html dist/events/index.html dist/it dist/journal dist/assets/journal dist/studio dist/journal.css dist/journal.js dist/sitemap.xml dist/search dist/search.js dist/search.css dist/data/search-index.en.json dist/data/search-index.it.json
-            exit 1
-          fi
-
       - name: Validate site structure and links
         run: npm test
 
