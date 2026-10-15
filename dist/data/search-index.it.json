@@ -540,7 +540,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "L'ultimo weekend della prima mostra fotografica di Japan House accosta gli studi di Kawada sulla memoria postbellica alle immagini di Iwane su migrazione e Tohoku.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-18T18:15:00+01:00"
     },
     {
@@ -564,7 +564,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Citizen Zoo guida una passeggiata sul campo lungo Coston's Brook per leggere l'habitat e valutarne il potenziale per il ritorno delle arvicole acquatiche.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-16T13:45:00+01:00"
     },
     {
@@ -588,7 +588,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Un festival di quartiere gratuito riempie Hornsey Town Hall di riparazione, artigianato e pratiche sostenibili; i workshop a pagamento sono facoltativi.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-17T17:15:00+01:00"
     },
     {
@@ -612,32 +612,8 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "A Keats House, un abito georgiano interattivo con suoni incorporati racconta lavoro e cultura materiale dietro la cerchia del poeta.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-17T16:15:00+01:00"
-    },
-    {
-      "id": "event:dexter-khan-carnival-60-finale:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Dexter Khan: finale di Notting Hill Carnival 60",
-      "summary": "sab 17 ott · The Listening Lounge, Mason & Fifth · £6 — Il fotografo Dexter Khan chiude Carnival 60 con immagini e testimonianze dirette raccolte in sei decenni di Notting Hill Carnival.",
-      "url": "/it/eventi/#event-dexter-khan-carnival-60-finale",
-      "tags": [
-        "Cultura locale",
-        "£6",
-        "City of Westminster",
-        "cheap"
-      ],
-      "keywords": [
-        "The Listening Lounge, Mason & Fifth",
-        "11 Woodfield Road, London",
-        "W9 2BA",
-        "City of Westminster",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "Il fotografo Dexter Khan chiude Carnival 60 con immagini e testimonianze dirette raccolte in sei decenni di Notting Hill Carnival.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
-      "expires_at": "2026-10-17T20:15:00+01:00"
     },
     {
       "id": "event:enfield-black-literature-festival:it",
@@ -660,7 +636,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Tredici autori, letture, panel, workshop, una mostra su Windrush e uno scambio di libri si incontrano in una giornata letteraria indipendente.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-18T19:15:00+01:00"
     }
   ]

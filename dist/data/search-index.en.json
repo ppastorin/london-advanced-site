@@ -541,7 +541,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "The final weekend of Japan House London's first photography exhibition pairs Kawada's postwar memory studies with Iwane's work on migration and Tohoku. A free final chance to see two major Japanese photographers together in Japan House London's first photography exhibition.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-18T18:15:00+01:00"
     },
     {
@@ -565,7 +565,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "Citizen Zoo leads a field walk along Coston's Brook to read the habitat and assess its potential for the return of London's water voles. A free, expert-led look at an overlooked west London waterway and the practical prospects for restoring a lost urban species.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-16T13:45:00+01:00"
     },
     {
@@ -589,7 +589,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "A free neighbourhood festival fills Hornsey Town Hall with repair, making and sustainable craft; paid workshops are optional. An independent Crouch End collective turns a landmark civic building into a free one-day celebration of repair and local making.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-17T17:15:00+01:00"
     },
     {
@@ -613,32 +613,8 @@
         "event events this week weekend free affordable"
       ],
       "content": "At Keats House, an interactive Georgian dress embedded with sound reveals the working lives and material culture behind the poet's circle. The top-end price is justified by a one-off object-led performance and special attendee-only access to Keats House.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-17T16:15:00+01:00"
-    },
-    {
-      "id": "event:dexter-khan-carnival-60-finale:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Dexter Khan: Notting Hill Carnival 60 Finale",
-      "summary": "Sat 17 Oct · The Listening Lounge, Mason & Fifth · £6 — Photographer Dexter Khan closes the Carnival 60 programme with images and first-hand stories from six decades of Notting Hill Carnival.",
-      "url": "/events/#event-dexter-khan-carnival-60-finale",
-      "tags": [
-        "Local culture",
-        "£6",
-        "City of Westminster",
-        "cheap"
-      ],
-      "keywords": [
-        "The Listening Lounge, Mason & Fifth",
-        "11 Woodfield Road, London",
-        "W9 2BA",
-        "City of Westminster",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Photographer Dexter Khan closes the Carnival 60 programme with images and first-hand stories from six decades of Notting Hill Carnival. A small-room finale combining a local photographer's archive, living testimony and six decades of one of London's defining cultural stories.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
-      "expires_at": "2026-10-17T20:15:00+01:00"
     },
     {
       "id": "event:enfield-black-literature-festival:en",
@@ -661,7 +637,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "Thirteen authors, readings, panels, workshops, a Windrush exhibition and a book swap come together for an independent borough-wide literary day. A deeply local all-day programme makes Black British writing, Windrush memory and community exchange unusually accessible for £10.",
-      "updated_at": "2026-10-11T15:05:15+01:00",
+      "updated_at": "2026-10-15T15:03:57+01:00",
       "expires_at": "2026-10-18T19:15:00+01:00"
     }
   ]
