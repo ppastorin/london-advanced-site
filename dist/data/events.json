@@ -1,13 +1,13 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-11T15:05:15+01:00",
-  "valid_from": "2026-10-11",
+  "generated_at": "2026-10-15T15:03:57+01:00",
+  "valid_from": "2026-10-15",
   "valid_until": "2026-10-18",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
     "costons-brook-water-vole-wildlife-walk",
-    "dexter-khan-carnival-60-finale",
+    "marys-dress-keats-house",
     "enfield-black-literature-festival"
   ],
   "events": [
@@ -54,11 +54,11 @@
       "official_url": "https://www.japanhouselondon.uk/whats-on/kyotographie-kawada-kikuji-x-iwane-ai/",
       "verification": {
         "source_url": "https://www.japanhouselondon.uk/whats-on/kyotographie-kawada-kikuji-x-iwane-ai/",
-        "verified_at": "2026-10-11T15:05:15+01:00",
+        "verified_at": "2026-10-15T15:03:57+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-11T15:05:15+01:00",
+      "publish_at": "2026-10-15T15:03:57+01:00",
       "expire_at": "2026-10-18T18:15:00+01:00"
     },
     {
@@ -104,11 +104,11 @@
       "official_url": "https://www.eventbrite.co.uk/e/wildlife-walk-exploring-costons-brook-its-water-vole-potential-tickets-1999501348358",
       "verification": {
         "source_url": "https://www.eventbrite.co.uk/e/wildlife-walk-exploring-costons-brook-its-water-vole-potential-tickets-1999501348358",
-        "verified_at": "2026-10-11T15:05:15+01:00",
+        "verified_at": "2026-10-15T15:03:57+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-11T15:05:15+01:00",
+      "publish_at": "2026-10-15T15:03:57+01:00",
       "expire_at": "2026-10-16T13:45:00+01:00"
     },
     {
@@ -154,11 +154,11 @@
       "official_url": "https://www.muswellhillcreatives.com/make-and-mend.html",
       "verification": {
         "source_url": "https://www.muswellhillcreatives.com/make-and-mend.html",
-        "verified_at": "2026-10-11T15:05:15+01:00",
+        "verified_at": "2026-10-15T15:03:57+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-11T15:05:15+01:00",
+      "publish_at": "2026-10-15T15:03:57+01:00",
       "expire_at": "2026-10-17T17:15:00+01:00"
     },
     {
@@ -204,62 +204,12 @@
       "official_url": "https://www.cityoflondon.gov.uk/events/a-conversation-with-marys-dress",
       "verification": {
         "source_url": "https://www.lovecamden.org/whats-on/a-conversation-with-mary-s-dress-35187135",
-        "verified_at": "2026-10-11T15:05:15+01:00",
+        "verified_at": "2026-10-15T15:03:57+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-11T15:05:15+01:00",
+      "publish_at": "2026-10-15T15:03:57+01:00",
       "expire_at": "2026-10-17T16:15:00+01:00"
-    },
-    {
-      "id": "dexter-khan-carnival-60-finale",
-      "duplicate_key": "dexter-khan-carnival-60-listening-lounge-2026-10-17",
-      "title_en": "Dexter Khan: Notting Hill Carnival 60 Finale",
-      "title_it": "Dexter Khan: finale di Notting Hill Carnival 60",
-      "summary_en": "Photographer Dexter Khan closes the Carnival 60 programme with images and first-hand stories from six decades of Notting Hill Carnival.",
-      "summary_it": "Il fotografo Dexter Khan chiude Carnival 60 con immagini e testimonianze dirette raccolte in sei decenni di Notting Hill Carnival.",
-      "start": "2026-10-17T18:00:00+01:00",
-      "end": "2026-10-17T20:00:00+01:00",
-      "venue": {
-        "name": "The Listening Lounge, Mason & Fifth",
-        "address": "11 Woodfield Road, London",
-        "postcode": "W9 2BA",
-        "borough": "City of Westminster"
-      },
-      "price": {
-        "amount_gbp": 6,
-        "display": "£6",
-        "classification": "cheap"
-      },
-      "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.eventbrite.co.uk/e/dexter-khan-notting-hill-carnival-60-tickets-1998660207483"
-      },
-      "category": "local-culture",
-      "advanced": {
-        "score": 10,
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        },
-        "reason": "A small-room finale combining a local photographer's archive, living testimony and six decades of one of London's defining cultural stories."
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://nottinghillcarnival60.co.uk/",
-      "verification": {
-        "source_url": "https://www.eventbrite.co.uk/e/dexter-khan-notting-hill-carnival-60-tickets-1998660207483",
-        "verified_at": "2026-10-11T15:05:15+01:00",
-        "confidence": "high"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-11T15:05:15+01:00",
-      "expire_at": "2026-10-17T20:15:00+01:00"
     },
     {
       "id": "enfield-black-literature-festival",
@@ -304,11 +254,11 @@
       "official_url": "https://www.dugdaleartscentre.co.uk/whats-on/enfield-black-literature-festival",
       "verification": {
         "source_url": "https://www.dugdaleartscentre.co.uk/whats-on/enfield-black-literature-festival",
-        "verified_at": "2026-10-11T15:05:15+01:00",
+        "verified_at": "2026-10-15T15:03:57+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-11T15:05:15+01:00",
+      "publish_at": "2026-10-15T15:03:57+01:00",
       "expire_at": "2026-10-18T19:15:00+01:00"
     }
   ]
