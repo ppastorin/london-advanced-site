@@ -1,29 +1,64 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
-  "article_id": "london-neighbourhood-food-markets",
-  "editorial_status": "review",
+  "body": "Borough Market is excellent at being Borough Market: historic, central, polished and extremely busy. The mistake is allowing it to stand for London’s entire market culture. Across the city, smaller food markets serve office workers, park regulars, local families and evening crowds. Their value lies as much in their setting and timetable as in whatever is being cooked that week.\n\nThese five are not a definitive ranking, and traders change too often for a list of supposedly essential dishes to remain useful. Instead, each offers a different kind of London day. Check the official market page before travelling, especially around holidays, and treat the opening times below as a starting point rather than a guarantee for every individual stall.\n\n## Lower Marsh: a weekday lunch behind Waterloo\n\nMost people leave Waterloo station and follow the crowd towards the South Bank. Lower Marsh rewards the opposite turn. Running behind the station, this old trading street mixes surviving shopfronts, cafés, specialist independents and a compact weekday food market. It feels less like an attraction than a street briefly reorganising itself around lunch.\n\nThe market currently operates Monday to Friday from 11am to 3pm, so this is not the place to save for Sunday. Arrive before the sharpest office rush if you want time to look at the stalls, then continue along the permanent shops rather than turning back as soon as you have eaten. The contrast with the nearby riverside is the point: in a few minutes you move from one of London’s busiest visitor corridors into a street shaped mainly by workers and residents.\n\n[Check Lower Marsh Market →](https://www.lowermarshmarket.com/)\n\n## Broadway Market: food as part of a Hackney street\n\nBroadway Market works because the market is only one layer of the street. Weekend stalls bring prepared food, bread, produce, crafts and plenty of people, while the shops, cafés and restaurants remain part of the place throughout the week. The Saturday market runs from 9am to 5pm and the Sunday market from 10am; the atmosphere at midday can be intense.\n\nCome early if you want to browse. Come later if you want energy and do not mind queues. Either way, do not consume the street as a narrow corridor of food photographs. London Fields begins at one end and the Regent’s Canal lies at the other, while [Hackney City Farm appears in our guide to London’s community farms](/journal/london-city-farms-free-community-guide/). Those connections turn lunch into a proper east London walk.\n\n[Check Broadway Market →](https://broadwaymarket.co.uk/)\n\n## Victoria Park Market: Sunday lunch with somewhere to sit\n\nVictoria Park Market occupies the Nightwalk, a pedestrian route inside the park between Bonner Gate and Gore Gate. It operates on Sundays, normally from 10am to 4pm. Trees and open lawns change the experience: food can be carried away from the stalls, queues disperse and a market visit becomes part of a longer circuit rather than the whole event.\n\nThis is the strongest choice of the five for a picnic-style day. Walk through the park before deciding what to buy, find a quieter patch away from the main path and leave time for the canal or the park’s Chinese pagoda. Good weather increases both the pleasure and the crowd, so an earlier arrival gives you more room.\n\n[Check Victoria Park Market →](https://victoriaparkmarket.com/)\n\n## Tooting Market: an indoor market that continues into the evening\n\nTooting Market is not simply a food hall. Established in 1930, it still combines restaurants and bars with fabric sellers, tailors, beauty businesses, shops and services. Its mix of Jamaican, Japanese, Mauritian, Lebanese, Chinese, Portuguese, Guyanese and other food businesses reflects the surrounding neighbourhood more convincingly than a curated collection of fashionable stalls could.\n\nUnlike the lunchtime and weekend markets above, the building opens seven days a week and continues into the evening, although individual traders keep their own hours and some close on Mondays. Visit when the retail stalls are active if you want to understand the whole market; arrive later for dinner and a busier social atmosphere. Do not confuse it with Broadway Market Tooting, the other covered market a short distance away—or with Broadway Market in Hackney. London has made this unnecessarily complicated.\n\n[Check Tooting Market →](https://tootingmarket.com/)\n\n## Duke of York Square: a polished Saturday market in Chelsea\n\nEvery Saturday from 10am to 4pm, Duke of York Square hosts an open-air food market of roughly 45 stalls. The setting is conspicuously tidy: red-and-white awnings, the Saatchi Gallery, King’s Road shops and broad pedestrian space. It is the most polished and expensive-feeling selection here, but dismissing it for that reason would miss the useful contrast. London’s market culture also includes oysters, pastries and international dishes served beside contemporary art and high-end retail.\n\nThe market shifts position within the square seasonally, so follow the signs rather than assuming the photograph marks a permanent pitch. Combine it with the free Saatchi Gallery, the shops along Pavilion Road or a walk towards Chelsea Physic Garden. It works best as one part of a Chelsea morning, not as a cross-city pilgrimage for a single snack.\n\n[Check Duke of York Square Food Market →](https://dukeofyorksquare.com/food-and-dining/categories/duke-of-york-square-market)\n\n## Choose by rhythm, not reputation\n\nUse Lower Marsh for a weekday lunch, Broadway Market for a crowded east London weekend, Victoria Park for food with green space, Tooting for an indoor evening and Duke of York Square for a Saturday paired with Chelsea. That is more useful than declaring one ‘best’. Prices, traders and queues change; the relationship between each market and its neighbourhood is more durable.\n\nBring an appetite, but also leave with somewhere else to walk. A good London market should widen the day around it.",
   "approval": {
     "status": "pending"
   },
-  "title": "Five London food markets beyond Borough: eat locally, explore further",
-  "slug": "london-food-markets-beyond-borough",
-  "seo_title": "Five London Food Markets Beyond Borough Market",
-  "description": "Explore five London food markets beyond Borough, from Lower Marsh and Hackney to Victoria Park, Tooting and Chelsea, with nearby ideas.",
+  "article_id": "london-neighbourhood-food-markets",
+  "related_tools": [
+    "smart-navigation",
+    "escape-the-crowds",
+    "travel-fare-calculator",
+    "loo-finder"
+  ],
   "eyebrow": "Across London · Neighbourhood food",
   "dek": "The best market visit is not a race between stalls. Choose the right market for the day, eat something good and use it to understand the neighbourhood around it.",
-  "body": "Borough Market is excellent at being Borough Market: historic, central, polished and extremely busy. The mistake is allowing it to stand for London’s entire market culture. Across the city, smaller food markets serve office workers, park regulars, local families and evening crowds. Their value lies as much in their setting and timetable as in whatever is being cooked that week.\n\nThese five are not a definitive ranking, and traders change too often for a list of supposedly essential dishes to remain useful. Instead, each offers a different kind of London day. Check the official market page before travelling, especially around holidays, and treat the opening times below as a starting point rather than a guarantee for every individual stall.\n\n## Lower Marsh: a weekday lunch behind Waterloo\n\nMost people leave Waterloo station and follow the crowd towards the South Bank. Lower Marsh rewards the opposite turn. Running behind the station, this old trading street mixes surviving shopfronts, cafés, specialist independents and a compact weekday food market. It feels less like an attraction than a street briefly reorganising itself around lunch.\n\nThe market currently operates Monday to Friday from 11am to 3pm, so this is not the place to save for Sunday. Arrive before the sharpest office rush if you want time to look at the stalls, then continue along the permanent shops rather than turning back as soon as you have eaten. The contrast with the nearby riverside is the point: in a few minutes you move from one of London’s busiest visitor corridors into a street shaped mainly by workers and residents.\n\n[Check Lower Marsh Market →](https://www.lowermarshmarket.com/)\n\n## Broadway Market: food as part of a Hackney street\n\nBroadway Market works because the market is only one layer of the street. Weekend stalls bring prepared food, bread, produce, crafts and plenty of people, while the shops, cafés and restaurants remain part of the place throughout the week. The Saturday market runs from 9am to 5pm and the Sunday market from 10am; the atmosphere at midday can be intense.\n\nCome early if you want to browse. Come later if you want energy and do not mind queues. Either way, do not consume the street as a narrow corridor of food photographs. London Fields begins at one end and the Regent’s Canal lies at the other, while [Hackney City Farm appears in our guide to London’s community farms](/journal/london-city-farms-free-community-guide/). Those connections turn lunch into a proper east London walk.\n\n[Check Broadway Market →](https://broadwaymarket.co.uk/)\n\n## Victoria Park Market: Sunday lunch with somewhere to sit\n\nVictoria Park Market occupies the Nightwalk, a pedestrian route inside the park between Bonner Gate and Gore Gate. It operates on Sundays, normally from 10am to 4pm. Trees and open lawns change the experience: food can be carried away from the stalls, queues disperse and a market visit becomes part of a longer circuit rather than the whole event.\n\nThis is the strongest choice of the five for a picnic-style day. Walk through the park before deciding what to buy, find a quieter patch away from the main path and leave time for the canal or the park’s Chinese pagoda. Good weather increases both the pleasure and the crowd, so an earlier arrival gives you more room.\n\n[Check Victoria Park Market →](https://victoriaparkmarket.com/)\n\n## Tooting Market: an indoor market that continues into the evening\n\nTooting Market is not simply a food hall. Established in 1930, it still combines restaurants and bars with fabric sellers, tailors, beauty businesses, shops and services. Its mix of Jamaican, Japanese, Mauritian, Lebanese, Chinese, Portuguese, Guyanese and other food businesses reflects the surrounding neighbourhood more convincingly than a curated collection of fashionable stalls could.\n\nUnlike the lunchtime and weekend markets above, the building opens seven days a week and continues into the evening, although individual traders keep their own hours and some close on Mondays. Visit when the retail stalls are active if you want to understand the whole market; arrive later for dinner and a busier social atmosphere. Do not confuse it with Broadway Market Tooting, the other covered market a short distance away—or with Broadway Market in Hackney. London has made this unnecessarily complicated.\n\n[Check Tooting Market →](https://tootingmarket.com/)\n\n## Duke of York Square: a polished Saturday market in Chelsea\n\nEvery Saturday from 10am to 4pm, Duke of York Square hosts an open-air food market of roughly 45 stalls. The setting is conspicuously tidy: red-and-white awnings, the Saatchi Gallery, King’s Road shops and broad pedestrian space. It is the most polished and expensive-feeling selection here, but dismissing it for that reason would miss the useful contrast. London’s market culture also includes oysters, pastries and international dishes served beside contemporary art and high-end retail.\n\nThe market shifts position within the square seasonally, so follow the signs rather than assuming the photograph marks a permanent pitch. Combine it with the free Saatchi Gallery, the shops along Pavilion Road or a walk towards Chelsea Physic Garden. It works best as one part of a Chelsea morning, not as a cross-city pilgrimage for a single snack.\n\n[Check Duke of York Square Food Market →](https://dukeofyorksquare.com/food-and-dining/categories/duke-of-york-square-market)\n\n## Choose by rhythm, not reputation\n\nUse Lower Marsh for a weekday lunch, Broadway Market for a crowded east London weekend, Victoria Park for food with green space, Tooting for an indoor evening and Duke of York Square for a Saturday paired with Chelsea. That is more useful than declaring one ‘best’. Prices, traders and queues change; the relationship between each market and its neighbourhood is more durable.\n\nBring an appetite, but also leave with somewhere else to walk. A good London market should widen the day around it.",
+  "editorial_status": "approved",
+  "slug": "london-food-markets-beyond-borough",
+  "reading_minutes": 7,
+  "related_articles": [
+    "london-city-farms",
+    "london-community-gardens",
+    "blackheath-greenwich-walk",
+    "wandle-trail"
+  ],
+  "practical": [
+    {
+      "label": "Weekday lunch",
+      "value": "Lower Marsh, Monday to Friday",
+      "url": "https://www.lowermarshmarket.com/"
+    },
+    {
+      "label": "Weekend outdoors",
+      "value": "Broadway Market, Victoria Park or Duke of York Square",
+      "url": "https://broadwaymarket.co.uk/"
+    },
+    {
+      "label": "Indoor and evening",
+      "value": "Tooting Market; individual trader hours vary",
+      "url": "https://tootingmarket.com/"
+    },
+    {
+      "label": "Before travelling",
+      "value": "Recheck market day, holiday changes and trader hours",
+      "url": "https://victoriaparkmarket.com/"
+    }
+  ],
+  "seo_title": "Five London Food Markets Beyond Borough Market",
+  "updated_at": "2026-10-16T21:35:00+01:00",
+  "title": "Five London food markets beyond Borough: eat locally, explore further",
   "images": [
     {
-      "src": "/assets/journal/16-food-markets-03.webp",
-      "role": "hero",
       "display_mode": "crop",
-      "focal_x": 50,
-      "focal_y": 52,
-      "alt": "A busy outdoor food market under trees with rows of dark canopies and people walking between them",
-      "caption": "Victoria Park Market turns Sunday lunch into part of a wider day in the park.",
-      "credit": "Paolo Pastorino",
+      "src": "/assets/journal/16-food-markets-03.webp",
       "width": 2400,
-      "height": 1600
+      "caption": "Victoria Park Market turns Sunday lunch into part of a wider day in the park.",
+      "height": 1600,
+      "alt": "A busy outdoor food market under trees with rows of dark canopies and people walking between them",
+      "role": "hero",
+      "credit": "Paolo Pastorino",
+      "focal_x": 50,
+      "focal_y": 52
     },
     {
       "src": "/assets/journal/16-food-markets-01.webp",
@@ -66,47 +101,6 @@
       "height": 1800
     }
   ],
-  "practical": [
-    {
-      "label": "Weekday lunch",
-      "value": "Lower Marsh, Monday to Friday",
-      "url": "https://www.lowermarshmarket.com/"
-    },
-    {
-      "label": "Weekend outdoors",
-      "value": "Broadway Market, Victoria Park or Duke of York Square",
-      "url": "https://broadwaymarket.co.uk/"
-    },
-    {
-      "label": "Indoor and evening",
-      "value": "Tooting Market; individual trader hours vary",
-      "url": "https://tootingmarket.com/"
-    },
-    {
-      "label": "Before travelling",
-      "value": "Recheck market day, holiday changes and trader hours",
-      "url": "https://victoriaparkmarket.com/"
-    }
-  ],
-  "related_tools": [
-    "smart-navigation",
-    "escape-the-crowds",
-    "travel-fare-calculator",
-    "loo-finder"
-  ],
-  "related_articles": [
-    "london-city-farms",
-    "london-community-gardens",
-    "blackheath-greenwich-walk",
-    "wandle-trail"
-  ],
-  "tags": [
-    "London food markets",
-    "Street food",
-    "Local London",
-    "Markets",
-    "Neighbourhoods"
-  ],
   "sources": [
     {
       "label": "Lower Marsh Market",
@@ -134,6 +128,12 @@
       "checked_at": "2026-10-16"
     }
   ],
-  "reading_minutes": 7,
-  "updated_at": "2026-10-16T21:35:00+01:00"
+  "tags": [
+    "London food markets",
+    "Street food",
+    "Local London",
+    "Markets",
+    "Neighbourhoods"
+  ],
+  "description": "Explore five London food markets beyond Borough, from Lower Marsh and Hackney to Victoria Park, Tooting and Chelsea, with nearby ideas."
 }
