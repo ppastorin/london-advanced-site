@@ -1,29 +1,63 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
-  "article_id": "unusual-london-bookshops",
-  "editorial_status": "review",
+  "body": "A bookshop becomes a London destination when the room, the bookseller and the surrounding street matter as much as the stock. The five places below are not a ranking of the city’s ‘best’ bookshops. They are five different arguments for leaving an algorithm behind and looking at shelves you did not plan to search.\n\nThe selection ranges from second-hand institutions to a luxury publisher’s flagship. Some reward prolonged rummaging; others are as much about architecture, performance or a carefully staged idea. Opening hours can change and the smallest shops have little room, so check directly before crossing London—especially for Hurlingham Books, whose irregularity is part of its character.\n\n## Hurlingham Books: the shop I keep returning to\n\nHurlingham Books sits near Putney Bridge with books filling the windows, pavement boxes and almost every usable surface inside. The public shop is small; the business says that a nearby warehouse holds more than a million additional books across fiction, art, photography, children’s books, war, antiquarian material and other subjects. If you want something specific, asking is more productive than pretending you can survey the stock alone.\n\nThis is the most personal choice in the article. I keep returning and rarely leave empty-handed: old photography books, travel guides and volumes I did not know I wanted have all followed me home. The published opening times are deliberately approximate—‘9am-ish’ or ‘10am-ish’—and the shop warns that football can affect weekends. Call before a special journey. Then allow the conversation and the disorder to redirect you.\n\n[Check Hurlingham Books →](https://hurlinghambooks.com/our-shop)\n\n## Foster Books: Chiswick behind a bow window\n\nFoster Books occupies an eighteenth-century bow-windowed building described by the shop as the oldest shop on Chiswick High Road. The green frontage, outdoor tables and books visible through the glass announce the experience before you enter. Inside, hard-to-find, out-of-print, used and rare books sit in a space that has been run by the Foster family for more than half a century.\n\nIt feels curated without becoming forbidding. First editions and fine bindings share the shop with illustrated books and more affordable discoveries. On selected Sundays, the market outside adds another layer to the visit. The location also makes a natural continuation of a Chiswick day: our [walk through Chiswick House, Hogarth’s House and the Mosaic House](/journal/chiswick-hogarth-house-gardens-mosaic-house/) begins only a short distance away.\n\n[Check Foster Books →](https://www.fosterbooks.co.uk/)\n\n## Word on the Water: a bookshop that had to win its place\n\nWord on the Water occupies a century-old Dutch barge on the Regent’s Canal near Granary Square. New and second-hand books fill the cabin and exterior shelves; a wood-burning stove, roof stage, readings, poetry events and acoustic music extend the idea beyond retail. Its current opening hours are midday to 7pm every day except Christmas Day.\n\nIt is no longer obscure—few photogenic King’s Cross places remain so—but it is still unusual in substance. A floating shop has limited space, changing weather and a direct relationship with the towpath. Browse the cabin, look beyond the most photographable angle and check the event programme. The best visit is one in which the barge functions as a bookshop and venue, not merely as scenery beside Coal Drops Yard.\n\n[Check Word on the Water →](https://www.wordonthewater.co.uk/about-us)\n\n## Poetry Pharmacy: prescriptions above Oxford Street\n\nThe Poetry Pharmacy occupies the first floor of the Lush flagship on Oxford Street. Once past the ground-floor perfumes, visitors find a compact literary emporium and coffee shop built around the idea of poetry as treatment. Books are organised alongside playful ‘prescriptions’, bottled poetry pills and gifts addressing confidence, heartbreak, calm and other emotional states.\n\nThe conceit could have remained a novelty, but the dedicated poetry selection, staff recommendations, readings and workshops give it substance. It also provides a surprisingly quiet pause from one of London’s most exhausting shopping streets. The shop is accessible by lift from the back of the ground floor. Its hours differ from the coffee counter, so check which part you need before arriving late.\n\n[Check the Poetry Pharmacy →](https://poetrypharmacy.co.uk/pages/our-stores)\n\n## Maison Assouline: books inside a Lutyens bank\n\nMaison Assouline is the outlier: not a crowded second-hand shop but the London flagship of a luxury illustrated-book publisher. It occupies a Grade II* former Midland Bank on Piccadilly designed by Edwin Lutyens. Large-format books, design objects and carefully arranged interiors rise through the building, while Swans Bar makes hospitality part of the concept.\n\nPrices and presentation are unapologetically high-end. You do not need to pretend otherwise, nor do you need to buy a monumental coffee-table book to justify looking. The banking hall, woodwork, ceiling and relationship between books and architecture make the free browse worthwhile. Treat it as a cultural showroom and a chance to see a Lutyens interior in active use; continue afterwards to St James’s Church, the Royal Academy or the specialist shops around Jermyn Street.\n\n[Check Maison Assouline →](https://www.assouline.com/pages/store/maison-assouline)\n\n## Five shops, five reasons to browse slowly\n\nGo to Hurlingham for abundance and conversation, Foster Books for its building and informed selection, Word on the Water for the barge and events, Poetry Pharmacy for a focused idea carried through with wit, and Maison Assouline for architecture and display. They are not interchangeable, and that is the point.\n\nIndependent and specialist bookshops survive when people enter, ask, browse and buy—not when their façades become social-media scenery. Take a photograph if it helps you remember the place. Then put the phone away and open something you did not arrive intending to find.",
   "approval": {
     "status": "pending"
   },
-  "title": "Five unusual London bookshops worth crossing the city for",
-  "slug": "unusual-london-bookshops-to-visit",
-  "seo_title": "Five Unusual London Bookshops to Visit",
-  "description": "Visit five unusual London bookshops: Hurlingham Books, Foster Books, Word on the Water, Poetry Pharmacy and Maison Assouline.",
+  "article_id": "unusual-london-bookshops",
+  "related_tools": [
+    "london-by-mood",
+    "smart-navigation",
+    "travel-fare-calculator"
+  ],
   "eyebrow": "Across London · Independent browsing",
   "dek": "A shop overflowing onto the pavement, an eighteenth-century frontage, a book barge, poetry on prescription and a former bank make browsing part of the journey.",
-  "body": "A bookshop becomes a London destination when the room, the bookseller and the surrounding street matter as much as the stock. The five places below are not a ranking of the city’s ‘best’ bookshops. They are five different arguments for leaving an algorithm behind and looking at shelves you did not plan to search.\n\nThe selection ranges from second-hand institutions to a luxury publisher’s flagship. Some reward prolonged rummaging; others are as much about architecture, performance or a carefully staged idea. Opening hours can change and the smallest shops have little room, so check directly before crossing London—especially for Hurlingham Books, whose irregularity is part of its character.\n\n## Hurlingham Books: the shop I keep returning to\n\nHurlingham Books sits near Putney Bridge with books filling the windows, pavement boxes and almost every usable surface inside. The public shop is small; the business says that a nearby warehouse holds more than a million additional books across fiction, art, photography, children’s books, war, antiquarian material and other subjects. If you want something specific, asking is more productive than pretending you can survey the stock alone.\n\nThis is the most personal choice in the article. I keep returning and rarely leave empty-handed: old photography books, travel guides and volumes I did not know I wanted have all followed me home. The published opening times are deliberately approximate—‘9am-ish’ or ‘10am-ish’—and the shop warns that football can affect weekends. Call before a special journey. Then allow the conversation and the disorder to redirect you.\n\n[Check Hurlingham Books →](https://hurlinghambooks.com/our-shop)\n\n## Foster Books: Chiswick behind a bow window\n\nFoster Books occupies an eighteenth-century bow-windowed building described by the shop as the oldest shop on Chiswick High Road. The green frontage, outdoor tables and books visible through the glass announce the experience before you enter. Inside, hard-to-find, out-of-print, used and rare books sit in a space that has been run by the Foster family for more than half a century.\n\nIt feels curated without becoming forbidding. First editions and fine bindings share the shop with illustrated books and more affordable discoveries. On selected Sundays, the market outside adds another layer to the visit. The location also makes a natural continuation of a Chiswick day: our [walk through Chiswick House, Hogarth’s House and the Mosaic House](/journal/chiswick-hogarth-house-gardens-mosaic-house/) begins only a short distance away.\n\n[Check Foster Books →](https://www.fosterbooks.co.uk/)\n\n## Word on the Water: a bookshop that had to win its place\n\nWord on the Water occupies a century-old Dutch barge on the Regent’s Canal near Granary Square. New and second-hand books fill the cabin and exterior shelves; a wood-burning stove, roof stage, readings, poetry events and acoustic music extend the idea beyond retail. Its current opening hours are midday to 7pm every day except Christmas Day.\n\nIt is no longer obscure—few photogenic King’s Cross places remain so—but it is still unusual in substance. A floating shop has limited space, changing weather and a direct relationship with the towpath. Browse the cabin, look beyond the most photographable angle and check the event programme. The best visit is one in which the barge functions as a bookshop and venue, not merely as scenery beside Coal Drops Yard.\n\n[Check Word on the Water →](https://www.wordonthewater.co.uk/about-us)\n\n## Poetry Pharmacy: prescriptions above Oxford Street\n\nThe Poetry Pharmacy occupies the first floor of the Lush flagship on Oxford Street. Once past the ground-floor perfumes, visitors find a compact literary emporium and coffee shop built around the idea of poetry as treatment. Books are organised alongside playful ‘prescriptions’, bottled poetry pills and gifts addressing confidence, heartbreak, calm and other emotional states.\n\nThe conceit could have remained a novelty, but the dedicated poetry selection, staff recommendations, readings and workshops give it substance. It also provides a surprisingly quiet pause from one of London’s most exhausting shopping streets. The shop is accessible by lift from the back of the ground floor. Its hours differ from the coffee counter, so check which part you need before arriving late.\n\n[Check the Poetry Pharmacy →](https://poetrypharmacy.co.uk/pages/our-stores)\n\n## Maison Assouline: books inside a Lutyens bank\n\nMaison Assouline is the outlier: not a crowded second-hand shop but the London flagship of a luxury illustrated-book publisher. It occupies a Grade II* former Midland Bank on Piccadilly designed by Edwin Lutyens. Large-format books, design objects and carefully arranged interiors rise through the building, while Swans Bar makes hospitality part of the concept.\n\nPrices and presentation are unapologetically high-end. You do not need to pretend otherwise, nor do you need to buy a monumental coffee-table book to justify looking. The banking hall, woodwork, ceiling and relationship between books and architecture make the free browse worthwhile. Treat it as a cultural showroom and a chance to see a Lutyens interior in active use; continue afterwards to St James’s Church, the Royal Academy or the specialist shops around Jermyn Street.\n\n[Check Maison Assouline →](https://www.assouline.com/pages/store/maison-assouline)\n\n## Five shops, five reasons to browse slowly\n\nGo to Hurlingham for abundance and conversation, Foster Books for its building and informed selection, Word on the Water for the barge and events, Poetry Pharmacy for a focused idea carried through with wit, and Maison Assouline for architecture and display. They are not interchangeable, and that is the point.\n\nIndependent and specialist bookshops survive when people enter, ask, browse and buy—not when their façades become social-media scenery. Take a photograph if it helps you remember the place. Then put the phone away and open something you did not arrive intending to find.",
+  "editorial_status": "approved",
+  "slug": "unusual-london-bookshops-to-visit",
+  "reading_minutes": 7,
+  "related_articles": [
+    "chiswick-hogarth-house-gardens",
+    "quentin-blake-centre",
+    "va-east-storehouse",
+    "london-community-gardens"
+  ],
+  "practical": [
+    {
+      "label": "Call ahead",
+      "value": "Hurlingham Books keeps deliberately approximate hours",
+      "url": "https://hurlinghambooks.com/contact-us"
+    },
+    {
+      "label": "Daily option",
+      "value": "Word on the Water normally opens midday to 7pm",
+      "url": "https://www.wordonthewater.co.uk/"
+    },
+    {
+      "label": "Accessible by lift",
+      "value": "Poetry Pharmacy, from the rear of Lush’s ground floor",
+      "url": "https://poetrypharmacy.co.uk/pages/our-stores"
+    },
+    {
+      "label": "Browsing",
+      "value": "Free at all five; events, drinks and purchases are separate",
+      "url": ""
+    }
+  ],
+  "seo_title": "Five Unusual London Bookshops to Visit",
+  "updated_at": "2026-10-16T21:35:00+01:00",
+  "title": "Five unusual London bookshops worth crossing the city for",
   "images": [
     {
-      "src": "/assets/journal/18-bookshops-03.webp",
-      "role": "hero",
       "display_mode": "crop",
-      "focal_x": 50,
-      "focal_y": 50,
-      "alt": "Word on the Water book barge with books displayed along its deck beside the Regent’s Canal",
-      "caption": "Word on the Water turns a century-old Dutch barge into both bookshop and small performance venue.",
-      "credit": "Paolo Pastorino",
+      "src": "/assets/journal/18-bookshops-03.webp",
       "width": 2400,
-      "height": 1602
+      "caption": "Word on the Water turns a century-old Dutch barge into both bookshop and small performance venue.",
+      "height": 1602,
+      "alt": "Word on the Water book barge with books displayed along its deck beside the Regent’s Canal",
+      "role": "hero",
+      "credit": "Paolo Pastorino",
+      "focal_x": 50,
+      "focal_y": 50
     },
     {
       "src": "/assets/journal/18-bookshops-01.webp",
@@ -66,46 +100,6 @@
       "height": 3200
     }
   ],
-  "practical": [
-    {
-      "label": "Call ahead",
-      "value": "Hurlingham Books keeps deliberately approximate hours",
-      "url": "https://hurlinghambooks.com/contact-us"
-    },
-    {
-      "label": "Daily option",
-      "value": "Word on the Water normally opens midday to 7pm",
-      "url": "https://www.wordonthewater.co.uk/"
-    },
-    {
-      "label": "Accessible by lift",
-      "value": "Poetry Pharmacy, from the rear of Lush’s ground floor",
-      "url": "https://poetrypharmacy.co.uk/pages/our-stores"
-    },
-    {
-      "label": "Browsing",
-      "value": "Free at all five; events, drinks and purchases are separate",
-      "url": ""
-    }
-  ],
-  "related_tools": [
-    "london-by-mood",
-    "smart-navigation",
-    "travel-fare-calculator"
-  ],
-  "related_articles": [
-    "chiswick-hogarth-house-gardens",
-    "quentin-blake-centre",
-    "va-east-storehouse",
-    "london-community-gardens"
-  ],
-  "tags": [
-    "London bookshops",
-    "Independent shops",
-    "Books",
-    "Unusual London",
-    "Literary London"
-  ],
   "sources": [
     {
       "label": "Hurlingham Books — Our Shop",
@@ -133,6 +127,12 @@
       "checked_at": "2026-10-16"
     }
   ],
-  "reading_minutes": 7,
-  "updated_at": "2026-10-16T21:35:00+01:00"
+  "tags": [
+    "London bookshops",
+    "Independent shops",
+    "Books",
+    "Unusual London",
+    "Literary London"
+  ],
+  "description": "Visit five unusual London bookshops: Hurlingham Books, Foster Books, Word on the Water, Poetry Pharmacy and Maison Assouline."
 }
