@@ -1,9 +1,11 @@
 {
   "workflow_help": "Draft → Review → Approved → Published",
   "article_id": "unusual-london-viewpoints",
-  "editorial_status": "review",
+  "editorial_status": "published",
   "approval": {
-    "status": "pending"
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-16T21:27:15+01:00"
   },
   "title": "Five unusual London viewpoints where the ground matters as much as the skyline",
   "slug": "unusual-london-viewpoints-with-a-story",
@@ -135,5 +137,6 @@
     }
   ],
   "reading_minutes": 7,
-  "updated_at": "2026-10-16T21:35:00+01:00"
+  "published_at": "2026-10-16T21:27:15+01:00",
+  "updated_at": "2026-10-16T21:27:15+01:00"
 }
