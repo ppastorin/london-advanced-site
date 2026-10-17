@@ -35,6 +35,11 @@ export function buildTargetPath(relativePath) {
   return path ? `${DESTINATION_ROOT}/${path}` : "";
 }
 
+export function deploymentPaths(targetPath) {
+  const path = normaliseRelativePath(targetPath);
+  return path ? [path, `dist/${path}`] : [];
+}
+
 export function isSupportedImage(filename) {
   const extension = String(filename || "").split(".").pop().toLowerCase();
   return ALLOWED_EXTENSIONS.has(extension);
@@ -260,7 +265,7 @@ function initialise() {
       elements["progress-count"].textContent = `0 / ${selected.length}`;
       let base = await currentBranch(token);
       const existing = await repositoryPaths(token, base.treeSha);
-      const conflicts = selected.filter(entry => existing.has(entry.targetPath));
+      const conflicts = selected.filter(entry => deploymentPaths(entry.targetPath).some(path => existing.has(path)));
       if (conflicts.length && !elements["allow-overwrite"].checked) {
         throw new Error(`${conflicts.length} selected path${conflicts.length === 1 ? " already exists" : "s already exist"}. Remove those files from the selection or tick “Replace files with matching paths”.`);
       }
@@ -283,7 +288,12 @@ function initialise() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           base_tree: base.treeSha,
-          tree: blobs.map(entry => ({ path: entry.targetPath, mode: "100644", type: "blob", sha: entry.sha }))
+          tree: blobs.flatMap(entry => deploymentPaths(entry.targetPath).map(path => ({
+            path,
+            mode: "100644",
+            type: "blob",
+            sha: entry.sha
+          })))
         })
       });
       const message = elements["commit-message"].value.trim() || `media: add ${selected.length} Instagram images`;

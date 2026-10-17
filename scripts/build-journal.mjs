@@ -555,6 +555,17 @@ async function syncJournalAssets() {
   });
 }
 
+async function syncInstagramAssets() {
+  const source = path.join(root, "assets", "instagram");
+  const target = path.join(dist, "assets", "instagram");
+  await mkdir(source, { recursive: true });
+  await rm(target, { recursive: true, force: true });
+  await cp(source, target, {
+    recursive: true,
+    filter: file => !path.basename(file).startsWith(".")
+  });
+}
+
 export async function buildJournal({ includeDrafts = false } = {}) {
   const pairs = await loadArticles();
   const publishedPairs = pairs.filter(pair => isPublicPair(pair.en, pair.it));
@@ -568,7 +579,8 @@ export async function buildJournal({ includeDrafts = false } = {}) {
     cp(path.join(root, "journal.css"), path.join(dist, "journal.css")),
     cp(path.join(root, "journal.js"), path.join(dist, "journal.js")),
     syncStudio(),
-    syncJournalAssets()
+    syncJournalAssets(),
+    syncInstagramAssets()
   ]);
 
   for (const pair of publishedPairs) {

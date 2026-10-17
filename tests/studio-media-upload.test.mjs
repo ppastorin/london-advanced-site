@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   buildTargetPath,
+  deploymentPaths,
   folderAdjustedPath,
   formatBytes,
   isSupportedImage,
@@ -18,6 +19,10 @@ test("media paths preserve post folders and reject traversal", () => {
   assert.equal(normaliseRelativePath("Instagram posts\\001-weekend\\cover.jpg"), "Instagram posts/001-weekend/cover.jpg");
   assert.equal(normaliseRelativePath("../cover.jpg"), "");
   assert.equal(buildTargetPath("001-weekend/cover.jpg"), "assets/instagram/001-weekend/cover.jpg");
+  assert.deepEqual(deploymentPaths("assets/instagram/001-weekend/cover.jpg"), [
+    "assets/instagram/001-weekend/cover.jpg",
+    "dist/assets/instagram/001-weekend/cover.jpg"
+  ]);
 });
 
 test("a common parent is removed while each post folder is retained", () => {

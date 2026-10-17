@@ -71,13 +71,13 @@ jobs:
       - name: Sync generated pages on main
         if: github.event_name == 'push'
         run: |
-          if git diff --quiet -- dist/index.html dist/events/index.html dist/it dist/journal dist/assets/journal dist/studio dist/journal.css dist/journal.js dist/sitemap.xml dist/search dist/search.js dist/search.css dist/data/search-index.en.json dist/data/search-index.it.json; then
+          if git diff --quiet -- dist/index.html dist/events/index.html dist/it dist/journal dist/assets/journal dist/assets/instagram dist/studio dist/journal.css dist/journal.js dist/sitemap.xml dist/search dist/search.js dist/search.css dist/data/search-index.en.json dist/data/search-index.it.json; then
             echo "Generated pages/assets are already current."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/index.html dist/events/index.html dist/it dist/journal dist/assets/journal dist/studio dist/journal.css dist/journal.js dist/sitemap.xml dist/search dist/search.js dist/search.css dist/data/search-index.en.json dist/data/search-index.it.json
+          git add dist/index.html dist/events/index.html dist/it dist/journal dist/assets/journal dist/assets/instagram dist/studio dist/journal.css dist/journal.js dist/sitemap.xml dist/search dist/search.js dist/search.css dist/data/search-index.en.json dist/data/search-index.it.json
           git commit -m "build: refresh generated bilingual pages and assets"
           git push
