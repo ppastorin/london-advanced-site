@@ -1,6 +1,6 @@
 html, body { min-height: 100%; background: #f7efed; }
 body::before {
-  content: "LONDON ADVANCED · JOURNAL STUDIO";
+  content: "LONDON ADVANCED · STUDIO";
   position: fixed;
   z-index: 9999;
   left: 18px;
@@ -11,4 +11,35 @@ body::before {
   font: 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
   letter-spacing: .08em;
   pointer-events: none;
+}
+
+.studio-media-link {
+  position: fixed;
+  z-index: 10000;
+  right: 18px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 3px;
+  color: #fff;
+  background: #a53f29;
+  box-shadow: 0 6px 18px rgba(23,23,23,.18);
+  font: 600 12px/1 system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.studio-media-link:hover,
+.studio-media-link:focus-visible {
+  background: #82301f;
+  outline: 3px solid rgba(165,63,41,.24);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  body::before { display: none; }
+  .studio-media-link { right: 10px; bottom: 10px; }
 }

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="same-origin">
+  <title>Instagram media · London Advanced Studio</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/studio/media/media.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/studio/">London Advanced <span>Studio</span></a>
+    <a class="back" href="/studio/">Back to content editor</a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Instagram media library</p>
+      <h1 id="page-title">Upload folders, not individual files.</h1>
+      <p class="lede">Select one parent folder containing all your post folders, or add folders in several passes. The folder names and image filenames are preserved under <code>/assets/instagram/</code>.</p>
+    </section>
+
+    <ol class="steps" aria-label="Upload steps">
+      <li class="is-current" data-step-marker="1"><span>1</span> Select folders</li>
+      <li data-step-marker="2"><span>2</span> Review</li>
+      <li data-step-marker="3"><span>3</span> Upload once</li>
+    </ol>
+
+    <section class="panel" aria-labelledby="select-title">
+      <div class="panel-heading">
+        <div>
+          <p class="step-label">Step 1</p>
+          <h2 id="select-title">Choose your image folders</h2>
+        </div>
+        <button class="button button-secondary" type="button" id="clear-selection" disabled>Clear selection</button>
+      </div>
+
+      <label class="folder-picker" for="folder-input">
+        <strong>Choose a folder</strong>
+        <span>Select the common parent folder to add all subfolders at once. You can choose again to append another folder.</span>
+        <input id="folder-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/avif" webkitdirectory directory multiple>
+      </label>
+
+      <div class="selection-summary" id="selection-summary" aria-live="polite">
+        <div><strong id="file-count">0</strong><span>images</span></div>
+        <div><strong id="folder-count">0</strong><span>folders</span></div>
+        <div><strong id="total-size">0 MB</strong><span>total size</span></div>
+      </div>
+
+      <div class="notice notice-warning" id="selection-warning" hidden></div>
+      <div class="rejections" id="rejections" hidden></div>
+    </section>
+
+    <section class="panel" aria-labelledby="review-title">
+      <div class="panel-heading">
+        <div>
+          <p class="step-label">Step 2</p>
+          <h2 id="review-title">Review destination paths</h2>
+        </div>
+      </div>
+      <p class="help">The preview shows exactly where each file will appear on the website. Existing files are protected unless you explicitly allow replacements.</p>
+      <div class="path-root"><span>Website folder</span><code>assets/instagram/</code></div>
+      <div class="file-preview" id="file-preview">
+        <p class="empty-state">Choose a folder to preview its files.</p>
+      </div>
+      <label class="check-row">
+        <input id="allow-overwrite" type="checkbox">
+        <span><strong>Replace files with matching paths</strong><small>Leave this off for the safest first upload.</small></span>
+      </label>
+    </section>
+
+    <section class="panel" aria-labelledby="upload-title">
+      <div class="panel-heading">
+        <div>
+          <p class="step-label">Step 3</p>
+          <h2 id="upload-title">Publish the batch</h2>
+        </div>
+        <span class="auth-state" id="auth-state">Not connected</span>
+      </div>
+      <p class="help">GitHub sign-in confirms your existing Studio permissions. All files are added in one commit, so the website deploys once. Large batches are deliberately paced; 400 photos normally take around 6–8 minutes.</p>
+      <label class="field" for="commit-message">
+        <span>Commit note</span>
+        <input id="commit-message" type="text" maxlength="120" value="media: add Instagram image library">
+      </label>
+      <div class="actions">
+        <button class="button button-secondary" type="button" id="connect-github">Connect GitHub</button>
+        <button class="button button-primary" type="button" id="start-upload" disabled>Upload selected images</button>
+      </div>
+      <div class="progress-wrap" id="progress-wrap" hidden>
+        <div class="progress-copy"><strong id="progress-label">Preparing upload…</strong><span id="progress-count">0 / 0</span></div>
+        <progress id="upload-progress" value="0" max="100">0%</progress>
+      </div>
+      <div class="result" id="result" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <aside class="tip">
+      <strong>Recommended folder layout</strong>
+      <code>Instagram posts / 001-weekend-events / image-01.jpg</code>
+      <p>If you select “Instagram posts”, the outer wrapper is removed automatically and <code>001-weekend-events</code> is retained.</p>
+    </aside>
+  </main>
+
+  <script type="module" src="/studio/media/media.js"></script>
+</body>
+</html>
