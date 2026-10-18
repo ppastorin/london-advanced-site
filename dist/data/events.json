@@ -1,30 +1,30 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-15T15:03:57+01:00",
-  "valid_from": "2026-10-15",
-  "valid_until": "2026-10-18",
+  "generated_at": "2026-10-18T15:01:41+01:00",
+  "valid_from": "2026-10-18",
+  "valid_until": "2026-10-25",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "costons-brook-water-vole-wildlife-walk",
-    "marys-dress-keats-house",
-    "enfield-black-literature-festival"
+    "god-save-the-queens-museum-of-youth-culture",
+    "halloween-at-brixton-windmill",
+    "enchanted-cinema-music-of-spirit-animals"
   ],
   "events": [
     {
-      "id": "kyotographie-japan-house-closing-weekend",
-      "duplicate_key": "kyotographie-japan-house-closing-2026-10-18",
-      "title_en": "Kyotographie: Kawada Kikuji x Iwane Ai — Closing Weekend",
-      "title_it": "Kyotographie: Kawada Kikuji x Iwane Ai — ultimo weekend",
-      "summary_en": "The final weekend of Japan House London's first photography exhibition pairs Kawada's postwar memory studies with Iwane's work on migration and Tohoku.",
-      "summary_it": "L'ultimo weekend della prima mostra fotografica di Japan House accosta gli studi di Kawada sulla memoria postbellica alle immagini di Iwane su migrazione e Tohoku.",
-      "start": "2026-10-16T10:00:00+01:00",
-      "end": "2026-10-18T18:00:00+01:00",
+      "id": "god-save-the-queens-museum-of-youth-culture",
+      "duplicate_key": "god-save-the-queens-moyc-2026-10-23",
+      "title_en": "God Save the Queens: Women Who Made Punk",
+      "title_it": "God Save the Queens: le donne che fecero il punk",
+      "summary_en": "A landmark basement-gallery show opens with personal archives, photography, fashion and unheard stories from Poly Styrene and the women who shaped punk's visual language.",
+      "summary_it": "Una mostra nella galleria sotterranea apre con archivi personali, fotografia, moda e storie inedite di Poly Styrene e delle donne che hanno plasmato l'immaginario punk.",
+      "start": "2026-10-23T12:00:00+01:00",
+      "end": "2026-10-23T20:00:00+01:00",
       "venue": {
-        "name": "Japan House London",
-        "address": "101-111 Kensington High Street, London",
-        "postcode": "W8 5SA",
-        "borough": "Kensington and Chelsea"
+        "name": "Museum of Youth Culture",
+        "address": "51 St Pancras Way, London",
+        "postcode": "NW1 0PU",
+        "borough": "Camden"
       },
       "price": {
         "amount_gbp": 0,
@@ -34,59 +34,9 @@
       "booking": {
         "required": false,
         "status": "recommended",
-        "url": "https://www.japanhouselondon.uk/whats-on/kyotographie-kawada-kikuji-x-iwane-ai/"
+        "url": "https://feverup.com/m/805474"
       },
-      "category": "art-design",
-      "advanced": {
-        "score": 7,
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 1,
-          "unusual_access": 2,
-          "local_character": 0,
-          "value": 2
-        },
-        "reason": "A free final chance to see two major Japanese photographers together in Japan House London's first photography exhibition."
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.japanhouselondon.uk/whats-on/kyotographie-kawada-kikuji-x-iwane-ai/",
-      "verification": {
-        "source_url": "https://www.japanhouselondon.uk/whats-on/kyotographie-kawada-kikuji-x-iwane-ai/",
-        "verified_at": "2026-10-15T15:03:57+01:00",
-        "confidence": "high"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-15T15:03:57+01:00",
-      "expire_at": "2026-10-18T18:15:00+01:00"
-    },
-    {
-      "id": "costons-brook-water-vole-wildlife-walk",
-      "duplicate_key": "costons-brook-water-vole-walk-2026-10-16",
-      "title_en": "Wildlife Walk: Coston's Brook and Its Water Vole Potential",
-      "title_it": "Passeggiata naturalistica: Coston's Brook e il ritorno delle arvicole",
-      "summary_en": "Citizen Zoo leads a field walk along Coston's Brook to read the habitat and assess its potential for the return of London's water voles.",
-      "summary_it": "Citizen Zoo guida una passeggiata sul campo lungo Coston's Brook per leggere l'habitat e valutarne il potenziale per il ritorno delle arvicole acquatiche.",
-      "start": "2026-10-16T10:30:00+01:00",
-      "end": "2026-10-16T13:30:00+01:00",
-      "venue": {
-        "name": "Pear Tree Park Bistro",
-        "address": "Stockdove Way, Perivale, Greenford",
-        "postcode": "UB6 8TJ",
-        "borough": "Ealing"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.eventbrite.co.uk/e/wildlife-walk-exploring-costons-brook-its-water-vole-potential-tickets-1999501348358"
-      },
-      "category": "nature",
+      "category": "local-culture",
       "advanced": {
         "score": 10,
         "breakdown": {
@@ -96,47 +46,97 @@
           "local_character": 1,
           "value": 2
         },
-        "reason": "A free, expert-led look at an overlooked west London waterway and the practical prospects for restoring a lost urban species."
+        "reason": "A free opening-day encounter with personal punk archives and unheard material in an independent museum devoted to youth culture."
       },
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.eventbrite.co.uk/e/wildlife-walk-exploring-costons-brook-its-water-vole-potential-tickets-1999501348358",
+      "official_url": "https://www.museumofyouthculture.com/god-save-the-queens/",
       "verification": {
-        "source_url": "https://www.eventbrite.co.uk/e/wildlife-walk-exploring-costons-brook-its-water-vole-potential-tickets-1999501348358",
-        "verified_at": "2026-10-15T15:03:57+01:00",
+        "source_url": "https://feverup.com/m/805474",
+        "verified_at": "2026-10-18T15:01:41+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-15T15:03:57+01:00",
-      "expire_at": "2026-10-16T13:45:00+01:00"
+      "publish_at": "2026-10-18T15:01:41+01:00",
+      "expire_at": "2026-10-23T20:15:00+01:00"
     },
     {
-      "id": "muswell-hill-creatives-make-and-mend",
-      "duplicate_key": "muswell-hill-creatives-make-mend-2026-10-17",
-      "title_en": "Muswell Hill Creatives: Make and Mend Festival",
-      "title_it": "Muswell Hill Creatives: festival Make and Mend",
-      "summary_en": "A free neighbourhood festival fills Hornsey Town Hall with repair, making and sustainable craft; paid workshops are optional.",
-      "summary_it": "Un festival di quartiere gratuito riempie Hornsey Town Hall di riparazione, artigianato e pratiche sostenibili; i workshop a pagamento sono facoltativi.",
-      "start": "2026-10-17T11:00:00+01:00",
-      "end": "2026-10-17T17:00:00+01:00",
+      "id": "big-story-festival-iwm-london",
+      "duplicate_key": "big-story-festival-iwm-2026-10-25",
+      "title_en": "Big Story Festival at IWM London",
+      "title_it": "Big Story Festival all'IWM London",
+      "summary_en": "IWM London's first storytelling festival fills the museum with free illustration, play and song sessions shaped by its Childhood in War exhibition; selected talks cost extra.",
+      "summary_it": "Il primo festival del racconto dell'IWM anima il museo con laboratori gratuiti di illustrazione, gioco e canto legati alla mostra Childhood in War; alcuni incontri sono a pagamento.",
+      "start": "2026-10-25T10:00:00+00:00",
+      "end": "2026-10-25T18:00:00+00:00",
       "venue": {
-        "name": "Hornsey Town Hall",
-        "address": "The Broadway, Crouch End, London",
-        "postcode": "N8 9JJ",
-        "borough": "Haringey"
+        "name": "IWM London",
+        "address": "Lambeth Road, London",
+        "postcode": "SE1 6HZ",
+        "borough": "Southwark"
       },
       "price": {
         "amount_gbp": 0,
-        "display": "Free admission; workshops extra",
+        "display": "Free entry",
         "classification": "free"
       },
       "booking": {
         "required": false,
         "status": "drop-in",
-        "url": null
+        "url": "https://www.iwm.org.uk/events/big-story-festival"
       },
-      "category": "community",
+      "category": "heritage-history",
+      "advanced": {
+        "score": 7,
+        "breakdown": {
+          "non_obvious": 1,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 0,
+          "value": 2
+        },
+        "reason": "A one-off debut festival turns a major history museum into a free, participatory storytelling space for families."
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.iwm.org.uk/events/big-story-festival",
+      "verification": {
+        "source_url": "https://www.iwm.org.uk/events/big-story-festival",
+        "verified_at": "2026-10-18T15:01:41+01:00",
+        "confidence": "high"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-18T15:01:41+01:00",
+      "expire_at": "2026-10-25T18:15:00+00:00"
+    },
+    {
+      "id": "enchanted-cinema-music-of-spirit-animals",
+      "duplicate_key": "enchanted-cinema-spirit-animals-2026-10-25",
+      "title_en": "The Enchanted Cinema: The Music of Spirit Animals",
+      "title_it": "The Enchanted Cinema: la musica degli animali spirito",
+      "summary_en": "Children and grown-ups become a live sound-effects orchestra for animations inspired by Día de Muertos, global folklore and the Horniman's animal collections. Two one-hour Sunday sessions.",
+      "summary_it": "Bambini e adulti diventano un'orchestra di effetti sonori dal vivo per animazioni ispirate al Día de Muertos, al folklore mondiale e alle collezioni animali dell'Horniman. Due sessioni di un'ora.",
+      "start": "2026-10-25T11:30:00+00:00",
+      "end": "2026-10-25T14:30:00+00:00",
+      "venue": {
+        "name": "Horniman Museum and Gardens, Pavilion",
+        "address": "100 London Road, Forest Hill, London",
+        "postcode": "SE23 3PQ",
+        "borough": "Lewisham"
+      },
+      "price": {
+        "amount_gbp": 10,
+        "display": "£10 per person",
+        "classification": "cheap"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://my.horniman.ac.uk/events?k=Enchated_Cinema&startdate=2026-10-01"
+      },
+      "category": "art-design",
       "advanced": {
         "score": 8,
         "breakdown": {
@@ -146,120 +146,120 @@
           "local_character": 1,
           "value": 2
         },
-        "reason": "An independent Crouch End collective turns a landmark civic building into a free one-day celebration of repair and local making."
+        "reason": "A participatory live-cinema workshop connects Mexican traditions and a century-old animation with the Horniman's distinctive collections."
       },
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.muswellhillcreatives.com/make-and-mend.html",
+      "official_url": "https://www.horniman.ac.uk/event/the-enchanted-cinema/",
       "verification": {
-        "source_url": "https://www.muswellhillcreatives.com/make-and-mend.html",
-        "verified_at": "2026-10-15T15:03:57+01:00",
+        "source_url": "https://www.horniman.ac.uk/event/the-enchanted-cinema/",
+        "verified_at": "2026-10-18T15:01:41+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-15T15:03:57+01:00",
-      "expire_at": "2026-10-17T17:15:00+01:00"
+      "publish_at": "2026-10-18T15:01:41+01:00",
+      "expire_at": "2026-10-25T14:45:00+00:00"
     },
     {
-      "id": "marys-dress-keats-house",
-      "duplicate_key": "marys-dress-keats-house-2026-10-17",
-      "title_en": "A Conversation with Mary's Dress",
-      "title_it": "Una conversazione con l'abito di Mary",
-      "summary_en": "At Keats House, an interactive Georgian dress embedded with sound reveals the working lives and material culture behind the poet's circle.",
-      "summary_it": "A Keats House, un abito georgiano interattivo con suoni incorporati racconta lavoro e cultura materiale dietro la cerchia del poeta.",
-      "start": "2026-10-17T14:00:00+01:00",
-      "end": "2026-10-17T16:00:00+01:00",
+      "id": "halloween-at-brixton-windmill",
+      "duplicate_key": "halloween-brixton-windmill-2026-10-25",
+      "title_en": "Halloween at Brixton Windmill",
+      "title_it": "Halloween al mulino di Brixton",
+      "summary_en": "A 200-year-old working windmill hosts free crafts and children's spooky stories inside the mill, with optional traditional pumpkin carving for £3.",
+      "summary_it": "Un mulino ancora attivo da oltre due secoli ospita laboratori gratuiti e racconti spettrali per bambini al suo interno, più intaglio della zucca facoltativo a £3.",
+      "start": "2026-10-25T13:00:00+00:00",
+      "end": "2026-10-25T16:00:00+00:00",
       "venue": {
-        "name": "Keats House",
-        "address": "10 Keats Grove, Hampstead, London",
-        "postcode": "NW3 2RR",
-        "borough": "Camden"
+        "name": "Brixton Windmill and Windmill Gardens",
+        "address": "Blenheim Gardens, Brixton, London",
+        "postcode": "SW2 5DA",
+        "borough": "Lambeth"
       },
       "price": {
-        "amount_gbp": 15,
-        "display": "£15 (£12 concession)",
-        "classification": "exceptional"
+        "amount_gbp": 0,
+        "display": "Free; pumpkin £3",
+        "classification": "free"
       },
       "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.eventbrite.co.uk/e/a-conversation-with-marys-dress-tickets-1997143252229"
+        "required": false,
+        "status": "drop-in",
+        "url": "https://www.brixtonwindmill.org/events/halloween-at-brixton-windmill/"
       },
       "category": "heritage-history",
       "advanced": {
-        "score": 9,
+        "score": 10,
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
           "unusual_access": 2,
           "local_character": 1,
-          "value": 1
+          "value": 2
         },
-        "reason": "The top-end price is justified by a one-off object-led performance and special attendee-only access to Keats House."
+        "reason": "Free neighbourhood Halloween activities gain real character from spooky storytelling inside Brixton's Grade II* working windmill."
       },
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.cityoflondon.gov.uk/events/a-conversation-with-marys-dress",
+      "official_url": "https://www.brixtonwindmill.org/events/halloween-at-brixton-windmill/",
       "verification": {
-        "source_url": "https://www.lovecamden.org/whats-on/a-conversation-with-mary-s-dress-35187135",
-        "verified_at": "2026-10-15T15:03:57+01:00",
+        "source_url": "https://www.brixtonwindmill.org/events/halloween-at-brixton-windmill/",
+        "verified_at": "2026-10-18T15:01:41+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-15T15:03:57+01:00",
-      "expire_at": "2026-10-17T16:15:00+01:00"
+      "publish_at": "2026-10-18T15:01:41+01:00",
+      "expire_at": "2026-10-25T16:15:00+00:00"
     },
     {
-      "id": "enfield-black-literature-festival",
-      "duplicate_key": "enfield-black-literature-festival-2026-10-18",
-      "title_en": "Enfield Black Literature Festival",
-      "title_it": "Enfield Black Literature Festival",
-      "summary_en": "Thirteen authors, readings, panels, workshops, a Windrush exhibition and a book swap come together for an independent borough-wide literary day.",
-      "summary_it": "Tredici autori, letture, panel, workshop, una mostra su Windrush e uno scambio di libri si incontrano in una giornata letteraria indipendente.",
-      "start": "2026-10-18T13:00:00+01:00",
-      "end": "2026-10-18T19:00:00+01:00",
+      "id": "diwali-on-the-square-2026",
+      "duplicate_key": "diwali-trafalgar-square-2026-10-25",
+      "title_en": "Diwali on the Square 2026",
+      "title_it": "Diwali on the Square 2026",
+      "summary_en": "Trafalgar Square becomes a shared Festival of Light with 200 opening dancers, performances from London's Hindu, Sikh and Jain communities, workshops and food stalls.",
+      "summary_it": "Trafalgar Square diventa una festa della luce condivisa con 200 ballerini in apertura, spettacoli delle comunità hindu, sikh e giainista di Londra, laboratori e street food.",
+      "start": "2026-10-25T13:00:00+00:00",
+      "end": "2026-10-25T19:00:00+00:00",
       "venue": {
-        "name": "Dugdale Arts Centre",
-        "address": "39 London Road, Enfield",
-        "postcode": "EN2 6DS",
-        "borough": "Enfield"
+        "name": "Trafalgar Square",
+        "address": "Trafalgar Square, Westminster, London",
+        "postcode": "WC2N 5DN",
+        "borough": "Westminster"
       },
       "price": {
-        "amount_gbp": 10,
-        "display": "£10 full programme (£5 workshops)",
-        "classification": "cheap"
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
       },
       "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://theeca.org.uk/event/black-history-month-enfield-black-literature-festival-18-october-2026/"
+        "required": false,
+        "status": "drop-in",
+        "url": "https://www.london.gov.uk/events/diwali-square-2026"
       },
       "category": "local-culture",
       "advanced": {
-        "score": 9,
+        "score": 7,
         "breakdown": {
-          "non_obvious": 2,
+          "non_obvious": 1,
           "place_story": 2,
-          "unusual_access": 2,
+          "unusual_access": 1,
           "local_character": 1,
           "value": 2
         },
-        "reason": "A deeply local all-day programme makes Black British writing, Windrush memory and community exchange unusually accessible for £10."
+        "reason": "A free civic-scale celebration led by London's Hindu, Sikh and Jain communities gives Trafalgar Square a distinct cultural story."
       },
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.dugdaleartscentre.co.uk/whats-on/enfield-black-literature-festival",
+      "official_url": "https://www.london.gov.uk/events/diwali-square-2026",
       "verification": {
-        "source_url": "https://www.dugdaleartscentre.co.uk/whats-on/enfield-black-literature-festival",
-        "verified_at": "2026-10-15T15:03:57+01:00",
+        "source_url": "https://www.london.gov.uk/events/diwali-square-2026",
+        "verified_at": "2026-10-18T15:01:41+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-15T15:03:57+01:00",
-      "expire_at": "2026-10-18T19:15:00+01:00"
+      "publish_at": "2026-10-18T15:01:41+01:00",
+      "expire_at": "2026-10-25T19:15:00+00:00"
     }
   ]
 }
