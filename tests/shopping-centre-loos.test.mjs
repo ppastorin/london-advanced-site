@@ -21,7 +21,7 @@ const auditedCentres = [
 
 test("loo dataset includes the London shopping-centre audit", () => {
   assert.equal(dataset.count, dataset.loos.length);
-  assert.equal(dataset.count, 177);
+  assert.equal(dataset.count, 178);
   assert.equal(new Set(dataset.loos.map(loo => loo.id)).size, dataset.loos.length);
 
   const byId = new Map(dataset.loos.map(loo => [loo.id, loo]));
@@ -53,6 +53,6 @@ test("Wimbledon Quarter and accessible retail facilities keep their practical de
 test("the about panels show the current dataset count in both languages", async () => {
   const en = await readFile(new URL("../dist/loo/index.html", import.meta.url), "utf8");
   const it = await readFile(new URL("../dist/it/loo/index.html", import.meta.url), "utf8");
-  assert.match(en, /177 verified locations/);
-  assert.match(it, /177 luoghi verificati/);
+  assert.match(en, /178 verified locations/);
+  assert.match(it, /178 luoghi verificati/);
 });

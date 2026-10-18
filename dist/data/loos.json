@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-28T14:15:00Z",
-  "count": 177,
+  "generated_at": "2026-10-18T19:24:25Z",
+  "count": 178,
   "notes": "Production candidate: curated transport, public toilets, verified park facilities, free museums/galleries, major shopping destinations, selected churches and a London-wide audit of shopping-centre facilities. No community features exposed.",
   "loos": [
     {
@@ -2030,6 +2030,30 @@
       "source_url": "https://www.nationalgallery.org.uk/visiting/plan-your-visit",
       "source_type": "official",
       "last_verified": "2026-09-24",
+      "confidence": "official",
+      "active": true
+    },
+    {
+      "id": "national-portrait-gallery",
+      "name": "National Portrait Gallery",
+      "category": "free_entry_venue",
+      "lat": 51.5094236,
+      "lon": -0.1281216,
+      "address": "St Martin's Place, London WC2H 0HE",
+      "access_mode": "free_entry_venue",
+      "fee_pence": 0,
+      "fee_note": "General admission is free; some exhibitions are charged.",
+      "accessible": true,
+      "baby_change": true,
+      "changing_places": true,
+      "radar": null,
+      "opening_hours": null,
+      "hours_note": "Open Sunday to Thursday 10:30–18:00 and Friday to Saturday 10:30–21:00; last entry is 30 minutes before closing.",
+      "location_note": "Standard and accessible toilets are on Floors -2, -3 and 4. Baby-changing is available on all three floors; the Changing Places toilet is on Floor -2 and requires users to bring their own sling for the hoist.",
+      "source_name": "National Portrait Gallery",
+      "source_url": "https://www.npg.org.uk/visit/accessibility/",
+      "source_type": "official",
+      "last_verified": "2026-10-18",
       "confidence": "official",
       "active": true
     },
