@@ -15,7 +15,7 @@
     "#HiddenLondon"
   ],
   "media_folder": "site asset · london map",
-  "editorial_status": "approved",
+  "editorial_status": "scheduled",
   "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
@@ -28,7 +28,7 @@
   "location": "London, United Kingdom",
   "post_format": "carousel",
   "internal_title": "Tre idee per il weekend · 23–25 ottobre",
-  "updated_at": "2026-10-19T21:28:55+01:00",
+  "updated_at": "2026-10-19T21:38:00+01:00",
   "scheduled_for": "2026-10-23T10:00:00+01:00",
   "images": [
     {
@@ -47,10 +47,10 @@
     "checked_at": "2026-10-18"
   },
   "metricool": {
-    "planner_id": "",
-    "scheduled_at": null,
+    "planner_id": "400459491",
+    "scheduled_at": "2026-10-19T21:36:00+01:00",
     "published_url": "",
-    "last_sync_at": null,
-    "sync_note": "Human approval complete. Waiting for Metricool scheduling."
+    "last_sync_at": "2026-10-19T21:36:00+01:00",
+    "sync_note": "Confirmed in Metricool planner; UUID 388559157884372249."
   }
 }
