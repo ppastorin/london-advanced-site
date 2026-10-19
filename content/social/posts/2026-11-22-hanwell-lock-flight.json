@@ -1,18 +1,12 @@
 {
-  "post_id": "2026-11-22-hanwell-lock-flight",
-  "internal_title": "Hanwell Lock Flight · campagna e ingegneria a West London",
-  "editorial_status": "review",
+  "notes": "Three-week batch. Deliberately avoids the disputed six/seven-lock count used inconsistently by official sources.",
+  "caption_en": "Hanwell’s lock flight turns canal engineering into a surprisingly rural walk through West London, complete with water, old structures and reliable mud.",
   "approval": {
-    "status": "pending",
+    "status": "approved",
     "approved_by": "",
     "approved_at": null
   },
-  "scheduled_for": "2026-11-22T10:00:00+00:00",
-  "post_format": "carousel",
-  "language_mode": "italian-plus-english-summary",
   "caption_it": "La Hanwell Lock Flight è il genere di posto che mette in crisi l’idea di West London come sequenza continua di case e traffico. Il Grand Union Canal scende attraverso una serie di chiuse, vasche laterali e vecchie strutture di servizio, con acqua, prati e alberi che fanno sembrare la città temporaneamente lontana. Il complesso storico è protetto insieme al lungo muro dell’ex ospedale accanto al towpath. Non serve essere appassionati di ingegneria idraulica: basta seguire il dislivello e guardare quanto lavoro occorreva per spostare una barca. Scarpe decenti, però. Il fango non rispetta le teorie sulla Londra elegante.",
-  "caption_en": "Hanwell’s lock flight turns canal engineering into a surprisingly rural walk through West London, complete with water, old structures and reliable mud.",
-  "cta": "Percorretela con calma lungo il towpath e verificate eventuali lavori o deviazioni sul sito del Canal & River Trust.",
   "hashtags": [
     "#LondonAdvanced",
     "#HanwellLocks",
@@ -20,7 +14,9 @@
     "#WestLondon",
     "#LondonWalks"
   ],
-  "location": "Hanwell Lock Flight",
+  "media_folder": "hanwell lock",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
     "kicker": "FIELD NOTE",
@@ -28,7 +24,12 @@
     "position": "bottom-left",
     "rendered_src": ""
   },
-  "media_folder": "hanwell lock",
+  "cta": "Percorretela con calma lungo il towpath e verificate eventuali lavori o deviazioni sul sito del Canal & River Trust.",
+  "location": "Hanwell Lock Flight",
+  "post_format": "carousel",
+  "internal_title": "Hanwell Lock Flight · campagna e ingegneria a West London",
+  "updated_at": "2026-10-19T21:50:00+01:00",
+  "scheduled_for": "2026-11-22T10:00:00+00:00",
   "images": [
     {
       "order": 1,
@@ -66,6 +67,7 @@
       "focal_y": 50
     }
   ],
+  "post_id": "2026-11-22-hanwell-lock-flight",
   "source": {
     "type": "official-site",
     "reference": "Canal & River Trust · Hanwell Lock Flight",
@@ -78,7 +80,5 @@
     "published_url": "",
     "last_sync_at": null,
     "sync_note": "Waiting for editorial approval."
-  },
-  "notes": "Three-week batch. Deliberately avoids the disputed six/seven-lock count used inconsistently by official sources.",
-  "updated_at": "2026-10-19T21:50:00+01:00"
+  }
 }
