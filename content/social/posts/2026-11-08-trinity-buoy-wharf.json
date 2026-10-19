@@ -1,18 +1,12 @@
 {
-  "post_id": "2026-11-08-trinity-buoy-wharf",
-  "internal_title": "Trinity Buoy Wharf · il faro che non cercava navi",
-  "editorial_status": "review",
-  "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": null
-  },
-  "scheduled_for": "2026-11-08T10:00:00+00:00",
-  "post_format": "carousel",
-  "language_mode": "italian-plus-english-summary",
-  "caption_it": "Trinity Buoy Wharf è uno di quei luoghi in cui Londra sembra aver dimenticato di uniformarsi. Il faro sperimentale del 1864 non guidava le navi: serviva a provare lampade e attrezzature, e Michael Faraday lavorò qui come consulente scientifico di Trinity House. Attorno, container trasformati in studi, una nave-faro rossa, sculture e il Tamigi di fronte all’O2 formano un insieme poco ordinato ma molto londinese. Non aspettatevi un museo compatto: il sito è ancora un luogo di lavoro e non tutto sarà aperto. È precisamente questo a salvarlo dall’effetto parco tematico.",
+  "notes": "Three-week batch. Evergreen Journal post; recheck lighthouse access before approval.",
   "caption_en": "A Victorian experimental lighthouse, Faraday’s work, artists’ studios and a red lightship share one untidy, still-working corner of the Thames.",
-  "cta": "Nel Journal trovate il percorso completo e cosa controllare prima della visita.",
+  "approval": {
+    "status": "approved",
+    "approved_by": "ppastorin",
+    "approved_at": "2026-10-19T21:27:47Z"
+  },
+  "caption_it": "Trinity Buoy Wharf è uno di quei luoghi in cui Londra sembra aver dimenticato di uniformarsi. Il faro sperimentale del 1864 non guidava le navi: serviva a provare lampade e attrezzature, e Michael Faraday lavorò qui come consulente scientifico di Trinity House. Attorno, container trasformati in studi, una nave-faro rossa, sculture e il Tamigi di fronte all’O2 formano un insieme poco ordinato ma molto londinese. Non aspettatevi un museo compatto: il sito è ancora un luogo di lavoro e non tutto sarà aperto. È precisamente questo a salvarlo dall’effetto parco tematico.",
   "hashtags": [
     "#LondonAdvanced",
     "#TrinityBuoyWharf",
@@ -20,7 +14,9 @@
     "#EastLondon",
     "#HiddenLondon"
   ],
-  "location": "Trinity Buoy Wharf",
+  "media_folder": "Trinity Buoy Wharf",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
     "kicker": "FIELD NOTE",
@@ -28,7 +24,12 @@
     "position": "top-left",
     "rendered_src": ""
   },
-  "media_folder": "Trinity Buoy Wharf",
+  "cta": "Nel Journal trovate il percorso completo e cosa controllare prima della visita.",
+  "location": "Trinity Buoy Wharf",
+  "post_format": "carousel",
+  "internal_title": "Trinity Buoy Wharf · il faro che non cercava navi",
+  "updated_at": "2026-10-19T22:29:43+01:00",
+  "scheduled_for": "2026-11-08T10:00:00+00:00",
   "images": [
     {
       "order": 1,
@@ -66,6 +67,7 @@
       "focal_y": 50
     }
   ],
+  "post_id": "2026-11-08-trinity-buoy-wharf",
   "source": {
     "type": "journal",
     "reference": "trinity-buoy-wharf",
@@ -78,7 +80,5 @@
     "published_url": "",
     "last_sync_at": null,
     "sync_note": "Waiting for editorial approval."
-  },
-  "notes": "Three-week batch. Evergreen Journal post; recheck lighthouse access before approval.",
-  "updated_at": "2026-10-19T21:50:00+01:00"
+  }
 }
