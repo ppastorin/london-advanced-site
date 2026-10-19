@@ -1,0 +1,84 @@
+{
+  "post_id": "2026-11-17-eltham-palace",
+  "internal_title": "Eltham Palace · Medioevo e Art Deco nella stessa casa",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-11-17T18:30:00+00:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "Eltham Palace riesce a unire una grande sala medievale degli anni 1470 e una casa Art Deco costruita negli anni Trenta senza chiedere scusa a nessuna delle due epoche. Stephen e Virginia Courtauld recuperarono il sito e vi inserirono ambienti modernissimi: ingresso circolare, legni geometrici, tecnologia domestica e un bagno rivestito d’oro e onice. Poi si apre la Great Hall con il suo tetto in quercia, come se qualcuno avesse collegato due edifici separati da quasi cinque secoli. Il risultato non è sobrio—per fortuna. Più che una casa storica, è una discussione molto costosa fra Medioevo e modernità.",
+  "caption_en": "A 1470s great hall meets the Courtaulds’ extravagant 1930s Art Deco home: five centuries joined with confidence rather than restraint.",
+  "cta": "Prenotazione e orari cambiano con la stagione: controllate English Heritage prima di partire.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#ElthamPalace",
+    "#ArtDecoLondon",
+    "#LondonArchitecture",
+    "#LondraInsolita"
+  ],
+  "location": "Eltham Palace and Gardens",
+  "overlay": {
+    "enabled": false,
+    "kicker": "FIELD NOTE",
+    "headline": "Medioevo, poi Art Deco",
+    "position": "top-left",
+    "rendered_src": ""
+  },
+  "media_folder": "Eltham Palace",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/instagram/Eltham Palace/eltham palace - 6.jpg",
+      "alt": "L’ingresso circolare Art Deco di Eltham Palace con pannelli in legno e arredi chiari.",
+      "focal_x": 50,
+      "focal_y": 45
+    },
+    {
+      "order": 2,
+      "src": "/assets/instagram/Eltham Palace/eltham palace - 3.jpg",
+      "alt": "Il bagno Art Deco di Virginia Courtauld con onice e rubinetteria dorata.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/instagram/Eltham Palace/eltham palace - 5.jpg",
+      "alt": "Un salotto di Eltham Palace con pannelli in legno e arredi degli anni Trenta.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/instagram/Eltham Palace/eltham palace - 4.jpg",
+      "alt": "La sala da biliardo rivestita in legno all’interno di Eltham Palace.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/instagram/Eltham Palace/eltham palace - 2.jpg",
+      "alt": "La Great Hall medievale di Eltham Palace vista dall’esterno.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "source": {
+    "type": "official-site",
+    "reference": "English Heritage · Eltham Palace",
+    "url": "https://www.english-heritage.org.uk/visit/places/eltham-palace-and-gardens/history-and-stories/",
+    "checked_at": "2026-10-19"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for editorial approval."
+  },
+  "notes": "Three-week batch. Historical facts checked against English Heritage; seasonal visit details must be rechecked at approval.",
+  "updated_at": "2026-10-19T21:50:00+01:00"
+}

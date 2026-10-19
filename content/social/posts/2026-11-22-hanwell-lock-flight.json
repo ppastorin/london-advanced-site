@@ -1,0 +1,84 @@
+{
+  "post_id": "2026-11-22-hanwell-lock-flight",
+  "internal_title": "Hanwell Lock Flight · campagna e ingegneria a West London",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-11-22T10:00:00+00:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "La Hanwell Lock Flight è il genere di posto che mette in crisi l’idea di West London come sequenza continua di case e traffico. Il Grand Union Canal scende attraverso una serie di chiuse, vasche laterali e vecchie strutture di servizio, con acqua, prati e alberi che fanno sembrare la città temporaneamente lontana. Il complesso storico è protetto insieme al lungo muro dell’ex ospedale accanto al towpath. Non serve essere appassionati di ingegneria idraulica: basta seguire il dislivello e guardare quanto lavoro occorreva per spostare una barca. Scarpe decenti, però. Il fango non rispetta le teorie sulla Londra elegante.",
+  "caption_en": "Hanwell’s lock flight turns canal engineering into a surprisingly rural walk through West London, complete with water, old structures and reliable mud.",
+  "cta": "Percorretela con calma lungo il towpath e verificate eventuali lavori o deviazioni sul sito del Canal & River Trust.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#HanwellLocks",
+    "#GrandUnionCanal",
+    "#WestLondon",
+    "#LondonWalks"
+  ],
+  "location": "Hanwell Lock Flight",
+  "overlay": {
+    "enabled": false,
+    "kicker": "FIELD NOTE",
+    "headline": "La campagna di Hanwell",
+    "position": "bottom-left",
+    "rendered_src": ""
+  },
+  "media_folder": "hanwell lock",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/instagram/hanwell lock/hanwell lock - 1.jpg",
+      "alt": "Una chiusa della Hanwell Lock Flight fra il towpath, gli alberi e un cielo estivo.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 2,
+      "src": "/assets/instagram/hanwell lock/hanwell lock - 2.jpg",
+      "alt": "Porte e meccanismi di una chiusa lungo il Grand Union Canal a Hanwell.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/instagram/hanwell lock/hanwell lock - 3.jpg",
+      "alt": "Una narrowboat all’interno di una delle chiuse di Hanwell.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/instagram/hanwell lock/hanwell lock - 4.jpg",
+      "alt": "La vasca d’acqua fra due livelli della Hanwell Lock Flight.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/instagram/hanwell lock/hanwell lock - 5.jpg",
+      "alt": "Una chiusa del canale circondata da erba e vegetazione a Hanwell.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "source": {
+    "type": "official-site",
+    "reference": "Canal & River Trust · Hanwell Lock Flight",
+    "url": "https://canalrivertrust.org.uk/canals-and-rivers/places-to-visit/hanwell-lock-flight",
+    "checked_at": "2026-10-19"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for editorial approval."
+  },
+  "notes": "Three-week batch. Deliberately avoids the disputed six/seven-lock count used inconsistently by official sources.",
+  "updated_at": "2026-10-19T21:50:00+01:00"
+}

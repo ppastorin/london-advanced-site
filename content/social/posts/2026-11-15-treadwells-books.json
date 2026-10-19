@@ -1,0 +1,84 @@
+{
+  "post_id": "2026-11-15-treadwells-books",
+  "internal_title": "Treadwell’s Books · l’occulto senza effetti speciali",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-11-15T10:00:00+00:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "Da fuori Treadwell’s Books potrebbe sembrare una piccola libreria indipendente come molte altre. Dentro, gli scaffali passano da magia e folklore a storia delle religioni, paganesimo ed esoterismo occidentale, con libri nuovi e usati scelti per curiosi, studiosi e praticanti. Il negozio è nato nel 2003 e funziona anche come punto d’incontro, con conferenze, corsi e passeggiate nella Bloomsbury occulta. La parte migliore è che non serve presentarsi con un mantello né fingere di credere a tutto: si può entrare semplicemente per capire come certe idee abbiano attraversato la storia culturale di Londra. Uscire senza un libro è meno garantito.",
+  "caption_en": "Treadwell’s treats magic, folklore and Western esotericism as subjects worth reading seriously—without removing the shop’s considerable sense of theatre.",
+  "cta": "Guardate il calendario degli incontri prima di andare; per curiosare fra gli scaffali basta entrare.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#TreadwellsBooks",
+    "#LondonBookshops",
+    "#Bloomsbury",
+    "#LondraInsolita"
+  ],
+  "location": "Treadwell's Books",
+  "overlay": {
+    "enabled": false,
+    "kicker": "FIELD NOTE",
+    "headline": "La libreria dell’occulto",
+    "position": "bottom-left",
+    "rendered_src": ""
+  },
+  "media_folder": "treadwell books",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/instagram/treadwell books/treadwell books - 3.jpg",
+      "alt": "La vetrina e l’ingresso di Treadwell’s Books al numero 33 di Store Street.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 2,
+      "src": "/assets/instagram/treadwell books/treadwell books - 2.jpg",
+      "alt": "Un tavolo della libreria coperto di libri su magia, folklore ed esoterismo.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/instagram/treadwell books/treadwell books - 4.jpg",
+      "alt": "Gli interni di Treadwell’s con lampade, scaffali e tavoli di libri.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/instagram/treadwell books/treadwell books - 1.jpg",
+      "alt": "Una vetrinetta con libri e oggetti dedicati alla storia dell’occulto.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/instagram/treadwell books/treadwell books - 5.jpg",
+      "alt": "Una pila di libri rossi intitolati Sex Magic fra gli scaffali di Treadwell’s.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "source": {
+    "type": "official-site",
+    "reference": "Treadwell’s history",
+    "url": "https://www.treadwells-london.com/the-history-of-treadwells",
+    "checked_at": "2026-10-19"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for editorial approval."
+  },
+  "notes": "Three-week batch. Evergreen bookshop post; the final image is intentionally playful but still relevant to the stock.",
+  "updated_at": "2026-10-19T21:50:00+01:00"
+}

@@ -1,0 +1,84 @@
+{
+  "post_id": "2026-11-08-trinity-buoy-wharf",
+  "internal_title": "Trinity Buoy Wharf · il faro che non cercava navi",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-11-08T10:00:00+00:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "Trinity Buoy Wharf è uno di quei luoghi in cui Londra sembra aver dimenticato di uniformarsi. Il faro sperimentale del 1864 non guidava le navi: serviva a provare lampade e attrezzature, e Michael Faraday lavorò qui come consulente scientifico di Trinity House. Attorno, container trasformati in studi, una nave-faro rossa, sculture e il Tamigi di fronte all’O2 formano un insieme poco ordinato ma molto londinese. Non aspettatevi un museo compatto: il sito è ancora un luogo di lavoro e non tutto sarà aperto. È precisamente questo a salvarlo dall’effetto parco tematico.",
+  "caption_en": "A Victorian experimental lighthouse, Faraday’s work, artists’ studios and a red lightship share one untidy, still-working corner of the Thames.",
+  "cta": "Nel Journal trovate il percorso completo e cosa controllare prima della visita.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#TrinityBuoyWharf",
+    "#LondraInsolita",
+    "#EastLondon",
+    "#HiddenLondon"
+  ],
+  "location": "Trinity Buoy Wharf",
+  "overlay": {
+    "enabled": false,
+    "kicker": "FIELD NOTE",
+    "headline": "Il faro di Londra",
+    "position": "top-left",
+    "rendered_src": ""
+  },
+  "media_folder": "Trinity Buoy Wharf",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/instagram/Trinity Buoy Wharf/trinity buoy wharf - 9.jpg",
+      "alt": "Il faro sperimentale in mattoni di Trinity Buoy Wharf sotto un cielo azzurro.",
+      "focal_x": 55,
+      "focal_y": 45
+    },
+    {
+      "order": 2,
+      "src": "/assets/instagram/Trinity Buoy Wharf/trinity buoy wharf - 4.jpg",
+      "alt": "I colorati edifici di Container City a Trinity Buoy Wharf.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/instagram/Trinity Buoy Wharf/trinity buoy wharf - 5.jpg",
+      "alt": "La nave-faro rossa ormeggiata accanto a Trinity Buoy Wharf.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/instagram/Trinity Buoy Wharf/trinity buoy wharf - 6.jpg",
+      "alt": "La piccola installazione in legno The Faraday Effect ai piedi del faro.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/instagram/Trinity Buoy Wharf/trinity buoy wharf - 8.jpg",
+      "alt": "Il Tamigi e lo skyline dei Docklands visti attraverso i vetri del faro.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "source": {
+    "type": "journal",
+    "reference": "trinity-buoy-wharf",
+    "url": "https://www.londonadvanced.com/it/journal/trinity-buoy-wharf-faro-londra/",
+    "checked_at": "2026-10-19"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for editorial approval."
+  },
+  "notes": "Three-week batch. Evergreen Journal post; recheck lighthouse access before approval.",
+  "updated_at": "2026-10-19T21:50:00+01:00"
+}

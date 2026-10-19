@@ -1,0 +1,84 @@
+{
+  "post_id": "2026-11-10-estorick-collection",
+  "internal_title": "Estorick Collection · l’Italia moderna in una casa di Canonbury",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-11-10T18:30:00+00:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "La Estorick Collection occupa una casa georgiana di Canonbury e racconta l’arte italiana del Novecento senza la scala intimidatoria di un grande museo. Il nucleo della collezione passa dal Futurismo ad altre correnti moderne, ma il vero vantaggio è domestico: sei gallerie, pavimenti in legno e abbastanza spazio per guardare davvero un quadro invece di eseguire la solita maratona culturale. Ha aperto nel 1998 e rimane una presenza sorprendentemente discreta a Islington. Per un italiano a Londra è familiare e straniante insieme; per tutti gli altri, una buona correzione all’idea che l’arte italiana finisca nel Rinascimento.",
+  "caption_en": "Modern Italian art fills six intimate galleries in a Georgian house at Canonbury—small enough to look carefully rather than march past everything.",
+  "cta": "Controllate mostra temporanea e orari: le dimensioni ridotte sono parte del piacere, non un limite.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#EstorickCollection",
+    "#ItalianArt",
+    "#Islington",
+    "#LondonMuseums"
+  ],
+  "location": "Estorick Collection of Modern Italian Art",
+  "overlay": {
+    "enabled": false,
+    "kicker": "FIELD NOTE",
+    "headline": "L’Italia moderna a Canonbury",
+    "position": "top-left",
+    "rendered_src": ""
+  },
+  "media_folder": "estorick collection",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/instagram/estorick collection/estorick collection - 1.jpg",
+      "alt": "La facciata georgiana della Estorick Collection su Canonbury Square.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 2,
+      "src": "/assets/instagram/estorick collection/estorick collection - 2.jpg",
+      "alt": "Una galleria della Estorick Collection con dipinti e una scultura.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/instagram/estorick collection/estorick collection - 3.jpg",
+      "alt": "Opere grafiche esposte in una delle sale raccolte del museo.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/instagram/estorick collection/estorick collection - 4.jpg",
+      "alt": "Dipinti del Novecento italiano sulle pareti chiare della Estorick Collection.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/instagram/estorick collection/estorick collection - 5.jpg",
+      "alt": "Una sala con opere moderne italiane in cornici dorate e nere.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "source": {
+    "type": "official-site",
+    "reference": "Estorick Collection",
+    "url": "https://www.estorickcollection.com/",
+    "checked_at": "2026-10-19"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for editorial approval."
+  },
+  "notes": "Three-week batch. Avoid naming the temporary exhibition until approval so the post remains evergreen.",
+  "updated_at": "2026-10-19T21:50:00+01:00"
+}
