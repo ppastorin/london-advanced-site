@@ -3,8 +3,8 @@
   "caption_en": "Charles Holden’s 55 Broadway hides in plain sight above St James’s Park station: an Art Deco headquarters with sculpture, scandal and one rather literal compromise.",
   "approval": {
     "status": "approved",
-    "approved_by": "",
-    "approved_at": null
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-19T21:28:55+01:00"
   },
   "caption_it": "55 Broadway è quell’edificio che si attraversa quasi senza guardarlo entrando a St James’s Park (sì, con due apostrofi e due s). Charles Holden lo progettò come quartier generale della metropolitana e, quando aprì nel 1929, era il più alto edificio per uffici di Londra. Le geometrie Art Déco meritano già il giro dell’isolato, ma cercate soprattutto le sculture: Venti, Giorno e Notte. Una figura di Jacob Epstein provocò abbastanza scandalo da subire una piccola “riduzione” anatomica. Anche l’eleganza istituzionale, a volte, ha i suoi compromessi.",
   "hashtags": [
@@ -28,7 +28,7 @@
   "location": "55 Broadway",
   "post_format": "carousel",
   "internal_title": "55 Broadway · il quartier generale sopra la Tube",
-  "updated_at": "2026-10-19T21:20:00+01:00",
+  "updated_at": "2026-10-19T21:28:55+01:00",
   "scheduled_for": "2026-10-27T18:30:00+00:00",
   "images": [
     {
@@ -79,6 +79,6 @@
     "scheduled_at": null,
     "published_url": "",
     "last_sync_at": null,
-    "sync_note": "Metricool connection verified. Waiting for editorial approval."
+    "sync_note": "Human approval complete. Waiting for Metricool scheduling."
   }
 }
