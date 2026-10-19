@@ -1,0 +1,84 @@
+{
+  "post_id": "2026-11-03-crossness-pumping-station",
+  "internal_title": "Crossness · una cattedrale per le fogne",
+  "editorial_status": "draft",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-11-03T18:30:00+00:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "Nel periodo vittoriano Londra aveva un problema piuttosto evidente: il Tamigi era diventato una fogna a cielo aperto. La risposta non fu soltanto ingegneristica. La Crossness Pumping Station, inaugurata nel 1865 come parte del nuovo sistema fognario di Joseph Bazalgette, sembra una cattedrale industriale: ghisa dipinta, archi, colonne e dettagli che nessuno assocerebbe spontaneamente ai liquami. È lontana dal centro e non apre ogni giorno, ma proprio per questo la visita conserva il piacere di entrare in un luogo che non ha ancora imparato a comportarsi come un’attrazione ordinaria.",
+  "caption_en": "Crossness Pumping Station turned Victorian sewage engineering into exuberant ironwork. It is inconvenient, highly specific and all the better for it.",
+  "cta": "Controllate sempre le giornate di apertura prima di partire: non è un museo con orario quotidiano.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#LondraInsolita",
+    "#Crossness",
+    "#IndustrialHeritage",
+    "#VictorianLondon"
+  ],
+  "location": "Crossness Pumping Station",
+  "overlay": {
+    "enabled": false,
+    "kicker": "FIELD NOTE",
+    "headline": "Una cattedrale per le fogne",
+    "position": "top-left",
+    "rendered_src": ""
+  },
+  "media_folder": "crossness pump station",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/instagram/crossness pump station/crossness pump station - 1.jpg",
+      "alt": "Archi e decorazioni in ghisa dipinta all'interno della Crossness Pumping Station.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 2,
+      "src": "/assets/instagram/crossness pump station/crossness pump station - 2.jpg",
+      "alt": "Dettagli dell'apparato industriale vittoriano restaurato a Crossness.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/instagram/crossness pump station/crossness pump station - 3.jpg",
+      "alt": "Colonne e passerelle della sala motori di Crossness.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/instagram/crossness pump station/crossness pump station - 4.jpg",
+      "alt": "Un particolare della decorazione policroma della stazione di pompaggio.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/instagram/crossness pump station/crossness pump station - 5.jpg",
+      "alt": "La struttura industriale e ornamentale della Crossness Pumping Station.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "source": {
+    "type": "facebook-archive",
+    "reference": "LA-0674",
+    "url": "https://www.crossness.org.uk/",
+    "checked_at": "2026-10-19"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for editorial approval and Metricool connection check."
+  },
+  "notes": "Second-week draft. Recheck the official open-day calendar before moving to review.",
+  "updated_at": "2026-10-19T17:00:00+01:00"
+}

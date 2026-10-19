@@ -1,0 +1,84 @@
+{
+  "post_id": "2026-11-01-cabman-shelters",
+  "internal_title": "Cabmen’s shelters · le casette verdi dei tassisti",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-11-01T10:00:00+00:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "Le piccole casette verdi sparse per Londra non sono chioschi nati per Instagram. Sono i cabmen’s shelters, costruiti dalla fine dell’Ottocento per dare ai tassisti un posto dove mangiare e scaldarsi senza allontanarsi troppo dal veicolo. Ne sopravvive soltanto una piccola rete: alcune servono ancora i cabbies, altre vendono tè e panini anche attraverso la finestra. Cercarle è un’ottima scusa per attraversare quartieri che difficilmente finirebbero nello stesso itinerario. Quella vicino ad Albert Bridge, per posizione, se la cava decisamente bene.",
+  "caption_en": "London’s green cabmen’s shelters were built as practical refuges for working drivers. Finding the survivors makes a rather good cross-city trail.",
+  "cta": "Gli interni non sono normalmente aperti al pubblico: la parte interessante è anche il percorso fra una casetta e l’altra.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#LondraInsolita",
+    "#CabmensShelters",
+    "#LondonHistory",
+    "#HiddenLondon"
+  ],
+  "location": "London, United Kingdom",
+  "overlay": {
+    "enabled": false,
+    "kicker": "FIELD NOTE",
+    "headline": "Le casette verdi",
+    "position": "bottom-left",
+    "rendered_src": ""
+  },
+  "media_folder": "cabman shelters",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/instagram/cabman shelters/cabman shelters - 1.jpg",
+      "alt": "Un cabmen's shelter verde circondato dagli alberi e da vasi di piante.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 2,
+      "src": "/assets/instagram/cabman shelters/cabman shelters - 2.jpg",
+      "alt": "Una delle storiche casette verdi costruite per i tassisti di Londra.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/instagram/cabman shelters/cabman shelters - 3.jpg",
+      "alt": "Dettaglio in legno dipinto di un cabmen's shelter.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/instagram/cabman shelters/cabman shelters - 4.jpg",
+      "alt": "Un cabmen's shelter inserito nel paesaggio stradale londinese.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/instagram/cabman shelters/cabman shelters - 5.jpg",
+      "alt": "Una seconda vista delle caratteristiche casette verdi dei tassisti.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "source": {
+    "type": "facebook-archive",
+    "reference": "LA-0511; LA-0890",
+    "url": "",
+    "checked_at": "2026-10-19"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for editorial approval and Metricool connection check."
+  },
+  "notes": "Pilot evergreen post. Avoided a precise survivor count because it can change; confirm any opening information shortly before publication.",
+  "updated_at": "2026-10-19T17:00:00+01:00"
+}

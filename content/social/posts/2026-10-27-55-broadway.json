@@ -1,0 +1,84 @@
+{
+  "post_id": "2026-10-27-55-broadway",
+  "internal_title": "55 Broadway · il quartier generale sopra la Tube",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-10-27T18:30:00+00:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "55 Broadway è quell’edificio che si attraversa quasi senza guardarlo entrando a St James’s Park (sì, con due apostrofi e due s). Charles Holden lo progettò come quartier generale della metropolitana e, quando aprì nel 1929, era il più alto edificio per uffici di Londra. Le geometrie Art Déco meritano già il giro dell’isolato, ma cercate soprattutto le sculture: Venti, Giorno e Notte. Una figura di Jacob Epstein provocò abbastanza scandalo da subire una piccola “riduzione” anatomica. Anche l’eleganza istituzionale, a volte, ha i suoi compromessi.",
+  "caption_en": "Charles Holden’s 55 Broadway hides in plain sight above St James’s Park station: an Art Deco headquarters with sculpture, scandal and one rather literal compromise.",
+  "cta": "La prossima volta che passate da St James’s Park, fate almeno il giro dell’isolato.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#LondraInsolita",
+    "#StJamessPark",
+    "#LondonArchitecture",
+    "#ArtDecoLondon"
+  ],
+  "location": "55 Broadway",
+  "overlay": {
+    "enabled": true,
+    "kicker": "FIELD NOTE",
+    "headline": "55 Broadway",
+    "position": "top-left",
+    "rendered_src": ""
+  },
+  "media_folder": "55 broadway",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/instagram/55 broadway/55 broadway - 1.jpg",
+      "alt": "La torre in pietra di 55 Broadway vista dal basso, sopra gli ingressi della stazione di St James's Park.",
+      "focal_x": 50,
+      "focal_y": 55
+    },
+    {
+      "order": 2,
+      "src": "/assets/instagram/55 broadway/55 broadway - 2.jpg",
+      "alt": "Dettaglio dell'esterno Art Déco di 55 Broadway.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/instagram/55 broadway/55 broadway - 3.jpg",
+      "alt": "Una delle sculture collocate sulle facciate di 55 Broadway.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/instagram/55 broadway/55 broadway - 4.jpg",
+      "alt": "Geometrie e finestre della sede storica della metropolitana londinese.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/instagram/55 broadway/55 broadway - 5.jpg",
+      "alt": "Un particolare architettonico dell'edificio 55 Broadway.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "source": {
+    "type": "facebook-archive",
+    "reference": "LA-0079; LA-0970",
+    "url": "",
+    "checked_at": "2026-10-19"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for editorial approval and Metricool connection check."
+  },
+  "notes": "Corrected Art Nouveau to Art Deco from the Facebook source. Overlay is only a Studio simulation until rendered_src is filled.",
+  "updated_at": "2026-10-19T17:00:00+01:00"
+}

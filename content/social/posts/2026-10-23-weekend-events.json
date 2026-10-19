@@ -1,0 +1,48 @@
+{
+  "post_id": "2026-10-23-weekend-events",
+  "internal_title": "Tre idee per il weekend · 23–25 ottobre",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": null
+  },
+  "scheduled_for": "2026-10-23T07:30:00+01:00",
+  "post_format": "carousel",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "Tre idee per un weekend londinese un po’ meno prevedibile. Venerdì apre al Museum of Youth Culture una mostra gratuita sulle donne che hanno costruito l’immaginario punk. Domenica il mulino di Brixton ospita racconti e laboratori di Halloween (zucca facoltativa, £3), mentre all’Horniman bambini e adulti possono diventare l’orchestra di effetti sonori di un piccolo cinema animato. Tre scale diverse, dalla storia culturale al mulino di quartiere: scegliete in base all’umore, non alla classifica delle attrazioni.",
+  "caption_en": "Three less-obvious London ideas for the weekend: women in punk, Halloween inside Brixton Windmill and a live sound-effects cinema at the Horniman.",
+  "cta": "Orari, prezzi e link di prenotazione sono nella selezione eventi di London Advanced.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#CosaFareALondra",
+    "#LondraInsolita",
+    "#LondonWeekend",
+    "#HiddenLondon"
+  ],
+  "location": "London, United Kingdom",
+  "overlay": {
+    "enabled": true,
+    "kicker": "LONDON ADVANCED",
+    "headline": "Questo weekend",
+    "position": "bottom-left",
+    "rendered_src": ""
+  },
+  "media_folder": "",
+  "images": [],
+  "source": {
+    "type": "weekend-events",
+    "reference": "events-digest-2026-10-18",
+    "url": "https://www.londonadvanced.com/events/",
+    "checked_at": "2026-10-18"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": null,
+    "published_url": "",
+    "last_sync_at": null,
+    "sync_note": "Waiting for a rendered event cover and editorial approval."
+  },
+  "notes": "Pilot weekend post. The source feed expires on 25 October; do not publish after that date.",
+  "updated_at": "2026-10-19T17:00:00+01:00"
+}

@@ -47,6 +47,182 @@ slug:
   sanitize_replacement: "-"
 
 collections:
+  - name: social_settings
+    label: Instagram settings
+    description: The shared voice, cadence and safety rules used when drafts are generated for @londonadvanced. These are instructions, not credentials.
+    editor:
+      preview: false
+    files:
+      - name: instagram
+        label: London Advanced Instagram
+        file: content/social/settings.json
+        format: json
+        fields:
+          - { label: Account, name: account, widget: string, hint: Public Instagram handle only. Never place passwords, tokens or secrets in Studio. }
+          - { label: Time zone, name: timezone, widget: string, default: Europe/London }
+          - label: Weekly cadence
+            name: cadence
+            widget: list
+            summary: "{{fields.day}} · {{fields.kind}} · {{fields.local_time}}"
+            fields:
+              - { label: Day, name: day, widget: select, options: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday] }
+              - { label: Local time, name: local_time, widget: string, hint: Europe/London time in HH:mm format. }
+              - { label: Post type, name: kind, widget: select, options: [place, weekend-events, journal-or-tool] }
+          - label: Voice
+            name: voice
+            widget: object
+            collapsed: false
+            fields:
+              - { label: Primary language, name: primary_language, widget: select, options: [Italian, English], default: Italian }
+              - { label: English treatment, name: english_mode, widget: select, options: [none, short-summary, full-bilingual], default: short-summary }
+              - { label: Minimum Italian words, name: caption_words_min, widget: number, value_type: int, min: 20, max: 220, default: 70 }
+              - { label: Maximum Italian words, name: caption_words_max, widget: number, value_type: int, min: 40, max: 300, default: 120 }
+              - { label: Tone instructions, name: tone, widget: text }
+              - label: Avoid
+                name: avoid
+                widget: list
+                field: { label: Phrase or habit, name: item, widget: string }
+          - label: Image rules
+            name: image_rules
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Output width, name: width, widget: number, value_type: int, default: 1080 }
+              - { label: Output height, name: height, widget: number, value_type: int, default: 1350 }
+              - { label: Maximum file size (MB), name: max_mb, widget: number, value_type: float, default: 8 }
+              - { label: Overlay policy, name: overlay_policy, widget: text }
+          - label: Automation policy
+            name: automation
+            widget: object
+            collapsed: false
+            fields:
+              - { label: Human approval is required, name: require_human_approval, widget: boolean, default: true }
+              - { label: Schedule approved posts automatically, name: schedule_approved, widget: boolean, default: true }
+              - { label: Metricool brand ID, name: metricool_brand_id, widget: string, required: false, hint: Filled automatically after the connector returns the London Advanced brand. Not a password or token. }
+              - { label: Metricool connection checked at, name: connection_checked_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm }
+  - name: social_posts
+    label: Instagram queue
+    label_singular: Instagram post
+    description: Review captions and media here. Automation may only hand a post to Metricool when both the workflow status and approval record are approved.
+    folder: content/social/posts
+    create: true
+    delete: false
+    extension: json
+    format: json
+    slug: "{{fields.post_id}}"
+    identifier_field: post_id
+    summary: "{{internal_title}} · {{editorial_status}} · {{scheduled_for}}"
+    sortable_fields: [commit_date, internal_title, editorial_status, scheduled_for, updated_at]
+    view_filters:
+      - { label: Drafts, field: editorial_status, pattern: draft }
+      - { label: Ready for Paolo, field: editorial_status, pattern: review }
+      - { label: Approved for Metricool, field: editorial_status, pattern: approved }
+      - { label: Scheduled, field: editorial_status, pattern: scheduled }
+      - { label: Published, field: editorial_status, pattern: published }
+    fields:
+      - label: Permanent post ID
+        name: post_id
+        widget: string
+        hint: Lowercase letters, numbers and hyphens only. Never change after the first save.
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase words separated by hyphens.']
+      - { label: Internal title, name: internal_title, widget: string, hint: Used only in Studio and Metricool; it is not part of the caption. }
+      - label: Workflow status
+        name: editorial_status
+        widget: select
+        options:
+          - { label: Draft, value: draft }
+          - { label: Ready for Paolo, value: review }
+          - { label: Approved for Metricool, value: approved }
+          - { label: Scheduled in Metricool, value: scheduled }
+          - { label: Published, value: published }
+          - { label: Skip / archive, value: archived }
+        default: draft
+        hint: Approved alone is not enough; the approval record below must also say approved.
+      - label: Approval record
+        name: approval
+        widget: object
+        collapsed: false
+        fields:
+          - { label: Approval status, name: status, widget: select, options: [pending, changes-requested, approved], default: pending }
+          - { label: Approved by, name: approved_by, widget: string, required: false, hint: Use Paolo Pastorino when the post is ready to schedule. }
+          - { label: Approved at, name: approved_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm }
+      - label: Planned publication
+        name: scheduled_for
+        widget: datetime
+        required: false
+        date_format: YYYY-MM-DD
+        time_format: HH:mm
+        hint: Europe/London local time. It remains provisional until Metricool returns a planner ID.
+      - { label: Post format, name: post_format, widget: select, options: [carousel, single-image], default: carousel }
+      - label: Language treatment
+        name: language_mode
+        widget: select
+        options:
+          - { label: Italian only, value: italian }
+          - { label: Italian + short English summary, value: italian-plus-english-summary }
+          - { label: Full Italian and English, value: bilingual }
+        default: italian
+      - label: Italian caption
+        name: caption_it
+        widget: text
+        hint: "Aim for 70–120 words: concrete opening, one revealing detail, practical judgement, restrained close. Hashtags are added separately."
+      - { label: English summary, name: caption_en, widget: text, required: false, hint: Keep this short unless the post is deliberately bilingual. }
+      - { label: Call to action, name: cta, widget: string, required: false, hint: Optional and restrained. Avoid generic engagement bait. }
+      - label: Hashtags
+        name: hashtags
+        widget: list
+        min: 1
+        max: 5
+        hint: Maximum five. Keep #LondonAdvanced plus a place and a subject; do not use a generic hashtag cloud.
+        field: { label: Hashtag, name: hashtag, widget: string, pattern: ['^#[A-Za-z0-9_]+$', 'Start with # and use letters, numbers or underscores only.'] }
+      - { label: Instagram location label, name: location, widget: string, required: false }
+      - label: Cover overlay
+        name: overlay
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: Use overlay, name: enabled, widget: boolean, default: false }
+          - { label: Kicker, name: kicker, widget: string, required: false, hint: "Example: THIS WEEKEND or FIELD NOTE." }
+          - { label: Headline, name: headline, widget: string, required: false, hint: Keep to roughly 2–6 words. }
+          - { label: Position, name: position, widget: select, options: [top-left, bottom-left], default: bottom-left }
+          - { label: Rendered cover path, name: rendered_src, widget: string, required: false, hint: Filled after the approved overlay is rendered into a publishable image. }
+      - { label: Source media folder, name: media_folder, widget: string, required: false, hint: Existing folder below /assets/instagram/. The automation uses it to suggest a sequence. }
+      - label: Carousel images
+        name: images
+        widget: list
+        collapsed: true
+        required: false
+        max: 10
+        summary: "{{fields.order}} · {{fields.src}}"
+        fields:
+          - { label: Order, name: order, widget: number, value_type: int, min: 1, max: 10 }
+          - { label: Existing image path, name: src, widget: string, hint: Example /assets/instagram/55 broadway/55 broadway - 1.jpg }
+          - { label: Alternative text, name: alt, widget: text }
+          - { label: Crop focus X (%), name: focal_x, widget: number, value_type: int, min: 0, max: 100, default: 50, required: false }
+          - { label: Crop focus Y (%), name: focal_y, widget: number, value_type: int, min: 0, max: 100, default: 50, required: false }
+      - label: Editorial source
+        name: source
+        widget: object
+        collapsed: true
+        fields:
+          - { label: Source type, name: type, widget: select, options: [facebook-archive, weekend-events, journal, website-tool, media-library] }
+          - { label: Source reference, name: reference, widget: string, hint: Facebook archive ID, Journal ID, tool slug or event digest date. }
+          - { label: Source URL, name: url, widget: string, required: false }
+          - { label: Facts checked at, name: checked_at, widget: date, required: false, format: YYYY-MM-DD }
+      - label: Metricool hand-off
+        name: metricool
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: Planner post ID, name: planner_id, widget: string, required: false, hint: Written back after Metricool accepts the post. }
+          - { label: Scheduled at, name: scheduled_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm }
+          - { label: Published URL, name: published_url, widget: string, required: false }
+          - { label: Last sync, name: last_sync_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm }
+          - { label: Sync note, name: sync_note, widget: text, required: false }
+      - { label: Editor notes, name: notes, widget: text, required: false }
+      - { label: Last substantive update, name: updated_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm }
   - name: journal
     label: Journal articles
     label_singular: Journal article

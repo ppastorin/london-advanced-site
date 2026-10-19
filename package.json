@@ -4,7 +4,7 @@
   "private": true,
   "description": "London Advanced Cloudflare portal and branded tool routes",
   "scripts": {
-    "test": "node scripts/validate-site.mjs && node --test tests/*.test.mjs && node scripts/validate-events.mjs dist/data/events.json",
+    "test": "node scripts/validate-site.mjs && node scripts/validate-social.mjs content/social/posts && node --test tests/*.test.mjs && node scripts/validate-events.mjs dist/data/events.json",
     "check": "npm test",
     "validate:events": "node scripts/validate-events.mjs dist/data/events.json",
     "build:fare": "node scripts/build-fare-calculator.mjs",

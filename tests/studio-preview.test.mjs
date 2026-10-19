@@ -79,3 +79,18 @@ test("journal preview renders without itinerary-only data", async () => {
     practical: [],
   }));
 });
+
+test("Instagram preview shows the approval gate, cover treatment and caption", async () => {
+  const templates = await loadTemplates();
+  const template = templates.get("social_posts");
+  assert.ok(template, "Instagram preview should be registered");
+  const data = JSON.parse(
+    await readFile(new URL("content/social/posts/2026-10-27-55-broadway.json", root), "utf8"),
+  );
+  const rendered = JSON.stringify(render(template, data));
+  assert.match(rendered, /55 Broadway/);
+  assert.match(rendered, /Not publishable/);
+  assert.match(rendered, /55 broadway - 1\.jpg/);
+  assert.match(rendered, /#LondonAdvanced/);
+  assert.match(rendered, /The automation must skip this record/);
+});

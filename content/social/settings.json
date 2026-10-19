@@ -1,0 +1,48 @@
+{
+  "account": "@londonadvanced",
+  "timezone": "Europe/London",
+  "cadence": [
+    {
+      "day": "Tuesday",
+      "local_time": "18:30",
+      "kind": "place"
+    },
+    {
+      "day": "Friday",
+      "local_time": "07:30",
+      "kind": "weekend-events"
+    },
+    {
+      "day": "Sunday",
+      "local_time": "10:00",
+      "kind": "journal-or-tool"
+    }
+  ],
+  "voice": {
+    "primary_language": "Italian",
+    "english_mode": "short-summary",
+    "caption_words_min": 70,
+    "caption_words_max": 120,
+    "tone": "Apri con il luogo o con un dettaglio concreto. Racconta una sola cosa memorabile, aggiungi un giudizio personale o una nota pratica e chiudi senza enfasi. Mantieni il tono curioso, competente e leggermente ironico dei post Facebook di Paolo. Le parentesi sono ammesse quando aggiungono una vera osservazione. Correggi i fatti anche quando la fonte storica contiene una formulazione imprecisa.",
+    "avoid": [
+      "Hook generici come Non crederai mai o Salva subito",
+      "Superlativi non dimostrabili e tono da influencer",
+      "Emoji decorative",
+      "Nuvole di hashtag",
+      "Domande finali usate solo per forzare commenti",
+      "Traduzioni inglesi lunghe che duplicano tutto il testo italiano"
+    ]
+  },
+  "image_rules": {
+    "width": 1080,
+    "height": 1350,
+    "max_mb": 8,
+    "overlay_policy": "Usare un titolo breve soltanto sulla prima immagine di un carosello, sul post del weekend o quando la fotografia non identifica subito il soggetto. Non coprire dettagli architettonici o volti. Le immagini successive restano pulite. L'anteprima in Studio simula l'overlay; prima della pubblicazione deve esistere un file renderizzato separato."
+  },
+  "automation": {
+    "require_human_approval": true,
+    "schedule_approved": true,
+    "metricool_brand_id": "",
+    "connection_checked_at": null
+  }
+}

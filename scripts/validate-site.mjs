@@ -611,7 +611,13 @@ for (const marker of [
   "media_processing:",
   "name: itineraries",
   "folder: content/itineraries",
-  "preview_path: \"itineraries/_preview/{{fields.itinerary_id}}\""
+  "preview_path: \"itineraries/_preview/{{fields.itinerary_id}}\"",
+  "name: social_settings",
+  "file: content/social/settings.json",
+  "name: social_posts",
+  "folder: content/social/posts",
+  "Approved for Metricool",
+  "Planner post ID"
 ]) {
   if (!studioConfig.includes(marker)) fail(`Journal Studio config is missing ${marker}.`);
 }
