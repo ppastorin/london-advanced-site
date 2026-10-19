@@ -32,7 +32,7 @@
   "images": [
     {
       "order": 1,
-      "src": "/assets/social/weekend-cover.jpg",
+      "src": "/assets/social/weekend-cover-v1.jpg",
       "alt": "Mappa di Londra con i luoghi selezionati da London Advanced, usata come copertina degli eventi del weekend.",
       "focal_x": 50,
       "focal_y": 50
@@ -52,5 +52,5 @@
     "sync_note": "Metricool connection verified. Waiting for editorial approval."
   },
   "notes": "Pilot weekend post. Reusable London Advanced map cover; the source feed expires on 25 October, so do not publish after that date.",
-  "updated_at": "2026-10-19T21:20:00+01:00"
+  "updated_at": "2026-10-19T21:25:00+01:00"
 }
