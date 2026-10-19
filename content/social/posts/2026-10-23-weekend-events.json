@@ -3,8 +3,8 @@
   "caption_en": "Three less-obvious London ideas for the weekend: women in punk, Halloween inside Brixton Windmill and a live sound-effects cinema at the Horniman.",
   "approval": {
     "status": "approved",
-    "approved_by": "",
-    "approved_at": null
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-19T21:28:55+01:00"
   },
   "caption_it": "Tre idee per un weekend londinese un po’ meno prevedibile. Venerdì apre al Museum of Youth Culture una mostra gratuita sulle donne che hanno costruito l’immaginario punk. Domenica il mulino di Brixton ospita racconti e laboratori di Halloween (zucca facoltativa, £3), mentre all’Horniman bambini e adulti possono diventare l’orchestra di effetti sonori di un piccolo cinema animato. Tre scale diverse, dalla storia culturale al mulino di quartiere: scegliete in base all’umore, non alla classifica delle attrazioni.",
   "hashtags": [
@@ -28,7 +28,7 @@
   "location": "London, United Kingdom",
   "post_format": "carousel",
   "internal_title": "Tre idee per il weekend · 23–25 ottobre",
-  "updated_at": "2026-10-19T21:25:00+01:00",
+  "updated_at": "2026-10-19T21:28:55+01:00",
   "scheduled_for": "2026-10-23T10:00:00+01:00",
   "images": [
     {
@@ -51,6 +51,6 @@
     "scheduled_at": null,
     "published_url": "",
     "last_sync_at": null,
-    "sync_note": "Metricool connection verified. Waiting for editorial approval."
+    "sync_note": "Human approval complete. Waiting for Metricool scheduling."
   }
 }
