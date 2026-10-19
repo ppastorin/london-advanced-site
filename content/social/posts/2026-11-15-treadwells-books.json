@@ -3,8 +3,8 @@
   "caption_en": "Treadwell’s treats magic, folklore and Western esotericism as subjects worth reading seriously—without removing the shop’s considerable sense of theatre.",
   "approval": {
     "status": "approved",
-    "approved_by": "",
-    "approved_at": null
+    "approved_by": "ppastorin",
+    "approved_at": "2026-10-19T21:29:23Z"
   },
   "caption_it": "Da fuori Treadwell’s Books potrebbe sembrare una piccola libreria indipendente come molte altre. Dentro, gli scaffali passano da magia e folklore a storia delle religioni, paganesimo ed esoterismo occidentale, con libri nuovi e usati scelti per curiosi, studiosi e praticanti. Il negozio è nato nel 2003 e funziona anche come punto d’incontro, con conferenze, corsi e passeggiate nella Bloomsbury occulta. La parte migliore è che non serve presentarsi con un mantello né fingere di credere a tutto: si può entrare semplicemente per capire come certe idee abbiano attraversato la storia culturale di Londra. Uscire senza un libro è meno garantito.",
   "hashtags": [
@@ -15,7 +15,7 @@
     "#LondraInsolita"
   ],
   "media_folder": "treadwell books",
-  "editorial_status": "scheduled",
+  "editorial_status": "approved",
   "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
@@ -28,7 +28,7 @@
   "location": "Treadwell's Books",
   "post_format": "carousel",
   "internal_title": "Treadwell’s Books · l’occulto senza effetti speciali",
-  "updated_at": "2026-10-19T21:50:00+01:00",
+  "updated_at": "2026-10-19T22:29:43+01:00",
   "scheduled_for": "2026-11-15T10:00:00+00:00",
   "images": [
     {
