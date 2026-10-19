@@ -214,3 +214,42 @@ test("Studio media publication reports recoverable missing blobs", async () => {
   assert.equal(response.status, 409);
   assert.equal((await response.json()).code, "missing_blobs");
 });
+
+test("Studio media publication builds large batches in chained tree chunks", async () => {
+  const entries = Array.from({ length: 60 }, (_, index) => ({
+    path: `assets/instagram/weekend/image-${index}.jpg`,
+    sha: index.toString(16).padStart(40, "0")
+  }));
+  const treeBodies = [];
+  const fetchImpl = async (url, options = {}) => {
+    const pathname = new URL(url).pathname + new URL(url).search;
+    if (pathname === "/repos/ppastorin/london-advanced-site") return Response.json({ permissions: { push: true } });
+    if (pathname.endsWith("/git/ref/heads/main")) return Response.json({ object: { sha: "base-commit" } });
+    if (pathname.endsWith("/git/commits/base-commit")) return Response.json({ tree: { sha: "base-tree" } });
+    if (pathname.endsWith("/git/trees/base-tree?recursive=1")) return Response.json({ tree: [], truncated: false });
+    if (pathname.endsWith("/git/trees") && options.method === "POST") {
+      const body = JSON.parse(options.body);
+      treeBodies.push(body);
+      return Response.json({ sha: `tree-${treeBodies.length}` }, { status: 201 });
+    }
+    if (pathname.endsWith("/git/commits") && options.method === "POST") {
+      assert.equal(JSON.parse(options.body).tree, "tree-2");
+      return Response.json({ sha: "next-commit" }, { status: 201 });
+    }
+    if (pathname.endsWith("/git/refs/heads/main") && options.method === "PATCH") {
+      return Response.json({ object: { sha: "next-commit" } });
+    }
+    throw new Error(`Unexpected GitHub request: ${pathname}`);
+  };
+  const response = await handleMediaCommit(new Request("https://www.londonadvanced.com/api/studio/media/commit", {
+    method: "POST",
+    headers: { Origin: "https://www.londonadvanced.com", Authorization: "Bearer test-token" },
+    body: JSON.stringify({ entries })
+  }), fetchImpl);
+  assert.equal(response.status, 200);
+  assert.equal(treeBodies.length, 2);
+  assert.equal(treeBodies[0].base_tree, "base-tree");
+  assert.equal(treeBodies[0].tree.length, 100);
+  assert.equal(treeBodies[1].base_tree, "tree-1");
+  assert.equal(treeBodies[1].tree.length, 20);
+});

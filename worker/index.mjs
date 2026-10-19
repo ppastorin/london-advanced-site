@@ -16,6 +16,8 @@ const MEDIA_REPOSITORY = "ppastorin/london-advanced-site";
 const MEDIA_BRANCH = "main";
 const MAX_MEDIA_COMMIT_BYTES = 750_000;
 const MAX_MEDIA_ENTRIES = 1_000;
+const MEDIA_TREE_CHUNK_SIZE = 100;
+const GITHUB_WRITE_ATTEMPTS = 3;
 
 function jsonResponse(body, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(body), {
@@ -600,17 +602,60 @@ function githubHeaders(token) {
 }
 
 async function githubMediaRequest(fetchImpl, token, pathname, options = {}) {
-  let response;
-  try {
-    response = await fetchImpl(`https://api.github.com${pathname}`, {
-      ...options,
-      headers: { ...githubHeaders(token), ...(options.headers || {}) }
-    });
-  } catch {
-    return { ok: false, status: 502, payload: { message: "GitHub could not be reached" } };
+  let lastResult = { ok: false, status: 502, payload: { message: "GitHub could not be reached" } };
+  const attempts = options.method && options.method !== "GET" ? GITHUB_WRITE_ATTEMPTS : 1;
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    let response;
+    try {
+      response = await fetchImpl(`https://api.github.com${pathname}`, {
+        ...options,
+        headers: { ...githubHeaders(token), ...(options.headers || {}) }
+      });
+    } catch {
+      lastResult = { ok: false, status: 502, payload: { message: "GitHub could not be reached" } };
+      if (attempt + 1 < attempts) {
+        await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 1_000));
+        continue;
+      }
+      return lastResult;
+    }
+    const responseText = await response.text().catch(() => "");
+    let payload = {};
+    try {
+      payload = responseText ? JSON.parse(responseText) : {};
+    } catch {
+      payload = {};
+    }
+    lastResult = {
+      ok: response.ok,
+      status: response.status,
+      payload,
+      retryAfter: Number(response.headers.get("Retry-After") || 0),
+      requestId: response.headers.get("X-GitHub-Request-Id") || ""
+    };
+    if (response.ok) return lastResult;
+    const message = String(payload.message || "").toLowerCase();
+    const retryable = response.status === 429 || response.status >= 500 ||
+      (response.status === 403 && (message.includes("rate limit") || message.includes("temporarily")));
+    if (!retryable || attempt + 1 >= attempts) return lastResult;
+    const delay = Math.max(lastResult.retryAfter * 1_000, (attempt + 1) * 1_500);
+    await new Promise(resolve => setTimeout(resolve, Math.min(delay, 10_000)));
   }
-  const payload = await response.json().catch(() => ({}));
-  return { ok: response.ok, status: response.status, payload };
+  return lastResult;
+}
+
+async function createMediaTree(fetchImpl, token, baseTreeSha, treeElements) {
+  let nextBaseTreeSha = baseTreeSha;
+  for (let offset = 0; offset < treeElements.length; offset += MEDIA_TREE_CHUNK_SIZE) {
+    const chunk = treeElements.slice(offset, offset + MEDIA_TREE_CHUNK_SIZE);
+    const result = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/trees`, {
+      method: "POST",
+      body: JSON.stringify({ base_tree: nextBaseTreeSha, tree: chunk })
+    });
+    if (!result.ok) return { ...result, chunkStart: offset, chunkSize: chunk.length };
+    nextBaseTreeSha = result.payload.sha;
+  }
+  return { ok: true, status: 201, payload: { sha: nextBaseTreeSha } };
 }
 
 function mediaCommitError(code, message, status = 400) {
@@ -702,15 +747,13 @@ export async function handleMediaCommit(request, fetchImpl = fetch) {
     { path: entry.path, mode: "100644", type: "blob", sha: entry.sha },
     { path: `dist/${entry.path}`, mode: "100644", type: "blob", sha: entry.sha }
   ]);
-  const tree = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/trees`, {
-    method: "POST",
-    body: JSON.stringify({ base_tree: baseCommit.payload.tree.sha, tree: treeElements })
-  });
+  const tree = await createMediaTree(fetchImpl, token, baseCommit.payload.tree.sha, treeElements);
   if (!tree.ok) {
     if (tree.status === 422) {
       return mediaCommitError("missing_blobs", "Some image data has not reached GitHub yet.", 409);
     }
-    return mediaCommitError("tree_failed", tree.payload.message || "GitHub could not create the image tree.", 502);
+    const detail = tree.payload.message || `GitHub could not create the image tree (HTTP ${tree.status}).`;
+    return mediaCommitError("tree_failed", detail, 502);
   }
   const commit = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/commits`, {
     method: "POST",
