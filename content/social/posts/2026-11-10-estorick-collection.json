@@ -15,7 +15,7 @@
     "#LondonMuseums"
   ],
   "media_folder": "estorick collection",
-  "editorial_status": "approved",
+  "editorial_status": "scheduled",
   "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
@@ -28,7 +28,7 @@
   "location": "Estorick Collection of Modern Italian Art",
   "post_format": "carousel",
   "internal_title": "Estorick Collection · l’Italia moderna in una casa di Canonbury",
-  "updated_at": "2026-10-19T22:29:43+01:00",
+  "updated_at": "2026-10-19T22:38:30+01:00",
   "scheduled_for": "2026-11-10T18:30:00+00:00",
   "images": [
     {
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "",
-    "scheduled_at": null,
+    "planner_id": "400506434",
+    "scheduled_at": "2026-10-19T22:37:00+01:00",
     "published_url": "",
-    "last_sync_at": null,
-    "sync_note": "Waiting for editorial approval."
+    "last_sync_at": "2026-10-19T22:38:30+01:00",
+    "sync_note": "Metricool UUID 7019935848405550862"
   }
 }
