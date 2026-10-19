@@ -9,7 +9,7 @@
     },
     {
       "day": "Friday",
-      "local_time": "07:30",
+      "local_time": "10:00",
       "kind": "weekend-events"
     },
     {
@@ -42,7 +42,7 @@
   "automation": {
     "require_human_approval": true,
     "schedule_approved": true,
-    "metricool_brand_id": "",
-    "connection_checked_at": null
+    "metricool_brand_id": "5985082",
+    "connection_checked_at": "2026-10-19T17:25:00+01:00"
   }
 }
