@@ -22,14 +22,22 @@
   ],
   "location": "London, United Kingdom",
   "overlay": {
-    "enabled": true,
+    "enabled": false,
     "kicker": "LONDON ADVANCED",
     "headline": "Questo weekend",
     "position": "bottom-left",
     "rendered_src": ""
   },
-  "media_folder": "",
-  "images": [],
+  "media_folder": "site asset · london map",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/social/weekend-cover.jpg",
+      "alt": "Mappa di Londra con i luoghi selezionati da London Advanced, usata come copertina degli eventi del weekend.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
   "source": {
     "type": "weekend-events",
     "reference": "events-digest-2026-10-18",
@@ -41,8 +49,8 @@
     "scheduled_at": null,
     "published_url": "",
     "last_sync_at": null,
-    "sync_note": "Waiting for a rendered event cover and editorial approval."
+    "sync_note": "Metricool connection verified. Waiting for editorial approval."
   },
-  "notes": "Pilot weekend post. The source feed expires on 25 October; do not publish after that date.",
-  "updated_at": "2026-10-19T17:00:00+01:00"
+  "notes": "Pilot weekend post. Reusable London Advanced map cover; the source feed expires on 25 October, so do not publish after that date.",
+  "updated_at": "2026-10-19T21:20:00+01:00"
 }

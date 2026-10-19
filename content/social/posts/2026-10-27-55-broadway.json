@@ -22,7 +22,7 @@
   ],
   "location": "55 Broadway",
   "overlay": {
-    "enabled": true,
+    "enabled": false,
     "kicker": "FIELD NOTE",
     "headline": "55 Broadway",
     "position": "top-left",
@@ -77,8 +77,8 @@
     "scheduled_at": null,
     "published_url": "",
     "last_sync_at": null,
-    "sync_note": "Waiting for editorial approval and Metricool connection check."
+    "sync_note": "Metricool connection verified. Waiting for editorial approval."
   },
-  "notes": "Corrected Art Nouveau to Art Deco from the Facebook source. Overlay is only a Studio simulation until rendered_src is filled.",
-  "updated_at": "2026-10-19T17:00:00+01:00"
+  "notes": "Corrected Art Nouveau to Art Deco from the Facebook source. Clean photography selected; no text overlay required.",
+  "updated_at": "2026-10-19T21:20:00+01:00"
 }
