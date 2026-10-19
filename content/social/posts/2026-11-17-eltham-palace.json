@@ -1,18 +1,12 @@
 {
-  "post_id": "2026-11-17-eltham-palace",
-  "internal_title": "Eltham Palace · Medioevo e Art Deco nella stessa casa",
-  "editorial_status": "review",
-  "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": null
-  },
-  "scheduled_for": "2026-11-17T18:30:00+00:00",
-  "post_format": "carousel",
-  "language_mode": "italian-plus-english-summary",
-  "caption_it": "Eltham Palace riesce a unire una grande sala medievale degli anni 1470 e una casa Art Deco costruita negli anni Trenta senza chiedere scusa a nessuna delle due epoche. Stephen e Virginia Courtauld recuperarono il sito e vi inserirono ambienti modernissimi: ingresso circolare, legni geometrici, tecnologia domestica e un bagno rivestito d’oro e onice. Poi si apre la Great Hall con il suo tetto in quercia, come se qualcuno avesse collegato due edifici separati da quasi cinque secoli. Il risultato non è sobrio—per fortuna. Più che una casa storica, è una discussione molto costosa fra Medioevo e modernità.",
+  "notes": "Three-week batch. Historical facts checked against English Heritage; seasonal visit details must be rechecked at approval.",
   "caption_en": "A 1470s great hall meets the Courtaulds’ extravagant 1930s Art Deco home: five centuries joined with confidence rather than restraint.",
-  "cta": "Prenotazione e orari cambiano con la stagione: controllate English Heritage prima di partire.",
+  "approval": {
+    "status": "approved",
+    "approved_by": "ppastorin",
+    "approved_at": "2026-10-19T21:29:43Z"
+  },
+  "caption_it": "Eltham Palace riesce a unire una grande sala medievale degli anni 1470 e una casa Art Deco costruita negli anni Trenta senza chiedere scusa a nessuna delle due epoche. Stephen e Virginia Courtauld recuperarono il sito e vi inserirono ambienti modernissimi: ingresso circolare, legni geometrici, tecnologia domestica e un bagno rivestito d’oro e onice. Poi si apre la Great Hall con il suo tetto in quercia, come se qualcuno avesse collegato due edifici separati da quasi cinque secoli. Il risultato non è sobrio—per fortuna. Più che una casa storica, è una discussione molto costosa fra Medioevo e modernità.",
   "hashtags": [
     "#LondonAdvanced",
     "#ElthamPalace",
@@ -20,7 +14,9 @@
     "#LondonArchitecture",
     "#LondraInsolita"
   ],
-  "location": "Eltham Palace and Gardens",
+  "media_folder": "Eltham Palace",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
     "kicker": "FIELD NOTE",
@@ -28,7 +24,12 @@
     "position": "top-left",
     "rendered_src": ""
   },
-  "media_folder": "Eltham Palace",
+  "cta": "Prenotazione e orari cambiano con la stagione: controllate English Heritage prima di partire.",
+  "location": "Eltham Palace and Gardens",
+  "post_format": "carousel",
+  "internal_title": "Eltham Palace · Medioevo e Art Deco nella stessa casa",
+  "updated_at": "2026-10-19T22:29:43+01:00",
+  "scheduled_for": "2026-11-17T18:30:00+00:00",
   "images": [
     {
       "order": 1,
@@ -66,6 +67,7 @@
       "focal_y": 50
     }
   ],
+  "post_id": "2026-11-17-eltham-palace",
   "source": {
     "type": "official-site",
     "reference": "English Heritage · Eltham Palace",
@@ -78,7 +80,5 @@
     "published_url": "",
     "last_sync_at": null,
     "sync_note": "Waiting for editorial approval."
-  },
-  "notes": "Three-week batch. Historical facts checked against English Heritage; seasonal visit details must be rechecked at approval.",
-  "updated_at": "2026-10-19T21:50:00+01:00"
+  }
 }
