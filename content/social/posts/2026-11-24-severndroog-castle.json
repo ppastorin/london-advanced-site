@@ -1,18 +1,12 @@
 {
-  "post_id": "2026-11-24-severndroog-castle",
-  "internal_title": "Severndroog Castle · panorama e storia scomoda a Shooters Hill",
-  "editorial_status": "review",
+  "notes": "Three-week batch. Caption deliberately retains the East India Company context rather than presenting the tower as a neutral folly.",
+  "caption_en": "Severndroog’s viewing platform is spectacular; the 1784 memorial’s East India Company story deserves equal attention rather than picturesque silence.",
   "approval": {
-    "status": "pending",
+    "status": "approved",
     "approved_by": "",
     "approved_at": null
   },
-  "scheduled_for": "2026-11-24T18:30:00+00:00",
-  "post_format": "carousel",
-  "language_mode": "italian-plus-english-summary",
   "caption_it": "Severndroog Castle non è un castello, ma una torre commemorativa costruita nel 1784 a Shooters Hill. Lady Anne James la fece erigere in memoria del marito, Sir William James; il nome ricorda una fortezza sulla costa indiana conquistata durante la sua carriera con la East India Company. La scala a chiocciola porta a una terrazza con una vista sorprendentemente ampia su Londra e oltre. Il panorama è la ragione immediata per salire, ma l’origine del monumento merita più di una nota a piè di pagina. È un buon esempio di come un edificio pittoresco possa contenere anche una storia imperiale decisamente meno decorativa.",
-  "caption_en": "Severndroog’s viewing platform is spectacular; the 1784 memorial’s East India Company story deserves equal attention rather than picturesque silence.",
-  "cta": "Le aperture sono limitate: controllate il calendario ufficiale prima di affrontare la salita a Shooters Hill.",
   "hashtags": [
     "#LondonAdvanced",
     "#SeverndroogCastle",
@@ -20,7 +14,9 @@
     "#LondonViews",
     "#LondonHistory"
   ],
-  "location": "Severndroog Castle",
+  "media_folder": "severndroog castle",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
     "kicker": "FIELD NOTE",
@@ -28,7 +24,12 @@
     "position": "top-left",
     "rendered_src": ""
   },
-  "media_folder": "severndroog castle",
+  "cta": "Le aperture sono limitate: controllate il calendario ufficiale prima di affrontare la salita a Shooters Hill.",
+  "location": "Severndroog Castle",
+  "post_format": "carousel",
+  "internal_title": "Severndroog Castle · panorama e storia scomoda a Shooters Hill",
+  "updated_at": "2026-10-19T21:50:00+01:00",
+  "scheduled_for": "2026-11-24T18:30:00+00:00",
   "images": [
     {
       "order": 1,
@@ -66,6 +67,7 @@
       "focal_y": 50
     }
   ],
+  "post_id": "2026-11-24-severndroog-castle",
   "source": {
     "type": "official-site",
     "reference": "Severndroog Castle history",
@@ -78,7 +80,5 @@
     "published_url": "",
     "last_sync_at": null,
     "sync_note": "Waiting for editorial approval."
-  },
-  "notes": "Three-week batch. Caption deliberately retains the East India Company context rather than presenting the tower as a neutral folly.",
-  "updated_at": "2026-10-19T21:50:00+01:00"
+  }
 }
