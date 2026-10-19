@@ -3,8 +3,8 @@
   "caption_en": "London’s green cabmen’s shelters were built as practical refuges for working drivers. Finding the survivors makes a rather good cross-city trail.",
   "approval": {
     "status": "approved",
-    "approved_by": "",
-    "approved_at": null
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-19T21:28:55+01:00"
   },
   "caption_it": "Le piccole casette verdi sparse per Londra non sono chioschi nati per Instagram. Sono i cabmen’s shelters, costruiti dalla fine dell’Ottocento per dare ai tassisti un posto dove mangiare e scaldarsi senza allontanarsi troppo dal veicolo. Ne sopravvive soltanto una piccola rete: alcune servono ancora i cabbies, altre vendono tè e panini anche attraverso la finestra. Cercarle è un’ottima scusa per attraversare quartieri che difficilmente finirebbero nello stesso itinerario. Quella vicino ad Albert Bridge, per posizione, se la cava decisamente bene.",
   "hashtags": [
@@ -28,7 +28,7 @@
   "location": "London, United Kingdom",
   "post_format": "carousel",
   "internal_title": "Cabmen’s shelters · le casette verdi dei tassisti",
-  "updated_at": "2026-10-19T17:00:00+01:00",
+  "updated_at": "2026-10-19T21:28:55+01:00",
   "scheduled_for": "2026-11-01T10:00:00+00:00",
   "images": [
     {
@@ -79,6 +79,6 @@
     "scheduled_at": null,
     "published_url": "",
     "last_sync_at": null,
-    "sync_note": "Waiting for editorial approval and Metricool connection check."
+    "sync_note": "Human approval complete. Waiting for Metricool scheduling."
   }
 }
