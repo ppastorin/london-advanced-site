@@ -1,18 +1,12 @@
 {
-  "post_id": "2026-11-03-crossness-pumping-station",
-  "internal_title": "Crossness · una cattedrale per le fogne",
-  "editorial_status": "draft",
-  "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": null
-  },
-  "scheduled_for": "2026-11-03T18:30:00+00:00",
-  "post_format": "carousel",
-  "language_mode": "italian-plus-english-summary",
-  "caption_it": "Nel periodo vittoriano Londra aveva un problema piuttosto evidente: il Tamigi era diventato una fogna a cielo aperto. La risposta non fu soltanto ingegneristica. La Crossness Pumping Station, inaugurata nel 1865 come parte del nuovo sistema fognario di Joseph Bazalgette, sembra una cattedrale industriale: ghisa dipinta, archi, colonne e dettagli che nessuno assocerebbe spontaneamente ai liquami. È lontana dal centro e non apre ogni giorno, ma proprio per questo la visita conserva il piacere di entrare in un luogo che non ha ancora imparato a comportarsi come un’attrazione ordinaria.",
+  "notes": "Second-week draft. Recheck the official open-day calendar before moving to review.",
   "caption_en": "Crossness Pumping Station turned Victorian sewage engineering into exuberant ironwork. It is inconvenient, highly specific and all the better for it.",
-  "cta": "Controllate sempre le giornate di apertura prima di partire: non è un museo con orario quotidiano.",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-19T21:28:55+01:00"
+  },
+  "caption_it": "Nel periodo vittoriano Londra aveva un problema piuttosto evidente: il Tamigi era diventato una fogna a cielo aperto. La risposta non fu soltanto ingegneristica. La Crossness Pumping Station, inaugurata nel 1865 come parte del nuovo sistema fognario di Joseph Bazalgette, sembra una cattedrale industriale: ghisa dipinta, archi, colonne e dettagli che nessuno assocerebbe spontaneamente ai liquami. È lontana dal centro e non apre ogni giorno, ma proprio per questo la visita conserva il piacere di entrare in un luogo che non ha ancora imparato a comportarsi come un’attrazione ordinaria.",
   "hashtags": [
     "#LondonAdvanced",
     "#LondraInsolita",
@@ -20,7 +14,9 @@
     "#IndustrialHeritage",
     "#VictorianLondon"
   ],
-  "location": "Crossness Pumping Station",
+  "media_folder": "crossness pump station",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
     "kicker": "FIELD NOTE",
@@ -28,7 +24,12 @@
     "position": "top-left",
     "rendered_src": ""
   },
-  "media_folder": "crossness pump station",
+  "cta": "Controllate sempre le giornate di apertura prima di partire: non è un museo con orario quotidiano.",
+  "location": "Crossness Pumping Station",
+  "post_format": "carousel",
+  "internal_title": "Crossness · una cattedrale per le fogne",
+  "updated_at": "2026-10-19T21:28:55+01:00",
+  "scheduled_for": "2026-11-03T18:30:00+00:00",
   "images": [
     {
       "order": 1,
@@ -66,6 +67,7 @@
       "focal_y": 50
     }
   ],
+  "post_id": "2026-11-03-crossness-pumping-station",
   "source": {
     "type": "facebook-archive",
     "reference": "LA-0674",
@@ -77,8 +79,6 @@
     "scheduled_at": null,
     "published_url": "",
     "last_sync_at": null,
-    "sync_note": "Waiting for editorial approval and Metricool connection check."
-  },
-  "notes": "Second-week draft. Recheck the official open-day calendar before moving to review.",
-  "updated_at": "2026-10-19T17:00:00+01:00"
+    "sync_note": "Human approval complete. Waiting for Metricool scheduling."
+  }
 }
