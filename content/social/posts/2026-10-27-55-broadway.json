@@ -1,18 +1,12 @@
 {
-  "post_id": "2026-10-27-55-broadway",
-  "internal_title": "55 Broadway · il quartier generale sopra la Tube",
-  "editorial_status": "review",
+  "notes": "Corrected Art Nouveau to Art Deco from the Facebook source. Clean photography selected; no text overlay required.",
+  "caption_en": "Charles Holden’s 55 Broadway hides in plain sight above St James’s Park station: an Art Deco headquarters with sculpture, scandal and one rather literal compromise.",
   "approval": {
-    "status": "pending",
+    "status": "approved",
     "approved_by": "",
     "approved_at": null
   },
-  "scheduled_for": "2026-10-27T18:30:00+00:00",
-  "post_format": "carousel",
-  "language_mode": "italian-plus-english-summary",
   "caption_it": "55 Broadway è quell’edificio che si attraversa quasi senza guardarlo entrando a St James’s Park (sì, con due apostrofi e due s). Charles Holden lo progettò come quartier generale della metropolitana e, quando aprì nel 1929, era il più alto edificio per uffici di Londra. Le geometrie Art Déco meritano già il giro dell’isolato, ma cercate soprattutto le sculture: Venti, Giorno e Notte. Una figura di Jacob Epstein provocò abbastanza scandalo da subire una piccola “riduzione” anatomica. Anche l’eleganza istituzionale, a volte, ha i suoi compromessi.",
-  "caption_en": "Charles Holden’s 55 Broadway hides in plain sight above St James’s Park station: an Art Deco headquarters with sculpture, scandal and one rather literal compromise.",
-  "cta": "La prossima volta che passate da St James’s Park, fate almeno il giro dell’isolato.",
   "hashtags": [
     "#LondonAdvanced",
     "#LondraInsolita",
@@ -20,7 +14,9 @@
     "#LondonArchitecture",
     "#ArtDecoLondon"
   ],
-  "location": "55 Broadway",
+  "media_folder": "55 broadway",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
     "kicker": "FIELD NOTE",
@@ -28,7 +24,12 @@
     "position": "top-left",
     "rendered_src": ""
   },
-  "media_folder": "55 broadway",
+  "cta": "La prossima volta che passate da St James’s Park, fate almeno il giro dell’isolato.",
+  "location": "55 Broadway",
+  "post_format": "carousel",
+  "internal_title": "55 Broadway · il quartier generale sopra la Tube",
+  "updated_at": "2026-10-19T21:20:00+01:00",
+  "scheduled_for": "2026-10-27T18:30:00+00:00",
   "images": [
     {
       "order": 1,
@@ -66,6 +67,7 @@
       "focal_y": 50
     }
   ],
+  "post_id": "2026-10-27-55-broadway",
   "source": {
     "type": "facebook-archive",
     "reference": "LA-0079; LA-0970",
@@ -78,7 +80,5 @@
     "published_url": "",
     "last_sync_at": null,
     "sync_note": "Metricool connection verified. Waiting for editorial approval."
-  },
-  "notes": "Corrected Art Nouveau to Art Deco from the Facebook source. Clean photography selected; no text overlay required.",
-  "updated_at": "2026-10-19T21:20:00+01:00"
+  }
 }
