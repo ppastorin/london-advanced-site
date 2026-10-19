@@ -5,6 +5,7 @@ const MAX_FILE_BYTES = 24 * 1024 * 1024;
 const LARGE_BATCH_BYTES = 500 * 1024 * 1024;
 const PREVIEW_LIMIT = 120;
 const WRITE_INTERVAL_MS = 850;
+const BLOB_CACHE_KEY = "la_instagram_blob_cache_v1";
 const ALLOWED_EXTENSIONS = new Set(["jpg", "jpeg", "png", "webp", "gif", "avif"]);
 let lastWriteAt = 0;
 
@@ -49,6 +50,20 @@ export function formatBytes(bytes) {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 ** 2) return `${(bytes / 1024).toFixed(1)} KB`;
   return `${(bytes / 1024 ** 2).toFixed(bytes >= 100 * 1024 ** 2 ? 0 : 1)} MB`;
+}
+
+export async function gitBlobSha(file) {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  const header = new TextEncoder().encode(`blob ${bytes.byteLength}\0`);
+  const object = new Uint8Array(header.byteLength + bytes.byteLength);
+  object.set(header);
+  object.set(bytes, header.byteLength);
+  const digest = new Uint8Array(await crypto.subtle.digest("SHA-1", object));
+  return [...digest].map(byte => byte.toString(16).padStart(2, "0")).join("");
+}
+
+export function blobCacheSignature(entry) {
+  return `${entry.targetPath}|${entry.file.size}|${entry.file.lastModified || 0}`;
 }
 
 export function prepareBatch(files) {
@@ -136,16 +151,59 @@ async function mapWithConcurrency(items, concurrency, task) {
   return results;
 }
 
-async function currentBranch(token) {
-  const reference = await githubRequest(token, `/repos/${REPOSITORY}/git/ref/heads/${BRANCH}`);
-  const commit = await githubRequest(token, `/repos/${REPOSITORY}/git/commits/${reference.object.sha}`);
-  return { commitSha: reference.object.sha, treeSha: commit.tree.sha };
+function loadBlobCache() {
+  try {
+    const cache = JSON.parse(localStorage.getItem(BLOB_CACHE_KEY) || "{}");
+    const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    return Object.fromEntries(Object.entries(cache).filter(([, item]) =>
+      /^[0-9a-f]{40}$/.test(item?.sha || "") && Number(item?.updatedAt || 0) >= cutoff
+    ));
+  } catch {
+    return {};
+  }
 }
 
-async function repositoryPaths(token, treeSha) {
-  const tree = await githubRequest(token, `/repos/${REPOSITORY}/git/trees/${treeSha}?recursive=1`);
-  if (tree.truncated) throw new Error("The repository file list was truncated. No files were changed; try again later.");
-  return new Set(tree.tree.filter(item => item.type === "blob").map(item => item.path));
+function saveBlobCache(cache) {
+  try {
+    const recent = Object.entries(cache)
+      .sort(([, a], [, b]) => Number(b.updatedAt || 0) - Number(a.updatedAt || 0))
+      .slice(0, 2_000);
+    localStorage.setItem(BLOB_CACHE_KEY, JSON.stringify(Object.fromEntries(recent)));
+  } catch {
+    // Browser storage is an optimisation; publication can continue without it.
+  }
+}
+
+async function publishBatch(token, entries, message, allowOverwrite) {
+  let lastError;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      const response = await fetch("/api/studio/media/commit", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          entries: entries.map(entry => ({ path: entry.targetPath, sha: entry.sha })),
+          message,
+          allowOverwrite
+        })
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (response.ok) return payload;
+      const error = new Error(payload.message || `Publication failed (${response.status})`);
+      error.status = response.status;
+      error.code = payload.code || "publish_failed";
+      throw error;
+    } catch (error) {
+      lastError = error;
+      if (error.code || attempt === 2) throw error;
+      await new Promise(resolve => setTimeout(resolve, (attempt + 1) * 1500));
+    }
+  }
+  throw lastError;
 }
 
 async function verifyAccess(token) {
@@ -261,55 +319,50 @@ function initialise() {
     elements["upload-progress"].value = 0;
     const selected = [...queue.values()].sort((a, b) => a.targetPath.localeCompare(b.targetPath));
     try {
-      elements["progress-label"].textContent = "Checking existing files…";
+      elements["progress-label"].textContent = "Checking for completed uploads…";
       elements["progress-count"].textContent = `0 / ${selected.length}`;
-      let base = await currentBranch(token);
-      const existing = await repositoryPaths(token, base.treeSha);
-      const conflicts = selected.filter(entry => deploymentPaths(entry.targetPath).some(path => existing.has(path)));
-      if (conflicts.length && !elements["allow-overwrite"].checked) {
-        throw new Error(`${conflicts.length} selected path${conflicts.length === 1 ? " already exists" : "s already exist"}. Remove those files from the selection or tick “Replace files with matching paths”.`);
-      }
-
       let completed = 0;
-      elements["progress-label"].textContent = "Uploading image data…";
-      const blobs = await mapWithConcurrency(selected, 1, async entry => {
-        const content = await fileToBase64(entry.file);
-        const blob = await createBlob(token, content);
+      const blobs = await mapWithConcurrency(selected, 2, async entry => {
+        const sha = await gitBlobSha(entry.file);
         completed += 1;
         elements["progress-count"].textContent = `${completed} / ${selected.length}`;
-        elements["upload-progress"].value = Math.round((completed / selected.length) * 88);
-        return { ...entry, sha: blob.sha };
-      });
-
-      elements["progress-label"].textContent = "Creating one website update…";
-      base = await currentBranch(token);
-      const tree = await githubRequest(token, `/repos/${REPOSITORY}/git/trees`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          base_tree: base.treeSha,
-          tree: blobs.flatMap(entry => deploymentPaths(entry.targetPath).map(path => ({
-            path,
-            mode: "100644",
-            type: "blob",
-            sha: entry.sha
-          })))
-        })
+        elements["upload-progress"].value = Math.round((completed / selected.length) * 12);
+        return { ...entry, sha };
       });
       const message = elements["commit-message"].value.trim() || `media: add ${selected.length} Instagram images`;
-      const commit = await githubRequest(token, `/repos/${REPOSITORY}/git/commits`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message, tree: tree.sha, parents: [base.commitSha] })
-      });
-      await githubRequest(token, `/repos/${REPOSITORY}/git/refs/heads/${BRANCH}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sha: commit.sha, force: false })
-      });
+      const allowOverwrite = elements["allow-overwrite"].checked;
+      elements["progress-label"].textContent = "Recovering any completed image uploads…";
+      let publication;
+      try {
+        publication = await publishBatch(token, blobs, message, allowOverwrite);
+      } catch (error) {
+        if (error.code !== "missing_blobs") throw error;
+        const cache = loadBlobCache();
+        completed = 0;
+        elements["progress-label"].textContent = "Uploading image data…";
+        await mapWithConcurrency(blobs, 1, async entry => {
+          const signature = blobCacheSignature(entry);
+          if (cache[signature]?.sha !== entry.sha) {
+            const content = await fileToBase64(entry.file);
+            const blob = await createBlob(token, content);
+            if (blob.sha !== entry.sha) throw new Error(`GitHub returned an unexpected reference for ${entry.relativePath}.`);
+            cache[signature] = { sha: entry.sha, updatedAt: Date.now() };
+            saveBlobCache(cache);
+          }
+          completed += 1;
+          elements["progress-count"].textContent = `${completed} / ${selected.length}`;
+          elements["upload-progress"].value = 12 + Math.round((completed / selected.length) * 76);
+          return entry;
+        });
+        elements["progress-label"].textContent = "Creating one website update…";
+        publication = await publishBatch(token, blobs, message, allowOverwrite);
+      }
       elements["upload-progress"].value = 100;
       elements["progress-label"].textContent = "Upload complete";
-      setResult(`<strong>${selected.length.toLocaleString("en-GB")} images uploaded in one commit.</strong> Cloudflare will publish them automatically. <a href="https://github.com/${REPOSITORY}/commit/${commit.sha}" target="_blank" rel="noopener">View the commit</a>.`);
+      setResult(`<strong>${selected.length.toLocaleString("en-GB")} images uploaded in one commit.</strong> Cloudflare will publish them automatically. <a href="${escapeHtml(publication.commitUrl)}" target="_blank" rel="noopener">View the commit</a>.`);
+      const cache = loadBlobCache();
+      for (const entry of blobs) delete cache[blobCacheSignature(entry)];
+      saveBlobCache(cache);
       queue.clear();
       renderQueue();
       setStep(3);
@@ -320,7 +373,7 @@ function initialise() {
         elements["auth-state"].textContent = "Session expired";
         elements["auth-state"].classList.remove("is-connected");
       }
-      setResult(`<strong>Nothing was published.</strong> ${escapeHtml(error.message)}${error.status === 422 ? " The site may have changed during the upload; reconnect and try the batch again." : ""}`, true);
+      setResult(`<strong>Nothing was published.</strong> ${escapeHtml(error.message)}${error.code === "branch_changed" ? " The image uploads are saved; press Upload selected images once more." : ""}`, true);
       elements["progress-label"].textContent = "Upload stopped";
     } finally {
       busy = false;

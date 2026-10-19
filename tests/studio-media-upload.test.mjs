@@ -2,9 +2,11 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   buildTargetPath,
+  blobCacheSignature,
   deploymentPaths,
   folderAdjustedPath,
   formatBytes,
+  gitBlobSha,
   isSupportedImage,
   normaliseRelativePath,
   prepareBatch,
@@ -53,4 +55,13 @@ test("supported formats and byte labels cover Studio feedback", () => {
   assert.equal(isSupportedImage("post.AVIF"), true);
   assert.equal(isSupportedImage("post.heic"), false);
   assert.equal(formatBytes(2 * 1024 * 1024), "2.0 MB");
+});
+
+test("browser recovery calculates the canonical Git blob SHA", async () => {
+  const blob = new Blob(["hello\n"]);
+  assert.equal(await gitBlobSha(blob), "ce013625030ba8dba906f756967f9e9ca394464a");
+  assert.equal(blobCacheSignature({
+    targetPath: "assets/instagram/001/cover.jpg",
+    file: { size: 6, lastModified: 1234 }
+  }), "assets/instagram/001/cover.jpg|6|1234");
 });

@@ -11,6 +11,11 @@ const ALLOWED_ORIGINS = new Set([
 const DECAP_CALLBACK_PATH = "/api/decap/callback";
 const DECAP_STATE_COOKIE = "la_decap_oauth_state";
 const PLACES_API_ORIGIN = "https://london-by-mood.ppastorin.workers.dev";
+const MEDIA_COMMIT_PATH = "/api/studio/media/commit";
+const MEDIA_REPOSITORY = "ppastorin/london-advanced-site";
+const MEDIA_BRANCH = "main";
+const MAX_MEDIA_COMMIT_BYTES = 750_000;
+const MAX_MEDIA_ENTRIES = 1_000;
 
 function jsonResponse(body, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(body), {
@@ -572,6 +577,165 @@ export async function handleDecapCallback(request, env, fetchImpl = fetch) {
   return new Response(decapCallbackHtml("success", { token: tokenPayload.access_token }), { status: 200, headers });
 }
 
+function mediaPath(value) {
+  const path = String(value || "").trim();
+  const parts = path.split("/");
+  if (
+    path.length > 512 ||
+    !path.startsWith("assets/instagram/") ||
+    parts.some(part => !part || part === "." || part === ".." || /[\\\u0000-\u001f]/.test(part)) ||
+    !/\.(?:avif|gif|jpe?g|png|webp)$/i.test(path)
+  ) return "";
+  return path;
+}
+
+function githubHeaders(token) {
+  return {
+    Accept: "application/vnd.github+json",
+    Authorization: `Bearer ${token}`,
+    "Content-Type": "application/json",
+    "User-Agent": "London-Advanced-Studio",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+}
+
+async function githubMediaRequest(fetchImpl, token, pathname, options = {}) {
+  let response;
+  try {
+    response = await fetchImpl(`https://api.github.com${pathname}`, {
+      ...options,
+      headers: { ...githubHeaders(token), ...(options.headers || {}) }
+    });
+  } catch {
+    return { ok: false, status: 502, payload: { message: "GitHub could not be reached" } };
+  }
+  const payload = await response.json().catch(() => ({}));
+  return { ok: response.ok, status: response.status, payload };
+}
+
+function mediaCommitError(code, message, status = 400) {
+  return jsonResponse({ ok: false, code, message }, status);
+}
+
+export async function handleMediaCommit(request, fetchImpl = fetch) {
+  if (request.method !== "POST") {
+    return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "POST" });
+  }
+  const requestUrl = new URL(request.url);
+  const origin = request.headers.get("Origin");
+  if (!origin || (!ALLOWED_ORIGINS.has(origin) && origin !== requestUrl.origin)) {
+    return mediaCommitError("origin_not_allowed", "This request did not come from London Advanced Studio.", 403);
+  }
+  const contentLength = Number(request.headers.get("Content-Length") || 0);
+  if (contentLength > MAX_MEDIA_COMMIT_BYTES) {
+    return mediaCommitError("request_too_large", "The batch contains too many paths for one commit.", 413);
+  }
+  const authorization = request.headers.get("Authorization") || "";
+  const token = authorization.startsWith("Bearer ") ? authorization.slice(7).trim() : "";
+  if (!token) return mediaCommitError("authentication_required", "Reconnect GitHub and try again.", 401);
+
+  let rawBody;
+  try {
+    rawBody = await request.text();
+    if (rawBody.length > MAX_MEDIA_COMMIT_BYTES) throw new Error("too_large");
+  } catch (error) {
+    return mediaCommitError(
+      error.message === "too_large" ? "request_too_large" : "invalid_json",
+      error.message === "too_large" ? "The batch contains too many paths for one commit." : "The upload request could not be read.",
+      error.message === "too_large" ? 413 : 400
+    );
+  }
+  let body;
+  try {
+    body = JSON.parse(rawBody);
+  } catch {
+    return mediaCommitError("invalid_json", "The upload request is not valid JSON.");
+  }
+  if (!Array.isArray(body.entries) || !body.entries.length || body.entries.length > MAX_MEDIA_ENTRIES) {
+    return mediaCommitError("invalid_entries", `A batch must contain between 1 and ${MAX_MEDIA_ENTRIES} images.`);
+  }
+  const seen = new Set();
+  const entries = [];
+  for (const entry of body.entries) {
+    const path = mediaPath(entry?.path);
+    const sha = String(entry?.sha || "").toLowerCase();
+    if (!path || !/^[0-9a-f]{40}$/.test(sha) || seen.has(path)) {
+      return mediaCommitError("invalid_entries", "One or more image paths or blob references are invalid.");
+    }
+    seen.add(path);
+    entries.push({ path, sha });
+  }
+  const allowOverwrite = body.allowOverwrite === true;
+  const message = clean(body.message, 120) || `media: add ${entries.length} Instagram images`;
+
+  const repository = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}`);
+  if (!repository.ok) {
+    const status = repository.status === 401 ? 401 : 502;
+    return mediaCommitError("github_access_failed", repository.payload.message || "GitHub access could not be verified.", status);
+  }
+  if (!repository.payload.permissions?.push) {
+    return mediaCommitError("permission_denied", "This GitHub account cannot update London Advanced.", 403);
+  }
+
+  const reference = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/ref/heads/${MEDIA_BRANCH}`);
+  if (!reference.ok) return mediaCommitError("github_read_failed", reference.payload.message || "The main branch could not be read.", 502);
+  const baseCommitSha = reference.payload.object?.sha;
+  const baseCommit = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/commits/${baseCommitSha}`);
+  if (!baseCommit.ok || !baseCommit.payload.tree?.sha) {
+    return mediaCommitError("github_read_failed", baseCommit.payload.message || "The current website tree could not be read.", 502);
+  }
+  const existingTree = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/trees/${baseCommit.payload.tree.sha}?recursive=1`);
+  if (!existingTree.ok || existingTree.payload.truncated) {
+    return mediaCommitError("github_read_failed", "The current website file list could not be checked safely.", 502);
+  }
+  const existingPaths = new Set((existingTree.payload.tree || []).filter(item => item.type === "blob").map(item => item.path));
+  const conflicts = entries.filter(entry => existingPaths.has(entry.path) || existingPaths.has(`dist/${entry.path}`));
+  if (conflicts.length && !allowOverwrite) {
+    return mediaCommitError(
+      "path_conflict",
+      `${conflicts.length} selected path${conflicts.length === 1 ? " already exists" : "s already exist"}. Enable replacements only if that is intentional.`,
+      409
+    );
+  }
+
+  const treeElements = entries.flatMap(entry => [
+    { path: entry.path, mode: "100644", type: "blob", sha: entry.sha },
+    { path: `dist/${entry.path}`, mode: "100644", type: "blob", sha: entry.sha }
+  ]);
+  const tree = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/trees`, {
+    method: "POST",
+    body: JSON.stringify({ base_tree: baseCommit.payload.tree.sha, tree: treeElements })
+  });
+  if (!tree.ok) {
+    if (tree.status === 422) {
+      return mediaCommitError("missing_blobs", "Some image data has not reached GitHub yet.", 409);
+    }
+    return mediaCommitError("tree_failed", tree.payload.message || "GitHub could not create the image tree.", 502);
+  }
+  const commit = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/commits`, {
+    method: "POST",
+    body: JSON.stringify({ message, tree: tree.payload.sha, parents: [baseCommitSha] })
+  });
+  if (!commit.ok) return mediaCommitError("commit_failed", commit.payload.message || "GitHub could not create the commit.", 502);
+  const update = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/refs/heads/${MEDIA_BRANCH}`, {
+    method: "PATCH",
+    body: JSON.stringify({ sha: commit.payload.sha, force: false })
+  });
+  if (!update.ok) {
+    return mediaCommitError(
+      update.status === 422 ? "branch_changed" : "publish_failed",
+      update.status === 422 ? "The website changed during publication. Try once more; the uploaded images are cached." : (update.payload.message || "GitHub could not publish the commit."),
+      update.status === 422 ? 409 : 502
+    );
+  }
+  return jsonResponse({
+    ok: true,
+    count: entries.length,
+    commitSha: commit.payload.sha,
+    commitUrl: `https://github.com/${MEDIA_REPOSITORY}/commit/${commit.payload.sha}`
+  });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -587,6 +751,7 @@ export default {
     if (url.pathname === "/api/search-locations") return handleLocationSearch(request, env);
     if (url.pathname === "/api/decap/auth") return handleDecapAuth(request, env);
     if (url.pathname === DECAP_CALLBACK_PATH) return handleDecapCallback(request, env);
+    if (url.pathname === MEDIA_COMMIT_PATH) return handleMediaCommit(request);
     return env.ASSETS.fetch(request);
   }
 };

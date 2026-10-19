@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { isPublicPair } from "../scripts/build-journal.mjs";
-import { handleDecapAuth, handleDecapCallback } from "../worker/index.mjs";
+import { handleDecapAuth, handleDecapCallback, handleMediaCommit } from "../worker/index.mjs";
 
 const approved = {
   article_id: "test-article",
@@ -140,4 +140,77 @@ test("Decap OAuth rejects a callback with the wrong state", async () => {
     async () => { throw new Error("must not exchange"); }
   );
   assert.equal(response.status, 400);
+});
+
+test("Studio media publication creates source and deployed paths server-side", async () => {
+  const sha = "a".repeat(40);
+  let createdTree;
+  let updatedRef;
+  const fetchImpl = async (url, options = {}) => {
+    const pathname = new URL(url).pathname + new URL(url).search;
+    if (pathname === "/repos/ppastorin/london-advanced-site") {
+      return Response.json({ permissions: { push: true } });
+    }
+    if (pathname.endsWith("/git/ref/heads/main")) return Response.json({ object: { sha: "base-commit" } });
+    if (pathname.endsWith("/git/commits/base-commit")) return Response.json({ tree: { sha: "base-tree" } });
+    if (pathname.endsWith("/git/trees/base-tree?recursive=1")) return Response.json({ tree: [], truncated: false });
+    if (pathname.endsWith("/git/trees") && options.method === "POST") {
+      createdTree = JSON.parse(options.body);
+      return Response.json({ sha: "next-tree" });
+    }
+    if (pathname.endsWith("/git/commits") && options.method === "POST") {
+      return Response.json({ sha: "next-commit" });
+    }
+    if (pathname.endsWith("/git/refs/heads/main") && options.method === "PATCH") {
+      updatedRef = JSON.parse(options.body);
+      return Response.json({ object: { sha: "next-commit" } });
+    }
+    throw new Error(`Unexpected GitHub request: ${pathname}`);
+  };
+  const response = await handleMediaCommit(new Request("https://www.londonadvanced.com/api/studio/media/commit", {
+    method: "POST",
+    headers: {
+      Origin: "https://www.londonadvanced.com",
+      Authorization: "Bearer test-token",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      entries: [{ path: "assets/instagram/001-weekend/cover.jpg", sha }],
+      message: "media: test Instagram upload",
+      allowOverwrite: false
+    })
+  }), fetchImpl);
+  assert.equal(response.status, 200);
+  assert.deepEqual(createdTree.tree.map(entry => entry.path), [
+    "assets/instagram/001-weekend/cover.jpg",
+    "dist/assets/instagram/001-weekend/cover.jpg"
+  ]);
+  assert.deepEqual(updatedRef, { sha: "next-commit", force: false });
+  assert.deepEqual(await response.json(), {
+    ok: true,
+    count: 1,
+    commitSha: "next-commit",
+    commitUrl: "https://github.com/ppastorin/london-advanced-site/commit/next-commit"
+  });
+});
+
+test("Studio media publication reports recoverable missing blobs", async () => {
+  const fetchImpl = async (url, options = {}) => {
+    const pathname = new URL(url).pathname + new URL(url).search;
+    if (pathname === "/repos/ppastorin/london-advanced-site") return Response.json({ permissions: { push: true } });
+    if (pathname.endsWith("/git/ref/heads/main")) return Response.json({ object: { sha: "base-commit" } });
+    if (pathname.endsWith("/git/commits/base-commit")) return Response.json({ tree: { sha: "base-tree" } });
+    if (pathname.endsWith("/git/trees/base-tree?recursive=1")) return Response.json({ tree: [], truncated: false });
+    if (pathname.endsWith("/git/trees") && options.method === "POST") {
+      return Response.json({ message: "not a valid object" }, { status: 422 });
+    }
+    throw new Error(`Unexpected GitHub request: ${pathname}`);
+  };
+  const response = await handleMediaCommit(new Request("https://www.londonadvanced.com/api/studio/media/commit", {
+    method: "POST",
+    headers: { Origin: "https://www.londonadvanced.com", Authorization: "Bearer test-token" },
+    body: JSON.stringify({ entries: [{ path: "assets/instagram/cover.jpg", sha: "b".repeat(40) }] })
+  }), fetchImpl);
+  assert.equal(response.status, 409);
+  assert.equal((await response.json()).code, "missing_blobs");
 });

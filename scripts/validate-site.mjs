@@ -621,6 +621,9 @@ if (!headers.includes("/studio/*") || !headers.includes("X-Robots-Tag: noindex")
 if (!wranglerText.includes('"/api/decap/auth"') || !wranglerText.includes('"/api/decap/callback"')) {
   fail("The Decap OAuth endpoints must run through the Worker.");
 }
+if (!wranglerText.includes('"/api/studio/media/commit"')) {
+  fail("The resilient Studio media commit endpoint must run through the Worker.");
+}
 
 for (const { href } of expectedTools.values()) {
   if (!requireFile("dist/about/index.html").includes(`href="${href}"`)) fail(`The About page is missing a contextual link to ${href}`);
