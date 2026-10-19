@@ -1,18 +1,12 @@
 {
-  "post_id": "2026-11-15-treadwells-books",
-  "internal_title": "Treadwell’s Books · l’occulto senza effetti speciali",
-  "editorial_status": "review",
-  "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": null
-  },
-  "scheduled_for": "2026-11-15T10:00:00+00:00",
-  "post_format": "carousel",
-  "language_mode": "italian-plus-english-summary",
-  "caption_it": "Da fuori Treadwell’s Books potrebbe sembrare una piccola libreria indipendente come molte altre. Dentro, gli scaffali passano da magia e folklore a storia delle religioni, paganesimo ed esoterismo occidentale, con libri nuovi e usati scelti per curiosi, studiosi e praticanti. Il negozio è nato nel 2003 e funziona anche come punto d’incontro, con conferenze, corsi e passeggiate nella Bloomsbury occulta. La parte migliore è che non serve presentarsi con un mantello né fingere di credere a tutto: si può entrare semplicemente per capire come certe idee abbiano attraversato la storia culturale di Londra. Uscire senza un libro è meno garantito.",
+  "notes": "Three-week batch. Evergreen bookshop post; the final image is intentionally playful but still relevant to the stock.",
   "caption_en": "Treadwell’s treats magic, folklore and Western esotericism as subjects worth reading seriously—without removing the shop’s considerable sense of theatre.",
-  "cta": "Guardate il calendario degli incontri prima di andare; per curiosare fra gli scaffali basta entrare.",
+  "approval": {
+    "status": "approved",
+    "approved_by": "ppastorin",
+    "approved_at": "2026-10-19T21:29:23Z"
+  },
+  "caption_it": "Da fuori Treadwell’s Books potrebbe sembrare una piccola libreria indipendente come molte altre. Dentro, gli scaffali passano da magia e folklore a storia delle religioni, paganesimo ed esoterismo occidentale, con libri nuovi e usati scelti per curiosi, studiosi e praticanti. Il negozio è nato nel 2003 e funziona anche come punto d’incontro, con conferenze, corsi e passeggiate nella Bloomsbury occulta. La parte migliore è che non serve presentarsi con un mantello né fingere di credere a tutto: si può entrare semplicemente per capire come certe idee abbiano attraversato la storia culturale di Londra. Uscire senza un libro è meno garantito.",
   "hashtags": [
     "#LondonAdvanced",
     "#TreadwellsBooks",
@@ -20,7 +14,9 @@
     "#Bloomsbury",
     "#LondraInsolita"
   ],
-  "location": "Treadwell's Books",
+  "media_folder": "treadwell books",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
     "kicker": "FIELD NOTE",
@@ -28,7 +24,12 @@
     "position": "bottom-left",
     "rendered_src": ""
   },
-  "media_folder": "treadwell books",
+  "cta": "Guardate il calendario degli incontri prima di andare; per curiosare fra gli scaffali basta entrare.",
+  "location": "Treadwell's Books",
+  "post_format": "carousel",
+  "internal_title": "Treadwell’s Books · l’occulto senza effetti speciali",
+  "updated_at": "2026-10-19T22:29:43+01:00",
+  "scheduled_for": "2026-11-15T10:00:00+00:00",
   "images": [
     {
       "order": 1,
@@ -66,6 +67,7 @@
       "focal_y": 50
     }
   ],
+  "post_id": "2026-11-15-treadwells-books",
   "source": {
     "type": "official-site",
     "reference": "Treadwell’s history",
@@ -78,7 +80,5 @@
     "published_url": "",
     "last_sync_at": null,
     "sync_note": "Waiting for editorial approval."
-  },
-  "notes": "Three-week batch. Evergreen bookshop post; the final image is intentionally playful but still relevant to the stock.",
-  "updated_at": "2026-10-19T21:50:00+01:00"
+  }
 }
