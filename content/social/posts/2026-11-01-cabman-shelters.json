@@ -1,18 +1,12 @@
 {
-  "post_id": "2026-11-01-cabman-shelters",
-  "internal_title": "Cabmen’s shelters · le casette verdi dei tassisti",
-  "editorial_status": "review",
-  "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": null
-  },
-  "scheduled_for": "2026-11-01T10:00:00+00:00",
-  "post_format": "carousel",
-  "language_mode": "italian-plus-english-summary",
-  "caption_it": "Le piccole casette verdi sparse per Londra non sono chioschi nati per Instagram. Sono i cabmen’s shelters, costruiti dalla fine dell’Ottocento per dare ai tassisti un posto dove mangiare e scaldarsi senza allontanarsi troppo dal veicolo. Ne sopravvive soltanto una piccola rete: alcune servono ancora i cabbies, altre vendono tè e panini anche attraverso la finestra. Cercarle è un’ottima scusa per attraversare quartieri che difficilmente finirebbero nello stesso itinerario. Quella vicino ad Albert Bridge, per posizione, se la cava decisamente bene.",
+  "notes": "Pilot evergreen post. Avoided a precise survivor count because it can change; confirm any opening information shortly before publication.",
   "caption_en": "London’s green cabmen’s shelters were built as practical refuges for working drivers. Finding the survivors makes a rather good cross-city trail.",
-  "cta": "Gli interni non sono normalmente aperti al pubblico: la parte interessante è anche il percorso fra una casetta e l’altra.",
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-19T21:28:55+01:00"
+  },
+  "caption_it": "Le piccole casette verdi sparse per Londra non sono chioschi nati per Instagram. Sono i cabmen’s shelters, costruiti dalla fine dell’Ottocento per dare ai tassisti un posto dove mangiare e scaldarsi senza allontanarsi troppo dal veicolo. Ne sopravvive soltanto una piccola rete: alcune servono ancora i cabbies, altre vendono tè e panini anche attraverso la finestra. Cercarle è un’ottima scusa per attraversare quartieri che difficilmente finirebbero nello stesso itinerario. Quella vicino ad Albert Bridge, per posizione, se la cava decisamente bene.",
   "hashtags": [
     "#LondonAdvanced",
     "#LondraInsolita",
@@ -20,7 +14,9 @@
     "#LondonHistory",
     "#HiddenLondon"
   ],
-  "location": "London, United Kingdom",
+  "media_folder": "cabman shelters",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": false,
     "kicker": "FIELD NOTE",
@@ -28,7 +24,12 @@
     "position": "bottom-left",
     "rendered_src": ""
   },
-  "media_folder": "cabman shelters",
+  "cta": "Gli interni non sono normalmente aperti al pubblico: la parte interessante è anche il percorso fra una casetta e l’altra.",
+  "location": "London, United Kingdom",
+  "post_format": "carousel",
+  "internal_title": "Cabmen’s shelters · le casette verdi dei tassisti",
+  "updated_at": "2026-10-19T21:28:55+01:00",
+  "scheduled_for": "2026-11-01T10:00:00+00:00",
   "images": [
     {
       "order": 1,
@@ -66,6 +67,7 @@
       "focal_y": 50
     }
   ],
+  "post_id": "2026-11-01-cabman-shelters",
   "source": {
     "type": "facebook-archive",
     "reference": "LA-0511; LA-0890",
@@ -77,8 +79,6 @@
     "scheduled_at": null,
     "published_url": "",
     "last_sync_at": null,
-    "sync_note": "Waiting for editorial approval and Metricool connection check."
-  },
-  "notes": "Pilot evergreen post. Avoided a precise survivor count because it can change; confirm any opening information shortly before publication.",
-  "updated_at": "2026-10-19T17:00:00+01:00"
+    "sync_note": "Human approval complete. Waiting for Metricool scheduling."
+  }
 }
