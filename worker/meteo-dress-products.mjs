@@ -41,7 +41,7 @@ export function classify(record) {
   const sections = [];
   if (has(`${path} ${suitable}`, /\bdonna\b|\bwomen\b|\bfemale\b/)) sections.push("donna");
   if (has(`${path} ${suitable}`, /\buomo\b|\bmen\b|\bmale\b/)) sections.push("uomo");
-  if (has(`${path} ${suitable}`, /bambin|ragazz|\bjunior\b|\bkids?\b|\bboys?\b|\bgirls?\b/)) sections.push("bambino");
+  if (has(`${path} ${suitable}`, /bambin|ragazz|\bbaby\b|\bjunior\b|\bkids?\b|\bboys?\b|\bgirls?\b/)) sections.push("bambino");
   if (!sections.length) sections.push("unisex");
   else if (!sections.includes("bambino") && has(suitable, /unisex/)) sections.push("unisex");
 
