@@ -134,3 +134,41 @@ test("four-result invariant has uncapped and cross-role catalogue fallbacks", ()
   assert.ok(fallbackPasses.length >= 3);
   assert.match(app, /if \(isNewFamily\(p\)\) picks\.push\(p\)/);
 });
+
+
+test("Meteo Dress loads seven normalized days from the protected Met Office endpoint", () => {
+  const start = new Date("2026-10-20T00:00:00Z");
+  const timeSeries = [];
+  for (let day = 0; day < 7; day += 1) {
+    for (const hour of [0, 3, 6, 9, 12, 15, 18, 21]) {
+      const time = new Date(start);
+      time.setUTCDate(start.getUTCDate() + day);
+      time.setUTCHours(hour);
+      timeSeries.push({
+        time: time.toISOString(),
+        screenTemperature: 8 + day + hour / 12,
+        feelsLikeTemperature: 7 + day + hour / 12,
+        probOfPrecipitation: hour === 18 ? 65 : 15,
+        windGustSpeed10m: 24,
+        significantWeatherCode: hour === 18 ? 12 : 7
+      });
+    }
+  }
+  const result = normalizeMetOfficeForecast({
+    features: [{ properties: { location: { name: "London" }, timeSeries } }]
+  }, new Date("2026-10-20T08:00:00Z"));
+  assert.equal(result.source, "Met Office Weather DataHub");
+  assert.equal(result.scenarios.length, 7);
+  assert.equal(result.scenarios[0].hourly.length, 6);
+  assert.equal(result.scenarios[0].rain, 65);
+  assert.equal(result.scenarios[0].label, "Pioggia probabile");
+
+  const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
+  const worker = fs.readFileSync("worker/index.mjs", "utf8");
+  const config = fs.readFileSync("wrangler.jsonc", "utf8");
+  assert.match(app, /fetch\("\/api\/meteo-dress-weather"/);
+  assert.match(app, /Promise\.all\(\[catalogReady, weatherReady\]\)/);
+  assert.doesNotMatch(app, /const scenarios = \[/);
+  assert.match(worker, /handleMeteoDressWeather/);
+  assert.match(config, /\/api\/meteo-dress-weather/);
+});
