@@ -1,4 +1,4 @@
-import { classify } from "../worker/meteo-dress-products.mjs";
+import { classify, isCityWearEligible } from "../worker/meteo-dress-products.mjs";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import test from "node:test";
@@ -58,4 +58,46 @@ test("feed taxonomy rejects phone holders and classifies fleece gloves as access
     product_name: "Sci Reusch Guanti Ben Baby",
     merchant_product_category_path: "Sport > Sci > Guanti"
   })?.sections, ["bambino"]);
+});
+
+
+test("city-wear taxonomy excludes specialist equipment by category, not by individual SKU", () => {
+  const common = {
+    search_price: "249.95",
+    aw_deep_link: "https://www.awin1.com/example",
+    merchant_image_url: "https://example.com/product.jpg",
+    merchant_product_id: "sku",
+    "Fashion:suitable_for": "male"
+  };
+  const technicalFootwear = [
+    ["Snowboard Dc Shoes Scarponi Premier Hybrid Boa®", "Sport > Snowboard > Scarponi"],
+    ["Salomon S/Pro Alpha", "Sport > Sci > Scarponi uomo"],
+    ["Scarpe Shimano RC5", "Sport > Ciclismo > Calzature"],
+    ["Adidas Predator League", "Sport > Calcio > Scarpe"]
+  ];
+  for (const [product_name, merchant_product_category_path] of technicalFootwear) {
+    assert.equal(classify({ ...common, product_name, merchant_product_category_path }), null);
+  }
+  assert.equal(isCityWearEligible("sport > snowboard > scarponi", "scarpe"), false);
+  assert.equal(classify({
+    ...common,
+    product_name: "Sneaker Uomo in pelle Chelsea",
+    merchant_product_category_path: "Moda > Uomo > Calzature"
+  })?.type, "scarpe");
+});
+
+test("sport taxonomy does not inherit city styles and ranking requires the selected style", () => {
+  const common = {
+    search_price: "99.95",
+    aw_deep_link: "https://www.awin1.com/example",
+    merchant_image_url: "https://example.com/product.jpg",
+    merchant_product_id: "sku"
+  };
+  assert.deepEqual(classify({
+    ...common,
+    product_name: "Scarpe Running Uomo",
+    merchant_product_category_path: "Sport > Running > Scarpe"
+  })?.styles, ["sportivo"]);
+  const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
+  assert.match(app, /!product\.styles\.includes\(profile\.style\)\) return -100/);
 });
