@@ -27,7 +27,7 @@ const has = (text, pattern) => pattern.test(text);
 
 const SPORT_CONTEXT = /running|fitness|sport|trekking|outdoor|sci|snowboard|ciclismo|cycling|calcio|football|rugby|arrampicata|climbing|alpinismo/;
 const SPECIALIST_FOOTWEAR_CONTEXT = /snowboard|sci(?:\s|$)|ciclismo|cycling|calcio|football|rugby|arrampicata|climbing|alpinismo|atletica|track\s*(?:and|&)\s*field/;
-const TECHNICAL_HARDGOODS = /\b(casco|helmet|maschera|goggle|attacchi?|bindings?|tavola|snowboard|sci|bastoncini?|protezioni?|ramponi?|crampons?)\b/;
+const TECHNICAL_HARDGOODS = /\b(casco|helmet|maschera|goggle|attacchi?|bindings?|tavola|bastoncini?|protezioni?|ramponi?|crampons?)\b/;
 
 export function isCityWearEligible(path, type) {
   if (type === "scarpe" && has(path, SPECIALIST_FOOTWEAR_CONTEXT)) return false;
