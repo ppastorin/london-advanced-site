@@ -48,7 +48,7 @@ function classify(record) {
   if (has(path, /running|fitness|sport|trekking|outdoor|sci|snowboard/)) styles.push("sportivo");
   if (has(path, /elegant|classico|cappotto|camici/)) styles.push("elegante");
   const warmth = has(path, /piumin|imbott|termic|sci|snowboard|pile|invern/) ? 4 : has(path, /cappott|parka|lana|felp|pullover/) ? 3 : has(path, /giacc|impermeabil|guscio|stival/) ? 2 : 1;
-  const rain = has(path, /impermeabil|waterproof|\brain\b|gore-tex|goretex|guscio/) ? 4 : has(path, /giacc|stival|trekking/) ? 2 : 0;
+  const rain = has(path, /impermeabil|waterproof|\brain\b|gore-tex|goretex|guscio/) ? 4 : has(path, /stival|trekking/) ? 2 : 0;
   const price = Number.parseFloat(record.search_price || record.store_price || "");
   if (!Number.isFinite(price) || price <= 0) return null;
   return {
@@ -108,7 +108,7 @@ export async function handleMeteoDressProducts(request, env) {
   if (request.method !== "GET") return json({ error: "method_not_allowed" }, 405, { Allow: "GET" });
   if (!env[FEED_SECRET]) return json({ error: "feed_not_configured", message: `Add the ${FEED_SECRET} Worker secret to enable the live catalogue.` }, 503, { "Cache-Control": "no-store" });
   const cache = caches.default;
-  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v2", request.url));
+  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v3", request.url));
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
   try {
