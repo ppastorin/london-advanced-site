@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meteo Dress: scopri come vestirti a Londra in base al meteo, al tuo stile e a quanto soffri il freddo.">
+  <title>Meteo Dress — Come vestirsi a Londra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="London Advanced">
+      <span class="brand-mark" aria-hidden="true">LA</span>
+      <span><strong>London Advanced</strong><small>La città oltre l'ovvio</small></span>
+    </a>
+    <span class="sandbox-badge">Anteprima</span>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">Uno strumento London Advanced</div>
+      <h1>Come vestirsi<br><em>a Londra?</em></h1>
+      <p class="hero-copy">Scegli il giorno, raccontaci che tipo sei e prepara un outfit che regga dalla prima colazione all'ultima pinta.</p>
+      <div class="weather-ribbon" aria-hidden="true">
+        <span>☂</span><i></i><span>12°</span><i></i><span>↗ 27 km/h</span><i></i><span>London, naturalmente</span>
+      </div>
+    </section>
+
+    <section class="planner-shell" aria-labelledby="planner-title">
+      <div class="form-intro">
+        <div>
+          <span class="section-number">01</span>
+          <p class="kicker">Il tuo profilo</p>
+          <h2 id="planner-title">Prepariamo la giornata.</h2>
+        </div>
+        <p>Non salviamo le tue risposte. Il meteo è simulato; i prodotti, i prezzi e i link provengono dal feed affiliato Maxi Sport.</p>
+      </div>
+
+      <form id="dress-form">
+        <fieldset class="field full">
+          <legend>Quando sarai a Londra?</legend>
+          <div id="date-options" class="date-options" role="radiogroup" aria-label="Giorno della visita"></div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>In quale reparto cerchiamo?</legend>
+          <div class="segmented four" data-group="section">
+            <label><input type="radio" name="section" value="donna" checked><span>Donna</span></label>
+            <label><input type="radio" name="section" value="uomo"><span>Uomo</span></label>
+            <label><input type="radio" name="section" value="unisex"><span>Unisex</span></label>
+            <label><input type="radio" name="section" value="bambino"><span>Bambino/a</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field select-field">
+          <span class="field-label">Fascia d'età</span>
+          <select name="age" id="age-select">
+            <option value="18-34">18–34</option>
+            <option value="35-54" selected>35–54</option>
+            <option value="55-69">55–69</option>
+            <option value="70+">70+</option>
+          </select>
+        </label>
+
+        <fieldset class="field full">
+          <legend>Qual è il tuo stile?</legend>
+          <div class="style-grid">
+            <label><input type="radio" name="style" value="casual" checked><span><b>Casual</b><small>Comodo, senza sembrare appena sceso dal divano</small></span></label>
+            <label><input type="radio" name="style" value="urbano"><span><b>Urbano</b><small>Linee pulite, città e contemporaneità</small></span></label>
+            <label><input type="radio" name="style" value="elegante"><span><b>Elegante</b><small>Smart, composto, mai troppo rigido</small></span></label>
+            <label><input type="radio" name="style" value="sportivo"><span><b>Sportivo</b><small>Pratico, tecnico e pronto a camminare</small></span></label>
+            <label><input type="radio" name="style" value="essenziale"><span><b>Essenziale</b><small>Pochi capi, colori facili, zero drammi</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field full">
+          <legend>Quanto soffri il freddo?</legend>
+          <div class="comfort-grid">
+            <label><input type="radio" name="cold" value="freddoloso"><span class="comfort-icon">🥶</span><span><b>Freddoloso</b><small>Per me 15°C sono già inverno</small></span></label>
+            <label><input type="radio" name="cold" value="medio" checked><span class="comfort-icon">🙂</span><span><b>Nella media</b><small>Né pinguino né lucertola</small></span></label>
+            <label><input type="radio" name="cold" value="resistente"><span class="comfort-icon">🐧</span><span><b>Resistente</b><small>Il cappotto può aspettare</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Quanto starai all'aperto?</legend>
+          <div class="stacked-options">
+            <label><input type="radio" name="exposure" value="interno"><span>Prevalentemente al chiuso</span></label>
+            <label><input type="radio" name="exposure" value="misto" checked><span>Un po' dentro, un po' fuori</span></label>
+            <label><input type="radio" name="exposure" value="esterno"><span>Prevalentemente all'aperto</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Quando vuoi stare meglio?</legend>
+          <div class="stacked-options">
+            <label><input type="radio" name="priority" value="giornata" checked><span>Tutta la giornata</span></label>
+            <label><input type="radio" name="priority" value="mattina"><span>Soprattutto al mattino</span></label>
+            <label><input type="radio" name="priority" value="pomeriggio"><span>Soprattutto nel pomeriggio</span></label>
+            <label><input type="radio" name="priority" value="sera"><span>Soprattutto la sera</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field select-field">
+          <span class="field-label">Fascia di prezzo <small>facoltativa</small></span>
+          <select name="budget">
+            <option value="qualsiasi">Nessuna preferenza</option>
+            <option value="conveniente">Conveniente</option>
+            <option value="media">Media</option>
+            <option value="premium">Premium</option>
+          </select>
+        </label>
+
+        <div class="submit-wrap">
+          <button class="primary-button" type="submit">Prepara il mio outfit <span aria-hidden="true">→</span></button>
+          <p>Tempo richiesto: meno di un acquazzone londinese.</p>
+        </div>
+      </form>
+    </section>
+
+    <section id="results" class="results" hidden aria-live="polite">
+      <div class="result-heading">
+        <div>
+          <span class="section-number">02</span>
+          <p class="kicker">Il consiglio</p>
+          <h2 id="result-title">Il tuo outfit per Londra.</h2>
+        </div>
+        <button id="edit-button" class="text-button" type="button">Modifica le preferenze ↑</button>
+      </div>
+
+      <article class="verdict-card">
+        <div class="verdict-weather">
+          <span id="weather-icon" class="large-weather-icon">☔</span>
+          <div><strong id="temperature-range">9–14°C</strong><small id="condition-label">Variabile con pioggia</small></div>
+        </div>
+        <div class="verdict-copy">
+          <p id="verdict-eyebrow" class="kicker">Sabato · giornata intera</p>
+          <h3 id="verdict-title">Vestiti a strati e porta una giacca impermeabile.</h3>
+          <p id="verdict-text"></p>
+        </div>
+        <div class="verdict-stats">
+          <div><span>Percepita minima</span><strong id="feels-min">7°C</strong></div>
+          <div><span>Pioggia massima</span><strong id="rain-max">68%</strong></div>
+          <div><span>Raffiche</span><strong id="gust-max">39 km/h</strong></div>
+        </div>
+      </article>
+
+      <div class="demo-notice"><strong>Scenario dimostrativo.</strong> Questa versione usa dati meteo simulati. La versione collegata al sito userà il feed Met Office.</div>
+
+      <div class="result-block">
+        <div class="block-heading"><div><p class="kicker">Ora per ora</p><h3>Una giornata, parecchi cambi d'idea.</h3></div><span>Scorri →</span></div>
+        <div id="hourly-strip" class="hourly-strip"></div>
+      </div>
+
+      <div class="result-block">
+        <div class="block-heading"><div><p class="kicker">Mattina, pomeriggio, sera</p><h3>Come adattare gli strati.</h3></div></div>
+        <div id="period-grid" class="period-grid"></div>
+      </div>
+
+      <div class="result-block kit-block">
+        <div class="block-heading"><div><p class="kicker">Il kit consigliato</p><h3>Quello che serve. Niente riempitivi.</h3></div><span id="profile-summary" class="profile-summary"></span></div>
+        <div id="kit-grid" class="kit-grid"></div>
+      </div>
+
+      <div class="result-block products-block">
+        <div class="block-heading"><div><p class="kicker">Capi adatti</p><h3>Se ti manca qualcosa.</h3></div><span id="catalog-updated">Feed Maxi Sport · aggiornamento automatico</span></div>
+        <p class="affiliate-disclosure"><strong>Pubblicità – link affiliati.</strong> London Advanced può ricevere una commissione se acquisti attraverso questi link, senza costi aggiuntivi per te. La pertinenza al meteo e alle preferenze viene valutata prima della commissione. Prezzo e disponibilità vanno confermati sul sito del venditore.</p>
+        <div id="product-grid" class="product-grid"></div>
+      </div>
+
+      <div class="restart-wrap">
+        <button id="restart-button" class="secondary-button" type="button">Prova un'altra combinazione</button>
+      </div>
+    </section>
+
+    <section class="feedback-panel">
+      <span class="section-number">03</span>
+      <div class="feedback-copy">
+        <p class="kicker">Aiutaci a migliorarlo</p>
+        <h2>Com'è andata?</h2>
+        <p>Ci interessano soprattutto tre cose: il consiglio era chiaro, i capi erano coerenti con il tuo stile e c'è qualcosa che ti aspettavi ma non hai trovato?</p>
+      </div>
+      <a class="feedback-button" href="https://www.londonadvanced.com/#contact" target="_blank" rel="noopener">Invia il tuo feedback <span aria-hidden="true">↗</span></a>
+      <p class="feedback-hint">Nel messaggio scrivi “Feedback Meteo Dress” e, se puoi, indica la combinazione che hai provato.</p>
+    </section>
+
+    <section class="method-note">
+      <span class="section-number">04</span>
+      <div><p class="kicker">Come ragiona Meteo Dress</p><h2>Prima il tempo. Poi il tuo stile.</h2></div>
+      <p>La raccomandazione considera temperatura percepita, pioggia, vento, tempo passato all'aperto e sensibilità al freddo. Solo dopo seleziona i prodotti coerenti con reparto, età, stile e fascia di prezzo.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand footer-brand"><span class="brand-mark">LA</span><span><strong>London Advanced</strong><small>Strumenti indipendenti per vivere Londra meglio.</small></span></div>
+    <p>Anteprima di Meteo Dress · Meteo simulato · Prodotti reali Maxi Sport · Nessun dato personale salvato</p>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
