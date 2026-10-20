@@ -223,7 +223,7 @@ function addMeteoDressPromotion(source) {
   out = out
     .replace("Guida indipendente di Londra · 6 strumenti gratuiti", "Guida indipendente di Londra · 7 strumenti gratuiti")
     .replace("Sei strumenti mirati.", "Sette strumenti mirati.")
-    .replace('    </section>\n\n    <section id="tools" class="tools section-wrap">', `    </section>\${banner}\n\n    <section id="tools" class="tools section-wrap">`);
+    .replace('    </section>\n\n    <section id="tools" class="tools section-wrap">', `    </section>${banner}\n\n    <section id="tools" class="tools section-wrap">`);
   return out;
 }
 
