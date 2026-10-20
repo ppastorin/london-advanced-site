@@ -193,7 +193,7 @@ test("Meteo Dress exposes the standard Italian portal navigation", () => {
   const css = fs.readFileSync("dist/meteo-dress/styles.css", "utf8");
   assert.match(html, /class="portal-nav"/);
   assert.match(html, /class="portal-desktop-menu"/);
-  assert.match(html, /href="\\/it\\/"/);
+  assert.match(html, /href="\/it\/"/);
   assert.match(html, /aria-label="London Advanced Italia"/);
   assert.match(html, /href="\/meteo-dress\/"[^>]*aria-current="page"/);
   assert.match(html, /class="portal-mobile-actions"/);
