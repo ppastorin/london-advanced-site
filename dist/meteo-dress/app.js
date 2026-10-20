@@ -202,6 +202,22 @@ function productFamilyKey(product) {
     .trim();
 }
 
+function catalogueFallbackScore(product, profile, calc, desiredTypes) {
+  const sectionMatch = profile.section === "bambino"
+    ? product.sections.includes("bambino")
+    : product.sections.includes(profile.section) || product.sections.includes("unisex");
+  if (!sectionMatch || product.type === "accessorio") return -100;
+  const styleFit = styleCompatibility(product, profile.style);
+  if (!styleFit) return -100;
+  const targetWarmth = calc.effective <= 4 ? 4 : calc.effective <= 8 ? 3 : calc.effective <= 12 ? 2 : calc.effective <= 16 ? 1 : 0;
+  let score = styleFit === 2 ? 5 : 1;
+  if (desiredTypes.includes(product.type)) score += 4;
+  if (profile.budget === "qualsiasi" || product.tier === profile.budget) score += 3;
+  score += 3 - Math.abs(product.warmth - targetWarmth);
+  if (calc.wet) score += product.rain;
+  return score;
+}
+
 function renderProducts(profile, calc) {
   const types = [...new Set(calc.kit.map(k=>k.type))];
   const picks = [];
@@ -212,15 +228,31 @@ function renderProducts(profile, calc) {
     const candidate = strict.find(({p}) => isNewFamily(p)) || fallback.find(({p}) => isNewFamily(p));
     if (candidate) picks.push(candidate.p);
   });
+  const roleFallbackPool = productCatalog
+    .map(p=>({p,score:Math.max(...types.map(type=>productScore(p,profile,calc,type,true)))}))
+    .filter(({score}) => score > -50)
+    .sort((a,b)=>b.score-a.score);
   if (picks.length < 4) {
-    const fallbackPool = productCatalog
-      .map(p=>({p,score:Math.max(...types.map(type=>productScore(p,profile,calc,type,true)))}))
-      .filter(({p,score}) => score > -50 && isNewFamily(p))
-      .sort((a,b)=>b.score-a.score);
-    for (const {p} of fallbackPool) {
+    for (const {p} of roleFallbackPool) {
       if (picks.length >= 4) break;
       const sameType = picks.filter(chosen => chosen.type === p.type).length;
       if (sameType < 2 && isNewFamily(p)) picks.push(p);
+    }
+  }
+  if (picks.length < 4) {
+    for (const {p} of roleFallbackPool) {
+      if (picks.length >= 4) break;
+      if (isNewFamily(p)) picks.push(p);
+    }
+  }
+  if (picks.length < 4) {
+    const catalogueFallbackPool = productCatalog
+      .map(p=>({p,score:catalogueFallbackScore(p,profile,calc,types)}))
+      .filter(({score}) => score > -50)
+      .sort((a,b)=>b.score-a.score);
+    for (const {p} of catalogueFallbackPool) {
+      if (picks.length >= 4) break;
+      if (isNewFamily(p)) picks.push(p);
     }
   }
   const visible = picks.slice(0,4);
