@@ -26,7 +26,8 @@ test("warm-weather safeguards remain in the recommender", () => {
 test("recommendations keep product families distinct across primary and fallback slots", () => {
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
   assert.match(app, /function productFamilyKey/);
-  assert.match(app, /productFamilyKey\(chosen\) === productFamilyKey\(p\)/);
+  assert.match(app, /const isNewFamily/);
+  assert.match(app, /isNewFamily\\(p\\)/);
   assert.doesNotMatch(app, /const remaining = productCatalog/);
 });
 
