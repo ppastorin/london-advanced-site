@@ -1,3 +1,4 @@
+import { handleMeteoDressProducts } from "./meteo-dress-products.mjs";
 const MAX_BODY_BYTES = 12_000;
 const MIN_COMPLETION_MS = 2_000;
 const MAX_COMPLETION_MS = 2 * 60 * 60 * 1_000;
@@ -782,6 +783,7 @@ export async function handleMediaCommit(request, fetchImpl = fetch) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === "/api/meteo-dress-products") return handleMeteoDressProducts(request, env);
     if (url.pathname === "/api/contact") {
       return handleContact(request, env.CONTACT_EMAIL, {
         destination: env.CONTACT_DESTINATION,
