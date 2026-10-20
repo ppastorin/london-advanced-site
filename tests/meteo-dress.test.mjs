@@ -86,7 +86,7 @@ test("city-wear taxonomy excludes specialist equipment by category, not by indiv
   })?.type, "scarpe");
 });
 
-test("sport taxonomy does not inherit city styles and ranking requires the selected style", () => {
+test("sport taxonomy stays distinct while city styles remain usable as fallbacks", () => {
   const common = {
     search_price: "99.95",
     aw_deep_link: "https://www.awin1.com/example",
@@ -99,5 +99,8 @@ test("sport taxonomy does not inherit city styles and ranking requires the selec
     merchant_product_category_path: "Sport > Running > Scarpe"
   })?.styles, ["sportivo"]);
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
-  assert.match(app, /!product\.styles\.includes\(profile\.style\)\) return -100/);
+  assert.match(app, /function styleCompatibility/);
+  assert.match(app, /isSpecialistSport && selectedStyle !== "sportivo"/);
+  assert.match(app, /styleFit === 2 \? 5 : 1/);
+  assert.doesNotMatch(app, /!product\.styles\.includes\(profile\.style\)\) return -100/);
 });
