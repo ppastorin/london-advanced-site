@@ -23,10 +23,11 @@ test("warm-weather safeguards remain in the recommender", () => {
   assert.match(app, /picks\.slice\(0,4\)/);
 });
 
-test("recommendations use one distinct product family per outfit role", () => {
+test("recommendations keep product families distinct across primary and fallback slots", () => {
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
   assert.match(app, /function productFamilyKey/);
-  assert.match(app, /productFamilyKey\(chosen\) === productFamilyKey\(p\)/);
+  assert.match(app, /const isNewFamily/);
+  assert.match(app, /isNewFamily\(p\)/);
   assert.doesNotMatch(app, /const remaining = productCatalog/);
 });
 
@@ -103,4 +104,21 @@ test("sport taxonomy stays distinct while city styles remain usable as fallbacks
   assert.match(app, /isSpecialistSport && selectedStyle !== "sportivo"/);
   assert.match(app, /styleFit === 2 \? 5 : 1/);
   assert.doesNotMatch(app, /!product\.styles\.includes\(profile\.style\)\) return -100/);
+});
+
+
+test("catalogue sampling is balanced by outfit role instead of feed order", () => {
+  const worker = fs.readFileSync("worker/meteo-dress-products.mjs", "utf8");
+  assert.match(worker, /MAX_PRODUCTS_PER_TYPE = 300/);
+  assert.match(worker, /productCounts\.get\(item\.type\)/);
+  assert.doesNotMatch(worker, /products\.size < MAX_PRODUCTS/);
+});
+
+test("recommendations use staged weather fallbacks and can fill four diverse slots", () => {
+  const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
+  assert.match(app, /productScore\(p,profile,calc,type,true\)/);
+  assert.match(app, /strict\.find[\s\S]*fallback\.find/);
+  assert.match(app, /picks\.length < 4/);
+  assert.match(app, /sameType < 2/);
+  assert.match(app, /isNewFamily\(p\)/);
 });

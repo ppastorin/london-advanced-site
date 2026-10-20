@@ -1,6 +1,6 @@
 const FEED_SECRET = "AWIN_MAXISPORT_FEED_URL";
 const CACHE_SECONDS = 6 * 60 * 60;
-const MAX_PRODUCTS = 1200;
+const MAX_PRODUCTS_PER_TYPE = 300;
 
 const json = (body, status = 200, headers = {}) => new Response(JSON.stringify(body), {
   status,
@@ -81,6 +81,7 @@ export function normalizeFeed(text) {
     if (!headers.includes(required)) throw new Error("invalid_feed");
   }
   const products = new Map();
+  const productCounts = new Map();
   let snapshotUpdated = "";
   for (const values of iterator) {
     const record = Object.fromEntries(headers.map((header, index) => [header, values[index] || ""]));
@@ -92,10 +93,11 @@ export function normalizeFeed(text) {
     if (existing) {
       if (item.size && !existing.sizes.includes(item.size)) existing.sizes.push(item.size);
       if (item.price < existing.price) { existing.price = item.price; existing.url = item.url; existing.variantId = item.variantId; }
-    } else if (products.size < MAX_PRODUCTS) {
+    } else if ((productCounts.get(item.type) || 0) < MAX_PRODUCTS_PER_TYPE) {
       const { size, ...product } = item;
       product.sizes = size ? [size] : [];
       products.set(key, product);
+      productCounts.set(item.type, (productCounts.get(item.type) || 0) + 1);
     }
     if (record.last_updated && record.last_updated > snapshotUpdated) snapshotUpdated = record.last_updated;
   }
@@ -118,7 +120,7 @@ export async function handleMeteoDressProducts(request, env) {
   if (request.method !== "GET") return json({ error: "method_not_allowed" }, 405, { Allow: "GET" });
   if (!env[FEED_SECRET]) return json({ error: "feed_not_configured", message: `Add the ${FEED_SECRET} Worker secret to enable the live catalogue.` }, 503, { "Cache-Control": "no-store" });
   const cache = caches.default;
-  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v7", request.url));
+  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v8", request.url));
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
   try {
