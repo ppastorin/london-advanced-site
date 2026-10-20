@@ -1,15 +1,23 @@
-const scenarios = [
-  { label: "Pioggia e vento", icon: "☔", min: 9, max: 14, feels: 7, rain: 68, gust: 39, hourly: [[6,9,42,"🌧"],[9,10,51,"🌧"],[12,13,32,"🌦"],[15,14,46,"🌦"],[18,11,68,"🌧"],[21,9,38,"☁️"]] },
-  { label: "Fresco e variabile", icon: "🌦", min: 8, max: 13, feels: 6, rain: 44, gust: 27, hourly: [[6,8,18,"☁️"],[9,9,24,"☁️"],[12,12,35,"🌦"],[15,13,44,"🌦"],[18,10,22,"☁️"],[21,8,12,"☁️"]] },
-  { label: "Sereno ma frizzante", icon: "🌤", min: 7, max: 15, feels: 5, rain: 12, gust: 19, hourly: [[6,7,5,"🌙"],[9,9,8,"🌤"],[12,13,9,"☀️"],[15,15,12,"🌤"],[18,11,8,"🌤"],[21,8,4,"🌙"]] },
-  { label: "Mite e nuvoloso", icon: "☁️", min: 12, max: 17, feels: 11, rain: 26, gust: 22, hourly: [[6,12,18,"☁️"],[9,13,20,"☁️"],[12,16,24,"☁️"],[15,17,26,"☁️"],[18,15,19,"☁️"],[21,13,12,"☁️"]] },
-  { label: "Pioggia insistente", icon: "🌧", min: 10, max: 13, feels: 8, rain: 86, gust: 31, hourly: [[6,10,62,"🌧"],[9,11,74,"🌧"],[12,12,81,"🌧"],[15,13,86,"🌧"],[18,11,79,"🌧"],[21,10,58,"🌧"]] },
-  { label: "Luminoso e mite", icon: "☀️", min: 13, max: 20, feels: 12, rain: 8, gust: 16, hourly: [[6,13,4,"🌤"],[9,15,5,"☀️"],[12,18,6,"☀️"],[15,20,8,"☀️"],[18,17,6,"🌤"],[21,14,4,"🌙"]] },
-  { label: "Freddo e asciutto", icon: "🌥", min: 4, max: 10, feels: 2, rain: 18, gust: 33, hourly: [[6,4,8,"🌙"],[9,5,11,"🌥"],[12,9,12,"🌥"],[15,10,18,"☁️"],[18,7,12,"☁️"],[21,5,7,"🌙"]] }
-];
+let scenarios = [];
+
 
 let productCatalog = [];
 let catalogMeta = null;
+let weatherMeta = null;
+
+const weatherReady = fetch("/api/meteo-dress-weather", {
+  headers: { Accept: "application/json" }
+})
+  .then(response => {
+    if (!response.ok) throw new Error(`Meteo non disponibile (${response.status})`);
+    return response.json();
+  })
+  .then(data => {
+    if (!Array.isArray(data.scenarios) || data.scenarios.length !== 7) throw new Error("Previsione incompleta");
+    scenarios = data.scenarios;
+    weatherMeta = data;
+    return scenarios;
+  });
 
 const catalogReady = fetch("/api/meteo-dress-products", {
   headers: { Accept: "application/json" }
@@ -311,10 +319,10 @@ form.addEventListener("submit", async event => {
   button.disabled = true;
   button.textContent = "Carico i prodotti reali…";
   try {
-    await catalogReady;
+    await Promise.all([catalogReady, weatherReady]);
     render(getProfile());
   } catch (error) {
-    showToast("Il catalogo Maxi Sport non è disponibile. Riprova tra poco.");
+    showToast("Meteo o catalogo prodotti non disponibili. Riprova tra poco.");
   } finally {
     button.disabled = false;
     button.innerHTML = prior;
