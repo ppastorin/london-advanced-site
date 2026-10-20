@@ -179,4 +179,10 @@ test("Meteo Dress loads seven normalized days from the protected Met Office endp
   assert.match(config, /\/api\/meteo-dress-weather/);
   assert.match(html, /Powered by Met Office data/);
   assert.doesNotMatch(html, /Scenario dimostrativo/);
+  const italianHomepage = fs.readFileSync("dist/it/index.html", "utf8");
+  const italianApp = fs.readFileSync("dist/it/app.js", "utf8");
+  assert.match(italianHomepage, /class="meteo-dress-banner/);
+  assert.match(italianHomepage, /href="\/meteo-dress\/"[^>]*data-track="app-menu:Meteo Dress"/);
+  assert.match(italianHomepage, /7 strumenti gratuiti/i);
+  assert.match(italianApp, /meteo-dress:home-banner/);
 });
