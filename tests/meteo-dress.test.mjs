@@ -122,3 +122,15 @@ test("recommendations use staged weather fallbacks and can fill four diverse slo
   assert.match(app, /sameType < 2/);
   assert.match(app, /isNewFamily\(p\)/);
 });
+
+
+test("four-result invariant has uncapped and cross-role catalogue fallbacks", () => {
+  const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
+  assert.match(app, /const roleFallbackPool/);
+  assert.match(app, /function catalogueFallbackScore/);
+  assert.match(app, /const catalogueFallbackPool/);
+  assert.match(app, /if \(picks\.length < 4\)/);
+  const fallbackPasses = app.match(/if \(picks\.length < 4\)/g) || [];
+  assert.ok(fallbackPasses.length >= 3);
+  assert.match(app, /if \(isNewFamily\(p\)\) picks\.push\(p\)/);
+});
