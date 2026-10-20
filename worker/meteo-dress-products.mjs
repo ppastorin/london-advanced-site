@@ -28,25 +28,27 @@ const has = (text, pattern) => pattern.test(text);
 function classify(record) {
   const name = record.product_name || "";
   const path = [record.merchant_product_category_path, record.merchant_product_second_category, record.merchant_product_third_category, record["Fashion:category"], name].filter(Boolean).join(" ").toLowerCase();
+  if (has(path, /pantalon|calzamaglia|\bshorts?\b/)) return null;
   let type = "";
-  if (has(path, /scarpe|sneaker|stival|calzatur|running|trekking/)) type = "scarpe";
-  else if (has(path, /giacc|jacket|cappott|piumin|parka|impermeabil|guscio|rain/)) type = has(path, /cappott|piumin|parka/) ? "cappotto" : "impermeabile";
+  if (has(path, /giacc|jacket|cappott|piumin|parka|impermeabil|guscio|\brain\b/)) type = has(path, /cappott|piumin|parka/) ? "cappotto" : "impermeabile";
   else if (has(path, /magli|felp|pullover|cardigan|pile|sweat|t-shirt|camici/)) type = "maglia";
+  else if (has(path, /scarpe|sneaker|stival|calzatur|sandali|\bboots?\b|\bshoes?\b|footwear/)) type = "scarpe";
   else if (has(path, /guant|moffol|cappell|berrett|sciarp|scaldacollo|occhial|sunglasses|paraorecchie|fascia/)) type = "accessorio";
   if (!type) return null;
 
   const suitable = String(record["Fashion:suitable_for"] || "").toLowerCase();
   const sections = [];
-  if (has(`${path} ${suitable}`, /donna|women|female/)) sections.push("donna");
-  if (has(`${path} ${suitable}`, /uomo|men|male/)) sections.push("uomo");
-  if (has(`${path} ${suitable}`, /bambin|junior|kid|boy|girl/)) sections.push("bambino");
-  if (!sections.length || has(suitable, /unisex/)) sections.push("unisex");
+  if (has(`${path} ${suitable}`, /\bdonna\b|\bwomen\b|\bfemale\b/)) sections.push("donna");
+  if (has(`${path} ${suitable}`, /\buomo\b|\bmen\b|\bmale\b/)) sections.push("uomo");
+  if (has(`${path} ${suitable}`, /bambin|\bjunior\b|\bkids?\b|\bboys?\b|\bgirls?\b/)) sections.push("bambino");
+  if (!sections.length) sections.push("unisex");
+  else if (!sections.includes("bambino") && has(suitable, /unisex/)) sections.push("unisex");
 
   const styles = ["casual", "urbano", "essenziale"];
   if (has(path, /running|fitness|sport|trekking|outdoor|sci|snowboard/)) styles.push("sportivo");
   if (has(path, /elegant|classico|cappotto|camici/)) styles.push("elegante");
   const warmth = has(path, /piumin|imbott|termic|sci|snowboard|pile|invern/) ? 4 : has(path, /cappott|parka|lana|felp|pullover/) ? 3 : has(path, /giacc|impermeabil|guscio|stival/) ? 2 : 1;
-  const rain = has(path, /impermeabil|waterproof|rain|gore-tex|goretex|guscio/) ? 4 : has(path, /giacc|stival|trekking/) ? 2 : 0;
+  const rain = has(path, /impermeabil|waterproof|\brain\b|gore-tex|goretex|guscio/) ? 4 : has(path, /giacc|stival|trekking/) ? 2 : 0;
   const price = Number.parseFloat(record.search_price || record.store_price || "");
   if (!Number.isFinite(price) || price <= 0) return null;
   return {
