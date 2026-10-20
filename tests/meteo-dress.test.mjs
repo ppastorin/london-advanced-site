@@ -1,4 +1,5 @@
 import { classify, isCityWearEligible } from "../worker/meteo-dress-products.mjs";
+import { normalizeMetOfficeForecast } from "../worker/meteo-dress-weather.mjs";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import test from "node:test";
