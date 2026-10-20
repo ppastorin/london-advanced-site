@@ -25,15 +25,16 @@ function* csvRows(text) {
 
 const has = (text, pattern) => pattern.test(text);
 
-function classify(record) {
+export function classify(record) {
   const name = record.product_name || "";
   const path = [record.merchant_product_category_path, record.merchant_product_second_category, record.merchant_product_third_category, record["Fashion:category"], name].filter(Boolean).join(" ").toLowerCase();
   if (has(path, /pantalon|calzamaglia|\bshorts?\b/)) return null;
+  if (has(path, /smartphone|porta[ -]?telefono|phone holder|fascia braccio|armband/)) return null;
   let type = "";
-  if (has(path, /giacc|jacket|cappott|piumin|parka|impermeabil|guscio|\brain\b/)) type = has(path, /cappott|piumin|parka/) ? "cappotto" : "impermeabile";
+  if (has(path, /guant|moffol|cappell|berrett|sciarp|scaldacollo|occhial|sunglasses|paraorecchie|fascia/)) type = "accessorio";
+  else if (has(path, /giacc|jacket|cappott|piumin|parka|impermeabil|guscio|\brain\b/)) type = has(path, /cappott|piumin|parka/) ? "cappotto" : "impermeabile";
   else if (has(path, /magli|felp|pullover|cardigan|pile|sweat|t-shirt|camici/)) type = "maglia";
   else if (has(path, /scarpe|sneaker|stival|calzatur|sandali|\bboots?\b|\bshoes?\b|footwear/)) type = "scarpe";
-  else if (has(path, /guant|moffol|cappell|berrett|sciarp|scaldacollo|occhial|sunglasses|paraorecchie|fascia/)) type = "accessorio";
   if (!type) return null;
 
   const suitable = String(record["Fashion:suitable_for"] || "").toLowerCase();
@@ -108,7 +109,7 @@ export async function handleMeteoDressProducts(request, env) {
   if (request.method !== "GET") return json({ error: "method_not_allowed" }, 405, { Allow: "GET" });
   if (!env[FEED_SECRET]) return json({ error: "feed_not_configured", message: `Add the ${FEED_SECRET} Worker secret to enable the live catalogue.` }, 503, { "Cache-Control": "no-store" });
   const cache = caches.default;
-  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v3", request.url));
+  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v4", request.url));
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
   try {

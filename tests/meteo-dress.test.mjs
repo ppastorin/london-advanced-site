@@ -1,3 +1,4 @@
+import { classify } from "../worker/meteo-dress-products.mjs";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import test from "node:test";
@@ -20,4 +21,25 @@ test("warm-weather safeguards remain in the recommender", () => {
   assert.match(app, /isGlove && calc\.effective > 5/);
   assert.match(app, /isColdHeadwear && calc\.effective > 9/);
   assert.match(app, /picks\.length >= 4/);
+});
+
+
+test("feed taxonomy rejects phone holders and classifies fleece gloves as accessories", () => {
+  const common = {
+    search_price: "19.95",
+    aw_deep_link: "https://www.awin1.com/example",
+    merchant_image_url: "https://example.com/product.jpg",
+    merchant_product_id: "sku"
+  };
+  assert.equal(classify({
+    ...common,
+    product_name: "Running Nike Fascia Braccio Porta Smartphone",
+    merchant_product_category_path: "Sport > Running > Accessori"
+  }), null);
+  assert.equal(classify({
+    ...common,
+    product_name: "Running Nike Guanti Pile Tech Fleece",
+    merchant_product_category_path: "Sport > Running > Accessori > Guanti",
+    "Fashion:suitable_for": "male"
+  })?.type, "accessorio");
 });
