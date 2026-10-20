@@ -139,6 +139,7 @@ function productScore(product, profile, calc, type) {
     ? product.sections.includes("bambino")
     : product.sections.includes(profile.section) || product.sections.includes("unisex");
   if (!sectionMatch) return -100;
+  if (!product.styles.includes(profile.style)) return -100;
   const productText = `${product.name} ${product.category}`.toLowerCase();
   const isGlove = /\b(guant\w*|moffol\w*)\b/.test(productText);
   const isColdHeadwear = /\b(beanie|cappell\w*|berrett\w*|sciarp\w*|scaldacollo|paraorecchie|fascia)\b/.test(productText);
@@ -159,7 +160,7 @@ function productScore(product, profile, calc, type) {
   if (product.type === "maglia" && targetWarmth >= 3 && product.warmth < 2) return -100;
   if (product.type !== "scarpe" && product.warmth > targetWarmth + 1) return -100;
   let score = 0;
-  if (product.styles.includes(profile.style)) score += 5;
+  score += 5;
   if (profile.budget === "qualsiasi" || product.tier === profile.budget) score += 3;
   if (calc.rainChance >= 25) score += product.rain * (calc.rainChance >= 60 ? 2 : 1);
   score += 4 - Math.abs(product.warmth - targetWarmth) * 2;
