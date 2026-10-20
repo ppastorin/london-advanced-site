@@ -133,13 +133,23 @@ function renderPeriods(profile, scenario, calc) {
   }).join("");
 }
 
+function styleCompatibility(product, selectedStyle) {
+  if (product.styles.includes(selectedStyle)) return 2;
+  const cityStyles = ["casual", "urbano", "essenziale"];
+  const hasCityStyle = cityStyles.some(style => product.styles.includes(style));
+  const isSpecialistSport = product.styles.includes("sportivo") && !hasCityStyle;
+  if (isSpecialistSport && selectedStyle !== "sportivo") return 0;
+  return hasCityStyle || selectedStyle === "sportivo" ? 1 : 0;
+}
+
 function productScore(product, profile, calc, type) {
   if (product.type !== type) return -100;
   const sectionMatch = profile.section === "bambino"
     ? product.sections.includes("bambino")
     : product.sections.includes(profile.section) || product.sections.includes("unisex");
   if (!sectionMatch) return -100;
-  if (!product.styles.includes(profile.style)) return -100;
+  const styleFit = styleCompatibility(product, profile.style);
+  if (!styleFit) return -100;
   const productText = `${product.name} ${product.category}`.toLowerCase();
   const isGlove = /\b(guant\w*|moffol\w*)\b/.test(productText);
   const isColdHeadwear = /\b(beanie|cappell\w*|berrett\w*|sciarp\w*|scaldacollo|paraorecchie|fascia)\b/.test(productText);
@@ -160,7 +170,7 @@ function productScore(product, profile, calc, type) {
   if (product.type === "maglia" && targetWarmth >= 3 && product.warmth < 2) return -100;
   if (product.type !== "scarpe" && product.warmth > targetWarmth + 1) return -100;
   let score = 0;
-  score += 5;
+  score += styleFit === 2 ? 5 : 1;
   if (profile.budget === "qualsiasi" || product.tier === profile.budget) score += 3;
   if (calc.rainChance >= 25) score += product.rain * (calc.rainChance >= 60 ? 2 : 1);
   score += 4 - Math.abs(product.warmth - targetWarmth) * 2;
