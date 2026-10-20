@@ -27,7 +27,7 @@ test("recommendations keep product families distinct across primary and fallback
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
   assert.match(app, /function productFamilyKey/);
   assert.match(app, /const isNewFamily/);
-  assert.match(app, /isNewFamily\\(p\\)/);
+  assert.match(app, /isNewFamily\(p\)/);
   assert.doesNotMatch(app, /const remaining = productCatalog/);
 });
 
