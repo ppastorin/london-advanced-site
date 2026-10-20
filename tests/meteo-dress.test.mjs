@@ -20,9 +20,15 @@ test("warm-weather safeguards remain in the recommender", () => {
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
   assert.match(app, /isGlove && calc\.effective > 5/);
   assert.match(app, /isColdHeadwear && calc\.effective > 9/);
-  assert.match(app, /picks\.length >= 4/);
+  assert.match(app, /picks\.slice\(0,4\)/);
 });
 
+test("recommendations use one distinct product family per outfit role", () => {
+  const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
+  assert.match(app, /function productFamilyKey/);
+  assert.match(app, /productFamilyKey\(chosen\) === productFamilyKey\(p\)/);
+  assert.doesNotMatch(app, /const remaining = productCatalog/);
+});
 
 test("feed taxonomy rejects phone holders and classifies fleece gloves as accessories", () => {
   const common = {
