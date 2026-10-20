@@ -142,7 +142,7 @@ function styleCompatibility(product, selectedStyle) {
   return hasCityStyle || selectedStyle === "sportivo" ? 1 : 0;
 }
 
-function productScore(product, profile, calc, type) {
+function productScore(product, profile, calc, type, relaxed = false) {
   if (product.type !== type) return -100;
   const sectionMatch = profile.section === "bambino"
     ? product.sections.includes("bambino")
@@ -166,10 +166,13 @@ function productScore(product, profile, calc, type) {
   }
 
   const targetWarmth = calc.effective <= 4 ? 4 : calc.effective <= 8 ? 3 : calc.effective <= 12 ? 2 : calc.effective <= 16 ? 1 : 0;
-  if (product.type === "impermeabile" && calc.wet && product.rain < 2) return -100;
-  if (product.type === "maglia" && targetWarmth >= 3 && product.warmth < 2) return -100;
-  if (product.type !== "scarpe" && product.warmth > targetWarmth + 1) return -100;
+  if (!relaxed && product.type === "impermeabile" && calc.wet && product.rain < 2) return -100;
+  if (!relaxed && product.type === "maglia" && targetWarmth >= 3 && product.warmth < 2) return -100;
+  if (!relaxed && product.type !== "scarpe" && product.warmth > targetWarmth + 1) return -100;
   let score = 0;
+  if (relaxed && product.type === "impermeabile" && calc.wet && product.rain < 2) score -= 8;
+  if (relaxed && product.type === "maglia" && targetWarmth >= 3 && product.warmth < 2) score -= 6;
+  if (relaxed && product.type !== "scarpe" && product.warmth > targetWarmth + 1) score -= 8;
   score += styleFit === 2 ? 5 : 1;
   if (profile.budget === "qualsiasi" || product.tier === profile.budget) score += 3;
   if (calc.rainChance >= 25) score += product.rain * (calc.rainChance >= 60 ? 2 : 1);
@@ -202,11 +205,24 @@ function productFamilyKey(product) {
 function renderProducts(profile, calc) {
   const types = [...new Set(calc.kit.map(k=>k.type))];
   const picks = [];
+  const isNewFamily = product => !picks.some(chosen => chosen.id === product.id || productFamilyKey(chosen) === productFamilyKey(product));
   types.forEach(type => {
-    const ranked = productCatalog.map(p=>({p,score:productScore(p,profile,calc,type)})).filter(x=>x.score>-50).sort((a,b)=>b.score-a.score);
-    const candidate = ranked.find(({p}) => !picks.some(chosen => chosen.id === p.id || productFamilyKey(chosen) === productFamilyKey(p)));
+    const strict = productCatalog.map(p=>({p,score:productScore(p,profile,calc,type)})).filter(x=>x.score>-50).sort((a,b)=>b.score-a.score);
+    const fallback = productCatalog.map(p=>({p,score:productScore(p,profile,calc,type,true)})).filter(x=>x.score>-50).sort((a,b)=>b.score-a.score);
+    const candidate = strict.find(({p}) => isNewFamily(p)) || fallback.find(({p}) => isNewFamily(p));
     if (candidate) picks.push(candidate.p);
   });
+  if (picks.length < 4) {
+    const fallbackPool = productCatalog
+      .map(p=>({p,score:Math.max(...types.map(type=>productScore(p,profile,calc,type,true)))}))
+      .filter(({p,score}) => score > -50 && isNewFamily(p))
+      .sort((a,b)=>b.score-a.score);
+    for (const {p} of fallbackPool) {
+      if (picks.length >= 4) break;
+      const sameType = picks.filter(chosen => chosen.type === p.type).length;
+      if (sameType < 2 && isNewFamily(p)) picks.push(p);
+    }
+  }
   const visible = picks.slice(0,4);
   document.querySelector("#product-grid").innerHTML = visible.map(p => {
     const reason = p.type === "impermeabile" ? "Adatta alla probabilità di pioggia e al tuo stile." : p.type === "cappotto" ? "Calore coerente con temperatura percepita ed esposizione." : p.type === "scarpe" ? "Pensata per camminare a lungo senza ignorare il meteo." : p.type === "maglia" ? "Uno strato intermedio coerente con il tuo profilo termico." : "Completa il kit senza appesantire la giornata.";
