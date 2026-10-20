@@ -198,5 +198,5 @@ test("Meteo Dress exposes the standard Italian portal navigation", () => {
   assert.match(html, /href="\/meteo-dress\/"[^>]*aria-current="page"/);
   assert.match(html, /class="portal-mobile-actions"/);
   assert.match(css, /\.portal-nav/);
-  assert.match(css, /@media \(max-width: 1120px\)/);
+  assert.match(css, /@media\s*\(max-width:\s*1120px\)/);
 });
