@@ -41,7 +41,7 @@ export function classify(record) {
   const sections = [];
   if (has(`${path} ${suitable}`, /\bdonna\b|\bwomen\b|\bfemale\b/)) sections.push("donna");
   if (has(`${path} ${suitable}`, /\buomo\b|\bmen\b|\bmale\b/)) sections.push("uomo");
-  if (has(`${path} ${suitable}`, /bambin|\bjunior\b|\bkids?\b|\bboys?\b|\bgirls?\b/)) sections.push("bambino");
+  if (has(`${path} ${suitable}`, /bambin|ragazz|\bjunior\b|\bkids?\b|\bboys?\b|\bgirls?\b/)) sections.push("bambino");
   if (!sections.length) sections.push("unisex");
   else if (!sections.includes("bambino") && has(suitable, /unisex/)) sections.push("unisex");
 
@@ -109,7 +109,7 @@ export async function handleMeteoDressProducts(request, env) {
   if (request.method !== "GET") return json({ error: "method_not_allowed" }, 405, { Allow: "GET" });
   if (!env[FEED_SECRET]) return json({ error: "feed_not_configured", message: `Add the ${FEED_SECRET} Worker secret to enable the live catalogue.` }, 503, { "Cache-Control": "no-store" });
   const cache = caches.default;
-  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v4", request.url));
+  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v5", request.url));
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
   try {
