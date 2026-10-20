@@ -25,6 +25,16 @@ function* csvRows(text) {
 
 const has = (text, pattern) => pattern.test(text);
 
+const SPORT_CONTEXT = /running|fitness|sport|trekking|outdoor|sci|snowboard|ciclismo|cycling|calcio|football|rugby|arrampicata|climbing|alpinismo/;
+const SPECIALIST_FOOTWEAR_CONTEXT = /snowboard|sci(?:\s|$)|ciclismo|cycling|calcio|football|rugby|arrampicata|climbing|alpinismo|atletica|track\s*(?:and|&)\s*field/;
+const TECHNICAL_HARDGOODS = /\b(casco|helmet|maschera|goggle|attacchi?|bindings?|tavola|bastoncini?|protezioni?|ramponi?|crampons?)\b/;
+
+export function isCityWearEligible(path, type) {
+  if (type === "scarpe" && has(path, SPECIALIST_FOOTWEAR_CONTEXT)) return false;
+  if (type === "accessorio" && has(path, TECHNICAL_HARDGOODS)) return false;
+  return true;
+}
+
 export function classify(record) {
   const name = record.product_name || "";
   const path = [record.merchant_product_category_path, record.merchant_product_second_category, record.merchant_product_third_category, record["Fashion:category"], name].filter(Boolean).join(" ").toLowerCase();
@@ -35,7 +45,7 @@ export function classify(record) {
   else if (has(path, /giacc|jacket|cappott|piumin|parka|impermeabil|guscio|\brain\b/)) type = has(path, /cappott|piumin|parka/) ? "cappotto" : "impermeabile";
   else if (has(path, /magli|felp|pullover|cardigan|pile|sweat|t-shirt|camici/)) type = "maglia";
   else if (has(path, /scarpe|sneaker|stival|calzatur|sandali|\bboots?\b|\bshoes?\b|footwear/)) type = "scarpe";
-  if (!type) return null;
+  if (!type || !isCityWearEligible(path, type)) return null;
 
   const suitable = String(record["Fashion:suitable_for"] || "").toLowerCase();
   const sections = [];
@@ -45,9 +55,8 @@ export function classify(record) {
   if (!sections.length) sections.push("unisex");
   else if (!sections.includes("bambino") && has(suitable, /unisex/)) sections.push("unisex");
 
-  const styles = ["casual", "urbano", "essenziale"];
-  if (has(path, /running|fitness|sport|trekking|outdoor|sci|snowboard/)) styles.push("sportivo");
-  if (has(path, /elegant|classico|cappotto|camici/)) styles.push("elegante");
+  const styles = has(path, SPORT_CONTEXT) ? ["sportivo"] : ["casual", "urbano", "essenziale"];
+  if (has(path, /elegant|classico|cappotto|camici|mocassin|loafer|derby|oxford|stringat|chelsea|trench/)) styles.push("elegante");
   const warmth = has(path, /piumin|imbott|termic|sci|snowboard|pile|invern/) ? 4 : has(path, /cappott|parka|lana|felp|pullover/) ? 3 : has(path, /giacc|impermeabil|guscio|stival/) ? 2 : 1;
   const rain = has(path, /impermeabil|waterproof|\brain\b|gore-tex|goretex|guscio/) ? 4 : has(path, /stival|trekking/) ? 2 : 0;
   const price = Number.parseFloat(record.search_price || record.store_price || "");
@@ -109,7 +118,7 @@ export async function handleMeteoDressProducts(request, env) {
   if (request.method !== "GET") return json({ error: "method_not_allowed" }, 405, { Allow: "GET" });
   if (!env[FEED_SECRET]) return json({ error: "feed_not_configured", message: `Add the ${FEED_SECRET} Worker secret to enable the live catalogue.` }, 503, { "Cache-Control": "no-store" });
   const cache = caches.default;
-  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v6", request.url));
+  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v7", request.url));
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
   try {
