@@ -86,7 +86,7 @@ test("city-wear taxonomy excludes specialist equipment by category, not by indiv
   })?.type, "scarpe");
 });
 
-test("sport taxonomy does not inherit city styles and ranking requires the selected style", () => {
+test("sport taxonomy stays distinct while city styles remain usable as fallbacks", () => {
   const common = {
     search_price: "99.95",
     aw_deep_link: "https://www.awin1.com/example",
