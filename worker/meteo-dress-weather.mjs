@@ -25,10 +25,20 @@ function addDays(key, amount) {
   return date.toISOString().slice(0, 10);
 }
 
-const number = (value, fallback = 0) => Number.isFinite(Number(value)) ? Number(value) : fallback;
+const optionalNumber = value => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value)) ? Number(value) : null;
+const number = (value, fallback = 0) => optionalNumber(value) ?? fallback;
 const weatherCode = entry => number(entry.significantWeatherCode ?? entry.weatherCode, 7);
-const temperature = entry => number(entry.screenTemperature ?? entry.temperature);
-const feelsLike = entry => number(entry.feelsLikeTemperature ?? entry.feelsLike, temperature(entry));
+const temperature = entry => {
+  const screen = optionalNumber(entry.screenTemperature ?? entry.temperature);
+  if (screen !== null) return screen;
+  const minimum = optionalNumber(entry.minScreenAirTemp);
+  const maximum = optionalNumber(entry.maxScreenAirTemp);
+  if (minimum !== null && maximum !== null) return (minimum + maximum) / 2;
+  return minimum ?? maximum ?? 0;
+};
+const minimumTemperature = entry => optionalNumber(entry.minScreenAirTemp) ?? temperature(entry);
+const maximumTemperature = entry => optionalNumber(entry.maxScreenAirTemp) ?? temperature(entry);
+const feelsLike = entry => optionalNumber(entry.feelsLikeTemperature ?? entry.feelsLike) ?? temperature(entry);
 const rainChance = entry => number(entry.probOfPrecipitation ?? entry.precipitationProbability);
 const gustSpeed = entry => number(entry.windGustSpeed10m ?? entry.windGustSpeed);
 
@@ -73,7 +83,8 @@ export function normalizeMetOfficeForecast(payload, now = new Date()) {
     if (!entries.length) continue;
     const slots = TARGET_HOURS.map(hour => entries.reduce((best, entry) =>
       !best || Math.abs(entry.localHour - hour) < Math.abs(best.localHour - hour) ? entry : best, null));
-    const temperatures = entries.map(temperature);
+    const minimumTemperatures = entries.map(minimumTemperature);
+    const maximumTemperatures = entries.map(maximumTemperature);
     const feels = entries.map(feelsLike);
     const rain = Math.max(...entries.map(rainChance));
     const gust = Math.max(...entries.map(gustSpeed));
@@ -84,8 +95,8 @@ export function normalizeMetOfficeForecast(payload, now = new Date()) {
       date,
       label: labelFor(code, rain, gust),
       icon: iconFor(code, rain),
-      min: Math.round(Math.min(...temperatures)),
-      max: Math.round(Math.max(...temperatures)),
+      min: Math.round(Math.min(...minimumTemperatures)),
+      max: Math.round(Math.max(...maximumTemperatures)),
       feels: Math.round(Math.min(...feels)),
       rain: Math.round(rain),
       gust: Math.round(gust),
@@ -112,13 +123,14 @@ export async function handleMeteoDressWeather(request, env, fetchImpl = fetch) {
     return json({ error: "weather_not_configured", message: `Add the ${METOFFICE_SECRET} Worker secret.` }, 503, { "Cache-Control": "no-store" });
   }
   const cache = caches.default;
-  const cacheKey = new Request(new URL("/__cache/meteo-dress-weather-v1", request.url));
+  const cacheKey = new Request(new URL("/__cache/meteo-dress-weather-v2", request.url));
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
   const url = new URL(METOFFICE_URL);
   url.searchParams.set("latitude", String(LONDON.latitude));
   url.searchParams.set("longitude", String(LONDON.longitude));
   url.searchParams.set("includeLocationName", "true");
+  url.searchParams.set("datasource", "BD1");
   try {
     const upstream = await fetchImpl(url, {
       headers: { Accept: "application/geo+json, application/json", apikey: env[METOFFICE_SECRET] }
