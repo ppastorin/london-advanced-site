@@ -171,7 +171,7 @@ test("Meteo Dress loads seven normalized days from the protected Met Office endp
   const html = fs.readFileSync("dist/meteo-dress/index.html", "utf8");
   const worker = fs.readFileSync("worker/index.mjs", "utf8");
   const config = fs.readFileSync("wrangler.jsonc", "utf8");
-  assert.match(app, /fetch\("\/api\/meteo-dress-weather(?:\?v=\\d+)?"/);
+  assert.match(app, /fetch\("\/api\/meteo-dress-weather(?:\?v=\d+)?"/);
   assert.match(app, /cache: "no-store"/);
   assert.match(app, /Promise\.all\(\[catalogReady, weatherReady\]\)/);
   assert.doesNotMatch(app, /const scenarios = \[/);
