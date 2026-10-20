@@ -155,6 +155,8 @@ function productScore(product, profile, calc, type) {
   }
 
   const targetWarmth = calc.effective <= 4 ? 4 : calc.effective <= 8 ? 3 : calc.effective <= 12 ? 2 : calc.effective <= 16 ? 1 : 0;
+  if (product.type === "impermeabile" && calc.wet && product.rain < 2) return -100;
+  if (product.type === "maglia" && targetWarmth >= 3 && product.warmth < 2) return -100;
   if (product.type !== "scarpe" && product.warmth > targetWarmth + 1) return -100;
   let score = 0;
   if (product.styles.includes(profile.style)) score += 5;
