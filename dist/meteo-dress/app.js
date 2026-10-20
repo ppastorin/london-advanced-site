@@ -180,21 +180,22 @@ function trackedUrl(product, profile) {
   return url.toString();
 }
 
+function productFamilyKey(product) {
+  return product.name.toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/\b(uomo|donna|unisex|junior|bambin[oa]|giacca|maglia|scarpe?)\b/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
 function renderProducts(profile, calc) {
   const types = [...new Set(calc.kit.map(k=>k.type))];
   const picks = [];
   types.forEach(type => {
     const ranked = productCatalog.map(p=>({p,score:productScore(p,profile,calc,type)})).filter(x=>x.score>-50).sort((a,b)=>b.score-a.score);
-    if (ranked[0] && !picks.some(x=>x.id===ranked[0].p.id)) picks.push(ranked[0].p);
+    const candidate = ranked.find(({p}) => !picks.some(chosen => chosen.id === p.id || productFamilyKey(chosen) === productFamilyKey(p)));
+    if (candidate) picks.push(candidate.p);
   });
-  const remaining = productCatalog
-    .map(p => ({p, score: Math.max(...types.map(type => productScore(p, profile, calc, type))) }))
-    .filter(({p, score}) => score > -50 && !picks.some(x => x.id === p.id))
-    .sort((a,b) => b.score - a.score);
-  for (const {p} of remaining) {
-    if (picks.length >= 4) break;
-    picks.push(p);
-  }
   const visible = picks.slice(0,4);
   document.querySelector("#product-grid").innerHTML = visible.map(p => {
     const reason = p.type === "impermeabile" ? "Adatta alla probabilità di pioggia e al tuo stile." : p.type === "cappotto" ? "Calore coerente con temperatura percepita ed esposizione." : p.type === "scarpe" ? "Pensata per camminare a lungo senza ignorare il meteo." : p.type === "maglia" ? "Uno strato intermedio coerente con il tuo profilo termico." : "Completa il kit senza appesantire la giornata.";
