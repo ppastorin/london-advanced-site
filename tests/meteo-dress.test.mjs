@@ -99,5 +99,8 @@ test("sport taxonomy stays distinct while city styles remain usable as fallbacks
     merchant_product_category_path: "Sport > Running > Scarpe"
   })?.styles, ["sportivo"]);
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
-  assert.match(app, /!product\.styles\.includes\(profile\.style\)\) return -100/);
+  assert.match(app, /function styleCompatibility/);
+  assert.match(app, /isSpecialistSport && selectedStyle !== "sportivo"/);
+  assert.match(app, /styleFit === 2 \? 5 : 1/);
+  assert.doesNotMatch(app, /!product\.styles\.includes\(profile\.style\)\) return -100/);
 });
