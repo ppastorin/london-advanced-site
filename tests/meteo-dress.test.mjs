@@ -23,7 +23,7 @@ test("warm-weather safeguards remain in the recommender", () => {
   assert.match(app, /picks\.slice\(0,4\)/);
 });
 
-test("recommendations use one distinct product family per outfit role", () => {
+test("recommendations keep product families distinct across primary and fallback slots", () => {
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
   assert.match(app, /function productFamilyKey/);
   assert.match(app, /productFamilyKey\(chosen\) === productFamilyKey\(p\)/);
