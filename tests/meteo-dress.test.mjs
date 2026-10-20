@@ -147,8 +147,8 @@ test("Meteo Dress loads seven normalized days from the protected Met Office endp
       time.setUTCHours(hour);
       timeSeries.push({
         time: time.toISOString(),
-        screenTemperature: 8 + day + hour / 12,
-        feelsLikeTemperature: 7 + day + hour / 12,
+        minScreenAirTemp: 7 + day + hour / 12,
+        maxScreenAirTemp: 9 + day + hour / 12,
         probOfPrecipitation: hour === 18 ? 65 : 15,
         windGustSpeed10m: 24,
         significantWeatherCode: hour === 18 ? 12 : 7
@@ -162,6 +162,9 @@ test("Meteo Dress loads seven normalized days from the protected Met Office endp
   assert.equal(result.scenarios.length, 7);
   assert.equal(result.scenarios[0].hourly.length, 6);
   assert.equal(result.scenarios[0].rain, 65);
+  assert.ok(result.scenarios[0].min >= 7);
+  assert.ok(result.scenarios[0].max >= 9);
+  assert.ok(result.scenarios[0].hourly.every(slot => slot[1] > 0));
   assert.equal(result.scenarios[0].label, "Pioggia probabile");
 
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
