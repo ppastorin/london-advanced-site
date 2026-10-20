@@ -165,6 +165,7 @@ test("Meteo Dress loads seven normalized days from the protected Met Office endp
   assert.equal(result.scenarios[0].label, "Pioggia probabile");
 
   const app = fs.readFileSync("dist/meteo-dress/app.js", "utf8");
+  const html = fs.readFileSync("dist/meteo-dress/index.html", "utf8");
   const worker = fs.readFileSync("worker/index.mjs", "utf8");
   const config = fs.readFileSync("wrangler.jsonc", "utf8");
   assert.match(app, /fetch\("\/api\/meteo-dress-weather"/);
