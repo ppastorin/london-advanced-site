@@ -172,4 +172,6 @@ test("Meteo Dress loads seven normalized days from the protected Met Office endp
   assert.doesNotMatch(app, /const scenarios = \[/);
   assert.match(worker, /handleMeteoDressWeather/);
   assert.match(config, /\/api\/meteo-dress-weather/);
+  assert.match(html, /Powered by Met Office data/);
+  assert.doesNotMatch(html, /Scenario dimostrativo/);
 });
