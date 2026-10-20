@@ -216,7 +216,7 @@ function addMeteoDressPromotion(source) {
       <span>\${app.short}</span>
       <strong>\${app.name}</strong>
     </a>\`).join("");
-  return \`\${appLinks}\${menuLink}\`;
+  return appLinks + ${JSON.stringify(menuLink)};
 }`;
 
   let out = source.replace(/function toolMenuLinks\(\) \{[\s\S]*?\n\}/, menuFunction);
