@@ -186,3 +186,16 @@ test("Meteo Dress loads seven normalized days from the protected Met Office endp
   assert.match(italianHomepage, /7 strumenti gratuiti/i);
   assert.match(italianApp, /meteo-dress:home-banner/);
 });
+
+
+test("Meteo Dress exposes the standard Italian portal navigation", () => {
+  const html = fs.readFileSync("dist/meteo-dress/index.html", "utf8");
+  const css = fs.readFileSync("dist/meteo-dress/styles.css", "utf8");
+  assert.match(html, /class="portal-nav"/);
+  assert.match(html, /class="portal-desktop-menu"/);
+  assert.match(html, /href="\/it\/"[^>]*aria-label="London Advanced Italia"/);
+  assert.match(html, /href="\/meteo-dress\/"[^>]*aria-current="page"/);
+  assert.match(html, /class="portal-mobile-actions"/);
+  assert.match(css, /\.portal-nav/);
+  assert.match(css, /@media \(max-width: 1120px\)/);
+});
