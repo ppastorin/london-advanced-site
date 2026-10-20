@@ -48,4 +48,9 @@ test("feed taxonomy rejects phone holders and classifies fleece gloves as access
     merchant_product_category_path: "Sport > Running > Accessori > Guanti",
     "Fashion:suitable_for": "male"
   })?.type, "accessorio");
+  assert.deepEqual(classify({
+    ...common,
+    product_name: "Sci Reusch Guanti Travis Gtx Ragazzo",
+    merchant_product_category_path: "Sport > Sci > Guanti"
+  })?.sections, ["bambino"]);
 });
