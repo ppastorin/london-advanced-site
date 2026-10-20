@@ -108,7 +108,7 @@ export async function handleMeteoDressProducts(request, env) {
   if (request.method !== "GET") return json({ error: "method_not_allowed" }, 405, { Allow: "GET" });
   if (!env[FEED_SECRET]) return json({ error: "feed_not_configured", message: `Add the ${FEED_SECRET} Worker secret to enable the live catalogue.` }, 503, { "Cache-Control": "no-store" });
   const cache = caches.default;
-  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v1", request.url));
+  const cacheKey = new Request(new URL("/__cache/meteo-dress-products-v2", request.url));
   const cached = await cache.match(cacheKey);
   if (cached) return cached;
   try {
