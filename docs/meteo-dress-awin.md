@@ -6,7 +6,7 @@ The browser requests `/api/meteo-dress-products`. The Cloudflare Worker download
 
 1. Open the Cloudflare Worker for this branch preview.
 2. Add an encrypted secret named `AWIN_MAXISPORT_FEED_URL` to the **preview** environment.
-3. Paste the complete private Awin download URL as its value.
+3. Paste the complete private Awin download URL as its value. Confirm its scope includes non-production branch builds.
 4. Redeploy the branch preview, then open `/meteo-dress/`.
 5. Submit the form and confirm four Maxi Sport cards appear.
 6. Check `/api/meteo-dress-products`: it should return JSON with `source`, `snapshotUpdated`, and `products`.
