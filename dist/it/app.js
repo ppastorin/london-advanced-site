@@ -57,11 +57,16 @@ function socialLinks() {
 }
 
 function toolMenuLinks() {
-  return DATA.apps.map(app => `
+  const appLinks = DATA.apps.map(app => `
     <a href="${app.href}" data-track="app-menu:${app.name}">
       <span>${app.short}</span>
       <strong>${app.name}</strong>
     </a>`).join("");
+  return `${appLinks}
+    <a href="/meteo-dress/" data-track="app-menu:Meteo Dress">
+      <span>Come vestirsi con il meteo di Londra</span>
+      <strong>Meteo Dress</strong>
+    </a>`;
 }
 
 function communityMenuLinks() {
@@ -339,7 +344,7 @@ function render() {
 
     <section class="hero">
       <div class="hero-intro">
-        <span class="eyebrow">Guida indipendente di Londra · 6 strumenti gratuiti</span>
+        <span class="eyebrow">Guida indipendente di Londra · 7 strumenti gratuiti</span>
         <h1>La città oltre<br><em>l’ovvio.</em></h1>
         <p>Find unusual places and things to do in London, make smarter journeys and see what the city feels like before you set out.</p>
         <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Esplora gli strumenti</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Find unusual things to do →</a></div>
@@ -347,8 +352,23 @@ function render() {
       <figure class="map-window"><img src="/assets/london-map.jpg" alt="Mappa di Londra con i luoghi inclusi in London Advanced"><figcaption><b>1,100+</b> luoghi oltre le solite liste</figcaption></figure>
     </section>
 
+    <section class="meteo-dress-banner section-wrap" aria-labelledby="meteo-dress-title">
+      <div class="meteo-dress-copy">
+        <span class="eyebrow">Nuovo strumento · Meteo in tempo reale</span>
+        <h2 id="meteo-dress-title">Vestirsi per Londra, senza indovinare.</h2>
+        <p>Meteo Dress combina le previsioni ufficiali Met Office con il tuo stile, la sensibilità al freddo e il tempo che passerai all’aperto.</p>
+        <a class="button dark" href="/meteo-dress/" data-track="meteo-dress:home-banner">Prepara il tuo outfit <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="meteo-dress-weather" aria-hidden="true">
+        <span>MET OFFICE</span>
+        <strong>Pioggia o sole?</strong>
+        <small>Il consiglio cambia con il tempo.</small>
+        <div><b>°C</b><b>☂</b><b>↗</b></div>
+      </div>
+    </section>
+
     <section id="tools" class="tools section-wrap">
-      <div class="section-heading tool-heading"><div><span>01 / Londra pratica</span><h2>Scegli ciò che ti serve adesso.</h2></div><p>Sei strumenti mirati. Nessun account, nessuna app da scaricare e nessun consiglio generico.</p></div>
+      <div class="section-heading tool-heading"><div><span>01 / Londra pratica</span><h2>Scegli ciò che ti serve adesso.</h2></div><p>Sette strumenti mirati. Nessun account, nessuna app da scaricare e nessun consiglio generico.</p></div>
       <div class="app-grid">${appCards()}</div>
     </section>
 
