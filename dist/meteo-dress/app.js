@@ -5,8 +5,9 @@ let productCatalog = [];
 let catalogMeta = null;
 let weatherMeta = null;
 
-const weatherReady = fetch("/api/meteo-dress-weather", {
-  headers: { Accept: "application/json" }
+const weatherReady = fetch("/api/meteo-dress-weather?v=3", {
+  headers: { Accept: "application/json" },
+  cache: "no-store"
 })
   .then(response => {
     if (!response.ok) throw new Error(`Meteo non disponibile (${response.status})`);
