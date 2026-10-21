@@ -257,12 +257,20 @@ function transformAppJs(source){
     ["No thanks","No, grazie"],
     ["Allow analytics","Consenti"],
     ["London Advanced home — back to top","Homepage London Advanced — torna all’inizio"],
-    ["Open navigation menu","Apri il menu di navigazione"]
+    ["Open navigation menu","Apri il menu di navigazione"],
+    ["Main navigation","Navigazione principale"],
+    ["Newsletter promise","Promessa della newsletter"],
+    ["proposte del weekends","proposte del weekend"],
+    [">LIVE<",">DAL VIVO<"],
+    [">NOW +3H<",">ORA +3H<"],
+    [">FARE CHECK<",">CONTROLLO TARIFFE<"],
+    [">QUIET<",">TRANQUILLA<"],
+    [">CURIOUS<",">CURIOSA<"]
   ];
   for(const [a,b] of homepageCleanupPairs) out=out.split(a).join(b);
   out=out.replaceAll(
     "escapeHtml(event.price.display)",
-    'escapeHtml(event.price.display.replace(/^Free\\b/i, "Gratis").replace(/\\bpumpkin\\b/gi, "zucca"))'
+    'escapeHtml(event.price.display.replace(/^Free\\b/i, "Gratis").replace(/\\bpumpkin\\b/gi, "zucca").replace(/\\bper person\\b/gi, "a persona"))'
   );
   return addMeteoDressPromotion(out.replaceAll("Esplora the tools","Esplora gli strumenti").replaceAll(">Guide<",">Guida<").replaceAll('"#events"','"#eventi"')
     .replaceAll("hreflang=\"${DATA.links.home === '/it/' ? 'it-IT' : 'it-IT'}\"", "hreflang=\"${DATA.links.home === '/it/' ? 'en-GB' : 'it-IT'}\""));
