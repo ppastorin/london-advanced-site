@@ -200,3 +200,11 @@ test("Meteo Dress exposes the standard Italian portal navigation", () => {
   assert.match(css, /\.portal-nav/);
   assert.match(css, /@media\s*\(max-width:\s*1120px\)/);
 });
+
+
+test("the deployed Italian homepage uses the restrained Meteo Dress palette", () => {
+  const css = fs.readFileSync("dist/styles.css", "utf8");
+  assert.match(css, /\.meteo-dress-banner\{[^}]*background:var\(--cream\)/);
+  assert.match(css, /\.meteo-dress-banner\{[^}]*border:1px solid var\(--gold\)/);
+  assert.doesNotMatch(css, /#d8ff57/);
+});
