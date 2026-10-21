@@ -45,8 +45,10 @@ test("the Italian homepage contains no untranslated English interface copy", () 
     assert.equal(app.toLowerCase().includes(phrase.toLowerCase()), false, phrase);
   }
 
-  assert.match(html, /Trova luoghi insoliti e cose da fare a Londra/);
-  assert.match(html, /110 cose insolite da fare e luoghi da vedere a Londra/);
+  assert.match(html, /Trova luoghi insoliti, organizza spostamenti più intelligenti e scopri l’atmosfera di Londra prima di partire\./);
+  assert.match(html, /Una guida sul campo per chi preferisce guardare due volte\./);
+  assert.match(html, /Luoghi selezionati, dettagli pratici, fotografie originali e mappe per trovare la Londra che le guide standard trascurano\./);
+  assert.match(html, /Scopri la guida →/);
   assert.match(html, /124 pagine/);
   assert.match(app, /Aiutaci a migliorare London Advanced/);
   assert.match(app, /event\.price\.display\.replace/);
