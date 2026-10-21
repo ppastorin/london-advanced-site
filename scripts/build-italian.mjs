@@ -232,6 +232,38 @@ function transformAppJs(source){
   pairs.push(["Explore the guide","Esplora la guida"]);
   let out=source;
   for(const [a,b] of pairs) out=out.split(a).join(b);
+
+  // Copy on the English homepage evolves independently. These cleanup pairs
+  // deliberately run after the broad replacements above, which can otherwise
+  // leave hybrid strings such as "Discuss in the Gruppo Facebook".
+  const homepageCleanupPairs=[
+    ["Find unusual places and things to do in London, make smarter journeys and see what the city feels like before you set out.","Trova luoghi insoliti e cose da fare a Londra, organizza spostamenti più intelligenti e scopri l’atmosfera della città prima di partire."],
+    ["Find unusual things to do →","Scopri cose insolite da fare →"],
+    ["Discuss in the Gruppo Facebook →","Parlane nel gruppo Facebook →"],
+    ["Cover of The Other London guide","Copertina della guida The Other London"],
+    ["124 pages","124 pagine"],
+    ["110 unusual things to do and places to see across London.","110 cose insolite da fare e luoghi da vedere a Londra."],
+    ["Handpicked walks, small museums, overlooked buildings, oddities, gardens, markets and viewpoints—with practical details, original photography and map links.","Passeggiate, piccoli musei, edifici trascurati, curiosità, giardini, mercati e punti panoramici selezionati con dettagli pratici, fotografie originali e link alle mappe."],
+    ["Explore 110 unusual London places","Esplora 110 luoghi insoliti di Londra"],
+    ["By subscribing, you agree to receive occasional emails from London Advanced. Niente spam. Unsubscribe at any time.","Iscrivendoti accetti di ricevere email occasionali da London Advanced. Niente spam. Puoi cancellarti in qualsiasi momento."],
+    ["Subscription is temporarily unavailable. Please try again.","L’iscrizione non è momentaneamente disponibile. Riprova tra poco."],
+    ["The message could not be sent. Please check the form and try again.","Non è stato possibile inviare il messaggio. Controlla il modulo e riprova."],
+    ["Please wait a minute before sending another message.","Attendi un minuto prima di inviare un altro messaggio."],
+    ["The message could not be sent. Your text has been kept, so you can try again.","Non è stato possibile inviare il messaggio. Il testo è stato conservato: puoi riprovare."],
+    ["Please wait a minute before trying again.","Attendi un minuto prima di riprovare."],
+    ["Enter a valid email address.","Inserisci un indirizzo email valido."],
+    ["Help improve London Advanced?","Aiutaci a migliorare London Advanced"],
+    ["Allow anonymous Google Analytics measurement. The site works without it.","Consenti la misurazione anonima con Google Analytics. Il sito funziona anche senza."],
+    ["No thanks","No, grazie"],
+    ["Allow analytics","Consenti"],
+    ["London Advanced home — back to top","Homepage London Advanced — torna all’inizio"],
+    ["Open navigation menu","Apri il menu di navigazione"]
+  ];
+  for(const [a,b] of homepageCleanupPairs) out=out.split(a).join(b);
+  out=out.replaceAll(
+    "escapeHtml(event.price.display)",
+    'escapeHtml(event.price.display.replace(/^Free\\b/i, "Gratis").replace(/\\bpumpkin\\b/gi, "zucca"))'
+  );
   return addMeteoDressPromotion(out.replaceAll("Esplora the tools","Esplora gli strumenti").replaceAll(">Guide<",">Guida<").replaceAll('"#events"','"#eventi"')
     .replaceAll("hreflang=\"${DATA.links.home === '/it/' ? 'it-IT' : 'it-IT'}\"", "hreflang=\"${DATA.links.home === '/it/' ? 'en-GB' : 'it-IT'}\""));
 }
