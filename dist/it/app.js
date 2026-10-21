@@ -342,8 +342,8 @@ function render() {
       <div class="hero-intro">
         <span class="eyebrow">Guida indipendente di Londra · 7 strumenti gratuiti</span>
         <h1>La città oltre<br><em>l’ovvio.</em></h1>
-        <p>Trova luoghi insoliti e cose da fare a Londra, organizza spostamenti più intelligenti e scopri l’atmosfera della città prima di partire.</p>
-        <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Esplora gli strumenti</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Scopri cose insolite da fare →</a></div>
+        <p>Trova luoghi insoliti, organizza spostamenti più intelligenti e scopri l’atmosfera di Londra prima di partire.</p>
+        <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Esplora gli strumenti</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Scopri la guida →</a></div>
       </div>
       <figure class="map-window"><img src="/assets/london-map.jpg" alt="Mappa di Londra con i luoghi inclusi in London Advanced"><figcaption><b>1,100+</b> luoghi oltre le solite liste</figcaption></figure>
     </section>
@@ -372,7 +372,7 @@ function render() {
 
     <section id="guide" class="guide-split section-wrap">
       <div class="guide-cover-wrap"><img src="/assets/guide-cover.jpg" alt="Copertina della guida The Other London"><span>124 pagine</span></div>
-      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>110 cose insolite da fare e luoghi da vedere a Londra.</h2><p>Passeggiate, piccoli musei, edifici trascurati, curiosità, giardini, mercati e punti panoramici selezionati con dettagli pratici, fotografie originali e link alle mappe.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Esplora 110 unusual London places</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Acquista la guida completa →</a></div></div>
+      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>Una guida sul campo per chi preferisce guardare due volte.</h2><p>Luoghi selezionati, dettagli pratici, fotografie originali e mappe per trovare la Londra che le guide standard trascurano.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Esplora 110 unusual London places</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Acquista la guida completa →</a></div></div>
     </section>
 
     <section id="journal" class="journal section-wrap">
