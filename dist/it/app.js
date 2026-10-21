@@ -372,7 +372,7 @@ function render() {
 
     <section id="guide" class="guide-split section-wrap">
       <div class="guide-cover-wrap"><img src="/assets/guide-cover.jpg" alt="Copertina della guida The Other London"><span>124 pagine</span></div>
-      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>Una guida sul campo per chi preferisce guardare due volte.</h2><p>Luoghi selezionati, dettagli pratici, fotografie originali e mappe per trovare la Londra che le guide standard trascurano.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Esplora 110 unusual London places</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Acquista la guida completa →</a></div></div>
+      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>Una guida sul campo per chi preferisce guardare due volte.</h2><p>Luoghi selezionati, dettagli pratici, fotografie originali e mappe per trovare la Londra che le guide standard trascurano.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Esplora la guida</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Acquista la guida completa →</a></div></div>
     </section>
 
     <section id="journal" class="journal section-wrap">
