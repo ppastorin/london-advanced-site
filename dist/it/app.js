@@ -140,7 +140,7 @@ function eventsSection() {
         <span data-events-updated>Aggiornato domenica e giovedì</span>
         <div class="events-footer-links">
           <a class="events-all-link" href="/it/eventi/" data-events-all data-track="events:all">Vedi la selezione completa <span aria-hidden="true">→</span></a>
-          <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="events:facebook">Discuss in the Gruppo Facebook →</a>
+          <a href="${DATA.links.facebook}" target="_blank" rel="noopener" data-track="events:facebook">Parlane nel gruppo Facebook →</a>
         </div>
       </div>
     </section>`;
@@ -209,7 +209,7 @@ function renderEventCard(event, index) {
     <article class="event-card">
       <div class="event-card-top">
         <span class="event-index">0${index + 1}</span>
-        <span class="event-price">${escapeHtml(event.price.display)}</span>
+        <span class="event-price">${escapeHtml(event.price.display.replace(/^Free\b/i, "Gratis").replace(/\bpumpkin\b/gi, "zucca"))}</span>
       </div>
       <p class="event-date">${escapeHtml(formatEventDate(event))}</p>
       <h3>${escapeHtml(event.title_it)}</h3>
@@ -291,7 +291,7 @@ function render() {
   if (!site) return;
   if (!site.innerHTML.trim()) site.innerHTML = `<main id="top">
     <header class="site-nav">
-      <a class="wordmark" href="#top" aria-label="London Advanced home — back to top">
+      <a class="wordmark" href="#top" aria-label="Homepage London Advanced — torna all’inizio">
         <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
           <circle cx="18" cy="18" r="15.5"/>
           <path class="brand-needle" d="m23.7 10.3-3.2 10.2-10.2 3.2 3.2-10.2 10.2-3.2Z"/>
@@ -333,7 +333,7 @@ function render() {
       </nav>
       <a class="mobile-language-switch" href="${DATA.links.home === '/it/' ? '/' : '/it/'}" lang="${DATA.links.home === '/it/' ? 'en' : 'it'}" hreflang="${DATA.links.home === '/it/' ? 'en-GB' : 'it-IT'}" aria-label="${DATA.links.home === '/it/' ? 'Passa alla versione inglese' : 'Switch to the Italian version'}"><span aria-hidden="true">🌐</span>${DATA.links.home === '/it/' ? 'English' : 'Italiano'}</a>
       <details class="nav-dropdown mobile-menu">
-        <summary aria-label="Open navigation menu"><span>Menu</span></summary>
+        <summary aria-label="Apri il menu di navigazione"><span>Menu</span></summary>
         <div class="nav-menu-panel mobile-menu-panel">${mobileMenuContent()}</div>
       </details>
     </header>
@@ -342,8 +342,8 @@ function render() {
       <div class="hero-intro">
         <span class="eyebrow">Guida indipendente di Londra · 7 strumenti gratuiti</span>
         <h1>La città oltre<br><em>l’ovvio.</em></h1>
-        <p>Find unusual places and things to do in London, make smarter journeys and see what the city feels like before you set out.</p>
-        <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Esplora gli strumenti</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Find unusual things to do →</a></div>
+        <p>Trova luoghi insoliti e cose da fare a Londra, organizza spostamenti più intelligenti e scopri l’atmosfera della città prima di partire.</p>
+        <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Esplora gli strumenti</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Scopri cose insolite da fare →</a></div>
       </div>
       <figure class="map-window"><img src="/assets/london-map.jpg" alt="Mappa di Londra con i luoghi inclusi in London Advanced"><figcaption><b>1,100+</b> luoghi oltre le solite liste</figcaption></figure>
     </section>
@@ -371,8 +371,8 @@ function render() {
     ${eventsSection()}
 
     <section id="guide" class="guide-split section-wrap">
-      <div class="guide-cover-wrap"><img src="/assets/guide-cover.jpg" alt="Cover of The Other London guide"><span>124 pages</span></div>
-      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>110 unusual things to do and places to see across London.</h2><p>Handpicked walks, small museums, overlooked buildings, oddities, gardens, markets and viewpoints—with practical details, original photography and map links.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Esplora 110 unusual London places</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Acquista la guida completa →</a></div></div>
+      <div class="guide-cover-wrap"><img src="/assets/guide-cover.jpg" alt="Copertina della guida The Other London"><span>124 pagine</span></div>
+      <div class="guide-copy"><span class="eyebrow">The Other London</span><h2>110 cose insolite da fare e luoghi da vedere a Londra.</h2><p>Passeggiate, piccoli musei, edifici trascurati, curiosità, giardini, mercati e punti panoramici selezionati con dettagli pratici, fotografie originali e link alle mappe.</p><div class="hero-actions"><a class="button dark" href="${DATA.links.guideLanding}" data-track="guide:explore">Esplora 110 unusual London places</a><a class="text-link" href="${DATA.links.guide}" target="_blank" rel="noopener" data-track="guide:buy">Acquista la guida completa →</a></div></div>
     </section>
 
     <section id="journal" class="journal section-wrap">
@@ -397,8 +397,8 @@ function render() {
         <label class="contact-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
         <label>Indirizzo email<input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com" required></label>
         <button class="button dark" type="submit">Iscriviti alla newsletter</button>
-        <p class="newsletter-consent">By subscribing, you agree to receive occasional emails from London Advanced. Niente spam. Unsubscribe at any time.</p>
-        <p class="newsletter-error" data-newsletter-error hidden role="alert">Subscription is temporarily unavailable. Please try again.</p>
+        <p class="newsletter-consent">Iscrivendoti accetti di ricevere email occasionali da London Advanced. Niente spam. Puoi cancellarti in qualsiasi momento.</p>
+        <p class="newsletter-error" data-newsletter-error hidden role="alert">L’iscrizione non è momentaneamente disponibile. Riprova tra poco.</p>
       </form>
     </section>
 
@@ -420,7 +420,7 @@ function render() {
           <button class="button dark" type="submit">Invia messaggio</button>
           <p>Protetto da controlli antispam invisibili. Nessun CAPTCHA.</p>
         </div>
-        <p class="contact-error" data-contact-error hidden role="alert">The message could not be sent. Please check the form and try again.</p>
+        <p class="contact-error" data-contact-error hidden role="alert">Non è stato possibile inviare il messaggio. Controlla il modulo e riprova.</p>
       </form>
     </section>
 
@@ -469,8 +469,8 @@ function bindContactForm() {
     } catch (error) {
       if (errorMessage) {
         errorMessage.textContent = error.message === "please_wait"
-          ? "Please wait a minute before sending another message."
-          : "The message could not be sent. Your text has been kept, so you can try again.";
+          ? "Attendi un minuto prima di inviare un altro messaggio."
+          : "Non è stato possibile inviare il messaggio. Il testo è stato conservato: puoi riprovare.";
         errorMessage.hidden = false;
       }
       if (startedAt) startedAt.value = String(Date.now());
@@ -517,10 +517,10 @@ function bindNewsletterForms() {
       } catch (error) {
         if (errorMessage) {
           errorMessage.textContent = error.message === "please_wait"
-            ? "Please wait a minute before trying again."
+            ? "Attendi un minuto prima di riprovare."
             : error.message === "invalid_email"
-              ? "Enter a valid email address."
-              : "Subscription is temporarily unavailable. Please try again.";
+              ? "Inserisci un indirizzo email valido."
+              : "L’iscrizione non è momentaneamente disponibile. Riprova tra poco.";
           errorMessage.hidden = false;
         }
         if (startedAt) startedAt.value = String(Date.now());
@@ -600,7 +600,7 @@ function initAnalytics() {
   if (localStorage.getItem("la-analytics-consent") === "no") return;
   const consent = document.createElement("div");
   consent.className = "consent";
-  consent.innerHTML = `<p><strong>Help improve London Advanced?</strong><span>Allow anonymous Google Analytics measurement. The site works without it.</span></p><div><button data-consent="no">No thanks</button><button data-consent="yes">Allow analytics</button></div>`;
+  consent.innerHTML = `<p><strong>Aiutaci a migliorare London Advanced</strong><span>Consenti la misurazione anonima con Google Analytics. Il sito funziona anche senza.</span></p><div><button data-consent="no">No, grazie</button><button data-consent="yes">Consenti</button></div>`;
   document.body.appendChild(consent);
   consent.querySelectorAll("[data-consent]").forEach(button => button.addEventListener("click", () => {
     const choice = button.dataset.consent;
