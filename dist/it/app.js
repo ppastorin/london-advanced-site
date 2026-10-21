@@ -14,11 +14,11 @@ function icon(name) {
 }
 
 const visualMotifs = {
-  pulse: `<div class="signal-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-chip">LIVE</span>`,
-  crowd: `<div class="crowd-field" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-chip">NOW +3H</span>`,
-  ticket: `<div class="ticket-graphic" aria-hidden="true"><span>ZONE 1–6</span><b>£</b><small>FARE CHECK</small></div>`,
+  pulse: `<div class="signal-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-chip">DAL VIVO</span>`,
+  crowd: `<div class="crowd-field" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-chip">ORA +3H</span>`,
+  ticket: `<div class="ticket-graphic" aria-hidden="true"><span>ZONE 1–6</span><b>£</b><small>CONTROLLO TARIFFE</small></div>`,
   route: `<svg class="route-map" viewBox="0 0 220 100" aria-hidden="true"><path d="M12 77c28 0 28-49 58-49s26 51 57 51 31-55 78-55"/><circle cx="12" cy="77" r="6"/><circle cx="205" cy="24" r="6"/></svg><span class="route-label route-a">A</span><span class="route-label route-b">B</span>`,
-  spark: `<div class="mood-orbit" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="mood-word mood-one">QUIET</span><span class="mood-word mood-two">CURIOUS</span>`,
+  spark: `<div class="mood-orbit" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="mood-word mood-one">TRANQUILLA</span><span class="mood-word mood-two">CURIOSA</span>`,
   loo: `<svg class="loo-route-graphic" viewBox="0 0 184 88" aria-hidden="true"><path class="loo-route-line" d="M10 70C34 64 35 39 59 39s29 28 54 21 16-10 27-12"/><circle class="loo-route-start" cx="10" cy="70" r="5"/><path class="loo-route-pin" d="M151 12c-12.2 0-22 9.8-22 22 0 16.5 22 38 22 38s22-21.5 22-38c0-12.2-9.8-22-22-22Z"/><circle class="loo-route-core" cx="151" cy="34" r="7"/></svg>`
 };
 
@@ -209,7 +209,7 @@ function renderEventCard(event, index) {
     <article class="event-card">
       <div class="event-card-top">
         <span class="event-index">0${index + 1}</span>
-        <span class="event-price">${escapeHtml(event.price.display.replace(/^Free\b/i, "Gratis").replace(/\bpumpkin\b/gi, "zucca"))}</span>
+        <span class="event-price">${escapeHtml(event.price.display.replace(/^Free\b/i, "Gratis").replace(/\bpumpkin\b/gi, "zucca").replace(/\bper person\b/gi, "a persona"))}</span>
       </div>
       <p class="event-date">${escapeHtml(formatEventDate(event))}</p>
       <h3>${escapeHtml(event.title_it)}</h3>
@@ -299,7 +299,7 @@ function render() {
         </svg>
         <span class="brand-name">London Advanced</span>
       </a>
-      <nav class="desktop-nav" aria-label="Main navigation">
+      <nav class="desktop-nav" aria-label="Navigazione principale">
         <details class="nav-dropdown tools-menu">
           <summary>Strumenti</summary>
           <div class="nav-menu-panel tools-menu-panel">${toolMenuLinks()}</div>
@@ -385,7 +385,7 @@ function render() {
         <span class="eyebrow">04 / La lettera da Londra</span>
         <h2>Londra utile, solo quando vale la pena scrivere.</h2>
         <p>Non esiste una quota settimanale. Invio una nota occasionale e curata quando ho luoghi, percorsi o eventi davvero utili da condividere: mai più di due o tre volte al mese.</p>
-        <div class="newsletter-promises" aria-label="Newsletter promise">
+        <div class="newsletter-promises" aria-label="Promessa della newsletter">
           <p><strong>Niente spam</strong><span>Niente riempitivi e nessun calendario che intasa la posta.</span></p>
           <p><strong>Curata davvero</strong><span>Selezionata, verificata e scritta da Paolo.</span></p>
           <p><strong>Utile per scelta</strong><span>Luoghi, percorsi ed eventi che meritano un’azione.</span></p>
