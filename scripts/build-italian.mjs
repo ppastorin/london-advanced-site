@@ -245,6 +245,7 @@ function transformAppJs(source){
     ["110 unusual things to do and places to see across London.","Una guida sul campo per chi preferisce guardare due volte."],
     ["Handpicked walks, small museums, overlooked buildings, oddities, gardens, markets and viewpoints—with practical details, original photography and map links.","Luoghi selezionati, dettagli pratici, fotografie originali e mappe per trovare la Londra che le guide standard trascurano."],
     ["Explore 110 unusual London places","Esplora la guida"],
+    ["Esplora 110 unusual London places","Esplora la guida"],
     ["By subscribing, you agree to receive occasional emails from London Advanced. Niente spam. Unsubscribe at any time.","Iscrivendoti accetti di ricevere email occasionali da London Advanced. Niente spam. Puoi cancellarti in qualsiasi momento."],
     ["Subscription is temporarily unavailable. Please try again.","L’iscrizione non è momentaneamente disponibile. Riprova tra poco."],
     ["The message could not be sent. Please check the form and try again.","Non è stato possibile inviare il messaggio. Controlla il modulo e riprova."],
