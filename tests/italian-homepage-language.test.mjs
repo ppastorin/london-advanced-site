@@ -17,7 +17,14 @@ test("the Italian homepage contains no untranslated English interface copy", () 
     "Unsubscribe at any time",
     "Subscription is temporarily unavailable",
     "The message could not be sent",
-    "Cover of The Other London guide"
+    "Cover of The Other London guide",
+    "per person",
+    "proposte del weekends",
+    ">LIVE<",
+    ">NOW +3H<",
+    ">FARE CHECK<",
+    ">QUIET<",
+    ">CURIOUS<"
   ];
   for (const phrase of renderedForbidden) {
     assert.equal(html.toLowerCase().includes(phrase.toLowerCase()), false, phrase);
@@ -30,7 +37,9 @@ test("the Italian homepage contains no untranslated English interface copy", () 
     "Allow anonymous Google Analytics measurement",
     "No thanks",
     "Allow analytics",
-    "Open navigation menu"
+    "Open navigation menu",
+    "Main navigation",
+    "Newsletter promise"
   ];
   for (const phrase of runtimeForbidden) {
     assert.equal(app.toLowerCase().includes(phrase.toLowerCase()), false, phrase);
