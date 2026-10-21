@@ -13,6 +13,7 @@ test("the Italian homepage contains no untranslated English interface copy", () 
     "110 unusual things to do and places to see across London",
     "Handpicked walks, small museums",
     "Explore 110 unusual London places",
+    "Esplora 110 unusual London places",
     "By subscribing, you agree",
     "Unsubscribe at any time",
     "Subscription is temporarily unavailable",
