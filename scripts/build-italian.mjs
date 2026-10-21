@@ -237,14 +237,14 @@ function transformAppJs(source){
   // deliberately run after the broad replacements above, which can otherwise
   // leave hybrid strings such as "Discuss in the Gruppo Facebook".
   const homepageCleanupPairs=[
-    ["Find unusual places and things to do in London, make smarter journeys and see what the city feels like before you set out.","Trova luoghi insoliti e cose da fare a Londra, organizza spostamenti più intelligenti e scopri l’atmosfera della città prima di partire."],
-    ["Find unusual things to do →","Scopri cose insolite da fare →"],
+    ["Find unusual places and things to do in London, make smarter journeys and see what the city feels like before you set out.","Trova luoghi insoliti, organizza spostamenti più intelligenti e scopri l’atmosfera di Londra prima di partire."],
+    ["Find unusual things to do →","Scopri la guida →"],
     ["Discuss in the Gruppo Facebook →","Parlane nel gruppo Facebook →"],
     ["Cover of The Other London guide","Copertina della guida The Other London"],
     ["124 pages","124 pagine"],
-    ["110 unusual things to do and places to see across London.","110 cose insolite da fare e luoghi da vedere a Londra."],
-    ["Handpicked walks, small museums, overlooked buildings, oddities, gardens, markets and viewpoints—with practical details, original photography and map links.","Passeggiate, piccoli musei, edifici trascurati, curiosità, giardini, mercati e punti panoramici selezionati con dettagli pratici, fotografie originali e link alle mappe."],
-    ["Explore 110 unusual London places","Esplora 110 luoghi insoliti di Londra"],
+    ["110 unusual things to do and places to see across London.","Una guida sul campo per chi preferisce guardare due volte."],
+    ["Handpicked walks, small museums, overlooked buildings, oddities, gardens, markets and viewpoints—with practical details, original photography and map links.","Luoghi selezionati, dettagli pratici, fotografie originali e mappe per trovare la Londra che le guide standard trascurano."],
+    ["Explore 110 unusual London places","Esplora la guida"],
     ["By subscribing, you agree to receive occasional emails from London Advanced. Niente spam. Unsubscribe at any time.","Iscrivendoti accetti di ricevere email occasionali da London Advanced. Niente spam. Puoi cancellarti in qualsiasi momento."],
     ["Subscription is temporarily unavailable. Please try again.","L’iscrizione non è momentaneamente disponibile. Riprova tra poco."],
     ["The message could not be sent. Please check the form and try again.","Non è stato possibile inviare il messaggio. Controlla il modulo e riprova."],
