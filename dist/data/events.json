@@ -1,14 +1,14 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-18T15:01:41+01:00",
-  "valid_from": "2026-10-18",
+  "generated_at": "2026-10-22T15:02:42+01:00",
+  "valid_from": "2026-10-22",
   "valid_until": "2026-10-25",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
     "god-save-the-queens-museum-of-youth-culture",
-    "halloween-at-brixton-windmill",
-    "enchanted-cinema-music-of-spirit-animals"
+    "reclaiming-the-archives-fulham-palace",
+    "halloween-at-brixton-windmill"
   ],
   "events": [
     {
@@ -54,12 +54,162 @@
       "official_url": "https://www.museumofyouthculture.com/god-save-the-queens/",
       "verification": {
         "source_url": "https://feverup.com/m/805474",
-        "verified_at": "2026-10-18T15:01:41+01:00",
+        "verified_at": "2026-10-22T15:02:42+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-18T15:01:41+01:00",
+      "publish_at": "2026-10-22T15:02:42+01:00",
       "expire_at": "2026-10-23T20:15:00+01:00"
+    },
+    {
+      "id": "home-movie-day-cinema-museum",
+      "duplicate_key": "home-movie-day-cinema-museum-2026-10-24",
+      "title_en": "Home Movie Day at the Cinema Museum",
+      "title_it": "Home Movie Day al Cinema Museum",
+      "summary_en": "Film archivists examine 8mm, Super 8, 9.5mm and 16mm home movies, offer preservation advice and project selected reels alongside a 1970s family-film programme.",
+      "summary_it": "Archivisti esaminano film di famiglia in 8mm, Super 8, 9,5mm e 16mm, spiegano come conservarli e proiettano alcune bobine insieme a un programma sugli anni Settanta.",
+      "start": "2026-10-24T10:30:00+01:00",
+      "end": "2026-10-24T16:00:00+01:00",
+      "venue": {
+        "name": "The Cinema Museum",
+        "address": "2 Dugard Way, off Renfrew Road, London",
+        "postcode": "SE11 4TH",
+        "borough": "Lambeth"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": "https://cinemamuseum.org.uk/scheduled/home-movie-day-2026/"
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 10,
+        "reason": "A rare free opening of an independent museum where professional archivists help Londoners preserve and screen their own domestic film history.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://cinemamuseum.org.uk/scheduled/home-movie-day-2026/",
+      "verification": {
+        "verified_at": "2026-10-22T15:02:42+01:00",
+        "confidence": "high",
+        "source_url": "https://cinemamuseum.org.uk/scheduled/home-movie-day-2026/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-22T15:02:42+01:00",
+      "expire_at": "2026-10-24T16:15:00+01:00"
+    },
+    {
+      "id": "reclaiming-the-archives-fulham-palace",
+      "duplicate_key": "reclaiming-archives-fulham-palace-2026-10-24",
+      "title_en": "Reclaiming the Archives at Fulham Palace",
+      "title_it": "Reclaiming the Archives a Fulham Palace",
+      "summary_en": "A palace walk, historical workshops, poetry and zine-making confront a Royal African Company pamphlet with a 1723 letter written by an enslaved person known as Secrett.",
+      "summary_it": "Una visita al palazzo, laboratori storici, poesia e zine mettono a confronto un opuscolo della Royal African Company con la lettera del 1723 di una persona schiavizzata nota come Secrett.",
+      "start": "2026-10-24T12:00:00+01:00",
+      "end": "2026-10-24T18:00:00+01:00",
+      "venue": {
+        "name": "Fulham Palace",
+        "address": "Bishop's Avenue, Fulham, London",
+        "postcode": "SW6 6EA",
+        "borough": "Hammersmith and Fulham"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://www.eventbrite.co.uk/e/black-history-365-x-routes-in-the-records-reclaiming-the-archives-tickets-2002203238785"
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 10,
+        "reason": "A free, one-day use of documents, place and creative practice to surface Fulham Palace's colonial connections and a voice obscured in the archive.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.fulhampalace.org/whats-on/events/black-history-365-x-routes-in-the-records-reclaiming-the-archives/",
+      "verification": {
+        "verified_at": "2026-10-22T15:02:42+01:00",
+        "confidence": "high",
+        "source_url": "https://www.fulhampalace.org/whats-on/events/black-history-365-x-routes-in-the-records-reclaiming-the-archives/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-22T15:02:42+01:00",
+      "expire_at": "2026-10-24T18:15:00+01:00"
+    },
+    {
+      "id": "mon-ame-film-screening-oxford-house",
+      "duplicate_key": "mon-ame-oxford-house-2026-10-24",
+      "title_en": "Mon Âme: Black Life on Film",
+      "title_it": "Mon Âme: la vita Black raccontata dal cinema",
+      "summary_en": "A free community screening pairs Mon Âme with films on Black life and representation, followed by a discussion about cultural memory and the future of East End communities.",
+      "summary_it": "Una proiezione comunitaria gratuita affianca Mon Âme ad altri film sulla vita e la rappresentazione Black, seguita da un confronto sulla memoria culturale e sul futuro dell'East End.",
+      "start": "2026-10-24T18:00:00+01:00",
+      "end": "2026-10-24T21:30:00+01:00",
+      "venue": {
+        "name": "Oxford House Theatre",
+        "address": "Derbyshire Street, Bethnal Green, London",
+        "postcode": "E2 6HG",
+        "borough": "Tower Hamlets"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://www.eventbrite.co.uk/e/black-history-month-2026-mon-ame-film-screening-tickets-2002700268414"
+      },
+      "category": "local-culture",
+      "advanced": {
+        "score": 9,
+        "reason": "A free neighbourhood screening and discussion uses film to preserve contemporary Black experience and examine the East End's cultural future.",
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.oxfordhouse.org.uk/event/black-history-month-2026-mon-ame-film-screening/",
+      "verification": {
+        "verified_at": "2026-10-22T15:02:42+01:00",
+        "confidence": "high",
+        "source_url": "https://www.oxfordhouse.org.uk/event/black-history-month-2026-mon-ame-film-screening/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-22T15:02:42+01:00",
+      "expire_at": "2026-10-24T21:45:00+01:00"
     },
     {
       "id": "big-story-festival-iwm-london",
@@ -104,11 +254,11 @@
       "official_url": "https://www.iwm.org.uk/events/big-story-festival",
       "verification": {
         "source_url": "https://www.iwm.org.uk/events/big-story-festival",
-        "verified_at": "2026-10-18T15:01:41+01:00",
+        "verified_at": "2026-10-22T15:02:42+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-18T15:01:41+01:00",
+      "publish_at": "2026-10-22T15:02:42+01:00",
       "expire_at": "2026-10-25T18:15:00+00:00"
     },
     {
@@ -154,11 +304,11 @@
       "official_url": "https://www.horniman.ac.uk/event/the-enchanted-cinema/",
       "verification": {
         "source_url": "https://www.horniman.ac.uk/event/the-enchanted-cinema/",
-        "verified_at": "2026-10-18T15:01:41+01:00",
+        "verified_at": "2026-10-22T15:02:42+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-18T15:01:41+01:00",
+      "publish_at": "2026-10-22T15:02:42+01:00",
       "expire_at": "2026-10-25T14:45:00+00:00"
     },
     {
@@ -204,11 +354,11 @@
       "official_url": "https://www.brixtonwindmill.org/events/halloween-at-brixton-windmill/",
       "verification": {
         "source_url": "https://www.brixtonwindmill.org/events/halloween-at-brixton-windmill/",
-        "verified_at": "2026-10-18T15:01:41+01:00",
+        "verified_at": "2026-10-22T15:02:42+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-18T15:01:41+01:00",
+      "publish_at": "2026-10-22T15:02:42+01:00",
       "expire_at": "2026-10-25T16:15:00+00:00"
     },
     {
@@ -249,16 +399,17 @@
         "reason": "A free civic-scale celebration led by London's Hindu, Sikh and Jain communities gives Trafalgar Square a distinct cultural story."
       },
       "newsletter_sources": [
-        "Londonist"
+        "Londonist",
+        "Londonfy"
       ],
       "official_url": "https://www.london.gov.uk/events/diwali-square-2026",
       "verification": {
         "source_url": "https://www.london.gov.uk/events/diwali-square-2026",
-        "verified_at": "2026-10-18T15:01:41+01:00",
+        "verified_at": "2026-10-22T15:02:42+01:00",
         "confidence": "high"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-18T15:01:41+01:00",
+      "publish_at": "2026-10-22T15:02:42+01:00",
       "expire_at": "2026-10-25T19:15:00+00:00"
     }
   ]
