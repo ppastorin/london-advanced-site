@@ -603,8 +603,80 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Una mostra nella galleria sotterranea apre con archivi personali, fotografia, moda e storie inedite di Poly Styrene e delle donne che hanno plasmato l'immaginario punk.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-23T20:15:00+01:00"
+    },
+    {
+      "id": "event:home-movie-day-cinema-museum:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Home Movie Day al Cinema Museum",
+      "summary": "sab 24 ott · The Cinema Museum · Gratuito — Archivisti esaminano film di famiglia in 8mm, Super 8, 9,5mm e 16mm, spiegano come conservarli e proiettano alcune bobine insieme a un programma sugli anni Settanta.",
+      "url": "/it/eventi/#event-home-movie-day-cinema-museum",
+      "tags": [
+        "Patrimonio e storia",
+        "Gratuito",
+        "Lambeth",
+        "free"
+      ],
+      "keywords": [
+        "The Cinema Museum",
+        "2 Dugard Way, off Renfrew Road, London",
+        "SE11 4TH",
+        "Lambeth",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Archivisti esaminano film di famiglia in 8mm, Super 8, 9,5mm e 16mm, spiegano come conservarli e proiettano alcune bobine insieme a un programma sugli anni Settanta.",
+      "updated_at": "2026-10-22T15:02:42+01:00",
+      "expires_at": "2026-10-24T16:15:00+01:00"
+    },
+    {
+      "id": "event:reclaiming-the-archives-fulham-palace:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Reclaiming the Archives a Fulham Palace",
+      "summary": "sab 24 ott · Fulham Palace · Gratuito — Una visita al palazzo, laboratori storici, poesia e zine mettono a confronto un opuscolo della Royal African Company con la lettera del 1723 di una persona schiavizzata nota come Secrett.",
+      "url": "/it/eventi/#event-reclaiming-the-archives-fulham-palace",
+      "tags": [
+        "Patrimonio e storia",
+        "Gratuito",
+        "Hammersmith and Fulham",
+        "free"
+      ],
+      "keywords": [
+        "Fulham Palace",
+        "Bishop's Avenue, Fulham, London",
+        "SW6 6EA",
+        "Hammersmith and Fulham",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Una visita al palazzo, laboratori storici, poesia e zine mettono a confronto un opuscolo della Royal African Company con la lettera del 1723 di una persona schiavizzata nota come Secrett.",
+      "updated_at": "2026-10-22T15:02:42+01:00",
+      "expires_at": "2026-10-24T18:15:00+01:00"
+    },
+    {
+      "id": "event:mon-ame-film-screening-oxford-house:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Mon Âme: la vita Black raccontata dal cinema",
+      "summary": "sab 24 ott · Oxford House Theatre · Gratuito — Una proiezione comunitaria gratuita affianca Mon Âme ad altri film sulla vita e la rappresentazione Black, seguita da un confronto sulla memoria culturale e sul futuro dell'East End.",
+      "url": "/it/eventi/#event-mon-ame-film-screening-oxford-house",
+      "tags": [
+        "Cultura locale",
+        "Gratuito",
+        "Tower Hamlets",
+        "free"
+      ],
+      "keywords": [
+        "Oxford House Theatre",
+        "Derbyshire Street, Bethnal Green, London",
+        "E2 6HG",
+        "Tower Hamlets",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Una proiezione comunitaria gratuita affianca Mon Âme ad altri film sulla vita e la rappresentazione Black, seguita da un confronto sulla memoria culturale e sul futuro dell'East End.",
+      "updated_at": "2026-10-22T15:02:42+01:00",
+      "expires_at": "2026-10-24T21:45:00+01:00"
     },
     {
       "id": "event:big-story-festival-iwm-london:it",
@@ -627,7 +699,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Il primo festival del racconto dell'IWM anima il museo con laboratori gratuiti di illustrazione, gioco e canto legati alla mostra Childhood in War; alcuni incontri sono a pagamento.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-25T18:15:00+00:00"
     },
     {
@@ -651,7 +723,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Bambini e adulti diventano un'orchestra di effetti sonori dal vivo per animazioni ispirate al Día de Muertos, al folklore mondiale e alle collezioni animali dell'Horniman. Due sessioni di un'ora.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-25T14:45:00+00:00"
     },
     {
@@ -675,7 +747,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Un mulino ancora attivo da oltre due secoli ospita laboratori gratuiti e racconti spettrali per bambini al suo interno, più intaglio della zucca facoltativo a £3.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-25T16:15:00+00:00"
     },
     {
@@ -699,7 +771,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Trafalgar Square diventa una festa della luce condivisa con 200 ballerini in apertura, spettacoli delle comunità hindu, sikh e giainista di Londra, laboratori e street food.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-25T19:15:00+00:00"
     }
   ]

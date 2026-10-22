@@ -604,8 +604,80 @@
         "event events this week weekend free affordable"
       ],
       "content": "A landmark basement-gallery show opens with personal archives, photography, fashion and unheard stories from Poly Styrene and the women who shaped punk's visual language. A free opening-day encounter with personal punk archives and unheard material in an independent museum devoted to youth culture.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-23T20:15:00+01:00"
+    },
+    {
+      "id": "event:home-movie-day-cinema-museum:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Home Movie Day at the Cinema Museum",
+      "summary": "Sat 24 Oct · The Cinema Museum · Free — Film archivists examine 8mm, Super 8, 9.5mm and 16mm home movies, offer preservation advice and project selected reels alongside a 1970s family-film programme.",
+      "url": "/events/#event-home-movie-day-cinema-museum",
+      "tags": [
+        "Heritage and history",
+        "Free",
+        "Lambeth",
+        "free"
+      ],
+      "keywords": [
+        "The Cinema Museum",
+        "2 Dugard Way, off Renfrew Road, London",
+        "SE11 4TH",
+        "Lambeth",
+        "event events this week weekend free affordable"
+      ],
+      "content": "Film archivists examine 8mm, Super 8, 9.5mm and 16mm home movies, offer preservation advice and project selected reels alongside a 1970s family-film programme. A rare free opening of an independent museum where professional archivists help Londoners preserve and screen their own domestic film history.",
+      "updated_at": "2026-10-22T15:02:42+01:00",
+      "expires_at": "2026-10-24T16:15:00+01:00"
+    },
+    {
+      "id": "event:reclaiming-the-archives-fulham-palace:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Reclaiming the Archives at Fulham Palace",
+      "summary": "Sat 24 Oct · Fulham Palace · Free — A palace walk, historical workshops, poetry and zine-making confront a Royal African Company pamphlet with a 1723 letter written by an enslaved person known as Secrett.",
+      "url": "/events/#event-reclaiming-the-archives-fulham-palace",
+      "tags": [
+        "Heritage and history",
+        "Free",
+        "Hammersmith and Fulham",
+        "free"
+      ],
+      "keywords": [
+        "Fulham Palace",
+        "Bishop's Avenue, Fulham, London",
+        "SW6 6EA",
+        "Hammersmith and Fulham",
+        "event events this week weekend free affordable"
+      ],
+      "content": "A palace walk, historical workshops, poetry and zine-making confront a Royal African Company pamphlet with a 1723 letter written by an enslaved person known as Secrett. A free, one-day use of documents, place and creative practice to surface Fulham Palace's colonial connections and a voice obscured in the archive.",
+      "updated_at": "2026-10-22T15:02:42+01:00",
+      "expires_at": "2026-10-24T18:15:00+01:00"
+    },
+    {
+      "id": "event:mon-ame-film-screening-oxford-house:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Mon Âme: Black Life on Film",
+      "summary": "Sat 24 Oct · Oxford House Theatre · Free — A free community screening pairs Mon Âme with films on Black life and representation, followed by a discussion about cultural memory and the future of East End communities.",
+      "url": "/events/#event-mon-ame-film-screening-oxford-house",
+      "tags": [
+        "Local culture",
+        "Free",
+        "Tower Hamlets",
+        "free"
+      ],
+      "keywords": [
+        "Oxford House Theatre",
+        "Derbyshire Street, Bethnal Green, London",
+        "E2 6HG",
+        "Tower Hamlets",
+        "event events this week weekend free affordable"
+      ],
+      "content": "A free community screening pairs Mon Âme with films on Black life and representation, followed by a discussion about cultural memory and the future of East End communities. A free neighbourhood screening and discussion uses film to preserve contemporary Black experience and examine the East End's cultural future.",
+      "updated_at": "2026-10-22T15:02:42+01:00",
+      "expires_at": "2026-10-24T21:45:00+01:00"
     },
     {
       "id": "event:big-story-festival-iwm-london:en",
@@ -628,7 +700,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "IWM London's first storytelling festival fills the museum with free illustration, play and song sessions shaped by its Childhood in War exhibition; selected talks cost extra. A one-off debut festival turns a major history museum into a free, participatory storytelling space for families.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-25T18:15:00+00:00"
     },
     {
@@ -652,7 +724,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "Children and grown-ups become a live sound-effects orchestra for animations inspired by Día de Muertos, global folklore and the Horniman's animal collections. Two one-hour Sunday sessions. A participatory live-cinema workshop connects Mexican traditions and a century-old animation with the Horniman's distinctive collections.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-25T14:45:00+00:00"
     },
     {
@@ -676,7 +748,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "A 200-year-old working windmill hosts free crafts and children's spooky stories inside the mill, with optional traditional pumpkin carving for £3. Free neighbourhood Halloween activities gain real character from spooky storytelling inside Brixton's Grade II* working windmill.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-25T16:15:00+00:00"
     },
     {
@@ -700,7 +772,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "Trafalgar Square becomes a shared Festival of Light with 200 opening dancers, performances from London's Hindu, Sikh and Jain communities, workshops and food stalls. A free civic-scale celebration led by London's Hindu, Sikh and Jain communities gives Trafalgar Square a distinct cultural story.",
-      "updated_at": "2026-10-18T15:01:41+01:00",
+      "updated_at": "2026-10-22T15:02:42+01:00",
       "expires_at": "2026-10-25T19:15:00+00:00"
     }
   ]
