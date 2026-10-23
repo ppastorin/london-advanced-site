@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
@@ -693,7 +693,10 @@ export async function prerender() {
 
   await Promise.all([
     writeFile(path.join(distRoot, "index.html"), homepage, "utf8"),
-    writeFile(path.join(distRoot, "events/index.html"), eventsPage, "utf8")
+    writeFile(path.join(distRoot, "events/index.html"), eventsPage, "utf8"),
+    mkdir(path.join(distRoot, "wtm"), { recursive: true }).then(() => copyFile(path.join(projectRoot, "wtm/index.html"), path.join(distRoot, "wtm/index.html"))),
+    copyFile(path.join(projectRoot, "wtm.css"), path.join(distRoot, "wtm.css")),
+    copyFile(path.join(projectRoot, "wtm.js"), path.join(distRoot, "wtm.js"))
   ]);
 
   await buildItalian();

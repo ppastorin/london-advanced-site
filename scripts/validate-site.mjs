@@ -76,6 +76,9 @@ const requiredAssets = [
   "dist/it/tool-page.js",
   "dist/it/eventi/events.js",
   "dist/newsletter/index.html",
+  "dist/wtm/index.html",
+  "dist/wtm.css",
+  "dist/wtm.js",
   "dist/newsletter/thanks/index.html",
   "dist/thank-you/index.html",
   "dist/editorial.css",
@@ -342,6 +345,7 @@ if (!sitemap.includes("https://www.londonadvanced.com/events/")) fail("Sitemap i
 if (!sitemap.includes("https://www.londonadvanced.com/about/")) fail("Sitemap is missing /about/.");
 if (!sitemap.includes("https://www.londonadvanced.com/methodology/")) fail("Sitemap is missing /methodology/.");
 if (!sitemap.includes("https://www.londonadvanced.com/newsletter/")) fail("Sitemap is missing /newsletter/.");
+if (!sitemap.includes("https://www.londonadvanced.com/wtm/")) fail("Sitemap is missing /wtm/.");
 for (const { href } of expectedTools.values()) {
   if (!sitemap.includes(`https://www.londonadvanced.com${href}`)) fail(`Sitemap is missing ${href}`);
 }
