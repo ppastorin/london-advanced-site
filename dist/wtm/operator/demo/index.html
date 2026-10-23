@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Demo accompagnatore digitale per un tour operator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/wtm-demo.css">
+<link rel="stylesheet" href="/search.css"></head>
+<body class="operator-demo">
+  <header class="demo-header">
+    <div class="partner-brand"><span class="la-mark">LA</span><span aria-hidden="true">×</span><strong>Il tuo tour operator</strong></div>
+    <span class="demo-badge">Operatore e programma fittizi</span>
+  </header>
+
+  <main>
+    <section class="demo-hero">
+      <span class="kicker">Londra Essenziale · tempo libero</span>
+      <h1>Hai due ore libere<br><em>prima di cena.</em></h1>
+      <p>Parti dal tuo hotel a Bloomsbury. Scegli come vuoi vivere questo momento e ricevi un’idea adatta al tempo disponibile.</p>
+    </section>
+
+    <section class="context" aria-labelledby="context-title">
+      <div class="section-label"><span>01</span><h2 id="context-title">Il contesto del viaggio</h2></div>
+      <div class="context-grid operator-context">
+        <div><span>Programma</span><strong>Londra Essenziale · 4 giorni</strong></div>
+        <div><span>Partenza</span><strong>3 novembre · DEP-03NOV</strong></div>
+        <div><span>Punto di partenza</span><strong>Hotel demo · Russell Square</strong></div>
+        <fieldset>
+          <legend>Tempo disponibile</legend>
+          <div class="choice-row" data-time-options>
+            <button type="button" data-time="90">90 min</button>
+            <button type="button" data-time="120" aria-pressed="true">2 ore</button>
+            <button type="button" data-time="180">3 ore</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="mood" aria-labelledby="mood-title">
+      <div class="section-label"><span>02</span><h2 id="mood-title">Come vuoi vivere Londra?</h2></div>
+      <div class="mood-grid" data-mood-options>
+        <button type="button" data-mood="quiet" aria-pressed="true"><strong>Con calma</strong><small>Uno spazio per rallentare</small></button>
+        <button type="button" data-mood="unexpected"><strong>Insolita</strong><small>Qualcosa di facile da perdere</small></button>
+        <button type="button" data-mood="green"><strong>Verde</strong><small>Una pausa dalle strade</small></button>
+        <button type="button" data-mood="local"><strong>Locale</strong><small>Atmosfera di quartiere</small></button>
+      </div>
+    </section>
+
+    <section class="result" aria-live="polite" aria-labelledby="result-title">
+      <div class="result-top"><span data-result-label>La tua Londra con calma</span><span data-result-walk>Circa 12 minuti a piedi</span></div>
+      <div class="result-main">
+        <div>
+          <span class="recommendation">Scelto per questo momento</span>
+          <h2 id="result-title" data-result-title>St George’s Gardens</h2>
+          <p data-result-copy>Un piccolo giardino storico dove alberi maturi e antichi monumenti funerari creano una pausa tranquilla vicino a Bloomsbury.</p>
+        </div>
+        <div class="fit-card">
+          <span>Perché è adatto</span>
+          <strong data-result-fit>Con calma · 2 ore · dal tuo hotel</strong>
+          <p data-result-note>Hai tempo per la passeggiata, una vera pausa e un rientro senza fretta.</p>
+        </div>
+      </div>
+      <div class="result-actions">
+        <a data-map-link href="https://www.google.com/maps/search/?api=1&query=St+George%27s+Gardens+London" target="_blank" rel="noopener">Apri le indicazioni <span aria-hidden="true">↗</span></a>
+        <a href="/home/escape-the-crowds/" target="_blank" data-demo-action="crowd">Controlla l’affollamento <span aria-hidden="true">↗</span></a>
+        <a href="/home/smart-navigation/" target="_blank" data-demo-action="route">Crea un percorso <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="feedback" data-feedback><span>Ti sarebbe utile?</span><button type="button" data-feedback-value="yes">Sì</button><button type="button" data-feedback-value="no">Non per me</button></div>
+    </section>
+
+    <section class="signal-console" aria-live="polite" aria-label="Segnale dimostrativo del pilot">
+      <div><span>Ultimo segnale demo</span><strong data-signal-event>experience_started</strong></div>
+      <code data-signal-context>OP-DEMO / LON-CITY-4D / DEP-03NOV / BLOOM-01 / LEADER-WA</code>
+      <p>Il pilot conserva questo contesto per ogni evento. Non richiede nome, email o riferimento della prenotazione.</p>
+    </section>
+
+    <div class="measurement-note"><strong>Segnali mostrati nel pilot</strong><span>Apertura</span><span>Completamento</span><span>Azione</span><span>Utilità</span><span>Adozione del canale</span></div>
+  </main>
+
+  <footer><span>Demo London Advanced per tour operator outbound</span><span>Esperienza in italiano · nessun dato personale</span></footer>
+  <script src="/wtm-operator-demo.js"></script>
+</body>
+</html>

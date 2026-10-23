@@ -78,10 +78,14 @@ const requiredAssets = [
   "dist/newsletter/index.html",
   "dist/wtm/index.html",
   "dist/wtm/demo/index.html",
+  "dist/wtm/operator/index.html",
+  "dist/wtm/operator/demo/index.html",
   "dist/wtm.css",
   "dist/wtm.js",
   "dist/wtm-demo.css",
   "dist/wtm-demo.js",
+  "dist/wtm-operator.js",
+  "dist/wtm-operator-demo.js",
   "dist/newsletter/thanks/index.html",
   "dist/thank-you/index.html",
   "dist/editorial.css",
@@ -349,6 +353,7 @@ if (!sitemap.includes("https://www.londonadvanced.com/about/")) fail("Sitemap is
 if (!sitemap.includes("https://www.londonadvanced.com/methodology/")) fail("Sitemap is missing /methodology/.");
 if (!sitemap.includes("https://www.londonadvanced.com/newsletter/")) fail("Sitemap is missing /newsletter/.");
 if (!sitemap.includes("https://www.londonadvanced.com/wtm/")) fail("Sitemap is missing /wtm/.");
+if (!sitemap.includes("https://www.londonadvanced.com/wtm/operator/")) fail("Sitemap is missing /wtm/operator/.");
 for (const { href } of expectedTools.values()) {
   if (!sitemap.includes(`https://www.londonadvanced.com${href}`)) fail(`Sitemap is missing ${href}`);
 }

@@ -698,10 +698,16 @@ export async function prerender() {
       copyFile(path.join(projectRoot, "wtm/index.html"), path.join(distRoot, "wtm/index.html")),
       copyFile(path.join(projectRoot, "wtm/demo/index.html"), path.join(distRoot, "wtm/demo/index.html"))
     ])),
+    mkdir(path.join(distRoot, "wtm/operator/demo"), { recursive: true }).then(() => Promise.all([
+      copyFile(path.join(projectRoot, "wtm/operator/index.html"), path.join(distRoot, "wtm/operator/index.html")),
+      copyFile(path.join(projectRoot, "wtm/operator/demo/index.html"), path.join(distRoot, "wtm/operator/demo/index.html"))
+    ])),
     copyFile(path.join(projectRoot, "wtm.css"), path.join(distRoot, "wtm.css")),
     copyFile(path.join(projectRoot, "wtm.js"), path.join(distRoot, "wtm.js")),
     copyFile(path.join(projectRoot, "wtm-demo.css"), path.join(distRoot, "wtm-demo.css")),
-    copyFile(path.join(projectRoot, "wtm-demo.js"), path.join(distRoot, "wtm-demo.js"))
+    copyFile(path.join(projectRoot, "wtm-demo.js"), path.join(distRoot, "wtm-demo.js")),
+    copyFile(path.join(projectRoot, "wtm-operator.js"), path.join(distRoot, "wtm-operator.js")),
+    copyFile(path.join(projectRoot, "wtm-operator-demo.js"), path.join(distRoot, "wtm-operator-demo.js"))
   ]);
 
   await buildItalian();
