@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>The London House guest discovery demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/wtm-demo.css">
+</head>
+<body>
+  <header class="demo-header">
+    <div class="partner-brand"><span class="la-mark">LA</span><span aria-hidden="true">×</span><strong>The London House</strong></div>
+    <span class="demo-badge">Fictional demo property</span>
+  </header>
+
+  <main>
+    <section class="demo-hero">
+      <span class="kicker">Your hotel edit · Bloomsbury</span>
+      <h1>Good afternoon.<br><em>Use the next 90 minutes well.</em></h1>
+      <p>Recommendations begin at your hotel near Russell Square and adapt to the time and feeling you choose.</p>
+    </section>
+
+    <section class="context" aria-labelledby="context-title">
+      <div class="section-label"><span>01</span><h2 id="context-title">Your context</h2></div>
+      <div class="context-grid">
+        <div><span>Starting from</span><strong>The London House · Russell Square</strong></div>
+        <fieldset>
+          <legend>Time available</legend>
+          <div class="choice-row" data-time-options>
+            <button type="button" data-time="60">1 hour</button>
+            <button type="button" data-time="90" aria-pressed="true">90 min</button>
+            <button type="button" data-time="180">3 hours</button>
+          </div>
+        </fieldset>
+        <div><span>Travel preference</span><strong>On foot</strong></div>
+      </div>
+    </section>
+
+    <section class="mood" aria-labelledby="mood-title">
+      <div class="section-label"><span>02</span><h2 id="mood-title">What should London feel like?</h2></div>
+      <div class="mood-grid" data-mood-options>
+        <button type="button" data-mood="quiet" aria-pressed="true"><strong>Quiet</strong><small>Space to slow down</small></button>
+        <button type="button" data-mood="unexpected"><strong>Unexpected</strong><small>Something easy to miss</small></button>
+        <button type="button" data-mood="green"><strong>Green</strong><small>A break from streets</small></button>
+        <button type="button" data-mood="local"><strong>Local</strong><small>Neighbourhood character</small></button>
+      </div>
+    </section>
+
+    <section class="result" aria-live="polite" aria-labelledby="result-title">
+      <div class="result-top"><span data-result-label>Your quiet hotel edit</span><span data-result-walk>About 12 min walk</span></div>
+      <div class="result-main">
+        <div>
+          <span class="recommendation">Recommended for this stay</span>
+          <h2 id="result-title" data-result-title>St George’s Gardens</h2>
+          <p data-result-copy>A small historic garden where former burial grounds, mature trees and surviving memorials create a calm pause close to Bloomsbury.</p>
+        </div>
+        <div class="fit-card">
+          <span>Why this fits</span>
+          <strong data-result-fit>Quiet · 90 minutes · from your hotel</strong>
+          <p data-result-note>Enough time for the walk, a proper pause and an unhurried return.</p>
+        </div>
+      </div>
+      <div class="result-actions">
+        <a data-map-link href="https://www.google.com/maps/search/?api=1&query=St+George%27s+Gardens+London" target="_blank" rel="noopener">Open directions <span aria-hidden="true">↗</span></a>
+        <a href="/home/escape-the-crowds/" target="_blank" data-demo-action="crowd">Check crowd pressure <span aria-hidden="true">↗</span></a>
+        <a href="/home/smart-navigation/" target="_blank" data-demo-action="route">Build a route <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="feedback" data-feedback>
+        <span>Would this be useful?</span>
+        <button type="button" data-feedback-value="yes">Yes</button>
+        <button type="button" data-feedback-value="no">Not for me</button>
+      </div>
+    </section>
+
+    <aside class="measurement-note"><strong>What the hotel can measure</strong><span>Experience start</span><span>Recommendation completed</span><span>Directions or route opened</span><span>One-tap usefulness</span></aside>
+  </main>
+
+  <footer><strong>The London House</strong><span>Guest discovery powered by London Advanced</span></footer>
+  <script src="/wtm-demo.js"></script>
+</body>
+</html>
