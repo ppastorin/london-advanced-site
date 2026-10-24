@@ -9,10 +9,10 @@
   "caption_it": "La Estorick Collection occupa una casa georgiana di Canonbury e racconta l’arte italiana del Novecento senza la scala intimidatoria di un grande museo. Il nucleo della collezione passa dal Futurismo ad altre correnti moderne, ma il vero vantaggio è domestico: sei gallerie, pavimenti in legno e abbastanza spazio per guardare davvero un quadro invece di eseguire la solita maratona culturale. Ha aperto nel 1998 e rimane una presenza sorprendentemente discreta a Islington. Per un italiano a Londra è familiare e straniante insieme; per tutti gli altri, una buona correzione all’idea che l’arte italiana finisca nel Rinascimento.",
   "hashtags": [
     "#LondonAdvanced",
-    "#EstorickCollection",
+    "#VisitLondon",
+    "#LondonMuseums",
     "#ItalianArt",
-    "#Islington",
-    "#LondonMuseums"
+    "#Islington"
   ],
   "media_folder": "estorick collection",
   "editorial_status": "scheduled",
@@ -28,7 +28,7 @@
   "location": "Estorick Collection of Modern Italian Art",
   "post_format": "carousel",
   "internal_title": "Estorick Collection · l’Italia moderna in una casa di Canonbury",
-  "updated_at": "2026-10-19T22:38:30+01:00",
+  "updated_at": "2026-10-24T09:20:00+01:00",
   "scheduled_for": "2026-11-10T18:30:00+00:00",
   "images": [
     {
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "400506434",
+    "planner_id": "405282706",
     "scheduled_at": "2026-10-19T22:37:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-19T22:38:30+01:00",
-    "sync_note": "Metricool UUID 7019935848405550862"
+    "last_sync_at": "2026-10-24T09:20:00+01:00",
+    "sync_note": "Metricool UUID 7019935848405550862; designed carousel and revised discovery hashtags applied 2026-10-24"
   }
 }
