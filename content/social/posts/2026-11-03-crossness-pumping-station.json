@@ -9,10 +9,10 @@
   "caption_it": "Nel periodo vittoriano Londra aveva un problema piuttosto evidente: il Tamigi era diventato una fogna a cielo aperto. La risposta non fu soltanto ingegneristica. La Crossness Pumping Station, inaugurata nel 1865 come parte del nuovo sistema fognario di Joseph Bazalgette, sembra una cattedrale industriale: ghisa dipinta, archi, colonne e dettagli che nessuno assocerebbe spontaneamente ai liquami. È lontana dal centro e non apre ogni giorno, ma proprio per questo la visita conserva il piacere di entrare in un luogo che non ha ancora imparato a comportarsi come un’attrazione ordinaria.",
   "hashtags": [
     "#LondonAdvanced",
-    "#LondraInsolita",
-    "#Crossness",
-    "#IndustrialHeritage",
-    "#VictorianLondon"
+    "#VisitLondon",
+    "#HiddenLondon",
+    "#VictorianLondon",
+    "#IndustrialHeritage"
   ],
   "media_folder": "crossness pump station",
   "editorial_status": "scheduled",
@@ -28,7 +28,7 @@
   "location": "Crossness Pumping Station",
   "post_format": "carousel",
   "internal_title": "Crossness · una cattedrale per le fogne",
-  "updated_at": "2026-10-19T21:38:00+01:00",
+  "updated_at": "2026-10-24T09:20:00+01:00",
   "scheduled_for": "2026-11-03T18:30:00+00:00",
   "images": [
     {
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "400460804",
+    "planner_id": "405282495",
     "scheduled_at": "2026-10-19T21:37:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-19T21:37:00+01:00",
-    "sync_note": "Confirmed in Metricool planner; UUID 7803338212109012958."
+    "last_sync_at": "2026-10-24T09:20:00+01:00",
+    "sync_note": "Metricool UUID 7803338212109012958; designed carousel and revised discovery hashtags applied 2026-10-24"
   }
 }
