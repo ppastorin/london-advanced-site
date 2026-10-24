@@ -9,10 +9,10 @@
   "caption_it": "La Hanwell Lock Flight è il genere di posto che mette in crisi l’idea di West London come sequenza continua di case e traffico. Il Grand Union Canal scende attraverso una serie di chiuse, vasche laterali e vecchie strutture di servizio, con acqua, prati e alberi che fanno sembrare la città temporaneamente lontana. Il complesso storico è protetto insieme al lungo muro dell’ex ospedale accanto al towpath. Non serve essere appassionati di ingegneria idraulica: basta seguire il dislivello e guardare quanto lavoro occorreva per spostare una barca. Scarpe decenti, però. Il fango non rispetta le teorie sulla Londra elegante.",
   "hashtags": [
     "#LondonAdvanced",
-    "#HanwellLocks",
-    "#GrandUnionCanal",
+    "#VisitLondon",
+    "#LondonWalks",
     "#WestLondon",
-    "#LondonWalks"
+    "#GrandUnionCanal"
   ],
   "media_folder": "hanwell lock",
   "editorial_status": "scheduled",
@@ -28,7 +28,7 @@
   "location": "Hanwell Lock Flight",
   "post_format": "carousel",
   "internal_title": "Hanwell Lock Flight · campagna e ingegneria a West London",
-  "updated_at": "2026-10-19T22:38:30+01:00",
+  "updated_at": "2026-10-24T09:20:00+01:00",
   "scheduled_for": "2026-11-22T10:00:00+00:00",
   "images": [
     {
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "400507077",
+    "planner_id": "405282998",
     "scheduled_at": "2026-10-19T22:38:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-19T22:38:30+01:00",
-    "sync_note": "Metricool UUID 2962387887258224121"
+    "last_sync_at": "2026-10-24T09:20:00+01:00",
+    "sync_note": "Metricool UUID 2962387887258224121; designed carousel and revised discovery hashtags applied 2026-10-24"
   }
 }
