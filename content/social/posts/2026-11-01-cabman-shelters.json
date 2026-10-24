@@ -9,8 +9,8 @@
   "caption_it": "Le piccole casette verdi sparse per Londra non sono chioschi nati per Instagram. Sono i cabmen’s shelters, costruiti dalla fine dell’Ottocento per dare ai tassisti un posto dove mangiare e scaldarsi senza allontanarsi troppo dal veicolo. Ne sopravvive soltanto una piccola rete: alcune servono ancora i cabbies, altre vendono tè e panini anche attraverso la finestra. Cercarle è un’ottima scusa per attraversare quartieri che difficilmente finirebbero nello stesso itinerario. Quella vicino ad Albert Bridge, per posizione, se la cava decisamente bene.",
   "hashtags": [
     "#LondonAdvanced",
-    "#LondraInsolita",
-    "#CabmensShelters",
+    "#VisitLondon",
+    "#InstaLondon",
     "#LondonHistory",
     "#HiddenLondon"
   ],
@@ -28,7 +28,7 @@
   "location": "London, United Kingdom",
   "post_format": "carousel",
   "internal_title": "Cabmen’s shelters · le casette verdi dei tassisti",
-  "updated_at": "2026-10-19T21:38:00+01:00",
+  "updated_at": "2026-10-24T09:20:00+01:00",
   "scheduled_for": "2026-11-01T10:00:00+00:00",
   "images": [
     {
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "400460621",
+    "planner_id": "405282387",
     "scheduled_at": "2026-10-19T21:37:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-19T21:37:00+01:00",
-    "sync_note": "Confirmed in Metricool planner; UUID -6165556605706747245."
+    "last_sync_at": "2026-10-24T09:20:00+01:00",
+    "sync_note": "Metricool UUID -6165556605706747245; designed carousel and revised discovery hashtags applied 2026-10-24"
   }
 }
