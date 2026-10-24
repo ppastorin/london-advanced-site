@@ -9,8 +9,8 @@
   "caption_it": "Trinity Buoy Wharf è uno di quei luoghi in cui Londra sembra aver dimenticato di uniformarsi. Il faro sperimentale del 1864 non guidava le navi: serviva a provare lampade e attrezzature, e Michael Faraday lavorò qui come consulente scientifico di Trinity House. Attorno, container trasformati in studi, una nave-faro rossa, sculture e il Tamigi di fronte all’O2 formano un insieme poco ordinato ma molto londinese. Non aspettatevi un museo compatto: il sito è ancora un luogo di lavoro e non tutto sarà aperto. È precisamente questo a salvarlo dall’effetto parco tematico.",
   "hashtags": [
     "#LondonAdvanced",
-    "#TrinityBuoyWharf",
-    "#LondraInsolita",
+    "#VisitLondon",
+    "#InstaLondon",
     "#EastLondon",
     "#HiddenLondon"
   ],
@@ -28,7 +28,7 @@
   "location": "Trinity Buoy Wharf",
   "post_format": "carousel",
   "internal_title": "Trinity Buoy Wharf · il faro che non cercava navi",
-  "updated_at": "2026-10-19T22:38:30+01:00",
+  "updated_at": "2026-10-24T09:20:00+01:00",
   "scheduled_for": "2026-11-08T10:00:00+00:00",
   "images": [
     {
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "400506050",
+    "planner_id": "405282578",
     "scheduled_at": "2026-10-19T22:36:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-19T22:38:30+01:00",
-    "sync_note": "Metricool UUID 6286717863742263"
+    "last_sync_at": "2026-10-24T09:20:00+01:00",
+    "sync_note": "Metricool UUID 6286717863742263; designed carousel and revised discovery hashtags applied 2026-10-24"
   }
 }
