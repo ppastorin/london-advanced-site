@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "405282387",
+    "planner_id": "405283876",
     "scheduled_at": "2026-10-19T21:37:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-24T09:20:00+01:00",
-    "sync_note": "Metricool UUID -6165556605706747245; designed carousel and revised discovery hashtags applied 2026-10-24"
+    "last_sync_at": "2026-10-24T22:35:00+01:00",
+    "sync_note": "Metricool UUID -6165556605706747245; date restored to 2026-11-01 after connector shift"
   }
 }
