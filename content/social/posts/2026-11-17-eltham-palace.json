@@ -9,10 +9,10 @@
   "caption_it": "Eltham Palace riesce a unire una grande sala medievale degli anni 1470 e una casa Art Deco costruita negli anni Trenta senza chiedere scusa a nessuna delle due epoche. Stephen e Virginia Courtauld recuperarono il sito e vi inserirono ambienti modernissimi: ingresso circolare, legni geometrici, tecnologia domestica e un bagno rivestito d’oro e onice. Poi si apre la Great Hall con il suo tetto in quercia, come se qualcuno avesse collegato due edifici separati da quasi cinque secoli. Il risultato non è sobrio—per fortuna. Più che una casa storica, è una discussione molto costosa fra Medioevo e modernità.",
   "hashtags": [
     "#LondonAdvanced",
-    "#ElthamPalace",
-    "#ArtDecoLondon",
+    "#VisitLondon",
+    "#InstaLondon",
     "#LondonArchitecture",
-    "#LondraInsolita"
+    "#ArtDecoLondon"
   ],
   "media_folder": "Eltham Palace",
   "editorial_status": "scheduled",
@@ -28,7 +28,7 @@
   "location": "Eltham Palace and Gardens",
   "post_format": "carousel",
   "internal_title": "Eltham Palace · Medioevo e Art Deco nella stessa casa",
-  "updated_at": "2026-10-19T22:38:30+01:00",
+  "updated_at": "2026-10-24T09:20:00+01:00",
   "scheduled_for": "2026-11-17T18:30:00+00:00",
   "images": [
     {
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "400506862",
+    "planner_id": "405282904",
     "scheduled_at": "2026-10-19T22:37:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-19T22:38:30+01:00",
-    "sync_note": "Metricool UUID -1324555465187701255"
+    "last_sync_at": "2026-10-24T09:20:00+01:00",
+    "sync_note": "Metricool UUID -1324555465187701255; designed carousel and revised discovery hashtags applied 2026-10-24"
   }
 }
