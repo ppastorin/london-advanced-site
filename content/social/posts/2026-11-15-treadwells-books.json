@@ -9,10 +9,10 @@
   "caption_it": "Da fuori Treadwell’s Books potrebbe sembrare una piccola libreria indipendente come molte altre. Dentro, gli scaffali passano da magia e folklore a storia delle religioni, paganesimo ed esoterismo occidentale, con libri nuovi e usati scelti per curiosi, studiosi e praticanti. Il negozio è nato nel 2003 e funziona anche come punto d’incontro, con conferenze, corsi e passeggiate nella Bloomsbury occulta. La parte migliore è che non serve presentarsi con un mantello né fingere di credere a tutto: si può entrare semplicemente per capire come certe idee abbiano attraversato la storia culturale di Londra. Uscire senza un libro è meno garantito.",
   "hashtags": [
     "#LondonAdvanced",
-    "#TreadwellsBooks",
+    "#VisitLondon",
+    "#HiddenLondon",
     "#LondonBookshops",
-    "#Bloomsbury",
-    "#LondraInsolita"
+    "#Bloomsbury"
   ],
   "media_folder": "treadwell books",
   "editorial_status": "scheduled",
@@ -28,7 +28,7 @@
   "location": "Treadwell's Books",
   "post_format": "carousel",
   "internal_title": "Treadwell’s Books · l’occulto senza effetti speciali",
-  "updated_at": "2026-10-19T22:38:30+01:00",
+  "updated_at": "2026-10-24T09:20:00+01:00",
   "scheduled_for": "2026-11-15T10:00:00+00:00",
   "images": [
     {
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "400506663",
+    "planner_id": "405282793",
     "scheduled_at": "2026-10-19T22:37:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-19T22:38:30+01:00",
-    "sync_note": "Metricool UUID 4448998338857488076"
+    "last_sync_at": "2026-10-24T09:20:00+01:00",
+    "sync_note": "Metricool UUID 4448998338857488076; designed carousel and revised discovery hashtags applied 2026-10-24"
   }
 }
