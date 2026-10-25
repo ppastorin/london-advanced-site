@@ -1,29 +1,28 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-22T15:02:42+01:00",
-  "valid_from": "2026-10-22",
-  "valid_until": "2026-10-25",
+  "generated_at": "2026-10-25T14:59:21+00:00",
+  "valid_from": "2026-10-25",
+  "valid_until": "2026-11-01",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "god-save-the-queens-museum-of-youth-culture",
-    "reclaiming-the-archives-fulham-palace",
-    "halloween-at-brixton-windmill"
+    "london-to-brighton-veteran-car-run-start",
+    "comic-day-at-the-cartoon-museum",
+    "phantom-constructs-va-friday-late"
   ],
   "events": [
     {
-      "id": "god-save-the-queens-museum-of-youth-culture",
-      "duplicate_key": "god-save-the-queens-moyc-2026-10-23",
-      "title_en": "God Save the Queens: Women Who Made Punk",
-      "title_it": "God Save the Queens: le donne che fecero il punk",
-      "summary_en": "A landmark basement-gallery show opens with personal archives, photography, fashion and unheard stories from Poly Styrene and the women who shaped punk's visual language.",
-      "summary_it": "Una mostra nella galleria sotterranea apre con archivi personali, fotografia, moda e storie inedite di Poly Styrene e delle donne che hanno plasmato l'immaginario punk.",
-      "start": "2026-10-23T12:00:00+01:00",
-      "end": "2026-10-23T20:00:00+01:00",
+      "id": "nazi-slave-labour-final-day",
+      "title_en": "Nazi Slave Labour: Perpetrators and Victims",
+      "title_it": "Lavoro schiavile nazista: carnefici e vittime",
+      "summary_en": "On its final day, Britain's first exhibition devoted to Nazi camp slave labour draws on clandestine photographs, testimony and company records to trace both exploitation and survival.",
+      "summary_it": "Nell'ultimo giorno, la prima mostra britannica sul lavoro schiavile nei campi nazisti usa foto clandestine, testimonianze e archivi industriali per raccontare sfruttamento e sopravvivenza.",
+      "start": "2026-10-30T10:00:00+00:00",
+      "end": "2026-10-30T17:00:00+00:00",
       "venue": {
-        "name": "Museum of Youth Culture",
-        "address": "51 St Pancras Way, London",
-        "postcode": "NW1 0PU",
+        "name": "The Wiener Holocaust Library",
+        "address": "29 Russell Square, London",
+        "postcode": "WC1B 5DP",
         "borough": "Camden"
       },
       "price": {
@@ -33,348 +32,190 @@
       },
       "booking": {
         "required": false,
-        "status": "recommended",
-        "url": "https://feverup.com/m/805474"
-      },
-      "category": "local-culture",
-      "advanced": {
-        "score": 10,
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        },
-        "reason": "A free opening-day encounter with personal punk archives and unheard material in an independent museum devoted to youth culture."
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.museumofyouthculture.com/god-save-the-queens/",
-      "verification": {
-        "source_url": "https://feverup.com/m/805474",
-        "verified_at": "2026-10-22T15:02:42+01:00",
-        "confidence": "high"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-22T15:02:42+01:00",
-      "expire_at": "2026-10-23T20:15:00+01:00"
-    },
-    {
-      "id": "home-movie-day-cinema-museum",
-      "duplicate_key": "home-movie-day-cinema-museum-2026-10-24",
-      "title_en": "Home Movie Day at the Cinema Museum",
-      "title_it": "Home Movie Day al Cinema Museum",
-      "summary_en": "Film archivists examine 8mm, Super 8, 9.5mm and 16mm home movies, offer preservation advice and project selected reels alongside a 1970s family-film programme.",
-      "summary_it": "Archivisti esaminano film di famiglia in 8mm, Super 8, 9,5mm e 16mm, spiegano come conservarli e proiettano alcune bobine insieme a un programma sugli anni Settanta.",
-      "start": "2026-10-24T10:30:00+01:00",
-      "end": "2026-10-24T16:00:00+01:00",
-      "venue": {
-        "name": "The Cinema Museum",
-        "address": "2 Dugard Way, off Renfrew Road, London",
-        "postcode": "SE11 4TH",
-        "borough": "Lambeth"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
         "status": "drop-in",
-        "url": "https://cinemamuseum.org.uk/scheduled/home-movie-day-2026/"
+        "url": "https://wienerholocaustlibrary.org/exhibition/nazi-slave-labour-perpetrators-and-victims/"
       },
       "category": "heritage-history",
       "advanced": {
-        "score": 10,
-        "reason": "A rare free opening of an independent museum where professional archivists help Londoners preserve and screen their own domestic film history.",
+        "score": 8,
+        "reason": "A free final-day encounter with rare archival evidence about an underexamined system of wartime exploitation and its victims.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://cinemamuseum.org.uk/scheduled/home-movie-day-2026/",
-      "verification": {
-        "verified_at": "2026-10-22T15:02:42+01:00",
-        "confidence": "high",
-        "source_url": "https://cinemamuseum.org.uk/scheduled/home-movie-day-2026/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-22T15:02:42+01:00",
-      "expire_at": "2026-10-24T16:15:00+01:00"
-    },
-    {
-      "id": "reclaiming-the-archives-fulham-palace",
-      "duplicate_key": "reclaiming-archives-fulham-palace-2026-10-24",
-      "title_en": "Reclaiming the Archives at Fulham Palace",
-      "title_it": "Reclaiming the Archives a Fulham Palace",
-      "summary_en": "A palace walk, historical workshops, poetry and zine-making confront a Royal African Company pamphlet with a 1723 letter written by an enslaved person known as Secrett.",
-      "summary_it": "Una visita al palazzo, laboratori storici, poesia e zine mettono a confronto un opuscolo della Royal African Company con la lettera del 1723 di una persona schiavizzata nota come Secrett.",
-      "start": "2026-10-24T12:00:00+01:00",
-      "end": "2026-10-24T18:00:00+01:00",
-      "venue": {
-        "name": "Fulham Palace",
-        "address": "Bishop's Avenue, Fulham, London",
-        "postcode": "SW6 6EA",
-        "borough": "Hammersmith and Fulham"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.eventbrite.co.uk/e/black-history-365-x-routes-in-the-records-reclaiming-the-archives-tickets-2002203238785"
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 10,
-        "reason": "A free, one-day use of documents, place and creative practice to surface Fulham Palace's colonial connections and a voice obscured in the archive.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.fulhampalace.org/whats-on/events/black-history-365-x-routes-in-the-records-reclaiming-the-archives/",
-      "verification": {
-        "verified_at": "2026-10-22T15:02:42+01:00",
-        "confidence": "high",
-        "source_url": "https://www.fulhampalace.org/whats-on/events/black-history-365-x-routes-in-the-records-reclaiming-the-archives/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-22T15:02:42+01:00",
-      "expire_at": "2026-10-24T18:15:00+01:00"
-    },
-    {
-      "id": "mon-ame-film-screening-oxford-house",
-      "duplicate_key": "mon-ame-oxford-house-2026-10-24",
-      "title_en": "Mon Âme: Black Life on Film",
-      "title_it": "Mon Âme: la vita Black raccontata dal cinema",
-      "summary_en": "A free community screening pairs Mon Âme with films on Black life and representation, followed by a discussion about cultural memory and the future of East End communities.",
-      "summary_it": "Una proiezione comunitaria gratuita affianca Mon Âme ad altri film sulla vita e la rappresentazione Black, seguita da un confronto sulla memoria culturale e sul futuro dell'East End.",
-      "start": "2026-10-24T18:00:00+01:00",
-      "end": "2026-10-24T21:30:00+01:00",
-      "venue": {
-        "name": "Oxford House Theatre",
-        "address": "Derbyshire Street, Bethnal Green, London",
-        "postcode": "E2 6HG",
-        "borough": "Tower Hamlets"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.eventbrite.co.uk/e/black-history-month-2026-mon-ame-film-screening-tickets-2002700268414"
-      },
-      "category": "local-culture",
-      "advanced": {
-        "score": 9,
-        "reason": "A free neighbourhood screening and discussion uses film to preserve contemporary Black experience and examine the East End's cultural future.",
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.oxfordhouse.org.uk/event/black-history-month-2026-mon-ame-film-screening/",
-      "verification": {
-        "verified_at": "2026-10-22T15:02:42+01:00",
-        "confidence": "high",
-        "source_url": "https://www.oxfordhouse.org.uk/event/black-history-month-2026-mon-ame-film-screening/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-10-22T15:02:42+01:00",
-      "expire_at": "2026-10-24T21:45:00+01:00"
-    },
-    {
-      "id": "big-story-festival-iwm-london",
-      "duplicate_key": "big-story-festival-iwm-2026-10-25",
-      "title_en": "Big Story Festival at IWM London",
-      "title_it": "Big Story Festival all'IWM London",
-      "summary_en": "IWM London's first storytelling festival fills the museum with free illustration, play and song sessions shaped by its Childhood in War exhibition; selected talks cost extra.",
-      "summary_it": "Il primo festival del racconto dell'IWM anima il museo con laboratori gratuiti di illustrazione, gioco e canto legati alla mostra Childhood in War; alcuni incontri sono a pagamento.",
-      "start": "2026-10-25T10:00:00+00:00",
-      "end": "2026-10-25T18:00:00+00:00",
-      "venue": {
-        "name": "IWM London",
-        "address": "Lambeth Road, London",
-        "postcode": "SE1 6HZ",
-        "borough": "Southwark"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free entry",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": "https://www.iwm.org.uk/events/big-story-festival"
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 7,
-        "breakdown": {
-          "non_obvious": 1,
-          "place_story": 2,
-          "unusual_access": 2,
+          "unusual_access": 1,
           "local_character": 0,
           "value": 2
-        },
-        "reason": "A one-off debut festival turns a major history museum into a free, participatory storytelling space for families."
+        }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.iwm.org.uk/events/big-story-festival",
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://wienerholocaustlibrary.org/exhibition/nazi-slave-labour-perpetrators-and-victims/",
       "verification": {
-        "source_url": "https://www.iwm.org.uk/events/big-story-festival",
-        "verified_at": "2026-10-22T15:02:42+01:00",
-        "confidence": "high"
+        "verified_at": "2026-10-25T14:59:21+00:00",
+        "confidence": "high",
+        "source_url": "https://wienerholocaustlibrary.org/exhibition/nazi-slave-labour-perpetrators-and-victims/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-22T15:02:42+01:00",
-      "expire_at": "2026-10-25T18:15:00+00:00"
+      "publish_at": "2026-10-25T14:59:21+00:00",
+      "expire_at": "2026-10-30T17:15:00+00:00",
+      "duplicate_key": "nazi-slave-labour-wiener-library-2026-10-30"
     },
     {
-      "id": "enchanted-cinema-music-of-spirit-animals",
-      "duplicate_key": "enchanted-cinema-spirit-animals-2026-10-25",
-      "title_en": "The Enchanted Cinema: The Music of Spirit Animals",
-      "title_it": "The Enchanted Cinema: la musica degli animali spirito",
-      "summary_en": "Children and grown-ups become a live sound-effects orchestra for animations inspired by Día de Muertos, global folklore and the Horniman's animal collections. Two one-hour Sunday sessions.",
-      "summary_it": "Bambini e adulti diventano un'orchestra di effetti sonori dal vivo per animazioni ispirate al Día de Muertos, al folklore mondiale e alle collezioni animali dell'Horniman. Due sessioni di un'ora.",
-      "start": "2026-10-25T11:30:00+00:00",
-      "end": "2026-10-25T14:30:00+00:00",
+      "id": "phantom-constructs-va-friday-late",
+      "title_en": "Friday Late: Phantom Constructs",
+      "title_it": "Friday Late: Phantom Constructs",
+      "summary_en": "A free after-hours takeover fills the V&A with eerie stagecraft, surreal screenings, algorithmic textiles, performance and study-room objects rarely placed on public display.",
+      "summary_it": "Un'apertura serale gratuita invade il V&A con scenografie inquietanti, film surreali, tessuti algoritmici, performance e opere della study room raramente esposte.",
+      "start": "2026-10-30T18:30:00+00:00",
+      "end": "2026-10-30T22:00:00+00:00",
       "venue": {
-        "name": "Horniman Museum and Gardens, Pavilion",
-        "address": "100 London Road, Forest Hill, London",
-        "postcode": "SE23 3PQ",
-        "borough": "Lewisham"
+        "name": "V&A South Kensington",
+        "address": "Cromwell Road, London",
+        "postcode": "SW7 2RL",
+        "borough": "Kensington and Chelsea"
       },
       "price": {
-        "amount_gbp": 10,
-        "display": "£10 per person",
-        "classification": "cheap"
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
       },
       "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://my.horniman.ac.uk/events?k=Enchated_Cinema&startdate=2026-10-01"
+        "required": false,
+        "status": "drop-in",
+        "url": "https://www.vam.ac.uk/event/JlwWzPwXlD/friday-late-october-2026"
       },
       "category": "art-design",
       "advanced": {
         "score": 8,
+        "reason": "A one-night, after-hours programme opens unusual corners of the V&A to experimental performance, film and objects not normally displayed.",
         "breakdown": {
-          "non_obvious": 2,
+          "non_obvious": 3,
           "place_story": 1,
           "unusual_access": 2,
-          "local_character": 1,
+          "local_character": 0,
           "value": 2
-        },
-        "reason": "A participatory live-cinema workshop connects Mexican traditions and a century-old animation with the Horniman's distinctive collections."
+        }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.horniman.ac.uk/event/the-enchanted-cinema/",
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.vam.ac.uk/event/JlwWzPwXlD/friday-late-october-2026",
       "verification": {
-        "source_url": "https://www.horniman.ac.uk/event/the-enchanted-cinema/",
-        "verified_at": "2026-10-22T15:02:42+01:00",
-        "confidence": "high"
+        "verified_at": "2026-10-25T14:59:21+00:00",
+        "confidence": "high",
+        "source_url": "https://www.vam.ac.uk/event/JlwWzPwXlD/friday-late-october-2026"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-22T15:02:42+01:00",
-      "expire_at": "2026-10-25T14:45:00+00:00"
+      "publish_at": "2026-10-25T14:59:21+00:00",
+      "expire_at": "2026-10-30T22:15:00+00:00",
+      "duplicate_key": "phantom-constructs-va-2026-10-30"
     },
     {
-      "id": "halloween-at-brixton-windmill",
-      "duplicate_key": "halloween-brixton-windmill-2026-10-25",
-      "title_en": "Halloween at Brixton Windmill",
-      "title_it": "Halloween al mulino di Brixton",
-      "summary_en": "A 200-year-old working windmill hosts free crafts and children's spooky stories inside the mill, with optional traditional pumpkin carving for £3.",
-      "summary_it": "Un mulino ancora attivo da oltre due secoli ospita laboratori gratuiti e racconti spettrali per bambini al suo interno, più intaglio della zucca facoltativo a £3.",
-      "start": "2026-10-25T13:00:00+00:00",
-      "end": "2026-10-25T16:00:00+00:00",
+      "id": "comic-day-at-the-cartoon-museum",
+      "title_en": "Comic Day at the Cartoon Museum",
+      "title_it": "Comic Day al Cartoon Museum",
+      "summary_en": "A one-day comics room combines a curated sale with a 4pm seminar on collecting and trading, plus free appraisals for visitors who bring their own books.",
+      "summary_it": "Una giornata dedicata ai fumetti unisce una selezione di volumi, un seminario alle 16 sul collezionismo e valutazioni gratuite per chi porta i propri albi.",
+      "start": "2026-10-31T12:00:00+00:00",
+      "end": "2026-10-31T17:30:00+00:00",
       "venue": {
-        "name": "Brixton Windmill and Windmill Gardens",
-        "address": "Blenheim Gardens, Brixton, London",
-        "postcode": "SW2 5DA",
-        "borough": "Lambeth"
+        "name": "The Cartoon Museum, Clore Learning Studio",
+        "address": "63 Wells Street, Fitzrovia, London",
+        "postcode": "W1A 3AE",
+        "borough": "Westminster"
       },
       "price": {
         "amount_gbp": 0,
-        "display": "Free; pumpkin £3",
+        "display": "Free event; galleries extra",
         "classification": "free"
       },
       "booking": {
         "required": false,
         "status": "drop-in",
-        "url": "https://www.brixtonwindmill.org/events/halloween-at-brixton-windmill/"
+        "url": "https://www.cartoonmuseum.org/whats-on-events"
+      },
+      "category": "local-culture",
+      "advanced": {
+        "score": 9,
+        "reason": "An independent museum hosts a free, single-day mix of specialist collecting knowledge, personal appraisals and old-school comic treasure hunting.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 1,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.cartoonmuseum.org/whats-on-events",
+      "verification": {
+        "verified_at": "2026-10-25T14:59:21+00:00",
+        "confidence": "high",
+        "source_url": "https://www.cartoonmuseum.org/whats-on-events"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-25T14:59:21+00:00",
+      "expire_at": "2026-10-31T17:45:00+00:00",
+      "duplicate_key": "comic-day-cartoon-museum-2026-10-31"
+    },
+    {
+      "id": "london-to-brighton-veteran-car-run-start",
+      "title_en": "London to Brighton Veteran Car Run: Hyde Park Start",
+      "title_it": "Veteran Car Run Londra-Brighton: partenza da Hyde Park",
+      "summary_en": "At dawn, hundreds of pre-1905 cars gather on Serpentine Road and begin the world's longest-running motoring event, reviving the route of the 1896 Emancipation Run.",
+      "summary_it": "All'alba, centinaia di auto anteriori al 1905 si radunano su Serpentine Road e danno il via alla corsa automobilistica più longeva al mondo, nata nel 1896.",
+      "start": "2026-11-01T07:00:00+00:00",
+      "end": "2026-11-01T08:30:00+00:00",
+      "venue": {
+        "name": "Hyde Park, Serpentine Road",
+        "address": "Serpentine Road, Hyde Park, London",
+        "postcode": "W2 2UH",
+        "borough": "Westminster"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free to watch",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": "https://www.veterancarrun.com/event-timetable"
       },
       "category": "heritage-history",
       "advanced": {
-        "score": 10,
+        "score": 9,
+        "reason": "A free dawn encounter with living transport history turns Hyde Park into the starting paddock for a route first celebrated in 1896.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
           "unusual_access": 2,
-          "local_character": 1,
+          "local_character": 0,
           "value": 2
-        },
-        "reason": "Free neighbourhood Halloween activities gain real character from spooky storytelling inside Brixton's Grade II* working windmill."
+        }
       },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.brixtonwindmill.org/events/halloween-at-brixton-windmill/",
+      "newsletter_sources": ["Londonist"],
+      "official_url": "https://www.veterancarrun.com/event-timetable",
       "verification": {
-        "source_url": "https://www.brixtonwindmill.org/events/halloween-at-brixton-windmill/",
-        "verified_at": "2026-10-22T15:02:42+01:00",
-        "confidence": "high"
+        "verified_at": "2026-10-25T14:59:21+00:00",
+        "confidence": "high",
+        "source_url": "https://www.veterancarrun.com/event-timetable"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-22T15:02:42+01:00",
-      "expire_at": "2026-10-25T16:15:00+00:00"
+      "publish_at": "2026-10-25T14:59:21+00:00",
+      "expire_at": "2026-11-01T08:45:00+00:00",
+      "duplicate_key": "veteran-car-run-hyde-park-start-2026-11-01"
     },
     {
-      "id": "diwali-on-the-square-2026",
-      "duplicate_key": "diwali-trafalgar-square-2026-10-25",
-      "title_en": "Diwali on the Square 2026",
-      "title_it": "Diwali on the Square 2026",
-      "summary_en": "Trafalgar Square becomes a shared Festival of Light with 200 opening dancers, performances from London's Hindu, Sikh and Jain communities, workshops and food stalls.",
-      "summary_it": "Trafalgar Square diventa una festa della luce condivisa con 200 ballerini in apertura, spettacoli delle comunità hindu, sikh e giainista di Londra, laboratori e street food.",
-      "start": "2026-10-25T13:00:00+00:00",
-      "end": "2026-10-25T19:00:00+00:00",
+      "id": "beauty-and-destruction-final-day",
+      "title_en": "Beauty and Destruction: Wartime London in Art",
+      "title_it": "Bellezza e distruzione: la Londra in guerra nell'arte",
+      "summary_en": "On its final day, 45 artworks, photographs, films, objects and oral histories show how wartime artists recorded a London transformed by bombing, shortages and adaptation.",
+      "summary_it": "Nell'ultimo giorno, 45 opere, fotografie, film, oggetti e testimonianze mostrano come gli artisti raccontarono una Londra trasformata da bombe, privazioni e adattamento.",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-11-01T18:00:00+00:00",
       "venue": {
-        "name": "Trafalgar Square",
-        "address": "Trafalgar Square, Westminster, London",
-        "postcode": "WC2N 5DN",
-        "borough": "Westminster"
+        "name": "IWM London",
+        "address": "Lambeth Road, London",
+        "postcode": "SE1 6HZ",
+        "borough": "Lambeth"
       },
       "price": {
         "amount_gbp": 0,
@@ -384,33 +225,31 @@
       "booking": {
         "required": false,
         "status": "drop-in",
-        "url": "https://www.london.gov.uk/events/diwali-square-2026"
+        "url": "https://www.iwm.org.uk/events/beauty-and-destruction-wartime-london-in-art"
       },
-      "category": "local-culture",
+      "category": "heritage-history",
       "advanced": {
-        "score": 7,
+        "score": 8,
+        "reason": "A free final-day chance to read wartime London through artists' records of its streets, landmarks, shelters and changing communities.",
         "breakdown": {
-          "non_obvious": 1,
+          "non_obvious": 2,
           "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 1,
+          "unusual_access": 2,
+          "local_character": 0,
           "value": 2
-        },
-        "reason": "A free civic-scale celebration led by London's Hindu, Sikh and Jain communities gives Trafalgar Square a distinct cultural story."
+        }
       },
-      "newsletter_sources": [
-        "Londonist",
-        "Londonfy"
-      ],
-      "official_url": "https://www.london.gov.uk/events/diwali-square-2026",
+      "newsletter_sources": ["Londonist", "The Times"],
+      "official_url": "https://www.iwm.org.uk/events/beauty-and-destruction-wartime-london-in-art",
       "verification": {
-        "source_url": "https://www.london.gov.uk/events/diwali-square-2026",
-        "verified_at": "2026-10-22T15:02:42+01:00",
-        "confidence": "high"
+        "verified_at": "2026-10-25T14:59:21+00:00",
+        "confidence": "high",
+        "source_url": "https://www.iwm.org.uk/events/beauty-and-destruction-wartime-london-in-art"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-22T15:02:42+01:00",
-      "expire_at": "2026-10-25T19:15:00+00:00"
+      "publish_at": "2026-10-25T14:59:21+00:00",
+      "expire_at": "2026-11-01T18:15:00+00:00",
+      "duplicate_key": "beauty-destruction-iwm-london-2026-11-01"
     }
   ]
 }
