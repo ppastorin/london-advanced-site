@@ -647,196 +647,124 @@
       "updated_at": "2026-10-09T11:22:35+01:00"
     },
     {
-      "id": "event:god-save-the-queens-museum-of-youth-culture:en",
+      "id": "event:nazi-slave-labour-final-day:en",
       "type": "event",
       "locale": "en",
-      "title": "God Save the Queens: Women Who Made Punk",
-      "summary": "Fri 23 Oct · Museum of Youth Culture · Free — A landmark basement-gallery show opens with personal archives, photography, fashion and unheard stories from Poly Styrene and the women who shaped punk's visual language.",
-      "url": "/events/#event-god-save-the-queens-museum-of-youth-culture",
+      "title": "Nazi Slave Labour: Perpetrators and Victims",
+      "summary": "Fri 30 Oct · The Wiener Holocaust Library · Free — On its final day, Britain's first exhibition devoted to Nazi camp slave labour draws on clandestine photographs, testimony and company records to trace both exploitation and survival.",
+      "url": "/events/#event-nazi-slave-labour-final-day",
       "tags": [
-        "Local culture",
+        "Heritage and history",
         "Free",
         "Camden",
         "free"
       ],
       "keywords": [
-        "Museum of Youth Culture",
-        "51 St Pancras Way, London",
-        "NW1 0PU",
+        "The Wiener Holocaust Library",
+        "29 Russell Square, London",
+        "WC1B 5DP",
         "Camden",
         "event events this week weekend free affordable"
       ],
-      "content": "A landmark basement-gallery show opens with personal archives, photography, fashion and unheard stories from Poly Styrene and the women who shaped punk's visual language. A free opening-day encounter with personal punk archives and unheard material in an independent museum devoted to youth culture.",
-      "updated_at": "2026-10-22T15:02:42+01:00",
-      "expires_at": "2026-10-23T20:15:00+01:00"
+      "content": "On its final day, Britain's first exhibition devoted to Nazi camp slave labour draws on clandestine photographs, testimony and company records to trace both exploitation and survival. A free final-day encounter with rare archival evidence about an underexamined system of wartime exploitation and its victims.",
+      "updated_at": "2026-10-25T14:59:21+00:00",
+      "expires_at": "2026-10-30T17:15:00+00:00"
     },
     {
-      "id": "event:home-movie-day-cinema-museum:en",
+      "id": "event:phantom-constructs-va-friday-late:en",
       "type": "event",
       "locale": "en",
-      "title": "Home Movie Day at the Cinema Museum",
-      "summary": "Sat 24 Oct · The Cinema Museum · Free — Film archivists examine 8mm, Super 8, 9.5mm and 16mm home movies, offer preservation advice and project selected reels alongside a 1970s family-film programme.",
-      "url": "/events/#event-home-movie-day-cinema-museum",
+      "title": "Friday Late: Phantom Constructs",
+      "summary": "Fri 30 Oct · V&A South Kensington · Free — A free after-hours takeover fills the V&A with eerie stagecraft, surreal screenings, algorithmic textiles, performance and study-room objects rarely placed on public display.",
+      "url": "/events/#event-phantom-constructs-va-friday-late",
       "tags": [
-        "Heritage and history",
+        "Art and design",
         "Free",
-        "Lambeth",
+        "Kensington and Chelsea",
         "free"
       ],
       "keywords": [
-        "The Cinema Museum",
-        "2 Dugard Way, off Renfrew Road, London",
-        "SE11 4TH",
-        "Lambeth",
+        "V&A South Kensington",
+        "Cromwell Road, London",
+        "SW7 2RL",
+        "Kensington and Chelsea",
         "event events this week weekend free affordable"
       ],
-      "content": "Film archivists examine 8mm, Super 8, 9.5mm and 16mm home movies, offer preservation advice and project selected reels alongside a 1970s family-film programme. A rare free opening of an independent museum where professional archivists help Londoners preserve and screen their own domestic film history.",
-      "updated_at": "2026-10-22T15:02:42+01:00",
-      "expires_at": "2026-10-24T16:15:00+01:00"
+      "content": "A free after-hours takeover fills the V&A with eerie stagecraft, surreal screenings, algorithmic textiles, performance and study-room objects rarely placed on public display. A one-night, after-hours programme opens unusual corners of the V&A to experimental performance, film and objects not normally displayed.",
+      "updated_at": "2026-10-25T14:59:21+00:00",
+      "expires_at": "2026-10-30T22:15:00+00:00"
     },
     {
-      "id": "event:reclaiming-the-archives-fulham-palace:en",
+      "id": "event:comic-day-at-the-cartoon-museum:en",
       "type": "event",
       "locale": "en",
-      "title": "Reclaiming the Archives at Fulham Palace",
-      "summary": "Sat 24 Oct · Fulham Palace · Free — A palace walk, historical workshops, poetry and zine-making confront a Royal African Company pamphlet with a 1723 letter written by an enslaved person known as Secrett.",
-      "url": "/events/#event-reclaiming-the-archives-fulham-palace",
-      "tags": [
-        "Heritage and history",
-        "Free",
-        "Hammersmith and Fulham",
-        "free"
-      ],
-      "keywords": [
-        "Fulham Palace",
-        "Bishop's Avenue, Fulham, London",
-        "SW6 6EA",
-        "Hammersmith and Fulham",
-        "event events this week weekend free affordable"
-      ],
-      "content": "A palace walk, historical workshops, poetry and zine-making confront a Royal African Company pamphlet with a 1723 letter written by an enslaved person known as Secrett. A free, one-day use of documents, place and creative practice to surface Fulham Palace's colonial connections and a voice obscured in the archive.",
-      "updated_at": "2026-10-22T15:02:42+01:00",
-      "expires_at": "2026-10-24T18:15:00+01:00"
-    },
-    {
-      "id": "event:mon-ame-film-screening-oxford-house:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Mon Âme: Black Life on Film",
-      "summary": "Sat 24 Oct · Oxford House Theatre · Free — A free community screening pairs Mon Âme with films on Black life and representation, followed by a discussion about cultural memory and the future of East End communities.",
-      "url": "/events/#event-mon-ame-film-screening-oxford-house",
+      "title": "Comic Day at the Cartoon Museum",
+      "summary": "Sat 31 Oct · The Cartoon Museum, Clore Learning Studio · Free — A one-day comics room combines a curated sale with a 4pm seminar on collecting and trading, plus free appraisals for visitors who bring their own books.",
+      "url": "/events/#event-comic-day-at-the-cartoon-museum",
       "tags": [
         "Local culture",
         "Free",
-        "Tower Hamlets",
+        "Westminster",
         "free"
       ],
       "keywords": [
-        "Oxford House Theatre",
-        "Derbyshire Street, Bethnal Green, London",
-        "E2 6HG",
-        "Tower Hamlets",
+        "The Cartoon Museum, Clore Learning Studio",
+        "63 Wells Street, Fitzrovia, London",
+        "W1A 3AE",
+        "Westminster",
         "event events this week weekend free affordable"
       ],
-      "content": "A free community screening pairs Mon Âme with films on Black life and representation, followed by a discussion about cultural memory and the future of East End communities. A free neighbourhood screening and discussion uses film to preserve contemporary Black experience and examine the East End's cultural future.",
-      "updated_at": "2026-10-22T15:02:42+01:00",
-      "expires_at": "2026-10-24T21:45:00+01:00"
+      "content": "A one-day comics room combines a curated sale with a 4pm seminar on collecting and trading, plus free appraisals for visitors who bring their own books. An independent museum hosts a free, single-day mix of specialist collecting knowledge, personal appraisals and old-school comic treasure hunting.",
+      "updated_at": "2026-10-25T14:59:21+00:00",
+      "expires_at": "2026-10-31T17:45:00+00:00"
     },
     {
-      "id": "event:big-story-festival-iwm-london:en",
+      "id": "event:london-to-brighton-veteran-car-run-start:en",
       "type": "event",
       "locale": "en",
-      "title": "Big Story Festival at IWM London",
-      "summary": "Sun 25 Oct · IWM London · Free — IWM London's first storytelling festival fills the museum with free illustration, play and song sessions shaped by its Childhood in War exhibition; selected talks cost extra.",
-      "url": "/events/#event-big-story-festival-iwm-london",
+      "title": "London to Brighton Veteran Car Run: Hyde Park Start",
+      "summary": "Sun 1 Nov · Hyde Park, Serpentine Road · Free — At dawn, hundreds of pre-1905 cars gather on Serpentine Road and begin the world's longest-running motoring event, reviving the route of the 1896 Emancipation Run.",
+      "url": "/events/#event-london-to-brighton-veteran-car-run-start",
       "tags": [
         "Heritage and history",
         "Free",
-        "Southwark",
+        "Westminster",
+        "free"
+      ],
+      "keywords": [
+        "Hyde Park, Serpentine Road",
+        "Serpentine Road, Hyde Park, London",
+        "W2 2UH",
+        "Westminster",
+        "event events this week weekend free affordable"
+      ],
+      "content": "At dawn, hundreds of pre-1905 cars gather on Serpentine Road and begin the world's longest-running motoring event, reviving the route of the 1896 Emancipation Run. A free dawn encounter with living transport history turns Hyde Park into the starting paddock for a route first celebrated in 1896.",
+      "updated_at": "2026-10-25T14:59:21+00:00",
+      "expires_at": "2026-11-01T08:45:00+00:00"
+    },
+    {
+      "id": "event:beauty-and-destruction-final-day:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Beauty and Destruction: Wartime London in Art",
+      "summary": "Sun 1 Nov · IWM London · Free — On its final day, 45 artworks, photographs, films, objects and oral histories show how wartime artists recorded a London transformed by bombing, shortages and adaptation.",
+      "url": "/events/#event-beauty-and-destruction-final-day",
+      "tags": [
+        "Heritage and history",
+        "Free",
+        "Lambeth",
         "free"
       ],
       "keywords": [
         "IWM London",
         "Lambeth Road, London",
         "SE1 6HZ",
-        "Southwark",
-        "event events this week weekend free affordable"
-      ],
-      "content": "IWM London's first storytelling festival fills the museum with free illustration, play and song sessions shaped by its Childhood in War exhibition; selected talks cost extra. A one-off debut festival turns a major history museum into a free, participatory storytelling space for families.",
-      "updated_at": "2026-10-22T15:02:42+01:00",
-      "expires_at": "2026-10-25T18:15:00+00:00"
-    },
-    {
-      "id": "event:enchanted-cinema-music-of-spirit-animals:en",
-      "type": "event",
-      "locale": "en",
-      "title": "The Enchanted Cinema: The Music of Spirit Animals",
-      "summary": "Sun 25 Oct · Horniman Museum and Gardens, Pavilion · £10 per person — Children and grown-ups become a live sound-effects orchestra for animations inspired by Día de Muertos, global folklore and the Horniman's animal collections. Two one-hour Sunday sessions.",
-      "url": "/events/#event-enchanted-cinema-music-of-spirit-animals",
-      "tags": [
-        "Art and design",
-        "£10 per person",
-        "Lewisham",
-        "cheap"
-      ],
-      "keywords": [
-        "Horniman Museum and Gardens, Pavilion",
-        "100 London Road, Forest Hill, London",
-        "SE23 3PQ",
-        "Lewisham",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Children and grown-ups become a live sound-effects orchestra for animations inspired by Día de Muertos, global folklore and the Horniman's animal collections. Two one-hour Sunday sessions. A participatory live-cinema workshop connects Mexican traditions and a century-old animation with the Horniman's distinctive collections.",
-      "updated_at": "2026-10-22T15:02:42+01:00",
-      "expires_at": "2026-10-25T14:45:00+00:00"
-    },
-    {
-      "id": "event:halloween-at-brixton-windmill:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Halloween at Brixton Windmill",
-      "summary": "Sun 25 Oct · Brixton Windmill and Windmill Gardens · Free — A 200-year-old working windmill hosts free crafts and children's spooky stories inside the mill, with optional traditional pumpkin carving for £3.",
-      "url": "/events/#event-halloween-at-brixton-windmill",
-      "tags": [
-        "Heritage and history",
-        "Free",
-        "Lambeth",
-        "free"
-      ],
-      "keywords": [
-        "Brixton Windmill and Windmill Gardens",
-        "Blenheim Gardens, Brixton, London",
-        "SW2 5DA",
         "Lambeth",
         "event events this week weekend free affordable"
       ],
-      "content": "A 200-year-old working windmill hosts free crafts and children's spooky stories inside the mill, with optional traditional pumpkin carving for £3. Free neighbourhood Halloween activities gain real character from spooky storytelling inside Brixton's Grade II* working windmill.",
-      "updated_at": "2026-10-22T15:02:42+01:00",
-      "expires_at": "2026-10-25T16:15:00+00:00"
-    },
-    {
-      "id": "event:diwali-on-the-square-2026:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Diwali on the Square 2026",
-      "summary": "Sun 25 Oct · Trafalgar Square · Free — Trafalgar Square becomes a shared Festival of Light with 200 opening dancers, performances from London's Hindu, Sikh and Jain communities, workshops and food stalls.",
-      "url": "/events/#event-diwali-on-the-square-2026",
-      "tags": [
-        "Local culture",
-        "Free",
-        "Westminster",
-        "free"
-      ],
-      "keywords": [
-        "Trafalgar Square",
-        "Trafalgar Square, Westminster, London",
-        "WC2N 5DN",
-        "Westminster",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Trafalgar Square becomes a shared Festival of Light with 200 opening dancers, performances from London's Hindu, Sikh and Jain communities, workshops and food stalls. A free civic-scale celebration led by London's Hindu, Sikh and Jain communities gives Trafalgar Square a distinct cultural story.",
-      "updated_at": "2026-10-22T15:02:42+01:00",
-      "expires_at": "2026-10-25T19:15:00+00:00"
+      "content": "On its final day, 45 artworks, photographs, films, objects and oral histories show how wartime artists recorded a London transformed by bombing, shortages and adaptation. A free final-day chance to read wartime London through artists' records of its streets, landmarks, shelters and changing communities.",
+      "updated_at": "2026-10-25T14:59:21+00:00",
+      "expires_at": "2026-11-01T18:15:00+00:00"
     }
   ]
 }
