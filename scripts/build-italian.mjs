@@ -232,6 +232,15 @@ function transformAppJs(source){
   pairs.push(["Explore the guide","Esplora la guida"]);
   let out=source;
   for(const [a,b] of pairs) out=out.split(a).join(b);
+  const legalPairs = [
+    ["Privacy notice", "Informativa sulla privacy"],
+    ["Privacy details", "Dettagli sulla privacy"],
+    ["Copyright &amp; use", "Copyright e uso"],
+    ["All rights reserved.", "Tutti i diritti riservati."],
+    ["/privacy/", "/it/privacy/"],
+    ["/copyright/", "/it/copyright/"]
+  ];
+  for (const [a, b] of legalPairs) out = out.split(a).join(b);
 
   // Copy on the English homepage evolves independently. These cleanup pairs
   // deliberately run after the broad replacements above, which can otherwise
@@ -255,12 +264,14 @@ function transformAppJs(source){
     ["Enter a valid email address.","Inserisci un indirizzo email valido."],
     ["Help improve London Advanced?","Aiutaci a migliorare London Advanced"],
     ["Allow anonymous Google Analytics measurement. The site works without it.","Consenti la misurazione anonima con Google Analytics. Il sito funziona anche senza."],
+    ["Allow Google Analytics measurement. The site works without it.","Consenti la misurazione con Google Analytics. Il sito funziona anche senza."],
     ["No thanks","No, grazie"],
     ["Allow analytics","Consenti"],
     ["London Advanced home — back to top","Homepage London Advanced — torna all’inizio"],
     ["Open navigation menu","Apri il menu di navigazione"],
     ["Main navigation","Navigazione principale"],
     ["Newsletter promise","Promessa della newsletter"],
+    ["href=\"#contact\"","href=\"#contatti\""],
     ["proposte del weekends","proposte del weekend"],
     [">LIVE<",">DAL VIVO<"],
     [">NOW +3H<",">ORA +3H<"],

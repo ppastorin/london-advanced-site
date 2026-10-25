@@ -397,7 +397,7 @@ function render() {
         <label class="contact-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
         <label>Indirizzo email<input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com" required></label>
         <button class="button dark" type="submit">Iscriviti alla newsletter</button>
-        <p class="newsletter-consent">Iscrivendoti accetti di ricevere email occasionali da London Advanced. Niente spam. Puoi cancellarti in qualsiasi momento.</p>
+        <p class="newsletter-consent">Iscrivendoti accetti di ricevere email occasionali da London Advanced. Niente spam. Puoi cancellarti in qualsiasi momento. <a href="/it/privacy/">Informativa sulla privacy</a>.</p>
         <p class="newsletter-error" data-newsletter-error hidden role="alert">L’iscrizione non è momentaneamente disponibile. Riprova tra poco.</p>
       </form>
     </section>
@@ -418,7 +418,7 @@ function render() {
         <label>Messaggio<textarea name="message" rows="6" minlength="10" maxlength="5000" required></textarea></label>
         <div class="contact-submit">
           <button class="button dark" type="submit">Invia messaggio</button>
-          <p>Protetto da controlli antispam invisibili. Nessun CAPTCHA.</p>
+          <p>Protetto da controlli antispam invisibili. Nessun CAPTCHA. <a href="/it/privacy/">Informativa sulla privacy</a>.</p>
         </div>
         <p class="contact-error" data-contact-error hidden role="alert">Non è stato possibile inviare il messaggio. Controlla il modulo e riprova.</p>
       </form>
@@ -428,7 +428,7 @@ function render() {
 
     <footer id="community">
       <div><strong>London Advanced</strong><span>Strumenti indipendenti e appunti sul campo per una Londra meno ovvia.</span></div>
-      <div class="footer-meta"><a href="/it/eventi/">Questa settimana</a><a href="/it/#newsletter">Newsletter</a><a href="/it/chi-sono/">Chi sono</a><a href="/it/metodologia/">Metodologia</a><a href="#contact">Contatti</a><small>© ${new Date().getFullYear()} Paolo Pastorino</small></div>
+      <div class="footer-meta"><a href="/it/eventi/">Questa settimana</a><a href="/it/#newsletter">Newsletter</a><a href="/it/chi-sono/">Chi sono</a><a href="/it/metodologia/">Metodologia</a><a href="/it/privacy/">Privacy</a><a href="/it/copyright/">Copyright e uso</a><a href="#contatti">Contatti</a><small>© ${new Date().getFullYear()} Paolo Pastorino. Tutti i diritti riservati.</small></div>
     </footer>
   </main>`;
   bindSectionScrolling();
@@ -600,7 +600,7 @@ function initAnalytics() {
   if (localStorage.getItem("la-analytics-consent") === "no") return;
   const consent = document.createElement("div");
   consent.className = "consent";
-  consent.innerHTML = `<p><strong>Aiutaci a migliorare London Advanced</strong><span>Consenti la misurazione anonima con Google Analytics. Il sito funziona anche senza.</span></p><div><button data-consent="no">No, grazie</button><button data-consent="yes">Consenti</button></div>`;
+  consent.innerHTML = `<p><strong>Aiutaci a migliorare London Advanced</strong><span>Consenti la misurazione con Google Analytics. Il sito funziona anche senza. <a href="/it/privacy/">Dettagli sulla privacy</a>.</span></p><div><button data-consent="no">No, grazie</button><button data-consent="yes">Consenti</button></div>`;
   document.body.appendChild(consent);
   consent.querySelectorAll("[data-consent]").forEach(button => button.addEventListener("click", () => {
     const choice = button.dataset.consent;

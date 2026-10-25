@@ -9,6 +9,7 @@ import { buildItineraries } from "./build-itineraries.mjs";
 import { buildSearch } from "./build-search.mjs";
 import { buildSitemap } from "./build-sitemap.mjs";
 import { buildGuidePages } from "./build-guide-pages.mjs";
+import { buildLegalPages } from "./build-legal.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
@@ -716,6 +717,7 @@ export async function prerender() {
   await buildNativeLooPages();
   await buildGuidePages();
   await buildSearch();
+  await buildLegalPages();
   const sitemapEntries = await buildSitemap();
 
   console.log(`Pre-rendered the bilingual homepage, Journal, Itineraries, search, ${feed.events.length} event records and ${sitemapEntries.length} sitemap URLs into static HTML.`);

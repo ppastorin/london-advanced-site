@@ -381,7 +381,7 @@ function render() {
         <label class="contact-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
         <label>Email address<input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@example.com" required></label>
         <button class="button dark" type="submit">Join the newsletter</button>
-        <p class="newsletter-consent">By subscribing, you agree to receive occasional emails from London Advanced. No spam. Unsubscribe at any time.</p>
+        <p class="newsletter-consent">By subscribing, you agree to receive occasional emails from London Advanced. No spam. Unsubscribe at any time. <a href="/privacy/">Privacy notice</a>.</p>
         <p class="newsletter-error" data-newsletter-error hidden role="alert">Subscription is temporarily unavailable. Please try again.</p>
       </form>
     </section>
@@ -402,7 +402,7 @@ function render() {
         <label>Message<textarea name="message" rows="6" minlength="10" maxlength="5000" required></textarea></label>
         <div class="contact-submit">
           <button class="button dark" type="submit">Send message</button>
-          <p>Protected by invisible spam checks. No CAPTCHA.</p>
+          <p>Protected by invisible spam checks. No CAPTCHA. <a href="/privacy/">Privacy notice</a>.</p>
         </div>
         <p class="contact-error" data-contact-error hidden role="alert">The message could not be sent. Please check the form and try again.</p>
       </form>
@@ -412,7 +412,7 @@ function render() {
 
     <footer id="community">
       <div><strong>London Advanced</strong><span>Independent tools and field notes for a less obvious London.</span></div>
-      <div class="footer-meta"><a href="/events/">This week</a><a href="/newsletter/">Newsletter</a><a href="/about/">About</a><a href="/methodology/">Methodology</a><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino</small></div>
+      <div class="footer-meta"><a href="/events/">This week</a><a href="/newsletter/">Newsletter</a><a href="/about/">About</a><a href="/methodology/">Methodology</a><a href="/privacy/">Privacy</a><a href="/copyright/">Copyright &amp; use</a><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino. All rights reserved.</small></div>
     </footer>
   </main>`;
   bindSectionScrolling();
@@ -584,7 +584,7 @@ function initAnalytics() {
   if (localStorage.getItem("la-analytics-consent") === "no") return;
   const consent = document.createElement("div");
   consent.className = "consent";
-  consent.innerHTML = `<p><strong>Help improve London Advanced?</strong><span>Allow anonymous Google Analytics measurement. The site works without it.</span></p><div><button data-consent="no">No thanks</button><button data-consent="yes">Allow analytics</button></div>`;
+  consent.innerHTML = `<p><strong>Help improve London Advanced?</strong><span>Allow Google Analytics measurement. The site works without it. <a href="/privacy/">Privacy details</a>.</span></p><div><button data-consent="no">No thanks</button><button data-consent="yes">Allow analytics</button></div>`;
   document.body.appendChild(consent);
   consent.querySelectorAll("[data-consent]").forEach(button => button.addEventListener("click", () => {
     const choice = button.dataset.consent;
