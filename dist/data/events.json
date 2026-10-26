@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-25T14:59:21+00:00",
-  "valid_from": "2026-10-25",
+  "generated_at": "2026-10-26T15:04:47+00:00",
+  "valid_from": "2026-10-26",
   "valid_until": "2026-11-01",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
@@ -47,15 +47,17 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
+      "newsletter_sources": [
+        "Londonist"
+      ],
       "official_url": "https://wienerholocaustlibrary.org/exhibition/nazi-slave-labour-perpetrators-and-victims/",
       "verification": {
-        "verified_at": "2026-10-25T14:59:21+00:00",
+        "verified_at": "2026-10-26T15:04:47+00:00",
         "confidence": "high",
         "source_url": "https://wienerholocaustlibrary.org/exhibition/nazi-slave-labour-perpetrators-and-victims/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-25T14:59:21+00:00",
+      "publish_at": "2026-10-26T15:04:47+00:00",
       "expire_at": "2026-10-30T17:15:00+00:00",
       "duplicate_key": "nazi-slave-labour-wiener-library-2026-10-30"
     },
@@ -95,17 +97,70 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
+      "newsletter_sources": [
+        "Londonist"
+      ],
       "official_url": "https://www.vam.ac.uk/event/JlwWzPwXlD/friday-late-october-2026",
       "verification": {
-        "verified_at": "2026-10-25T14:59:21+00:00",
+        "verified_at": "2026-10-26T15:04:47+00:00",
         "confidence": "high",
         "source_url": "https://www.vam.ac.uk/event/JlwWzPwXlD/friday-late-october-2026"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-25T14:59:21+00:00",
+      "publish_at": "2026-10-26T15:04:47+00:00",
       "expire_at": "2026-10-30T22:15:00+00:00",
       "duplicate_key": "phantom-constructs-va-2026-10-30"
+    },
+    {
+      "id": "operating-theatre-hunterian-final-day",
+      "title_en": "The Operating Theatre: 250 Years of Surgery",
+      "title_it": "La sala operatoria: 250 anni di chirurgia",
+      "summary_en": "On its final day, paintings, photographs and design plans reveal how anaesthesia, antisepsis, hospital architecture and medical ethics transformed the once-hidden operating theatre.",
+      "summary_it": "Nell'ultimo giorno, dipinti, fotografie e progetti mostrano come anestesia, antisepsi, architettura ospedaliera ed etica abbiano trasformato la sala operatoria.",
+      "start": "2026-10-31T10:00:00+00:00",
+      "end": "2026-10-31T17:00:00+00:00",
+      "venue": {
+        "name": "Hunterian Museum",
+        "address": "Royal College of Surgeons, 38–43 Lincoln's Inn Fields, London",
+        "postcode": "WC2A 3PE",
+        "borough": "Camden"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "recommended",
+        "url": "https://hunterianmuseum.org/exhibitions/the-operating-theatre-250-years"
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 7,
+        "reason": "A free final-day look at a normally hidden medical space through rare historic images, architectural evidence and contemporary surgical practice.",
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist",
+        "Londonfy"
+      ],
+      "official_url": "https://hunterianmuseum.org/exhibitions/the-operating-theatre-250-years",
+      "verification": {
+        "verified_at": "2026-10-26T15:04:47+00:00",
+        "confidence": "high",
+        "source_url": "https://hunterianmuseum.org/exhibitions/the-operating-theatre-250-years"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-10-26T15:04:47+00:00",
+      "expire_at": "2026-10-31T17:15:00+00:00",
+      "duplicate_key": "operating-theatre-hunterian-2026-10-31"
     },
     {
       "id": "comic-day-at-the-cartoon-museum",
@@ -143,15 +198,17 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
+      "newsletter_sources": [
+        "Londonist"
+      ],
       "official_url": "https://www.cartoonmuseum.org/whats-on-events",
       "verification": {
-        "verified_at": "2026-10-25T14:59:21+00:00",
+        "verified_at": "2026-10-26T15:04:47+00:00",
         "confidence": "high",
         "source_url": "https://www.cartoonmuseum.org/whats-on-events"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-25T14:59:21+00:00",
+      "publish_at": "2026-10-26T15:04:47+00:00",
       "expire_at": "2026-10-31T17:45:00+00:00",
       "duplicate_key": "comic-day-cartoon-museum-2026-10-31"
     },
@@ -191,15 +248,17 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist"],
+      "newsletter_sources": [
+        "Londonist"
+      ],
       "official_url": "https://www.veterancarrun.com/event-timetable",
       "verification": {
-        "verified_at": "2026-10-25T14:59:21+00:00",
+        "verified_at": "2026-10-26T15:04:47+00:00",
         "confidence": "high",
         "source_url": "https://www.veterancarrun.com/event-timetable"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-25T14:59:21+00:00",
+      "publish_at": "2026-10-26T15:04:47+00:00",
       "expire_at": "2026-11-01T08:45:00+00:00",
       "duplicate_key": "veteran-car-run-hyde-park-start-2026-11-01"
     },
@@ -239,17 +298,21 @@
           "value": 2
         }
       },
-      "newsletter_sources": ["Londonist", "The Times"],
+      "newsletter_sources": [
+        "Londonist",
+        "The Times"
+      ],
       "official_url": "https://www.iwm.org.uk/events/beauty-and-destruction-wartime-london-in-art",
       "verification": {
-        "verified_at": "2026-10-25T14:59:21+00:00",
+        "verified_at": "2026-10-26T15:04:47+00:00",
         "confidence": "high",
         "source_url": "https://www.iwm.org.uk/events/beauty-and-destruction-wartime-london-in-art"
       },
       "publication_status": "approved",
-      "publish_at": "2026-10-25T14:59:21+00:00",
+      "publish_at": "2026-10-26T15:04:47+00:00",
       "expire_at": "2026-11-01T18:15:00+00:00",
       "duplicate_key": "beauty-destruction-iwm-london-2026-11-01"
     }
   ]
 }
+
