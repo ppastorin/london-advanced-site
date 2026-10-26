@@ -666,7 +666,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Nell'ultimo giorno, la prima mostra britannica sul lavoro schiavile nei campi nazisti usa foto clandestine, testimonianze e archivi industriali per raccontare sfruttamento e sopravvivenza.",
-      "updated_at": "2026-10-25T14:59:21+00:00",
+      "updated_at": "2026-10-26T15:04:47+00:00",
       "expires_at": "2026-10-30T17:15:00+00:00"
     },
     {
@@ -690,8 +690,32 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Un'apertura serale gratuita invade il V&A con scenografie inquietanti, film surreali, tessuti algoritmici, performance e opere della study room raramente esposte.",
-      "updated_at": "2026-10-25T14:59:21+00:00",
+      "updated_at": "2026-10-26T15:04:47+00:00",
       "expires_at": "2026-10-30T22:15:00+00:00"
+    },
+    {
+      "id": "event:operating-theatre-hunterian-final-day:it",
+      "type": "event",
+      "locale": "it",
+      "title": "La sala operatoria: 250 anni di chirurgia",
+      "summary": "sab 31 ott · Hunterian Museum · Gratuito — Nell'ultimo giorno, dipinti, fotografie e progetti mostrano come anestesia, antisepsi, architettura ospedaliera ed etica abbiano trasformato la sala operatoria.",
+      "url": "/it/eventi/#event-operating-theatre-hunterian-final-day",
+      "tags": [
+        "Patrimonio e storia",
+        "Gratuito",
+        "Camden",
+        "free"
+      ],
+      "keywords": [
+        "Hunterian Museum",
+        "Royal College of Surgeons, 38–43 Lincoln's Inn Fields, London",
+        "WC2A 3PE",
+        "Camden",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Nell'ultimo giorno, dipinti, fotografie e progetti mostrano come anestesia, antisepsi, architettura ospedaliera ed etica abbiano trasformato la sala operatoria.",
+      "updated_at": "2026-10-26T15:04:47+00:00",
+      "expires_at": "2026-10-31T17:15:00+00:00"
     },
     {
       "id": "event:comic-day-at-the-cartoon-museum:it",
@@ -714,7 +738,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Una giornata dedicata ai fumetti unisce una selezione di volumi, un seminario alle 16 sul collezionismo e valutazioni gratuite per chi porta i propri albi.",
-      "updated_at": "2026-10-25T14:59:21+00:00",
+      "updated_at": "2026-10-26T15:04:47+00:00",
       "expires_at": "2026-10-31T17:45:00+00:00"
     },
     {
@@ -738,7 +762,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "All'alba, centinaia di auto anteriori al 1905 si radunano su Serpentine Road e danno il via alla corsa automobilistica più longeva al mondo, nata nel 1896.",
-      "updated_at": "2026-10-25T14:59:21+00:00",
+      "updated_at": "2026-10-26T15:04:47+00:00",
       "expires_at": "2026-11-01T08:45:00+00:00"
     },
     {
@@ -762,7 +786,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Nell'ultimo giorno, 45 opere, fotografie, film, oggetti e testimonianze mostrano come gli artisti raccontarono una Londra trasformata da bombe, privazioni e adattamento.",
-      "updated_at": "2026-10-25T14:59:21+00:00",
+      "updated_at": "2026-10-26T15:04:47+00:00",
       "expires_at": "2026-11-01T18:15:00+00:00"
     }
   ]
