@@ -337,16 +337,34 @@ function locationMergeKey(value) {
   return searchKey(value).replace(/^(?:the|il|lo|la|i|gli|le)\s+/, "");
 }
 
-function locationScore(name, query, supportingText = "") {
+function tokenMatches(value, token) {
+  const words = searchKey(value).split(" ").filter(Boolean);
+  if (token.length <= 3) return words.some(word => word === token || word === `${token}s`);
+  return words.some(word => word.includes(token));
+}
+
+function allTokensMatch(value, tokens) {
+  return tokens.every(token => tokenMatches(value, token));
+}
+
+function locationScore(name, query, supportingText = "", keywords = []) {
   const candidate = searchKey(name);
   const needle = searchKey(query);
   if (candidate === needle) return 1200;
-  if (candidate.startsWith(needle)) return 800;
-  if (candidate.includes(needle)) return 520;
+  if (candidate.startsWith(needle) && allTokensMatch(candidate, needle.split(" ").filter(Boolean))) return 800;
+  if (allTokensMatch(candidate, needle.split(" ").filter(Boolean))) return 520;
   const tokens = needle.split(" ").filter(Boolean);
-  if (tokens.length && tokens.every(token => candidate.includes(token))) return 300;
-  const searchable = `${candidate} ${searchKey(supportingText)}`;
-  return tokens.length && tokens.every(token => searchable.includes(token)) ? 180 : 0;
+  const keywordText = searchKey(keywords.join(" "));
+  if (tokens.length && allTokensMatch(keywordText, tokens)) return 420;
+  const searchable = `${candidate} ${keywordText} ${searchKey(supportingText)}`;
+  return tokens.length && allTokensMatch(searchable, tokens) ? 180 : 0;
+}
+
+function locationKeywords(place) {
+  const category = String(place.category || "").toUpperCase();
+  const text = `${place.name || ""} ${place.hook || ""} ${place.description || ""} ${place.hookIt || ""} ${place.descriptionIt || ""}`;
+  const isPub = (category === "FOOD" || category === "BUILDING") && tokenMatches(text, "pub");
+  return isPub ? ["pub", "pubs", "public house"] : [];
 }
 
 function toolLink(id, locale) {
@@ -372,7 +390,11 @@ function toolLink(id, locale) {
 async function searchPublishedPlaces(query, locale, fetchImpl) {
   const endpoint = new URL("/api/places", PLACES_API_ORIGIN);
   endpoint.searchParams.set("q", query);
-  endpoint.searchParams.set("limit", "12");
+  // The places API deliberately performs a broad substring lookup. Pull enough
+  // candidates for this Worker to apply word-aware ranking (so `pub` does not
+  // get crowded out by `public`) and to return every genuine matching place.
+  endpoint.searchParams.set("limit", "250");
+  endpoint.searchParams.set("compact", "1");
   try {
     const response = await fetchImpl(endpoint, {
       headers: { Accept: "application/json" },
@@ -384,6 +406,7 @@ async function searchPublishedPlaces(query, locale, fetchImpl) {
       const summary = locale === "it"
         ? (place.hookIt || place.descriptionIt || place.hook || place.description || "Luogo presente negli strumenti London Advanced.")
         : (place.hook || place.description || "A place available in the London Advanced tools.");
+      const keywords = locationKeywords(place);
       return {
         id: `location:${place.id}`,
         type: "location",
@@ -391,12 +414,15 @@ async function searchPublishedPlaces(query, locale, fetchImpl) {
         title: place.name,
         summary,
         url: toolLink("smart-navigation", locale).url,
+        tags: [place.category].filter(Boolean),
+        keywords,
+        content: summary,
         links: [
           toolLink("smart-navigation", locale),
           toolLink("london-by-mood", locale),
           toolLink("escape-the-crowds", locale)
         ],
-        score: locationScore(place.name, query, summary),
+        score: locationScore(place.name, query, summary, keywords),
         source: "places-d1"
       };
     });
@@ -489,8 +515,7 @@ export async function handleLocationSearch(request, env, fetchImpl = fetch) {
   ]);
   const records = mergeLocationResults([...places, ...loos])
     .filter(record => record.score > 0)
-    .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
-    .slice(0, 15);
+    .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title));
 
   return jsonResponse({ ok: true, query, locale, count: records.length, records }, 200, {
     "Cache-Control": "public, max-age=60, stale-while-revalidate=300"

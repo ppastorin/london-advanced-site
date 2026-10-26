@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
+import vm from "node:vm";
 
 import { handleLocationSearch } from "../worker/index.mjs";
 
@@ -42,4 +44,56 @@ test("location search merges a shared place into links for all applicable tools"
     "escape-the-crowds",
     "loo-finder"
   ]);
+});
+
+test("location search returns every pub candidate without matching public as pub", async () => {
+  let upstreamUrl;
+  const places = [
+    ...Array.from({ length: 31 }, (_, index) => ({
+      id: `PUB-${index}`,
+      name: `Pub venue ${index}`,
+      category: "FOOD",
+      description: `An independent pub with a distinctive room ${index}.`,
+      hook: `An independent pub with a distinctive room ${index}.`
+    })),
+    ...Array.from({ length: 80 }, (_, index) => ({
+      id: `PUBLIC-${index}`,
+      name: `Public space ${index}`,
+      category: "AREA",
+      description: "A public garden and open space.",
+      hook: "A public garden and open space."
+    }))
+  ];
+  const fetchImpl = async request => {
+    upstreamUrl = new URL(request);
+    return Response.json({ places });
+  };
+  const response = await handleLocationSearch(
+    new Request("https://www.londonadvanced.com/api/search-locations?q=pub&locale=en"),
+    {},
+    fetchImpl
+  );
+  const payload = await response.json();
+
+  assert.equal(upstreamUrl.searchParams.get("limit"), "250");
+  assert.equal(upstreamUrl.searchParams.get("compact"), "1");
+  assert.equal(payload.count, 31);
+  assert.ok(payload.records.every(record => record.keywords.includes("pub")));
+  assert.ok(payload.records.every(record => !record.title.startsWith("Public space")));
+});
+
+test("browser search treats short queries as words and keeps the full result count", async () => {
+  const source = await readFile("search/search.js", "utf8");
+  const executable = source.match(/function normalize[\s\S]*?(?=function renderResults)/)?.[0];
+  assert.ok(executable, "Could not isolate the browser search scorer");
+  const context = { window: {}, Intl };
+  vm.createContext(context);
+  vm.runInContext(`const pageLocale = "en";\n${executable}\nwindow.__TEST__ = { normalize, scoreRecord };`, context);
+
+  const pub = { title: "The Dove", keywords: ["pub"], tags: ["FOOD"], summary: "A riverside pub.", content: "" };
+  const publicSpace = { title: "Public garden", keywords: [], tags: ["AREA"], summary: "A public open space.", content: "" };
+  assert.ok(context.window.__TEST__.scoreRecord(pub, "pub") > 0);
+  assert.equal(context.window.__TEST__.scoreRecord(publicSpace, "pub"), 0);
+  assert.doesNotMatch(source, /\.slice\(0, 20\);/);
+  assert.match(source, /Show all \$\{total\} results/);
 });

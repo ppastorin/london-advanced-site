@@ -56,6 +56,9 @@
 .search-result-links { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .search-result-links a { padding: 8px 11px; border: 1px solid #171717; border-radius: 999px; font: 700 12px "DM Sans", Arial, sans-serif; }
 .search-result-links a:hover { color: #fff; background: #171717; }
+.search-show-all { justify-self: center; margin-top: 20px; padding: 13px 20px; border: 1px solid #171717; border-radius: 999px; color: #171717; background: transparent; font: 700 13px "DM Sans", Arial, sans-serif; cursor: pointer; }
+.search-show-all:hover { color: #fff; background: #171717; }
+.search-show-all:focus-visible { outline: 3px solid #a98c55; outline-offset: 3px; }
 
 @media (max-width: 900px) {
   .site-nav { grid-template-columns: minmax(0, 1fr) auto auto auto; }
