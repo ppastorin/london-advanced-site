@@ -395,6 +395,10 @@ async function searchPublishedPlaces(query, locale, fetchImpl) {
   // get crowded out by `public`) and to return every genuine matching place.
   endpoint.searchParams.set("limit", "250");
   endpoint.searchParams.set("compact", "1");
+  // `pub` is a content type in the imported FOOD catalogue, not a database
+  // category of its own. Restrict this intent to entity-bearing categories so
+  // hundreds of records containing `public` cannot consume the candidate set.
+  if (["pub", "pubs"].includes(searchKey(query))) endpoint.searchParams.set("categories", "FOOD,BUILDING");
   try {
     const response = await fetchImpl(endpoint, {
       headers: { Accept: "application/json" },

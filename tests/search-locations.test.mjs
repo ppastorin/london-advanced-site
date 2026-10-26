@@ -77,6 +77,7 @@ test("location search returns every pub candidate without matching public as pub
 
   assert.equal(upstreamUrl.searchParams.get("limit"), "250");
   assert.equal(upstreamUrl.searchParams.get("compact"), "1");
+  assert.equal(upstreamUrl.searchParams.get("categories"), "FOOD,BUILDING");
   assert.equal(payload.count, 31);
   assert.ok(payload.records.every(record => record.keywords.includes("pub")));
   assert.ok(payload.records.every(record => !record.title.startsWith("Public space")));
