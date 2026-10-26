@@ -56,6 +56,27 @@ test("location search returns every pub candidate without matching public as pub
       description: `An independent pub with a distinctive room ${index}.`,
       hook: `An independent pub with a distinctive room ${index}.`
     })),
+    {
+      id: "WAXY-SISTER",
+      name: "Waxy's Little Sister",
+      category: "FOOD",
+      description: "A compact Irish-pub setting around the corner.",
+      hook: "A compact Irish-pub setting around the corner."
+    },
+    {
+      id: "WHITE-SWAN-1",
+      name: "The White Swan",
+      category: "FOOD",
+      description: "A Twickenham riverside pub.",
+      hook: "A Twickenham riverside pub."
+    },
+    {
+      id: "WHITE-SWAN-2",
+      name: "White Swan",
+      category: "FOOD",
+      description: "A Richmond riverside pub.",
+      hook: "A Richmond riverside pub."
+    },
     ...Array.from({ length: 80 }, (_, index) => ({
       id: `PUBLIC-${index}`,
       name: `Public space ${index}`,
@@ -78,9 +99,11 @@ test("location search returns every pub candidate without matching public as pub
   assert.equal(upstreamUrl.searchParams.get("limit"), "250");
   assert.equal(upstreamUrl.searchParams.get("compact"), "1");
   assert.equal(upstreamUrl.searchParams.get("categories"), "FOOD,BUILDING");
-  assert.equal(payload.count, 31);
+  assert.equal(payload.count, 34);
   assert.ok(payload.records.every(record => record.keywords.includes("pub")));
   assert.ok(payload.records.every(record => !record.title.startsWith("Public space")));
+  assert.ok(payload.records.some(record => record.title === "Waxy's Little Sister"));
+  assert.equal(payload.records.filter(record => /^(?:The )?White Swan$/.test(record.title)).length, 2);
 });
 
 test("browser search treats short queries as words and keeps the full result count", async () => {
