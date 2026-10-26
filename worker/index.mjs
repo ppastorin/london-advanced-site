@@ -529,7 +529,9 @@ export async function handleLocationSearch(request, env, fetchImpl = fetch) {
     .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title));
 
   return jsonResponse({ ok: true, query, locale, count: records.length, records }, 200, {
-    "Cache-Control": "public, max-age=60, stale-while-revalidate=300"
+    // The upstream compact catalogue is already edge-cached. Do not add a
+    // second stale browser/edge layer that can hide newly published places.
+    "Cache-Control": "no-store"
   });
 }
 

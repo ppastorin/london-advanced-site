@@ -1,4 +1,5 @@
 const pageLocale = document.documentElement.lang.toLowerCase().startsWith("it") ? "it" : "en";
+const SEARCH_API_VERSION = "20261026.2";
 const copy = pageLocale === "it" ? {
   loading: "Caricamento…",
   empty: "Nessun risultato. Prova un luogo, un argomento o un’esigenza pratica.",
@@ -166,7 +167,7 @@ async function loadLocations(value) {
   locationController?.abort();
   locationController = new AbortController();
   try {
-    const params = new URLSearchParams({ q: value.trim(), locale: pageLocale });
+    const params = new URLSearchParams({ q: value.trim(), locale: pageLocale, v: SEARCH_API_VERSION });
     const response = await fetch(`/api/search-locations?${params}`, {
       headers: { Accept: "application/json" },
       signal: locationController.signal
