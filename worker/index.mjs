@@ -328,7 +328,7 @@ function searchKey(value) {
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[’']/g, "")
-    .replace(/[^a-z0-9\s-]/g, " ")
+    .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -494,6 +494,13 @@ function mergeLocationResults(records) {
     const current = merged.get(key);
     if (!current) {
       merged.set(key, record);
+      continue;
+    }
+    // Same-name venues are not duplicates: London contains genuinely distinct
+    // pubs such as The White Swan and White Swan. Merge only across datasets
+    // (for example a place record with its matching Loo Finder record).
+    if (current.source === record.source) {
+      merged.set(`${key}:${record.id}`, record);
       continue;
     }
     const links = new Map([...current.links, ...record.links].map(link => [link.id, link]));
