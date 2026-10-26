@@ -28,7 +28,7 @@
   "location": "Severndroog Castle",
   "post_format": "carousel",
   "internal_title": "Severndroog Castle · panorama e storia scomoda a Shooters Hill",
-  "updated_at": "2026-10-24T09:20:00+01:00",
+  "updated_at": "2026-10-26T22:19:00+00:00",
   "scheduled_for": "2026-11-24T18:30:00+00:00",
   "images": [
     {
@@ -48,7 +48,7 @@
     {
       "order": 3,
       "src": "/assets/instagram/severndroog castle/severndroog castle - 4.jpg",
-      "alt": "Lo skyline centrale di Londra visto sopra gli alberi da Shooters Hill.",
+      "alt": "La City di Londra vista dalla terrazza di Severndroog Castle.",
       "focal_x": 50,
       "focal_y": 50
     },
@@ -75,10 +75,10 @@
     "checked_at": "2026-10-19"
   },
   "metricool": {
-    "planner_id": "405283115",
+    "planner_id": "407217251",
     "scheduled_at": "2026-10-19T22:38:00+01:00",
     "published_url": "",
-    "last_sync_at": "2026-10-24T09:20:00+01:00",
-    "sync_note": "Metricool UUID 8990716602833715909; designed carousel and revised discovery hashtags applied 2026-10-24"
+    "last_sync_at": "2026-10-26T22:19:00+00:00",
+    "sync_note": "Metricool UUID 8990716602833715909; slide 3 corrected from Canary Wharf to the City"
   }
 }
