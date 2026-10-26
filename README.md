@@ -12,6 +12,18 @@ npm test
 
 Cloudflare publishes only `dist/` as configured in `wrangler.jsonc`.
 
+## Build and deployment
+
+Cloudflare Workers Builds is the only production deployer. A push to `main` runs
+`npm test`; that command regenerates `dist/` from the source files and then runs
+the complete validation suite before Cloudflare executes `npx wrangler deploy`.
+Wrangler is pinned by `package.json` and `package-lock.json`.
+
+GitHub Actions is validation-only. It regenerates and checks the site in its own
+workspace, uses read-only repository permissions, and never commits generated
+files back to `main`. This prevents one source change from creating a second bot
+commit and a second Cloudflare deployment.
+
 The bilingual Journal, one-day itineraries and their private Decap editor are documented in [`JOURNAL_STUDIO.md`](JOURNAL_STUDIO.md). Journal source content lives under `content/journal/`; itinerary source content lives under `content/itineraries/`. Generated public pages remain under `dist/journal/`, `dist/it/journal/`, `dist/itineraries/` and `dist/it/itinerari/`.
 
 ## Previous v1.6 design release

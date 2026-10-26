@@ -36,7 +36,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: site-safety-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -50,6 +54,10 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: "22"
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
 
       - name: Refresh static pre-rendering
         run: |
@@ -60,24 +68,10 @@ jobs:
           fi
 
       - name: Validate site structure and links
-        run: npm test
+        run: npm run test:generated
 
       - name: Print external-link inventory
         run: npm run links
 
       - name: Validate the Cloudflare package
-        run: npx --yes wrangler@4 deploy --dry-run --outdir /tmp/london-advanced-wrangler-check
-
-      - name: Sync generated pages on main
-        if: github.event_name == 'push'
-        run: |
-          if git diff --quiet -- dist/index.html dist/events/index.html dist/it dist/journal dist/assets/journal dist/assets/instagram dist/studio dist/journal.css dist/journal.js dist/sitemap.xml dist/search dist/search.js dist/search.css dist/data/search-index.en.json dist/data/search-index.it.json; then
-            echo "Generated pages/assets are already current."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/index.html dist/events/index.html dist/it dist/journal dist/assets/journal dist/assets/instagram dist/studio dist/journal.css dist/journal.js dist/sitemap.xml dist/search dist/search.js dist/search.css dist/data/search-index.en.json dist/data/search-index.it.json
-          git commit -m "build: refresh generated bilingual pages and assets"
-          git push
+        run: npx wrangler deploy --dry-run --outdir /tmp/london-advanced-wrangler-check
