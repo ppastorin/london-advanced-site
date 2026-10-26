@@ -10,6 +10,8 @@ const copy = pageLocale === "it" ? {
   tool: "Strumento",
   location: "Luogo",
   open: "Apri",
+  showing: (visible, total) => `Visualizzati ${visible} di ${total} risultati`,
+  showAll: total => `Mostra tutti i ${total} risultati`,
   error: "La ricerca non è disponibile in questo momento."
 } : {
   loading: "Loading…",
@@ -22,6 +24,8 @@ const copy = pageLocale === "it" ? {
   tool: "Tool",
   location: "Place",
   open: "Open",
+  showing: (visible, total) => `Showing ${visible} of ${total} results`,
+  showAll: total => `Show all ${total} results`,
   error: "Search is unavailable at the moment."
 };
 
@@ -34,6 +38,7 @@ let locationRecords = [];
 let locationTimer;
 let locationRequest = 0;
 let locationController;
+let visibleLimit = 20;
 
 function normalize(value) {
   return String(value || "")
@@ -41,9 +46,19 @@ function normalize(value) {
     .replace(/[\u0300-\u036f]/g, "")
     .toLocaleLowerCase(pageLocale === "it" ? "it-IT" : "en-GB")
     .replace(/[’']/g, "")
-    .replace(/[^a-z0-9\s-]/g, " ")
+    .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function tokenMatches(value, token) {
+  const words = normalize(value).split(" ").filter(Boolean);
+  if (token.length <= 3) return words.some(word => word === token || word === `${token}s`);
+  return words.some(word => word.includes(token));
+}
+
+function allTokensMatch(value, tokens) {
+  return tokens.every(token => tokenMatches(value, token));
 }
 
 function scoreRecord(record, query) {
@@ -56,25 +71,25 @@ function scoreRecord(record, query) {
   let score = 0;
 
   if (title === query) score += 1200;
-  else if (title.startsWith(query)) score += 700;
-  else if (title.includes(query)) score += 450;
+  else if (title.startsWith(query) && allTokensMatch(title, tokens)) score += 700;
+  else if (allTokensMatch(title, tokens)) score += 450;
 
   if (keywords.split(" ").includes(query)) score += 650;
-  else if (keywords.includes(query)) score += 320;
-  if (tags.includes(query)) score += 260;
-  if (summaryText.includes(query)) score += 120;
-  if (content.includes(query)) score += 45;
+  else if (allTokensMatch(keywords, tokens)) score += 320;
+  if (allTokensMatch(tags, tokens)) score += 260;
+  if (allTokensMatch(summaryText, tokens)) score += 120;
+  if (allTokensMatch(content, tokens)) score += 45;
 
   for (const token of tokens) {
-    if (title.includes(token)) score += 90;
-    if (keywords.includes(token)) score += 75;
-    if (tags.includes(token)) score += 55;
-    if (summaryText.includes(token)) score += 25;
-    if (content.includes(token)) score += 8;
+    if (tokenMatches(title, token)) score += 90;
+    if (tokenMatches(keywords, token)) score += 75;
+    if (tokenMatches(tags, token)) score += 55;
+    if (tokenMatches(summaryText, token)) score += 25;
+    if (tokenMatches(content, token)) score += 8;
   }
 
   const searchable = `${title} ${keywords} ${tags} ${summaryText} ${content}`;
-  if (!tokens.every(token => searchable.includes(token))) return 0;
+  if (!allTokensMatch(searchable, tokens)) return 0;
   return score;
 }
 
@@ -89,11 +104,13 @@ function renderResults(query) {
     .filter(record => !record.expires_at || Date.parse(record.expires_at) > Date.now())
     .map(record => ({ record, score: scoreRecord(record, query) }))
     .filter(match => match.score > 0)
-    .sort((a, b) => b.score - a.score || a.record.title.localeCompare(b.record.title))
-    .slice(0, 20);
+    .sort((a, b) => b.score - a.score || a.record.title.localeCompare(b.record.title));
 
-  summary.textContent = matches.length ? copy.count(matches.length) : copy.empty;
-  for (const { record } of matches) {
+  const visibleMatches = matches.slice(0, visibleLimit);
+  summary.textContent = matches.length
+    ? (visibleMatches.length < matches.length ? copy.showing(visibleMatches.length, matches.length) : copy.count(matches.length))
+    : copy.empty;
+  for (const { record } of visibleMatches) {
     const item = document.createElement("article");
     item.className = "search-result";
 
@@ -131,6 +148,17 @@ function renderResults(query) {
     }
     results.append(item);
   }
+  if (visibleMatches.length < matches.length) {
+    const showAll = document.createElement("button");
+    showAll.type = "button";
+    showAll.className = "search-show-all";
+    showAll.textContent = copy.showAll(matches.length);
+    showAll.addEventListener("click", () => {
+      visibleLimit = matches.length;
+      renderResults(query);
+    });
+    results.append(showAll);
+  }
 }
 
 async function loadLocations(value) {
@@ -166,6 +194,7 @@ function scheduleLocations(value, immediate = false) {
 function updateSearch(value, pushHistory = false) {
   const query = normalize(value);
   locationRecords = [];
+  visibleLimit = 20;
   renderResults(query);
   if (pushHistory) {
     const url = new URL(window.location.href);
