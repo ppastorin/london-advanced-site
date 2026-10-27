@@ -7,6 +7,9 @@ const script = await readFile(new URL('../dist/loo/loo.js', import.meta.url), 'u
 const sample = {
   active: true, name: 'Test shopping toilet', category: 'shopping_centre',
   lat: 51.50, lon: -0.12, fee_pence: 150, accessible: true, baby_change: true,
+  hours_note: 'English hours', hours_note_it: 'Orari italiani',
+  location_note: 'English location', location_note_it: 'Posizione italiana',
+  fee_note: 'English fee note', fee_note_it: 'Condizioni italiane',
   source_url: 'https://example.org',
   source_name: 'Council', last_verified: '2026-09-24'
 };
@@ -54,6 +57,12 @@ for (const [language, page] of [
       assert.match(card, /£1\.50/);
       assert.match(card, new RegExp(language === 'it-IT' ? 'Accessibile' : 'Accessible'));
       assert.match(card, new RegExp(language === 'it-IT' ? 'Fasciatoio' : 'Baby change'));
+      for (const detail of language === 'it-IT'
+        ? ['Orari italiani', 'Posizione italiana', 'Condizioni italiane']
+        : ['English hours', 'English location', 'English fee note']) assert.match(card, new RegExp(detail));
+      assert.doesNotMatch(card, new RegExp(language === 'it-IT'
+        ? 'English hours|English location|English fee note'
+        : 'Orari italiani|Posizione italiana|Condizioni italiane'));
       assert.doesNotMatch(card, /\$\{IT\?|no charge stated|nessun costo indicato/);
     }
     assert.ok(requests.some(url => url.startsWith('/api/loo-geocode?q=')));
