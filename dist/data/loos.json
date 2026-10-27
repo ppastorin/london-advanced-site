@@ -26,7 +26,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "beckenham-junction",
@@ -50,7 +53,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "blackfriars",
@@ -74,7 +80,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "cannon-street",
@@ -98,7 +107,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "charing-cross",
@@ -122,7 +134,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "city-thameslink",
@@ -146,7 +161,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "clapham-junction",
@@ -170,7 +188,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "denmark-hill",
@@ -194,7 +215,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "east-croydon",
@@ -218,7 +242,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "elephant-castle",
@@ -242,7 +269,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "euston",
@@ -266,7 +296,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "finsbury-park",
@@ -290,7 +323,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "green-park",
@@ -314,7 +350,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "greenwich",
@@ -338,7 +377,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "kings-cross",
@@ -362,7 +404,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "lewisham",
@@ -386,7 +431,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "liverpool-street",
@@ -410,7 +458,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "london-bridge",
@@ -434,7 +485,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "marylebone",
@@ -458,7 +512,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "new-cross",
@@ -482,7 +539,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "paddington",
@@ -506,7 +566,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "peckham-rye",
@@ -530,7 +593,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "piccadilly-circus",
@@ -554,7 +620,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "richmond",
@@ -578,7 +647,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "stratford-international",
@@ -602,7 +674,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "tottenham-hale",
@@ -626,7 +701,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "upminster",
@@ -650,7 +728,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "victoria",
@@ -674,7 +755,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "waterloo",
@@ -698,7 +782,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "wimbledon",
@@ -722,7 +809,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "woolwich-arsenal",
@@ -746,7 +836,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "heathrow-23",
@@ -770,7 +863,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "heathrow-4",
@@ -794,7 +890,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "heathrow-5",
@@ -818,7 +917,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "canning-town",
@@ -842,7 +944,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "crystal-palace",
@@ -866,7 +971,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "golders-green",
@@ -890,7 +998,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "north-greenwich",
@@ -914,7 +1025,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "turnpike-lane",
@@ -938,7 +1052,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "vauxhall",
@@ -962,7 +1079,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "walthamstow-central",
@@ -986,7 +1106,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "west-croydon",
@@ -1010,7 +1133,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "white-city",
@@ -1034,7 +1160,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "Presso la stazione degli autobus. Segui la segnaletica locale.",
+      "fee_note_it": "Gratuito — bagno gestito da TfL."
     },
     {
       "id": "baker-street",
@@ -1058,7 +1187,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "oxford-circus",
@@ -1082,7 +1214,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "st-johns-wood",
@@ -1106,7 +1241,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "westminster",
@@ -1130,7 +1268,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "canary-wharf",
@@ -1154,7 +1295,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "stratford",
@@ -1178,7 +1322,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "high-street-kensington",
@@ -1202,7 +1349,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della stazione ferroviaria o degli autobus; sono possibili chiusure temporanee.",
+      "location_note_it": "All’interno o presso la stazione. Segui la segnaletica locale; l’accesso può trovarsi oltre i tornelli.",
+      "fee_note_it": "Gestito dalla stazione o dall’operatore; può essere richiesto un pagamento se il bagno non è gestito da TfL."
     },
     {
       "id": "jubilee-hall",
@@ -1255,7 +1405,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 08:00–19:30.",
+      "location_note_it": "Bagno pubblico presso Jubilee Market Hall.",
+      "fee_note_it": "La pagina del municipio non indica alcun costo."
     },
     {
       "id": "parliament-street",
@@ -1308,7 +1461,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 07:30–20:30.",
+      "location_note_it": "Sotto Parliament Street, collegato direttamente alla stazione Westminster della metropolitana tramite il sottopassaggio pedonale tra le uscite 5 e 6.",
+      "fee_note_it": "£1. Accesso RADAR disponibile per il bagno accessibile."
     },
     {
       "id": "victoria-embankment-gardens",
@@ -1361,7 +1517,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 07:00–20:30.",
+      "location_note_it": "Bagni pubblici nei Victoria Embankment Gardens, sul lato di Villiers Street.",
+      "fee_note_it": "La pagina del municipio non indica alcun costo."
     },
     {
       "id": "queensway-173",
@@ -1414,7 +1573,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 09:00–23:00.",
+      "location_note_it": "Bagni pubblici gestiti dal municipio.",
+      "fee_note_it": "La pagina del municipio non indica alcun costo."
     },
     {
       "id": "maida-hill-market",
@@ -1467,7 +1629,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 06:00–19:00.",
+      "location_note_it": "Bagni pubblici presso Maida Hill Market.",
+      "fee_note_it": "La pagina del municipio non indica alcun costo."
     },
     {
       "id": "tower-hill",
@@ -1491,7 +1656,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Lun–ven 08:00–20:00; fine settimana 09:00–17:00, con prolungamento fino alle 19:00 da giugno a ottobre.",
+      "location_note_it": "Nel complesso Tower Place, di fronte alla Torre di Londra.",
+      "fee_note_it": "£1; gratuito per chi possiede una chiave RADAR."
     },
     {
       "id": "paternoster",
@@ -1515,7 +1683,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Lun–ven 08:00–20:00; fine settimana 09:00–17:00.",
+      "location_note_it": "Vicino alla Chapter House di St Paul’s.",
+      "fee_note_it": "£1; gratuito per chi possiede una chiave RADAR."
     },
     {
       "id": "british-museum",
@@ -1539,7 +1710,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "In genere 10:00–17:00 tutti i giorni, con chiusura più tarda il venerdì; verifica con il museo prima di partire.",
+      "location_note_it": "I bagni sono all’interno del museo; si entra passando dai controlli di sicurezza.",
+      "fee_note_it": "L’ingresso generale è gratuito; possono esserci code ai controlli o all’ingresso."
     },
     {
       "id": "natural-history-museum",
@@ -1592,7 +1766,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 10:00–17:50; possono applicarsi chiusure stagionali.",
+      "location_note_it": "Diversi bagni all’interno del museo, compresi servizi accessibili.",
+      "fee_note_it": "L’ingresso generale è gratuito; possono esserci code."
     },
     {
       "id": "va-south-kensington",
@@ -1616,7 +1793,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Aperto tutti i giorni; il venerdì chiude più tardi. Verifica gli orari aggiornati.",
+      "location_note_it": "Bagni in tutto l’edificio; sono presenti 13 servizi accessibili.",
+      "fee_note_it": "L’ingresso generale al museo è gratuito; le mostre temporanee possono richiedere un biglietto."
     },
     {
       "id": "science-museum",
@@ -1669,7 +1849,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 10:00–18:00; l’ultimo ingresso può essere anticipato.",
+      "location_note_it": "La mappa del museo indica diversi bagni, servizi accessibili, Changing Places e fasciatoi.",
+      "fee_note_it": "L’ingresso generale è gratuito; la prenotazione può essere consigliata."
     },
     {
       "id": "national-archives",
@@ -1693,7 +1876,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile durante gli orari di apertura al pubblico; verifica gli orari aggiornati.",
+      "location_note_it": "Bagni per i visitatori all’interno dell’edificio.",
+      "fee_note_it": "L’accesso all’edificio e alle mostre è gratuito."
     },
     {
       "id": "museum-of-home",
@@ -1717,7 +1903,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del museo; verifica gli orari aggiornati.",
+      "location_note_it": "Bagni separati per genere, bagni neutri e tre servizi accessibili distribuiti nel museo.",
+      "fee_note_it": "L’ingresso generale è gratuito."
     },
     {
       "id": "paddington-recreation-ground",
@@ -1741,7 +1930,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Lun–ven 07:00–20:50; fine settimana 08:00–19:50; sono possibili variazioni stagionali.",
+      "location_note_it": "Bagni pubblici all’interno di Paddington Recreation Ground.",
+      "fee_note_it": "La pagina del municipio non indica alcun costo."
     },
     {
       "id": "church-street-triangle",
@@ -1791,7 +1983,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Lun–sab 09:00–18:00; chiuso la domenica.",
+      "location_note_it": "Bagno pubblico gestito dal municipio presso Church Street Triangle.",
+      "fee_note_it": "La pagina del municipio non indica alcun costo."
     },
     {
       "id": "liberty-london",
@@ -1815,7 +2010,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del negozio.",
+      "location_note_it": "Bagni separati per genere al piano seminterrato e al terzo piano; bagni accessibili e neutri al secondo e quarto piano; fasciatoio al quarto piano.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I servizi sono all’interno del grande magazzino; la fonte non specifica se sia necessario effettuare un acquisto."
     },
     {
       "id": "selfridges-london",
@@ -1839,7 +2037,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del negozio.",
+      "location_note_it": "Bagni ai piani seminterrato, 1, 2, 3 e 4; servizi accessibili e fasciatoi sono disponibili su più piani.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I servizi generali del negozio sono separati da quelli riservati ai ristoranti."
     },
     {
       "id": "harrods",
@@ -1863,7 +2064,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del negozio.",
+      "location_note_it": "Bagni accessibili al secondo piano accanto a Balenciaga, nell’area Men’s Superbrands, e al quarto piano accanto a Fashion Lab. Fasciatoi al primo e quarto piano.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I servizi sono all’interno del negozio; la fonte non specifica se sia necessario effettuare un acquisto."
     },
     {
       "id": "john-lewis-oxford-street",
@@ -1887,7 +2091,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del negozio.",
+      "location_note_it": "I bagni per i clienti sono indicati nella guida del negozio di Oxford Street.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I bagni per i clienti sono elencati tra i servizi del negozio."
     },
     {
       "id": "peter-jones",
@@ -1911,7 +2118,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del negozio.",
+      "location_note_it": "Bagni al piano interrato e ai livelli 2, 3, 5 e 6; bagni accessibili al piano interrato e al livello 6; stanze per genitori ai livelli 3 e 6.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I bagni per i clienti sono presenti su diversi piani."
     },
     {
       "id": "marks-spencer-marble-arch",
@@ -1935,7 +2145,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del negozio.",
+      "location_note_it": "I servizi del negozio includono bagni e fasciatoi.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I servizi sono elencati tra quelli del negozio."
     },
     {
       "id": "harvey-nichols-knightsbridge",
@@ -1959,7 +2172,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del negozio.",
+      "location_note_it": "Bagni femminili al secondo piano; bagni accessibili al piano seminterrato e al quinto piano.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I servizi sono elencati tra quelli disponibili nel negozio."
     },
     {
       "id": "westfield-london",
@@ -1983,7 +2199,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni accessibili in tutto il centro; sono disponibili anche stanze per genitori.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I servizi accessibili usano il sistema RADAR; il personale può aiutarti se non hai la chiave."
     },
     {
       "id": "westfield-stratford-city",
@@ -2007,7 +2226,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni accessibili in tutto il centro; stanze per genitori al piano seminterrato e al piano terra.",
+      "fee_note_it": "Non è indicato alcun costo per il bagno. I servizi accessibili usano il sistema RADAR; il personale o il Guest Services possono aiutarti."
     },
     {
       "id": "national-gallery",
@@ -2031,7 +2253,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Aperto tutti i giorni; il venerdì chiude più tardi. Verifica gli orari aggiornati.",
+      "location_note_it": "Bagni e fasciatoi sono all’interno della galleria; sono disponibili servizi accessibili e Changing Places.",
+      "fee_note_it": "L’ingresso generale è gratuito; alcune mostre sono a pagamento."
     },
     {
       "id": "national-portrait-gallery",
@@ -2055,7 +2280,10 @@
       "source_type": "official",
       "last_verified": "2026-10-18",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Aperto da domenica a giovedì 10:30–18:00 e venerdì e sabato 10:30–21:00; ultimo ingresso 30 minuti prima della chiusura.",
+      "location_note_it": "Bagni standard e accessibili ai piani -2, -3 e 4. Fasciatoi disponibili su tutti e tre i piani; il Changing Places è al piano -2 e occorre portare la propria imbracatura per il sollevatore.",
+      "fee_note_it": "L’ingresso generale è gratuito; alcune mostre sono a pagamento."
     },
     {
       "id": "tate-modern",
@@ -2079,7 +2307,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della galleria.",
+      "location_note_it": "All’interno della Tate Modern sono disponibili bagni pubblici, servizi accessibili e fasciatoi.",
+      "fee_note_it": "L’ingresso alla collezione permanente è gratuito; alcune mostre sono a pagamento."
     },
     {
       "id": "tate-britain",
@@ -2103,7 +2334,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della galleria.",
+      "location_note_it": "La mappa per i visitatori della Tate indica bagni, servizi accessibili, Changing Places e fasciatoi.",
+      "fee_note_it": "L’ingresso alla collezione permanente è gratuito; alcune mostre sono a pagamento."
     },
     {
       "id": "iwm-london",
@@ -2127,7 +2361,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del museo.",
+      "location_note_it": "I bagni per i visitatori sono all’interno del museo; sono disponibili servizi accessibili.",
+      "fee_note_it": "L’ingresso generale è gratuito."
     },
     {
       "id": "wallace-collection",
@@ -2151,7 +2388,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Aperto tutti i giorni 10:00–17:00; verifica eventuali variazioni temporanee.",
+      "location_note_it": "I bagni pubblici sono al piano seminterrato; sono disponibili un bagno accessibile e una cabina con fasciatoio.",
+      "fee_note_it": "L’ingresso alla collezione principale è gratuito e senza biglietto."
     },
     {
       "id": "wellcome-collection",
@@ -2175,7 +2415,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Gallerie generalmente aperte mar–dom 10:00–18:00; verifica gli orari aggiornati.",
+      "location_note_it": "Bagni accessibili su tutti i piani; fasciatoi a ogni piano e un Changing Places al livello 0.",
+      "fee_note_it": "L’ingresso e le mostre sono gratuiti."
     },
     {
       "id": "horniman",
@@ -2199,7 +2442,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del museo.",
+      "location_note_it": "Bagni per visitatori e servizi accessibili sono disponibili nel complesso museale.",
+      "fee_note_it": "L’ingresso generale al museo e ai giardini è gratuito; alcune attrazioni e mostre sono a pagamento."
     },
     {
       "id": "young-va",
@@ -2223,7 +2469,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 10:00–17:45; verifica gli avvisi aggiornati.",
+      "location_note_it": "I bagni sono distribuiti nell’edificio.",
+      "fee_note_it": "L’ingresso generale è gratuito e non occorre prenotare."
     },
     {
       "id": "london-museum-docklands",
@@ -2247,7 +2496,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Aperto tutti i giorni 10:00–17:00.",
+      "location_note_it": "Bagni accessibili al piano terra e al terzo piano; bagni neutri al primo piano e Changing Places al primo piano.",
+      "fee_note_it": "Le gallerie sono gratuite e senza biglietto."
     },
     {
       "id": "national-maritime-museum",
@@ -2271,7 +2523,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del museo.",
+      "location_note_it": "Bagni per i visitatori e servizi accessibili sono disponibili all’interno del museo.",
+      "fee_note_it": "L’ingresso generale è gratuito; alcune mostre possono essere a pagamento."
     },
     {
       "id": "queens-house",
@@ -2295,7 +2550,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della Queen’s House.",
+      "location_note_it": "Bagni per i visitatori disponibili nel complesso dei Royal Museums Greenwich.",
+      "fee_note_it": "L’ingresso generale è gratuito."
     },
     {
       "id": "guildhall-art-gallery",
@@ -2319,7 +2577,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della galleria.",
+      "location_note_it": "Nella galleria sono disponibili bagni e un servizio accessibile alle sedie a rotelle.",
+      "fee_note_it": "L’ingresso generale è gratuito."
     },
     {
       "id": "grant-museum",
@@ -2343,7 +2604,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Verifica giorni e orari di apertura aggiornati di UCL prima di partire.",
+      "location_note_it": "Nell’edificio sono disponibili bagni, compreso un servizio accessibile.",
+      "fee_note_it": "L’ingresso al museo è gratuito."
     },
     {
       "id": "hunterian-museum",
@@ -2367,7 +2631,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Mar–sab 10:00–17:00; chiuso domenica, lunedì e nei giorni festivi.",
+      "location_note_it": "Al piano terra si trovano bagni neutri, un bagno accessibile e un’area fasciatoio separata.",
+      "fee_note_it": "L’ingresso è gratuito; si consiglia di prenotare."
     },
     {
       "id": "raf-museum-london",
@@ -2391,7 +2658,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Tutti i giorni 10:00–17:00; verifica gli orari aggiornati.",
+      "location_note_it": "Bagni accessibili in tutti gli hangar, fasciatoi in varie aree e Changing Places nell’Hangar 2.",
+      "fee_note_it": "L’ingresso a tutte le aree del museo è gratuito; si consiglia di prenotare."
     },
     {
       "id": "national-army-museum",
@@ -2415,7 +2685,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "In genere 10:00–17:30; verifica gli orari aggiornati.",
+      "location_note_it": "Bagni accessibili e Changing Places al piano terra, bagni unisex al primo piano e fasciatoi su diversi piani.",
+      "fee_note_it": "L’ingresso generale è gratuito."
     },
     {
       "id": "sir-john-soane",
@@ -2439,7 +2712,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Di solito mer–dom 10:00–17:00; verifica gli orari aggiornati.",
+      "location_note_it": "È un museo storico molto piccolo: la disponibilità dei bagni è limitata rispetto alle istituzioni più grandi.",
+      "fee_note_it": "L’ingresso è gratuito; la capienza è limitata e possono formarsi code."
     },
     {
       "id": "bank-of-england-museum",
@@ -2463,7 +2739,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "In genere lun–ven 10:00–17:00; verifica gli orari aggiornati e le aperture serali.",
+      "location_note_it": "Bagni per i visitatori disponibili all’interno del museo.",
+      "fee_note_it": "L’ingresso al museo è gratuito."
     },
     {
       "id": "design-museum",
@@ -2487,7 +2766,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del museo.",
+      "location_note_it": "Bagni standard e accessibili su diversi piani; fasciatoi al piano seminterrato e al piano terra.",
+      "fee_note_it": "La collezione permanente e diverse esposizioni sono gratuite; alcune mostre richiedono un biglietto."
     },
     {
       "id": "serpentine-north",
@@ -2511,7 +2793,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Di solito mar–dom 10:00–18:00; verifica eventuali chiusure tra un’installazione e l’altra.",
+      "location_note_it": "Galleria gratuita nei Kensington Gardens; usa i servizi per i visitatori durante gli orari di apertura.",
+      "fee_note_it": "L’ingresso alla galleria è gratuito."
     },
     {
       "id": "saatchi-gallery",
@@ -2535,7 +2820,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "In genere aperto tutti i giorni; verifica la mostra in corso prima di partire.",
+      "location_note_it": "I bagni sono all’interno della galleria; un’area fasciatoio dedicata è utilizzabile gratuitamente, compatibilmente con la disponibilità.",
+      "fee_note_it": "L’ingresso varia secondo la mostra: alcune sono gratuite, altre richiedono un biglietto."
     },
     {
       "id": "battersea-power-station",
@@ -2559,7 +2847,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura al pubblico della Power Station.",
+      "location_note_it": "Bagni pubblici, familiari e accessibili in varie zone; è disponibile un Changing Places e il personale può aprire i bagni accessibili se necessario.",
+      "fee_note_it": "Sono disponibili bagni pubblici in tutta la Power Station; non è indicato alcun costo."
     },
     {
       "id": "brent-cross",
@@ -2583,7 +2874,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni accessibili in tutto il centro; sono disponibili anche fasciatoi.",
+      "fee_note_it": "Il centro mette a disposizione bagni; non è indicato alcun costo."
     },
     {
       "id": "coal-drops-yard",
@@ -2607,7 +2901,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Coal Drops Yard è generalmente aperto ai visitatori 10:00–23:00; gli orari dei bagni possono essere diversi.",
+      "location_note_it": "Bagni pubblici a Coal Drops Yard e sotto la West Handyside Canopy; tutti sono accessibili alle sedie a rotelle e includono fasciatoi.",
+      "fee_note_it": "Sono disponibili bagni pubblici; non è indicato alcun costo."
     },
     {
       "id": "covent-garden-market",
@@ -2631,7 +2928,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del Market Building.",
+      "location_note_it": "Bagni 2theloo all’interno del Market Building; altri bagni pubblici si trovano ai due lati del portico presso St Paul’s Church.",
+      "fee_note_it": "I bagni del Market Building costano £1,50. Gli altri bagni di West Piazza, presso St Paul’s Church, costano 50p."
     },
     {
       "id": "canary-wharf-shopping",
@@ -2655,7 +2955,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura della galleria commerciale.",
+      "location_note_it": "Bagni accessibili, aree genitori/fasciatoio e servizi con sollevatore sono indicati sulle mappe dei centri commerciali di Canary Wharf.",
+      "fee_note_it": "I bagni della galleria commerciale sono indicati sulla mappa ufficiale dell’accessibilità; non è indicato alcun costo."
     },
     {
       "id": "st-james-piccadilly",
@@ -2679,7 +2982,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Chiesa aperta ai visitatori quasi tutti i giorni; l’accesso al bagno è più limitato rispetto agli orari della chiesa.",
+      "location_note_it": "Bagno accessibile senza gradini con fasciatoio. Al di fuori di funzioni ed eventi, l’accesso richiede una chiave NKS/RADAR.",
+      "fee_note_it": "L’ingresso alla chiesa è gratuito. Il bagno accessibile è aperto durante funzioni, concerti ed eventi; negli altri momenti è disponibile con una chiave NKS/RADAR."
     },
     {
       "id": "elys-wimbledon",
@@ -2703,7 +3009,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del negozio.",
+      "location_note_it": "Bagni per i clienti e stanze genitori/bambino al terzo piano. Il negozio è privo di gradini e dispone di ascensori.",
+      "fee_note_it": "I bagni per i clienti sono elencati tra i servizi del negozio; non è indicato alcun costo."
     },
     {
       "id": "putney-exchange",
@@ -2727,7 +3036,10 @@
       "source_type": "local_authority",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagno accessibile confermato per Putney Exchange. Segui la segnaletica del centro o chiedi al personale il servizio più vicino.",
+      "fee_note_it": "È documentato un bagno accessibile nel centro; non è indicato alcun costo."
     },
     {
       "id": "southside-wandsworth",
@@ -2751,7 +3063,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro; se arrivi tardi, verifica gli orari aggiornati sulla mappa dei bagni.",
+      "location_note_it": "Al livello superiore accanto a Five Guys. Sono disponibili Changing Places e servizi per genitori e bambini.",
+      "fee_note_it": "I bagni pubblici sono indicati come gratuiti nella Great British Public Toilet Map."
     },
     {
       "id": "ealing-broadway-shopping",
@@ -2775,7 +3090,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Bagni lun–sab 09:00–17:30; dom 11:00–17:00.",
+      "location_note_it": "Bagni principali al livello 1, vicino all’ufficio direzione. Bagno accessibile all’ingresso di Oxford Road; Changing Places al primo piano.",
+      "fee_note_it": "Sono disponibili bagni per i visitatori; non è indicato alcun costo."
     },
     {
       "id": "lewisham-shopping",
@@ -2799,7 +3117,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro commerciale.",
+      "location_note_it": "Bagni standard e accessibili presso l’ingresso West Walk; Changing Places nel North Mall vicino agli ascensori accanto a Costa.",
+      "fee_note_it": "Sono disponibili bagni pubblici; non è indicato alcun costo."
     },
     {
       "id": "the-glades-bromley",
@@ -2823,7 +3144,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Lun–sab 09:00–19:00; dom 11:00–17:00.",
+      "location_note_it": "Bagni nell’Upper Mall vicino a H&M, nel Lower Mall vicino a Boots e nel CP2 Central Atrium. Changing Places nel Lower Mall vicino a Boots.",
+      "fee_note_it": "I bagni pubblici sono elencati dal Bromley Council; non è indicato alcun costo."
     },
     {
       "id": "hammersmith-broadway",
@@ -2847,7 +3171,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Al piano terra, all’estremità meridionale della galleria commerciale, accanto a Tesco.",
+      "fee_note_it": "I bagni pubblici costano 50p; il fasciatoio è gratuito."
     },
     {
       "id": "st-georges-harrow",
@@ -2871,7 +3198,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni per uomini e donne al secondo piano. Bagno accessibile RADAR nelle vicinanze; fasciatoio accanto ai bagni femminili.",
+      "fee_note_it": "Sono disponibili bagni per i clienti; non è indicato alcun costo."
     },
     {
       "id": "mall-wood-green",
@@ -2895,7 +3225,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Servizi per i visitatori al primo piano. I bagni accessibili includono un servizio RADAR; la Family Room dispone di fasciatoi e di un piccolo WC per bambini.",
+      "fee_note_it": "Sono disponibili servizi per i visitatori; non è indicato alcun costo."
     },
     {
       "id": "exchange-ilford",
@@ -2919,7 +3252,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni standard ai livelli 1 e 3; servizi accessibili al livello 3; disponibile una stanza per genitori e bambini.",
+      "fee_note_it": "All’interno del centro sono documentati bagni pubblici; non è indicato alcun costo."
     },
     {
       "id": "o2-outlet",
@@ -2943,7 +3279,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "The O₂ è generalmente aperto 10:00–22:00; gli orari delle singole strutture variano.",
+      "location_note_it": "I bagni sono indicati in varie zone di The O₂. Outlet Shopping dispone anche di un Changing Places con accesso RADAR.",
+      "fee_note_it": "Sono disponibili bagni pubblici per i visitatori; non è indicato alcun costo."
     },
     {
       "id": "17-central",
@@ -2967,7 +3306,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Servizi per i visitatori aperti dalle 08:00 fino alla chiusura del centro.",
+      "location_note_it": "Servizi per i visitatori al primo piano, presso Asda/Food Hall. Sono disponibili bagni accessibili e una stanza genitori/bambino.",
+      "fee_note_it": "Sono disponibili servizi per i visitatori; non è indicato alcun costo."
     },
     {
       "id": "palace-shopping-enfield",
@@ -2991,7 +3333,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Palace Exchange: bagni al piano terra presso l’ingresso TK Maxx, bagno accessibile al livello 1. Palace Gardens: bagni e fasciatoio vicino agli ascensori del parcheggio e a Waitrose.",
+      "fee_note_it": "Sono disponibili bagni pubblici per i clienti; non è indicato alcun costo."
     },
     {
       "id": "bentall-centre-kingston",
@@ -3015,7 +3360,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni standard e accessibili al livello 2; il bagno accessibile richiede una chiave RADAR. È disponibile una stanza genitori/bambino.",
+      "fee_note_it": "Sono disponibili bagni pubblici standard; non è indicato alcun costo."
     },
     {
       "id": "broadway-bexleyheath",
@@ -3039,7 +3387,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni standard al primo piano. Bagno accessibile al piano terra presso gli ascensori centrali; chiave RADAR disponibile al servizio clienti.",
+      "fee_note_it": "Sono disponibili bagni pubblici standard; non è indicato alcun costo."
     },
     {
       "id": "treaty-centre-hounslow",
@@ -3063,7 +3414,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Nel Treaty Centre sono disponibili bagni pubblici standard e accessibili.",
+      "fee_note_it": "All’interno del centro commerciale sono documentati bagni pubblici e accessibili; non è indicato alcun costo."
     },
     {
       "id": "surrey-quays-shopping",
@@ -3087,7 +3441,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni al piano terra e al primo piano. Due bagni accessibili richiedono una chiave RADAR; l’ufficio direzione dispone di una chiave universale.",
+      "fee_note_it": "Sono disponibili bagni per i clienti; non è indicato alcun costo."
     },
     {
       "id": "victoria-place-shopping",
@@ -3111,7 +3468,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Al livello superiore della Food Terrace, tra Subway e McDonald’s. I servizi per disabili accettano chiavi RADAR e Can’t Wait Cards.",
+      "fee_note_it": "I bagni pubblici sono gratuiti per i clienti."
     },
     {
       "id": "one-new-change",
@@ -3135,7 +3495,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni accessibili dedicati al primo piano e al piano seminterrato, aperti con chiave RADAR custodita dal personale di sicurezza e pulizia.",
+      "fee_note_it": "Sono documentati bagni accessibili; non è indicato alcun costo."
     },
     {
       "id": "st-anns-harrow",
@@ -3159,7 +3522,10 @@
       "source_type": "open_dataset",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro; gli orari non sono attualmente riportati sulla mappa dei bagni.",
+      "location_note_it": "Bagni pubblici gratuiti all’interno di St Ann’s Shopping Centre, compresi servizi accessibili con chiave RADAR.",
+      "fee_note_it": "Indicato come gratuito nella Great British Public Toilet Map."
     },
     {
       "id": "centrale-croydon",
@@ -3183,7 +3549,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "All’interno di Centrale sono disponibili bagni standard, un bagno accessibile e fasciatoi.",
+      "fee_note_it": "I servizi pubblici sono documentati da AccessAble; non è indicato alcun costo."
     },
     {
       "id": "st-nicholas-sutton",
@@ -3207,7 +3576,10 @@
       "source_type": "official",
       "last_verified": "2026-09-24",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "La mappa indica bagni standard al livello 3 e un bagno accessibile al livello 1; il centro documenta anche la presenza di fasciatoi.",
+      "fee_note_it": "Le mappe e le guide all’accessibilità del centro documentano i servizi pubblici; non è indicato alcun costo."
     },
     {
       "id": "hyde-park-bandstand",
@@ -3231,7 +3603,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Blocco di bagni pubblici accanto al Bandstand.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "hyde-park-reservoir",
@@ -3255,7 +3630,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Blocco di bagni pubblici vicino al Reservoir, sul lato di Speaker’s Corner.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "hyde-park-serpentine-bar-kitchen",
@@ -3279,7 +3657,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni presso Serpentine Bar & Kitchen, accanto al lago.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "hyde-park-serpentine-lido-cafe",
@@ -3303,7 +3684,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni presso Serpentine Lido Café, sul lato sud del lago.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "hyde-park-lodge-cafe",
@@ -3327,7 +3711,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni presso The Lodge Café, vicino a Hyde Park Corner.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "kensington-gardens-mount-gate",
@@ -3351,7 +3738,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici a Mount Gate, sul lato sud dei Kensington Gardens.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "kensington-gardens-marlborough-gate",
@@ -3375,7 +3765,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Blocco di bagni pubblici a Marlborough Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "kensington-gardens-diana-playground",
@@ -3399,7 +3792,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni per bambini all’interno del Diana Memorial Playground; gli adulti devono accompagnare un bambino.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "regents-park-qeii-garden",
@@ -3423,7 +3819,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni completamente accessibili, compreso un Changing Places, presso l’ingresso principale del giardino e l’Espresso Bar.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "regents-park-primrose-hill-cafe",
@@ -3447,7 +3846,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni presso Primrose Hill Café, vicino all’area giochi.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "regents-park-queen-marys-gardens",
@@ -3471,7 +3873,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici all’interno dei Queen Mary’s Gardens.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "regents-park-the-hub",
@@ -3495,7 +3900,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni accessibili presso il centro sportivo The Hub.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "regents-park-gloucester-gate",
@@ -3519,7 +3927,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni per bambini, compreso un servizio accessibile, all’interno di Gloucester Gate Playground.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "regents-park-hanover-gate",
@@ -3543,7 +3954,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni per bambini all’interno di Hanover Gate Playground, con fasciatoio.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "regents-park-marylebone-green",
@@ -3567,7 +3981,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni per bambini all’interno di Marylebone Green Playground.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "green-park-toilets",
@@ -3591,7 +4008,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici sul lato di Piccadilly di The Green Park.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "st-jamess-park-marlborough-gate",
@@ -3615,7 +4035,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili a Marlborough Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "greenwich-park-blackheath-gate",
@@ -3639,7 +4062,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili a Blackheath Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "greenwich-park-playground",
@@ -3663,7 +4089,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni accessibili per bambini accanto a Greenwich Park Playground.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "greenwich-park-lower-avenue",
@@ -3687,7 +4116,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili su Lower Avenue.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "greenwich-park-maze-hill",
@@ -3711,7 +4143,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni accessibili e un Changing Places presso Maze Hill.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-ham-gate",
@@ -3735,7 +4170,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici presso Ham Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-isabella-plantation",
@@ -3759,7 +4197,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Blocco di bagni all’interno di Isabella Plantation, vicino a Still Pond.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-kingston-gate",
@@ -3783,7 +4224,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili presso Kingston Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-pegs-pond",
@@ -3807,7 +4251,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Blocco di bagni accessibili presso Peg’s Pond Gate, all’interno di Isabella Plantation.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-pembroke-lodge",
@@ -3831,7 +4278,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili presso Pembroke Lodge.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-petersham-gate",
@@ -3855,7 +4305,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili presso Petersham Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-richmond-gate",
@@ -3879,7 +4332,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili presso Richmond Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-robin-hood-gate",
@@ -3903,7 +4359,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili presso Robin Hood Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-roehampton-gate",
@@ -3927,7 +4386,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici presso Roehampton Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "richmond-park-sheen-gate",
@@ -3951,7 +4413,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili presso Sheen Gate.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "bushy-park-pheasantry-cafe",
@@ -3975,7 +4440,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni accessibili presso The Pheasantry Café nei Woodland Gardens.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "bushy-park-playground",
@@ -3999,7 +4467,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni per bambini con fasciatoi accanto a Bushy Park Playground.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "brompton-cemetery-toilets",
@@ -4023,7 +4494,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili all’interno di Brompton Cemetery.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "victoria-tower-gardens-toilets",
@@ -4047,7 +4521,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco o della struttura; possono applicarsi chiusure stagionali o temporanee.",
+      "location_note_it": "Bagni pubblici accessibili all’interno dei Victoria Tower Gardens.",
+      "fee_note_it": "La mappa ufficiale del parco non indica il costo attuale; verifica la segnaletica sul posto."
     },
     {
       "id": "gunnersbury-park-toilets",
@@ -4071,7 +4548,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco; sono possibili chiusure temporanee.",
+      "location_note_it": "Blocco di bagni del parco accanto al Gunnersbury Park Museum; è presente un servizio accessibile.",
+      "fee_note_it": "La pagina ufficiale del parco non indica alcun costo."
     },
     {
       "id": "holland-park-stable-yard-toilets",
@@ -4095,7 +4575,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco; sono possibili chiusure temporanee.",
+      "location_note_it": "Bagni pubblici presso lo Stable Yard, compresi un bagno accessibile e un Changing Places.",
+      "fee_note_it": "La pagina ufficiale del parco non indica alcun costo."
     },
     {
       "id": "crystal-palace-park-penge-gate-toilets",
@@ -4119,7 +4602,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco; l’orario di chiusura varia secondo la stagione.",
+      "location_note_it": "Bagni pubblici accanto al centro informazioni vicino a Penge Gate; un Changing Places si trova presso il parcheggio di Thicket Road.",
+      "fee_note_it": "La pagina del municipio li presenta come bagni pubblici; non è indicato alcun costo."
     },
     {
       "id": "finsbury-park-cafe-toilets",
@@ -4143,7 +4629,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del caffè e del parco; sono possibili chiusure per manutenzione.",
+      "location_note_it": "I caffè del parco dispongono di bagni; questo punto indica la struttura vicino al laghetto con barche.",
+      "fee_note_it": "I servizi del parco sono indicati per uso pubblico; non è indicato alcun costo."
     },
     {
       "id": "battersea-park-beechmore-toilets",
@@ -4167,7 +4656,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco; sono possibili chiusure temporanee.",
+      "location_note_it": "Bagni per uomini, donne e persone con disabilità vicino a Sun Gate, sul lato sud-occidentale di Battersea Park.",
+      "fee_note_it": "Il Wandsworth Council indica la struttura come bagno pubblico del parco; non è indicato alcun costo."
     },
     {
       "id": "battersea-park-fountain-toilets",
@@ -4191,7 +4683,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco; sono possibili chiusure temporanee.",
+      "location_note_it": "Bagni per uomini, donne e persone con disabilità vicino alle fontane di Battersea Park.",
+      "fee_note_it": "Il Wandsworth Council indica la struttura come bagno pubblico del parco; non è indicato alcun costo."
     },
     {
       "id": "battersea-park-pierpoint-toilets",
@@ -4215,7 +4710,10 @@
       "source_type": "official",
       "last_verified": "2026-09-26",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del parco; sono possibili chiusure temporanee.",
+      "location_note_it": "Bagni per uomini, donne e unisex accessibili vicino al lato nord di Battersea Park e allo zoo per bambini.",
+      "fee_note_it": "Il Wandsworth Council indica la struttura come bagno pubblico del parco; non è indicato alcun costo."
     },
     {
       "id": "wimbledon-quarter",
@@ -4239,7 +4737,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-28",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura di Wimbledon Quarter; il registro Changing Places indica attualmente accesso giornaliero dalle 06:00.",
+      "location_note_it": "I bagni sono segnalati al piano inferiore e superiore. La stanza Changing Places è al piano terra, vicino al Courtyard e allo spazio per eventi.",
+      "fee_note_it": "Indicato come gratuito nella Great British Public Toilet Map."
     },
     {
       "id": "broadwalk-centre-edgware",
@@ -4263,7 +4764,10 @@
       "source_type": "official",
       "last_verified": "2026-09-28",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni standard e stanza fasciatoio nel corridoio di fronte a Costa. Il bagno accessibile è di fronte alla stanza fasciatoio; usa una chiave RADAR o il citofono della sicurezza.",
+      "fee_note_it": "Sono disponibili bagni per i clienti; non è indicato alcun costo."
     },
     {
       "id": "livat-hammersmith",
@@ -4287,7 +4791,10 @@
       "source_type": "official",
       "last_verified": "2026-09-28",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "I bagni sono al primo piano, raggiungibile con scale o ascensore a metà della galleria commerciale, vicino a Lidl. È disponibile una stanza per la cura dei bambini.",
+      "fee_note_it": "I bagni pubblici sono elencati dall’Hammersmith & Fulham Council; non è indicato alcun costo."
     },
     {
       "id": "mercury-shopping-centre-romford",
@@ -4311,7 +4818,10 @@
       "source_type": "official",
       "last_verified": "2026-09-28",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "I bagni principali sono al livello 1, tra WellSpring e Precious Thoughts. I bagni accessibili sono al livello 2; la stanza mamma e bambino è accanto ai bagni principali.",
+      "fee_note_it": "Sono disponibili bagni pubblici; non è indicato alcun costo."
     },
     {
       "id": "chimes-uxbridge",
@@ -4335,7 +4845,10 @@
       "source_type": "open_dataset",
       "last_verified": "2026-09-28",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "I bagni principali per i clienti sono al piano intermedio, vicino a H&M. Sono presenti fasciatoi; verifica la segnaletica del centro per i servizi accessibili.",
+      "fee_note_it": "Indicato come gratuito nella Great British Public Toilet Map."
     },
     {
       "id": "stratford-centre",
@@ -4359,7 +4872,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-28",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "La mappa dei bagni indica lun–sab 09:00–18:00 e dom 10:00–17:00; gli orari del centro possono cambiare.",
+      "location_note_it": "I bagni per i clienti sono indicati sulla mappa ufficiale del centro; è presente anche un’area fasciatoio separata.",
+      "fee_note_it": "Indicato come gratuito nella Great British Public Toilet Map."
     },
     {
       "id": "angel-central",
@@ -4383,7 +4899,10 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-28",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "La mappa dei bagni aggiornata indica lun–sab 10:00–19:00 e dom 11:00–17:00; gli orari del centro possono cambiare.",
+      "location_note_it": "Bagni e fasciatoi si trovano nel passaggio pedonale tra Upper Street e Liverpool Road.",
+      "fee_note_it": "I bagni per i clienti del centro sono documentati; non è confermato se siano a pagamento."
     },
     {
       "id": "london-designer-outlet",
@@ -4407,7 +4926,10 @@
       "source_type": "official",
       "last_verified": "2026-09-28",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura dell’outlet.",
+      "location_note_it": "Le aree bagno includono servizi accessibili e per famiglie. I bagni accessibili usano chiavi RADAR; nell’outlet è disponibile anche un Changing Places.",
+      "fee_note_it": "Sono disponibili bagni per i visitatori; non è indicato alcun costo."
     },
     {
       "id": "broadgate-central",
@@ -4431,7 +4953,10 @@
       "source_type": "official",
       "last_verified": "2026-09-28",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura dei bagni pubblici di Broadgate Central.",
+      "location_note_it": "Bagni misti, bagni accessibili e fasciatoi al piano seminterrato di 1 Broadgate. Anche il Changing Places con chiave RADAR è al piano seminterrato.",
+      "fee_note_it": "Sono disponibili bagni pubblici; non è indicato alcun costo."
     },
     {
       "id": "edmonton-green-shopping-centre",
@@ -4455,7 +4980,10 @@
       "source_type": "official",
       "last_verified": "2026-09-28",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "La mappa del centro indica bagni pubblici in Market Square. La direzione documenta anche bagni accessibili e fasciatoi.",
+      "fee_note_it": "Le informazioni aggiornate del centro non specificano se sia previsto un pagamento."
     },
     {
       "id": "pavilions-uxbridge",
@@ -4479,7 +5007,10 @@
       "source_type": "official",
       "last_verified": "2026-09-28",
       "confidence": "official",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni accessibili e fasciatoi in Crown Walk. Segui la segnaletica del centro per i servizi standard.",
+      "fee_note_it": "Il centro mette a disposizione bagni; non è confermato se siano a pagamento."
     },
     {
       "id": "vicarage-field-barking",
@@ -4503,7 +5034,11 @@
       "source_type": "verified_access",
       "last_verified": "2026-09-28",
       "confidence": "verified",
-      "active": true
+      "active": true,
+      "hours_note_it": "Disponibile negli orari di apertura del centro.",
+      "location_note_it": "Bagni standard e accessibili al livello superiore di Vicarage Field Shopping Centre.",
+      "fee_note_it": "I bagni del centro sono documentati; non è confermato se siano a pagamento."
     }
-  ]
+  ],
+  "notes_it": "Traduzioni editoriali italiane per orari, posizione e condizioni di accesso; i campi inglesi restano la fonte canonica."
 }
