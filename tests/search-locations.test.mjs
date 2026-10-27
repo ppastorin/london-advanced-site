@@ -168,11 +168,11 @@ test("location search uses word boundaries and ignores trailing spaces", async (
 
 test("browser search matches whole words and controlled plurals", async () => {
   const source = await readFile("search/search.js", "utf8");
-  const executable = source.match(/function normalize[\\s\\S]*?(?=function renderResults)/)?.[0];
+  const executable = source.match(/function normalize[\s\S]*?(?=function renderResults)/)?.[0];
   assert.ok(executable, "Could not isolate the browser search scorer");
   const context = { window: {}, Intl };
   vm.createContext(context);
-  vm.runInContext(`const pageLocale = "en";\\n${executable}\\nwindow.__TEST__ = { normalize, scoreRecord };`, context);
+  vm.runInContext(`const pageLocale = "en";\n${executable}\nwindow.__TEST__ = { normalize, scoreRecord };`, context);
 
   const church = { title: "St Bride's Church", keywords: [], tags: ["BUILDING"], summary: "A historic church.", content: "" };
   const churches = { title: "Historic churches", keywords: [], tags: [], summary: "", content: "" };
