@@ -39,7 +39,7 @@ for (const [language, page] of [
       window: { scrollTo() {} },
       fetch: async url => {
         requests.push(url);
-        return { ok: true, json: async () => url === '/api/loos'
+        return { ok: true, json: async () => url === '/api/loos?v=20261027-it-notes'
           ? { loos: venues }
           : { ok: true, lat: 51.51, lon: -0.12, label: 'Trafalgar Square' } };
       },
@@ -65,6 +65,7 @@ for (const [language, page] of [
         : 'Orari italiani|Posizione italiana|Condizioni italiane'));
       assert.doesNotMatch(card, /\$\{IT\?|no charge stated|nessun costo indicato/);
     }
+    assert.ok(requests.includes('/api/loos?v=20261027-it-notes'));
     assert.ok(requests.some(url => url.startsWith('/api/loo-geocode?q=')));
     assert.match(elements.get('#result-count').textContent, /10.*15/);
     assert.equal(elements.get('#show-more').hidden, false);
