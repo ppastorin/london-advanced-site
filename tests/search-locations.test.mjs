@@ -123,3 +123,63 @@ test("browser search treats short queries as words and keeps the full result cou
   assert.match(source, /Show all \$\{total\} results/);
   assert.match(source, /SEARCH_API_VERSION/);
 });
+
+
+test("location search uses word boundaries and ignores trailing spaces", async () => {
+  let upstreamQuery;
+  const fetchImpl = async request => {
+    upstreamQuery = new URL(request).searchParams.get("q");
+    return Response.json({ places: [
+      {
+        id: "CHURCH-1",
+        name: "Church of Saint Magnus-the-Martyr",
+        category: "BUILDING",
+        description: "A historic City church.",
+        hook: "A historic City church."
+      },
+      {
+        id: "CHURCHILL-1",
+        name: "Churchill War Rooms",
+        category: "MUSEUM",
+        description: "Wartime headquarters beneath Westminster.",
+        hook: "Wartime headquarters beneath Westminster."
+      },
+      {
+        id: "CHURCHILL-2",
+        name: "Sir Winston Churchill Statue",
+        category: "MONUMENT",
+        description: "A statue in Parliament Square.",
+        hook: "A statue in Parliament Square."
+      }
+    ] });
+  };
+  const response = await handleLocationSearch(
+    new Request("https://www.londonadvanced.com/api/search-locations?q=church%20%20&locale=en"),
+    {},
+    fetchImpl
+  );
+  const payload = await response.json();
+
+  assert.equal(upstreamQuery, "church");
+  assert.equal(payload.count, 1);
+  assert.equal(payload.records[0].title, "Church of Saint Magnus-the-Martyr");
+  assert.ok(payload.records.every(record => !record.title.includes("Churchill")));
+});
+
+test("browser search matches whole words and controlled plurals", async () => {
+  const source = await readFile("search/search.js", "utf8");
+  const executable = source.match(/function normalize[\\s\\S]*?(?=function renderResults)/)?.[0];
+  assert.ok(executable, "Could not isolate the browser search scorer");
+  const context = { window: {}, Intl };
+  vm.createContext(context);
+  vm.runInContext(`const pageLocale = "en";\\n${executable}\\nwindow.__TEST__ = { normalize, scoreRecord };`, context);
+
+  const church = { title: "St Bride's Church", keywords: [], tags: ["BUILDING"], summary: "A historic church.", content: "" };
+  const churches = { title: "Historic churches", keywords: [], tags: [], summary: "", content: "" };
+  const churchill = { title: "Churchill War Rooms", keywords: [], tags: ["MUSEUM"], summary: "Wartime headquarters.", content: "" };
+  const query = context.window.__TEST__.normalize("church   ");
+
+  assert.ok(context.window.__TEST__.scoreRecord(church, query) > 0);
+  assert.ok(context.window.__TEST__.scoreRecord(churches, query) > 0);
+  assert.equal(context.window.__TEST__.scoreRecord(churchill, query), 0);
+});
