@@ -337,10 +337,15 @@ function locationMergeKey(value) {
   return searchKey(value).replace(/^(?:the|il|lo|la|i|gli|le)\s+/, "");
 }
 
+function pluralForm(word) {
+  if (/[^aeiou]y$/.test(word)) return `${word.slice(0, -1)}ies`;
+  if (/(?:s|x|z|ch|sh)$/.test(word)) return `${word}es`;
+  return `${word}s`;
+}
+
 function tokenMatches(value, token) {
   const words = searchKey(value).split(" ").filter(Boolean);
-  if (token.length <= 3) return words.some(word => word === token || word === `${token}s`);
-  return words.some(word => word.includes(token));
+  return words.some(word => word === token || word === pluralForm(token) || token === pluralForm(word));
 }
 
 function allTokensMatch(value, tokens) {
