@@ -1,5 +1,5 @@
 const pageLocale = document.documentElement.lang.toLowerCase().startsWith("it") ? "it" : "en";
-const SEARCH_API_VERSION = "20261026.2";
+const SEARCH_API_VERSION = "20261027.1";
 const copy = pageLocale === "it" ? {
   loading: "Caricamento…",
   empty: "Nessun risultato. Prova un luogo, un argomento o un’esigenza pratica.",
@@ -52,10 +52,15 @@ function normalize(value) {
     .trim();
 }
 
+function pluralForm(word) {
+  if (/[^aeiou]y$/.test(word)) return `${word.slice(0, -1)}ies`;
+  if (/(?:s|x|z|ch|sh)$/.test(word)) return `${word}es`;
+  return `${word}s`;
+}
+
 function tokenMatches(value, token) {
   const words = normalize(value).split(" ").filter(Boolean);
-  if (token.length <= 3) return words.some(word => word === token || word === `${token}s`);
-  return words.some(word => word.includes(token));
+  return words.some(word => word === token || word === pluralForm(token) || token === pluralForm(word));
 }
 
 function allTokensMatch(value, tokens) {
