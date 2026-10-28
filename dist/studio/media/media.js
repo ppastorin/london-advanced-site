@@ -358,8 +358,8 @@ function initialise() {
         publication = await publishBatch(token, blobs, message, allowOverwrite);
       }
       elements["upload-progress"].value = 100;
-      elements["progress-label"].textContent = "Upload complete";
-      setResult(`<strong>${selected.length.toLocaleString("en-GB")} images uploaded in one commit.</strong> Cloudflare will publish them automatically. <a href="${escapeHtml(publication.commitUrl)}" target="_blank" rel="noopener">View the commit</a>.`);
+      elements["progress-label"].textContent = "Upload submitted";
+      setResult(`<strong>${selected.length.toLocaleString("en-GB")} images uploaded successfully.</strong> Production validation is running and the images will publish automatically when it passes. <a href="${escapeHtml(publication.pullRequestUrl)}" target="_blank" rel="noopener">View validation</a>.`);
       const cache = loadBlobCache();
       for (const entry of blobs) delete cache[blobCacheSignature(entry)];
       saveBlobCache(cache);
@@ -373,7 +373,7 @@ function initialise() {
         elements["auth-state"].textContent = "Session expired";
         elements["auth-state"].classList.remove("is-connected");
       }
-      setResult(`<strong>Nothing was published.</strong> ${escapeHtml(error.message)}${error.code === "branch_changed" ? " The image uploads are saved; press Upload selected images once more." : ""}`, true);
+      setResult(`<strong>Nothing was published.</strong> ${escapeHtml(error.message)}`, true);
       elements["progress-label"].textContent = "Upload stopped";
     } finally {
       busy = false;
