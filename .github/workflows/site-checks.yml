@@ -17,6 +17,7 @@ on:
       - "journal.css"
       - "journal.js"
       - ".github/workflows/site-checks.yml"
+      - ".github/workflows/auto-merge-studio-media.yml"
   push:
     branches:
       - main
@@ -35,6 +36,7 @@ on:
       - "journal.css"
       - "journal.js"
       - ".github/workflows/site-checks.yml"
+      - ".github/workflows/auto-merge-studio-media.yml"
   workflow_dispatch:
 
 permissions:
