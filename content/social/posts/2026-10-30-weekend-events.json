@@ -1,0 +1,70 @@
+{
+  "notes": "Feed valid through 1 November 2026. Selected events rechecked on their official pages on 28 October: Hunterian Museum (31 October), IWM London (1 November) and Veteran Car Run (1 November). The V&A Friday Late was not selected because its official URL currently returns 404. Carousel uses clean screenshots of all three live official event pages with the established London Advanced editorial overlay treatment.",
+  "caption_en": "Three less-obvious London picks: the final day of the Hunterian’s operating-theatre exhibition, wartime London through artists at IWM, and pre-1905 cars leaving Hyde Park at dawn.",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": ""
+  },
+  "caption_it": "Tre appuntamenti per un weekend londinese poco convenzionale. Sabato, al Hunterian Museum, è l’ultimo giorno di The Operating Theatre: 250 anni di chirurgia raccontati attraverso dipinti, fotografie e progetti (ingresso gratuito, prenotazione consigliata). Domenica, all’IWM, chiude Beauty and Destruction, 45 opere e testimonianze sulla Londra trasformata dalla guerra. Oppure puntate la sveglia: dalle 7 le auto costruite prima del 1905 partono da Serpentine Road per la London to Brighton Veteran Car Run. Tre modi molto diversi di guardare la città; il terzo richiede caffè e una certa disciplina.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#VisitLondon",
+    "#InstaLondon",
+    "#LondonWeekend",
+    "#LondonMuseums"
+  ],
+  "media_folder": "assets/social/weekend-2026-10-30",
+  "editorial_status": "review",
+  "language_mode": "italian-plus-english-summary",
+  "overlay": {
+    "enabled": true,
+    "kicker": "QUESTO WEEKEND",
+    "headline": "Tre idee meno ovvie",
+    "position": "bottom-left",
+    "rendered_src": "/assets/social/weekend-2026-10-30/01-hunterian.jpg"
+  },
+  "cta": "Orari, dettagli e link ufficiali sono nella selezione eventi di London Advanced.",
+  "location": "London, United Kingdom",
+  "post_format": "carousel",
+  "internal_title": "Tre idee per il weekend · 30 ottobre–1 novembre",
+  "updated_at": "2026-10-28T19:02:39+00:00",
+  "scheduled_for": "2026-10-30T10:00:00+00:00",
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/social/weekend-2026-10-30/01-hunterian.jpg",
+      "alt": "Schermata della pagina ufficiale del Hunterian Museum con una fotografia storica di una sala operatoria. In basso, su fondo scuro, il testo: Tre idee meno ovvie per Londra, 31 ottobre–1 novembre.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 2,
+      "src": "/assets/social/weekend-2026-10-30/02-iwm.jpg",
+      "alt": "Schermata della pagina ufficiale IWM per Beauty and Destruction, con un dipinto di edifici londinesi bombardati. La fascia inferiore indica: domenica, ultimo giorno; IWM London; gratuito.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/social/weekend-2026-10-30/03-veteran-car-run.jpg",
+      "alt": "Schermata della pagina ufficiale della London to Brighton Veteran Car Run, con auto storiche e spettatori. La fascia inferiore indica la partenza domenica dalle 7 da Serpentine Road, gratuita da osservare.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "post_id": "2026-10-30-weekend-events",
+  "source": {
+    "type": "weekend-events",
+    "reference": "events-digest-2026-10-26",
+    "url": "https://www.londonadvanced.com/events/",
+    "checked_at": "2026-10-28"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": "",
+    "published_url": "",
+    "last_sync_at": "",
+    "sync_note": "Review-only draft. Metricool has not been called."
+  }
+}
