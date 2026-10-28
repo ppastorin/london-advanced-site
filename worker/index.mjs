@@ -16,6 +16,7 @@ const PLACES_API_ORIGIN = "https://london-by-mood.ppastorin.workers.dev";
 const MEDIA_COMMIT_PATH = "/api/studio/media/commit";
 const MEDIA_REPOSITORY = "ppastorin/london-advanced-site";
 const MEDIA_BRANCH = "main";
+const MEDIA_UPLOAD_BRANCH_PREFIX = "studio-media/";
 const MAX_MEDIA_COMMIT_BYTES = 750_000;
 const MAX_MEDIA_ENTRIES = 1_000;
 const MEDIA_TREE_CHUNK_SIZE = 100;
@@ -707,6 +708,12 @@ function mediaCommitError(code, message, status = 400) {
   return jsonResponse({ ok: false, code, message }, status);
 }
 
+function mediaUploadBranchName() {
+  const timestamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
+  const suffix = crypto.randomUUID().slice(0, 8);
+  return `${MEDIA_UPLOAD_BRANCH_PREFIX}${timestamp}-${suffix}`;
+}
+
 export async function handleMediaCommit(request, fetchImpl = fetch) {
   if (request.method !== "POST") {
     return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "POST" });
@@ -805,22 +812,34 @@ export async function handleMediaCommit(request, fetchImpl = fetch) {
     body: JSON.stringify({ message, tree: tree.payload.sha, parents: [baseCommitSha] })
   });
   if (!commit.ok) return mediaCommitError("commit_failed", commit.payload.message || "GitHub could not create the commit.", 502);
-  const update = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/refs/heads/${MEDIA_BRANCH}`, {
-    method: "PATCH",
-    body: JSON.stringify({ sha: commit.payload.sha, force: false })
+  const uploadBranch = mediaUploadBranchName();
+  const branch = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/git/refs`, {
+    method: "POST",
+    body: JSON.stringify({ ref: `refs/heads/${uploadBranch}`, sha: commit.payload.sha })
   });
-  if (!update.ok) {
-    return mediaCommitError(
-      update.status === 422 ? "branch_changed" : "publish_failed",
-      update.status === 422 ? "The website changed during publication. Try once more; the uploaded images are cached." : (update.payload.message || "GitHub could not publish the commit."),
-      update.status === 422 ? 409 : 502
-    );
+  if (!branch.ok) {
+    return mediaCommitError("branch_failed", branch.payload.message || "GitHub could not create the protected upload branch.", 502);
+  }
+  const pullRequest = await githubMediaRequest(fetchImpl, token, `/repos/${MEDIA_REPOSITORY}/pulls`, {
+    method: "POST",
+    body: JSON.stringify({
+      title: message,
+      head: uploadBranch,
+      base: MEDIA_BRANCH,
+      body: "Studio media upload. The pull request will merge automatically after the required production safety checks pass."
+    })
+  });
+  if (!pullRequest.ok) {
+    return mediaCommitError("pull_request_failed", pullRequest.payload.message || "GitHub could not submit the media upload for validation.", 502);
   }
   return jsonResponse({
     ok: true,
     count: entries.length,
     commitSha: commit.payload.sha,
-    commitUrl: `https://github.com/${MEDIA_REPOSITORY}/commit/${commit.payload.sha}`
+    commitUrl: `https://github.com/${MEDIA_REPOSITORY}/commit/${commit.payload.sha}`,
+    pullRequestNumber: pullRequest.payload.number,
+    pullRequestUrl: pullRequest.payload.html_url,
+    status: "validation_pending"
   });
 }
 
