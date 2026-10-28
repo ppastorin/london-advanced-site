@@ -2,7 +2,7 @@
   "notes": "Feed valid through 1 November 2026. Selected events rechecked on their official pages on 28 October: Hunterian Museum (31 October), IWM London (1 November) and Veteran Car Run (1 November). The V&A Friday Late was not selected because its official URL currently returns 404. Carousel uses clean screenshots of all three live official event pages with the established London Advanced editorial overlay treatment.",
   "caption_en": "Three less-obvious London picks: the final day of the Hunterian’s operating-theatre exhibition, wartime London through artists at IWM, and pre-1905 cars leaving Hyde Park at dawn.",
   "approval": {
-    "status": "pending",
+    "status": "approved",
     "approved_by": "",
     "approved_at": ""
   },
@@ -15,7 +15,7 @@
     "#LondonMuseums"
   ],
   "media_folder": "assets/social/weekend-2026-10-30",
-  "editorial_status": "review",
+  "editorial_status": "approved",
   "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": true,
