@@ -142,10 +142,11 @@ test("Decap OAuth rejects a callback with the wrong state", async () => {
   assert.equal(response.status, 400);
 });
 
-test("Studio media publication creates source and deployed paths server-side", async () => {
+test("Studio media publication creates a protected pull request with source and deployed paths", async () => {
   const sha = "a".repeat(40);
   let createdTree;
-  let updatedRef;
+  let createdRef;
+  let createdPullRequest;
   const fetchImpl = async (url, options = {}) => {
     const pathname = new URL(url).pathname + new URL(url).search;
     if (pathname === "/repos/ppastorin/london-advanced-site") {
@@ -161,9 +162,13 @@ test("Studio media publication creates source and deployed paths server-side", a
     if (pathname.endsWith("/git/commits") && options.method === "POST") {
       return Response.json({ sha: "next-commit" });
     }
-    if (pathname.endsWith("/git/refs/heads/main") && options.method === "PATCH") {
-      updatedRef = JSON.parse(options.body);
-      return Response.json({ object: { sha: "next-commit" } });
+    if (pathname.endsWith("/git/refs") && options.method === "POST") {
+      createdRef = JSON.parse(options.body);
+      return Response.json({ object: { sha: "next-commit" } }, { status: 201 });
+    }
+    if (pathname.endsWith("/pulls") && options.method === "POST") {
+      createdPullRequest = JSON.parse(options.body);
+      return Response.json({ number: 91, html_url: "https://github.com/ppastorin/london-advanced-site/pull/91" }, { status: 201 });
     }
     throw new Error(`Unexpected GitHub request: ${pathname}`);
   };
@@ -185,12 +190,18 @@ test("Studio media publication creates source and deployed paths server-side", a
     "assets/instagram/001-weekend/cover.jpg",
     "dist/assets/instagram/001-weekend/cover.jpg"
   ]);
-  assert.deepEqual(updatedRef, { sha: "next-commit", force: false });
+  assert.match(createdRef.ref, /^refs\/heads\/studio-media\//);
+  assert.equal(createdRef.sha, "next-commit");
+  assert.equal(createdPullRequest.base, "main");
+  assert.match(createdPullRequest.head, /^studio-media\//);
   assert.deepEqual(await response.json(), {
     ok: true,
     count: 1,
     commitSha: "next-commit",
-    commitUrl: "https://github.com/ppastorin/london-advanced-site/commit/next-commit"
+    commitUrl: "https://github.com/ppastorin/london-advanced-site/commit/next-commit",
+    pullRequestNumber: 91,
+    pullRequestUrl: "https://github.com/ppastorin/london-advanced-site/pull/91",
+    status: "validation_pending"
   });
 });
 
@@ -236,9 +247,8 @@ test("Studio media publication builds large batches in chained tree chunks", asy
       assert.equal(JSON.parse(options.body).tree, "tree-2");
       return Response.json({ sha: "next-commit" }, { status: 201 });
     }
-    if (pathname.endsWith("/git/refs/heads/main") && options.method === "PATCH") {
-      return Response.json({ object: { sha: "next-commit" } });
-    }
+    if (pathname.endsWith("/git/refs") && options.method === "POST") return Response.json({ object: { sha: "next-commit" } }, { status: 201 });
+    if (pathname.endsWith("/pulls") && options.method === "POST") return Response.json({ number: 92, html_url: "https://github.com/ppastorin/london-advanced-site/pull/92" }, { status: 201 });
     throw new Error(`Unexpected GitHub request: ${pathname}`);
   };
   const response = await handleMediaCommit(new Request("https://www.londonadvanced.com/api/studio/media/commit", {
