@@ -1,0 +1,71 @@
+name: Auto-merge Studio media uploads
+
+on:
+  workflow_run:
+    workflows:
+      - Site safety checks
+    types:
+      - completed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge:
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Merge validated Studio media pull request
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const headSha = context.payload.workflow_run.head_sha;
+            const associated = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+              owner,
+              repo,
+              commit_sha: headSha
+            });
+            const pull = associated.data.find(candidate =>
+              candidate.state === 'open' &&
+              candidate.base.ref === 'main' &&
+              candidate.head.ref.startsWith('studio-media/') &&
+              candidate.head.repo?.full_name === `${owner}/${repo}`
+            );
+            if (!pull) {
+              core.info('No open Studio media pull request is associated with this validated commit.');
+              return;
+            }
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner,
+              repo,
+              pull_number: pull.number,
+              per_page: 100
+            });
+            const allowed = files.length > 0 && files.every(file =>
+              file.status !== 'removed' &&
+              (file.filename.startsWith('assets/instagram/') ||
+               file.filename.startsWith('dist/assets/instagram/'))
+            );
+            if (!allowed) {
+              core.setFailed(`Pull request #${pull.number} contains changes outside the Studio media directories.`);
+              return;
+            }
+            const result = await github.rest.pulls.merge({
+              owner,
+              repo,
+              pull_number: pull.number,
+              merge_method: 'squash'
+            });
+            if (!result.data.merged) {
+              core.setFailed(result.data.message || `Pull request #${pull.number} was not merged.`);
+              return;
+            }
+            await github.rest.git.deleteRef({
+              owner,
+              repo,
+              ref: `heads/${pull.head.ref}`
+            });
