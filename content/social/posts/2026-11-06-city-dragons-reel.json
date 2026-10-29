@@ -1,7 +1,7 @@
 {
   "post_id": "2026-11-06-city-dragons-reel",
   "internal_title": "I draghi ai confini della City",
-  "editorial_status": "approved",
+  "editorial_status": "scheduled",
   "language_mode": "italian-only",
   "caption_it": "Questi draghi non sono semplici decorazioni: segnano gli ingressi nella City of London. Alcuni sono monumentali, altri quasi scompaiono fra traffico, palazzi e cantieri. Cercarli trasforma la Square Mile in una piccola caccia urbana—e costringe finalmente a guardare verso l’alto.\n\nQuanti ne avete già incontrati? Scrivetelo nei commenti e salvate il Reel per il prossimo giro nella City.",
   "caption_en": "",
@@ -44,11 +44,11 @@
     "checked_at": "2026-10-29"
   },
   "metricool": {
-    "planner_id": "",
-    "scheduled_at": "",
+    "planner_id": "410227511",
+    "scheduled_at": "2026-10-29T15:43:00+00:00",
     "published_url": "",
-    "last_sync_at": "",
-    "sync_note": ""
+    "last_sync_at": "2026-10-29T15:44:00+00:00",
+    "sync_note": "Metricool UUID -9090505260686685187; auto-publish enabled"
   },
   "notes": "Discovery Reel built from first-party photography; silent photo motion format."
 }
