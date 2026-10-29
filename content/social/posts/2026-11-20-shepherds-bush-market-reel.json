@@ -1,7 +1,7 @@
 {
   "post_id": "2026-11-20-shepherds-bush-market-reel",
   "internal_title": "Shepherd's Bush Market · mercato quotidiano",
-  "editorial_status": "approved",
+  "editorial_status": "scheduled",
   "language_mode": "italian-only",
   "caption_it": "Shepherd’s Bush Market non è stato costruito per piacere a Instagram. Ed è precisamente il motivo per entrarci.\n\nPassaggi stretti, tessuti, frutta e verdura, piccole botteghe e prezzi scritti a mano: è un mercato di quartiere ancora utile, non una scenografia del cibo. Si trova sotto la ferrovia, a pochi passi dal rumore di Westfield ma in una Londra completamente diversa.\n\nCi siete mai entrati? Salvatelo per la prossima volta che passate da Shepherd’s Bush.",
   "caption_en": "",
@@ -44,11 +44,11 @@
     "checked_at": "2026-10-29"
   },
   "metricool": {
-    "planner_id": "",
-    "scheduled_at": "",
+    "planner_id": "410228110",
+    "scheduled_at": "2026-10-29T15:43:00+00:00",
     "published_url": "",
-    "last_sync_at": "",
-    "sync_note": ""
+    "last_sync_at": "2026-10-29T15:44:00+00:00",
+    "sync_note": "Metricool UUID 6447728006257656920; auto-publish enabled"
   },
   "notes": "Discovery Reel built from first-party photography; silent photo motion format."
 }
