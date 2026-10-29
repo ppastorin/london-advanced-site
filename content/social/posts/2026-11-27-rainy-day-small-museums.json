@@ -1,7 +1,7 @@
 {
   "post_id": "2026-11-27-rainy-day-small-museums",
   "internal_title": "Quattro piccoli musei per una giornata di pioggia",
-  "editorial_status": "approved",
+  "editorial_status": "scheduled",
   "language_mode": "italian-only",
   "caption_it": "Piove. Potreste passare il pomeriggio in un grande museo insieme a tutti gli altri, oppure scegliere quattro posti più piccoli e decisamente più strani.\n\nGrant Museum — zoologia e scheletri\nPetrie Museum — archeologia egizia in vetrine densissime\nHunterian Museum — chirurgia, anatomia e storia della medicina\nOld Operating Theatre — una sala operatoria del 1822 nascosta in un sottotetto\n\nI primi tre hanno ingresso gratuito; l’Old Operating Theatre è a pagamento. Controllate sempre orari e accesso prima di partire. Quale scegliete?",
   "caption_en": "",
@@ -72,11 +72,11 @@
     "checked_at": "2026-10-29"
   },
   "metricool": {
-    "planner_id": "",
-    "scheduled_at": "",
+    "planner_id": "410228253",
+    "scheduled_at": "2026-10-29T15:43:00+00:00",
     "published_url": "",
-    "last_sync_at": "",
-    "sync_note": ""
+    "last_sync_at": "2026-10-29T15:44:00+00:00",
+    "sync_note": "Metricool UUID -6311466344686596621; auto-publish enabled"
   },
   "notes": "Utility carousel. Recheck admission and opening information shortly before publication."
 }
