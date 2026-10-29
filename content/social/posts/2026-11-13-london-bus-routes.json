@@ -1,7 +1,7 @@
 {
   "post_id": "2026-11-13-london-bus-routes",
   "internal_title": "Cinque autobus di linea per vedere Londra",
-  "editorial_status": "approved",
+  "editorial_status": "scheduled",
   "language_mode": "italian-only",
   "caption_it": "Non serve pagare un sightseeing bus per attraversare una Londra interessante. Queste cinque linee normali costruiscono itinerari sorprendentemente buoni:\n\n17 — patrimonio e storia\n139 — la Londra più riconoscibile\n22 — antiquariato e curiosità\n35 — mercati londinesi\n9 — musei e palazzi\n\nNon sono tour organizzati: controllate percorso, deviazioni e servizio prima di partire. Quale prendereste per primo? Salvate il carosello per una giornata senza itinerario rigido.",
   "caption_en": "",
@@ -79,11 +79,11 @@
     "checked_at": "2026-10-29"
   },
   "metricool": {
-    "planner_id": "",
-    "scheduled_at": "",
+    "planner_id": "410227919",
+    "scheduled_at": "2026-10-29T15:43:00+00:00",
     "published_url": "",
-    "last_sync_at": "",
-    "sync_note": ""
+    "last_sync_at": "2026-10-29T15:44:00+00:00",
+    "sync_note": "Metricool UUID 6487208625823564177; auto-publish enabled"
   },
   "notes": "Utility carousel designed for saves and shares. Verify live TfL service before publication."
 }
