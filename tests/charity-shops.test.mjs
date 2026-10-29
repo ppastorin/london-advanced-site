@@ -25,11 +25,14 @@ test("charity shop tool exposes mobile filters, map, EN/IT routes and methodolog
 
   for (const html of [english, italian]) {
     assert.match(html, /class="site-nav"/);
+    assert.match(html, /class="charity-nav-about"[^>]*data-charity-about/);
     assert.match(html, /<footer\b/);
     assert.match(html, /id="radius"[^>]*max="1000"/);
     assert.match(html, /id="charity-options"/);
     assert.match(html, /id="charity-map"/);
     assert.match(html, /class="about-panel charity-about-panel"/);
+    const hero = html.match(/<section class="charity-hero">([\s\S]*?)<\/section>/)?.[1] || "";
+    assert.doesNotMatch(hero, /data-charity-about/);
   }
   assert.match(english, /<html lang="en-GB">/);
   assert.match(italian, /<html lang="it-IT">/);

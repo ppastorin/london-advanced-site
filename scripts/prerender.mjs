@@ -205,6 +205,9 @@ async function buildNativeLooPages() {
 function charitySiteNavigation(homepage, locale) {
   const header = homepage.match(/<header class="site-nav">[\s\S]*?<\/header>/)?.[0];
   if (!header) throw new Error(`Could not extract the ${locale} site navigation for the Charity Shops Map.`);
+  const aboutLabel = locale === "it" ? "Info" : "About";
+  const aboutDesktop = `<button class="charity-nav-about" type="button" data-charity-about aria-haspopup="dialog" aria-controls="charity-about-panel">${aboutLabel}</button>`;
+  const aboutMobile = `<button class="mobile-section-link charity-mobile-about" type="button" data-charity-about aria-haspopup="dialog" aria-controls="charity-about-panel"><span>London Advanced</span><strong>${locale === "it" ? "Informazioni sullo strumento" : "About this tool"}</strong></button>`;
   if (locale === "en") {
     return header
       .replace('class="wordmark" href="#top" aria-label="London Advanced home — back to top"', 'class="wordmark" href="/" aria-label="London Advanced homepage"')
@@ -215,7 +218,9 @@ function charitySiteNavigation(homepage, locale) {
       .replace(/<button class="mobile-section-link" type="button" data-scroll-target="contact">([\s\S]*?)<\/button>/, '<a href="/#contact">$1</a>')
       .replace('class="language-switch" href="/it/"', 'class="language-switch" href="/it/strumenti/negozi-di-beneficenza/"')
       .replace('class="mobile-language-switch" href="/it/"', 'class="mobile-language-switch" href="/it/strumenti/negozi-di-beneficenza/"')
-      .replace('href="/charity-shops/" data-track="app-menu:Charity Shops"', 'href="/charity-shops/" aria-current="page" data-track="app-menu:Charity Shops"');
+      .replace('href="/charity-shops/" data-track="app-menu:Charity Shops"', 'href="/charity-shops/" aria-current="page" data-track="app-menu:Charity Shops"')
+      .replace('</nav>', `${aboutDesktop}</nav>`)
+      .replace('<p class="mobile-menu-heading">Tools</p>', `${aboutMobile}<p class="mobile-menu-heading">Tools</p>`);
   }
   return header
     .replace('class="wordmark" href="#top"', 'class="wordmark" href="/it/"')
@@ -225,7 +230,9 @@ function charitySiteNavigation(homepage, locale) {
     .replace(/<button class="mobile-section-link" type="button" data-scroll-target="contatti">([\s\S]*?)<\/button>/, '<a href="/it/#contatti">$1</a>')
     .replace('class="language-switch" href="/"', 'class="language-switch" href="/charity-shops/"')
     .replace('class="mobile-language-switch" href="/"', 'class="mobile-language-switch" href="/charity-shops/"')
-    .replace('href="/it/strumenti/negozi-di-beneficenza/"', 'href="/it/strumenti/negozi-di-beneficenza/" aria-current="page"');
+    .replace('href="/it/strumenti/negozi-di-beneficenza/"', 'href="/it/strumenti/negozi-di-beneficenza/" aria-current="page"')
+    .replace('</nav>', `${aboutDesktop}</nav>`)
+    .replace('<p class="mobile-menu-heading">Strumenti</p>', `${aboutMobile}<p class="mobile-menu-heading">Strumenti</p>`);
 }
 
 function charityGlobalFooter(homepage, locale) {
@@ -242,6 +249,7 @@ function nativeCharityPage(template, homepage, locale) {
   return template
     .replace(/<header class="site-nav">[\s\S]*?<\/header>/, "")
     .replace(/<footer\b[^>]*class="[^"]*global-footer[^"]*"[^>]*>[\s\S]*?<\/footer>/, "")
+    .replace(/<button class="about-trigger" type="button" data-charity-about[^>]*>[\s\S]*?<\/button>/, "")
     .replace('<body class="charity-page">', `<body class="charity-page">${nav}`)
     .replace("</body>", `${footer}</body>`)
     .replace(/[ \t]+$/gm, "");

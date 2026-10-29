@@ -257,6 +257,7 @@ section[id] { scroll-margin-top: 76px; }
 .app-card:hover { z-index: 2; transform: translateY(-4px); border-color: rgba(23, 23, 23, .38); box-shadow: 0 18px 38px rgba(36, 27, 23, .11); }
 .app-card.app-1, .app-card.app-2 { grid-column: span 3; }
 .app-card.app-3, .app-card.app-4, .app-card.app-5, .app-card.app-6 { grid-column: span 3; }
+.app-card.app-7 { grid-column: span 3; }
 .app-visual {
   position: relative;
   height: 118px;
