@@ -1,0 +1,89 @@
+{
+  "post_id": "2026-11-13-london-bus-routes",
+  "internal_title": "Cinque autobus di linea per vedere Londra",
+  "editorial_status": "approved",
+  "language_mode": "italian-only",
+  "caption_it": "Non serve pagare un sightseeing bus per attraversare una Londra interessante. Queste cinque linee normali costruiscono itinerari sorprendentemente buoni:\n\n17 — patrimonio e storia\n139 — la Londra più riconoscibile\n22 — antiquariato e curiosità\n35 — mercati londinesi\n9 — musei e palazzi\n\nNon sono tour organizzati: controllate percorso, deviazioni e servizio prima di partire. Quale prendereste per primo? Salvate il carosello per una giornata senza itinerario rigido.",
+  "caption_en": "",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#LondonByBus",
+    "#TfL",
+    "#Londra",
+    "#LondonTravel"
+  ],
+  "post_format": "carousel",
+  "scheduled_for": "2026-11-13T10:00:00+00:00",
+  "location": "London, United Kingdom",
+  "media_folder": "november-2026/tfl",
+  "overlay": {
+    "enabled": false,
+    "kicker": "",
+    "headline": "",
+    "position": "",
+    "rendered_src": ""
+  },
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/social/november-2026/tfl/01-cover.jpg",
+      "alt": "Copertina del carosello: cinque autobus di linea per vedere Londra.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 2,
+      "src": "/assets/social/november-2026/tfl/02-route-17.jpg",
+      "alt": "Mappa illustrata delle tappe interessanti lungo la linea 17.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/social/november-2026/tfl/03-route-139.jpg",
+      "alt": "Mappa illustrata della Londra classica raggiungibile con la linea 139.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/social/november-2026/tfl/04-route-22.jpg",
+      "alt": "Mappa illustrata di negozi, antiquariato e curiosità lungo la linea 22.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/social/november-2026/tfl/05-route-35.jpg",
+      "alt": "Mappa illustrata dei mercati londinesi lungo la linea 35.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 6,
+      "src": "/assets/social/november-2026/tfl/06-route-9.jpg",
+      "alt": "Mappa illustrata di musei e palazzi lungo la linea 9.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-29T15:42:00+00:00"
+  },
+  "source": {
+    "type": "first-party-photo-archive",
+    "reference": "assets/instagram/tfl bus tours",
+    "url": "",
+    "checked_at": "2026-10-29"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": "",
+    "published_url": "",
+    "last_sync_at": "",
+    "sync_note": ""
+  },
+  "notes": "Utility carousel designed for saves and shares. Verify live TfL service before publication."
+}

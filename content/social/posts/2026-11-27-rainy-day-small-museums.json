@@ -1,0 +1,82 @@
+{
+  "post_id": "2026-11-27-rainy-day-small-museums",
+  "internal_title": "Quattro piccoli musei per una giornata di pioggia",
+  "editorial_status": "approved",
+  "language_mode": "italian-only",
+  "caption_it": "Piove. Potreste passare il pomeriggio in un grande museo insieme a tutti gli altri, oppure scegliere quattro posti più piccoli e decisamente più strani.\n\nGrant Museum — zoologia e scheletri\nPetrie Museum — archeologia egizia in vetrine densissime\nHunterian Museum — chirurgia, anatomia e storia della medicina\nOld Operating Theatre — una sala operatoria del 1822 nascosta in un sottotetto\n\nI primi tre hanno ingresso gratuito; l’Old Operating Theatre è a pagamento. Controllate sempre orari e accesso prima di partire. Quale scegliete?",
+  "caption_en": "",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#LondonMuseums",
+    "#HiddenLondon",
+    "#RainyDayLondon",
+    "#LondraInsolita"
+  ],
+  "post_format": "carousel",
+  "scheduled_for": "2026-11-27T10:00:00+00:00",
+  "location": "London, United Kingdom",
+  "media_folder": "november-2026/museums",
+  "overlay": {
+    "enabled": false,
+    "kicker": "",
+    "headline": "",
+    "position": "",
+    "rendered_src": ""
+  },
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/social/november-2026/museums/01-cover.jpg",
+      "alt": "Copertina: quattro piccoli musei londinesi per una giornata di pioggia.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 2,
+      "src": "/assets/social/november-2026/museums/02-grant.jpg",
+      "alt": "Cranî esposti al Grant Museum of Zoology.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 3,
+      "src": "/assets/social/november-2026/museums/03-petrie.jpg",
+      "alt": "Vetrina di figurine egizie al Petrie Museum.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 4,
+      "src": "/assets/social/november-2026/museums/04-hunterian.jpg",
+      "alt": "Strumenti chirurgici storici esposti all'Hunterian Museum.",
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "order": 5,
+      "src": "/assets/social/november-2026/museums/05-old-operating-theatre.jpg",
+      "alt": "La sala operatoria storica dell'Old Operating Theatre.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-29T15:42:00+00:00"
+  },
+  "source": {
+    "type": "first-party-photo-archive",
+    "reference": "assets/instagram/grant museum; petrie; hunterian; old operating theatre",
+    "url": "",
+    "checked_at": "2026-10-29"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": "",
+    "published_url": "",
+    "last_sync_at": "",
+    "sync_note": ""
+  },
+  "notes": "Utility carousel. Recheck admission and opening information shortly before publication."
+}
