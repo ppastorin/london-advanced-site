@@ -6,7 +6,8 @@ const icons = {
   ticket: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5V5h16v2.5a3 3 0 0 0 0 6V16H4v-2.5a3 3 0 0 0 0-6Z"/><path d="M12 6.5v8"/></svg>',
   route: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18h3a3 3 0 0 0 3-3V9a3 3 0 0 1 3-3"/></svg>',
   spark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2Z"/><path d="m19 16 .7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7L19 16Z"/></svg>',
-  loo: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8M9 4v5a3 3 0 0 0 6 0V4M7 20h10M9 13v7M15 13v7"/><circle cx="12" cy="9" r="5"/></svg>'
+  loo: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8M9 4v5a3 3 0 0 0 6 0V4M7 20h10M9 13v7M15 13v7"/><circle cx="12" cy="9" r="5"/></svg>',
+  charity: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16l-1 12H5L4 8Z"/><path d="M8 8a4 4 0 0 1 8 0M9 13h6M9 16h4"/></svg>'
 };
 
 function icon(name) {
@@ -19,7 +20,8 @@ const visualMotifs = {
   ticket: `<div class="ticket-graphic" aria-hidden="true"><span>ZONE 1–6</span><b>£</b><small>FARE CHECK</small></div>`,
   route: `<svg class="route-map" viewBox="0 0 220 100" aria-hidden="true"><path d="M12 77c28 0 28-49 58-49s26 51 57 51 31-55 78-55"/><circle cx="12" cy="77" r="6"/><circle cx="205" cy="24" r="6"/></svg><span class="route-label route-a">A</span><span class="route-label route-b">B</span>`,
   spark: `<div class="mood-orbit" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="mood-word mood-one">QUIET</span><span class="mood-word mood-two">CURIOUS</span>`,
-  loo: `<svg class="loo-route-graphic" viewBox="0 0 184 88" aria-hidden="true"><path class="loo-route-line" d="M10 70C34 64 35 39 59 39s29 28 54 21 16-10 27-12"/><circle class="loo-route-start" cx="10" cy="70" r="5"/><path class="loo-route-pin" d="M151 12c-12.2 0-22 9.8-22 22 0 16.5 22 38 22 38s22-21.5 22-38c0-12.2-9.8-22-22-22Z"/><circle class="loo-route-core" cx="151" cy="34" r="7"/></svg>`
+  loo: `<svg class="loo-route-graphic" viewBox="0 0 184 88" aria-hidden="true"><path class="loo-route-line" d="M10 70C34 64 35 39 59 39s29 28 54 21 16-10 27-12"/><circle class="loo-route-start" cx="10" cy="70" r="5"/><path class="loo-route-pin" d="M151 12c-12.2 0-22 9.8-22 22 0 16.5 22 38 22 38s22-21.5 22-38c0-12.2-9.8-22-22-22Z"/><circle class="loo-route-core" cx="151" cy="34" r="7"/></svg>`,
+  charity: `<svg class="charity-shop-graphic" viewBox="0 0 184 88" aria-hidden="true"><path d="M25 29h134l-8 47H33l-8-47Z"/><path d="M57 29c0-22 70-22 70 0M52 48h80M52 61h54"/><circle cx="145" cy="17" r="8"/></svg>`
 };
 
 function appCards() {
@@ -339,7 +341,7 @@ function render() {
 
     <section class="hero">
       <div class="hero-intro">
-        <span class="eyebrow">Independent London guide · 6 free tools</span>
+        <span class="eyebrow">Independent London guide · 7 free tools</span>
         <h1>The city beyond<br><em>the obvious.</em></h1>
         <p>Find unusual places and things to do in London, make smarter journeys and see what the city feels like before you set out.</p>
         <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Explore the tools</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Find unusual things to do →</a></div>
@@ -348,7 +350,7 @@ function render() {
     </section>
 
     <section id="tools" class="tools section-wrap">
-      <div class="section-heading tool-heading"><div><span>01 / Practical London</span><h2>Choose what you need now.</h2></div><p>Six focused tools. No account, no app download and no generic recommendations.</p></div>
+      <div class="section-heading tool-heading"><div><span>01 / Practical London</span><h2>Choose what you need now.</h2></div><p>Seven focused tools. No account, no app download and no generic recommendations.</p></div>
       <div class="app-grid">${appCards()}</div>
     </section>
 

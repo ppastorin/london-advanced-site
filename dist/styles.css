@@ -284,6 +284,8 @@ section[id] { scroll-margin-top: 76px; }
 .loo-route-start { fill:#487a5e; stroke:#fff; stroke-width:2; }
 .loo-route-pin { fill:rgba(255,255,255,.86); stroke:#285b42; stroke-width:2.5; }
 .loo-route-core { fill:#487a5e; }
+.visual-charity { --visual-bg:#e7dfcf; }
+.charity-shop-graphic{position:absolute;right:18px;bottom:8px;width:min(176px,calc(100% - 96px));fill:rgba(255,255,255,.72);stroke:#6b4e34;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .app-copy { min-height: 154px; padding: 20px 22px 18px; display: flex; flex: 1; flex-direction: column; }
 .app-card h3 { margin: 5px 0 7px; font-size: 21px; line-height: 1.15; }
 .app-card p { margin: 0; color: #5d5d5d; font-size: 14px; line-height: 1.48; }

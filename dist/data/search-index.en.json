@@ -169,6 +169,30 @@
       "content": "Find a toilet you can actually use Find verified public toilets, free facilities and useful venue toilets near you or any London place."
     },
     {
+      "id": "tool:charity-shops:en",
+      "type": "tool",
+      "locale": "en",
+      "title": "Charity Shops",
+      "summary": "Find nearby London charity shops and filter by charity, distance and specialist stock.",
+      "url": "/charity-shops/",
+      "tags": [
+        "Find better second-hand stops"
+      ],
+      "keywords": [
+        "charity shop",
+        "charity shops",
+        "second hand",
+        "thrift",
+        "used books",
+        "vintage",
+        "oxfam",
+        "british heart foundation",
+        "scope",
+        "crisis"
+      ],
+      "content": "Find better second-hand stops Find nearby London charity shops and filter by charity, distance and specialist stock."
+    },
+    {
       "id": "article:blackheath-greenwich-walk:en",
       "type": "article",
       "locale": "en",
@@ -667,7 +691,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "On its final day, Britain's first exhibition devoted to Nazi camp slave labour draws on clandestine photographs, testimony and company records to trace both exploitation and survival. A free final-day encounter with rare archival evidence about an underexamined system of wartime exploitation and its victims.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-10-30T17:15:00+00:00"
     },
     {
@@ -691,7 +715,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "A free after-hours takeover fills the V&A with eerie stagecraft, surreal screenings, algorithmic textiles, performance and study-room objects rarely placed on public display. A one-night, after-hours programme opens unusual corners of the V&A to experimental performance, film and objects not normally displayed.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-10-30T22:15:00+00:00"
     },
     {
@@ -715,7 +739,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "On its final day, paintings, photographs and design plans reveal how anaesthesia, antisepsis, hospital architecture and medical ethics transformed the once-hidden operating theatre. A free final-day look at a normally hidden medical space through rare historic images, architectural evidence and contemporary surgical practice.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-10-31T17:15:00+00:00"
     },
     {
@@ -739,7 +763,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "A one-day comics room combines a curated sale with a 4pm seminar on collecting and trading, plus free appraisals for visitors who bring their own books. An independent museum hosts a free, single-day mix of specialist collecting knowledge, personal appraisals and old-school comic treasure hunting.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-10-31T17:45:00+00:00"
     },
     {
@@ -763,7 +787,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "At dawn, hundreds of pre-1905 cars gather on Serpentine Road and begin the world's longest-running motoring event, reviving the route of the 1896 Emancipation Run. A free dawn encounter with living transport history turns Hyde Park into the starting paddock for a route first celebrated in 1896.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-11-01T08:45:00+00:00"
     },
     {
@@ -787,7 +811,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "On its final day, 45 artworks, photographs, films, objects and oral histories show how wartime artists recorded a London transformed by bombing, shortages and adaptation. A free final-day chance to read wartime London through artists' records of its streets, landmarks, shelters and changing communities.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-11-01T18:15:00+00:00"
     }
   ]

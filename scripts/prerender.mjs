@@ -202,6 +202,62 @@ async function buildNativeLooPages() {
   ]);
 }
 
+function charitySiteNavigation(homepage, locale) {
+  const header = homepage.match(/<header class="site-nav">[\s\S]*?<\/header>/)?.[0];
+  if (!header) throw new Error(`Could not extract the ${locale} site navigation for the Charity Shops Map.`);
+  if (locale === "en") {
+    return header
+      .replace('class="wordmark" href="#top" aria-label="London Advanced home — back to top"', 'class="wordmark" href="/" aria-label="London Advanced homepage"')
+      .replaceAll('href="#events"', 'href="/#events"')
+      .replace('<button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>', '<a href="/journal/">Journal</a>')
+      .replace('<button class="nav-section-button contact-nav" type="button" data-scroll-target="contact">Contact</button>', '<a class="contact-nav" href="/#contact">Contact</a>')
+      .replace(/<button class="mobile-section-link" type="button" data-scroll-target="journal">([\s\S]*?)<\/button>/, '<a href="/journal/">$1</a>')
+      .replace(/<button class="mobile-section-link" type="button" data-scroll-target="contact">([\s\S]*?)<\/button>/, '<a href="/#contact">$1</a>')
+      .replace('class="language-switch" href="/it/"', 'class="language-switch" href="/it/strumenti/negozi-di-beneficenza/"')
+      .replace('class="mobile-language-switch" href="/it/"', 'class="mobile-language-switch" href="/it/strumenti/negozi-di-beneficenza/"')
+      .replace('href="/charity-shops/" data-track="app-menu:Charity Shops"', 'href="/charity-shops/" aria-current="page" data-track="app-menu:Charity Shops"');
+  }
+  return header
+    .replace('class="wordmark" href="#top" aria-label="London Advanced home — back to top"', 'class="wordmark" href="/it/" aria-label="Homepage London Advanced"')
+    .replace('<button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>', '<a href="/it/journal/">Journal</a>')
+    .replace(/<button class="mobile-section-link" type="button" data-scroll-target="journal">([\s\S]*?)<\/button>/, '<a href="/it/journal/">$1</a>')
+    .replace('class="language-switch" href="/"', 'class="language-switch" href="/charity-shops/"')
+    .replace('class="mobile-language-switch" href="/"', 'class="mobile-language-switch" href="/charity-shops/"')
+    .replace('href="/it/strumenti/negozi-di-beneficenza/"', 'href="/it/strumenti/negozi-di-beneficenza/" aria-current="page"');
+}
+
+function charityGlobalFooter(homepage) {
+  const footer = homepage.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0];
+  if (!footer) throw new Error("Could not extract the site footer for the Charity Shops Map.");
+  return footer.replace(/<footer([^>]*)>/, (_match, attrs) => `<footer${attrs} class="global-footer">`);
+}
+
+function nativeCharityPage(template, homepage, locale) {
+  const nav = charitySiteNavigation(homepage, locale);
+  const footer = charityGlobalFooter(homepage);
+  return template
+    .replace(/<header class="site-nav">[\s\S]*?<\/header>/, "")
+    .replace(/<footer\b[^>]*class="[^"]*global-footer[^"]*"[^>]*>[\s\S]*?<\/footer>/, "")
+    .replace('<body class="charity-page">', `<body class="charity-page">${nav}`)
+    .replace("</body>", `${footer}</body>`)
+    .replace(/[ \t]+$/gm, "");
+}
+
+async function buildNativeCharityPages() {
+  const englishHomepage = await readFile(path.join(distRoot, "index.html"), "utf8");
+  const italianHomepage = await readFile(path.join(distRoot, "it/index.html"), "utf8");
+  const englishTemplate = await readFile(path.join(distRoot, "charity-shops/index.html"), "utf8");
+  const italianTemplate = await readFile(path.join(distRoot, "it/charity-shops/index.html"), "utf8");
+  const englishPage = nativeCharityPage(englishTemplate, englishHomepage, "en");
+  const italianPage = nativeCharityPage(italianTemplate, italianHomepage, "it");
+  await Promise.all([
+    writeFile(path.join(distRoot, "charity-shops/index.html"), englishPage, "utf8"),
+    writeFile(path.join(distRoot, "it/charity-shops/index.html"), italianPage, "utf8"),
+    mkdir(path.join(distRoot, "it/strumenti/negozi-di-beneficenza"), { recursive: true })
+      .then(() => writeFile(path.join(distRoot, "it/strumenti/negozi-di-beneficenza/index.html"), italianPage, "utf8"))
+  ]);
+}
+
 function safeJson(value) {
   return JSON.stringify(value, null, 2).replaceAll("<", "\\u003c");
 }
@@ -715,6 +771,7 @@ export async function prerender() {
   await buildJournal({ includeDrafts: process.argv.includes("--drafts") });
   await buildItineraries({ includeDrafts: process.argv.includes("--drafts") });
   await buildNativeLooPages();
+  await buildNativeCharityPages();
   await buildGuidePages();
   await buildSearch();
   await buildLegalPages();

@@ -168,6 +168,30 @@
       "content": "Un bagno vicino, senza tentativi Trova bagni pubblici verificati, servizi gratuiti e toilette utili vicino a te o a qualsiasi luogo di Londra."
     },
     {
+      "id": "tool:charity-shops:it",
+      "type": "tool",
+      "locale": "it",
+      "title": "Negozi solidali",
+      "summary": "Trova negozi solidali vicini e filtra per organizzazione, distanza e specialità.",
+      "url": "/it/strumenti/negozi-di-beneficenza/",
+      "tags": [
+        "Trova l’usato giusto vicino a te"
+      ],
+      "keywords": [
+        "negozio solidale",
+        "negozi solidali",
+        "seconda mano",
+        "usato",
+        "libri usati",
+        "vintage",
+        "oxfam",
+        "british heart foundation",
+        "scope",
+        "crisis"
+      ],
+      "content": "Trova l’usato giusto vicino a te Trova negozi solidali vicini e filtra per organizzazione, distanza e specialità."
+    },
+    {
       "id": "article:blackheath-greenwich-walk:it",
       "type": "article",
       "locale": "it",
@@ -666,7 +690,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Nell'ultimo giorno, la prima mostra britannica sul lavoro schiavile nei campi nazisti usa foto clandestine, testimonianze e archivi industriali per raccontare sfruttamento e sopravvivenza.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-10-30T17:15:00+00:00"
     },
     {
@@ -690,7 +714,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Un'apertura serale gratuita invade il V&A con scenografie inquietanti, film surreali, tessuti algoritmici, performance e opere della study room raramente esposte.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-10-30T22:15:00+00:00"
     },
     {
@@ -714,7 +738,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Nell'ultimo giorno, dipinti, fotografie e progetti mostrano come anestesia, antisepsi, architettura ospedaliera ed etica abbiano trasformato la sala operatoria.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-10-31T17:15:00+00:00"
     },
     {
@@ -738,7 +762,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Una giornata dedicata ai fumetti unisce una selezione di volumi, un seminario alle 16 sul collezionismo e valutazioni gratuite per chi porta i propri albi.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-10-31T17:45:00+00:00"
     },
     {
@@ -762,7 +786,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "All'alba, centinaia di auto anteriori al 1905 si radunano su Serpentine Road e danno il via alla corsa automobilistica più longeva al mondo, nata nel 1896.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-11-01T08:45:00+00:00"
     },
     {
@@ -786,7 +810,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Nell'ultimo giorno, 45 opere, fotografie, film, oggetti e testimonianze mostrano come gli artisti raccontarono una Londra trasformata da bombe, privazioni e adattamento.",
-      "updated_at": "2026-10-26T15:04:47+00:00",
+      "updated_at": "2026-10-29T14:58:12+00:00",
       "expires_at": "2026-11-01T18:15:00+00:00"
     }
   ]

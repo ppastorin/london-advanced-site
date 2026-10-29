@@ -40,5 +40,12 @@
       "en": ["toilet", "toilets", "loo", "public toilet", "accessible toilet", "baby changing", "wc", "restroom"],
       "it": ["bagno", "bagni", "toilette", "bagno pubblico", "bagno accessibile", "fasciatoio", "wc", "servizi igienici"]
     }
+  },
+  {
+    "id": "charity-shops",
+    "keywords": {
+      "en": ["charity shop", "charity shops", "second hand", "thrift", "used books", "vintage", "oxfam", "british heart foundation", "scope", "crisis"],
+      "it": ["negozio solidale", "negozi solidali", "seconda mano", "usato", "libri usati", "vintage", "oxfam", "british heart foundation", "scope", "crisis"]
+    }
   }
 ]

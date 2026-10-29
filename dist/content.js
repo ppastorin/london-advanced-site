@@ -67,6 +67,15 @@ window.LONDON_ADVANCED = {
       href: "/loo/",
       embedUrl: "/loo/",
       icon: "loo"
+    },
+    {
+      id: "charity-shops",
+      name: "Charity Shops",
+      short: "Find better second-hand stops",
+      description: "Find nearby London charity shops and filter by charity, distance and specialist stock.",
+      href: "/charity-shops/",
+      embedUrl: "/charity-shops/",
+      icon: "charity"
     }
   ],
   stories: [
