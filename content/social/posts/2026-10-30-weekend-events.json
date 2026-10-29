@@ -1,54 +1,54 @@
 {
-  "notes": "Feed valid through 1 November 2026. Selected events rechecked on their official pages on 28 October: Hunterian Museum (31 October), IWM London (1 November) and Veteran Car Run (1 November). The V&A Friday Late was not selected because its official URL currently returns 404. Carousel uses clean screenshots of all three live official event pages with the established London Advanced editorial overlay treatment.",
-  "caption_en": "Three less-obvious London picks: the final day of the Hunterian’s operating-theatre exhibition, wartime London through artists at IWM, and pre-1905 cars leaving Hyde Park at dawn.",
+  "notes": "Three daily Italian event cards supplied by Paolo on 28 October. Final 1080×1350 carousel preserves the source cards exactly and adds London Advanced editorial footers outside the original content. Six free events: Wiener Holocaust Library and V&A Friday Late (30 October); Hunterian Museum and Cartoon Museum Comic Day (31 October); Veteran Car Run and IWM London (1 November).",
+  "caption_en": "Six free London events across Friday, Saturday and Sunday—from late-night design and medical history to comics, veteran cars and wartime art.",
   "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": ""
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-29T02:50:00+00:00"
   },
-  "caption_it": "Tre appuntamenti per un weekend londinese poco convenzionale. Sabato, al Hunterian Museum, è l’ultimo giorno di The Operating Theatre: 250 anni di chirurgia raccontati attraverso dipinti, fotografie e progetti (ingresso gratuito, prenotazione consigliata). Domenica, all’IWM, chiude Beauty and Destruction, 45 opere e testimonianze sulla Londra trasformata dalla guerra. Oppure puntate la sveglia: dalle 7 le auto costruite prima del 1905 partono da Serpentine Road per la London to Brighton Veteran Car Run. Tre modi molto diversi di guardare la città; il terzo richiede caffè e una certa disciplina.",
+  "caption_it": "Sei appuntamenti gratuiti per un weekend londinese che passa dalla storia al design, dalla chirurgia ai fumetti. Venerdì: l’ultimo giorno della mostra sul lavoro schiavile nazista alla Wiener Holocaust Library, oppure il Friday Late del V&A. Sabato: 250 anni di sala operatoria al Hunterian Museum e il Comic Day del Cartoon Museum. Domenica richiede una scelta più drastica: le auto della Veteran Car Run all’alba a Hyde Park, oppure la Londra in guerra raccontata dagli artisti all’IWM. Tutti gratuiti; alcuni richiedono prenotazione e quasi tutti premiano chi controlla gli orari prima di partire.",
   "hashtags": [
     "#LondonAdvanced",
     "#VisitLondon",
     "#InstaLondon",
     "#LondonWeekend",
-    "#LondonMuseums"
+    "#FreeLondon"
   ],
   "media_folder": "assets/social/weekend-2026-10-30",
-  "editorial_status": "review",
+  "editorial_status": "scheduled",
   "language_mode": "italian-plus-english-summary",
   "overlay": {
     "enabled": true,
-    "kicker": "QUESTO WEEKEND",
-    "headline": "Tre idee meno ovvie",
+    "kicker": "LONDON ADVANCED · QUESTO WEEKEND",
+    "headline": "6 IDEE GRATUITE",
     "position": "bottom-left",
-    "rendered_src": "/assets/social/weekend-2026-10-30/01-hunterian.jpg"
+    "rendered_src": "/assets/social/weekend-2026-10-30/01-weekend-final.jpg"
   },
-  "cta": "Orari, dettagli e link ufficiali sono nella selezione eventi di London Advanced.",
+  "cta": "Salvate il carosello: indirizzi, orari e condizioni di accesso sono nelle immagini.",
   "location": "London, United Kingdom",
   "post_format": "carousel",
-  "internal_title": "Tre idee per il weekend · 30 ottobre–1 novembre",
-  "updated_at": "2026-10-28T19:02:39+00:00",
-  "scheduled_for": "2026-10-30T10:00:00+00:00",
+  "internal_title": "Sei idee gratuite per il weekend · 30 ottobre–1 novembre",
+  "updated_at": "2026-10-29T02:50:00+00:00",
+  "scheduled_for": "2026-10-29T10:45:00+00:00",
   "images": [
     {
       "order": 1,
-      "src": "/assets/social/weekend-2026-10-30/01-hunterian.jpg",
-      "alt": "Schermata della pagina ufficiale del Hunterian Museum con una fotografia storica di una sala operatoria. In basso, su fondo scuro, il testo: Tre idee meno ovvie per Londra, 31 ottobre–1 novembre.",
+      "src": "/assets/social/weekend-2026-10-30/01-weekend-final.jpg",
+      "alt": "Programma di venerdì 30 ottobre: mostra sul lavoro schiavile nazista alla Wiener Holocaust Library e Friday Late Phantom Constructs al V&A. In basso: London Advanced, sei idee gratuite, 30 ottobre–1 novembre.",
       "focal_x": 50,
       "focal_y": 50
     },
     {
       "order": 2,
-      "src": "/assets/social/weekend-2026-10-30/02-iwm.jpg",
-      "alt": "Schermata della pagina ufficiale IWM per Beauty and Destruction, con un dipinto di edifici londinesi bombardati. La fascia inferiore indica: domenica, ultimo giorno; IWM London; gratuito.",
+      "src": "/assets/social/weekend-2026-10-30/02-saturday-final.jpg",
+      "alt": "Programma di sabato 31 ottobre: mostra sui 250 anni della sala operatoria al Hunterian Museum e Comic Day al Cartoon Museum. In basso: Chirurgia e fumetti, due appuntamenti gratuiti.",
       "focal_x": 50,
       "focal_y": 50
     },
     {
       "order": 3,
-      "src": "/assets/social/weekend-2026-10-30/03-veteran-car-run.jpg",
-      "alt": "Schermata della pagina ufficiale della London to Brighton Veteran Car Run, con auto storiche e spettatori. La fascia inferiore indica la partenza domenica dalle 7 da Serpentine Road, gratuita da osservare.",
+      "src": "/assets/social/weekend-2026-10-30/03-sunday-final.jpg",
+      "alt": "Programma di domenica 1 novembre: partenza della Veteran Car Run da Hyde Park e ultimo giorno di Bellezza e distruzione all’IWM London. In basso: Auto storiche e Londra in guerra, due appuntamenti gratuiti.",
       "focal_x": 50,
       "focal_y": 50
     }
@@ -61,10 +61,10 @@
     "checked_at": "2026-10-28"
   },
   "metricool": {
-    "planner_id": "",
-    "scheduled_at": "",
+    "planner_id": "409632674",
+    "scheduled_at": "2026-10-29T02:49:00+00:00",
     "published_url": "",
-    "last_sync_at": "",
-    "sync_note": "Review-only draft. Metricool has not been called."
+    "last_sync_at": "2026-10-29T02:50:00+00:00",
+    "sync_note": "Scheduled directly through the connected Metricool brand 5985082 for 29 October 2026 at 10:45 Europe/London. UUID 9149432960801197757."
   }
 }
