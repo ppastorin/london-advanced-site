@@ -1,0 +1,54 @@
+{
+  "post_id": "2026-11-06-city-dragons-reel",
+  "internal_title": "I draghi ai confini della City",
+  "editorial_status": "approved",
+  "language_mode": "italian-only",
+  "caption_it": "Questi draghi non sono semplici decorazioni: segnano gli ingressi nella City of London. Alcuni sono monumentali, altri quasi scompaiono fra traffico, palazzi e cantieri. Cercarli trasforma la Square Mile in una piccola caccia urbana—e costringe finalmente a guardare verso l’alto.\n\nQuanti ne avete già incontrati? Scrivetelo nei commenti e salvate il Reel per il prossimo giro nella City.",
+  "caption_en": "",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#CityOfLondon",
+    "#LondonDragons",
+    "#HiddenLondon",
+    "#LondraInsolita"
+  ],
+  "post_format": "reel",
+  "scheduled_for": "2026-11-06T10:00:00+00:00",
+  "location": "City of London, London",
+  "media_folder": "november-2026",
+  "overlay": {
+    "enabled": false,
+    "kicker": "",
+    "headline": "",
+    "position": "",
+    "rendered_src": ""
+  },
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/social/november-2026/city-dragons-reel.mp4",
+      "alt": "Reel fotografico dedicato ai draghi che segnano gli ingressi nella City of London.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-10-29T15:42:00+00:00"
+  },
+  "source": {
+    "type": "first-party-photo-archive",
+    "reference": "assets/instagram/draghi and London Advanced City dragon material",
+    "url": "",
+    "checked_at": "2026-10-29"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": "",
+    "published_url": "",
+    "last_sync_at": "",
+    "sync_note": ""
+  },
+  "notes": "Discovery Reel built from first-party photography; silent photo motion format."
+}
