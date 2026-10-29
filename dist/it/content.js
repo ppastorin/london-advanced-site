@@ -66,6 +66,15 @@ window.LONDON_ADVANCED={
       "href": "/it/strumenti/trova-un-bagno/",
       "embedUrl": "/it/loo/",
       "icon": "loo"
+    },
+    {
+      "id": "charity-shops",
+      "name": "Negozi solidali",
+      "short": "Trova l’usato giusto vicino a te",
+      "description": "Trova negozi solidali vicini e filtra per organizzazione, distanza e specialità.",
+      "href": "/it/strumenti/negozi-di-beneficenza/",
+      "embedUrl": "/it/strumenti/negozi-di-beneficenza/",
+      "icon": "charity"
     }
   ],
   "stories": [

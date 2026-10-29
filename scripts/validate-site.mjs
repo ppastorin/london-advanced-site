@@ -107,7 +107,13 @@ const requiredAssets = [
   "dist/apps/fare-calculator/fare-engine.mjs",
   "dist/apps/fare-calculator/translations.mjs",
   "dist/apps/fare-calculator/fare-calculator-app.mjs",
-  "dist/apps/fare-calculator/fare-calculator.css"
+  "dist/apps/fare-calculator/fare-calculator.css",
+  "dist/charity-shops/index.html",
+  "dist/charity-shops/charity-shops.css",
+  "dist/charity-shops/charity-shops.js",
+  "dist/it/charity-shops/index.html",
+  "dist/it/strumenti/negozi-di-beneficenza/index.html",
+  "dist/data/charity-shops.json"
 ];
 requiredAssets.forEach(requireFile);
 
@@ -209,8 +215,11 @@ const expectedTools = new Map([
     embedUrl: "https://london-by-mood.ppastorin.workers.dev/"
   }]
 ,
-  ["loo-finder", { href: "/loo/", embedUrl: "/loo/" }]
+  ["loo-finder", { href: "/loo/", embedUrl: "/loo/" }],
+  ["charity-shops", { href: "/charity-shops/", embedUrl: "/charity-shops/" }]
 ]);
+
+const nativeTools = new Set(["loo-finder", "charity-shops"]);
 
 const homepageHtml = requireFile("dist/index.html");
 const italianHomepageHtml = requireFile("dist/it/index.html");
@@ -285,8 +294,8 @@ try {
           continue;
         }
         const routeHtml = fs.readFileSync(routeFile, "utf8");
-        if (tool.id !== "loo-finder" && !routeHtml.includes(`data-tool-id="${tool.id}"`)) fail(`${tool.href} has the wrong data-tool-id.`);
-        if (tool.id === "loo-finder" && !routeHtml.includes('<html lang="en-GB">')) fail("/loo/ must declare en-GB.");
+        if (!nativeTools.has(tool.id) && !routeHtml.includes(`data-tool-id="${tool.id}"`)) fail(`${tool.href} has the wrong data-tool-id.`);
+        if (nativeTools.has(tool.id) && !routeHtml.includes('<html lang="en-GB">')) fail(`${tool.href} must declare en-GB.`);
         if (!routeHtml.includes(`<link rel="canonical" href="https://www.londonadvanced.com${tool.href}">`)) {
           fail(`${tool.href} is missing its canonical URL.`);
         }
@@ -431,7 +440,7 @@ try {
 }
 
 for (const [toolId, { href }] of expectedTools) {
-  if (toolId === "loo-finder") continue;
+  if (nativeTools.has(toolId)) continue;
   const toolHtml = requireFile(path.join("dist", href.replace(/^\//, ""), "index.html"));
   for (const marker of [
     '<html lang="en-GB">',
@@ -648,11 +657,11 @@ for (const { href } of expectedTools.values()) {
 }
 const aboutHtml = requireFile("dist/about/index.html");
 const italianAboutHtml = requireFile("dist/it/chi-sono/index.html");
-if (!aboutHtml.includes("website’s six free tools") || !aboutHtml.includes("Six practical ways to plan") || !aboutHtml.includes("6 free tools")) {
-  fail("The English About page must describe all six tools.");
+if (!aboutHtml.includes("website’s seven free tools") || !aboutHtml.includes("Seven practical ways to plan") || !aboutHtml.includes("7 free tools")) {
+  fail("The English About page must describe all seven tools.");
 }
-if (!italianAboutHtml.includes("I sei strumenti gratuiti") || !italianAboutHtml.includes('href="/it/strumenti/trova-un-bagno/"')) {
-  fail("The Italian About page must describe and link all six tools.");
+if (!italianAboutHtml.includes("I sette strumenti gratuiti") || !italianAboutHtml.includes('href="/it/strumenti/trova-un-bagno/"') || !italianAboutHtml.includes('href="/it/strumenti/negozi-di-beneficenza/"')) {
+  fail("The Italian About page must describe and link all seven tools.");
 }
 if (/five free tools|Five practical ways|5 free tools/i.test(aboutHtml) || /I cinque strumenti gratuiti/i.test(italianAboutHtml)) {
   fail("The About pages still contain the retired five-tool wording.");

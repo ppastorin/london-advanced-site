@@ -281,6 +281,22 @@ async function handleLoos(request, env) {
   });
 }
 
+async function handleCharityShops(request, env) {
+  if (request.method !== "GET") {
+    return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
+  }
+  const dataUrl = new URL("/data/charity-shops.json", request.url);
+  const response = await env.ASSETS.fetch(new Request(dataUrl, request));
+  if (!response.ok) return jsonResponse({ ok: false, code: "charity_shop_data_unavailable" }, 503);
+  return new Response(await response.text(), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=300"
+    }
+  });
+}
+
 async function handleLooGeocode(request, fetchImpl = fetch) {
   if (request.method !== "GET") {
     return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
@@ -387,7 +403,10 @@ function toolLink(id, locale) {
       : ["Escape the Crowds", "/home/escape-the-crowds/"],
     "loo-finder": italian
       ? ["Trova un bagno", "/it/strumenti/trova-un-bagno/"]
-      : ["Loo Finder", "/loo/"]
+      : ["Loo Finder", "/loo/"],
+    "charity-shops": italian
+      ? ["Negozi solidali", "/it/strumenti/negozi-di-beneficenza/"]
+      : ["Charity Shops", "/charity-shops/"]
   };
   const [title, url] = tools[id];
   return { id, title, url };
@@ -417,21 +436,24 @@ async function searchPublishedPlaces(query, locale, fetchImpl) {
         ? (place.hookIt || place.descriptionIt || place.hook || place.description || "Luogo presente negli strumenti London Advanced.")
         : (place.hook || place.description || "A place available in the London Advanced tools.");
       const keywords = locationKeywords(place);
+      const isCharityShop = String(place.category || "").toUpperCase() === "CHARITY_SHOP";
       return {
         id: `location:${place.id}`,
         type: "location",
         locale,
         title: place.name,
         summary,
-        url: toolLink("smart-navigation", locale).url,
+        url: toolLink(isCharityShop ? "charity-shops" : "smart-navigation", locale).url,
         tags: [place.category].filter(Boolean),
         keywords,
         content: summary,
-        links: [
-          toolLink("smart-navigation", locale),
-          toolLink("london-by-mood", locale),
-          toolLink("escape-the-crowds", locale)
-        ],
+        links: isCharityShop
+          ? [toolLink("charity-shops", locale), toolLink("smart-navigation", locale)]
+          : [
+              toolLink("smart-navigation", locale),
+              toolLink("london-by-mood", locale),
+              toolLink("escape-the-crowds", locale)
+            ],
         score: locationScore(place.name, query, summary, keywords),
         source: "places-d1"
       };
@@ -857,6 +879,8 @@ export default {
     if (url.pathname === "/api/subscribe") return handleSubscribe(request, env);
     if (url.pathname === "/api/loos") return handleLoos(request, env);
     if (url.pathname === "/api/loo-geocode") return handleLooGeocode(request);
+    if (url.pathname === "/api/charity-shops") return handleCharityShops(request, env);
+    if (url.pathname === "/api/charity-geocode") return handleLooGeocode(request);
     if (url.pathname === "/api/search-locations") return handleLocationSearch(request, env);
     if (url.pathname === "/api/decap/auth") return handleDecapAuth(request, env);
     if (url.pathname === DECAP_CALLBACK_PATH) return handleDecapCallback(request, env);
