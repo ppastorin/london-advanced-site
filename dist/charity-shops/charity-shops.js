@@ -37,13 +37,14 @@ function marker(shop){
 function showAllMarkers(){state.markers.clearLayers();for(const shop of state.shops)state.markers.addLayer(marker(shop))}
 
 function filtered(){
-  if(!state.origin)return[];
-  return state.shops.map(shop=>({...shop,distance:distance(state.origin,shop)})).filter(shop=>shop.distance<=state.radius&&(state.subtype==="all"||shop.subtype===state.subtype)&&state.organisations.has(shop.organization)).sort((a,b)=>a.distance-b.distance||a.name.localeCompare(b.name));
+  const shops=state.shops.filter(shop=>(state.subtype==="all"||shop.subtype===state.subtype)&&state.organisations.has(shop.organization));
+  if(!state.origin)return shops.sort((a,b)=>a.name.localeCompare(b.name));
+  return shops.map(shop=>({...shop,distance:distance(state.origin,shop)})).filter(shop=>shop.distance<=state.radius).sort((a,b)=>a.distance-b.distance||a.name.localeCompare(b.name));
 }
 
 function render(){
-  if(!state.origin){$("#result-title").textContent=IT?"Negozi nelle vicinanze":"Nearby shops";$("#result-count").textContent=copy.prompt;return}
   const shops=filtered();state.markers.clearLayers();for(const shop of shops)state.markers.addLayer(marker(shop));
+  if(!state.origin){$("#result-title").textContent=IT?"Negozi nelle vicinanze":"Nearby shops";$("#result-count").textContent=copy.prompt;return}
   if(state.originLayer)state.map.removeLayer(state.originLayer);if(state.radiusLayer)state.map.removeLayer(state.radiusLayer);
   state.originLayer=L.circleMarker([state.origin.lat,state.origin.lon],{radius:7,color:"#fff",weight:2,fillColor:"#a44732",fillOpacity:1}).bindPopup(copy.map).addTo(state.map);
   state.radiusLayer=L.circle([state.origin.lat,state.origin.lon],{radius:state.radius,color:"#275e4a",weight:1,fillColor:"#275e4a",fillOpacity:.07}).addTo(state.map);
@@ -68,8 +69,7 @@ function initAbout(){const panel=$("#charity-about-panel");document.querySelecto
 async function start(){
   initMap();initAbout();
   try{await load()}catch(error){$("#charity-status").textContent=error.message;return}
-  $("#radius").addEventListener("input",event=>{$("#radius-output").textContent=`${event.target.value} m`});
-  $("#radius").addEventListener("change",event=>{state.radius=Number(event.target.value);render()});
+  $("#radius").addEventListener("input",event=>{$("#radius-output").textContent=`${event.target.value} m`;state.radius=Number(event.target.value);render()});
   document.querySelectorAll(".category-chip").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll(".category-chip").forEach(item=>item.classList.remove("active"));button.classList.add("active");state.subtype=button.dataset.subtype;render()}));
   $("#charity-options").addEventListener("change",syncOrganisations);
   $("#organisation-search").addEventListener("input",event=>{const q=event.target.value.trim().toLowerCase();document.querySelectorAll(".charity-option").forEach(option=>option.hidden=!option.textContent.toLowerCase().includes(q))});
