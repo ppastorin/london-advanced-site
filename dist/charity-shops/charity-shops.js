@@ -16,7 +16,7 @@ function initials(name){return name.split(/\s+/).map(word=>word[0]).join("").sli
 async function load(){
   if(state.shops.length)return;
   $("#charity-status").textContent=copy.loading;
-  const response=await fetch("/api/charity-shops?v=20261029",{headers:{Accept:"application/json"}});
+  const response=await fetch("/api/charity-shops?v=20261030-expanded-networks",{headers:{Accept:"application/json"}});
   if(!response.ok)throw new Error(IT?"Impossibile caricare i dati.":"Could not load charity-shop data.");
   const payload=await response.json();state.shops=payload.shops||[];state.organisations=new Set(state.shops.map(shop=>shop.organization));
   buildOrganisationOptions();showAllMarkers();$("#charity-status").textContent="";
