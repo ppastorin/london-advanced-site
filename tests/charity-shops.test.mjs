@@ -30,6 +30,7 @@ test("charity shop tool exposes mobile filters, map, EN/IT routes and methodolog
     assert.match(html, /id="radius"[^>]*max="1000"/);
     assert.match(html, /id="charity-options"/);
     assert.match(html, /id="charity-map"/);
+    assert.match(html, /charity-shops\.js\?v=20261030-dynamic-filters/);
     assert.match(html, /class="about-panel charity-about-panel"/);
     const hero = html.match(/<section class="charity-hero">([\s\S]*?)<\/section>/)?.[1] || "";
     assert.doesNotMatch(hero, /data-charity-about/);
@@ -40,4 +41,11 @@ test("charity shop tool exposes mobile filters, map, EN/IT routes and methodolog
   assert.match(app, /\/api\/charity-geocode/);
   assert.match(app, /markerClusterGroup/);
   assert.match(app, /navigator\.geolocation/);
+  assert.doesNotMatch(app, /function filtered\(\)\{\s*if\(!state\.origin\)return\[\]/);
+  const renderSource = app.match(/function render\(\)\{([\s\S]*?)\n\}/)?.[1] || "";
+  assert.ok(
+    renderSource.indexOf("state.markers.clearLayers()") < renderSource.indexOf("if(!state.origin)"),
+    "filters must redraw the map before location-dependent results are handled"
+  );
+  assert.match(app, /state\.radius=Number\(event\.target\.value\);render\(\)/);
 });
