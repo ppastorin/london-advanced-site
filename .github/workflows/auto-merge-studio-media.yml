@@ -45,10 +45,17 @@ jobs:
               pull_number: pull.number,
               per_page: 100
             });
+            const allowedRoots = [
+              'assets/instagram/',
+              'assets/journal/',
+              'assets/itineraries/',
+              'dist/assets/instagram/',
+              'dist/assets/journal/',
+              'dist/assets/itineraries/'
+            ];
             const allowed = files.length > 0 && files.every(file =>
               file.status !== 'removed' &&
-              (file.filename.startsWith('assets/instagram/') ||
-               file.filename.startsWith('dist/assets/instagram/'))
+              allowedRoots.some(root => file.filename.startsWith(root))
             );
             if (!allowed) {
               core.setFailed(`Pull request #${pull.number} contains changes outside the Studio media directories.`);

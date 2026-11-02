@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive">
   <meta name="referrer" content="same-origin">
-  <title>Instagram media · London Advanced Studio</title>
+  <title>Protected media upload · London Advanced Studio</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/studio/media/media.css">
 </head>
@@ -17,9 +17,9 @@
 
   <main>
     <section class="intro" aria-labelledby="page-title">
-      <p class="eyebrow">Instagram media library</p>
-      <h1 id="page-title">Upload folders, not individual files.</h1>
-      <p class="lede">Select one parent folder containing all your post folders, or add folders in several passes. The folder names and image filenames are preserved under <code>/assets/instagram/</code>.</p>
+      <p class="eyebrow">Protected media upload</p>
+      <h1 id="page-title">Upload images without bypassing production checks.</h1>
+      <p class="lede">Choose the correct website library, then select a parent folder or add folders in several passes. Studio creates a pull request and publishes the images automatically only after validation passes.</p>
     </section>
 
     <ol class="steps" aria-label="Upload steps">
@@ -36,6 +36,16 @@
         </div>
         <button class="button button-secondary" type="button" id="clear-selection" disabled>Clear selection</button>
       </div>
+
+      <label class="field" for="destination-root">
+        <span>Website image library</span>
+        <select id="destination-root">
+          <option value="instagram">Instagram — assets/instagram/</option>
+          <option value="journal">Journal — assets/journal/</option>
+          <option value="itineraries">Itineraries — assets/itineraries/</option>
+        </select>
+        <small id="destination-note">Use this for Instagram post and Reel source images.</small>
+      </label>
 
       <label class="folder-picker" for="folder-input">
         <strong>Choose a folder</strong>
@@ -61,7 +71,7 @@
         </div>
       </div>
       <p class="help">The preview shows exactly where each file will appear on the website. Existing files are protected unless you explicitly allow replacements.</p>
-      <div class="path-root"><span>Website folder</span><code>assets/instagram/</code></div>
+      <div class="path-root"><span>Website folder</span><code id="path-root">assets/instagram/</code></div>
       <div class="file-preview" id="file-preview">
         <p class="empty-state">Choose a folder to preview its files.</p>
       </div>
@@ -97,8 +107,8 @@
 
     <aside class="tip">
       <strong>Recommended folder layout</strong>
-      <code>Instagram posts / 001-weekend-events / image-01.jpg</code>
-      <p>If you select “Instagram posts”, the outer wrapper is removed automatically and <code>001-weekend-events</code> is retained.</p>
+      <code>Journal images / article-slug / image-01.jpg</code>
+      <p>Select the destination first. If you select a common parent containing subfolders, the outer wrapper is removed automatically while each article, itinerary or post folder is retained.</p>
     </aside>
   </main>
 
