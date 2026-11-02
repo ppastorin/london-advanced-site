@@ -3,6 +3,7 @@ import test from "node:test";
 import {
   buildTargetPath,
   blobCacheSignature,
+  DESTINATION_ROOTS,
   deploymentPaths,
   folderAdjustedPath,
   formatBytes,
@@ -21,6 +22,10 @@ test("media paths preserve post folders and reject traversal", () => {
   assert.equal(normaliseRelativePath("Instagram posts\\001-weekend\\cover.jpg"), "Instagram posts/001-weekend/cover.jpg");
   assert.equal(normaliseRelativePath("../cover.jpg"), "");
   assert.equal(buildTargetPath("001-weekend/cover.jpg"), "assets/instagram/001-weekend/cover.jpg");
+  assert.equal(buildTargetPath("article/hero.jpg", "journal"), "assets/journal/article/hero.jpg");
+  assert.equal(buildTargetPath("route/map.png", "itineraries"), "assets/itineraries/route/map.png");
+  assert.equal(buildTargetPath("image.jpg", "unknown"), "");
+  assert.equal(DESTINATION_ROOTS.journal, "assets/journal");
   assert.deepEqual(deploymentPaths("assets/instagram/001-weekend/cover.jpg"), [
     "assets/instagram/001-weekend/cover.jpg",
     "dist/assets/instagram/001-weekend/cover.jpg"
@@ -49,6 +54,15 @@ test("folder batches keep valid images and report unsupported files", () => {
   ]);
   assert.equal(batch.rejected.length, 1);
   assert.equal(batch.rejected[0].reason, "unsupported image type");
+});
+
+test("Journal batches use the protected Journal media root", () => {
+  const batch = prepareBatch([
+    file("hero.jpg", "Journal images/article-slug/hero.jpg", 2048)
+  ], "journal");
+  assert.deepEqual(batch.accepted.map(item => item.targetPath), [
+    "assets/journal/article-slug/hero.jpg"
+  ]);
 });
 
 test("supported formats and byte labels cover Studio feedback", () => {
