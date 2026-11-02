@@ -652,7 +652,7 @@ function mediaPath(value) {
   const parts = path.split("/");
   if (
     path.length > 512 ||
-    !path.startsWith("assets/instagram/") ||
+    !/^assets\/(?:instagram|journal|itineraries)\//.test(path) ||
     parts.some(part => !part || part === "." || part === ".." || /[\\\u0000-\u001f]/.test(part)) ||
     !/\.(?:avif|gif|jpe?g|png|webp)$/i.test(path)
   ) return "";
