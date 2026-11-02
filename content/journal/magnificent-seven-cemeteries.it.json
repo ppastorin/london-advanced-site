@@ -101,6 +101,9 @@
     "wesleys-chapel-bunhill-fields",
     "city-dragon-walk"
   ],
+  "related_itineraries": [
+    "highgate-lost-railway"
+  ],
   "tags": [
     "Magnificent Seven",
     "Cimiteri vittoriani",
@@ -142,5 +145,5 @@
   ],
   "reading_minutes": 8,
   "published_at": "2026-10-12T00:23:45+01:00",
-  "updated_at": "2026-10-12T00:23:45+01:00"
+  "updated_at": "2026-11-02T21:45:51Z"
 }

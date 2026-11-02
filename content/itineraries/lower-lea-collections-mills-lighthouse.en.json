@@ -1,9 +1,11 @@
 {
   "schema_version": 1,
   "itinerary_id": "lower-lea-collections-mills-lighthouse",
-  "editorial_status": "review",
+  "editorial_status": "published",
   "approval": {
-    "status": "pending"
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-11-02T21:45:51Z"
   },
   "title": "From V&A East to the Lower Lea: Collections, Mills and a Lighthouse",
   "slug": "va-east-lower-lea-mills-lighthouse",
@@ -210,5 +212,6 @@
       "checked_at": "2026-11-02"
     }
   ],
-  "updated_at": "2026-11-02T12:00:00Z"
+  "published_at": "2026-11-02T21:45:51Z",
+  "updated_at": "2026-11-02T21:45:51Z"
 }

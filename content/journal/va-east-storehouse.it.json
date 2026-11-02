@@ -84,6 +84,9 @@
     "quentin-blake-centre",
     "trinity-buoy-wharf"
   ],
+  "related_itineraries": [
+    "lower-lea-collections-mills-lighthouse"
+  ],
   "tags": [
     "V&A East",
     "Hackney Wick",
@@ -110,5 +113,5 @@
   ],
   "reading_minutes": 7,
   "published_at": "2026-09-27T17:23:43+01:00",
-  "updated_at": "2026-09-27T17:23:43+01:00"
+  "updated_at": "2026-11-02T21:45:51Z"
 }
