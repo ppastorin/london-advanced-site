@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "itinerary_id": "lower-lea-collections-mills-lighthouse",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending"
+  },
+  "title": "From V&A East to the Lower Lea: Collections, Mills and a Lighthouse",
+  "slug": "va-east-lower-lea-mills-lighthouse",
+  "seo_title": "V&A East and Lower Lea one-day itinerary",
+  "description": "A one-day route from both V&A East museums to Three Mills, Cody Dock and Trinity Buoy Wharf, with Abbey Mills as a rare optional diversion.",
+  "eyebrow": "One-day itinerary · East London",
+  "dek": "Pair London’s two newest museum experiences with tidal mills, a working community dock and the city’s only lighthouse on a route down the Lea.",
+  "theme": "industrial-afterlives",
+  "area": "east",
+  "best_day": "any-day",
+  "environment": "mixed",
+  "walking_level": "moderate",
+  "transit_level": "light",
+  "duration": "10:00–16:20 · about 6 hours 20 minutes",
+  "distance_km": 6.4,
+  "pace_note": "The times are indicative, not appointments. Use them to understand the shape of the day, then adjust stops, breaks and walking speed to your own pace. The two V&A visits are selective introductions, not attempts to see everything.",
+  "season": "A year-round route. The timed plan is deliberately compact enough to reach Trinity Buoy Wharf before the lighthouse’s current 16:00 winter weekend closing.",
+  "accessibility_notes": "Both V&A East sites and the DLR are step-free. Outdoor sections include industrial streets and occasionally uneven riverside surfaces. Cody Dock publishes step-free access information, but the Trinity Buoy Lighthouse has a narrow, steep staircase and no step-free access.",
+  "stops": [
+    {
+      "order": 1,
+      "location_id": "va-east-storehouse",
+      "name": "V&A East Storehouse",
+      "place_url": "https://www.google.com/maps/search/?api=1&query=V%26A+East+Storehouse%2C+2+Parkes+Street%2C+London+E20+3AX",
+      "arrival": "10:00",
+      "duration_minutes": 65,
+      "summary": "Begin inside a working collection store, where visible racks, conservation systems and unexpected neighbours explain how a museum operates before objects reach a conventional gallery.",
+      "opening_note": "Currently open daily 10:00–18:00 and until 22:00 on Thursday and Saturday; closed 24–26 December. General admission is free, while some displays and appointments have separate arrangements.",
+      "article_id": "va-east-storehouse",
+      "article_url": "/journal/va-east-storehouse/",
+      "transport_to_next": "Walk through the Queen Elizabeth Olympic Park to the new V&A East Museum at East Bank",
+      "travel_minutes": 15
+    },
+    {
+      "order": 2,
+      "location_id": "va-east-museum",
+      "name": "V&A East Museum",
+      "place_url": "https://www.google.com/maps/search/?api=1&query=V%26A+East+Museum%2C+107+Carpenters+Road%2C+London+E20+2AR",
+      "arrival": "11:20",
+      "duration_minutes": 65,
+      "summary": "The second V&A stop is not a repeat. Its public galleries frame creativity, change and east London through a more authored museum experience, making the contrast with the Storehouse the point of visiting both.",
+      "opening_note": "Currently open daily 10:00–18:00 and until 22:00 on Thursday and Saturday. Admission is free, although queues and ticketed exhibitions are possible; check the current programme.",
+      "transport_to_next": "Take a short lunch break around East Bank, then walk south through the Olympic Park and along the Lea towards Three Mills",
+      "travel_minutes": 60
+    },
+    {
+      "order": 3,
+      "location_id": "house-mill-three-mills",
+      "name": "Three Mills and the House Mill",
+      "place_url": "https://www.google.com/maps/search/?api=1&query=House+Mill%2C+Three+Mill+Lane%2C+London+E3+3DU",
+      "arrival": "13:25",
+      "duration_minutes": 30,
+      "summary": "The surviving tidal mill makes the Lea’s productive history visible. Read the mill, water channels and Three Mills Green as a working landscape even when the interior is closed.",
+      "opening_note": "The House Mill interior is accessible only on guided tours. The current programme advertises seasonal Sunday opening with limited tour times; verify and pre-book if an interior visit matters. The exterior remains a complete stop on other days.",
+      "transport_to_next": "Continue south beside the Lea and through the Lower Lea landscape to Cody Dock",
+      "travel_minutes": 30
+    },
+    {
+      "order": 4,
+      "location_id": "cody-dock",
+      "name": "Cody Dock",
+      "place_url": "https://www.google.com/maps/search/?api=1&query=Cody+Dock%2C+11c+South+Crescent%2C+London+E16+4TL",
+      "arrival": "14:25",
+      "duration_minutes": 35,
+      "summary": "A working dock, community gardens, ecology projects and reused industrial structures make this the route’s clearest example of regeneration that has not erased activity.",
+      "opening_note": "Cody Dock is an active community and construction site, so individual facilities and events vary. Its official access page warns that the riverside path to Canning Town is not open; do not follow a map that assumes it is continuous.",
+      "transport_to_next": "Walk to Star Lane DLR, travel to East India via Canning Town, then walk to Trinity Buoy Wharf. Allow about 40 minutes and use the separate transfer map.",
+      "travel_minutes": 40
+    },
+    {
+      "order": 5,
+      "location_id": "trinity-buoy-wharf",
+      "name": "Trinity Buoy Wharf and the Experimental Lighthouse",
+      "place_url": "https://www.google.com/maps/search/?api=1&query=Trinity+Buoy+Wharf%2C+64+Orchard+Place%2C+London+E14+0JW",
+      "arrival": "15:40",
+      "duration_minutes": 40,
+      "summary": "Finish where maritime testing, studios, containers, sculpture and a working wharf meet the Thames. The lighthouse was built for experiments, not to warn ships, and Longplayer still sounds inside it.",
+      "opening_note": "The wharf can be explored throughout the year, but the lighthouse is currently open only Saturday and Sunday: 11:00–17:00 April–September and 11:00–16:00 October–March. Entry is free, access is limited, and the staircase is steep and narrow.",
+      "article_id": "trinity-buoy-wharf",
+      "article_url": "/journal/trinity-buoy-wharf-lighthouse/"
+    }
+  ],
+  "body": "## Two new museums, then the river that built the district\n\nThis itinerary begins with two major museum openings and then refuses to spend the whole day indoors. V&A East Storehouse and V&A East Museum are close enough to be treated as a double stop, but they offer different ideas of what a museum can be. From East Bank, the route turns south along the Lea through tidal mills, infrastructure, community-led regeneration and a lighthouse built for experiments rather than navigation.\n\nThe schedule gives about an hour to each V&A site. That is selective by design. Trying to exhaust the Storehouse would destroy the rest of the day, while rushing through both buildings merely to claim completion would miss their contrast. Choose one or two threads in each and return another day for depth.\n\n## Storehouse and Museum are not interchangeable\n\nAt V&A East Storehouse, the visible systems matter as much as individual objects. Racking, supports, conservation work and long views across the collection expose decisions normally hidden behind a finished display. Do not begin with a checklist. Follow an object, material or scale that changes the direction of your visit.\n\nThe walk to V&A East Museum is short. Here the experience becomes more authored: galleries and exhibitions use design and making to discuss cultural change, contemporary creativity and east London. Visiting the two in sequence creates a useful argument—first the museum as collection and operation, then the museum as interpretation and public voice.\n\nTake a compact lunch break before leaving East Bank. The route becomes increasingly outdoor and facilities are less predictable farther south.\n\n## Three Mills: water as machinery\n\nThe walk to Three Mills follows the Lea away from the monumental scale of the Olympic Park. At the House Mill, tide, channels and building fabric explain an industrial system far better than a detached object could. The interior is a valuable addition when a guided tour fits the day, but it is not mandatory. Tours are limited and seasonal; forcing the entire itinerary around one would make the route unreliable on most days.\n\nThe exterior, mill race and neighbouring buildings still establish the essential point: the Lea was not simply scenery. Its moving water powered production and shaped where industry gathered.\n\n### Optional, not a numbered stop: Abbey Mills Pumping Station\n\nAbbey Mills deserves mention because Bazalgette’s ornate pumping station is one of east London’s great pieces of infrastructure. It does not deserve to be presented as a normal visitor attraction. The operational site is rarely open to the public, and access depends on exceptional tours or events.\n\nIf a verified public opening coincides with your date, adapt the route from Three Mills and allow substantial extra time. Otherwise, understand its role from the Greenway or available public viewpoints and continue south. There is intentionally no mandatory Abbey Mills waypoint in the Google route and no photograph pretending that entry is routine.\n\n## Cody Dock: regeneration without a polished fiction\n\nCody Dock is where the Lower Lea becomes most persuasive. Boats, ecology work, gardens, workshops and reused structures occupy a site that is still changing. The result is less tidy than a completed cultural quarter and more informative. Look at how access to the tidal river is being rebuilt and how public use coexists with working space.\n\nDo not trust a map that sends you along a continuous riverside path from Cody Dock to Canning Town. Cody Dock explicitly states that this link is not open. Walk to Star Lane DLR, travel via Canning Town to East India, and complete the final section on foot. The editorial map shows that transfer as a dotted gold line rather than disguising it as a walk.\n\n## A lighthouse that tested light\n\nTrinity Buoy Wharf is an appropriate finish because it preserves activity rather than a single frozen period. The experimental lighthouse tested lamps and equipment for Trinity House, with Michael Faraday serving as scientific adviser. Around it, Container City, studios, sculpture, a lightship and river views towards the O2 create a dense, irregular landscape.\n\nOn a weekend, the timetable aims to reach the lighthouse before its current winter closing. On weekdays or after closing, the wharf remains worthwhile, but the lighthouse interior and Longplayer listening room may be inaccessible. That is a limitation to state clearly, not a reason to make the whole itinerary weekend-only.\n\n## Before setting out\n\nCheck both V&A pages for queues or programme changes, the House Mill tour calendar, current Cody Dock access and the lighthouse hours. The primary Google Maps link covers the genuine walking sequence from Storehouse to Cody Dock. A second link maps the DLR transfer from Star Lane to East India; from there, the final walk reaches Trinity Buoy Wharf. This split is less convenient than one button, but it is geographically honest.",
+  "google_maps_url": "https://www.google.com/maps/dir/?api=1&origin=V%26A+East+Storehouse%2C+2+Parkes+Street%2C+London+E20+3AX&destination=Cody+Dock%2C+11c+South+Crescent%2C+London+E16+4TL&waypoints=V%26A+East+Museum%2C+107+Carpenters+Road%2C+London+E20+2AR%7CHouse+Mill%2C+Three+Mill+Lane%2C+London+E3+3DU&travelmode=walking",
+  "additional_map_links": [
+    {
+      "label": "Open the Star Lane–East India DLR transfer",
+      "url": "https://www.google.com/maps/dir/?api=1&origin=Star+Lane+DLR+Station&destination=East+India+DLR+Station&travelmode=transit"
+    }
+  ],
+  "map": {
+    "src": "/assets/itineraries/it03-lower-lea-route-map.webp",
+    "alt": "Street map from V&A East Storehouse and Museum to Three Mills and Cody Dock, with a DLR transfer to Trinity Buoy Wharf and Abbey Mills marked as optional.",
+    "caption": "Green shows genuine walking routes; the dotted gold line is the DLR transfer. Abbey Mills is marked for context only and is not a mandatory stop.",
+    "credit": "London Advanced · OpenStreetMap contributors",
+    "width": 1400,
+    "height": 1582
+  },
+  "images": [
+    {
+      "src": "/assets/itineraries/it03-lower-lea-01-va-storehouse.webp",
+      "role": "hero",
+      "stop_order": 1,
+      "alt": "The multi-level central collections hall inside V&A East Storehouse.",
+      "caption": "The Storehouse turns collection storage and museum work into the public experience.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1366,
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "src": "/assets/itineraries/it03-lower-lea-02-va-east-museum.webp",
+      "role": "stop",
+      "stop_order": 2,
+      "alt": "The angular exterior of V&A East Museum at East Bank.",
+      "caption": "The Museum is the more authored counterpart to the visible storage of the Storehouse.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536,
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "src": "/assets/itineraries/it03-lower-lea-03-house-mill.webp",
+      "role": "stop",
+      "stop_order": 3,
+      "alt": "The brick House Mill at Three Mills beside the tidal channels of the River Lea.",
+      "caption": "House Mill makes the Lea’s role as machinery, not scenery, visible.",
+      "credit": "Paolo Pastorino",
+      "width": 1536,
+      "height": 2048,
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "src": "/assets/itineraries/it03-lower-lea-04-cody-dock.webp",
+      "role": "stop",
+      "stop_order": 4,
+      "alt": "Boats, reused industrial structures and riverside activity at Cody Dock.",
+      "caption": "Cody Dock remains visibly active while public access to the Lower Lea is rebuilt.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536,
+      "focal_x": 50,
+      "focal_y": 50
+    },
+    {
+      "src": "/assets/itineraries/it03-lower-lea-05-trinity-buoy-wharf.webp",
+      "role": "closing",
+      "stop_order": 5,
+      "alt": "The brick experimental lighthouse rising above Trinity Buoy Wharf.",
+      "caption": "London’s only lighthouse was a laboratory for light rather than a warning to ships.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1536,
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "related_articles": [
+    "va-east-storehouse",
+    "trinity-buoy-wharf"
+  ],
+  "related_itineraries": [],
+  "tags": [
+    "V&A East",
+    "Lower Lea",
+    "Three Mills",
+    "Cody Dock",
+    "Trinity Buoy Wharf",
+    "industrial heritage"
+  ],
+  "sources": [
+    {
+      "label": "V&A — visit V&A East Storehouse",
+      "url": "https://www.vam.ac.uk/east/storehouse/visit",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "label": "V&A — visit V&A East Museum",
+      "url": "https://www.vam.ac.uk/east/museum/visit",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "label": "House Mill — tours and seasonal opening",
+      "url": "https://housemill.org.uk/whats-on/tours/",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "label": "Cody Dock — directions and accessibility",
+      "url": "https://codydock.org.uk/contact/",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "label": "Trinity Buoy Wharf — lighthouse access",
+      "url": "https://www.trinitybuoywharf.com/whats-on/lighthouse",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "label": "Thames Water — Abbey Mills heritage information",
+      "url": "https://www.thameswater.co.uk/about-us/community/days-out/heritage-sites",
+      "checked_at": "2026-11-02"
+    }
+  ],
+  "updated_at": "2026-11-02T12:00:00Z"
+}

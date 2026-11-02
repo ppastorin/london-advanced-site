@@ -70,6 +70,33 @@ test("published itinerary pages expose the full route, every location and the pa
   assert.doesNotMatch(italian, /Anteprima itinerario non pubblicata/);
 });
 
+test("an itinerary can expose a separately mapped public-transport transfer", () => {
+  const english = renderItineraryDetail({
+    ...approved,
+    locale: "en",
+    title: "Test route",
+    slug: "test-route",
+    description: "A test route.",
+    dek: "A test route.",
+    eyebrow: "One-day itinerary",
+    theme: "industrial-afterlives",
+    area: "east",
+    best_day: "any-day",
+    environment: "mixed",
+    walking_level: "moderate",
+    transit_level: "light",
+    duration: "10:00–16:20",
+    distance_km: 6.4,
+    pace_note: "The times are indicative.",
+    google_maps_url: "https://www.google.com/maps/dir/?api=1&travelmode=walking",
+    additional_map_links: [{ label: "Map the DLR transfer", url: "https://www.google.com/maps/dir/?api=1&travelmode=transit" }],
+    stops: [{ order: 1, arrival: "10:00", duration_minutes: 30, location_id: "TEST-1", name: "Start", summary: "Start here." }]
+  }, { slug: "test-route-it" }, new Map(), true);
+  assert.match(english, /Open the route in Google Maps/);
+  assert.match(english, /Map the DLR transfer/);
+  assert.match(english, /travelmode=transit/);
+});
+
 test("the Wimbledon itinerary and Buddhapadipa article link to each other", async () => {
   const [englishItinerary, italianItinerary, englishArticle, italianArticle] = await Promise.all([
     readFile(new URL("../dist/itineraries/wimbledon-without-tennis/index.html", import.meta.url), "utf8"),

@@ -576,6 +576,16 @@ collections:
         required: false
         hint: Optional in draft; required by the build before publication.
         i18n: duplicate
+      - label: Additional map links
+        name: additional_map_links
+        widget: list
+        required: false
+        collapsed: true
+        hint: Use when the honest route requires a second mode or a separately mapped transfer.
+        i18n: true
+        fields:
+          - { label: Link label, name: label, widget: string }
+          - { label: Google Maps URL, name: url, widget: string }
       - label: Editorial route map
         name: map
         widget: object
