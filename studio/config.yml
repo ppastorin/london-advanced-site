@@ -617,6 +617,7 @@ collections:
           - { label: Height, name: height, widget: number, value_type: int, default: 1600 }
           - { label: Horizontal crop focus (%), name: focal_x, widget: number, value_type: int, min: 0, max: 100, default: 50, required: false }
           - { label: Vertical crop focus (%), name: focal_y, widget: number, value_type: int, min: 0, max: 100, default: 50, required: false }
+          - { label: Preserve original aspect ratio, name: preserve_ratio, widget: boolean, default: false, required: false, hint: Use for portrait photographs that must not be cropped. }
       - label: Related article IDs
         name: related_articles
         widget: list

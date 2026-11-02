@@ -136,6 +136,7 @@
       "credit": "Paolo Pastorino",
       "width": 1536,
       "height": 2048,
+      "preserve_ratio": true,
       "focal_x": 50,
       "focal_y": 50
     },

@@ -97,6 +97,19 @@ test("an itinerary can expose a separately mapped public-transport transfer", ()
   assert.match(english, /travelmode=transit/);
 });
 
+test("the portrait House Mill photograph keeps its original aspect ratio", async () => {
+  const [englishData, italianData] = await Promise.all([
+    readFile(new URL("../content/itineraries/lower-lea-collections-mills-lighthouse.en.json", import.meta.url), "utf8").then(JSON.parse),
+    readFile(new URL("../content/itineraries/lower-lea-collections-mills-lighthouse.it.json", import.meta.url), "utf8").then(JSON.parse)
+  ]);
+  const english = renderItineraryDetail({ ...englishData, locale: "en" }, italianData, new Map(), true);
+  const houseMill = englishData.images.find(image => image.src.includes("house-mill"));
+  assert.equal(houseMill.width, 1536);
+  assert.equal(houseMill.height, 2048);
+  assert.equal(houseMill.preserve_ratio, true);
+  assert.match(english, /class="stop-photo natural-ratio"/);
+});
+
 test("the Wimbledon itinerary and Buddhapadipa article link to each other", async () => {
   const [englishItinerary, italianItinerary, englishArticle, italianArticle] = await Promise.all([
     readFile(new URL("../dist/itineraries/wimbledon-without-tennis/index.html", import.meta.url), "utf8"),
