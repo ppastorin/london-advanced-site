@@ -205,6 +205,34 @@ test("Studio media publication creates a protected pull request with source and 
   });
 });
 
+test("Studio media publication accepts protected Journal and itinerary image paths", async () => {
+  for (const path of ["assets/journal/article/hero.jpg", "assets/itineraries/route/map.png"]) {
+    let createdTree;
+    const fetchImpl = async (url, options = {}) => {
+      const pathname = new URL(url).pathname + new URL(url).search;
+      if (pathname === "/repos/ppastorin/london-advanced-site") return Response.json({ permissions: { push: true } });
+      if (pathname.endsWith("/git/ref/heads/main")) return Response.json({ object: { sha: "base-commit" } });
+      if (pathname.endsWith("/git/commits/base-commit")) return Response.json({ tree: { sha: "base-tree" } });
+      if (pathname.endsWith("/git/trees/base-tree?recursive=1")) return Response.json({ tree: [], truncated: false });
+      if (pathname.endsWith("/git/trees") && options.method === "POST") {
+        createdTree = JSON.parse(options.body);
+        return Response.json({ sha: "next-tree" }, { status: 201 });
+      }
+      if (pathname.endsWith("/git/commits") && options.method === "POST") return Response.json({ sha: "next-commit" }, { status: 201 });
+      if (pathname.endsWith("/git/refs") && options.method === "POST") return Response.json({ object: { sha: "next-commit" } }, { status: 201 });
+      if (pathname.endsWith("/pulls") && options.method === "POST") return Response.json({ number: 93, html_url: "https://github.com/ppastorin/london-advanced-site/pull/93" }, { status: 201 });
+      throw new Error(`Unexpected GitHub request: ${pathname}`);
+    };
+    const response = await handleMediaCommit(new Request("https://www.londonadvanced.com/api/studio/media/commit", {
+      method: "POST",
+      headers: { Origin: "https://www.londonadvanced.com", Authorization: "Bearer test-token" },
+      body: JSON.stringify({ entries: [{ path, sha: "c".repeat(40) }] })
+    }), fetchImpl);
+    assert.equal(response.status, 200);
+    assert.deepEqual(createdTree.tree.map(entry => entry.path), [path, `dist/${path}`]);
+  }
+});
+
 test("Studio media publication reports recoverable missing blobs", async () => {
   const fetchImpl = async (url, options = {}) => {
     const pathname = new URL(url).pathname + new URL(url).search;
