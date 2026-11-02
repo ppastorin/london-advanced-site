@@ -133,8 +133,12 @@ function routeMap(item) {
   const mapVisual = map.src
     ? `<figure><img src="${escapeHtml(safeUrl(map.src))}" alt="${escapeHtml(map.alt || "")}" width="${Number(map.width) || 1600}" height="${Number(map.height) || 1000}"><figcaption>${escapeHtml(map.caption || "")}${map.credit ? ` <span>© ${escapeHtml(map.credit)}</span>` : ""}</figcaption></figure>`
     : `<div class="itinerary-map-placeholder"><span>${it ? "Mappa editoriale" : "Editorial route map"}</span><strong>${it ? "Da disegnare dopo la selezione fotografica" : "To be designed after photo selection"}</strong><p>${it ? "La struttura del percorso e le fermate sono già disponibili per la revisione." : "The route structure and stops are already available for review."}</p></div>`;
+  const additionalLinks = (item.additional_map_links || [])
+    .filter(link => link?.label && link?.url)
+    .map(link => `<a class="button dark secondary" href="${escapeHtml(safeUrl(link.url))}" target="_blank" rel="noopener">${escapeHtml(link.label)} ↗</a>`)
+    .join("");
   const mapsLink = item.google_maps_url
-    ? `<a class="button dark" href="${escapeHtml(safeUrl(item.google_maps_url))}" target="_blank" rel="noopener">${it ? "Apri l’itinerario in Google Maps" : "Open the route in Google Maps"} ↗</a>`
+    ? `<div class="itinerary-map-links"><a class="button dark" href="${escapeHtml(safeUrl(item.google_maps_url))}" target="_blank" rel="noopener">${it ? "Apri l’itinerario in Google Maps" : "Open the route in Google Maps"} ↗</a>${additionalLinks}</div>`
     : `<span class="itinerary-maps-pending">${it ? "Link Google Maps da aggiungere prima della pubblicazione" : "Google Maps link required before publication"}</span>`;
   return `<section class="itinerary-map"><div><span class="journal-kicker">${it ? "Il percorso" : "The route"}</span><h2>${it ? "Una giornata, leggibile a colpo d’occhio." : "One day, readable at a glance."}</h2>${mapsLink}</div>${mapVisual}</section>`;
 }
