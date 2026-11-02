@@ -1,9 +1,11 @@
 {
   "schema_version": 1,
   "itinerary_id": "lower-lea-collections-mills-lighthouse",
-  "editorial_status": "review",
+  "editorial_status": "published",
   "approval": {
-    "status": "pending"
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-11-02T21:45:51Z"
   },
   "title": "Dal V&A East al basso Lea: collezioni, mulini e un faro",
   "slug": "va-east-basso-lea-mulini-faro",
@@ -210,5 +212,6 @@
       "checked_at": "2026-11-02"
     }
   ],
-  "updated_at": "2026-11-02T12:00:00Z"
+  "published_at": "2026-11-02T21:45:51Z",
+  "updated_at": "2026-11-02T21:45:51Z"
 }

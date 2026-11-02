@@ -111,6 +111,9 @@
     "quentin-blake-centre",
     "one-leadenhall-terrace"
   ],
+  "related_itineraries": [
+    "highgate-lost-railway"
+  ],
   "tags": [
     "Highgate",
     "Cimiteri",
@@ -137,5 +140,5 @@
   ],
   "reading_minutes": 7,
   "published_at": "2026-10-02T11:07:49+01:00",
-  "updated_at": "2026-10-12T00:23:45+01:00"
+  "updated_at": "2026-11-02T21:45:51Z"
 }

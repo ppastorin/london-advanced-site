@@ -102,6 +102,9 @@
     "trinity-buoy-wharf",
     "crystal-palace-park"
   ],
+  "related_itineraries": [
+    "highgate-lost-railway"
+  ],
   "tags": [
     "London viewpoints",
     "Skyline",
@@ -138,5 +141,5 @@
   ],
   "reading_minutes": 7,
   "published_at": "2026-10-16T21:27:15+01:00",
-  "updated_at": "2026-10-16T21:27:15+01:00"
+  "updated_at": "2026-11-02T21:45:51Z"
 }

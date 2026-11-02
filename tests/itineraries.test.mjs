@@ -51,6 +51,38 @@ test("the Wimbledon itinerary is paired, approved and published in both language
   assert.match(italianIndex, /Wimbledon senza tennis/);
 });
 
+test("the Highgate and Lower Lea itineraries are approved bilingual publications", async () => {
+  const pairs = [
+    {
+      base: "highgate-lost-railway"
+    },
+    {
+      base: "lower-lea-collections-mills-lighthouse"
+    }
+  ];
+  const [englishIndex, italianIndex] = await Promise.all([
+    readFile(new URL("../dist/itineraries/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dist/it/itinerari/index.html", import.meta.url), "utf8")
+  ]);
+
+  for (const pair of pairs) {
+    const [english, italian] = await Promise.all([
+      readFile(new URL(`../content/itineraries/${pair.base}.en.json`, import.meta.url), "utf8").then(JSON.parse),
+      readFile(new URL(`../content/itineraries/${pair.base}.it.json`, import.meta.url), "utf8").then(JSON.parse)
+    ]);
+    assert.equal(english.itinerary_id, italian.itinerary_id);
+    assert.equal(english.editorial_status, "published");
+    assert.equal(italian.editorial_status, "published");
+    assert.equal(english.approval.status, "approved");
+    assert.equal(italian.approval.status, "approved");
+    assert.ok(english.published_at);
+    assert.ok(italian.published_at);
+    assert.equal(isPublicItineraryPair(english, italian), true);
+    assert.ok(englishIndex.includes(english.title));
+    assert.ok(italianIndex.includes(italian.title));
+  }
+});
+
 test("published itinerary pages expose the full route, every location and the pace note", async () => {
   const [englishData, italianData] = await Promise.all([
     readFile(new URL("../content/itineraries/wimbledon-without-tennis.en.json", import.meta.url), "utf8").then(JSON.parse),
@@ -121,6 +153,22 @@ test("the Wimbledon itinerary and Buddhapadipa article link to each other", asyn
   assert.match(italianItinerary, /\/it\/journal\/buddhapadipa-temple-wimbledon-visita\//);
   assert.match(englishArticle, /\/itineraries\/wimbledon-without-tennis\//);
   assert.match(italianArticle, /\/it\/itinerari\/wimbledon-senza-tennis\//);
+});
+
+test("new itineraries and their relevant Journal articles link reciprocally", async () => {
+  const checks = [
+    ["../dist/itineraries/highgate-lost-railway-ancient-wood-cemetery/index.html", "/journal/parkland-walk-london-lost-railway/"],
+    ["../dist/journal/parkland-walk-london-lost-railway/index.html", "/itineraries/highgate-lost-railway-ancient-wood-cemetery/"],
+    ["../dist/it/itinerari/highgate-ferrovia-perduta-bosco-cimitero/index.html", "/it/journal/parkland-walk-ferrovia-abbandonata-londra/"],
+    ["../dist/it/journal/parkland-walk-ferrovia-abbandonata-londra/index.html", "/it/itinerari/highgate-ferrovia-perduta-bosco-cimitero/"],
+    ["../dist/itineraries/va-east-lower-lea-mills-lighthouse/index.html", "/journal/va-east-storehouse/"],
+    ["../dist/journal/va-east-storehouse/index.html", "/itineraries/va-east-lower-lea-mills-lighthouse/"],
+    ["../dist/it/itinerari/va-east-basso-lea-mulini-faro/index.html", "/it/journal/va-east-storehouse/"],
+    ["../dist/it/journal/va-east-storehouse/index.html", "/it/itinerari/va-east-basso-lea-mulini-faro/"]
+  ];
+  for (const [file, link] of checks) {
+    assert.match(await readFile(new URL(file, import.meta.url), "utf8"), new RegExp(link.replaceAll("/", "\\/")));
+  }
 });
 
 test("itinerary indexes provide bilingual metadata and client-side discovery controls", async () => {
