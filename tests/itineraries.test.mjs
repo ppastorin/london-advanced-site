@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import sharp from "sharp";
 import { isPublicItineraryPair, renderItineraryDetail } from "../scripts/build-itineraries.mjs";
 
 const approved = {
@@ -140,6 +141,21 @@ test("the portrait House Mill photograph keeps its original aspect ratio", async
   assert.equal(houseMill.height, 2048);
   assert.equal(houseMill.preserve_ratio, true);
   assert.match(english, /class="stop-photo natural-ratio"/);
+});
+
+test("the Queen's Wood Café photograph is a decodable WebP in source and deployment assets", async () => {
+  const files = [
+    new URL("../assets/itineraries/it02-highgate-03-queens-wood-cafe.webp", import.meta.url),
+    new URL("../dist/assets/itineraries/it02-highgate-03-queens-wood-cafe.webp", import.meta.url)
+  ];
+  for (const file of files) {
+    const image = sharp(await readFile(file));
+    const metadata = await image.metadata();
+    assert.equal(metadata.format, "webp");
+    assert.equal(metadata.width, 2048);
+    assert.equal(metadata.height, 1536);
+    await image.raw().toBuffer();
+  }
 });
 
 test("the Wimbledon itinerary and Buddhapadipa article link to each other", async () => {
