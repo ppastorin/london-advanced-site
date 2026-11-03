@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import test from "node:test";
 import sharp from "sharp";
 import { isPublicItineraryPair, renderItineraryDetail } from "../scripts/build-itineraries.mjs";
@@ -143,18 +143,31 @@ test("the portrait House Mill photograph keeps its original aspect ratio", async
   assert.match(english, /class="stop-photo natural-ratio"/);
 });
 
-test("the Queen's Wood Café photograph is a decodable WebP in source and deployment assets", async () => {
-  const files = [
-    new URL("../assets/itineraries/it02-highgate-03-queens-wood-cafe.webp", import.meta.url),
-    new URL("../dist/assets/itineraries/it02-highgate-03-queens-wood-cafe.webp", import.meta.url)
-  ];
-  for (const file of files) {
-    const image = sharp(await readFile(file));
-    const metadata = await image.metadata();
-    assert.equal(metadata.format, "webp");
-    assert.equal(metadata.width, 2048);
-    assert.equal(metadata.height, 1536);
-    await image.raw().toBuffer();
+test("every itinerary image decodes completely in source and deployment assets", async () => {
+  const contentDirectory = new URL("../content/itineraries/", import.meta.url);
+  const contentFiles = (await readdir(contentDirectory)).filter(file => file.endsWith(".json"));
+  const assets = new Map();
+  for (const file of contentFiles) {
+    const itinerary = JSON.parse(await readFile(new URL(file, contentDirectory), "utf8"));
+    for (const asset of [itinerary.map, ...(itinerary.images || [])].filter(Boolean)) {
+      assets.set(asset.src, asset);
+    }
+  }
+
+  for (const [assetPath, asset] of assets) {
+    assert.match(assetPath, /^\/assets\/itineraries\//, `${assetPath} is outside the itinerary media directory`);
+    for (const prefix of ["..", "../dist"]) {
+      const file = new URL(`${prefix}${assetPath}`, import.meta.url);
+      try {
+        const image = sharp(await readFile(file));
+        const metadata = await image.metadata();
+        if (asset.width) assert.equal(metadata.width, asset.width, `${assetPath} width`);
+        if (asset.height) assert.equal(metadata.height, asset.height, `${assetPath} height`);
+        await image.raw().toBuffer();
+      } catch (error) {
+        assert.fail(`${file.pathname} is not a decodable image: ${error.message}`);
+      }
+    }
   }
 });
 
