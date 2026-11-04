@@ -6,9 +6,10 @@ const root = new URL("../", import.meta.url);
 
 test("charity shop inventory is complete and usable", async () => {
   const data = JSON.parse(await readFile(new URL("dist/data/charity-shops.json", root), "utf8"));
-  assert.equal(data.count, 298);
-  assert.equal(data.shops.length, 298);
-  assert.equal(new Set(data.shops.map(shop => shop.id)).size, 298);
+  assert.equal(data.count, 301);
+  assert.equal(data.shops.length, 301);
+  assert.equal(new Set(data.shops.map(shop => shop.id)).size, 301);
+  assert.equal(new Set(data.shops.map(shop => shop.place_id)).size, 301);
   assert.equal(new Set(data.shops.map(shop => shop.organization)).size, 14);
   assert.ok(data.shops.every(shop => Number.isFinite(shop.lat) && Number.isFinite(shop.lon)));
   assert.ok(data.shops.every(shop => /^(?:1|1\/2|2|2\/3|3|3\/4|4)$/.test(String(shop.tfl_zone))));
@@ -18,6 +19,9 @@ test("charity shop inventory is complete and usable", async () => {
   assert.equal(data.shops.filter(shop => shop.organization === "British Red Cross").length, 14);
   assert.ok(data.shops.some(shop => shop.id === "british-red-cross-palmers-green-bookshop" && shop.subtype === "books_music"));
   assert.ok(data.shops.some(shop => shop.id === "british-red-cross-fulham-furniture-and-electrical" && shop.subtype === "furniture_electrical"));
+  for (const id of ["oxfam-ealing-bookshop", "oxfam-muswell-hill-bookshop", "oxfam-kentish-town-books-music"]) {
+    assert.ok(data.shops.some(shop => shop.id === id && shop.subtype === "books_music"), `missing ${id}`);
+  }
 });
 
 test("charity shop tool exposes mobile filters, map, EN/IT routes and methodology", async () => {

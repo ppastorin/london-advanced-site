@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "generated": "2026-11-04",
-  "count": 113,
+  "count": 124,
   "shops": [
     {
       "id": "bk001",
@@ -55,7 +55,8 @@
       "website": "https://56a.org.uk/",
       "source": "https://56a.org.uk/",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK001"
     },
     {
       "id": "bk002",
@@ -106,7 +107,8 @@
       "website": null,
       "source": "https://covent-garden.london/shop/alice-through-the-looking-glass",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK002"
     },
     {
       "id": "bk003",
@@ -154,7 +156,8 @@
       "website": "https://www.anyamountofbooks.com/",
       "source": "https://secondhandlondon.org/posts/second-hand-bookshops-central-london/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-752A55AC"
     },
     {
       "id": "bk004",
@@ -209,7 +212,8 @@
       "website": null,
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK004"
     },
     {
       "id": "bk005",
@@ -268,7 +272,8 @@
       "website": "https://www.arthurprobsthain.com/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK005"
     },
     {
       "id": "bk006",
@@ -324,7 +329,8 @@
       "website": "https://artwords.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK006"
     },
     {
       "id": "bk007",
@@ -379,7 +385,8 @@
       "website": "https://theatlantisbookshop.com/",
       "source": "https://secondhandlondon.org/posts/second-hand-bookshops-central-london/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK007"
     },
     {
       "id": "bk008",
@@ -435,7 +442,8 @@
       "website": "https://www.quaritch.com/",
       "source": "https://aba.org.uk/bookseller-member-directory",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK008"
     },
     {
       "id": "bk009",
@@ -482,7 +490,8 @@
       "website": "https://blackwells.co.uk/bookshop/home",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK009"
     },
     {
       "id": "bk010",
@@ -538,7 +547,8 @@
       "website": "https://www.bookartbookshop.com/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK010"
     },
     {
       "id": "bk011",
@@ -598,7 +608,8 @@
       "website": "https://www.bookbaruk.com/",
       "source": "https://www.bookbaruk.com/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK011"
     },
     {
       "id": "bk012",
@@ -653,7 +664,8 @@
       "website": "https://www.bookbaruk.com/",
       "source": "https://www.bookbaruk.com/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK012"
     },
     {
       "id": "bk013",
@@ -711,7 +723,8 @@
       "website": "https://bookmarksbookshop.co.uk/",
       "source": "https://www.booksellers.org.uk/Bookshop-Details.aspx?m=5030670007967",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK013"
     },
     {
       "id": "bk014",
@@ -762,7 +775,8 @@
       "website": "https://bookmongers.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-0E09FC96"
     },
     {
       "id": "bk015",
@@ -817,7 +831,8 @@
       "website": "https://thebookandrecordbar.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK015"
     },
     {
       "id": "bk016",
@@ -870,7 +885,8 @@
       "website": "https://booksellercrow.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK016"
     },
     {
       "id": "bk017",
@@ -914,7 +930,8 @@
       "website": "https://www.amnesty.org.uk/bookshops",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK017"
     },
     {
       "id": "bk018",
@@ -958,7 +975,8 @@
       "website": "https://www.amnesty.org.uk/bookshops",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK018"
     },
     {
       "id": "bk019",
@@ -1013,7 +1031,8 @@
       "website": "https://www.booksforcooks.com/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-B14DD3E9"
     },
     {
       "id": "bk020",
@@ -1069,7 +1088,8 @@
       "website": null,
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK020"
     },
     {
       "id": "bk021",
@@ -1124,7 +1144,8 @@
       "website": "https://bookspeckham.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK021"
     },
     {
       "id": "bk022",
@@ -1181,7 +1202,8 @@
       "website": "https://bricklanebookshop.org/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK022"
     },
     {
       "id": "bk023",
@@ -1237,7 +1259,8 @@
       "website": "https://broadwaybookshophackney.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK023"
     },
     {
       "id": "bk024",
@@ -1289,7 +1312,8 @@
       "website": "https://www.bryarsandbryars.co.uk/",
       "source": "https://aba.org.uk/bookseller-member-directory",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK024"
     },
     {
       "id": "bk025",
@@ -1350,7 +1374,8 @@
       "website": "https://burleyfisherbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK025"
     },
     {
       "id": "bk026",
@@ -1408,7 +1433,8 @@
       "website": "https://www.wearebardbooks.co.uk/",
       "source": "https://www.wearebardbooks.co.uk/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK026"
     },
     {
       "id": "bk027",
@@ -1465,7 +1491,8 @@
       "website": "https://calderbookshop.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK027"
     },
     {
       "id": "bk028",
@@ -1511,7 +1538,8 @@
       "website": "https://chess.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK028"
     },
     {
       "id": "bk029",
@@ -1563,7 +1591,8 @@
       "website": "https://www.childrensbookshoplondon.com/",
       "source": "https://www.childrensbookshoplondon.com/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK029"
     },
     {
       "id": "bk030",
@@ -1619,7 +1648,8 @@
       "website": "https://www.clairederouenbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK030"
     },
     {
       "id": "bk031",
@@ -1670,7 +1700,8 @@
       "website": "https://claphambooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK031"
     },
     {
       "id": "bk032",
@@ -1719,7 +1750,8 @@
       "website": "https://www.collingeandclark.co.uk/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK032"
     },
     {
       "id": "bk033",
@@ -1773,7 +1805,8 @@
       "website": "https://www.commonpress.co.uk/",
       "source": "https://www.commonpress.co.uk/about-us",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK033"
     },
     {
       "id": "bk034",
@@ -1827,7 +1860,8 @@
       "website": "https://croftonbooks.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK034"
     },
     {
       "id": "bk035",
@@ -1882,7 +1916,8 @@
       "website": "https://dauntbooks.co.uk/shops/marylebone/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK035"
     },
     {
       "id": "bk036",
@@ -1935,7 +1970,8 @@
       "website": "https://dauntbooks.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK036"
     },
     {
       "id": "bk037",
@@ -1988,7 +2024,8 @@
       "website": "https://dauntbooks.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK037"
     },
     {
       "id": "bk038",
@@ -2036,7 +2073,8 @@
       "website": "https://dauntbooks.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-4763B350"
     },
     {
       "id": "bk039",
@@ -2095,7 +2133,8 @@
       "website": "https://donlonbooks.com/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK039"
     },
     {
       "id": "bk040",
@@ -2150,7 +2189,8 @@
       "website": "https://donlonbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK040"
     },
     {
       "id": "bk041",
@@ -2203,7 +2243,8 @@
       "website": "https://www.stephenfoster.co.uk/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-20BE9A7A"
     },
     {
       "id": "bk042",
@@ -2266,7 +2307,8 @@
       "website": "https://www.foyles.co.uk/bookshop-london",
       "source": "https://www.foyles.co.uk/highlights/foreign-languages",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK042"
     },
     {
       "id": "bk043",
@@ -2321,7 +2363,8 @@
       "website": "https://www.foyles.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK043"
     },
     {
       "id": "bk044",
@@ -2378,7 +2421,8 @@
       "website": "https://freedompress.org.uk/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK044"
     },
     {
       "id": "bk045",
@@ -2436,7 +2480,8 @@
       "website": "https://www.gaystheword.co.uk/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK045"
     },
     {
       "id": "bk046",
@@ -2493,7 +2538,8 @@
       "website": "https://www.heywoodhill.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK046"
     },
     {
       "id": "bk047",
@@ -2552,7 +2598,8 @@
       "website": "https://goldsborobooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK047"
     },
     {
       "id": "bk048",
@@ -2616,7 +2663,8 @@
       "website": "https://goshlondon.com/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK048"
     },
     {
       "id": "bk049",
@@ -2666,7 +2714,8 @@
       "website": "https://www.guanghwa.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK049"
     },
     {
       "id": "bk050",
@@ -2727,7 +2776,8 @@
       "website": "https://www.hatchards.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK050"
     },
     {
       "id": "bk051",
@@ -2776,7 +2826,8 @@
       "website": "https://www.hellenicbookservice.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK051"
     },
     {
       "id": "bk052",
@@ -2832,7 +2883,8 @@
       "website": "https://www.henrypordesbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-607D9919"
     },
     {
       "id": "bk053",
@@ -2883,7 +2935,8 @@
       "website": "https://hernehillbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK053"
     },
     {
       "id": "bk054",
@@ -2947,7 +3000,8 @@
       "website": "https://housmans.com/",
       "source": "https://housmans.com/about-the-shop/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK054"
     },
     {
       "id": "bk055",
@@ -2993,7 +3047,8 @@
       "website": null,
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "S1"
     },
     {
       "id": "bk056",
@@ -3046,7 +3101,8 @@
       "website": "https://ink84bookshop.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK056"
     },
     {
       "id": "bk057",
@@ -3097,7 +3153,8 @@
       "website": "https://www.jarndyce.co.uk/",
       "source": "https://secondhandlondon.org/posts/second-hand-bookshops-central-london/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK057"
     },
     {
       "id": "bk058",
@@ -3152,7 +3209,8 @@
       "website": "https://www.johnsandoe.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK058"
     },
     {
       "id": "bk059",
@@ -3202,7 +3260,8 @@
       "website": "https://www.josephsbookstore.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK059"
     },
     {
       "id": "bk060",
@@ -3255,7 +3314,8 @@
       "website": "https://juddbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-E32EEDA4"
     },
     {
       "id": "bk061",
@@ -3298,7 +3358,8 @@
       "website": "https://www.karnacbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK061"
     },
     {
       "id": "bk062",
@@ -3352,7 +3413,8 @@
       "website": null,
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-31BDCEA0"
     },
     {
       "id": "bk063",
@@ -3409,7 +3471,8 @@
       "website": "https://kirkdalebookshop.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK063"
     },
     {
       "id": "bk064",
@@ -3465,7 +3528,8 @@
       "website": "https://www.librairielapage.com/",
       "source": "https://uk.bookshop.org/shop/librairielapage",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK064"
     },
     {
       "id": "bk065",
@@ -3521,7 +3585,8 @@
       "website": "https://libreria.io/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK065"
     },
     {
       "id": "bk066",
@@ -3577,7 +3642,8 @@
       "website": "https://www.londonreviewbookshop.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK066"
     },
     {
       "id": "bk067",
@@ -3635,7 +3701,8 @@
       "website": "https://www.maggs.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK067"
     },
     {
       "id": "bk068",
@@ -3686,7 +3753,8 @@
       "website": "https://magma-shop.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK068"
     },
     {
       "id": "bk069",
@@ -3741,7 +3809,8 @@
       "website": "https://www.marchpanebooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK069"
     },
     {
       "id": "bk070",
@@ -3800,7 +3869,8 @@
       "website": "https://moroccobound.co.uk/",
       "source": "https://www.booksellers.org.uk/Bookshop-Details.aspx?m=5030676684878",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK070"
     },
     {
       "id": "bk071",
@@ -3854,7 +3924,8 @@
       "website": "https://shop.nationaltheatre.org.uk/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK071"
     },
     {
       "id": "bk072",
@@ -3910,7 +3981,8 @@
       "website": "https://newbeaconbooks.com/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK072"
     },
     {
       "id": "bk073",
@@ -3968,7 +4040,8 @@
       "website": "https://nomadbooks.co.uk/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK073"
     },
     {
       "id": "bk074",
@@ -4021,7 +4094,8 @@
       "website": "https://www.thenottinghillbookshop.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK074"
     },
     {
       "id": "bk075",
@@ -4074,7 +4148,8 @@
       "website": "https://dauntbooks.co.uk/shops/owl-bookshop/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK075"
     },
     {
       "id": "bk076",
@@ -4128,7 +4203,8 @@
       "website": "https://www.oxfam.org.uk/shops/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "CS-OXFAM-BLOOMSBURY-STREET-BOOKSHOP"
     },
     {
       "id": "bk077",
@@ -4177,7 +4253,8 @@
       "website": "https://www.oxfam.org.uk/shops/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "CS-OXFAM-BLACKHEATH"
     },
     {
       "id": "bk078",
@@ -4228,7 +4305,8 @@
       "website": "https://www.oxfam.org.uk/shops/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "CS-OXFAM-GREENWICH-BOOKSHOP"
     },
     {
       "id": "bk079",
@@ -4275,7 +4353,8 @@
       "website": "https://www.oxfam.org.uk/shops/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "CS-OXFAM-HERNE-HILL-BOOKSHOP"
     },
     {
       "id": "bk080",
@@ -4326,7 +4405,8 @@
       "website": "https://www.oxfam.org.uk/shops/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "CS-OXFAM-ISLINGTON-BOOKS-MUSIC"
     },
     {
       "id": "bk081",
@@ -4387,7 +4467,8 @@
       "website": "https://pagesofhackney.co.uk/",
       "source": "https://londonist.com/london/books-and-poetry/buy-second-hand-books-shops-stalls-london-rare-antiquarian",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK081"
     },
     {
       "id": "bk082",
@@ -4441,7 +4522,8 @@
       "website": "https://persephonebooks.co.uk/pages/our-london-shop",
       "source": "https://www.thebookseller.com/news/persephone-books-returns-to-london-with-new-shop",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK082"
     },
     {
       "id": "bk083",
@@ -4505,7 +4587,8 @@
       "website": "https://www.peterharrington.co.uk/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK083"
     },
     {
       "id": "bk084",
@@ -4565,7 +4648,8 @@
       "website": "https://www.peterharrington.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK084"
     },
     {
       "id": "bk085",
@@ -4620,7 +4704,8 @@
       "website": "https://phloxbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK085"
     },
     {
       "id": "bk086",
@@ -4675,7 +4760,8 @@
       "website": "https://www.pickledpepperbooks.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK086"
     },
     {
       "id": "bk087",
@@ -4734,7 +4820,8 @@
       "website": "https://primrosehillbooks.com/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK087"
     },
     {
       "id": "bk088",
@@ -4792,7 +4879,8 @@
       "website": "https://www.pritchardandure.com/",
       "source": "https://www.pritchardandure.com/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK088"
     },
     {
       "id": "bk089",
@@ -4846,7 +4934,8 @@
       "website": "https://shop.pushkinhouse.org/",
       "source": "https://www.thebookseller.com/news/pushkin-house-to-open-new-bilingual-bookshop",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK089"
     },
     {
       "id": "bk090",
@@ -4901,7 +4990,8 @@
       "website": "https://reviewbookshop.co.uk/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK090"
     },
     {
       "id": "bk091",
@@ -4954,7 +5044,8 @@
       "website": "https://www.ribabooks.com/",
       "source": "https://www.thelondonbookshopmap.org/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK091"
     },
     {
       "id": "bk092",
@@ -5012,7 +5103,8 @@
       "website": "https://riversidebookshop.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK092"
     },
     {
       "id": "bk093",
@@ -5067,7 +5159,8 @@
       "website": "https://www.roundtablebooks.co.uk/",
       "source": "https://www.roundtablebooks.co.uk/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK093"
     },
     {
       "id": "bk094",
@@ -5125,7 +5218,8 @@
       "website": "https://www.saucybooks.com/",
       "source": "https://www.thebookseller.com/news/saucy-books-londons-first-romance-only-bookshop-dedicated-to-genre-authors-and-readers-to-open",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK094"
     },
     {
       "id": "bk095",
@@ -5177,7 +5271,8 @@
       "website": "https://skoob.com/",
       "source": "https://skoob.com/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK095"
     },
     {
       "id": "bk096",
@@ -5235,7 +5330,8 @@
       "website": "https://sotherans.co.uk/",
       "source": "https://www.pressmark.co/dealers/city/london",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK096"
     },
     {
       "id": "bk097",
@@ -5286,7 +5382,8 @@
       "website": "https://www.southkensingtonbooks.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK097"
     },
     {
       "id": "bk098",
@@ -5345,7 +5442,8 @@
       "website": "https://www.stanfords.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK098"
     },
     {
       "id": "bk099",
@@ -5400,7 +5498,8 @@
       "website": "https://www.swedenborg.org.uk/bookshop/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK099"
     },
     {
       "id": "bk100",
@@ -5452,7 +5551,8 @@
       "website": "https://talesonmoonlane.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK100"
     },
     {
       "id": "bk101",
@@ -5508,7 +5608,8 @@
       "website": "https://www.taschen.com/en/stores-retail/chelsea/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK101"
     },
     {
       "id": "bk102",
@@ -5563,7 +5664,8 @@
       "website": "https://shop.tate.org.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK102"
     },
     {
       "id": "bk103",
@@ -5626,7 +5728,8 @@
       "website": "https://tenderbooks.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK103"
     },
     {
       "id": "bk104",
@@ -5678,7 +5781,8 @@
       "website": "https://www.travisandemery.com/",
       "source": "https://secondhandlondon.org/posts/second-hand-bookshops-central-london/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK104"
     },
     {
       "id": "bk105",
@@ -5735,7 +5839,8 @@
       "website": "https://www.treadwells-london.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK105"
     },
     {
       "id": "bk106",
@@ -5790,7 +5895,8 @@
       "website": null,
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "LA-88665BAF"
     },
     {
       "id": "bk107",
@@ -5850,7 +5956,8 @@
       "website": "https://www.waterstones.com/bookshops/gower-street",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK107"
     },
     {
       "id": "bk108",
@@ -5909,7 +6016,8 @@
       "website": "https://www.waterstones.com/bookshops/piccadilly",
       "source": "https://www.visitlondon.com/things-to-do/shopping/books/top-bookshops-in-london",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK108"
     },
     {
       "id": "bk109",
@@ -5962,7 +6070,8 @@
       "website": "https://www.watkinsbooks.com/",
       "source": "https://www.watkinsbooks.com/",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK109"
     },
     {
       "id": "bk110",
@@ -6015,7 +6124,8 @@
       "website": "https://westendlanebooks.co.uk/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "medium",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK110"
     },
     {
       "id": "bk111",
@@ -6065,7 +6175,8 @@
       "website": "https://www.wildy.com/",
       "source": "https://londonbookshops.org/list.html",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK111"
     },
     {
       "id": "bk112",
@@ -6126,7 +6237,8 @@
       "website": "https://www.wordonthewater.co.uk/",
       "source": "https://www.visitlondon.com/things-to-do/shopping/books/top-bookshops-in-london",
       "confidence": "high",
-      "last_verified": "2026-11-04"
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK112"
     },
     {
       "id": "bk113",
@@ -6182,6 +6294,535 @@
       "description_it": "Libreria antiquaria e di rarità a Waterloo Bridge, con particolare attenzione a libri per bambini e ragazzi, viaggi, mappe e atlanti. Tra gli elementi distintivi: una storia culturale documentata.",
       "website": "https://www.southbankcentre.co.uk/shopping/south-bank-book-market/",
       "source": "https://www.southbankcentre.co.uk/shopping/south-bank-book-market/",
+      "confidence": "high",
+      "last_verified": "2026-11-04",
+      "place_id": "BOOK-BK113"
+    },
+    {
+      "id": "book-oxfam-balham-bookshop",
+      "place_id": "CS-OXFAM-BALHAM-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Balham",
+      "address": "166 Balham High Street, London",
+      "postcode": "SW12 9BW",
+      "zone": "3",
+      "station": "Balham",
+      "lat": 51.444456,
+      "lon": -0.152421,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Balham specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Balham per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-balham/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-balham/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-camden-bookshop",
+      "place_id": "CS-OXFAM-CAMDEN-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Camden",
+      "address": "89 Camden High Street, Camden, London",
+      "postcode": "NW1 7JL",
+      "zone": "2",
+      "station": "Camden",
+      "lat": 51.536217,
+      "lon": -0.140431,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Camden specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Camden per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-camden/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-camden/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-chiswick-bookshop",
+      "place_id": "CS-OXFAM-CHISWICK-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Chiswick",
+      "address": "90 Turnham Green Terrace, Chiswick, London",
+      "postcode": "W4 1QN",
+      "zone": "2/3",
+      "station": "Chiswick",
+      "lat": 51.494516,
+      "lon": -0.25506,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Chiswick specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Chiswick per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-chiswick/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-chiswick/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-crouch-end-books-music",
+      "place_id": "CS-OXFAM-CROUCH-END-BOOKS-MUSIC",
+      "name": "Oxfam Bookshop",
+      "branch": "Crouch End",
+      "address": "22 Park Road, Crouch End, London",
+      "postcode": "N8 8TD",
+      "zone": "3",
+      "station": "Crouch End",
+      "lat": 51.58084,
+      "lon": -0.124711,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Crouch End specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Crouch End per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-books-music-crouch-end/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-books-music-crouch-end/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-hampstead-bookshop",
+      "place_id": "CS-OXFAM-HAMPSTEAD-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Hampstead",
+      "address": "45 Heath Street, Hampstead, London",
+      "postcode": "NW3 6UA",
+      "zone": "2/3",
+      "station": "Hampstead",
+      "lat": 51.556647,
+      "lon": -0.178764,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Hampstead specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Hampstead per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-hampstead/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-hampstead/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-highgate-bookshop",
+      "place_id": "CS-OXFAM-HIGHGATE-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Highgate",
+      "address": "47 Highgate High Street, London",
+      "postcode": "N6 5JX",
+      "zone": "3",
+      "station": "Highgate",
+      "lat": 51.570892,
+      "lon": -0.148973,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Highgate specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Highgate per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-highgate/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-highgate/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-portobello-bookshop",
+      "place_id": "CS-OXFAM-PORTOBELLO-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Portobello",
+      "address": "170 Portobello Road, London",
+      "postcode": "W11 2EB",
+      "zone": "2",
+      "station": "Portobello",
+      "lat": 51.515535,
+      "lon": -0.204576,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Portobello specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Portobello per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-portobello/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-portobello/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-victoria-bookshop",
+      "place_id": "CS-OXFAM-VICTORIA-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Victoria",
+      "address": "34 Strutton Ground, Victoria, London",
+      "postcode": "SW1P 2HR",
+      "zone": "1",
+      "station": "Victoria",
+      "lat": 51.496762,
+      "lon": -0.133999,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Victoria specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Victoria per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-victoria/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-victoria/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-ealing-bookshop",
+      "place_id": "CS-OXFAM-EALING-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Ealing",
+      "address": "1 The Green, Ealing, London",
+      "postcode": "W5 5DA",
+      "zone": "3",
+      "station": "Ealing",
+      "lat": 51.5115897,
+      "lon": -0.3048582,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Ealing specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Ealing per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-ealing/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-ealing/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-muswell-hill-bookshop",
+      "place_id": "CS-OXFAM-MUSWELL-HILL-BOOKSHOP",
+      "name": "Oxfam Bookshop",
+      "branch": "Muswell Hill",
+      "address": "378 Muswell Hill Broadway, London",
+      "postcode": "N10 1DJ",
+      "zone": "3",
+      "station": "Muswell Hill",
+      "lat": 51.5915384,
+      "lon": -0.1427329,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Muswell Hill specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Muswell Hill per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-bookshop-muswell-hill/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-bookshop-muswell-hill/",
+      "confidence": "high",
+      "last_verified": "2026-11-04"
+    },
+    {
+      "id": "book-oxfam-kentish-town-books-music",
+      "place_id": "CS-OXFAM-KENTISH-TOWN-BOOKS-MUSIC",
+      "name": "Oxfam Bookshop",
+      "branch": "Kentish Town",
+      "address": "166 Kentish Town Road, London",
+      "postcode": "NW5 2AG",
+      "zone": "2",
+      "station": "Kentish Town",
+      "lat": 51.5469758,
+      "lon": -0.1413684,
+      "type": "charity",
+      "ownership": "Oxfam",
+      "stock": [
+        "Second-hand",
+        "books",
+        "music"
+      ],
+      "stock_it": [
+        "usato",
+        "libri",
+        "musica"
+      ],
+      "specialisms": [
+        "General donated books and music"
+      ],
+      "specialisms_it": [
+        "libri e musica donati"
+      ],
+      "specialism_tags": [],
+      "features": [
+        "Volunteer-run",
+        "Changing donated stock"
+      ],
+      "features_it": [
+        "gestita da volontari",
+        "assortimento donato variabile"
+      ],
+      "feature_tags": [],
+      "heritage": "Oxfam specialist books and music branch",
+      "heritage_it": "Sede Oxfam specializzata in libri e musica",
+      "description": "Oxfam's Kentish Town specialist branch for donated second-hand books and music; stock changes continuously.",
+      "description_it": "Sede specializzata Oxfam di Kentish Town per libri e musica usati donati; l’assortimento cambia continuamente.",
+      "website": "https://www.oxfam.org.uk/shops/oxfam-books-music-kentish-town/",
+      "source": "https://www.oxfam.org.uk/shops/oxfam-books-music-kentish-town/",
       "confidence": "high",
       "last_verified": "2026-11-04"
     }

@@ -285,14 +285,39 @@ async function handleCharityShops(request, env) {
   if (request.method !== "GET") {
     return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
   }
-  const dataUrl = new URL("/data/charity-shops.json", request.url);
-  const response = await env.ASSETS.fetch(new Request(dataUrl, request));
-  if (!response.ok) return jsonResponse({ ok: false, code: "charity_shop_data_unavailable" }, 503);
-  return new Response(await response.text(), {
+  return canonicalCollectionResponse(request, env, "/api/charity-shops", "/data/charity-shops.json", "charity_shop_data_unavailable");
+}
+
+async function canonicalCollectionResponse(request, env, canonicalPath, fallbackPath, unavailableCode) {
+  try {
+    const response = await fetch(new URL(canonicalPath, PLACES_API_ORIGIN), {
+      headers: { Accept: "application/json" },
+      cf: { cacheTtl: 300, cacheEverything: true },
+    });
+    if (response.ok) {
+      return new Response(await response.text(), {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          "Cache-Control": "public, max-age=0, s-maxage=300, must-revalidate",
+          "X-London-Advanced-Data-Source": "canonical-d1",
+        },
+      });
+    }
+    console.error(JSON.stringify({ event: "canonical_collection_error", path: canonicalPath, status: response.status }));
+  } catch (error) {
+    console.error(JSON.stringify({ event: "canonical_collection_error", path: canonicalPath, message: String(error?.message || error) }));
+  }
+
+  const dataUrl = new URL(fallbackPath, request.url);
+  const fallback = await env.ASSETS.fetch(new Request(dataUrl, request));
+  if (!fallback.ok) return jsonResponse({ ok: false, code: unavailableCode }, 503);
+  return new Response(await fallback.text(), {
     status: 200,
     headers: {
       "Content-Type": "application/json; charset=utf-8",
-      "Cache-Control": "public, max-age=300"
+      "Cache-Control": "public, max-age=60",
+      "X-London-Advanced-Data-Source": "static-fail-safe",
     }
   });
 }
@@ -301,16 +326,7 @@ async function handleBookshops(request, env) {
   if (request.method !== "GET") {
     return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
   }
-  const dataUrl = new URL("/data/bookshops.json", request.url);
-  const response = await env.ASSETS.fetch(new Request(dataUrl, request));
-  if (!response.ok) return jsonResponse({ ok: false, code: "bookshop_data_unavailable" }, 503);
-  return new Response(await response.text(), {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "Cache-Control": "public, max-age=300"
-    }
-  });
+  return canonicalCollectionResponse(request, env, "/api/bookshops", "/data/bookshops.json", "bookshop_data_unavailable");
 }
 
 async function handleLooGeocode(request, fetchImpl = fetch) {
@@ -536,8 +552,14 @@ async function searchLoos(request, env, query, locale) {
 
 async function searchBookshops(request, env, query, locale) {
   try {
-    const seedUrl = new URL("/data/bookshops.json", request.url);
-    const response = await env.ASSETS.fetch(new Request(seedUrl, request));
+    let response = await fetch(new URL("/api/bookshops", PLACES_API_ORIGIN), {
+      headers: { Accept: "application/json" },
+      cf: { cacheTtl: 300, cacheEverything: true },
+    });
+    if (!response.ok) {
+      const seedUrl = new URL("/data/bookshops.json", request.url);
+      response = await env.ASSETS.fetch(new Request(seedUrl, request));
+    }
     if (!response.ok) return [];
     const payload = await response.json();
     const needle = searchKey(query);
@@ -558,7 +580,7 @@ async function searchBookshops(request, env, query, locale) {
           url: toolLink("bookshops", locale).url,
           links: [toolLink("bookshops", locale), toolLink("smart-navigation", locale)],
           score: locationScore(shop.name, query, `${shop.branch} ${summary} ${(shop.specialisms || []).join(" ")}`),
-          source: "bookshops-static"
+          source: "bookshops-canonical"
         };
       })
       .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
