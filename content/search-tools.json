@@ -47,5 +47,12 @@
       "en": ["charity shop", "charity shops", "second hand", "thrift", "used books", "vintage", "oxfam", "british heart foundation", "scope", "crisis"],
       "it": ["negozio solidale", "negozi solidali", "seconda mano", "usato", "libri usati", "vintage", "oxfam", "british heart foundation", "scope", "crisis"]
     }
+  },
+  {
+    "id": "bookshops",
+    "keywords": {
+      "en": ["bookshop", "bookshops", "bookstore", "independent bookshop", "specialist books", "second hand books", "rare books", "antiquarian", "children's books", "art books", "book café"],
+      "it": ["libreria", "librerie", "libreria indipendente", "libreria specializzata", "libri usati", "libri rari", "antiquaria", "libri per bambini", "libri d'arte", "caffè libreria"]
+    }
   }
 ]

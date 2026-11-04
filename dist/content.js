@@ -76,6 +76,15 @@ window.LONDON_ADVANCED = {
       href: "/charity-shops/",
       embedUrl: "/charity-shops/",
       icon: "charity"
+    },
+    {
+      id: "bookshops",
+      name: "Bookshops",
+      short: "Find the right shelves",
+      description: "Explore independent, specialist, second-hand and historic London bookshops by subject and experience.",
+      href: "/bookshops/",
+      embedUrl: "/bookshops/",
+      icon: "book"
     }
   ],
   stories: [

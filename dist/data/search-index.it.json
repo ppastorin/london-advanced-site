@@ -192,6 +192,30 @@
       "content": "Trova l’usato giusto vicino a te Trova negozi solidali vicini e filtra per organizzazione, distanza e specialità."
     },
     {
+      "id": "tool:bookshops:it",
+      "type": "tool",
+      "locale": "it",
+      "title": "Librerie",
+      "summary": "Esplora librerie indipendenti, specializzate, dell'usato e storiche per argomento ed esperienza.",
+      "url": "/it/strumenti/librerie/",
+      "tags": [
+        "Trova gli scaffali giusti"
+      ],
+      "keywords": [
+        "libreria",
+        "librerie",
+        "libreria indipendente",
+        "libreria specializzata",
+        "libri usati",
+        "libri rari",
+        "antiquaria",
+        "libri per bambini",
+        "libri d'arte",
+        "caffè libreria"
+      ],
+      "content": "Trova gli scaffali giusti Esplora librerie indipendenti, specializzate, dell'usato e storiche per argomento ed esperienza."
+    },
+    {
       "id": "article:blackheath-greenwich-walk:it",
       "type": "article",
       "locale": "it",

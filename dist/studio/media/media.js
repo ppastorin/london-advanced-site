@@ -1,6 +1,11 @@
 const REPOSITORY = "ppastorin/london-advanced-site";
 const BRANCH = "main";
-const DESTINATION_ROOT = "assets/instagram";
+export const DESTINATION_ROOTS = Object.freeze({
+  instagram: "assets/instagram",
+  journal: "assets/journal",
+  itineraries: "assets/itineraries"
+});
+const DEFAULT_DESTINATION = "instagram";
 const MAX_FILE_BYTES = 24 * 1024 * 1024;
 const LARGE_BATCH_BYTES = 500 * 1024 * 1024;
 const PREVIEW_LIMIT = 120;
@@ -31,9 +36,10 @@ export function shouldRemoveOuterFolder(paths) {
   return parts.length > 0 && parts.every(part => part.length >= 3 && part[0] === parts[0][0]);
 }
 
-export function buildTargetPath(relativePath) {
+export function buildTargetPath(relativePath, destination = DEFAULT_DESTINATION) {
   const path = normaliseRelativePath(relativePath);
-  return path ? `${DESTINATION_ROOT}/${path}` : "";
+  const root = DESTINATION_ROOTS[destination];
+  return path && root ? `${root}/${path}` : "";
 }
 
 export function deploymentPaths(targetPath) {
@@ -66,7 +72,7 @@ export function blobCacheSignature(entry) {
   return `${entry.targetPath}|${entry.file.size}|${entry.file.lastModified || 0}`;
 }
 
-export function prepareBatch(files) {
+export function prepareBatch(files, destination = DEFAULT_DESTINATION) {
   const candidates = [...files].map(file => ({
     file,
     sourcePath: normaliseRelativePath(file.webkitRelativePath || file.name)
@@ -76,7 +82,7 @@ export function prepareBatch(files) {
   const rejected = [];
   for (const candidate of candidates) {
     const relativePath = folderAdjustedPath(candidate.sourcePath, removeOuterFolder);
-    const targetPath = buildTargetPath(relativePath);
+    const targetPath = buildTargetPath(relativePath, destination);
     let reason = "";
     if (!candidate.sourcePath || !targetPath) reason = "invalid path";
     else if (candidate.sourcePath.split("/").some(part => part.startsWith("."))) reason = "hidden/system file";
@@ -221,7 +227,7 @@ function escapeHtml(value) {
 
 function initialise() {
   const elements = Object.fromEntries([
-    "folder-input", "clear-selection", "file-count", "folder-count", "total-size", "selection-warning",
+    "destination-root", "path-root", "destination-note", "folder-input", "clear-selection", "file-count", "folder-count", "total-size", "selection-warning",
     "rejections", "file-preview", "allow-overwrite", "commit-message", "connect-github", "start-upload",
     "auth-state", "progress-wrap", "progress-label", "progress-count", "upload-progress", "result"
   ].map(id => [id, document.getElementById(id)]));
@@ -247,6 +253,7 @@ function initialise() {
     elements["clear-selection"].disabled = busy || queue.size === 0;
     elements["folder-input"].disabled = busy;
     elements["connect-github"].disabled = busy;
+    elements["destination-root"].disabled = busy || queue.size > 0;
   }
 
   function renderQueue() {
@@ -275,7 +282,7 @@ function initialise() {
   }
 
   function addFiles(fileList) {
-    const batch = prepareBatch(fileList);
+    const batch = prepareBatch(fileList, elements["destination-root"].value);
     for (const entry of batch.accepted) queue.set(entry.targetPath, entry);
     elements.rejections.hidden = batch.rejected.length === 0;
     elements.rejections.innerHTML = batch.rejected.length
@@ -381,6 +388,21 @@ function initialise() {
     }
   }
 
+  elements["destination-root"].addEventListener("change", () => {
+    const destination = elements["destination-root"].value;
+    const root = DESTINATION_ROOTS[destination] || DESTINATION_ROOTS[DEFAULT_DESTINATION];
+    elements["path-root"].textContent = `${root}/`;
+    elements["destination-note"].textContent = destination === "journal"
+      ? "Upload here before selecting an image in a Journal article."
+      : destination === "itineraries"
+        ? "Use this for itinerary photographs and route-map images."
+        : "Use this for Instagram post and Reel source images.";
+    elements["commit-message"].value = destination === "journal"
+      ? "media: add Journal images"
+      : destination === "itineraries"
+        ? "media: add itinerary images"
+        : "media: add Instagram image library";
+  });
   elements["folder-input"].addEventListener("change", event => {
     if (event.target.files?.length) addFiles(event.target.files);
     event.target.value = "";
