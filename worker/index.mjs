@@ -297,6 +297,22 @@ async function handleCharityShops(request, env) {
   });
 }
 
+async function handleBookshops(request, env) {
+  if (request.method !== "GET") {
+    return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
+  }
+  const dataUrl = new URL("/data/bookshops.json", request.url);
+  const response = await env.ASSETS.fetch(new Request(dataUrl, request));
+  if (!response.ok) return jsonResponse({ ok: false, code: "bookshop_data_unavailable" }, 503);
+  return new Response(await response.text(), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=300"
+    }
+  });
+}
+
 async function handleLooGeocode(request, fetchImpl = fetch) {
   if (request.method !== "GET") {
     return jsonResponse({ ok: false, code: "method_not_allowed" }, 405, { Allow: "GET" });
@@ -406,7 +422,10 @@ function toolLink(id, locale) {
       : ["Loo Finder", "/loo/"],
     "charity-shops": italian
       ? ["Negozi solidali", "/it/strumenti/negozi-di-beneficenza/"]
-      : ["Charity Shops", "/charity-shops/"]
+      : ["Charity Shops", "/charity-shops/"],
+    "bookshops": italian
+      ? ["Librerie", "/it/strumenti/librerie/"]
+      : ["Bookshops", "/bookshops/"]
   };
   const [title, url] = tools[id];
   return { id, title, url };
@@ -515,6 +534,40 @@ async function searchLoos(request, env, query, locale) {
   }
 }
 
+async function searchBookshops(request, env, query, locale) {
+  try {
+    const seedUrl = new URL("/data/bookshops.json", request.url);
+    const response = await env.ASSETS.fetch(new Request(seedUrl, request));
+    if (!response.ok) return [];
+    const payload = await response.json();
+    const needle = searchKey(query);
+    return (payload.shops || [])
+      .filter(shop => searchKey([
+        shop.name, shop.branch, shop.address, shop.station, shop.type, shop.ownership,
+        ...(shop.stock || []), ...(shop.specialisms || []), ...(shop.features || []),
+        shop.heritage, shop.heritage_it, shop.description, shop.description_it
+      ].join(" ")).includes(needle))
+      .map(shop => {
+        const summary = locale === "it" ? (shop.description_it || shop.description) : shop.description;
+        return {
+          id: `location:bookshop:${shop.id}`,
+          type: "location",
+          locale,
+          title: shop.name,
+          summary,
+          url: toolLink("bookshops", locale).url,
+          links: [toolLink("bookshops", locale), toolLink("smart-navigation", locale)],
+          score: locationScore(shop.name, query, `${shop.branch} ${summary} ${(shop.specialisms || []).join(" ")}`),
+          source: "bookshops-static"
+        };
+      })
+      .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
+      .slice(0, 30);
+  } catch {
+    return [];
+  }
+}
+
 function mergeLocationResults(records) {
   const merged = new Map();
   for (const record of records) {
@@ -548,11 +601,12 @@ export async function handleLocationSearch(request, env, fetchImpl = fetch) {
   const locale = url.searchParams.get("locale") === "it" ? "it" : "en";
   if (searchKey(query).length < 2) return jsonResponse({ ok: true, query, count: 0, records: [] }, 200);
 
-  const [places, loos] = await Promise.all([
+  const [places, loos, bookshops] = await Promise.all([
     searchPublishedPlaces(query, locale, fetchImpl),
-    searchLoos(request, env, query, locale)
+    searchLoos(request, env, query, locale),
+    searchBookshops(request, env, query, locale)
   ]);
-  const records = mergeLocationResults([...places, ...loos])
+  const records = mergeLocationResults([...places, ...loos, ...bookshops])
     .filter(record => record.score > 0)
     .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title));
 
@@ -881,6 +935,8 @@ export default {
     if (url.pathname === "/api/loo-geocode") return handleLooGeocode(request);
     if (url.pathname === "/api/charity-shops") return handleCharityShops(request, env);
     if (url.pathname === "/api/charity-geocode") return handleLooGeocode(request);
+    if (url.pathname === "/api/bookshops") return handleBookshops(request, env);
+    if (url.pathname === "/api/bookshop-geocode") return handleLooGeocode(request);
     if (url.pathname === "/api/search-locations") return handleLocationSearch(request, env);
     if (url.pathname === "/api/decap/auth") return handleDecapAuth(request, env);
     if (url.pathname === DECAP_CALLBACK_PATH) return handleDecapCallback(request, env);

@@ -75,6 +75,15 @@ window.LONDON_ADVANCED={
       "href": "/it/strumenti/negozi-di-beneficenza/",
       "embedUrl": "/it/strumenti/negozi-di-beneficenza/",
       "icon": "charity"
+    },
+    {
+      "id": "bookshops",
+      "name": "Librerie",
+      "short": "Trova gli scaffali giusti",
+      "description": "Esplora librerie indipendenti, specializzate, dell'usato e storiche per argomento ed esperienza.",
+      "href": "/it/strumenti/librerie/",
+      "embedUrl": "/it/strumenti/librerie/",
+      "icon": "book"
     }
   ],
   "stories": [

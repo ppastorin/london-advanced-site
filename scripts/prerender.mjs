@@ -270,6 +270,56 @@ async function buildNativeCharityPages() {
   ]);
 }
 
+function bookshopSiteNavigation(homepage, locale) {
+  let header = siteNavigation(homepage, locale);
+  const aboutLabel = locale === "it" ? "Info" : "About";
+  const aboutDesktop = `<button class="bookshop-nav-about" type="button" data-bookshop-about aria-haspopup="dialog" aria-controls="bookshop-about-panel">${aboutLabel}</button>`;
+  const aboutMobile = `<button class="mobile-section-link bookshop-mobile-about" type="button" data-bookshop-about aria-haspopup="dialog" aria-controls="bookshop-about-panel"><span>London Advanced</span><strong>${locale === "it" ? "Informazioni sullo strumento" : "About this tool"}</strong></button>`;
+  if (locale === "en") {
+    header = header
+      .replaceAll('/it/strumenti/trova-un-bagno/', '/it/strumenti/librerie/')
+      .replace('href="/loo/" aria-current="page" data-track="app-menu:Loo Finder"', 'href="/loo/" data-track="app-menu:Loo Finder"')
+      .replace('href="/bookshops/" data-track="app-menu:Bookshops"', 'href="/bookshops/" aria-current="page" data-track="app-menu:Bookshops"')
+      .replace('</nav>', `${aboutDesktop}</nav>`)
+      .replace('<p class="mobile-menu-heading">Tools</p>', `${aboutMobile}<p class="mobile-menu-heading">Tools</p>`);
+  } else {
+    header = header
+      .replace('class="language-switch" href="/loo/"', 'class="language-switch" href="/bookshops/"')
+      .replace('class="mobile-language-switch" href="/loo/"', 'class="mobile-language-switch" href="/bookshops/"')
+      .replace('href="/it/strumenti/trova-un-bagno/" aria-current="page"', 'href="/it/strumenti/trova-un-bagno/"')
+      .replace('href="/it/strumenti/librerie/"', 'href="/it/strumenti/librerie/" aria-current="page"')
+      .replace('</nav>', `${aboutDesktop}</nav>`)
+      .replace('<p class="mobile-menu-heading">Strumenti</p>', `${aboutMobile}<p class="mobile-menu-heading">Strumenti</p>`);
+  }
+  return header;
+}
+
+function nativeBookshopPage(template, homepage, locale) {
+  const nav = bookshopSiteNavigation(homepage, locale);
+  const footer = charityGlobalFooter(homepage, locale);
+  return template
+    .replace(/<header class="site-nav">[\s\S]*?<\/header>/, "")
+    .replace(/<footer\b[^>]*class="[^"]*global-footer[^"]*"[^>]*>[\s\S]*?<\/footer>/, "")
+    .replace('<body class="bookshop-page">', `<body class="bookshop-page">${nav}`)
+    .replace("</body>", `${footer}</body>`)
+    .replace(/[ \t]+$/gm, "");
+}
+
+async function buildNativeBookshopPages() {
+  const englishHomepage = await readFile(path.join(distRoot, "index.html"), "utf8");
+  const italianHomepage = await readFile(path.join(distRoot, "it/index.html"), "utf8");
+  const englishTemplate = await readFile(path.join(distRoot, "bookshops/index.html"), "utf8");
+  const italianTemplate = await readFile(path.join(distRoot, "it/bookshops/index.html"), "utf8");
+  const englishPage = nativeBookshopPage(englishTemplate, englishHomepage, "en");
+  const italianPage = nativeBookshopPage(italianTemplate, italianHomepage, "it");
+  await Promise.all([
+    writeFile(path.join(distRoot, "bookshops/index.html"), englishPage, "utf8"),
+    writeFile(path.join(distRoot, "it/bookshops/index.html"), italianPage, "utf8"),
+    mkdir(path.join(distRoot, "it/strumenti/librerie"), { recursive: true })
+      .then(() => writeFile(path.join(distRoot, "it/strumenti/librerie/index.html"), italianPage, "utf8"))
+  ]);
+}
+
 function safeJson(value) {
   return JSON.stringify(value, null, 2).replaceAll("<", "\\u003c");
 }
@@ -784,6 +834,7 @@ export async function prerender() {
   await buildItineraries({ includeDrafts: process.argv.includes("--drafts") });
   await buildNativeLooPages();
   await buildNativeCharityPages();
+  await buildNativeBookshopPages();
   await buildGuidePages();
   await buildSearch();
   await buildLegalPages();

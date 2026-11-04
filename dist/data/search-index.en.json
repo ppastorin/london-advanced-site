@@ -193,6 +193,31 @@
       "content": "Find better second-hand stops Find nearby London charity shops and filter by charity, distance and specialist stock."
     },
     {
+      "id": "tool:bookshops:en",
+      "type": "tool",
+      "locale": "en",
+      "title": "Bookshops",
+      "summary": "Explore independent, specialist, second-hand and historic London bookshops by subject and experience.",
+      "url": "/bookshops/",
+      "tags": [
+        "Find the right shelves"
+      ],
+      "keywords": [
+        "bookshop",
+        "bookshops",
+        "bookstore",
+        "independent bookshop",
+        "specialist books",
+        "second hand books",
+        "rare books",
+        "antiquarian",
+        "children's books",
+        "art books",
+        "book café"
+      ],
+      "content": "Find the right shelves Explore independent, specialist, second-hand and historic London bookshops by subject and experience."
+    },
+    {
       "id": "article:blackheath-greenwich-walk:en",
       "type": "article",
       "locale": "en",
