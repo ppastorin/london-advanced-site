@@ -48,3 +48,9 @@ test("bookshop tool provides EN/IT routes, combinable filters, map and direction
   assert.match(app, /state\.specialisms/);
   assert.match(app, /state\.features/);
 });
+
+test("Cloudflare routes bookshop API requests through the Worker", async () => {
+  const config = await readFile(new URL("wrangler.jsonc", root), "utf8");
+  assert.match(config, /"\/api\/bookshops"/);
+  assert.match(config, /"\/api\/bookshop-geocode"/);
+});
