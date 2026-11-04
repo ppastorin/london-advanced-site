@@ -6,12 +6,23 @@
 .bookshop-how li > span { display: grid; place-items: center; flex: 0 0 28px; height: 28px; border-radius: 50%; background: #31594c; color: #fff; font: 700 .78rem Manrope,sans-serif; }
 .bookshop-how strong { display: block; font: 700 .84rem Manrope,sans-serif; color: #18382f; }
 .bookshop-how p { margin: 3px 0 0; color: #61716b; font-size: .8rem; line-height: 1.45; }
-.bookshop-controls { align-items: start; }
+.bookshop-controls {
+  grid-template-columns: minmax(250px, .62fr) minmax(0, 1.38fr);
+  align-items: stretch;
+  gap: 12px;
+}
+.bookshop-controls > .range-card,
+.bookshop-controls > fieldset:first-of-type { min-height: 126px; }
+.bookshop-controls > fieldset:nth-of-type(2),
+.bookshop-controls > fieldset:nth-of-type(3),
+.bookshop-controls > .reset-filters { grid-column: 1 / -1; }
+.bookshop-controls > fieldset:nth-of-type(2),
+.bookshop-controls > fieldset:nth-of-type(3) { padding-block: 13px; }
 .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .filter-chip { border: 1px solid rgba(35,73,61,.2); border-radius: 999px; background: #fff; color: #34574b; padding: 9px 12px; font: 650 .76rem Manrope,sans-serif; cursor: pointer; transition: .18s ease; }
 .filter-chip:hover { border-color: #a44732; color: #812f21; }
 .filter-chip.active { border-color: #31594c; background: #31594c; color: #fff; box-shadow: 0 4px 12px rgba(49,89,76,.18); }
-.filter-chips.compact .filter-chip { padding: 8px 10px; font-size: .72rem; }
+.filter-chips.compact .filter-chip { padding: 7px 10px; font-size: .72rem; }
 .reset-filters { justify-self: start; border: 0; border-bottom: 1px solid rgba(164,71,50,.35); background: transparent; color: #8d3c2a; padding: 7px 0; font: 700 .75rem Manrope,sans-serif; cursor: pointer; }
 .bookshop-pin { font-size: 20px; line-height: 28px; }
 .shop-summary { min-width: 0; }
@@ -28,8 +39,13 @@
 @media (max-width: 900px) {
   .bookshop-how { grid-template-columns: 1fr; margin: 16px 0 0; }
   .bookshop-how li { padding: 12px 14px; }
-  .bookshop-controls { position: static; }
-  .filter-chips { max-height: 160px; overflow: auto; padding-right: 4px; }
+  .bookshop-controls { grid-template-columns: 1fr; position: static; }
+  .bookshop-controls > .range-card,
+  .bookshop-controls > fieldset:first-of-type { min-height: 0; }
+  .bookshop-controls > fieldset,
+  .bookshop-controls > .range-card,
+  .bookshop-controls > .reset-filters { grid-column: 1; }
+  .filter-chips { max-height: none; overflow: visible; padding-right: 0; }
 }
 @media (max-width: 680px) {
   .bookshop-how { gap: 8px; }
