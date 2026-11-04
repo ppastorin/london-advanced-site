@@ -6,9 +6,10 @@ const root = new URL("../", import.meta.url);
 
 test("bookshop inventory is classified, bilingual and geographically usable", async () => {
   const data = JSON.parse(await readFile(new URL("dist/data/bookshops.json", root), "utf8"));
-  assert.equal(data.count, 113);
-  assert.equal(data.shops.length, 113);
-  assert.equal(new Set(data.shops.map(shop => shop.id)).size, 113);
+  assert.equal(data.count, 124);
+  assert.equal(data.shops.length, 124);
+  assert.equal(new Set(data.shops.map(shop => shop.id)).size, 124);
+  assert.equal(new Set(data.shops.map(shop => shop.place_id)).size, 124);
   assert.ok(data.shops.every(shop => Number.isFinite(shop.lat) && Number.isFinite(shop.lon)));
   assert.ok(data.shops.every(shop => /^(?:1|1\/2|2|2\/3|3|3\/4)$/.test(String(shop.zone))));
   assert.ok(data.shops.every(shop => shop.description && shop.description_it && shop.source));
@@ -18,6 +19,11 @@ test("bookshop inventory is classified, bilingual and geographically usable", as
   assert.ok(data.shops.some(shop => shop.type === "rare-antiquarian"));
   assert.ok(data.shops.some(shop => shop.feature_tags.includes("cafe-food")));
   assert.ok(data.shops.some(shop => shop.feature_tags.includes("heritage-story")));
+  assert.equal(data.shops.filter(shop => shop.ownership === "Oxfam").length, 16);
+  for (const branch of ["Balham", "Camden", "Chiswick", "Crouch End", "Ealing", "Hampstead", "Highgate", "Kentish Town", "Muswell Hill", "Portobello", "Victoria"]) {
+    assert.ok(data.shops.some(shop => shop.ownership === "Oxfam" && shop.branch.includes(branch)), `missing Oxfam ${branch}`);
+  }
+  assert.ok(!data.shops.some(shop => shop.ownership === "Oxfam" && shop.branch.includes("Wanstead")));
   assert.ok(!data.shops.some(shop => ["Bendico", "The Enchanted Spine"].includes(shop.name)));
 });
 
@@ -53,6 +59,16 @@ test("Cloudflare routes bookshop API requests through the Worker", async () => {
   const config = await readFile(new URL("wrangler.jsonc", root), "utf8");
   assert.match(config, /"\/api\/bookshops"/);
   assert.match(config, /"\/api\/bookshop-geocode"/);
+});
+
+test("bookshop and charity endpoints use canonical D1 with static fail-safe exports", async () => {
+  const worker = await readFile(new URL("worker/index.mjs", root), "utf8");
+  assert.match(worker, /canonicalCollectionResponse\(request, env, "\/api\/bookshops"/);
+  assert.match(worker, /canonicalCollectionResponse\(request, env, "\/api\/charity-shops"/);
+  assert.match(worker, /X-London-Advanced-Data-Source/);
+  assert.match(worker, /canonical-d1/);
+  assert.match(worker, /static-fail-safe/);
+  assert.doesNotMatch(worker, /source: "bookshops-static"/);
 });
 
 test("bookshop filters use a compact responsive layout", async () => {
