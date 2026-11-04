@@ -54,3 +54,11 @@ test("Cloudflare routes bookshop API requests through the Worker", async () => {
   assert.match(config, /"\/api\/bookshops"/);
   assert.match(config, /"\/api\/bookshop-geocode"/);
 });
+
+test("bookshop filters use a compact responsive layout", async () => {
+  const css = await readFile(new URL("dist/bookshops/bookshops-extra.css", root), "utf8");
+  assert.match(css, /grid-template-columns: minmax\(250px, \.62fr\) minmax\(0, 1\.38fr\)/);
+  assert.match(css, /fieldset:nth-of-type\(2\),[\s\S]*fieldset:nth-of-type\(3\),[\s\S]*reset-filters \{ grid-column: 1 \/ -1; \}/);
+  assert.match(css, /@media \(max-width: 900px\)[\s\S]*grid-template-columns: 1fr/);
+  assert.match(css, /max-height: none; overflow: visible/);
+});
