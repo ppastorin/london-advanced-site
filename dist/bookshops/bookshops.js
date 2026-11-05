@@ -1,8 +1,8 @@
 const IT = document.documentElement.lang.startsWith("it");
 const copy = IT ? {
-  loading:"Caricamento delle librerie…", finding:"Cerco la tua posizione…", locationError:"La posizione non è disponibile. Cerca una stazione, una strada o un luogo.", enter:"Inserisci una stazione, una strada o un luogo di Londra.", notFound:"Luogo non trovato.", near:"Vicino a", nearYou:"la tua posizione", allTitle:"Tutte le librerie selezionate", results:"risultati", result:"risultato", empty:"Nessuna libreria corrisponde a questa combinazione. Aumenta la distanza o rimuovi un filtro.", directions:"Indicazioni", website:"Sito", source:"Fonte", zone:"Zona", station:"Stazione", heritage:"Storia e carattere", stock:"Stock", verified:"Verificata", active:"filtri attivi", map:"Punto di ricerca"
+  loading:"Caricamento delle librerie…", finding:"Cerco la tua posizione…", locationError:"La posizione non è disponibile. Cerca una stazione, una strada o un luogo.", enter:"Inserisci una stazione, una strada o un luogo di Londra.", notFound:"Luogo non trovato.", near:"Vicino a", nearYou:"la tua posizione", allTitle:"Tutte le librerie selezionate", results:"risultati", result:"risultato", empty:"Nessuna libreria corrisponde a questa combinazione. Aumenta la distanza o rimuovi un filtro.", directions:"Indicazioni", website:"Sito", source:"Fonte", zone:"Zona", station:"Stazione", heritage:"Storia e carattere", stock:"Stock", verified:"Verificata", active:"filtri attivi", map:"Mappa", list:"Elenco", filters:"Filtri", apply:"Mostra risultati", close:"Chiudi filtri", filterTitle:"Scegli i filtri"
 } : {
-  loading:"Loading bookshops…", finding:"Finding your location…", locationError:"Location access was not available. Search for a station, street or landmark instead.", enter:"Enter a London station, street or landmark.", notFound:"Place not found.", near:"Near", nearYou:"your location", allTitle:"All researched bookshops", results:"results", result:"result", empty:"No bookshops match this combination. Increase the distance or remove a filter.", directions:"Directions", website:"Website", source:"Source", zone:"Zone", station:"Station", heritage:"Story & character", stock:"Stock", verified:"Verified", active:"active filters", map:"Search point"
+  loading:"Loading bookshops…", finding:"Finding your location…", locationError:"Location access was not available. Search for a station, street or landmark instead.", enter:"Enter a London station, street or landmark.", notFound:"Place not found.", near:"Near", nearYou:"your location", allTitle:"All researched bookshops", results:"results", result:"result", empty:"No bookshops match this combination. Increase the distance or remove a filter.", directions:"Directions", website:"Website", source:"Source", zone:"Zone", station:"Station", heritage:"Story & character", stock:"Stock", verified:"Verified", active:"active filters", map:"Map", list:"List", filters:"Filters", apply:"Show results", close:"Close filters", filterTitle:"Choose filters"
 };
 const $ = (selector) => document.querySelector(selector);
 const state = { shops:[], origin:null, label:"", radius:2000, type:"all", specialisms:new Set(), features:new Set(), map:null, markers:null, originLayer:null, radiusLayer:null };
@@ -15,6 +15,70 @@ function labelFor(group,value){return document.querySelector(`[data-filter-group
 function typeLabel(shop){return labelFor("type",shop.type)}
 function selectedMatch(values,selected){return !selected.size||values.some(value=>selected.has(value))}
 function activeCount(){return (state.type==="all"?0:1)+state.specialisms.size+state.features.size}
+function isMobile(){return window.matchMedia("(max-width: 680px)").matches}
+
+function setMobileView(view){
+  document.body.classList.toggle("mobile-list-view",view==="list");
+  document.body.classList.toggle("mobile-map-view",view==="map");
+  document.querySelectorAll("[data-mobile-view]").forEach(button=>{
+    const active=button.dataset.mobileView===view;
+    button.classList.toggle("active",active);
+    button.setAttribute("aria-pressed",String(active));
+  });
+  if(view==="map"&&state.map)setTimeout(()=>state.map.invalidateSize(),80);
+}
+
+function closeMobileFilters(){
+  $(".bookshop-controls")?.classList.remove("mobile-open");
+  $(".mobile-filter-backdrop")?.setAttribute("hidden","");
+  document.body.classList.remove("mobile-filters-open");
+  $(".mobile-filter-button")?.focus({preventScroll:true});
+}
+
+function openMobileFilters(){
+  $(".bookshop-controls")?.classList.add("mobile-open");
+  $(".mobile-filter-backdrop")?.removeAttribute("hidden");
+  document.body.classList.add("mobile-filters-open");
+  $(".mobile-filter-close")?.focus({preventScroll:true});
+}
+
+function updateMobileControls(resultCount){
+  const count=activeCount();
+  const badge=$(".mobile-filter-count");
+  if(badge){badge.textContent=String(count);badge.hidden=!count}
+  const apply=$(".mobile-filter-apply");
+  if(apply)apply.textContent=`${copy.apply} · ${resultCount}`;
+  const total=$(".mobile-result-total");
+  if(total)total.textContent=`${resultCount}`;
+}
+
+function initMobileUI(){
+  const workspace=$(".bookshop-workspace");
+  const controls=$(".bookshop-controls");
+  if(!workspace||!controls||$(".bookshop-mobile-toolbar"))return;
+  const toolbar=document.createElement("div");
+  toolbar.className="bookshop-mobile-toolbar";
+  toolbar.setAttribute("aria-label",IT?"Vista e filtri":"View and filters");
+  toolbar.innerHTML=`<button class="mobile-filter-button" type="button" aria-haspopup="dialog"><span aria-hidden="true">☷</span>${copy.filters}<b class="mobile-filter-count" hidden>0</b></button><div class="mobile-view-switch" role="group" aria-label="${IT?"Vista risultati":"Results view"}"><button type="button" class="active" data-mobile-view="map" aria-pressed="true"><span aria-hidden="true">⌖</span>${copy.map}</button><button type="button" data-mobile-view="list" aria-pressed="false"><span aria-hidden="true">≡</span>${copy.list} <b class="mobile-result-total">0</b></button></div>`;
+  workspace.before(toolbar);
+  const sheetHeader=document.createElement("div");
+  sheetHeader.className="mobile-filter-header";
+  sheetHeader.innerHTML=`<strong>${copy.filterTitle}</strong><button class="mobile-filter-close" type="button" aria-label="${copy.close}">×</button>`;
+  controls.prepend(sheetHeader);
+  const apply=document.createElement("button");
+  apply.className="mobile-filter-apply";apply.type="button";apply.textContent=copy.apply;
+  controls.append(apply);
+  const backdrop=document.createElement("button");
+  backdrop.className="mobile-filter-backdrop";backdrop.type="button";backdrop.hidden=true;backdrop.setAttribute("aria-label",copy.close);
+  document.body.append(backdrop);
+  toolbar.querySelector(".mobile-filter-button").addEventListener("click",openMobileFilters);
+  sheetHeader.querySelector("button").addEventListener("click",closeMobileFilters);
+  apply.addEventListener("click",()=>{closeMobileFilters();setMobileView("list")});
+  backdrop.addEventListener("click",closeMobileFilters);
+  toolbar.querySelectorAll("[data-mobile-view]").forEach(button=>button.addEventListener("click",()=>setMobileView(button.dataset.mobileView)));
+  document.addEventListener("keydown",event=>{if(event.key==="Escape"&&controls.classList.contains("mobile-open"))closeMobileFilters()});
+  document.body.classList.add("mobile-map-view");
+}
 
 function initMap(){
   state.map=L.map("bookshop-map",{preferCanvas:true,zoomControl:true}).setView([51.5074,-.1278],11);
@@ -55,6 +119,7 @@ function render(fit=false){
   $("#result-title").textContent=state.origin?`${copy.near} ${state.label}`:copy.allTitle;
   const countSuffix=activeCount()?` · ${activeCount()} ${copy.active}`:"";
   $("#result-count").textContent=`${shops.length} ${shops.length===1?copy.result:copy.results}${countSuffix}`;
+  updateMobileControls(shops.length);
   const list=$("#shop-results");
   if(!shops.length){list.innerHTML=`<div class="empty-state">${esc(copy.empty)}</div>`;return}
   list.innerHTML=shops.map(shop=>{
@@ -66,7 +131,7 @@ function render(fit=false){
     return `<details class="shop-card"><summary><div class="shop-summary"><p class="shop-org">${esc(typeLabel(shop))}</p><h3>${esc(shop.name)}</h3><p class="shop-branch">${esc(shop.branch)}${shop.station?` · ${copy.station}: ${esc(shop.station)}`:""}</p><div class="shop-tags">${tags}</div></div>${state.origin?`<span class="shop-distance">${formatDistance(shop.distance)}</span>`:""}</summary><div class="shop-details"><p>${esc(description)}</p>${heritage?`<p class="heritage-note"><span aria-hidden="true">✦</span><strong>${copy.heritage}:</strong> ${esc(heritage)}</p>`:""}<p><strong>${copy.stock}:</strong> ${esc((stock||[]).join(" · "))}</p><p class="shop-address">${esc(shop.address)}, ${esc(shop.postcode)} · ${copy.zone} ${esc(shop.zone)}</p><p class="verification-note">${copy.verified}: ${formatDate(shop.last_verified)}</p><div class="shop-links"><a href="https://www.google.com/maps/dir/?api=1&destination=${destination}" target="_blank" rel="noopener">⌖ ${copy.directions} ↗</a>${shop.website?`<a href="${esc(shop.website)}" target="_blank" rel="noopener">${copy.website} ↗</a>`:""}<a href="${esc(shop.source)}" target="_blank" rel="noopener">${copy.source} ↗</a></div></div></details>`;
   }).join("");
 }
-function setOrigin(origin,label){state.origin=origin;state.label=label;render();$("#bookshop-results").scrollIntoView({behavior:"smooth",block:"start"})}
+function setOrigin(origin,label){state.origin=origin;state.label=label;render();if(!isMobile())$("#bookshop-results").scrollIntoView({behavior:"smooth",block:"start"})}
 function reset(){
   state.type="all";state.specialisms.clear();state.features.clear();state.origin=null;state.label="";state.radius=2000;
   $("#radius").value="2000";$("#radius-output").textContent="2 km";
@@ -81,7 +146,7 @@ function bindFilters(){
 }
 function initAbout(){const panel=$("#bookshop-about-panel");document.querySelectorAll("[data-bookshop-about]").forEach(button=>button.addEventListener("click",()=>panel.showModal()));panel.querySelector(".panel-close").addEventListener("click",()=>panel.close());panel.addEventListener("click",event=>{const b=panel.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)panel.close()})}
 async function start(){
-  initMap();initAbout();bindFilters();
+  initMap();initAbout();bindFilters();initMobileUI();
   try{await load()}catch(error){$("#bookshop-status").textContent=error.message;return}
   $("#use-location").addEventListener("click",()=>{if(!navigator.geolocation){$("#bookshop-status").textContent=copy.locationError;return}$("#bookshop-status").textContent=copy.finding;navigator.geolocation.getCurrentPosition(position=>{$("#bookshop-status").textContent="";setOrigin({lat:position.coords.latitude,lon:position.coords.longitude},copy.nearYou)},()=>{$("#bookshop-status").textContent=copy.locationError},{enableHighAccuracy:true,timeout:10000,maximumAge:60000})});
   $("#bookshop-search").addEventListener("submit",async event=>{event.preventDefault();const q=$("#bookshop-where").value.trim();if(q.length<2){$("#bookshop-status").textContent=copy.enter;return}$("#bookshop-status").textContent=`${IT?"Cerco":"Finding"} ${q}…`;try{const response=await fetch(`/api/bookshop-geocode?q=${encodeURIComponent(q)}`,{headers:{Accept:"application/json"}});const payload=await response.json();if(!response.ok||!payload.ok)throw new Error(payload.message||copy.notFound);$("#bookshop-status").textContent="";setOrigin({lat:payload.lat,lon:payload.lon},payload.label)}catch(error){$("#bookshop-status").textContent=error.message||copy.notFound}});
