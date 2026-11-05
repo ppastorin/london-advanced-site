@@ -48,7 +48,8 @@ test("bookshop tool provides EN/IT routes, combinable filters, map and direction
     assert.match(html, /data-filter-group="feature"/);
     assert.match(html, /id="bookshop-map"/);
     assert.match(html, /bookshops\.js\?v=20261105-filter-footer-v1/);
-    assert.match(html, /bookshops-extra\.css\?v=20261105-mobile-polish-v1/);
+    assert.match(html, /bookshops-extra\.css\?v=20261105-mobile-layout-v2/);
+    assert.equal((html.match(/bookshops-extra\.css/g) || []).length, 1);
     assert.match(html, /class="about-panel bookshop-about-panel"/);
   }
   assert.match(english, /<html lang="en-GB">/);
@@ -95,8 +96,12 @@ test("bookshop filters use a compact responsive layout", async () => {
   assert.match(css, /mobile-filter-footer \{ position: relative;[\s\S]*flex: 0 0 auto/);
   assert.doesNotMatch(css, /mobile-filter-apply \{ position: fixed/);
   assert.doesNotMatch(css, /bookshop-mobile-toolbar \{ position: sticky/);
+  assert.match(css, /bookshop-search \{ position: relative; display: grid; grid-template-columns: minmax\(0,1fr\) 46px 46px/);
+  assert.match(css, /bookshop-search-row \{ display: contents; \}/);
+  assert.match(css, /location-button \{ position: relative;[\s\S]*grid-column: 2; grid-row: 1; width: 46px; min-height: 46px/);
   assert.match(css, /bookshop-search-row button::before \{ content: "";[\s\S]*border: 2px solid #fff/);
   assert.match(css, /location-button::before \{ content: "";[\s\S]*border: 2px solid #fff/);
+  assert.match(css, /bookshop-map-wrap \{ position: relative; top: auto; margin: 0/);
   assert.match(css, /mobile-map-view \.bookshop-results \{ display: none/);
   assert.match(css, /leaflet-control-zoom a[\s\S]*width: 44px/);
   assert.match(app, /function initMobileUI\(\)/);
