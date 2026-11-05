@@ -5,7 +5,9 @@
 .bookshop-mobile-toolbar,
 .mobile-filter-header,
 .mobile-filter-apply,
+.mobile-filter-footer,
 .mobile-filter-backdrop { display: none; }
+.mobile-filter-scroll { display: contents; }
 .bookshop-how li { display: flex; gap: 13px; align-items: flex-start; padding: 15px 17px; border: 1px solid rgba(35,73,61,.14); border-radius: 14px; background: #fff; }
 .bookshop-how li > span { display: grid; place-items: center; flex: 0 0 28px; height: 28px; border-radius: 50%; background: #31594c; color: #fff; font: 700 .78rem Manrope,sans-serif; }
 .bookshop-how strong { display: block; font: 700 .84rem Manrope,sans-serif; color: #18382f; }
@@ -85,14 +87,16 @@
   .mobile-view-switch span { margin-right: 4px; font-size: 15px; }
   .mobile-result-total { font: inherit; }
   .bookshop-workspace { padding-top: 0; border-top: 0; }
-  .bookshop-controls { position: fixed; z-index: 2500; right: 0; bottom: 0; left: 0; display: block; max-height: min(82vh,720px); margin: 0; padding: 0 14px calc(78px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; border-radius: 20px 20px 0 0; background: #f7f4ee; box-shadow: 0 -18px 60px rgba(9,25,20,.28); transform: translateY(105%); transition: transform .24s ease; }
+  .bookshop-controls { position: fixed; z-index: 2500; right: 0; bottom: 0; left: 0; display: flex; flex-direction: column; max-height: min(82vh,720px); margin: 0; padding: 0; overflow: hidden; overscroll-behavior: contain; border-radius: 20px 20px 0 0; background: #f7f4ee; box-shadow: 0 -18px 60px rgba(9,25,20,.28); transform: translateY(105%); transition: transform .24s ease; }
   .bookshop-controls.mobile-open { transform: translateY(0); }
-  .mobile-filter-header { position: sticky; z-index: 3; top: 0; display: flex; align-items: center; justify-content: space-between; min-height: 58px; margin: 0 -14px 8px; padding: 0 14px; border-bottom: 1px solid rgba(35,73,61,.12); background: rgba(247,244,238,.97); backdrop-filter: blur(10px); }
+  .mobile-filter-header { position: relative; z-index: 3; display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; min-height: 58px; margin: 0; padding: 0 14px; border-bottom: 1px solid rgba(35,73,61,.12); background: rgba(247,244,238,.97); backdrop-filter: blur(10px); }
   .mobile-filter-header strong { font: 750 16px Manrope,sans-serif; }
   .mobile-filter-close { width: 40px; height: 40px; border: 0; border-radius: 50%; background: #e7ebe8; color: #23483d; font-size: 25px; line-height: 1; }
   .mobile-filter-backdrop { position: fixed; z-index: 2400; inset: 0; display: block; width: 100%; height: 100%; padding: 0; border: 0; background: rgba(10,22,18,.46); }
   .mobile-filter-backdrop[hidden] { display: none; }
-  .mobile-filter-apply { position: fixed; z-index: 4; right: 14px; bottom: calc(12px + env(safe-area-inset-bottom)); left: 14px; display: block; min-height: 50px; border: 0; border-radius: 13px; background: #31594c; color: #fff; box-shadow: 0 7px 24px rgba(35,73,61,.28); font: 800 13px Manrope,sans-serif; }
+  .mobile-filter-scroll { display: block; flex: 1 1 auto; min-height: 0; padding: 10px 14px 2px; overflow-y: auto; overscroll-behavior: contain; }
+  .mobile-filter-footer { position: relative; z-index: 4; display: block; flex: 0 0 auto; padding: 10px 14px calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(35,73,61,.12); background: rgba(247,244,238,.98); box-shadow: 0 -8px 22px rgba(35,73,61,.08); }
+  .mobile-filter-apply { display: block; width: 100%; min-height: 50px; border: 0; border-radius: 13px; background: #31594c; color: #fff; box-shadow: 0 7px 24px rgba(35,73,61,.2); font: 800 13px Manrope,sans-serif; }
   .control-card { margin-bottom: 9px; padding: 12px; border-radius: 13px; background: #fff; }
   .control-card > span,
   .control-card legend { margin-bottom: 8px; }

@@ -65,10 +65,15 @@ function initMobileUI(){
   const sheetHeader=document.createElement("div");
   sheetHeader.className="mobile-filter-header";
   sheetHeader.innerHTML=`<strong>${copy.filterTitle}</strong><button class="mobile-filter-close" type="button" aria-label="${copy.close}">×</button>`;
-  controls.prepend(sheetHeader);
+  const filterScroll=document.createElement("div");
+  filterScroll.className="mobile-filter-scroll";
+  while(controls.firstChild)filterScroll.append(controls.firstChild);
+  controls.append(sheetHeader,filterScroll);
+  const footer=document.createElement("div");
+  footer.className="mobile-filter-footer";
   const apply=document.createElement("button");
   apply.className="mobile-filter-apply";apply.type="button";apply.textContent=copy.apply;
-  controls.append(apply);
+  footer.append(apply);controls.append(footer);
   const backdrop=document.createElement("button");
   backdrop.className="mobile-filter-backdrop";backdrop.type="button";backdrop.hidden=true;backdrop.setAttribute("aria-label",copy.close);
   document.body.append(backdrop);
