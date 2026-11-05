@@ -1,7 +1,7 @@
 {
   "post_id": "2026-11-05-weekend-events-reel",
   "internal_title": "Tre idee per il weekend · 6–8 novembre",
-  "editorial_status": "approved",
+  "editorial_status": "scheduled",
   "language_mode": "italian-plus-english-summary",
   "caption_it": "Tre giorni, tre storie londinesi che meritano più attenzione. Venerdì al National Army Museum: il ruolo poco raccontato delle donne indiane nella Seconda guerra mondiale. Sabato il National Maritime Museum diventa un festival gratuito per Diwali, fra danza, laboratori e parata di lanterne. Domenica il cimitero ebraico di Willesden ricostruisce vite locali, cappellani e collegamenti con Bletchley Park. Orari e prenotazioni nel Reel: salvatelo e condividetelo con chi cerca una Londra meno ovvia.",
   "caption_en": "Three less-obvious London events for 6–8 November, from overlooked wartime histories to Diwali in Greenwich and local Jewish heritage in Willesden.",
@@ -44,11 +44,11 @@
     "checked_at": "2026-11-05"
   },
   "metricool": {
-    "planner_id": "",
-    "scheduled_at": "",
+    "planner_id": "417723425",
+    "scheduled_at": "2026-11-05T13:16:00+00:00",
     "published_url": "",
-    "last_sync_at": "",
-    "sync_note": "Pending protected repository merge and Metricool scheduling. November capacity checked: 12 existing publications before this Reel."
+    "last_sync_at": "2026-11-05T13:16:00+00:00",
+    "sync_note": "Scheduled through connected Metricool brand 5985082 for 5 November 2026 at 18:30 Europe/London. UUID -1015852138550506750. Auto-publish and Show Reel on Feed enabled; isAiGenerated false. November publication count after scheduling: 13."
   },
   "notes": "Three deterministic 1080×1920 cards and a silent 15-second H.264 Reel. No organiser photography. Official sources rechecked on 5 November 2026; National Army Museum booking required, National Maritime Museum free with booking recommended, Willesden Jewish Cemetery booking essential."
 }
