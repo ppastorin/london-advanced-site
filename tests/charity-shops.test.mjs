@@ -6,17 +6,19 @@ const root = new URL("../", import.meta.url);
 
 test("charity shop inventory is complete and usable", async () => {
   const data = JSON.parse(await readFile(new URL("dist/data/charity-shops.json", root), "utf8"));
-  assert.equal(data.count, 301);
-  assert.equal(data.shops.length, 301);
-  assert.equal(new Set(data.shops.map(shop => shop.id)).size, 301);
-  assert.equal(new Set(data.shops.map(shop => shop.place_id)).size, 301);
-  assert.equal(new Set(data.shops.map(shop => shop.organization)).size, 14);
+  assert.equal(data.count, 308);
+  assert.equal(data.shops.length, 308);
+  assert.equal(new Set(data.shops.map(shop => shop.id)).size, 308);
+  assert.equal(new Set(data.shops.map(shop => shop.place_id)).size, 308);
+  assert.equal(new Set(data.shops.map(shop => shop.organization)).size, 15);
   assert.ok(data.shops.every(shop => Number.isFinite(shop.lat) && Number.isFinite(shop.lon)));
   assert.ok(data.shops.every(shop => /^(?:1|1\/2|2|2\/3|3|3\/4|4)$/.test(String(shop.tfl_zone))));
   assert.ok(data.shops.every(shop => shop.description_en && shop.description_it && shop.source_url));
   assert.ok(data.shops.some(shop => shop.subtype === "books_music"));
   assert.equal(data.shops.filter(shop => shop.organization === "Cancer Research UK").length, 39);
   assert.equal(data.shops.filter(shop => shop.organization === "British Red Cross").length, 14);
+  assert.equal(data.shops.filter(shop => shop.organization === "Princess Alice Hospice").length, 7);
+  assert.ok(data.shops.some(shop => shop.id === "princess-alice-hospice-west-ealing-alices-attic" && shop.subtype === "furniture_electrical"));
   assert.ok(data.shops.some(shop => shop.id === "british-red-cross-palmers-green-bookshop" && shop.subtype === "books_music"));
   assert.ok(data.shops.some(shop => shop.id === "british-red-cross-fulham-furniture-and-electrical" && shop.subtype === "furniture_electrical"));
   for (const id of ["oxfam-ealing-bookshop", "oxfam-muswell-hill-bookshop", "oxfam-kentish-town-books-music"]) {
@@ -38,7 +40,9 @@ test("charity shop tool exposes mobile filters, map, EN/IT routes and methodolog
     assert.match(html, /id="radius"[^>]*max="1000"/);
     assert.match(html, /id="charity-options"/);
     assert.match(html, /id="charity-map"/);
-    assert.match(html, /charity-shops\.js\?v=20261030-dynamic-filters/);
+    assert.match(html, /charity-shops\.js\?v=20261105-princess-alice/);
+    assert.match(html, /308 (?:shops|negozi)/);
+    assert.match(html, /15 (?:charity organisations|organizzazioni)/);
     assert.match(html, /class="about-panel charity-about-panel"/);
     const hero = html.match(/<section class="charity-hero">([\s\S]*?)<\/section>/)?.[1] || "";
     assert.doesNotMatch(hero, /data-charity-about/);
