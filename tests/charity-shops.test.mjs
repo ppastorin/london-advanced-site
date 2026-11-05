@@ -43,6 +43,7 @@ test("charity shop tool exposes mobile filters, map, EN/IT routes and methodolog
     assert.match(html, /charity-shops\.js\?v=20261105-princess-alice/);
     assert.match(html, /308 (?:shops|negozi)/);
     assert.match(html, /15 (?:charity organisations|organizzazioni)/);
+    assert.match(html, /class="charity-intro"[^>]*>[^<]*308/);
     assert.match(html, /class="about-panel charity-about-panel"/);
     const hero = html.match(/<section class="charity-hero">([\s\S]*?)<\/section>/)?.[1] || "";
     assert.doesNotMatch(hero, /data-charity-about/);
