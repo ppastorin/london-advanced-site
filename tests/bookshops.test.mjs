@@ -47,7 +47,7 @@ test("bookshop tool provides EN/IT routes, combinable filters, map and direction
     assert.match(html, /data-filter-group="specialism"/);
     assert.match(html, /data-filter-group="feature"/);
     assert.match(html, /id="bookshop-map"/);
-    assert.match(html, /bookshops\.js\?v=20261105-classification-v2/);
+    assert.match(html, /bookshops\.js\?v=20261105-filter-footer-v1/);
     assert.match(html, /class="about-panel bookshop-about-panel"/);
   }
   assert.match(english, /<html lang="en-GB">/);
@@ -88,10 +88,15 @@ test("bookshop filters use a compact responsive layout", async () => {
   assert.match(css, /@media \(max-width: 900px\)[\s\S]*grid-template-columns: 1fr/);
   assert.match(css, /max-height: none; overflow: visible/);
   assert.match(css, /@media \(max-width: 680px\)[\s\S]*bookshop-controls \{ position: fixed/);
+  assert.match(css, /mobile-filter-scroll \{ display: block; flex: 1 1 auto; min-height: 0;[\s\S]*overflow-y: auto/);
+  assert.match(css, /mobile-filter-footer \{ position: relative;[\s\S]*flex: 0 0 auto/);
+  assert.doesNotMatch(css, /mobile-filter-apply \{ position: fixed/);
   assert.match(css, /mobile-map-view \.bookshop-results \{ display: none/);
   assert.match(css, /leaflet-control-zoom a[\s\S]*width: 44px/);
   assert.match(app, /function initMobileUI\(\)/);
   assert.match(app, /data-mobile-view="map"/);
   assert.match(app, /mobile-filter-apply/);
+  assert.match(app, /while\(controls\.firstChild\)filterScroll\.append\(controls\.firstChild\)/);
+  assert.match(app, /footer\.append\(apply\);controls\.append\(footer\)/);
   assert.match(app, /if\(!isMobile\(\)\).*scrollIntoView/);
 });
