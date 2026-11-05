@@ -41,7 +41,7 @@ test("bookshop tool provides EN/IT routes, combinable filters, map and direction
     assert.match(html, /data-filter-group="specialism"/);
     assert.match(html, /data-filter-group="feature"/);
     assert.match(html, /id="bookshop-map"/);
-    assert.match(html, /bookshops\.js\?v=20261104-v1/);
+    assert.match(html, /bookshops\.js\?v=20261105-mobile-v1/);
     assert.match(html, /class="about-panel bookshop-about-panel"/);
   }
   assert.match(english, /<html lang="en-GB">/);
@@ -72,9 +72,19 @@ test("bookshop and charity endpoints use canonical D1 with static fail-safe expo
 });
 
 test("bookshop filters use a compact responsive layout", async () => {
-  const css = await readFile(new URL("dist/bookshops/bookshops-extra.css", root), "utf8");
+  const [css, app] = await Promise.all([
+    readFile(new URL("dist/bookshops/bookshops-extra.css", root), "utf8"),
+    readFile(new URL("dist/bookshops/bookshops.js", root), "utf8")
+  ]);
   assert.match(css, /grid-template-columns: minmax\(250px, \.62fr\) minmax\(0, 1\.38fr\)/);
   assert.match(css, /fieldset:nth-of-type\(2\),[\s\S]*fieldset:nth-of-type\(3\),[\s\S]*reset-filters \{ grid-column: 1 \/ -1; \}/);
   assert.match(css, /@media \(max-width: 900px\)[\s\S]*grid-template-columns: 1fr/);
   assert.match(css, /max-height: none; overflow: visible/);
+  assert.match(css, /@media \(max-width: 680px\)[\s\S]*bookshop-controls \{ position: fixed/);
+  assert.match(css, /mobile-map-view \.bookshop-results \{ display: none/);
+  assert.match(css, /leaflet-control-zoom a[\s\S]*width: 44px/);
+  assert.match(app, /function initMobileUI\(\)/);
+  assert.match(app, /data-mobile-view="map"/);
+  assert.match(app, /mobile-filter-apply/);
+  assert.match(app, /if\(!isMobile\(\)\).*scrollIntoView/);
 });
