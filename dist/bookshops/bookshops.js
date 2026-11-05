@@ -12,7 +12,8 @@ function distance(a,b){const r=6371e3,p1=a.lat*Math.PI/180,p2=b.lat*Math.PI/180,
 function formatDistance(m){return m<1000?`${Math.round(m/10)*10} m`:`${(m/1000).toFixed(1)} km`}
 function formatDate(value){try{return new Intl.DateTimeFormat(IT?"it-IT":"en-GB",{day:"numeric",month:"short",year:"numeric"}).format(new Date(`${value}T12:00:00Z`))}catch{return value}}
 function labelFor(group,value){return document.querySelector(`[data-filter-group="${group}"][data-value="${CSS.escape(value)}"]`)?.textContent.trim()||value}
-function typeLabel(shop){return labelFor("type",shop.type)}
+function typeValues(shop){return Array.isArray(shop.type_tags)&&shop.type_tags.length?shop.type_tags:[shop.type]}
+function typeLabel(shop){return typeValues(shop).map(value=>labelFor("type",value)).join(" · ")}
 function selectedMatch(values,selected){return !selected.size||values.some(value=>selected.has(value))}
 function activeCount(){return (state.type==="all"?0:1)+state.specialisms.size+state.features.size}
 function isMobile(){return window.matchMedia("(max-width: 680px)").matches}
@@ -92,12 +93,12 @@ function marker(shop){
 }
 async function load(){
   $("#bookshop-status").textContent=copy.loading;
-  const response=await fetch("/api/bookshops?v=20261104-v1",{headers:{Accept:"application/json"}});
+  const response=await fetch("/api/bookshops?v=20261105-overlapping-types-v1",{headers:{Accept:"application/json"}});
   if(!response.ok)throw new Error(IT?"Impossibile caricare i dati.":"Could not load bookshop data.");
   const payload=await response.json();state.shops=payload.shops||[];$("#bookshop-status").textContent="";render(true);
 }
 function filtered(){
-  let shops=state.shops.filter(shop=>(state.type==="all"||shop.type===state.type)&&selectedMatch(shop.specialism_tags||[],state.specialisms)&&selectedMatch(shop.feature_tags||[],state.features));
+  let shops=state.shops.filter(shop=>(state.type==="all"||typeValues(shop).includes(state.type))&&selectedMatch(shop.specialism_tags||[],state.specialisms)&&selectedMatch(shop.feature_tags||[],state.features));
   if(state.origin)shops=shops.map(shop=>({...shop,distance:distance(state.origin,shop)})).filter(shop=>shop.distance<=state.radius).sort((a,b)=>a.distance-b.distance||a.name.localeCompare(b.name));
   else shops.sort((a,b)=>a.name.localeCompare(b.name));
   return shops;

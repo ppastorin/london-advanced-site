@@ -17,6 +17,12 @@ test("bookshop inventory is classified, bilingual and geographically usable", as
   assert.ok(new Set(data.shops.map(shop => shop.type)).size >= 6);
   assert.ok(data.shops.some(shop => shop.type === "second-hand"));
   assert.ok(data.shops.some(shop => shop.type === "rare-antiquarian"));
+  assert.ok(data.shops.every(shop => Array.isArray(shop.type_tags) && shop.type_tags.includes(shop.type)));
+  assert.equal(data.shops.filter(shop => shop.type_tags.includes("second-hand")).length, 46);
+  for (const name of ["Any Amount of Books", "Henry Pordes Books"]) {
+    const shop = data.shops.find(item => item.name === name);
+    assert.deepEqual(shop.type_tags, ["rare-antiquarian", "second-hand"]);
+  }
   assert.ok(data.shops.some(shop => shop.feature_tags.includes("cafe-food")));
   assert.ok(data.shops.some(shop => shop.feature_tags.includes("heritage-story")));
   assert.equal(data.shops.filter(shop => shop.ownership === "Oxfam").length, 16);
@@ -41,7 +47,7 @@ test("bookshop tool provides EN/IT routes, combinable filters, map and direction
     assert.match(html, /data-filter-group="specialism"/);
     assert.match(html, /data-filter-group="feature"/);
     assert.match(html, /id="bookshop-map"/);
-    assert.match(html, /bookshops\.js\?v=20261105-mobile-v1/);
+    assert.match(html, /bookshops\.js\?v=20261105-classification-v2/);
     assert.match(html, /class="about-panel bookshop-about-panel"/);
   }
   assert.match(english, /<html lang="en-GB">/);
@@ -53,6 +59,7 @@ test("bookshop tool provides EN/IT routes, combinable filters, map and direction
   assert.match(app, /google\.com\/maps\/dir/);
   assert.match(app, /state\.specialisms/);
   assert.match(app, /state\.features/);
+  assert.match(app, /typeValues\(shop\)\.includes\(state\.type\)/);
 });
 
 test("Cloudflare routes bookshop API requests through the Worker", async () => {
