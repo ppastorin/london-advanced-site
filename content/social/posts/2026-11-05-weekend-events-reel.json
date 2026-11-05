@@ -1,0 +1,54 @@
+{
+  "post_id": "2026-11-05-weekend-events-reel",
+  "internal_title": "Tre idee per il weekend · 6–8 novembre",
+  "editorial_status": "approved",
+  "language_mode": "italian-plus-english-summary",
+  "caption_it": "Tre giorni, tre storie londinesi che meritano più attenzione. Venerdì al National Army Museum: il ruolo poco raccontato delle donne indiane nella Seconda guerra mondiale. Sabato il National Maritime Museum diventa un festival gratuito per Diwali, fra danza, laboratori e parata di lanterne. Domenica il cimitero ebraico di Willesden ricostruisce vite locali, cappellani e collegamenti con Bletchley Park. Orari e prenotazioni nel Reel: salvatelo e condividetelo con chi cerca una Londra meno ovvia.",
+  "caption_en": "Three less-obvious London events for 6–8 November, from overlooked wartime histories to Diwali in Greenwich and local Jewish heritage in Willesden.",
+  "hashtags": [
+    "#LondonAdvanced",
+    "#LondonWeekend",
+    "#HiddenLondon",
+    "#FreeLondon",
+    "#LondraInsolita"
+  ],
+  "post_format": "reel",
+  "scheduled_for": "2026-11-05T18:30:00+00:00",
+  "location": "London, United Kingdom",
+  "media_folder": "assets/social/weekend-2026-11-06",
+  "overlay": {
+    "enabled": true,
+    "kicker": "LONDON ADVANCED · QUESTO WEEKEND",
+    "headline": "3 GIORNI. 3 STORIE. ZERO OVVIETÀ.",
+    "position": "safe-zone",
+    "rendered_src": "/assets/social/weekend-2026-11-06/weekend-events-2026-11-06.mp4"
+  },
+  "images": [
+    {
+      "order": 1,
+      "src": "/assets/social/weekend-2026-11-06/weekend-events-2026-11-06.mp4",
+      "alt": "Reel verticale con tre schede in italiano. Venerdì: incontro gratuito al National Army Museum sul ruolo delle donne indiane nella Seconda guerra mondiale. Sabato: festival gratuito di Diwali al National Maritime Museum di Greenwich. Domenica: incontro sulla Willesden ebraica durante le guerre al Willesden Jewish Cemetery. Chiusura con invito a salvare e condividere il Reel.",
+      "focal_x": 50,
+      "focal_y": 50
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Paolo Pastorino",
+    "approved_at": "2026-11-05T13:12:00+00:00"
+  },
+  "source": {
+    "type": "weekend-events",
+    "reference": "events-digest-2026-11-02",
+    "url": "https://www.londonadvanced.com/events/",
+    "checked_at": "2026-11-05"
+  },
+  "metricool": {
+    "planner_id": "",
+    "scheduled_at": "",
+    "published_url": "",
+    "last_sync_at": "",
+    "sync_note": "Pending protected repository merge and Metricool scheduling. November capacity checked: 12 existing publications before this Reel."
+  },
+  "notes": "Three deterministic 1080×1920 cards and a silent 15-second H.264 Reel. No organiser photography. Official sources rechecked on 5 November 2026; National Army Museum booking required, National Maritime Museum free with booking recommended, Willesden Jewish Cemetery booking essential."
+}
