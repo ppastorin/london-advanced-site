@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-11-02T15:19:05+00:00",
-  "valid_from": "2026-11-02",
+  "generated_at": "2026-11-05T15:33:40+00:00",
+  "valid_from": "2026-11-05",
   "valid_until": "2026-11-08",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
@@ -11,6 +11,56 @@
     "poetry-of-decadence-keats-house"
   ],
   "events": [
+    {
+      "id": "arcadia-john-akomfrah-opening-day",
+      "title_en": "Arcadia by John Akomfrah",
+      "title_it": "Arcadia di John Akomfrah",
+      "summary_en": "On its London opening day, John Akomfrah’s five-screen film at the Natural History Museum traces how migration, colonialism, trade and disease reshaped people and planet.",
+      "summary_it": "Nel giorno dell’apertura londinese, il film su cinque schermi di John Akomfrah al Natural History Museum racconta come migrazioni, colonialismo, scambi e malattie abbiano trasformato persone e pianeta.",
+      "start": "2026-11-06T10:00:00+00:00",
+      "end": "2026-11-06T17:50:00+00:00",
+      "venue": {
+        "name": "Natural History Museum, Jerwood Gallery",
+        "address": "Cromwell Road, South Kensington, London",
+        "postcode": "SW7 5BD",
+        "borough": "Kensington and Chelsea"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 8,
+        "reason": "A free London debut places Akomfrah’s immersive migration and empire story inside a scientific collection, with five-screen presentation on opening day.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.nhm.ac.uk/visit/exhibitions/arcadia.html",
+      "verification": {
+        "verified_at": "2026-11-05T15:33:40+00:00",
+        "confidence": "high",
+        "source_url": "https://www.nhm.ac.uk/visit/exhibitions/arcadia.html"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-05T15:33:40+00:00",
+      "expire_at": "2026-11-06T18:05:00+00:00",
+      "duplicate_key": "arcadia-akomfrah-natural-history-museum-2026-11-06"
+    },
     {
       "id": "indian-women-second-world-war-talk",
       "title_en": "Women’s War Work: Indian Women and the Second World War",
@@ -52,12 +102,12 @@
       ],
       "official_url": "https://www.nam.ac.uk/whats-on/womens-war-work-indian-women-and-second-world-war",
       "verification": {
-        "verified_at": "2026-11-02T15:19:05+00:00",
+        "verified_at": "2026-11-05T15:33:40+00:00",
         "confidence": "high",
         "source_url": "https://www.nam.ac.uk/whats-on/womens-war-work-indian-women-and-second-world-war"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-02T15:19:05+00:00",
+      "publish_at": "2026-11-05T15:33:40+00:00",
       "expire_at": "2026-11-06T13:15:00+00:00",
       "duplicate_key": "indian-women-war-national-army-museum-2026-11-06"
     },
@@ -98,16 +148,17 @@
         }
       },
       "newsletter_sources": [
-        "Londonist"
+        "Londonist",
+        "Londonfy"
       ],
       "official_url": "https://www.rmg.co.uk/whats-on/national-maritime-museum/diwali",
       "verification": {
-        "verified_at": "2026-11-02T15:19:05+00:00",
+        "verified_at": "2026-11-05T15:33:40+00:00",
         "confidence": "high",
         "source_url": "https://www.rmg.co.uk/whats-on/national-maritime-museum/diwali"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-02T15:19:05+00:00",
+      "publish_at": "2026-11-05T15:33:40+00:00",
       "expire_at": "2026-11-07T17:15:00+00:00",
       "duplicate_key": "diwali-national-maritime-museum-2026-11-07"
     },
@@ -152,12 +203,12 @@
       ],
       "official_url": "https://www.whitechapelgallery.org/exhibitions/this-must-be-the-place-artists-for-whitechapel-gallery/",
       "verification": {
-        "verified_at": "2026-11-02T15:19:05+00:00",
+        "verified_at": "2026-11-05T15:33:40+00:00",
         "confidence": "high",
         "source_url": "https://www.whitechapelgallery.org/exhibitions/this-must-be-the-place-artists-for-whitechapel-gallery/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-02T15:19:05+00:00",
+      "publish_at": "2026-11-05T15:33:40+00:00",
       "expire_at": "2026-11-08T18:15:00+00:00",
       "duplicate_key": "this-must-be-place-whitechapel-final-2026-11-08"
     },
@@ -202,12 +253,12 @@
       ],
       "official_url": "https://www.willesdenjewishcemetery.org.uk/events/talk-remembering-wartime-willesden",
       "verification": {
-        "verified_at": "2026-11-02T15:19:05+00:00",
+        "verified_at": "2026-11-05T15:33:40+00:00",
         "confidence": "high",
         "source_url": "https://www.willesdenjewishcemetery.org.uk/events/talk-remembering-wartime-willesden"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-02T15:19:05+00:00",
+      "publish_at": "2026-11-05T15:33:40+00:00",
       "expire_at": "2026-11-08T16:45:00+00:00",
       "duplicate_key": "wartime-willesden-jewish-cemetery-2026-11-08"
     },
@@ -252,64 +303,14 @@
       ],
       "official_url": "https://www.eventbrite.co.uk/e/afternoon-poems-the-poetry-of-decadence-tickets-2002382645395",
       "verification": {
-        "verified_at": "2026-11-02T15:19:05+00:00",
+        "verified_at": "2026-11-05T15:33:40+00:00",
         "confidence": "high",
         "source_url": "https://www.eventbrite.co.uk/e/afternoon-poems-the-poetry-of-decadence-tickets-2002382645395"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-02T15:19:05+00:00",
+      "publish_at": "2026-11-05T15:33:40+00:00",
       "expire_at": "2026-11-08T15:30:00+00:00",
       "duplicate_key": "poetry-decadence-keats-house-2026-11-08"
-    },
-    {
-      "id": "black-people-alternative-music-history",
-      "title_en": "A History of Black People and Alternative Music",
-      "title_it": "Storia delle persone nere nella musica alternativa",
-      "summary_en": "Big Joanie founder Stephanie Phillips restores Black artists to the history of punk, rock and alternative music, from Sister Rosetta Tharpe to Poly Styrene and today’s experimental scene.",
-      "summary_it": "Stephanie Phillips, fondatrice delle Big Joanie, restituisce agli artisti neri il loro posto nella storia di punk, rock e musica alternativa, da Sister Rosetta Tharpe a Poly Styrene.",
-      "start": "2026-11-08T15:00:00+00:00",
-      "end": "2026-11-08T16:30:00+00:00",
-      "venue": {
-        "name": "Conway Hall, Brockway Room",
-        "address": "25 Red Lion Square, London",
-        "postcode": "WC1R 4RL",
-        "borough": "Camden"
-      },
-      "price": {
-        "amount_gbp": 12,
-        "display": "£12 standard incl. levy",
-        "classification": "exceptional"
-      },
-      "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://conwayhall.ticketsolve.com/ticketbooth/shows/1173675237"
-      },
-      "category": "local-culture",
-      "advanced": {
-        "score": 8,
-        "reason": "A distinctive one-off at an independent ethical venue rewrites familiar British music history through overlooked Black artists and scenes.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 1,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 1
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.conwayhall.org.uk/whats-on/event/a-history-of-black-people-and-alternative-music/",
-      "verification": {
-        "verified_at": "2026-11-02T15:19:05+00:00",
-        "confidence": "high",
-        "source_url": "https://www.conwayhall.org.uk/whats-on/event/a-history-of-black-people-and-alternative-music/"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-11-02T15:19:05+00:00",
-      "expire_at": "2026-11-08T16:45:00+00:00",
-      "duplicate_key": "black-alternative-music-conway-hall-2026-11-08"
     }
   ]
 }
