@@ -669,8 +669,8 @@ const italianAboutHtml = requireFile("dist/it/chi-sono/index.html");
 if (!aboutHtml.includes("website’s eight free tools") || !aboutHtml.includes("Eight practical ways to plan") || !aboutHtml.includes("8 free tools")) {
   fail("The English About page must describe all eight tools.");
 }
-if (!italianAboutHtml.includes("otto strumenti gratuiti") || !italianAboutHtml.includes('href="/it/strumenti/trova-un-bagno/"') || !italianAboutHtml.includes('href="/it/strumenti/negozi-di-beneficenza/"') || !italianAboutHtml.includes('href="/it/strumenti/librerie/"')) {
-  fail("The Italian About page must describe and link all eight tools.");
+if (!italianAboutHtml.includes("nove strumenti gratuiti") || !italianAboutHtml.includes('href="/it/strumenti/trova-un-bagno/"') || !italianAboutHtml.includes('href="/it/strumenti/negozi-di-beneficenza/"') || !italianAboutHtml.includes('href="/it/strumenti/librerie/"') || !italianAboutHtml.includes('href="/meteo-dress/"')) {
+  fail("The Italian About page must describe and link all nine tools.");
 }
 if (/five free tools|Five practical ways|5 free tools/i.test(aboutHtml) || /I cinque strumenti gratuiti/i.test(italianAboutHtml)) {
   fail("The About pages still contain the retired five-tool wording.");
