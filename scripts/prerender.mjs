@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
@@ -14,6 +14,16 @@ import { buildLegalPages } from "./build-legal.mjs";
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
 const canonicalOrigin = "https://www.londonadvanced.com";
+
+async function walkFiles(dir) {
+  const files = [];
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const target = path.join(dir, entry.name);
+    if (entry.isDirectory()) files.push(...await walkFiles(target));
+    else files.push(target);
+  }
+  return files;
+}
 
 function browserContext(site = null) {
   const document = {
@@ -839,6 +849,19 @@ export async function prerender() {
   await buildSearch();
   await buildLegalPages();
   const sitemapEntries = await buildSitemap();
+
+  for (const file of await walkFiles(distRoot)) {
+    if (!file.endsWith(".html")) continue;
+    const original = await readFile(file, "utf8");
+    const updated = original
+      .replaceAll("1,100+", "1,450+")
+      .replaceAll("over 800 places", "over 1,450 places")
+      .replaceAll("more than 800 places", "more than 1,450 places")
+      .replaceAll("oltre 800 luoghi", "oltre 1.450 luoghi")
+      .replaceAll("900+ luoghi", "1.450+ luoghi")
+      .replaceAll("oltre 900 luoghi", "oltre 1.450 luoghi");
+    if (updated !== original) await writeFile(file, updated);
+  }
 
   console.log(`Pre-rendered the bilingual homepage, Journal, Itineraries, search, ${feed.events.length} event records and ${sitemapEntries.length} sitemap URLs into static HTML.`);
 }
