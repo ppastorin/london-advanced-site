@@ -16,6 +16,7 @@ on:
       - "studio/**"
       - "journal.css"
       - "journal.js"
+      - "styles.css"
       - ".github/workflows/site-checks.yml"
       - ".github/workflows/auto-merge-studio-media.yml"
   push:
@@ -35,6 +36,7 @@ on:
       - "studio/**"
       - "journal.css"
       - "journal.js"
+      - "styles.css"
       - ".github/workflows/site-checks.yml"
       - ".github/workflows/auto-merge-studio-media.yml"
   workflow_dispatch:
