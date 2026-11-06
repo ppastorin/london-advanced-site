@@ -344,7 +344,7 @@ function render() {
 
     <section class="hero">
       <div class="hero-intro">
-        <span class="eyebrow">Guida indipendente di Londra · 7 strumenti gratuiti</span>
+        <span class="eyebrow">Guida indipendente di Londra · 9 strumenti gratuiti</span>
         <h1>La città oltre<br><em>l’ovvio.</em></h1>
         <p>Trova luoghi insoliti, organizza spostamenti più intelligenti e scopri l’atmosfera di Londra prima di partire.</p>
         <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Esplora gli strumenti</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Scopri la guida →</a></div>
@@ -368,7 +368,7 @@ function render() {
     </section>
 
     <section id="tools" class="tools section-wrap">
-      <div class="section-heading tool-heading"><div><span>01 / Londra pratica</span><h2>Scegli ciò che ti serve adesso.</h2></div><p>Sette strumenti mirati. Nessun account, nessuna app da scaricare e nessun consiglio generico.</p></div>
+      <div class="section-heading tool-heading"><div><span>01 / Londra pratica</span><h2>Scegli ciò che ti serve adesso.</h2></div><p>Nove strumenti mirati. Nessun account, nessuna app da scaricare e nessun consiglio generico.</p></div>
       <div class="app-grid">${appCards()}</div>
     </section>
 
