@@ -41,7 +41,9 @@ test("charity shop tool exposes mobile filters, map, EN/IT routes and methodolog
     assert.match(html, /id="radius"[^>]*max="1000"/);
     assert.match(html, /id="charity-options"/);
     assert.match(html, /id="charity-map"/);
-    assert.match(html, /charity-shops\.js\?v=20261106-cruk-audit/);
+    assert.match(html, /charity-shops\.js\?v=20261106-mobile-v1/);
+    assert.match(html, /charity-shops-mobile\.css\?v=20261106-mobile-v1/);
+    assert.equal((html.match(/charity-shops-mobile\.css/g) || []).length, 1);
     assert.match(html, /316 (?:shops|negozi)/);
     assert.match(html, /15 (?:charity organisations|organizzazioni)/);
     assert.match(html, /class="charity-intro"[^>]*>[^<]*316/);
@@ -55,11 +57,28 @@ test("charity shop tool exposes mobile filters, map, EN/IT routes and methodolog
   assert.match(app, /\/api\/charity-geocode/);
   assert.match(app, /markerClusterGroup/);
   assert.match(app, /navigator\.geolocation/);
+  assert.match(app, /function initMobileUI/);
+  assert.match(app, /data-mobile-view="map"/);
+  assert.match(app, /className="mobile-filter-scroll"/);
+  assert.match(app, /className="mobile-filter-footer"/);
   assert.doesNotMatch(app, /function filtered\(\)\{\s*if\(!state\.origin\)return\[\]/);
-  const renderSource = app.match(/function render\(\)\{([\s\S]*?)\n\}/)?.[1] || "";
+  const renderSource = app.match(/function render\(fit=false\)\{([\s\S]*?)\n\}/)?.[1] || "";
   assert.ok(
     renderSource.indexOf("state.markers.clearLayers()") < renderSource.indexOf("if(!state.origin)"),
     "filters must redraw the map before location-dependent results are handled"
   );
   assert.match(app, /state\.radius=Number\(event\.target\.value\);render\(\)/);
+});
+
+test("charity shop mobile layout keeps controls clear of the map and filter options", async () => {
+  const css = await readFile(new URL("dist/charity-shops/charity-shops-mobile.css", root), "utf8");
+  assert.match(css, /@media\(max-width:680px\)/);
+  assert.match(css, /grid-template-columns:minmax\(0,1fr\) 46px 46px/);
+  assert.match(css, /\.charity-map-wrap\{position:relative;top:auto;margin:0/);
+  assert.match(css, /\.mobile-filter-scroll\{display:block;flex:1 1 auto;min-height:0/);
+  assert.match(css, /\.mobile-filter-footer\{position:relative/);
+  assert.doesNotMatch(css, /\.mobile-filter-footer\{position:fixed/);
+  assert.match(css, /\.mobile-map-view \.charity-results\{display:none\}/);
+  assert.match(css, /\.mobile-list-view \.charity-map-wrap\{display:none\}/);
+  assert.match(css, /touch-action:pan-x pan-y/);
 });

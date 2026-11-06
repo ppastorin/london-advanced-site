@@ -110,6 +110,7 @@ const requiredAssets = [
   "dist/apps/fare-calculator/fare-calculator.css",
   "dist/charity-shops/index.html",
   "dist/charity-shops/charity-shops.css",
+  "dist/charity-shops/charity-shops-mobile.css",
   "dist/charity-shops/charity-shops.js",
   "dist/it/charity-shops/index.html",
   "dist/it/strumenti/negozi-di-beneficenza/index.html",
