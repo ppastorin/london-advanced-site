@@ -61,7 +61,7 @@ function render() {
         <p>Find unusual places and things to do in London, make smarter journeys and see what the city feels like before you set out.</p>
         <div class="hero-actions"><a class="button primary" href="#tools">Explore the tools</a><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Find unusual things to do →</a></div>
       </div>
-      <figure class="map-window"><img src="assets/london-map.jpg" alt="Map of London showing places included in London Advanced"><figcaption><b>1,100+</b> places beyond the standard lists</figcaption></figure>
+      <figure class="map-window"><img src="assets/london-map.jpg" alt="Map of London showing places included in London Advanced"><figcaption><b>1,450+</b> places beyond the standard lists</figcaption></figure>
     </section>
 
     <section id="tools" class="tools section-wrap">
