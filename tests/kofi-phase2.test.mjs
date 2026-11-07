@@ -10,7 +10,7 @@ test("shared Journal support renderer is bilingual and secure", () => {
   const english = renderArticleSupport("en");
   const italian = renderArticleSupport("it");
   assert.match(english, /Enjoyed this article\? Buy me a flat white\./);
-  assert.match(italian, /Ti è piaciuto l’articolo\? Offrimi un flat white\./);
+  assert.match(italian, /Ti è piaciuto l'articolo\? Offrimi un flat white\./);
   for (const html of [english, italian]) {
     assert.ok(html.includes(`href="${KOFI_URL}"`));
     assert.match(html, /target="_blank" rel="noopener noreferrer"/);
@@ -20,8 +20,8 @@ test("shared Journal support renderer is bilingual and secure", () => {
 
 test("generated EN and IT articles place one discreet support link after the guide promotion", async () => {
   for (const [path, guidePath, label] of [
-    ["journal/camden-passage-angel-market-guide/index.html", "/the-other-london/", "Enjoyed this article? Buy me a flat white."],
-    ["it/journal/camden-passage-angel-mercato/index.html", "/it/the-other-london/", "Ti è piaciuto l'articolo? Offrimi un flat white."]
+    ["journal/camden-passage-angel-islington-guide/index.html", "/the-other-london/", "Enjoyed this article? Buy me a flat white."],
+    ["it/journal/camden-passage-angel-islington-guida/index.html", "/it/the-other-london/", "Ti è piaciuto l'articolo? Offrimi un flat white."]
   ]) {
     const html = await read(path);
     const guide = html.indexOf(`href="${guidePath}"`);
