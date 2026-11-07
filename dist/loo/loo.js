@@ -20,6 +20,7 @@ function opening(x){if(!x.opening_hours)return null;const d=["sun","mon","tue","
   $("#show-more").hidden=remaining<=0;
   if(remaining>0)$("#show-more").textContent=(IT?"Mostra altri ":"Show ")+Math.min(10,remaining)+(IT?" bagni":" more loos");
   map(rows,state.origin);
+  const support=$("#loo-support");if(support)support.hidden=rows.length===0;
 }
 function render(origin,label){
   state.origin=origin;

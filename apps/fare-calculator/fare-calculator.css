@@ -103,3 +103,7 @@ footer p { margin: 5px 0; }
   html { scroll-behavior: auto; }
 }
 
+
+.result-support { margin: 24px 0 0; text-align: center; font-size: 0.9rem; }
+.result-support a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 3px; }
+.result-support a:hover { color: var(--ink); }
