@@ -197,8 +197,7 @@ function nativeLooPage(template, nav, locale) {
   page = page.replace(/<p>(?:Source information is shown on each result\.|La fonte è indicata in ogni risultato\.)[\s\S]*?<\/p>/, `<p>${footerPrefix} <button class="loo-about-text-button" type="button" data-loo-about aria-haspopup="dialog" aria-controls="loo-about-panel">${footerText} →</button></p>`);
   if (!page.includes('id="loo-support"')) {
     const supportLabel = locale === "en" ? "That helped? Buy me a flat white." : "Ti è stato utile? Offrimi un flat white.";
-    page = page.replace('<div class="results-controls"><p id="result-count" aria-live="polite"></p><button id="show-more" class="quiet" type="button" hidden></button></div>', `  page = page.replace('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"', `${looAboutPanel(locale)}<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"`);
-  return page.replace(/[ \t]+$/gm, "");<p id="loo-support" class="result-support" hidden><a href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">${supportLabel}</a></p>`);
+    page = page.replace('<div class="results-controls"><p id="result-count" aria-live="polite"></p><button id="show-more" class="quiet" type="button" hidden></button></div>', `$&<p id="loo-support" class="result-support" hidden><a href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">${supportLabel}</a></p>`);
   }
   page = page.replace('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"', `${looAboutPanel(locale)}<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"`);
   return page.replace(/[ \t]+$/gm, "");
