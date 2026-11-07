@@ -10,6 +10,7 @@ import { buildSearch } from "./build-search.mjs";
 import { buildSitemap } from "./build-sitemap.mjs";
 import { buildGuidePages } from "./build-guide-pages.mjs";
 import { buildLegalPages } from "./build-legal.mjs";
+import { KOFI_URL } from "./site-config.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
@@ -40,7 +41,8 @@ function browserContext(site = null) {
   };
   const context = {
     window: {
-      location: { hostname: "prerender.invalid", search: "" }
+      location: { hostname: "prerender.invalid", search: "" },
+      LONDON_ADVANCED_CONFIG: { kofiUrl: KOFI_URL }
     },
     document,
     URL,
@@ -854,6 +856,7 @@ export async function prerender() {
     if (!file.endsWith(".html")) continue;
     const original = await readFile(file, "utf8");
     const updated = original
+      .replaceAll("{{KOFI_URL}}", KOFI_URL)
       .replaceAll("1,100+", "1,450+")
       .replaceAll("over 800 places", "over 1,450 places")
       .replaceAll("more than 800 places", "more than 1,450 places")
