@@ -1,6 +1,7 @@
 import { copyFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { KOFI_URL } from "./site-config.mjs";
 
 const root = process.cwd();
 const source = path.join(root, "apps/fare-calculator");
@@ -24,7 +25,7 @@ function page(locale) {
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/apps/fare-calculator/fare-calculator.css">
 </head>
-<body data-locale="${locale}">
+<body data-locale="${locale}" data-kofi-url="${KOFI_URL}">
   <div id="fare-calculator-app" aria-live="polite"><p class="loading">${loading}</p></div>
   <noscript>${noScript}</noscript>
   <script type="module" src="/apps/fare-calculator/fare-calculator-app.mjs"></script>

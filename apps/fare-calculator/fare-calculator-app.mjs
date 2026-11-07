@@ -19,7 +19,7 @@ app.innerHTML = pageTemplate();
 
 const els = Object.fromEntries([
   "adults", "under18", "startDate", "days", "oysterOwned", "agesWrap", "agesGrid", "formError",
-  "calculateButton", "results", "mixedTotal", "contactlessTotal", "oysterEffectiveTotal", "mixedCashTotal",
+  "calculateButton", "results", "support", "mixedTotal", "contactlessTotal", "oysterEffectiveTotal", "mixedCashTotal",
   "mixedCashDetail", "comparisonNote", "planList", "breakdown", "cardSummary"
 ].map(id => [id, document.getElementById(id)]));
 
@@ -59,6 +59,7 @@ function pageTemplate() {
       <div class="plan-box"><h3>${t.planTitle}</h3><ul id="planList" class="plan-list"></ul></div>
       <div id="breakdown" class="breakdown"></div>
       <div class="how-to-read"><h3>${t.howToRead}</h3><div id="cardSummary" class="info-row"></div>${t.guidance.map(([title, text]) => `<div class="info-row"><strong>${title}:</strong> ${text}</div>`).join("")}<div class="info-row">${t.loadNote}</div></div>
+      <p id="support" class="result-support hidden"><a href="${document.body.dataset.kofiUrl}" target="_blank" rel="noopener noreferrer">${t.support}</a></p>
     </section>
     <footer><p>${t.footer}</p><p>${t.checked}: <strong>${fareLastChecked}</strong> · <a href="${FARE_CONFIG.sources.fares}" target="_blank" rel="noopener noreferrer">${t.sourceLink}</a></p></footer>
   </main>`;
@@ -143,10 +144,12 @@ function calculate(scroll = true) {
   if (!result.ok) {
     const error = t.errors[result.error.code];
     showError(typeof error === "function" ? error(result.error.limit) : error);
+    els.support.classList.add("hidden");
     els.results.classList.add("hidden");
     return;
   }
   renderResults(result);
+  els.support.classList.toggle("hidden", !scroll);
   if (scroll) els.results.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
