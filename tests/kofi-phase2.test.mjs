@@ -21,7 +21,7 @@ test("shared Journal support renderer is bilingual and secure", () => {
 test("generated EN and IT articles place one discreet support link after the guide promotion", async () => {
   for (const [path, guidePath, label] of [
     ["journal/camden-passage-angel-market-guide/index.html", "/the-other-london/", "Enjoyed this article? Buy me a flat white."],
-    ["it/journal/camden-passage-angel-mercato/index.html", "/it/the-other-london/", "Ti è piaciuto l’articolo? Offrimi un flat white."]
+    ["it/journal/camden-passage-angel-mercato/index.html", "/it/the-other-london/", "Ti è piaciuto l'articolo? Offrimi un flat white."]
   ]) {
     const html = await read(path);
     const guide = html.indexOf(`href="${guidePath}"`);
