@@ -3,29 +3,32 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
+const baselines = JSON.parse(await readFile(new URL("config/shop-baselines.json", root), "utf8"));
+const baseline = baselines.bookshops;
 
 test("bookshop inventory is classified, bilingual and geographically usable", async () => {
   const data = JSON.parse(await readFile(new URL("dist/data/bookshops.json", root), "utf8"));
-  assert.equal(data.count, 124);
-  assert.equal(data.shops.length, 124);
-  assert.equal(new Set(data.shops.map(shop => shop.id)).size, 124);
-  assert.equal(new Set(data.shops.map(shop => shop.place_id)).size, 124);
+  assert.equal(data.count, baseline.approved_total);
+  assert.equal(data.shops.length, baseline.approved_total);
+  assert.ok(data.shops.length >= baseline.minimum_total, "unexpected bookshop record deletion");
+  assert.equal(new Set(data.shops.map(shop => shop.id)).size, baseline.approved_total);
+  assert.equal(new Set(data.shops.map(shop => shop.place_id)).size, baseline.approved_total);
   assert.ok(data.shops.every(shop => Number.isFinite(shop.lat) && Number.isFinite(shop.lon)));
   assert.ok(data.shops.every(shop => /^(?:1|1\/2|2|2\/3|3|3\/4)$/.test(String(shop.zone))));
   assert.ok(data.shops.every(shop => shop.description && shop.description_it && shop.source));
   assert.ok(data.shops.every(shop => Array.isArray(shop.specialism_tags) && Array.isArray(shop.feature_tags)));
-  assert.ok(new Set(data.shops.map(shop => shop.type)).size >= 6);
+  assert.ok(new Set(data.shops.map(shop => shop.type)).size >= baseline.minimum_types);
   assert.ok(data.shops.some(shop => shop.type === "second-hand"));
   assert.ok(data.shops.some(shop => shop.type === "rare-antiquarian"));
   assert.ok(data.shops.every(shop => Array.isArray(shop.type_tags) && shop.type_tags.includes(shop.type)));
-  assert.equal(data.shops.filter(shop => shop.type_tags.includes("second-hand")).length, 46);
+  assert.equal(data.shops.filter(shop => shop.type_tags.includes("second-hand")).length, baseline.second_hand_total);
   for (const name of ["Any Amount of Books", "Henry Pordes Books"]) {
     const shop = data.shops.find(item => item.name === name);
     assert.deepEqual(shop.type_tags, ["rare-antiquarian", "second-hand"]);
   }
   assert.ok(data.shops.some(shop => shop.feature_tags.includes("cafe-food")));
   assert.ok(data.shops.some(shop => shop.feature_tags.includes("heritage-story")));
-  assert.equal(data.shops.filter(shop => shop.ownership === "Oxfam").length, 16);
+  assert.equal(data.shops.filter(shop => shop.ownership === "Oxfam").length, baseline.oxfam_total);
   for (const branch of ["Balham", "Camden", "Chiswick", "Crouch End", "Ealing", "Hampstead", "Highgate", "Kentish Town", "Muswell Hill", "Portobello", "Victoria"]) {
     assert.ok(data.shops.some(shop => shop.ownership === "Oxfam" && shop.branch.includes(branch)), `missing Oxfam ${branch}`);
   }

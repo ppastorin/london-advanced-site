@@ -1,0 +1,20 @@
+{
+  "charity_shops": {
+    "approved_total": 316,
+    "minimum_total": 300,
+    "approved_organisations": 15,
+    "minimum_organisations": 15,
+    "organisation_counts": {
+      "Cancer Research UK": 47,
+      "British Red Cross": 14,
+      "Princess Alice Hospice": 7
+    }
+  },
+  "bookshops": {
+    "approved_total": 124,
+    "minimum_total": 120,
+    "minimum_types": 6,
+    "second_hand_total": 46,
+    "oxfam_total": 16
+  }
+}
