@@ -306,7 +306,7 @@ function renderRelatedTools(article, locale) {
 
 export function renderArticleSupport(locale) {
   const it = locale === "it";
-  return `<aside class="journal-support" aria-label="${it ? "Sostieni London Advanced" : "Support London Advanced"}"><a href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">${it ? "Ti è piaciuto l’articolo? Offrimi un flat white." : "Enjoyed this article? Buy me a flat white."}</a></aside>`;
+  return `<aside class="journal-support" aria-label="${it ? "Sostieni London Advanced" : "Support London Advanced"}"><a href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">${it ? "Ti è piaciuto l'articolo? Offrimi un flat white." : "Enjoyed this article? Buy me a flat white."}</a></aside>`;
 }
 
 function renderRelatedArticles(article, locale, publishedArticles, preview) {
