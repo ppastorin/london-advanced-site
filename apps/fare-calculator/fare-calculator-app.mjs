@@ -57,9 +57,9 @@ function pageTemplate() {
       </div>
       <div id="comparisonNote" class="comparison-note"></div>
       <div class="plan-box"><h3>${t.planTitle}</h3><ul id="planList" class="plan-list"></ul></div>
+      <aside id="support" class="result-support hidden" aria-label="${t.supportLabel}"><span class="result-support-label">${t.supportLabel}</span><a href="${document.body.dataset.kofiUrl}" target="_blank" rel="noopener noreferrer">${t.support}</a></aside>
       <div id="breakdown" class="breakdown"></div>
       <div class="how-to-read"><h3>${t.howToRead}</h3><div id="cardSummary" class="info-row"></div>${t.guidance.map(([title, text]) => `<div class="info-row"><strong>${title}:</strong> ${text}</div>`).join("")}<div class="info-row">${t.loadNote}</div></div>
-      <p id="support" class="result-support hidden"><a href="${document.body.dataset.kofiUrl}" target="_blank" rel="noopener noreferrer">${t.support}</a></p>
     </section>
     <footer><p>${t.footer}</p><p>${t.checked}: <strong>${fareLastChecked}</strong> · <a href="${FARE_CONFIG.sources.fares}" target="_blank" rel="noopener noreferrer">${t.sourceLink}</a></p></footer>
   </main>`;

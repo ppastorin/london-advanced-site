@@ -19,7 +19,11 @@ test("Fare Calculator support uses central config and stays hidden until a user 
   for (const html of [english, italian]) assert.ok(html.includes(`data-kofi-url="${KOFI_URL}"`));
   assert.match(translations, /That helped\? Buy me a flat white\./);
   assert.match(translations, /Ti è stato utile\? Offrimi un flat white\./);
+  assert.match(translations, /Support independent London exploration/);
+  assert.match(translations, /Sostieni l’esplorazione indipendente di Londra/);
   assert.match(app, /id="support" class="result-support hidden"/);
+  assert.ok(app.indexOf('id="support"') > app.indexOf('class="plan-box"'));
+  assert.ok(app.indexOf('id="support"') < app.indexOf('id="breakdown"'));
   assert.match(app, /target="_blank" rel="noopener noreferrer"/);
   assert.match(app, /calculate\(false\)/);
   assert.match(app, /els\.support\.classList\.toggle\("hidden", !scroll\)/);
@@ -42,15 +46,17 @@ test("Loo Finder support is bilingual, secure and revealed only with result rows
     assert.ok(html.includes(`href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">${label}</a>`));
     assert.match(html, /id="loo-support" class="result-support" hidden/);
   }
-  assert.match(app, /support\.hidden=rows\.length===0/);
-  assert.ok(app.indexOf("support.hidden=rows.length===0") > app.indexOf("map(rows,state.origin)"));
+  assert.match(app, /firstResult\.insertAdjacentElement\("afterend",support\)/);
+  assert.match(app, /support\.hidden=!firstResult/);
 });
 
-test("result support styling remains compact on narrow screens", async () => {
+test("result support styling is prominent without overflowing narrow screens", async () => {
   const [fareCss, looCss] = await Promise.all([
     source("apps/fare-calculator/fare-calculator.css"),
     built("loo/loo.css")
   ]);
-  assert.match(fareCss, /\.result-support \{[^}]*text-align: center[^}]*font-size: 0\.9rem/s);
-  assert.match(looCss, /\.result-support\{[^}]*text-align:center[^}]*font-size:\.9rem/s);
+  assert.match(fareCss, /\.result-support \{[^}]*padding: 18px[^}]*border-left: 4px solid var\(--accent\)/s);
+  assert.match(fareCss, /\.result-support a \{[^}]*display: inline-flex[^}]*max-width: 100%/s);
+  assert.match(looCss, /\.result-support\{[^}]*grid-column:1\/-1[^}]*padding:18px[^}]*border-left:4px solid var\(--red\)/s);
+  assert.match(looCss, /\.result-support a\{[^}]*display:inline-flex[^}]*max-width:100%/s);
 });
