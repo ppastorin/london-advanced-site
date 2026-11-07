@@ -1,5 +1,6 @@
 import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { KOFI_URL } from "./site-config.mjs";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
@@ -220,7 +221,7 @@ export function navigation(locale, active = "journal", alternatePath = locale ==
 
 export function footer(locale) {
   const it = locale === "it";
-  return `<footer><div><strong>London Advanced</strong><span>${it ? "Strumenti indipendenti e appunti sul campo per una Londra meno ovvia." : "Independent tools and field notes for a less obvious London."}</span></div><div class="footer-meta"><a href="${it ? "/it/journal/" : "/journal/"}">Journal</a><a href="${it ? "/it/itinerari/" : "/itineraries/"}">${it ? "Itinerari" : "Itineraries"}</a><a href="${it ? "/it/eventi/" : "/events/"}">${it ? "Questa settimana" : "This week"}</a><a href="${it ? "/it/chi-sono/" : "/about/"}">${it ? "Chi sono" : "About"}</a><a href="${it ? "/it/metodologia/" : "/methodology/"}">${it ? "Metodologia" : "Methodology"}</a></div><small>© ${new Date().getFullYear()} Paolo Pastorino</small></footer>`;
+  return `<footer><div><strong>London Advanced</strong><span>${it ? "Strumenti indipendenti e appunti sul campo per una Londra meno ovvia." : "Independent tools and field notes for a less obvious London."}</span></div><div class="footer-meta"><a href="${it ? "/it/journal/" : "/journal/"}">Journal</a><a href="${it ? "/it/itinerari/" : "/itineraries/"}">${it ? "Itinerari" : "Itineraries"}</a><a href="${it ? "/it/eventi/" : "/events/"}">${it ? "Questa settimana" : "This week"}</a><a href="${it ? "/it/chi-sono/" : "/about/"}">${it ? "Chi sono" : "About"}</a><a href="${it ? "/it/metodologia/" : "/methodology/"}">${it ? "Metodologia" : "Methodology"}</a><a href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">${it ? "Offrimi un flat white" : "Buy me a flat white"}</a></div><small>© ${new Date().getFullYear()} Paolo Pastorino</small></footer>`;
 }
 
 function pageHead({ locale, route, alternateRoute, title, description, image, imageAlt = "", type = "website", schema, noindex = false, publishedTime = "", modifiedTime = "", tags = [] }) {

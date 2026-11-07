@@ -1,4 +1,5 @@
 const DATA = window.LONDON_ADVANCED;
+const KOFI_URL = window.LONDON_ADVANCED_CONFIG.kofiUrl;
 
 const icons = {
   pulse: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>',
@@ -416,7 +417,7 @@ function render() {
 
     <footer id="community">
       <div><strong>London Advanced</strong><span>Independent tools and field notes for a less obvious London.</span></div>
-      <div class="footer-meta"><a href="/events/">This week</a><a href="/newsletter/">Newsletter</a><a href="/about/">About</a><a href="/methodology/">Methodology</a><a href="/privacy/">Privacy</a><a href="/copyright/">Copyright &amp; use</a><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino. All rights reserved.</small></div>
+      <div class="footer-meta"><a href="/events/">This week</a><a href="/newsletter/">Newsletter</a><a href="/about/">About</a><a href="/methodology/">Methodology</a><a href="/privacy/">Privacy</a><a href="/copyright/">Copyright &amp; use</a><a href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">Buy me a flat white</a><a href="#contact">Contact me</a><small>© ${new Date().getFullYear()} Paolo Pastorino. All rights reserved.</small></div>
     </footer>
   </main>`;
   bindSectionScrolling();
