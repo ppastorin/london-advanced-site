@@ -1,16 +1,66 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-11-09T11:53:25+00:00",
+  "generated_at": "2026-11-09T15:17:10+00:00",
   "valid_from": "2026-11-09",
   "valid_until": "2026-11-15",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "fulham-fire-station-open-day-2026",
+    "koppel-heights-open-studios-2026",
     "light-flight-festival-finchley-2026",
-    "lord-mayors-show-free-guided-walks-2026"
+    "keats-house-when-i-have-fears-2026"
   ],
   "events": [
+    {
+      "id": "koppel-heights-open-studios-2026",
+      "title_en": "KOPPEL Heights Open Studios",
+      "title_it": "Open Studios a KOPPEL Heights",
+      "summary_en": "Explore working studios used by more than 270 artists and makers, meet the creative community and see Ryan Blackwell’s Lost & Found exhibition inside ANNEX.",
+      "summary_it": "Esplora gli studi di oltre 270 artisti e creativi, incontra la comunità residente e visita la mostra Lost & Found di Ryan Blackwell nella galleria ANNEX.",
+      "start": "2026-11-13T11:00:00+00:00",
+      "end": "2026-11-14T17:00:00+00:00",
+      "venue": {
+        "name": "KOPPEL Heights",
+        "address": "101 Newington Causeway, London",
+        "postcode": "SE1 6BN",
+        "borough": "Southwark"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "recommended",
+        "url": "https://thekoppelproject.artsvp.com/cd566c"
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 10,
+        "reason": "Hundreds of working studios open for two days inside an Elephant & Castle artist community, combining rare access, local character and free entry.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.southwark.gov.uk/southwark-presents/koppel-heights-artist-open-studios-elephant-castle",
+      "verification": {
+        "verified_at": "2026-11-09T15:17:10+00:00",
+        "confidence": "high",
+        "source_url": "https://www.southwark.gov.uk/southwark-presents/koppel-heights-artist-open-studios-elephant-castle"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-09T15:17:10+00:00",
+      "expire_at": "2026-11-14T17:15:00+00:00",
+      "duplicate_key": "koppel-heights-open-studios-elephant-castle-2026-11-13-14"
+    },
     {
       "id": "st-pauls-lord-mayors-show-free-entry-2026",
       "title_en": "St Paul’s Cathedral: Lord Mayor’s Show Free Entry",
@@ -52,12 +102,12 @@
       ],
       "official_url": "https://www.stpauls.co.uk/whats-on/lord-mayors-show-day-2026",
       "verification": {
-        "verified_at": "2026-11-09T11:53:25+00:00",
+        "verified_at": "2026-11-09T15:17:10+00:00",
         "confidence": "high",
         "source_url": "https://www.stpauls.co.uk/whats-on/lord-mayors-show-day-2026"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-09T11:53:25+00:00",
+      "publish_at": "2026-11-09T15:17:10+00:00",
       "expire_at": "2026-11-14T17:15:00+00:00",
       "duplicate_key": "st-pauls-lord-mayors-show-free-entry-2026-11-14"
     },
@@ -98,68 +148,19 @@
         }
       },
       "newsletter_sources": [
-        "Londonist"
+        "Londonist",
+        "Londonfy"
       ],
       "official_url": "https://www.cityoflondon.gov.uk/events/lord-mayors-show",
       "verification": {
-        "verified_at": "2026-11-09T11:53:25+00:00",
+        "verified_at": "2026-11-09T15:17:10+00:00",
         "confidence": "high",
         "source_url": "https://www.cityoflondon.gov.uk/events/lord-mayors-show"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-09T11:53:25+00:00",
+      "publish_at": "2026-11-09T15:17:10+00:00",
       "expire_at": "2026-11-14T14:45:00+00:00",
       "duplicate_key": "lord-mayors-show-city-of-london-2026-11-14"
-    },
-    {
-      "id": "fulham-fire-station-open-day-2026",
-      "title_en": "Fulham Fire Station 130th-Birthday Open Day",
-      "title_it": "Open day per i 130 anni della caserma di Fulham",
-      "summary_en": "Step inside a working fire station for its 130th birthday, compare historic and modern vehicles and equipment, and hear retired firefighters’ memories.",
-      "summary_it": "Entra in una caserma operativa per i suoi 130 anni, confronta mezzi e attrezzature storiche e moderne e ascolta i ricordi dei vigili del fuoco in pensione.",
-      "start": "2026-11-14T11:00:00+00:00",
-      "end": "2026-11-14T16:00:00+00:00",
-      "venue": {
-        "name": "Fulham Fire Station",
-        "address": "685 Fulham Road, London",
-        "postcode": "SW6 5UJ",
-        "borough": "Hammersmith and Fulham"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 10,
-        "reason": "A working station opens for one day on its 130th birthday, pairing unusual access with local firefighting history and free family activities.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.london-fire.gov.uk/community/hammersmith-and-fulham/fulham-fire-station-open-day",
-      "verification": {
-        "verified_at": "2026-11-09T11:53:25+00:00",
-        "confidence": "high",
-        "source_url": "https://www.london-fire.gov.uk/community/hammersmith-and-fulham/fulham-fire-station-open-day"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-11-09T11:53:25+00:00",
-      "expire_at": "2026-11-14T16:15:00+00:00",
-      "duplicate_key": "fulham-fire-station-open-day-130th-birthday-2026-11-14"
     },
     {
       "id": "light-flight-festival-finchley-2026",
@@ -202,14 +203,64 @@
       ],
       "official_url": "https://www.lightandflight.co.uk/",
       "verification": {
-        "verified_at": "2026-11-09T11:53:25+00:00",
+        "verified_at": "2026-11-09T15:17:10+00:00",
         "confidence": "high",
         "source_url": "https://www.barnet.gov.uk/news/light-flight-two-festival-weekends-free-events-november-mark-barnets-year-creativity"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-09T11:53:25+00:00",
+      "publish_at": "2026-11-09T15:17:10+00:00",
       "expire_at": "2026-11-15T19:15:00+00:00",
       "duplicate_key": "light-flight-festival-finchley-lakeside-2026-11-14-15"
+    },
+    {
+      "id": "keats-house-when-i-have-fears-2026",
+      "title_en": "When I Have Fears at Keats House",
+      "title_it": "When I Have Fears alla Keats House",
+      "summary_en": "Poets Julia Bird and Mike Sims explore the Gothic, ghostly side of John Keats through readings and conversation inside his Hampstead home, with tea and cake.",
+      "summary_it": "I poeti Julia Bird e Mike Sims esplorano il lato gotico e spettrale di John Keats con letture e conversazione nella sua casa di Hampstead, con tè e torta.",
+      "start": "2026-11-14T15:00:00+00:00",
+      "end": "2026-11-14T16:30:00+00:00",
+      "venue": {
+        "name": "Keats House",
+        "address": "10 Keats Grove, London",
+        "postcode": "NW3 2RR",
+        "borough": "Camden"
+      },
+      "price": {
+        "amount_gbp": 10,
+        "display": "£10",
+        "classification": "cheap"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://www.eventbrite.co.uk/e/when-i-have-fears-the-spooky-and-sublime-john-keats-tickets-1999669184360"
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 9,
+        "reason": "A one-off Gothic reading inside Keats’s own house connects poetry, place and local literary history at a genuinely low ticket price.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 1,
+          "value": 1
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.lovecamden.org/whats-on/when-i-have-fears-the-spooky-and-sublime-john-keats-99ea8038",
+      "verification": {
+        "verified_at": "2026-11-09T15:17:10+00:00",
+        "confidence": "high",
+        "source_url": "https://www.lovecamden.org/whats-on/when-i-have-fears-the-spooky-and-sublime-john-keats-99ea8038"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-09T15:17:10+00:00",
+      "expire_at": "2026-11-14T16:45:00+00:00",
+      "duplicate_key": "keats-house-when-i-have-fears-2026-11-14"
     },
     {
       "id": "lord-mayors-show-free-guided-walks-2026",
@@ -252,12 +303,12 @@
       ],
       "official_url": "https://www.lordmayorsshow.london/guided-walks/",
       "verification": {
-        "verified_at": "2026-11-09T11:53:25+00:00",
+        "verified_at": "2026-11-09T15:17:10+00:00",
         "confidence": "high",
         "source_url": "https://www.lordmayorsshow.london/guided-walks/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-09T11:53:25+00:00",
+      "publish_at": "2026-11-09T15:17:10+00:00",
       "expire_at": "2026-11-14T17:45:00+00:00",
       "duplicate_key": "lord-mayors-show-free-city-guided-walks-2026-11-14"
     }
