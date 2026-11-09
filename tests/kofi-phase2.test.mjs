@@ -36,6 +36,6 @@ test("generated EN and IT articles place one discreet support link after the gui
 
 test("Journal support styling remains secondary to the guide promotion", async () => {
   const styles = await read("journal.css");
-  assert.match(styles, /\.journal-support \{[^}]*padding: 22px[^}]*text-align: center/s);
-  assert.match(styles, /\.journal-support a \{[^}]*font-size: 14px/s);
+  assert.match(styles, /\.journal-support \{[^}]*padding: 40px[^}]*background: var\(--journal-cream\)/s);
+  assert.match(styles, /\.journal-support a \{[^}]*display: inline-flex[^}]*min-height: 48px[^}]*font-size: 16px/s);
 });
