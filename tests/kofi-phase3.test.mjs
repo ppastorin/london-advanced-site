@@ -44,8 +44,9 @@ test("Loo Finder support is bilingual, secure and revealed only with result rows
   ]) {
     assert.equal((html.match(/id="loo-support"/g) || []).length, 1);
     assert.ok(html.includes(`href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">${label}</a>`));
-    assert.match(html, /id="loo-support" class="result-support" hidden/);
+    assert.match(html, /id="loo-support" class="result-support"[^>]* hidden/);
   }
+  assert.match(app, /results\.querySelector\?\.\("\.card"\)/);
   assert.match(app, /firstResult\.insertAdjacentElement\("afterend",support\)/);
   assert.match(app, /support\.hidden=!firstResult/);
 });

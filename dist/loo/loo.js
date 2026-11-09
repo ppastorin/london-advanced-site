@@ -20,7 +20,7 @@ function opening(x){if(!x.opening_hours)return null;const d=["sun","mon","tue","
   $("#show-more").hidden=remaining<=0;
   if(remaining>0)$("#show-more").textContent=(IT?"Mostra altri ":"Show ")+Math.min(10,remaining)+(IT?" bagni":" more loos");
   map(rows,state.origin);
-  const firstResult=results.querySelector(".card");if(support){support.hidden=!firstResult;if(firstResult)firstResult.insertAdjacentElement("afterend",support)}
+  const firstResult=results.querySelector?.(".card");if(support){support.hidden=!firstResult;if(firstResult)firstResult.insertAdjacentElement("afterend",support)}
 }
 function render(origin,label){
   state.origin=origin;
