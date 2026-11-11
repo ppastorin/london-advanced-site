@@ -1,0 +1,151 @@
+name: Mobile shop smoke tests
+
+on:
+  pull_request:
+    paths:
+      - "dist/bookshops/**"
+      - "dist/charity-shops/**"
+      - "dist/it/bookshops/**"
+      - "dist/it/charity-shops/**"
+      - "dist/it/strumenti/librerie/**"
+      - "dist/it/strumenti/negozi-di-beneficenza/**"
+      - "dist/data/bookshops.json"
+      - "dist/data/charity-shops.json"
+      - "config/shop-baselines.json"
+      - "scripts/prerender.mjs"
+      - "styles.css"
+      - "index.html"
+      - "tests/bookshops.test.mjs"
+      - "tests/charity-shops.test.mjs"
+      - "tests/browser/**"
+      - ".github/workflows/mobile-shop-smoke.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "dist/bookshops/**"
+      - "dist/charity-shops/**"
+      - "dist/it/bookshops/**"
+      - "dist/it/charity-shops/**"
+      - "dist/it/strumenti/librerie/**"
+      - "dist/it/strumenti/negozi-di-beneficenza/**"
+      - "dist/data/bookshops.json"
+      - "dist/data/charity-shops.json"
+      - "config/shop-baselines.json"
+      - "scripts/prerender.mjs"
+      - "styles.css"
+      - "index.html"
+      - "tests/bookshops.test.mjs"
+      - "tests/charity-shops.test.mjs"
+      - "tests/browser/**"
+      - ".github/workflows/mobile-shop-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: mobile-shop-smoke-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  scope:
+    runs-on: ubuntu-24.04
+    outputs:
+      run_browser: ${{ steps.scope.outputs.run_browser }}
+      reason: ${{ steps.scope.outputs.reason }}
+    steps:
+      - id: scope
+        name: Reuse exact PR smoke validation after merge
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            let runBrowser = true;
+            let reason = 'browser smoke required';
+            if (context.eventName === 'push') {
+              const associated = await github.rest.repos.listPullRequestsAssociatedWithCommit({ owner, repo, commit_sha: context.sha });
+              const merged = associated.data.find(pull => pull.merged_at && pull.base.ref === 'main');
+              if (merged) {
+                const runs = await github.paginate(github.rest.actions.listWorkflowRunsForRepo, {
+                  owner,
+                  repo,
+                  event: 'pull_request',
+                  head_sha: merged.head.sha,
+                  per_page: 100
+                });
+                const validated = runs.find(run =>
+                  run.name === 'Mobile shop smoke tests' &&
+                  run.head_sha === merged.head.sha &&
+                  run.conclusion === 'success'
+                );
+                if (validated) {
+                  runBrowser = false;
+                  reason = `merged PR #${merged.number}; exact head already passed mobile smoke`;
+                }
+              }
+            }
+            core.setOutput('run_browser', String(runBrowser));
+            core.setOutput('reason', reason);
+
+  mobile-smoke:
+    name: Charity and Bookshops mobile smoke
+    needs: scope
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Record reused smoke validation
+        if: needs.scope.outputs.run_browser != 'true'
+        run: echo "Smoke validation reuse — ${{ needs.scope.outputs.reason }}"
+
+      - name: Check out repository
+        if: needs.scope.outputs.run_browser == 'true'
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        if: needs.scope.outputs.run_browser == 'true'
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            tests/browser/package-lock.json
+
+      - name: Install site dependencies
+        if: needs.scope.outputs.run_browser == 'true'
+        run: npm ci
+
+      - name: Install isolated browser-test dependencies
+        if: needs.scope.outputs.run_browser == 'true'
+        run: npm ci --prefix tests/browser
+
+      - name: Install Chromium
+        if: needs.scope.outputs.run_browser == 'true'
+        working-directory: tests/browser
+        run: |
+          if ! npx playwright install --with-deps chromium > /tmp/playwright-install.log 2>&1; then
+            cat /tmp/playwright-install.log
+            exit 1
+          fi
+
+      - name: Prepare deterministic generated routes
+        if: needs.scope.outputs.run_browser == 'true'
+        run: npm run prerender:preview
+
+      - name: Run targeted mobile smoke tests
+        if: needs.scope.outputs.run_browser == 'true'
+        working-directory: tests/browser
+        run: npm test
+
+      - name: Upload failure diagnostics
+        if: failure() && needs.scope.outputs.run_browser == 'true'
+        uses: actions/upload-artifact@v6
+        with:
+          name: mobile-shop-smoke-diagnostics
+          path: |
+            tests/browser/playwright-report/
+            tests/browser/test-results/
+          if-no-files-found: ignore
+          retention-days: 7
