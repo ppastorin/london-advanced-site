@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - "dist/**"
+      - "assets/instagram/**"
+      - "assets/journal/**"
+      - "assets/itineraries/**"
       - "scripts/**"
       - "tests/**"
       - "worker/**"
@@ -25,6 +28,9 @@ on:
       - main
     paths:
       - "dist/**"
+      - "assets/instagram/**"
+      - "assets/journal/**"
+      - "assets/itineraries/**"
       - "scripts/**"
       - "tests/**"
       - "worker/**"
@@ -44,30 +50,111 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
+  pull-requests: read
 
 concurrency:
   group: site-safety-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
+  scope:
+    name: Resolve validation scope
+    runs-on: ubuntu-24.04
+    outputs:
+      run_full: ${{ steps.scope.outputs.run_full }}
+      reason: ${{ steps.scope.outputs.reason }}
+    steps:
+      - name: Reuse only equivalent trusted validation
+        id: scope
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            let runFull = true;
+            let reason = 'full validation required';
+
+            if (context.eventName === 'pull_request') {
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                owner,
+                repo,
+                pull_number: context.payload.pull_request.number,
+                per_page: 100
+              });
+              const mediaRoots = [
+                'assets/instagram/',
+                'assets/journal/',
+                'assets/itineraries/',
+                'dist/assets/instagram/',
+                'dist/assets/journal/',
+                'dist/assets/itineraries/'
+              ];
+              const mediaOnly = files.length > 0 && files.every(file =>
+                file.status !== 'removed' && mediaRoots.some(root => file.filename.startsWith(root))
+              );
+              if (mediaOnly) {
+                runFull = false;
+                reason = 'restricted Studio media-only pull request; auto-merge rechecks the same allowlist';
+              }
+            } else if (context.eventName === 'push') {
+              const associated = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                owner,
+                repo,
+                commit_sha: context.sha
+              });
+              const merged = associated.data.find(pull =>
+                pull.merged_at && pull.base.ref === 'main' && pull.base.repo.full_name === `${owner}/${repo}`
+              );
+              if (merged) {
+                const runs = await github.paginate(github.rest.actions.listWorkflowRunsForRepo, {
+                  owner,
+                  repo,
+                  event: 'pull_request',
+                  head_sha: merged.head.sha,
+                  per_page: 100
+                });
+                const validated = runs.find(run =>
+                  run.name === 'Site safety checks' &&
+                  run.head_sha === merged.head.sha &&
+                  run.conclusion === 'success'
+                );
+                if (validated) {
+                  runFull = false;
+                  reason = `merged PR #${merged.number}; exact head ${merged.head.sha} passed Site safety checks`;
+                }
+              }
+            }
+
+            core.setOutput('run_full', String(runFull));
+            core.setOutput('reason', reason);
+
   validate:
     name: Validate routes and deployment package
+    needs: scope
     runs-on: ubuntu-24.04
     steps:
+      - name: Record reused validation
+        if: needs.scope.outputs.run_full != 'true'
+        run: echo "Validation reuse — ${{ needs.scope.outputs.reason }}"
+
       - name: Check out repository
+        if: needs.scope.outputs.run_full == 'true'
         uses: actions/checkout@v5
 
       - name: Set up Node.js
+        if: needs.scope.outputs.run_full == 'true'
         uses: actions/setup-node@v5
         with:
           node-version: "22"
           cache: npm
 
       - name: Install locked dependencies
+        if: needs.scope.outputs.run_full == 'true'
         run: npm ci
 
       - name: Refresh static pre-rendering
+        if: needs.scope.outputs.run_full == 'true'
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             npm run prerender:preview
@@ -76,10 +163,13 @@ jobs:
           fi
 
       - name: Validate site structure and links
+        if: needs.scope.outputs.run_full == 'true'
         run: npm run test:generated
 
-      - name: Print external-link inventory
+      - name: Summarise external-link inventory
+        if: needs.scope.outputs.run_full == 'true'
         run: npm run links
 
       - name: Validate the Cloudflare package
+        if: needs.scope.outputs.run_full == 'true'
         run: npx wrangler deploy --dry-run --outdir /tmp/london-advanced-wrangler-check

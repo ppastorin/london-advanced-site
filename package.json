@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run prerender",
     "test": "npm run build && npm run test:generated",
-    "test:generated": "node scripts/validate-site.mjs && node scripts/validate-social.mjs content/social/posts && node --test tests/*.test.mjs && node scripts/validate-events.mjs dist/data/events.json",
+    "test:generated": "node scripts/validate-site.mjs && node scripts/validate-social.mjs content/social/posts && node scripts/run-node-tests-compact.mjs tests/*.test.mjs && node scripts/validate-events.mjs dist/data/events.json",
+    "test:changed": "node scripts/test-changed.mjs",
     "check": "npm test",
     "validate:events": "node scripts/validate-events.mjs dist/data/events.json",
     "build:fare": "node scripts/build-fare-calculator.mjs",
@@ -16,6 +17,7 @@
     "preview": "npx wrangler dev",
     "deploy": "npm test && npx wrangler deploy",
     "links": "node scripts/list-links.mjs",
+    "links:details": "node scripts/list-links.mjs --details",
     "health": "node scripts/check-endpoints.mjs"
   },
   "devDependencies": {
