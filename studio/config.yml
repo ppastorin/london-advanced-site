@@ -322,7 +322,7 @@ collections:
         collapsed: true
         summary: "{{fields.role}} · {{fields.caption}}"
         min: 1
-        max: 6
+        max: 8
         i18n: true
         fields:
           - label: Image
@@ -345,6 +345,7 @@ collections:
               - { label: Show the complete photograph (original ratio), value: natural }
             default: crop
             required: false
+          - { label: Placement after paragraph, name: after_paragraph, widget: number, value_type: int, min: 1, max: 40, required: false, hint: Optional exact placement used for paired or tightly structured photo essays. }
           - { label: Alternative text, name: alt, widget: text, hint: Describe what is visible; do not repeat the caption. }
           - { label: Caption, name: caption, widget: text }
           - { label: Credit, name: credit, widget: string, default: Paolo Pastorino }
