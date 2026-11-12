@@ -1,0 +1,178 @@
+{
+  "workflow_help": "Draft → Review → Approved → Published",
+  "article_id": "musical-london",
+  "editorial_status": "review",
+  "approval": {
+    "status": "pending",
+    "approved_by": "",
+    "approved_at": ""
+  },
+  "title": "Musical London: four music videos and the streets behind them",
+  "slug": "musical-london-music-video-locations",
+  "seo_title": "Musical London: Four Music Video Locations",
+  "description": "Revisit four London music video locations, from Hoxton Street to Wandsworth Road, through original frames and Paolo Pastorino’s photographs.",
+  "eyebrow": "London on screen · Music videos",
+  "dek": "Rick Astley under a railway viaduct, Richard Ashcroft crossing Hoxton, Dexys on a Kennington corner and a-ha inside a south London café. Four famous videos left precise traces in ordinary streets.",
+  "body": "London music history is usually attached to vanished clubs, famous studios and blue plaques. Music videos preserve something different: an ordinary pavement, a railway bridge, a corner shop or a café at one particular moment.\n\nI returned to four locations with frames from the original videos. The exercise is less about recreating the performers’ poses than testing what the camera recorded. Buildings survive, businesses disappear, signs change and a street that looked anonymous becomes recognisable once the right image is placed beside it.\n\nThe historic images in this article are frames from the official videos, used to identify and discuss the locations. The contemporary photographs are mine.\n\n## Rick Astley beneath the railway\n\n*Never Gonna Give You Up* was filmed in 1987 at several west London locations. The exterior most often mistaken for somewhere in Harrow is actually on Freston Road, close to Latimer Road station, beneath the Hammersmith and City line viaduct.\n\nThe confusion has an explanation. Other scenes were filmed inside the nearby Harrow Club, whose name led many later descriptions in the wrong geographical direction. The club is in North Kensington, not Harrow.\n\nThe bridge is still easy to recognise. Brick arches, the curve of the road and the compressed space beneath the tracks do most of the work. What seemed like an anonymous background became one of the most repeatedly watched pieces of London through the later phenomenon of Rickrolling.\n\nThere is no attraction to enter. It remains a working street under a railway. The interesting part is precisely that mismatch between the global reach of the image and the ordinariness of the place.\n\n## Richard Ashcroft walks through Hoxton\n\nThe 1997 video for *Bitter Sweet Symphony* follows Richard Ashcroft north along the eastern side of Hoxton Street. The walk begins around the junction with Falkirk Street and is presented as one relentless forward movement, with Ashcroft refusing to alter his path for other pedestrians.\n\nHoxton has changed substantially since the 1990s, but this section has not become unrecognisable. Shop names and uses have changed, while the pavement line, estate buildings and proportions of the street still hold the shot together. The former Golden Fried Chicken at the start of the sequence is now another chicken shop, an unusually modest form of continuity.\n\nTrying to reproduce Ashcroft’s collisions would be idiotic. Standing back and comparing the shopfront rhythm is more revealing. The video turned a local shopping street into an image of 1990s British confidence and abrasion without disguising where it was filmed.\n\nA year later, the video for Fat Les’s *Vindaloo* parodied the same walk on the same street. Hoxton therefore contains both the original piece of pop mythology and its almost immediate joke.\n\n## Dexys on Brook Drive\n\n*Come On Eileen* was filmed in 1982 around Brook Drive in Kennington, between Elephant and Castle and the Imperial War Museum. Several corners appear, but the best-known storefront stood at 151 Brook Drive, at the junction with Hayles Street.\n\nIn the video it was Vi’s Stores. The band perform and move through streets of late Victorian terraces, parked cars, small shops and vacant land. The setting feels unstaged because much of it was simply the neighbourhood as it stood.\n\nThe shop later became Brook Drive Minimarket and has since closed. Yet this is the pair of images in which the surrounding brickwork makes the comparison particularly effective. The business identity has gone, while the corner remains legible more than four decades later.\n\nThis is also why music videos can become accidental urban records. Nobody watching in 1982 needed the film to explain what a south London corner shop looked like. That ordinary information is now one of its most interesting qualities.\n\n## a-ha at the café on Wandsworth Road\n\nThe live-action café scenes in a-ha’s 1985 video for *Take On Me* were filmed at Kim’s Café, on the corner of Wandsworth Road and Pensbury Place. The premises later traded as the Savoy Café and are now occupied by a Turkish restaurant.\n\nMost of the video’s reputation rests on the transition between live action and pencil animation. Around 3,000 frames were rotoscoped, turning the café customer, played by Bunty Bailey, and Morten Harket’s comic-book character into one continuous story.\n\nThe London exterior is easy to overlook because the fantasy takes over so quickly. Returning to the corner brings the video back to its practical starting point: a small café, a cup of coffee and someone reading alone at a table.\n\nUnlike the other three locations, this is an operating business rather than just a public street. The façade can be compared from the pavement. Going inside should mean behaving like a customer, not treating the restaurant as a film set.\n\n## Four famous images, no formal trail\n\nThese locations do not form a sensible single walk. They stretch from North Kensington to Hoxton, Kennington and Wandsworth Road. Visiting them separately, when another journey takes you nearby, is more honest than manufacturing a cross-London itinerary.\n\nSave the relevant official video before going and pause on the frame you want to match. Small alignments matter more than dramatic poses: the edge of an arch, the angle of a shopfront, a line of windows or the width of the pavement.\n\nThe reward is not nostalgia alone. It is seeing how popular culture fixes ordinary London in memory, while the real city continues changing around the frame.",
+  "images": [
+    {
+      "src": "/assets/journal/22 - Musical London/22 - Musical London Astley 2.jpg",
+      "role": "hero",
+      "display_mode": "natural",
+      "alt": "Freston Road beneath the railway viaduct near Latimer Road today",
+      "caption": "Freston Road today. The bridge and brick arches make the 1987 location immediately recognisable.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1367
+    },
+    {
+      "src": "/assets/journal/22 - Musical London/22 - Musical London Astley 1.jpg",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Rick Astley beneath the Freston Road railway viaduct in the Never Gonna Give You Up video",
+      "caption": "The same railway structure in Never Gonna Give You Up.",
+      "credit": "Official music video, visual reference",
+      "width": 2048,
+      "height": 946
+    },
+    {
+      "src": "/assets/journal/22 - Musical London/22 - Musical London Bittersweet 1.jpg",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Richard Ashcroft walking along Hoxton Street in the Bitter Sweet Symphony video",
+      "caption": "Richard Ashcroft begins his uncompromising walk along Hoxton Street.",
+      "credit": "Official music video, visual reference",
+      "width": 2048,
+      "height": 946
+    },
+    {
+      "src": "/assets/journal/22 - Musical London/22 - Musical London Bittersweet 2.jpg",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Hoxton Street photographed from the Bitter Sweet Symphony filming position today",
+      "caption": "Hoxton Street today. Businesses have changed, but the line of the original shot survives.",
+      "credit": "Paolo Pastorino",
+      "width": 2048,
+      "height": 1367
+    },
+    {
+      "src": "/assets/journal/22 - Musical London/22 - Musical London Eileen 1.jpg",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "Dexys Midnight Runners outside the Brook Drive shop in the Come On Eileen video",
+      "caption": "The Brook Drive corner as it appeared in Come On Eileen in 1982.",
+      "credit": "Official music video, visual reference",
+      "width": 2048,
+      "height": 946
+    },
+    {
+      "src": "/assets/journal/22 - Musical London/22 - Musical London Eileen 2.jpg",
+      "role": "detail",
+      "display_mode": "natural",
+      "alt": "The former shop at 151 Brook Drive photographed today",
+      "caption": "The shop has closed, but the Kennington corner remains easy to place.",
+      "credit": "Paolo Pastorino",
+      "width": 1367,
+      "height": 2048
+    },
+    {
+      "src": "/assets/journal/22 - Musical London/22 - Musical London a-ha 1.jpg",
+      "role": "inline",
+      "display_mode": "natural",
+      "alt": "The Wandsworth Road café in the live-action section of the Take On Me video",
+      "caption": "The café sequence gives Take On Me its real-world starting point.",
+      "credit": "Official music video, visual reference",
+      "width": 1334,
+      "height": 750
+    },
+    {
+      "src": "/assets/journal/22 - Musical London/22 - Musical London a-ha 2.jpg",
+      "role": "closing",
+      "display_mode": "natural",
+      "alt": "The former café premises on the corner of Wandsworth Road and Pensbury Place today",
+      "caption": "The former Kim’s Café and Savoy Café premises now house a Turkish restaurant.",
+      "credit": "Paolo Pastorino",
+      "width": 1536,
+      "height": 2048
+    }
+  ],
+  "practical": [
+    {
+      "label": "Format",
+      "value": "Four separate locations rather than one cross-London route"
+    },
+    {
+      "label": "Before visiting",
+      "value": "Save the official videos and match a specific frame"
+    },
+    {
+      "label": "Access",
+      "value": "Three public streets; the Wandsworth Road location is an operating restaurant"
+    },
+    {
+      "label": "Photography",
+      "value": "Keep pavements clear and ask before photographing inside any business"
+    }
+  ],
+  "related_tools": [
+    "smart-navigation",
+    "travel-fare-calculator",
+    "london-by-mood"
+  ],
+  "related_articles": [
+    "eel-pie-island"
+  ],
+  "tags": [
+    "London music history",
+    "Music videos",
+    "Hoxton Street",
+    "Brook Drive",
+    "Wandsworth Road",
+    "Freston Road"
+  ],
+  "sources": [
+    {
+      "label": "Rick Astley: Never Gonna Give You Up, official video",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "checked_at": "2026-11-12"
+    },
+    {
+      "label": "Londonist: the Freston Road filming locations",
+      "url": "https://londonist.com/london/music/visit-the-rickroll-bridge-where-never-gonna-give-you-up-was-filmed",
+      "checked_at": "2026-11-12"
+    },
+    {
+      "label": "The Verve: Bitter Sweet Symphony, official video",
+      "url": "https://www.youtube.com/watch?v=1lyu1KKwC74",
+      "checked_at": "2026-11-12"
+    },
+    {
+      "label": "London City Hall: London music video locations",
+      "url": "https://www.london.gov.uk/programmes-strategies/arts-and-culture/make-date-london-0/london-music-video-locations-love",
+      "checked_at": "2026-11-12"
+    },
+    {
+      "label": "Dexys Midnight Runners: Come On Eileen, official video",
+      "url": "https://www.youtube.com/watch?v=6BODDyZRF6A",
+      "checked_at": "2026-11-12"
+    },
+    {
+      "label": "Global Film Locations: Come On Eileen locations",
+      "url": "https://globalfilmlocations.net/2020/07/19/dexys-midnight-runners-come-on-eileen-filming-locations/",
+      "checked_at": "2026-11-12"
+    },
+    {
+      "label": "a-ha: Take On Me, official video",
+      "url": "https://www.youtube.com/watch?v=djV11Xbc914",
+      "checked_at": "2026-11-12"
+    },
+    {
+      "label": "Where It Was: Kim's Cafe and Take On Me",
+      "url": "https://www.whereitwas.com/worlds/a-ha",
+      "checked_at": "2026-11-12"
+    }
+  ],
+  "reading_minutes": 7,
+  "published_at": "",
+  "updated_at": "2026-11-12T22:30:00Z"
+}
