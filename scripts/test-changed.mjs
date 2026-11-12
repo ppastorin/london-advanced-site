@@ -1,5 +1,6 @@
 import { execFileSync, spawnSync } from "node:child_process";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const TEST_FILES = [
   "tests/affiliate-rendering.test.mjs",
@@ -296,7 +297,7 @@ function execute(plan) {
   return 0;
 }
 
-const isDirect = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(new URL(import.meta.url).pathname);
+const isDirect = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
 if (isDirect) {
   const plan = planForFiles(readInputFiles(process.argv.slice(2)));
   process.exitCode = execute(plan);
