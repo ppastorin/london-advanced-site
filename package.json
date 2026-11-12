@@ -7,6 +7,7 @@
     "build": "npm run prerender",
     "test": "npm run build && npm run test:generated",
     "test:generated": "node scripts/validate-site.mjs && node scripts/validate-social.mjs content/social/posts && node --test tests/*.test.mjs && node scripts/validate-events.mjs dist/data/events.json",
+    "test:changed": "node scripts/test-changed.mjs",
     "check": "npm test",
     "validate:events": "node scripts/validate-events.mjs dist/data/events.json",
     "build:fare": "node scripts/build-fare-calculator.mjs",
