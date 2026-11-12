@@ -3,6 +3,7 @@ name: Site safety checks
 on:
   pull_request:
     paths:
+      - "AGENTS.md"
       - "dist/**"
       - "scripts/**"
       - "tests/**"
@@ -24,6 +25,7 @@ on:
     branches:
       - main
     paths:
+      - "AGENTS.md"
       - "dist/**"
       - "scripts/**"
       - "tests/**"
