@@ -162,11 +162,17 @@ function imageFigure(image, className = "journal-figure") {
 function injectFigures(bodyHtml, images) {
   if (!images.length) return bodyHtml;
   let result = bodyHtml;
-  const positions = [2, 5, 8];
+  const paragraphCount = [...bodyHtml.matchAll(/<\/p>/g)].length;
+  const fallbackPositions = images.length <= 3
+    ? [2, 5, 8]
+    : images.map((_, index) => Math.max(1, Math.round(((index + 1) * paragraphCount) / (images.length + 1))));
   images.forEach((image, index) => {
     const figure = imageFigure(image);
     const matches = [...result.matchAll(/<\/p>/g)];
-    const match = matches[Math.min(positions[index] - 1, matches.length - 1)];
+    const requested = Number.isFinite(Number(image.after_paragraph))
+      ? Number(image.after_paragraph)
+      : fallbackPositions[index];
+    const match = matches[Math.min(Math.max(1, requested) - 1, matches.length - 1)];
     if (match) {
       const at = match.index + match[0].length;
       result = `${result.slice(0, at)}${figure}${result.slice(at)}`;
