@@ -13,7 +13,7 @@
   ],
   "eyebrow": "Londra · Celebrazioni pubbliche",
   "dek": "Cinque processioni, cinque Londre diverse: spettacolo internazionale, cultura sino-britannica, visibilità LGBTQIA+, comunità caraibica e gli antichi rituali della City.",
-  "editorial_status": "review",
+  "editorial_status": "approved",
   "slug": "parate-londra-cinque-celebrazioni-pubbliche",
   "reading_minutes": 8,
   "related_articles": [
@@ -58,48 +58,48 @@
       "height": 1365
     },
     {
+      "display_mode": "natural",
       "src": "/assets/journal/23 - Parades/23 - Parades - Chinese NY.jpg",
-      "role": "inline",
-      "display_mode": "natural",
-      "alt": "Artisti della parata del Capodanno cinese nel centro di Londra",
+      "width": 2048,
       "caption": "La parata del Capodanno cinese collega Trafalgar Square alla vita comunitaria di Chinatown.",
-      "credit": "Paolo Pastorino",
-      "width": 2048,
       "height": 1367,
-      "after_paragraph": 8
+      "alt": "Artisti della parata del Capodanno cinese nel centro di Londra",
+      "after_paragraph": 8,
+      "role": "inline",
+      "credit": "Paolo Pastorino"
     },
     {
+      "display_mode": "natural",
       "src": "/assets/journal/23 - Parades/23 - Parades - Pride.jpg",
-      "role": "inline",
-      "display_mode": "natural",
-      "alt": "Partecipanti alla parata Pride in London",
+      "width": 2048,
       "caption": "Pride occupa il centro di Londra come festa e come atto di visibilità.",
-      "credit": "Paolo Pastorino",
-      "width": 2048,
       "height": 1365,
-      "after_paragraph": 12
-    },
-    {
-      "src": "/assets/journal/23 - Parades/23 - Parades - Notting Hill.jpg",
+      "alt": "Partecipanti alla parata Pride in London",
+      "after_paragraph": 12,
       "role": "inline",
-      "display_mode": "natural",
-      "alt": "Artisti in costume durante il Notting Hill Carnival",
-      "caption": "Mas, musica e processione fanno parte di un evento comunitario radicato nella Londra caraibica.",
-      "credit": "Paolo Pastorino",
-      "width": 2048,
-      "height": 1367,
-      "after_paragraph": 16
+      "credit": "Paolo Pastorino"
     },
     {
-      "src": "/assets/journal/23 - Parades/23 - Parades - Mayor.jpg",
-      "role": "closing",
       "display_mode": "natural",
-      "alt": "Gruppo cerimoniale durante il Lord Mayor’s Show nella City of London",
-      "caption": "Il Lord Mayor’s Show rende visibili nelle strade le istituzioni e le tradizioni dello Square Mile.",
-      "credit": "Paolo Pastorino",
+      "src": "/assets/journal/23 - Parades/23 - Parades - Notting Hill.jpg",
       "width": 2048,
+      "caption": "Mas, musica e processione fanno parte di un evento comunitario radicato nella Londra caraibica.",
+      "height": 1367,
+      "alt": "Artisti in costume durante il Notting Hill Carnival",
+      "after_paragraph": 16,
+      "role": "inline",
+      "credit": "Paolo Pastorino"
+    },
+    {
+      "display_mode": "natural",
+      "src": "/assets/journal/23 - Parades/23 - Parades - Mayor.jpg",
+      "width": 2048,
+      "caption": "Il Lord Mayor’s Show rende visibili nelle strade le istituzioni e le tradizioni dello Square Mile.",
       "height": 1365,
-      "after_paragraph": 21
+      "alt": "Gruppo cerimoniale durante il Lord Mayor’s Show nella City of London",
+      "after_paragraph": 21,
+      "role": "closing",
+      "credit": "Paolo Pastorino"
     }
   ],
   "sources": [
