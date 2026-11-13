@@ -19,13 +19,21 @@ test("the English calendar campaign is complete and excluded from Italian", asyn
 
   for (const marker of [
     '<link rel="canonical" href="https://www.londonadvanced.com/calendars/">',
+    'https://photo-portal.shop/share/NvHSGu3/',
+    'https://photo-portal.shop/share/mzK2pwK/',
     'https://photo-portal.shop/share/4nks44v/',
     'https://photo-portal.shop/share/5u73sGi/',
     'delivery to UK addresses only',
-    'printed in Italian'
+    'bank holidays for England',
+    'Italian edition'
   ]) assert.ok(page.includes(marker), `calendar page is missing ${marker}`);
 
+  assert.equal(page.includes('class="calendar-note"'), false);
+  assert.equal(page.includes("Before you order"), false);
+
   assert.ok(css.includes(".calendar-hero"));
+  assert.ok(css.includes(".calendar-secondary-link"));
+  assert.equal(css.includes(".calendar-note"), false);
   assert.ok(css.includes("@media (max-width: 600px)"));
   assert.ok(sitemap.includes("https://www.londonadvanced.com/calendars/"));
 
