@@ -59,5 +59,6 @@ test("result support styling is prominent without overflowing narrow screens", a
   assert.match(fareCss, /\.result-support \{[^}]*padding: 18px[^}]*border-left: 4px solid var\(--accent\)/s);
   assert.match(fareCss, /\.result-support a \{[^}]*display: inline-flex[^}]*max-width: 100%/s);
   assert.match(looCss, /\.result-support\{[^}]*grid-column:1\/-1[^}]*padding:18px[^}]*border-left:4px solid var\(--red\)/s);
+  assert.match(looCss, /\.result-support\[hidden\]\{display:none\}/);
   assert.match(looCss, /\.result-support a\{[^}]*display:inline-flex[^}]*max-width:100%/s);
 });
