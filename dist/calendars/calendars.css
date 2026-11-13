@@ -30,10 +30,6 @@
 .calendar-hero-image img { width: 100%; max-height: 720px; object-fit: contain; box-shadow: 0 24px 60px rgba(0,0,0,.3); }
 .calendar-hero-image figcaption { margin-top: 16px; color: #ddd; font-size: 12px; line-height: 1.5; }
 
-.calendar-note { padding: 28px clamp(20px, 6vw, 108px); display: grid; grid-template-columns: 180px minmax(0, 780px); gap: 28px; color: #fff; background: var(--red); }
-.calendar-note strong { font: 700 13px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
-.calendar-note p { margin: 0; font-size: 16px; line-height: 1.55; }
-
 .calendar-formats { padding: 100px clamp(20px, 6vw, 108px) 120px; }
 .calendar-section-heading { max-width: 760px; margin-bottom: 58px; }
 .calendar-section-heading h2 { margin: 14px 0; font: 400 clamp(44px, 6vw, 76px)/1 var(--serif); }
@@ -51,6 +47,10 @@
 .calendar-product-copy ul { margin: 26px 0 30px; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .calendar-product-copy li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
 .calendar-product-copy small { margin-top: 12px; color: #666; }
+.calendar-editions { margin-top: 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.calendar-secondary-link { padding-bottom: 3px; border-bottom: 1px solid; font-size: 14px; font-weight: 700; }
+.calendar-secondary-link:hover { color: var(--red); }
+.calendar-edition-meta { margin-top: 0 !important; }
 
 .calendar-closing { padding: 86px clamp(20px, 6vw, 108px); display: grid; grid-template-columns: 190px minmax(300px, 1fr) auto; align-items: center; gap: 40px; color: #fff; background: var(--ink); }
 .calendar-closing p { max-width: 760px; margin: 0; font: 400 clamp(32px, 4vw, 54px)/1.08 var(--serif); }
@@ -75,7 +75,6 @@
   .calendar-hero-actions { align-items: flex-start; flex-direction: column; }
   .calendar-hero-actions .button { width: 100%; }
   .calendar-hero-image { padding: 20px 14px; }
-  .calendar-note { padding: 24px 18px; grid-template-columns: 1fr; gap: 10px; }
   .calendar-formats { padding: 64px 18px 76px; }
   .calendar-section-heading { margin-bottom: 36px; }
   .calendar-section-heading h2 { font-size: 46px; }
