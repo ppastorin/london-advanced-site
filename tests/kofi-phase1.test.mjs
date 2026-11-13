@@ -12,6 +12,13 @@ test("generated EN and IT footers expose the contribution link", async () => {
     assert.match(await read(path),link(label),path);
   }
 });
+test("homepages expose a prominent bilingual support section after the free tools", async () => {
+  for(const [path,heading,label,eventId] of [["index.html","Found something useful? Help keep London Advanced independent.","Buy me a flat white","events"],["it/index.html","Hai trovato qualcosa di utile? Aiuta London Advanced a restare indipendente.","Offrimi un flat white","eventi"]]){
+    const html=await read(path); const tools=html.indexOf('id="tools"'); const support=html.indexOf('class="home-support section-wrap"'); const events=html.indexOf(`id="${eventId}"`);
+    assert.ok(tools < support && support < events,path); assert.match(html,new RegExp(heading.replace(/[.?]/g,"\\$&"))); assert.ok(html.includes(`href="https://ko-fi.com/paolopastorino" target="_blank" rel="noopener noreferrer">${label} <span`)); assert.equal((html.match(/class="home-support section-wrap"/g)||[]).length,1);
+  }
+  const styles=await read("styles.css"); assert.match(styles,/\.home-support \{[^}]*display: grid[^}]*border-block: 1px solid var\(--gold\)/s); assert.match(styles,/@media \(max-width: 600px\)[\s\S]*\.home-support > a \{ width: 100%; \}/);
+});
 test("About pages contain one disclosure and the support section", async () => {
   const [en,it]=await Promise.all([read("about/index.html"),read("it/chi-sono/index.html")]);
   assert.match(en,/Support independent London exploration/); assert.match(en,/Support is entirely optional and never influences/); assert.match(en,link("Buy me a flat white")); assert.equal((en.match(/may receive voluntary contributions through Ko-fi/g)||[]).length,1);
