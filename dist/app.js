@@ -367,6 +367,15 @@ function render() {
       <div class="app-grid">${appCards()}</div>
     </section>
 
+    <aside class="home-support section-wrap" aria-labelledby="home-support-title">
+      <div class="home-support-copy">
+        <span class="eyebrow">Support independent London exploration</span>
+        <h2 id="home-support-title">Found something useful? Help keep London Advanced independent.</h2>
+        <p>The tools and field notes remain free. A flat white helps cover hosting, mapping, data services and the time spent researching and keeping everything current.</p>
+      </div>
+      <a class="button dark" href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">Buy me a flat white <span aria-hidden="true">↗</span></a>
+    </aside>
+
     ${eventsSection()}
 
     <section id="guide" class="guide-split section-wrap">

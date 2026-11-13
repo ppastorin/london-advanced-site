@@ -133,6 +133,7 @@
 .article-dek { max-width: 760px; margin: 0; font-size: clamp(18px, 2vw, 25px); line-height: 1.55; }
 .article-meta { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px 24px; color: #555; font: 500 11px var(--mono); text-transform: uppercase; }
 .article-meta a { font-weight: 700; }
+.article-header-aside { display: grid; gap: 34px; align-self: end; }
 
 .journal-practical { border-top: 1px solid var(--journal-ink); }
 .journal-practical > span { padding: 14px 0; display: block; font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
@@ -182,10 +183,10 @@
 .journal-sources > div { padding: 0 0 22px; color: #555; font-size: 13px; line-height: 1.6; }
 .journal-sources ul { margin-bottom: 0; }
 
-.journal-support { padding: 40px clamp(22px, 6vw, 108px); border-block: 1px solid var(--journal-line); background: var(--journal-cream); }
-.journal-support > div { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 18px 28px; flex-wrap: wrap; text-align: center; }
-.journal-support-label { font: 500 13px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-.journal-support a { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 12px 20px; border-radius: 999px; background: var(--journal-ink); color: #fff; font-size: 16px; font-weight: 700; text-decoration: none; }
+.journal-support { padding: 22px; border: 1px solid var(--journal-line); border-left: 4px solid var(--journal-red); background: var(--journal-cream); }
+.journal-support > div { display: grid; gap: 16px; }
+.journal-support-label { font: 600 11px/1.45 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.journal-support a { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 999px; background: var(--journal-ink); color: #fff; font-size: 15px; font-weight: 700; text-align: center; text-decoration: none; }
 .journal-support a:hover { background: var(--journal-red); color: #fff; text-decoration: none; }
 
 .journal-newsletter { padding: 110px clamp(22px, 9vw, 160px); background: var(--journal-cream); }

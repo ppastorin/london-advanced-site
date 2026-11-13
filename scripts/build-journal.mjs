@@ -296,8 +296,8 @@ function articleSchema(article, pair, locale, route, alternateRoute, hero) {
 
 function renderPractical(article, locale) {
   const items = article.practical || [];
-  if (!items.length) return "";
-  return `<aside class="journal-practical"><span>${locale === "it" ? "In breve" : "At a glance"}</span><dl>${items.map(item => `<div><dt>${escapeHtml(item.label)}</dt><dd>${item.url ? `<a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener">${escapeHtml(item.value)} ↗</a>` : escapeHtml(item.value)}</dd></div>`).join("")}</dl></aside>`;
+  const practical = items.length ? `<aside class="journal-practical"><span>${locale === "it" ? "In breve" : "At a glance"}</span><dl>${items.map(item => `<div><dt>${escapeHtml(item.label)}</dt><dd>${item.url ? `<a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener">${escapeHtml(item.value)} ↗</a>` : escapeHtml(item.value)}</dd></div>`).join("")}</dl></aside>` : "";
+  return `<div class="article-header-aside">${renderArticleSupport(locale, "header")}${practical}</div>`;
 }
 
 function renderRelatedTools(article, locale) {
@@ -310,7 +310,8 @@ function renderRelatedTools(article, locale) {
   return `<section class="journal-tools"><div><span class="journal-kicker">${it ? "Continua a esplorare" : "Keep exploring"}</span><h2>${it ? "Passa dall’articolo alla prossima giornata londinese." : "Turn one field note into your next London day out."}</h2></div><div class="journal-tool-grid">${links.map(([name, href, description]) => `<a href="${href}"><span>${escapeHtml(description)}</span><strong>${escapeHtml(name)} →</strong></a>`).join("")}</div></section>`;
 }
 
-export function renderArticleSupport(locale) {
+export function renderArticleSupport(locale, placement = "footer") {
+  if (placement !== "header") return "";
   const it = locale === "it";
   return `<aside class="journal-support" aria-label="${it ? "Sostieni London Advanced" : "Support London Advanced"}"><div><span class="journal-support-label">${it ? "Sostieni l’esplorazione indipendente di Londra" : "Support independent London exploration"}</span><a href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">${it ? "Ti è piaciuto l'articolo? Offrimi un flat white." : "Enjoyed this article? Buy me a flat white."}</a></div></aside>`;
 }
