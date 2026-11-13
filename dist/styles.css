@@ -226,6 +226,23 @@ section[id] { scroll-margin-top: 76px; }
 }
 .map-window figcaption b { display: block; font: 400 28px var(--serif); }
 
+.calendar-promo {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
+  color: #fff;
+  background: var(--ink);
+  border-top: 8px solid var(--red);
+}
+.calendar-promo-image { min-height: 360px; padding: clamp(22px, 3.5vw, 50px); display: grid; place-items: center; background: #2a2928; }
+.calendar-promo-image img { width: 100%; max-height: 460px; object-fit: contain; box-shadow: 0 18px 44px rgba(0,0,0,.34); }
+.calendar-promo-copy { padding: clamp(44px, 6vw, 94px); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.calendar-promo-copy .eyebrow { color: #f2a8a2; }
+.calendar-promo-copy h2 { max-width: 780px; margin: 16px 0 22px; font: 400 clamp(44px, 6vw, 78px)/.98 var(--serif); }
+.calendar-promo-copy p { max-width: 680px; margin: 0 0 28px; color: #e4e4e4; font-size: 18px; line-height: 1.6; }
+.calendar-promo-button { color: #fff; background: var(--red); border-color: var(--red); }
+.calendar-promo-button:hover { background: #c9362d; border-color: #c9362d; }
+
 .tools { border-top: 1px solid var(--line); }
 .section-heading { max-width: 600px; margin-bottom: 34px; }
 .section-heading > span, .section-heading.horizontal span { font: 500 12px var(--mono); letter-spacing: .08em; }
@@ -651,6 +668,7 @@ footer span, footer small { font-size: 12px; }
   .tool-heading { grid-template-columns: 1fr; gap: 4px; }
   .tool-heading > p { max-width: 520px; }
   .hero, .guide-split { grid-template-columns: 1fr; }
+  .calendar-promo { grid-template-columns: minmax(240px, .72fr) minmax(0, 1.28fr); }
   .hero-intro { padding-top: 56px; padding-bottom: 56px; }
   .map-window { min-height: 390px; }
   .app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -682,6 +700,12 @@ footer span, footer small { font-size: 12px; }
   .hero-intro h1 { margin: 18px 0; font-size: clamp(50px, 16vw, 64px); }
   .hero-intro > p { font-size: 16px; }
   .map-window { min-height: 300px; }
+  .calendar-promo { grid-template-columns: 1fr; }
+  .calendar-promo-image { min-height: 0; padding: 18px; }
+  .calendar-promo-copy { padding: 42px 18px 48px; }
+  .calendar-promo-copy h2 { font-size: 46px; }
+  .calendar-promo-copy p { font-size: 16px; }
+  .calendar-promo-button { width: 100%; }
   .section-heading { margin-bottom: 26px; }
   .section-heading h2 { font-size: 42px; }
   .app-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
