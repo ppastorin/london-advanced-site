@@ -3,7 +3,7 @@
 ## Phase status
 
 - Drafting: complete
-- Editorial review: ready for Paolo
+- Editorial review: ready for Paolo in Studio
 - Publication: not authorised
 
 ## Acceptance criteria
@@ -30,8 +30,10 @@
 
 - Confirmed five source images and their pixel dimensions.
 - Confirmed paired content structure against an existing bilingual Journal entry.
-- Article remains gated from publication by `editorial_status: review` and `approval.status: pending`.
+- Pull request #155 passed `Site safety checks` on exact head `52d82a5d243fdbd325e2afa46e76b78ea153191d`.
+- Merged to `main` as `82e37c96f799eb4cbc9f499bd4485d1f205dafca`.
+- Read back both entries from `main`: `editorial_status: review`, approval `pending`, no `published_at`.
 
 ## Next step
 
-- Open a pull request, wait for the exact head safety check, merge, then verify both entries in Studio.
+- Paolo reviews both language versions in Studio and either requests changes or approves them for a separate publication action.
