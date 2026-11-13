@@ -811,6 +811,24 @@ ${safeJson(eventsStructuredData(events, feed))}
 `;
 }
 
+async function buildCalendarSalesPage() {
+  const sourceDirectory = path.join(projectRoot, "calendars");
+  const destinationDirectory = path.join(distRoot, "calendars");
+  const sourceAssets = path.join(projectRoot, "assets/calendars");
+  const destinationAssets = path.join(distRoot, "assets/calendars");
+  await Promise.all([
+    mkdir(destinationDirectory, { recursive: true }),
+    mkdir(destinationAssets, { recursive: true })
+  ]);
+  await Promise.all([
+    copyFile(path.join(sourceDirectory, "index.html"), path.join(destinationDirectory, "index.html")),
+    copyFile(path.join(sourceDirectory, "calendars.css"), path.join(destinationDirectory, "calendars.css")),
+    copyFile(path.join(sourceAssets, "calendar-overview.jpg"), path.join(destinationAssets, "calendar-overview.jpg")),
+    copyFile(path.join(sourceAssets, "calendar-january.jpg"), path.join(destinationAssets, "calendar-january.jpg")),
+    copyFile(path.join(sourceAssets, "calendar-february-square.jpg"), path.join(destinationAssets, "calendar-february-square.jpg"))
+  ]);
+}
+
 export async function prerender() {
   await buildFareCalculator();
   const feed = JSON.parse(await readFile(path.join(distRoot, "data/events.json"), "utf8"));
@@ -855,6 +873,7 @@ export async function prerender() {
   await buildGuidePages();
   await buildSearch();
   await buildLegalPages();
+  await buildCalendarSalesPage();
   const sitemapEntries = await buildSitemap();
 
   for (const file of await walkFiles(distRoot)) {

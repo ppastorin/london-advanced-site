@@ -295,6 +295,7 @@ function transformAppJs(source){
     [">CURIOUS<",">CURIOSA<"]
   ];
   for(const [a,b] of homepageCleanupPairs) out=out.split(a).join(b);
+  out = out.replace(/\n+    <section class="calendar-promo"[\s\S]*?<\/section>\n+/, "\n\n");
   out=out.replaceAll(
     "escapeHtml(event.price.display)",
     'escapeHtml(event.price.display.replace(/^Free\\b/i, "Gratis").replace(/\\bpumpkin\\b/gi, "zucca").replace(/\\bper person\\b/gi, "a persona"))'

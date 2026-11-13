@@ -121,7 +121,12 @@ const requiredAssets = [
   "dist/bookshops/bookshops.js",
   "dist/it/bookshops/index.html",
   "dist/it/strumenti/librerie/index.html",
-  "dist/data/bookshops.json"
+  "dist/data/bookshops.json",
+  "dist/calendars/index.html",
+  "dist/calendars/calendars.css",
+  "dist/assets/calendars/calendar-overview.jpg",
+  "dist/assets/calendars/calendar-january.jpg",
+  "dist/assets/calendars/calendar-february-square.jpg"
 ];
 requiredAssets.forEach(requireFile);
 
