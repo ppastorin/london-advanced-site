@@ -103,10 +103,14 @@ test("article heroes preserve their configured crop focus in both languages", as
   assert.match(styles, /\.article-body \.journal-figure img \{ height: auto; max-height: none; object-fit: contain; \}/);
 });
 
-test("desktop articles use a compact hero while preserving the mobile hero", async () => {
-  const styles = await readFile(new URL("../dist/journal.css", import.meta.url), "utf8");
-  assert.match(styles, /@media \(min-width: 981px\) \{[\s\S]*?\.journal-hero-image img \{ height: clamp\(320px, 38vw, 540px\); \}/);
-  assert.match(styles, /@media \(min-width: 981px\) \{[\s\S]*?\.article-layout \{ padding-top: 68px; padding-bottom: 92px;/);
+test("desktop articles integrate an uncropped hero while preserving the mobile flow", async () => {
+  const [styles, article] = await Promise.all([
+    readFile(new URL("../dist/journal.css", import.meta.url), "utf8"),
+    readFile(new URL("../dist/journal/camden-passage-angel-islington-guide/index.html", import.meta.url), "utf8")
+  ]);
+  assert.match(article, /<header class="article-header">[\s\S]*?<div class="article-header-aside">[\s\S]*?<figure class="journal-figure journal-hero-image">[\s\S]*?<\/header><div class="article-layout">/);
+  assert.match(styles, /@media \(min-width: 981px\) \{[\s\S]*?\.article-header \{[\s\S]*?grid-template-columns: minmax\(0, 1\.55fr\) minmax\(180px, \.65fr\) minmax\(230px, 310px\);/);
+  assert.match(styles, /\.article-header \.journal-hero-image img \{ display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain; \}/);
   assert.match(styles, /@media \(max-width: 640px\) \{[\s\S]*?\.journal-hero-image img \{ height: 72vw; \}/);
 });
 
