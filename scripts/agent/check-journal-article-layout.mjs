@@ -10,7 +10,8 @@ const [css, english, italian] = await Promise.all([
   read("dist/it/journal/camden-passage-angel-islington-guida/index.html")
 ]);
 
-assert.match(css, /@media \(min-width: 981px\) \{[\s\S]*?\.journal-hero-image img \{ height: clamp\(320px, 38vw, 540px\); \}/);
+assert.match(css, /@media \(min-width: 981px\) \{[\s\S]*?\.article-header \{[\s\S]*?grid-template-columns: minmax\(0, 1\.55fr\) minmax\(180px, \.65fr\) minmax\(230px, 310px\);/);
+assert.match(css, /\.article-header \.journal-hero-image img \{ display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain; \}/);
 assert.match(css, /@media \(max-width: 640px\) \{[\s\S]*?\.journal-hero-image img \{ height: 72vw; \}/);
 
 for (const [label, html] of [["English", english], ["Italian", italian]]) {
