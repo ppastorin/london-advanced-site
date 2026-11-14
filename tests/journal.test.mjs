@@ -103,6 +103,13 @@ test("article heroes preserve their configured crop focus in both languages", as
   assert.match(styles, /\.article-body \.journal-figure img \{ height: auto; max-height: none; object-fit: contain; \}/);
 });
 
+test("desktop articles use a compact hero while preserving the mobile hero", async () => {
+  const styles = await readFile(new URL("../dist/journal.css", import.meta.url), "utf8");
+  assert.match(styles, /@media \(min-width: 981px\) \{[\s\S]*?\.journal-hero-image img \{ height: clamp\(320px, 38vw, 540px\); \}/);
+  assert.match(styles, /@media \(min-width: 981px\) \{[\s\S]*?\.article-layout \{ padding-top: 68px; padding-bottom: 92px;/);
+  assert.match(styles, /@media \(max-width: 640px\) \{[\s\S]*?\.journal-hero-image img \{ height: 72vw; \}/);
+});
+
 test("Decap OAuth starts with state protection and exchanges a valid callback", async () => {
   const env = { GITHUB_OAUTH_ID: "client-id", GITHUB_OAUTH_SECRET: "client-secret" };
   const auth = await handleDecapAuth(new Request("https://www.londonadvanced.com/api/decap/auth?provider=github"), env);

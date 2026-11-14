@@ -203,6 +203,42 @@
 .journal-home-empty span { color: #5b5b5b; }
 .journal-all-link { margin-top: 38px; display: inline-flex; gap: 10px; border-bottom: 1px solid; font-weight: 700; }
 
+@media (min-width: 981px) {
+  .journal-breadcrumbs { padding-top: 18px; padding-bottom: 18px; }
+  .article-header {
+    padding-top: clamp(48px, 5vw, 76px);
+    padding-bottom: 44px;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
+    gap: clamp(42px, 6vw, 92px);
+  }
+  .article-heading h1 {
+    max-width: 900px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    font-size: clamp(50px, 6.3vw, 86px);
+    line-height: .96;
+  }
+  .article-dek { font-size: clamp(17px, 1.6vw, 22px); line-height: 1.48; }
+  .article-meta { margin-top: 24px; }
+  .article-header-aside { gap: 20px; }
+  .journal-support { padding: 18px; }
+  .journal-support > div { gap: 12px; }
+  .journal-support a { min-height: 44px; padding-top: 10px; padding-bottom: 10px; font-size: 14px; }
+  .journal-practical > span { padding: 11px 0; }
+  .journal-practical dl > div { padding: 11px 0; }
+  .journal-hero-image { margin-right: clamp(30px, 6vw, 108px); margin-left: clamp(30px, 6vw, 108px); }
+  .journal-hero-image img { height: clamp(320px, 38vw, 540px); }
+  .article-layout { padding-top: 68px; padding-bottom: 92px; gap: clamp(54px, 7vw, 104px); }
+  .article-body { line-height: 1.72; }
+  .article-body > p:first-child { font-size: 22px; line-height: 1.52; }
+  .article-body h2 { margin-top: 58px; margin-bottom: 18px; font-size: clamp(36px, 4vw, 54px); }
+  .article-body h3 { margin-top: 42px; margin-bottom: 14px; font-size: 29px; }
+  .article-body p { margin-bottom: 21px; }
+  .article-body ul, .article-body ol { margin-bottom: 25px; }
+  .article-body blockquote { margin: 40px 0; padding-top: 22px; padding-bottom: 22px; font-size: 28px; }
+  .journal-sources { margin-top: 58px; }
+}
+
 @media (max-width: 980px) {
   .journal-index-hero { grid-template-columns: 1fr; min-height: auto; }
   .journal-index-hero > .journal-kicker { grid-column: auto; }
