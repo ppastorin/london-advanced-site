@@ -1,28 +1,28 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-11-09T15:17:10+00:00",
-  "valid_from": "2026-11-09",
-  "valid_until": "2026-11-15",
+  "generated_at": "2026-11-16T15:56:30+00:00",
+  "valid_from": "2026-11-16",
+  "valid_until": "2026-11-22",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "koppel-heights-open-studios-2026",
-    "light-flight-festival-finchley-2026",
-    "keats-house-when-i-have-fears-2026"
+    "illuminate-bermondsey-rotherhithe-2026",
+    "discover-your-mosque-open-day-2026",
+    "radical-rediscovery-iii-2026"
   ],
   "events": [
     {
-      "id": "koppel-heights-open-studios-2026",
-      "title_en": "KOPPEL Heights Open Studios",
-      "title_it": "Open Studios a KOPPEL Heights",
-      "summary_en": "Explore working studios used by more than 270 artists and makers, meet the creative community and see Ryan Blackwell’s Lost & Found exhibition inside ANNEX.",
-      "summary_it": "Esplora gli studi di oltre 270 artisti e creativi, incontra la comunità residente e visita la mostra Lost & Found di Ryan Blackwell nella galleria ANNEX.",
-      "start": "2026-11-13T11:00:00+00:00",
-      "end": "2026-11-14T17:00:00+00:00",
+      "id": "radical-rediscovery-iii-2026",
+      "title_en": "Radical Rediscovery III: What Survives?",
+      "title_it": "Radical Rediscovery III: Cosa sopravvive?",
+      "summary_en": "A free archival exhibition traces fifty years of Black and Asian theatre through rare ephemera, oral histories, carnival costumes and the legacy of Naseem Khan's landmark 1976 report.",
+      "summary_it": "Una mostra d'archivio gratuita ripercorre cinquant'anni di teatro nero e asiatico con documenti rari, testimonianze orali, costumi di carnevale e l'eredità del rapporto di Naseem Khan del 1976.",
+      "start": "2026-11-20T12:30:00+00:00",
+      "end": "2026-11-20T18:00:00+00:00",
       "venue": {
-        "name": "KOPPEL Heights",
-        "address": "101 Newington Causeway, London",
-        "postcode": "SE1 6BN",
+        "name": "London Performance Studios, Studios 3 and 4",
+        "address": "Penarth Centre, Penarth Street, London",
+        "postcode": "SE15 1TR",
         "borough": "Southwark"
       },
       "price": {
@@ -32,17 +32,17 @@
       },
       "booking": {
         "required": false,
-        "status": "recommended",
-        "url": "https://thekoppelproject.artsvp.com/cd566c"
+        "status": "drop-in",
+        "url": null
       },
-      "category": "art-design",
+      "category": "local-culture",
       "advanced": {
-        "score": 10,
-        "reason": "Hundreds of working studios open for two days inside an Elephant & Castle artist community, combining rare access, local character and free entry.",
+        "score": 9,
+        "reason": "A grassroots South Bermondsey archive makes an overlooked chapter of British theatre history tangible through a temporary, free display.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
-          "unusual_access": 2,
+          "unusual_access": 1,
           "local_character": 1,
           "value": 2
         }
@@ -50,149 +50,98 @@
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.southwark.gov.uk/southwark-presents/koppel-heights-artist-open-studios-elephant-castle",
+      "official_url": "https://www.londonperformancestudios.com/radical-rediscovery-iii-what-survives-50-years-since-the-arts-britain-ignores/",
       "verification": {
-        "verified_at": "2026-11-09T15:17:10+00:00",
+        "verified_at": "2026-11-16T15:56:30+00:00",
         "confidence": "high",
-        "source_url": "https://www.southwark.gov.uk/southwark-presents/koppel-heights-artist-open-studios-elephant-castle"
+        "source_url": "https://www.londonperformancestudios.com/radical-rediscovery-iii-what-survives-50-years-since-the-arts-britain-ignores/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-09T15:17:10+00:00",
-      "expire_at": "2026-11-14T17:15:00+00:00",
-      "duplicate_key": "koppel-heights-open-studios-elephant-castle-2026-11-13-14"
+      "publish_at": "2026-11-16T15:56:30+00:00",
+      "expire_at": "2026-11-20T18:15:00+00:00",
+      "duplicate_key": "radical-rediscovery-iii-london-performance-studios-2026-11-20"
     },
     {
-      "id": "st-pauls-lord-mayors-show-free-entry-2026",
-      "title_en": "St Paul’s Cathedral: Lord Mayor’s Show Free Entry",
-      "title_it": "St Paul’s: ingresso gratuito per il Lord Mayor’s Show",
-      "summary_en": "Explore St Paul’s Cathedral Floor and Crypt without the usual admission charge, with an organ showcase and Evensong during the Lord Mayor’s Show.",
-      "summary_it": "Visita gratuitamente la navata e la cripta di St Paul’s, con una dimostrazione del grande organo e l’Evensong durante il Lord Mayor’s Show.",
-      "start": "2026-11-14T08:30:00+00:00",
-      "end": "2026-11-14T17:00:00+00:00",
+      "id": "anna-phillips-rhapsodie-harp-recital-2026",
+      "title_en": "Anna Phillips: Rhapsodie Harp Recital",
+      "title_it": "Anna Phillips: recital d'arpa Rhapsodie",
+      "summary_en": "Welsh harpist Anna Phillips closes her album tour with an intimate lunchtime programme of Bach, Guridi, Mathias, Grandjany and a Welsh folk-song arrangement.",
+      "summary_it": "L'arpista gallese Anna Phillips chiude il tour del suo album con un intimo concerto all'ora di pranzo: Bach, Guridi, Mathias, Grandjany e un canto tradizionale gallese.",
+      "start": "2026-11-20T13:00:00+00:00",
+      "end": "2026-11-20T14:00:00+00:00",
       "venue": {
-        "name": "St Paul’s Cathedral",
-        "address": "St Paul’s Churchyard, London",
-        "postcode": "EC4M 8AD",
-        "borough": "City of London"
+        "name": "Welsh Church of Central London",
+        "address": "30 Eastcastle Street, London",
+        "postcode": "W1W 8DJ",
+        "borough": "City of Westminster"
       },
       "price": {
         "amount_gbp": 0,
-        "display": "Free: Cathedral Floor and Crypt",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 8,
-        "reason": "A rare free-access day opens the Cathedral Floor and Crypt, adding live organ interpretation to one of London’s defining buildings.",
-        "breakdown": {
-          "non_obvious": 2,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 0,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.stpauls.co.uk/whats-on/lord-mayors-show-day-2026",
-      "verification": {
-        "verified_at": "2026-11-09T15:17:10+00:00",
-        "confidence": "high",
-        "source_url": "https://www.stpauls.co.uk/whats-on/lord-mayors-show-day-2026"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-11-09T15:17:10+00:00",
-      "expire_at": "2026-11-14T17:15:00+00:00",
-      "duplicate_key": "st-pauls-lord-mayors-show-free-entry-2026-11-14"
-    },
-    {
-      "id": "lord-mayors-show-2026",
-      "title_en": "The Lord Mayor’s Show 2026",
-      "title_it": "Il Lord Mayor’s Show 2026",
-      "summary_en": "The world’s oldest civic procession brings 6,500 participants, horses, floats and international performers through the Square Mile after a revived Thames flotilla.",
-      "summary_it": "La più antica processione civica del mondo porta nella City 6.500 partecipanti, cavalli, carri e artisti internazionali dopo il ritorno della flottiglia sul Tamigi.",
-      "start": "2026-11-14T11:00:00+00:00",
-      "end": "2026-11-14T14:30:00+00:00",
-      "venue": {
-        "name": "Lord Mayor’s Show route",
-        "address": "Mansion House, Walbrook, London",
-        "postcode": "EC4N 8BH",
-        "borough": "City of London"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "heritage-history",
-      "advanced": {
-        "score": 8,
-        "reason": "An 800-year civic ritual temporarily takes over the Square Mile, reviving its river arrival and bringing City institutions into public view.",
-        "breakdown": {
-          "non_obvious": 1,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist",
-        "Londonfy"
-      ],
-      "official_url": "https://www.cityoflondon.gov.uk/events/lord-mayors-show",
-      "verification": {
-        "verified_at": "2026-11-09T15:17:10+00:00",
-        "confidence": "high",
-        "source_url": "https://www.cityoflondon.gov.uk/events/lord-mayors-show"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-11-09T15:17:10+00:00",
-      "expire_at": "2026-11-14T14:45:00+00:00",
-      "duplicate_key": "lord-mayors-show-city-of-london-2026-11-14"
-    },
-    {
-      "id": "light-flight-festival-finchley-2026",
-      "title_en": "Light + Flight Festival at Finchley Lakeside",
-      "title_it": "Light + Flight Festival a Finchley Lakeside",
-      "summary_en": "A five-storey lakeside complex opens publicly for the first time as a temporary cultural hub of installations, film, music, performance and workshops.",
-      "summary_it": "Un complesso di cinque piani sul lago apre al pubblico per la prima volta, trasformato in un polo culturale temporaneo con installazioni, film, musica e laboratori.",
-      "start": "2026-11-14T12:00:00+00:00",
-      "end": "2026-11-15T19:00:00+00:00",
-      "venue": {
-        "name": "Finchley Lakeside",
-        "address": "Squires Lane, Finchley, London",
-        "postcode": "N3 2QT",
-        "borough": "Barnet"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
+        "display": "Free; optional retiring collection",
         "classification": "free"
       },
       "booking": {
         "required": false,
         "status": "recommended",
-        "url": "https://www.eventbrite.co.uk/e/light-flight-festival-tickets-2000253348611"
+        "url": "https://buytickets.at/annaphillipsmusic/2449358"
       },
-      "category": "community",
+      "category": "local-culture",
       "advanced": {
-        "score": 9,
-        "reason": "A previously closed lakeside complex becomes a free, resident-shaped arts hub for one weekend, unveiling a major work rooted in Barnet stories.",
+        "score": 8,
+        "reason": "A one-off Welsh cultural recital in a Grade II-listed chapel pairs an unusual central-London setting with genuinely free entry.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 1,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.annaphillipsmusic.com/concerts",
+      "verification": {
+        "verified_at": "2026-11-16T15:56:30+00:00",
+        "confidence": "high",
+        "source_url": "https://www.annaphillipsmusic.com/concerts"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-16T15:56:30+00:00",
+      "expire_at": "2026-11-20T14:15:00+00:00",
+      "duplicate_key": "anna-phillips-rhapsodie-welsh-church-2026-11-20"
+    },
+    {
+      "id": "illuminate-bermondsey-rotherhithe-2026",
+      "title_en": "Illuminate Bermondsey & Rotherhithe Lantern Procession",
+      "title_it": "Processione delle lanterne Illuminate Bermondsey & Rotherhithe",
+      "summary_en": "A neighbourhood-made lantern procession moves from The Blue to Southwark Park with a samba band, then lights the bandstand for an evening finale of local music.",
+      "summary_it": "Una processione di lanterne create nel quartiere parte da The Blue verso Southwark Park con una banda samba, per un finale musicale attorno al chiosco illuminato.",
+      "start": "2026-11-20T17:00:00+00:00",
+      "end": "2026-11-20T19:30:00+00:00",
+      "venue": {
+        "name": "The Blue Market",
+        "address": "4 Market Place, Southwark Park Road, London",
+        "postcode": "SE16 3UQ",
+        "borough": "Southwark"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "community",
+      "advanced": {
+        "score": 10,
+        "reason": "A free, one-night procession turns local Thames-side stories and residents' handmade lanterns into a shared journey through SE16.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
           "unusual_access": 2,
           "local_character": 1,
           "value": 2
@@ -201,97 +150,47 @@
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.lightandflight.co.uk/",
+      "official_url": "https://www.southwark.gov.uk/southwark-presents/illuminate-bermondsey-rotherhithe-2026-lantern-procession",
       "verification": {
-        "verified_at": "2026-11-09T15:17:10+00:00",
+        "verified_at": "2026-11-16T15:56:30+00:00",
         "confidence": "high",
-        "source_url": "https://www.barnet.gov.uk/news/light-flight-two-festival-weekends-free-events-november-mark-barnets-year-creativity"
+        "source_url": "https://www.southwark.gov.uk/southwark-presents/illuminate-bermondsey-rotherhithe-2026-lantern-procession"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-09T15:17:10+00:00",
-      "expire_at": "2026-11-15T19:15:00+00:00",
-      "duplicate_key": "light-flight-festival-finchley-lakeside-2026-11-14-15"
+      "publish_at": "2026-11-16T15:56:30+00:00",
+      "expire_at": "2026-11-20T19:45:00+00:00",
+      "duplicate_key": "illuminate-bermondsey-rotherhithe-2026-11-20"
     },
     {
-      "id": "keats-house-when-i-have-fears-2026",
-      "title_en": "When I Have Fears at Keats House",
-      "title_it": "When I Have Fears alla Keats House",
-      "summary_en": "Poets Julia Bird and Mike Sims explore the Gothic, ghostly side of John Keats through readings and conversation inside his Hampstead home, with tea and cake.",
-      "summary_it": "I poeti Julia Bird e Mike Sims esplorano il lato gotico e spettrale di John Keats con letture e conversazione nella sua casa di Hampstead, con tè e torta.",
-      "start": "2026-11-14T15:00:00+00:00",
-      "end": "2026-11-14T16:30:00+00:00",
+      "id": "discover-your-mosque-open-day-2026",
+      "title_en": "Discover Your Mosque Open Day",
+      "title_it": "Discover Your Mosque: giornata aperta",
+      "summary_en": "East London Mosque welcomes first-time and non-Muslim visitors for guided tours, conversation, tea and an exhibition confronting Islamophobia and harmful stereotypes.",
+      "summary_it": "La East London Mosque accoglie chi visita per la prima volta e i non musulmani con tour guidati, conversazioni, tè e una mostra contro islamofobia e stereotipi.",
+      "start": "2026-11-21T11:00:00+00:00",
+      "end": "2026-11-21T15:00:00+00:00",
       "venue": {
-        "name": "Keats House",
-        "address": "10 Keats Grove, London",
-        "postcode": "NW3 2RR",
-        "borough": "Camden"
+        "name": "London Muslim Centre, Entrance 1",
+        "address": "46 Whitechapel Road, London",
+        "postcode": "E1 1JX",
+        "borough": "Tower Hamlets"
       },
       "price": {
-        "amount_gbp": 10,
-        "display": "£10",
-        "classification": "cheap"
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
       },
       "booking": {
         "required": true,
         "status": "required",
-        "url": "https://www.eventbrite.co.uk/e/when-i-have-fears-the-spooky-and-sublime-john-keats-tickets-1999669184360"
+        "url": "https://www.eastlondonmosque.org.uk/forms/discover-your-mosque-nov-26"
       },
-      "category": "heritage-history",
+      "category": "community",
       "advanced": {
-        "score": 9,
-        "reason": "A one-off Gothic reading inside Keats’s own house connects poetry, place and local literary history at a genuinely low ticket price.",
+        "score": 10,
+        "reason": "A major Whitechapel institution offers unusual community-led access, combining local history, frank conversation and a free guided visit.",
         "breakdown": {
           "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 1
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.lovecamden.org/whats-on/when-i-have-fears-the-spooky-and-sublime-john-keats-99ea8038",
-      "verification": {
-        "verified_at": "2026-11-09T15:17:10+00:00",
-        "confidence": "high",
-        "source_url": "https://www.lovecamden.org/whats-on/when-i-have-fears-the-spooky-and-sublime-john-keats-99ea8038"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-11-09T15:17:10+00:00",
-      "expire_at": "2026-11-14T16:45:00+00:00",
-      "duplicate_key": "keats-house-when-i-have-fears-2026-11-14"
-    },
-    {
-      "id": "lord-mayors-show-free-guided-walks-2026",
-      "title_en": "Lord Mayor’s Show Free City Guided Walks",
-      "title_it": "Passeggiate gratuite nella City dopo il Lord Mayor’s Show",
-      "summary_en": "Qualified City guides lead four randomly allocated routes through the Square Mile, connecting its buildings, people and traditions to the Lord Mayor’s Show.",
-      "summary_it": "Guide qualificate conducono quattro itinerari assegnati casualmente nella City, collegando edifici, personaggi e tradizioni alla storia del Lord Mayor’s Show.",
-      "start": "2026-11-14T15:00:00+00:00",
-      "end": "2026-11-14T17:30:00+00:00",
-      "venue": {
-        "name": "No 1 Poultry",
-        "address": "1 Poultry, London",
-        "postcode": "EC2R 8EJ",
-        "borough": "City of London"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free; optional donations welcome",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "urban-exploration",
-      "advanced": {
-        "score": 9,
-        "reason": "Four free routes turn the post-procession City into a guided history lesson, with frequent departures and no advance booking needed.",
-        "breakdown": {
-          "non_obvious": 2,
           "place_story": 2,
           "unusual_access": 2,
           "local_character": 1,
@@ -301,16 +200,16 @@
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.lordmayorsshow.london/guided-walks/",
+      "official_url": "https://www.eastlondonmosque.org.uk/forms/discover-your-mosque-nov-26",
       "verification": {
-        "verified_at": "2026-11-09T15:17:10+00:00",
+        "verified_at": "2026-11-16T15:56:30+00:00",
         "confidence": "high",
-        "source_url": "https://www.lordmayorsshow.london/guided-walks/"
+        "source_url": "https://www.eastlondonmosque.org.uk/forms/discover-your-mosque-nov-26"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-09T15:17:10+00:00",
-      "expire_at": "2026-11-14T17:45:00+00:00",
-      "duplicate_key": "lord-mayors-show-free-city-guided-walks-2026-11-14"
+      "publish_at": "2026-11-16T15:56:30+00:00",
+      "expire_at": "2026-11-21T15:15:00+00:00",
+      "duplicate_key": "discover-your-mosque-east-london-mosque-2026-11-21"
     }
   ]
 }
