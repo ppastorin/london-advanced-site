@@ -1,16 +1,66 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-11-16T15:56:30+00:00",
-  "valid_from": "2026-11-16",
+  "generated_at": "2026-11-19T15:02:04+00:00",
+  "valid_from": "2026-11-19",
   "valid_until": "2026-11-22",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
     "illuminate-bermondsey-rotherhithe-2026",
     "discover-your-mosque-open-day-2026",
-    "radical-rediscovery-iii-2026"
+    "rebel-footprints-housmans-2026"
   ],
   "events": [
+    {
+      "id": "model-railway-weekend-croydon-2026",
+      "title_en": "Model Railway Weekend at Croydon Clocktower",
+      "title_it": "Weekend dei modellini ferroviari a Croydon Clocktower",
+      "summary_en": "Croydon Model Railway Society fills the Clocktower's civic hall with layouts inspired by the borough, alongside hands-on Brio tracks for younger visitors.",
+      "summary_it": "La Croydon Model Railway Society riempie la sala civica del Clocktower con plastici ispirati al borough e piste Brio da provare per i visitatori più giovani.",
+      "start": "2026-11-20T11:00:00+00:00",
+      "end": "2026-11-21T16:00:00+00:00",
+      "venue": {
+        "name": "Braithwaite Hall, Croydon Town Hall",
+        "address": "Katharine Street, Croydon",
+        "postcode": "CR9 1ET",
+        "borough": "Croydon"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 9,
+        "reason": "A free, locally built portrait of Croydon's railway identity temporarily takes over the borough's civic hall for two days.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonfy"
+      ],
+      "official_url": "https://museumofcroydon.com/whats-on-listings/n4icoyse2c1yb4fkfgjp2bp3spux6j",
+      "verification": {
+        "verified_at": "2026-11-19T15:02:04+00:00",
+        "confidence": "high",
+        "source_url": "https://museumofcroydon.com/whats-on-listings/n4icoyse2c1yb4fkfgjp2bp3spux6j"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-19T15:02:04+00:00",
+      "expire_at": "2026-11-21T16:15:00+00:00",
+      "duplicate_key": "model-railway-weekend-croydon-clocktower-2026-11-20-21"
+    },
     {
       "id": "radical-rediscovery-iii-2026",
       "title_en": "Radical Rediscovery III: What Survives?",
@@ -52,12 +102,12 @@
       ],
       "official_url": "https://www.londonperformancestudios.com/radical-rediscovery-iii-what-survives-50-years-since-the-arts-britain-ignores/",
       "verification": {
-        "verified_at": "2026-11-16T15:56:30+00:00",
+        "verified_at": "2026-11-19T15:02:04+00:00",
         "confidence": "high",
         "source_url": "https://www.londonperformancestudios.com/radical-rediscovery-iii-what-survives-50-years-since-the-arts-britain-ignores/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-16T15:56:30+00:00",
+      "publish_at": "2026-11-19T15:02:04+00:00",
       "expire_at": "2026-11-20T18:15:00+00:00",
       "duplicate_key": "radical-rediscovery-iii-london-performance-studios-2026-11-20"
     },
@@ -102,12 +152,12 @@
       ],
       "official_url": "https://www.annaphillipsmusic.com/concerts",
       "verification": {
-        "verified_at": "2026-11-16T15:56:30+00:00",
+        "verified_at": "2026-11-19T15:02:04+00:00",
         "confidence": "high",
         "source_url": "https://www.annaphillipsmusic.com/concerts"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-16T15:56:30+00:00",
+      "publish_at": "2026-11-19T15:02:04+00:00",
       "expire_at": "2026-11-20T14:15:00+00:00",
       "duplicate_key": "anna-phillips-rhapsodie-welsh-church-2026-11-20"
     },
@@ -148,16 +198,17 @@
         }
       },
       "newsletter_sources": [
-        "Londonist"
+        "Londonist",
+        "Londonfy"
       ],
       "official_url": "https://www.southwark.gov.uk/southwark-presents/illuminate-bermondsey-rotherhithe-2026-lantern-procession",
       "verification": {
-        "verified_at": "2026-11-16T15:56:30+00:00",
+        "verified_at": "2026-11-19T15:02:04+00:00",
         "confidence": "high",
         "source_url": "https://www.southwark.gov.uk/southwark-presents/illuminate-bermondsey-rotherhithe-2026-lantern-procession"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-16T15:56:30+00:00",
+      "publish_at": "2026-11-19T15:02:04+00:00",
       "expire_at": "2026-11-20T19:45:00+00:00",
       "duplicate_key": "illuminate-bermondsey-rotherhithe-2026-11-20"
     },
@@ -202,14 +253,64 @@
       ],
       "official_url": "https://www.eastlondonmosque.org.uk/forms/discover-your-mosque-nov-26",
       "verification": {
-        "verified_at": "2026-11-16T15:56:30+00:00",
+        "verified_at": "2026-11-19T15:02:04+00:00",
         "confidence": "high",
         "source_url": "https://www.eastlondonmosque.org.uk/forms/discover-your-mosque-nov-26"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-16T15:56:30+00:00",
+      "publish_at": "2026-11-19T15:02:04+00:00",
       "expire_at": "2026-11-21T15:15:00+00:00",
       "duplicate_key": "discover-your-mosque-east-london-mosque-2026-11-21"
+    },
+    {
+      "id": "rebel-footprints-housmans-2026",
+      "title_en": "Rebel Footprints: Radical London Book Launch",
+      "title_it": "Rebel Footprints: lancio sulla Londra radicale",
+      "summary_en": "David Rosenberg launches the third edition of his guide to London's radical geographies, linking suffragettes, Chartists, trade unionists and hidden sites of protest.",
+      "summary_it": "David Rosenberg presenta la terza edizione della sua guida alle geografie radicali di Londra, tra suffragette, cartisti, sindacalisti e luoghi nascosti della protesta.",
+      "start": "2026-11-21T19:00:00+00:00",
+      "end": "2026-11-21T20:30:00+00:00",
+      "venue": {
+        "name": "Housmans Bookshop",
+        "address": "5 Caledonian Road, London",
+        "postcode": "N1 9DX",
+        "borough": "Islington"
+      },
+      "price": {
+        "amount_gbp": 5,
+        "display": "£5 standard; £2.50 low-income",
+        "classification": "cheap"
+      },
+      "booking": {
+        "required": true,
+        "status": "required",
+        "url": "https://housmans.com/event/book-launch-rebel-footprints-with-david-rosenberg/"
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 9,
+        "reason": "An independent radical bookshop hosts a one-off exploration of protest, social movements and the hidden London places where they unfolded.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 1,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://housmans.com/event/book-launch-rebel-footprints-with-david-rosenberg/",
+      "verification": {
+        "verified_at": "2026-11-19T15:02:04+00:00",
+        "confidence": "high",
+        "source_url": "https://housmans.com/event/book-launch-rebel-footprints-with-david-rosenberg/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-19T15:02:04+00:00",
+      "expire_at": "2026-11-21T20:45:00+00:00",
+      "duplicate_key": "rebel-footprints-housmans-kings-cross-2026-11-21"
     }
   ]
 }
