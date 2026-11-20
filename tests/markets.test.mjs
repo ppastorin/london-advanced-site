@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import test from 'node:test';
-import {addDays,calendarDays,expandMarkets,filterMarkets,londonToday,monthEnd,validateFeed,weekendRange} from '../markets/engine.mjs';
+import {addDays,calendarDays,day,expandMarkets,filterMarkets,londonToday,monthEnd,rangeBounds,validateFeed,weekendRange} from '../markets/engine.mjs';
 import {marketCard} from '../markets/render.mjs';
 const feed=JSON.parse(await readFile('content/markets.json','utf8'));
 const all=expandMarkets(feed);
@@ -10,6 +10,14 @@ test('market data has valid bilingual records, sources, hours and unique stable 
  assert.equal(new Set(all.map(m=>m.occurrenceId)).size,all.length);
  assert.ok(all.some(m=>m.date>'2027-02-28'&&m.evidence==='announced'));
  assert.ok(all.every(m=>!['slc-beckenham','hounslow','giant-january','big-south-london'].includes(m.id)));
+});
+test('Columbia Road Flower Market runs every Sunday in the verified coverage',()=>{
+ const market=feed.markets.find(m=>m.id==='columbia-road-flower');
+ assert.ok(market);assert.equal(market.category,'flowers');assert.deepEqual(market.recurrence.days,[0]);
+ const dates=all.filter(m=>m.id===market.id);
+ assert.ok(dates.length>=10);assert.ok(dates.every(m=>day(m.date).getUTCDay()===0));
+ assert.ok(dates.every(m=>m.start==='08:00'&&m.end==='15:00'));
+ assert.ok(!dates.some(m=>m.date>='2026-12-24'&&m.date<='2027-01-03'));
 });
 test('winter breaks and holiday uncertainty never become invented recurring events',()=>{
  for(const id of ['kew','chiswick-flower'])assert.ok(!all.some(m=>m.id===id&&m.date.startsWith('2027-01')));
@@ -35,6 +43,15 @@ test('category, area, multilingual query and date filters combine and hide past 
  assert.equal(filterMarkets(all,{query:'Chiswick',category:'carboot',area:'East'}).length,0);
  assert.ok(filterMarkets(all,{query:'produttori',category:'farmers',today:'2027-02-01'}).length);
 });
+test('date ranges are inclusive, accept one bound and safely reorder reversed bounds',()=>{
+ assert.deepEqual(rangeBounds('2026-12-01','2026-12-07'),['2026-12-01','2026-12-07']);
+ assert.deepEqual(rangeBounds('2026-12-07','2026-12-01'),['2026-12-01','2026-12-07']);
+ assert.deepEqual(rangeBounds('2026-12-03',''),['2026-12-03','2026-12-03']);
+ assert.equal(rangeBounds('bad',''),null);
+ const result=filterMarkets(all,{from:'2026-12-01',until:'2026-12-07'});
+ assert.ok(result.some(m=>m.date==='2026-12-01'));assert.ok(result.some(m=>m.date==='2026-12-07'));
+ assert.ok(result.every(m=>m.date>='2026-12-01'&&m.date<='2026-12-07'));
+});
 test('cards escape untrusted fields and distinguish missing hours and category graphics',()=>{
  const m={...all.find(m=>m.id==='growing'),name:'<img onerror=alert(1)>',description:{en:'<script>bad</script>',it:'Test'}};
  const html=marketCard(m,'en','2026-11-20');assert.ok(!html.includes('<script>'));assert.match(html,/&lt;img/);assert.match(html,/Check organiser for hours/);assert.match(html,/Category illustration/);assert.match(html,/Regular schedule/);assert.doesNotMatch(html,/undefined/);
@@ -47,6 +64,8 @@ test('bilingual pages are paired, indexable and linked to real related routes',a
   assert.ok(html.includes(`class="language-switch" href="/${other}/"`));
   assert.match(html,/application\/ld\+json/);assert.match(html,/og:description/);assert.match(html,/twitter:image/);assert.match(html,/hreflang="x-default"/);
   assert.match(html,/data-market-app/);assert.match(html,/data-markets-fallback/);
+  assert.match(html,/id="market-date-from"/);assert.match(html,/id="market-date-until"/);
+  assert.doesNotMatch(html,/id="market-date"/);
   const journal=locale==='it'?'mercati-gastronomici-londra-oltre-borough':'london-food-markets-beyond-borough';
   assert.ok(html.includes(`/journal/${journal}/`));
   assert.ok(!html.includes('undefined'));
