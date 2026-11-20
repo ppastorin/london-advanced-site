@@ -10,6 +10,7 @@ const studioDirectory = path.join(root, "studio");
 const canonicalOrigin = "https://www.londonadvanced.com";
 
 const TOOL_PATHS = {
+  "markets": { en: ["Markets calendar", "/markets/", "Find market dates, hours and organiser links."], it: ["Calendario dei mercati", "/it/strumenti/mercati/", "Trova date, orari e link agli organizzatori."] },
   "london-dashboard": {
     en: ["London Dashboard", "/home/london-dashboard/", "Check weather, transport, air quality and events before leaving."],
     it: ["Dashboard di Londra", "/it/strumenti/dashboard-londra/", "Controlla meteo, trasporti, qualità dell’aria ed eventi prima di partire."]

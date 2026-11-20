@@ -36,6 +36,12 @@ function walk(directory) {
 }
 
 const requiredAssets = [
+  "dist/markets/index.html",
+  "dist/it/strumenti/mercati/index.html",
+  "dist/data/markets.json",
+  "dist/markets/app.mjs",
+  "dist/markets/engine.mjs",
+  "dist/markets/markets.css",
   "dist/index.html",
   "dist/styles.css",
   "dist/app.js",
@@ -207,6 +213,7 @@ try {
 }
 
 const expectedTools = new Map([
+  ["markets", { href: "/markets/", embedUrl: "/markets/" }],
   ["london-dashboard", {
     href: "/home/london-dashboard/",
     embedUrl: "https://london-now.ppastorin.workers.dev/"
@@ -233,7 +240,7 @@ const expectedTools = new Map([
   ["bookshops", { href: "/bookshops/", embedUrl: "/bookshops/" }]
 ]);
 
-const nativeTools = new Set(["loo-finder", "charity-shops", "bookshops"]);
+const nativeTools = new Set(["loo-finder", "charity-shops", "bookshops", "markets"]);
 
 const homepageHtml = requireFile("dist/index.html");
 const italianHomepageHtml = requireFile("dist/it/index.html");
@@ -671,11 +678,11 @@ for (const { href } of expectedTools.values()) {
 }
 const aboutHtml = requireFile("dist/about/index.html");
 const italianAboutHtml = requireFile("dist/it/chi-sono/index.html");
-if (!aboutHtml.includes("website’s eight free tools") || !aboutHtml.includes("Eight practical ways to plan") || !aboutHtml.includes("8 free tools")) {
-  fail("The English About page must describe all eight tools.");
+if (!aboutHtml.includes("website’s nine free tools") || !aboutHtml.includes("Nine practical ways to plan") || !aboutHtml.includes("9 free tools") || !aboutHtml.includes('href="/markets/"')) {
+  fail("The English About page must describe and link all nine tools.");
 }
-if (!italianAboutHtml.includes("nove strumenti gratuiti") || !italianAboutHtml.includes('href="/it/strumenti/trova-un-bagno/"') || !italianAboutHtml.includes('href="/it/strumenti/negozi-di-beneficenza/"') || !italianAboutHtml.includes('href="/it/strumenti/librerie/"') || !italianAboutHtml.includes('href="/meteo-dress/"')) {
-  fail("The Italian About page must describe and link all nine tools.");
+if (!italianAboutHtml.includes("dieci strumenti gratuiti") || !italianAboutHtml.includes('href="/it/strumenti/mercati/"') || !italianAboutHtml.includes('href="/it/strumenti/trova-un-bagno/"') || !italianAboutHtml.includes('href="/it/strumenti/negozi-di-beneficenza/"') || !italianAboutHtml.includes('href="/it/strumenti/librerie/"') || !italianAboutHtml.includes('href="/meteo-dress/"')) {
+  fail("The Italian About page must describe and link all ten tools.");
 }
 if (/five free tools|Five practical ways|5 free tools/i.test(aboutHtml) || /I cinque strumenti gratuiti/i.test(italianAboutHtml)) {
   fail("The About pages still contain the retired five-tool wording.");

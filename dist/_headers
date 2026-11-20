@@ -9,6 +9,12 @@
 /data/events.json
   Cache-Control: public, max-age=300, must-revalidate
 
+/data/markets.json
+  Cache-Control: public, max-age=300, must-revalidate
+
+/markets/*
+  Cache-Control: no-cache
+
 /assets/*
   Cache-Control: public, max-age=604800
 

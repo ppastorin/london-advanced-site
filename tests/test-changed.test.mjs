@@ -5,7 +5,8 @@ import { planForFiles } from "../scripts/test-changed.mjs";
 test("unknown application paths fall back to the full suite", () => {
   const plan = planForFiles(["components/new-widget.js"]);
   assert.equal(plan.mode, "full");
-  assert.equal(plan.tests.length, 32);
+  assert.equal(plan.tests.length, 33);
+  assert.ok(plan.tests.includes("tests/markets.test.mjs"));
 });
 
 test("shared build paths fall back to the full suite", () => {

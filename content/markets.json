@@ -1,0 +1,2139 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-20",
+  "coverageStart": "2026-11-20",
+  "coverageEnd": "2027-02-28",
+  "timezone": "Europe/London",
+  "holidayHold": {
+    "from": "2026-12-24",
+    "until": "2027-01-03"
+  },
+  "markets": [
+    {
+      "id": "lfm-balham",
+      "name": "Balham Farmers’ Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Henry Cavendish Primary School, Hydethorpe Road, SW12 0JA",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "09:00",
+        "end": "13:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-blackheath",
+      "name": "Blackheath Farmers’ Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Blackheath Station car park, SE3 9LA",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-ealing",
+      "name": "Ealing Farmers’ Market",
+      "category": "farmers",
+      "area": "West",
+      "venue": "Leeland Road, W13 9HH",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "09:00",
+        "end": "13:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-highbury",
+      "name": "Highbury Fields Farmers’ Market",
+      "category": "farmers",
+      "area": "North",
+      "venue": "Highbury Crescent, N5 1RR",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-kensington",
+      "name": "High Street Kensington Farmers’ Market",
+      "category": "farmers",
+      "area": "West",
+      "venue": "Phillimore Walk, W8 7RX",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-islington",
+      "name": "Islington Farmers’ Market",
+      "category": "farmers",
+      "area": "North",
+      "venue": "Chapel Market, N1 9PZ",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-marylebone",
+      "name": "Marylebone Farmers’ Market",
+      "category": "farmers",
+      "area": "Central",
+      "venue": "St Vincent Street and Aybrook Street, W1U 4DF",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-notting-hill",
+      "name": "Notting Hill Farmers’ Market",
+      "category": "farmers",
+      "area": "West",
+      "venue": "Fox Primary School, Edge Street, W8 7PP",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-parliament-hill",
+      "name": "Parliament Hill Farmers’ Market",
+      "category": "farmers",
+      "area": "North",
+      "venue": "William Ellis School, Highgate Road, NW5 1RN",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-pimlico-road",
+      "name": "Pimlico Road Farmers’ Market",
+      "category": "farmers",
+      "area": "Central",
+      "venue": "Orange Square, SW1W 8UT",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "09:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-queens-park",
+      "name": "Queen’s Park Farmers’ Market",
+      "category": "farmers",
+      "area": "North",
+      "venue": "Salusbury Primary School, NW6 6RG",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-south-kensington",
+      "name": "South Kensington Farmers’ Market",
+      "category": "farmers",
+      "area": "West",
+      "venue": "Bute Street, SW7 3EX",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "09:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-swiss-cottage",
+      "name": "Swiss Cottage Farmers’ Market",
+      "category": "farmers",
+      "area": "North",
+      "venue": "Eton Avenue, NW3 3EU",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          3
+        ],
+        "start": "10:00",
+        "end": "15:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-twickenham",
+      "name": "Twickenham Farmers’ Market",
+      "category": "farmers",
+      "area": "West",
+      "venue": "Holly Road Car Park, TW1 4HF",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "09:00",
+        "end": "13:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-walthamstow",
+      "name": "Walthamstow Farmers’ Market",
+      "category": "farmers",
+      "area": "East",
+      "venue": "Town Square, E17 7JN",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-west-hampstead",
+      "name": "West Hampstead Farmers’ Market",
+      "category": "farmers",
+      "area": "North",
+      "venue": "Thameslink Station Forecourt, Iverson Road, NW6 1PF",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "lfm-wimbledon",
+      "name": "Wimbledon Farmers’ Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Wimbledon Park Primary School, Havana Road, SW19 8EJ",
+      "source": "https://www.lfm.org.uk/markets-home/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "09:00",
+        "end": "13:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "herne",
+      "name": "Herne Hill Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Station Square, Herne Hill",
+      "source": "https://www.weareccfm.com/our-markets/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "16:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "oval",
+      "name": "Oval Farmers’ Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "St Mark’s Church, opposite Oval station",
+      "source": "https://www.weareccfm.com/our-markets/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "15:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "stepney",
+      "name": "Stepney Farmers’ Market",
+      "category": "farmers",
+      "area": "East",
+      "venue": "Stepney City Farm",
+      "source": "https://www.weareccfm.com/our-markets/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "15:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "telegraph",
+      "name": "Telegraph Hill Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Telegraph Hill Park",
+      "source": "https://www.weareccfm.com/our-markets/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "15:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "victoria-park",
+      "name": "Victoria Park Market",
+      "category": "farmers",
+      "area": "East",
+      "venue": "Victoria Park",
+      "source": "https://www.thegoodmarketcompany.com/locations",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "16:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      },
+      "image": {
+        "src": "/assets/journal/16-food-markets-03.webp",
+        "credit": "Paolo Pastorino",
+        "alt": {
+          "en": "Victoria Park Market beneath the trees",
+          "it": "Il mercato di Victoria Park sotto gli alberi"
+        }
+      }
+    },
+    {
+      "id": "lloyd",
+      "name": "Lloyd Park Market",
+      "category": "farmers",
+      "area": "East",
+      "venue": "Lloyd Park, near William Morris Gallery",
+      "source": "https://www.thegoodmarketcompany.com/locations",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "16:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "crystal-park",
+      "name": "Crystal Palace Park Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Crystal Palace Park",
+      "source": "https://www.thegoodmarketcompany.com/locations",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "16:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "crystal-food",
+      "name": "Crystal Palace Food Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Haynes Lane, SE19",
+      "source": "https://www.crystalpalacefoodmarket.co.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Local and sustainably sourced food, tucked away down Haynes Lane.",
+        "it": "Prodotti locali e alimenti da filiere sostenibili, lungo Haynes Lane."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "15:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "brockley",
+      "name": "Brockley Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Lewisham College car park, Lewisham Way, SE4 1UT",
+      "source": "https://www.brockleymarket.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "growing",
+      "name": "Growing Communities Farmers’ Market",
+      "category": "farmers",
+      "area": "North",
+      "venue": "Stoke Newington",
+      "source": "https://growingcommunities.org/market",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Organic food from small farms, with almost all producers within 60 miles of London.",
+        "it": "Alimenti biologici di piccole aziende agricole, quasi tutte entro 60 miglia da Londra."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": null,
+        "end": null,
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "surbiton",
+      "name": "Surbiton Farmers’ Market",
+      "category": "farmers",
+      "area": "West",
+      "venue": "Maple Road, Surbiton",
+      "source": "https://www.surbitonfarmersmarket.co.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "09:00",
+        "end": "13:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "kew",
+      "name": "Kew Village Market",
+      "category": "craft",
+      "area": "West",
+      "venue": "Kew Gardens station, TW9 3PZ",
+      "source": "https://kewvillagemarket.org/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Local food, handmade gifts and live music in Kew village.",
+        "it": "Specialità gastronomiche, creazioni artigianali e musica dal vivo a Kew."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          1
+        ],
+        "excludeMonths": [
+          1
+        ]
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "chiswick-flower",
+      "name": "Chiswick Flower Market",
+      "category": "flowers",
+      "area": "West",
+      "venue": "Old Market Place, Chiswick High Road, W4 2DR",
+      "source": "https://chiswickflowermarket.com/calendar/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Plants and flowers from specialist traders.",
+        "it": "Piante e fiori da venditori specializzati."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "09:30",
+        "end": "15:30",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          1
+        ],
+        "excludeMonths": [
+          1
+        ]
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "09:30",
+          "end": "15:30"
+        }
+      ]
+    },
+    {
+      "id": "chiswick-cheese",
+      "name": "Chiswick Cheese Market",
+      "category": "food",
+      "area": "West",
+      "venue": "Old Market Place, Chiswick High Road, W4 2DR",
+      "source": "https://www.chiswickcheesemarket.uk/visit-us/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Artisan cheeses and accompaniments from independent traders.",
+        "it": "Formaggi artigianali e specialità da abbinare, da venditori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "09:30",
+        "end": "15:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "chiswick-food",
+      "name": "The Food Market Chiswick",
+      "category": "farmers",
+      "area": "West",
+      "venue": "The Pavilion, Dukes Meadows, W4 2RX",
+      "source": "https://thefoodmarketchiswick.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "hall-sun",
+      "name": "Hall Place Farmers Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Hall Place, Bourne Road, Bexley",
+      "source": "https://www.myfarmersmarket.co.uk/bexley/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          1
+        ]
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "14:00",
+          "venue": "East Lawn, Hall Place, Bexley"
+        }
+      ]
+    },
+    {
+      "id": "hall-sat",
+      "name": "Hall Place Saturday Farmers Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Hall Place Courtyard, Bexley",
+      "source": "https://www.myfarmersmarket.co.uk/bexley/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          6
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          3
+        ]
+      },
+      "dates": [
+        {
+          "date": "2026-11-21",
+          "start": "10:00",
+          "end": "14:00"
+        },
+        {
+          "date": "2026-12-19",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "chislehurst",
+      "name": "Chislehurst Farmers Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Hornbrook House car park, High Street, BR7 5AB",
+      "source": "https://www.myfarmersmarket.co.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "14:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          3
+        ]
+      },
+      "dates": [
+        {
+          "date": "2026-12-20",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "wanstead",
+      "name": "Wanstead Market",
+      "category": "craft",
+      "area": "East",
+      "venue": "Wanstead High Street, E11 2AE",
+      "source": "https://www.aceeventsltd.co.uk/our-markets",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "16:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "woodford",
+      "name": "South Woodford Market",
+      "category": "craft",
+      "area": "East",
+      "venue": "George Lane, E18 1AY",
+      "source": "https://www.aceeventsltd.co.uk/our-markets",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "16:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28",
+        "nth": [
+          3
+        ],
+        "excludeDates": [
+          "2026-12-20"
+        ]
+      }
+    },
+    {
+      "id": "horniman",
+      "name": "Horniman Market",
+      "category": "farmers",
+      "area": "South",
+      "venue": "Bandstand Terrace, Horniman Gardens, Forest Hill",
+      "source": "https://www.horniman.ac.uk/event/horniman-market/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Seasonal food and produce from independent traders.",
+        "it": "Prodotti di stagione e specialità di produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": null,
+        "end": null,
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "canopy",
+      "name": "Canopy Market",
+      "category": "craft",
+      "area": "Central",
+      "venue": "West Handyside Canopy, King’s Cross, N1C 4BH",
+      "source": "https://canopymarket.co.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "A covered market for produce, artisan food, designer-makers and original art.",
+        "it": "Un mercato coperto con prodotti alimentari, specialità artigianali, design e opere originali."
+      },
+      "recurrences": [
+        {
+          "days": [
+            5
+          ],
+          "start": "12:00",
+          "end": "20:00",
+          "from": "2027-01-04",
+          "until": "2027-02-28"
+        },
+        {
+          "days": [
+            6,
+            0
+          ],
+          "start": "11:00",
+          "end": "18:00",
+          "from": "2027-01-04",
+          "until": "2027-02-28"
+        }
+      ]
+    },
+    {
+      "id": "spital-antiques",
+      "name": "Old Spitalfields Antiques Market",
+      "category": "flea",
+      "area": "East",
+      "venue": "Old Spitalfields Market, 16 Horner Square, E1 6EW",
+      "source": "https://www.oldspitalfieldsmarket.com/events/antiques-market",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "recurrence": {
+        "days": [
+          4
+        ],
+        "start": "08:00",
+        "end": "17:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "jubilee-antiques",
+      "name": "Jubilee Antiques & Collectables",
+      "category": "flea",
+      "area": "Central",
+      "venue": "Jubilee Market, Covent Garden",
+      "source": "https://jubileemarket.co.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "recurrence": {
+        "days": [
+          1
+        ],
+        "start": "05:00",
+        "end": "17:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "jubilee-craft",
+      "name": "Jubilee Arts & Crafts",
+      "category": "craft",
+      "area": "Central",
+      "venue": "Jubilee Market, Covent Garden",
+      "source": "https://jubileemarket.co.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "recurrence": {
+        "days": [
+          6,
+          0
+        ],
+        "start": "10:00",
+        "end": "18:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "greenwich",
+      "name": "Greenwich Market",
+      "category": "craft",
+      "area": "South",
+      "venue": "Greenwich Market",
+      "source": "https://greenwichmarket.london/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Arts, crafts, antiques and independent traders. The stall mix varies by day.",
+        "it": "Arte, artigianato, antiquariato e venditori indipendenti. I banchi cambiano secondo il giorno."
+      },
+      "recurrence": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "start": "10:00",
+        "end": "17:30",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "capital",
+      "name": "Capital Carboot",
+      "category": "carboot",
+      "area": "Central",
+      "venue": "Pimlico Academy, Chichester Street entrance, SW1V 3AT",
+      "source": "https://www.capitalcarboot.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Browse second-hand clothing, homewares and unexpected finds.",
+        "it": "Abbigliamento usato, oggetti per la casa e occasioni da scoprire."
+      },
+      "recurrences": [
+        {
+          "days": [
+            0
+          ],
+          "start": "10:00",
+          "end": "14:30",
+          "from": "2026-11-20",
+          "until": "2027-02-28"
+        },
+        {
+          "days": [
+            6
+          ],
+          "start": "10:00",
+          "end": "14:30",
+          "from": "2026-11-20",
+          "until": "2027-02-28",
+          "nth": [
+            1,
+            2
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "date": "2026-12-05",
+          "start": "10:00",
+          "end": "14:30"
+        },
+        {
+          "date": "2026-12-12",
+          "start": "10:00",
+          "end": "14:30"
+        }
+      ],
+      "note": {
+        "en": "Early entry from 10:00; general entry from 11:30. Check the organiser for admission bands.",
+        "it": "Ingresso anticipato dalle 10:00; ingresso generale dalle 11:30. Controlla le fasce di prezzo sul sito."
+      }
+    },
+    {
+      "id": "chiswick-boot",
+      "name": "Chiswick Car Boot",
+      "category": "carboot",
+      "area": "West",
+      "venue": "Chiswick School, Staveley Road, W4 3UN",
+      "source": "https://chiswickcarbootsale.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Browse second-hand clothing, homewares and unexpected finds.",
+        "it": "Abbigliamento usato, oggetti per la casa e occasioni da scoprire."
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "06:30",
+          "end": "12:30"
+        },
+        {
+          "date": "2027-02-07",
+          "start": "06:30",
+          "end": "12:30"
+        },
+        {
+          "date": "2027-03-07",
+          "start": "06:30",
+          "end": "12:30"
+        }
+      ]
+    },
+    {
+      "id": "bootyfull",
+      "name": "Bootyfull Car Boot",
+      "category": "carboot",
+      "area": "North",
+      "venue": "William Ellis School, Highgate Road, NW5 1RN",
+      "source": "https://www.bootyfullcarboot.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Browse second-hand clothing, homewares and unexpected finds.",
+        "it": "Abbigliamento usato, oggetti per la casa e occasioni da scoprire."
+      },
+      "recurrences": [
+        {
+          "days": [
+            0
+          ],
+          "start": "11:00",
+          "end": "14:00",
+          "from": "2026-11-20",
+          "until": "2026-12-13"
+        },
+        {
+          "days": [
+            0
+          ],
+          "start": "11:00",
+          "end": "14:00",
+          "from": "2027-02-07",
+          "until": "2027-02-28"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2026-12-13",
+          "start": "11:00",
+          "end": "14:00"
+        },
+        {
+          "date": "2027-02-07",
+          "start": "11:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "tottenham",
+      "name": "Tottenham Car Boot",
+      "category": "carboot",
+      "area": "North",
+      "venue": "Tottenham Community Sports Centre, N17 8AD",
+      "source": "https://www.countrysidepromotions.co.uk/car-boots/tottenham-car-boot",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Browse second-hand clothing, homewares and unexpected finds.",
+        "it": "Abbigliamento usato, oggetti per la casa e occasioni da scoprire."
+      },
+      "recurrence": {
+        "days": [
+          4
+        ],
+        "start": "07:00",
+        "end": "13:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "peckham",
+      "name": "Peckham Carboot",
+      "category": "carboot",
+      "area": "South",
+      "venue": "Harris Academy, entrance off Bellenden Road, SE15 5DZ",
+      "source": "https://www.peckhamcarboot.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Browse second-hand clothing, homewares and unexpected finds.",
+        "it": "Abbigliamento usato, oggetti per la casa e occasioni da scoprire."
+      },
+      "dates": [
+        {
+          "date": "2026-11-22",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "balham-boot",
+      "name": "Balham Carboot",
+      "category": "carboot",
+      "area": "South",
+      "venue": "Henry Cavendish School, Hydethorpe Road, SW12 0JA",
+      "source": "https://www.balhamcarboot.com/balhamcarboot",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Browse second-hand clothing, homewares and unexpected finds.",
+        "it": "Abbigliamento usato, oggetti per la casa e occasioni da scoprire."
+      },
+      "dates": [
+        {
+          "date": "2026-11-29",
+          "start": "10:00",
+          "end": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "hackney-flea",
+      "name": "Hackney Flea Market",
+      "category": "flea",
+      "area": "North",
+      "venue": "Stoke Newington Church Street, N16 0AS",
+      "source": "https://hackneyfleamarket.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-11-28",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-11-29",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2027-01-09",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2027-01-10",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2027-02-13",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2027-02-14",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2027-03-13",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2027-03-14",
+          "start": "10:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "thriftmas",
+      "name": "Thriftmas Market",
+      "category": "flea",
+      "area": "North",
+      "venue": "Stoke Newington Church Street, N16 0AS",
+      "source": "https://hackneyfleamarket.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-12-19",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-20",
+          "start": "10:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "giant",
+      "name": "The Giant London Flea",
+      "category": "flea",
+      "area": "East",
+      "venue": "Queen Elizabeth Olympic Park, E15 2GZ",
+      "source": "https://hackneyfleamarket.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2027-02-07",
+          "start": "10:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "drumsheds",
+      "name": "Drumsheds Flea",
+      "category": "flea",
+      "area": "North",
+      "venue": "6 Glover Drive, N18 3HF",
+      "source": "https://hackneyfleamarket.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2027-06-06",
+          "start": "10:00",
+          "end": "16:00"
+        },
+        {
+          "date": "2027-09-26",
+          "start": "10:00",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "jewellers",
+      "name": "Independent Jewellers Christmas Market",
+      "category": "craft",
+      "area": "East",
+      "venue": "Big Penny Social",
+      "source": "https://hackneyfleamarket.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-11-29",
+          "start": "11:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "go-doodle",
+      "name": "Go East Vintage Flea Weekender",
+      "category": "flea",
+      "area": "South",
+      "venue": "Doodle Bar Arches, 60 Druid Street, SE1 2EZ",
+      "source": "https://www.goeast.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-11-21",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-11-22",
+          "start": "10:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "go-rope",
+      "name": "Go East at Ropewalk",
+      "category": "flea",
+      "area": "South",
+      "venue": "Ropewalk, Maltby Street, SE1 3PA",
+      "source": "https://www.goeast.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-11-27",
+          "start": "17:30",
+          "end": "21:00"
+        }
+      ]
+    },
+    {
+      "id": "go-wapping",
+      "name": "Go East Vintage Festive Weekender",
+      "category": "flea",
+      "area": "East",
+      "venue": "Wapping Power Station, Wapping Wall, E1W 3SF",
+      "source": "https://www.goeast.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-12-05",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "go-baths",
+      "name": "Go East Vintage & Creatives Market",
+      "category": "flea",
+      "area": "East",
+      "venue": "Eastway Baths, 80 Eastway, E9 5JH",
+      "source": "https://www.goeast.uk/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2027-01-23",
+          "start": "14:00",
+          "end": "19:00"
+        }
+      ]
+    },
+    {
+      "id": "duck-richmond",
+      "name": "Richmond Duck Pond Market",
+      "category": "craft",
+      "area": "West",
+      "venue": "Heron Square, TW9 1EP",
+      "source": "https://duckpondmarket.com/events",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-11-21",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-11-22",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-11-28",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-11-29",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-05",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-06",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-12",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-13",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-19",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-20",
+          "start": "10:30",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "duck-chiswick",
+      "name": "Duck Pond Christmas Market",
+      "category": "craft",
+      "area": "West",
+      "venue": "Chiswick House & Gardens, W4 2RP",
+      "source": "https://duckpondmarket.com/events",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-05",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-19",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-20",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-21",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-22",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-23",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-24",
+          "start": "10:00",
+          "end": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "duck-ruislip",
+      "name": "Ruislip Duck Pond Market",
+      "category": "craft",
+      "area": "West",
+      "venue": "Manor Farm, Ruislip",
+      "source": "https://duckpondmarket.com/events",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-05",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-19",
+          "start": "10:00",
+          "end": "15:00"
+        },
+        {
+          "date": "2026-12-20",
+          "start": "10:00",
+          "end": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "duck-night",
+      "name": "Ruislip Christmas Night Market",
+      "category": "craft",
+      "area": "West",
+      "venue": "Manor Farm, Ruislip",
+      "source": "https://duckpondmarket.com/events",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-04",
+          "start": "16:00",
+          "end": "21:00"
+        },
+        {
+          "date": "2026-12-18",
+          "start": "16:00",
+          "end": "21:00"
+        }
+      ]
+    },
+    {
+      "id": "duck-highgate",
+      "name": "Highgate Extraordinary Artisans",
+      "category": "craft",
+      "area": "North",
+      "venue": "Lauderdale House, N6 5HG",
+      "source": "https://duckpondmarket.com/events",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-12",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-13",
+          "start": "11:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "duck-gunnersbury",
+      "name": "Duck Pond Christmas Market",
+      "category": "craft",
+      "area": "West",
+      "venue": "Gunnersbury Park",
+      "source": "https://duckpondmarket.com/events",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-13",
+          "start": "10:00",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "duck-harrow",
+      "name": "Artisans at Headstone Museum",
+      "category": "craft",
+      "area": "West",
+      "venue": "The Great Barn, Headstone Manor, Harrow",
+      "source": "https://duckpondmarket.com/events",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-13",
+          "start": "10:00",
+          "end": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "fox-rsa",
+      "name": "Crafty Fox Christmas Market",
+      "category": "craft",
+      "area": "Central",
+      "venue": "RSA House, 8 John Adam Street, WC2N 6EZ",
+      "source": "https://www.craftyfoxmarket.co.uk/markets",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-05",
+          "start": "11:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "fox-crossing",
+      "name": "Crafty Fox Christmas Market",
+      "category": "craft",
+      "area": "Central",
+      "venue": "The Crossing, 1 Granary Square, N1C 4AA",
+      "source": "https://www.craftyfoxmarket.co.uk/markets",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-12",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-13",
+          "start": "11:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "solo-martin",
+      "name": "SoLo St Martin’s Christmas Market",
+      "category": "craft",
+      "area": "Central",
+      "venue": "St Martin-in-the-Fields, Trafalgar Square, WC2N 4JJ",
+      "source": "https://www.solocraftfair.com/upcomingevents",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-11-21",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-11-22",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-11-28",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-11-29",
+          "start": "11:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "solo-southbank",
+      "name": "SoLo South Bank Christmas Market",
+      "category": "craft",
+      "area": "South",
+      "venue": "The Pier, Between the Bridges, South Bank",
+      "source": "https://www.solocraftfair.com/upcomingevents",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-11-22",
+          "start": "12:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-11-29",
+          "start": "12:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-06",
+          "start": "12:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-13",
+          "start": "12:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-20",
+          "start": "12:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "solo-leadenhall",
+      "name": "SoLo Leadenhall Christmas Market",
+      "category": "craft",
+      "area": "Central",
+      "venue": "Leadenhall Market",
+      "source": "https://www.solocraftfair.com/upcomingevents",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-12",
+          "start": "12:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "solo-city",
+      "name": "SoLo City of London Christmas Market",
+      "category": "craft",
+      "area": "Central",
+      "venue": "1 Sky Garden Walk, EC3M 8AF",
+      "source": "https://www.solocraftfair.com/upcomingevents",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-11-23",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-11-24",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-11-25",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-11-26",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-11-27",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-11-28",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-11-29",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-11-30",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-12-01",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-12-02",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-12-03",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-12-04",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-12-05",
+          "start": "11:00",
+          "end": "18:00"
+        },
+        {
+          "date": "2026-12-06",
+          "start": "11:00",
+          "end": "18:00"
+        }
+      ]
+    },
+    {
+      "id": "urban-ecology",
+      "name": "Urban Makers Christmas Market",
+      "category": "craft",
+      "area": "East",
+      "venue": "Ecology Pavilion, 125 Grove Road, E3 5RP",
+      "source": "https://urbanmakers.co.uk/christmas-market-mile-end-ecology-pavilion",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-11-28",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-11-29",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-12",
+          "start": "11:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-13",
+          "start": "11:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "slc-newcross",
+      "name": "So Last Century Vintage Fair",
+      "category": "flea",
+      "area": "South",
+      "venue": "Goldsmiths, University of London",
+      "source": "https://www.solastcenturyfair.co.uk/next-events/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-11-29",
+          "start": "10:30",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "slc-dulwich",
+      "name": "So Last Century Christmas Vintage Market",
+      "category": "flea",
+      "area": "South",
+      "venue": "Dulwich Picture Gallery",
+      "source": "https://www.solastcenturyfair.co.uk/next-events/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-12-05",
+          "start": "10:00",
+          "end": "17:00"
+        },
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "lazy",
+      "name": "The Lazy Flea Christmas Market",
+      "category": "flea",
+      "area": "West",
+      "venue": "Chiswick House & Gardens, W4 2RP",
+      "source": "https://www.eventbrite.co.uk/e/the-lazy-flea-christmas-market-chiswick-house-gardens-december-tickets-2003510288205",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-12-12",
+          "start": "10:30",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-13",
+          "start": "10:30",
+          "end": "16:00"
+        }
+      ],
+      "note": {
+        "en": "Early entry 10:30 to 11:30; general entry from 11:30. Check admission prices.",
+        "it": "Ingresso anticipato dalle 10:30 alle 11:30; ingresso generale dalle 11:30. Controlla i prezzi."
+      }
+    },
+    {
+      "id": "frock",
+      "name": "Frock Me! Vintage Fair",
+      "category": "flea",
+      "area": "West",
+      "venue": "Chelsea Old Town Hall, King’s Road, SW3 5EE",
+      "source": "https://www.frockmevintagefashion.com/2026-dates",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Vintage objects, collectables and second-hand finds.",
+        "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "id": "feast",
+      "name": "West Norwood Feast",
+      "category": "craft",
+      "area": "South",
+      "venue": "West Norwood",
+      "source": "https://westnorwoodfeast.com/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "feast-christmas",
+      "name": "Feast Christmas Market",
+      "category": "craft",
+      "area": "South",
+      "venue": "West Norwood Library and Picturehouse",
+      "source": "https://westnorwoodfeast.com/feast-christmas-market-2026/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Handmade goods, independent makers and artisan food.",
+        "it": "Creazioni artigianali, piccoli produttori e specialità gastronomiche."
+      },
+      "dates": [
+        {
+          "date": "2026-12-12",
+          "start": "11:00",
+          "end": "15:00"
+        }
+      ]
+    }
+  ]
+}

@@ -56,6 +56,15 @@ window.LONDON_ADVANCED = {
       href: "/loo/",
       embedUrl: "/loo/",
       icon: "loo"
+    },
+    {
+      "id": "markets",
+      "name": "Markets calendar",
+      "short": "Plan your next market visit",
+      "description": "Find London flea markets, car boots, farmers and craft markets by date and area.",
+      "href": "/markets/",
+      "embedUrl": "/markets/",
+      "icon": "calendar"
     }
   ],
   stories: [
