@@ -46,3 +46,23 @@ test("the itinerary index and detail menus expose the correct active section", a
     assert.match(header, /href="\/(?:it\/itinerari|itineraries)\/" aria-current="page"/);
   }
 });
+
+test("every full site menu includes Bookshops and Charity Shops in both desktop and mobile navigation", async () => {
+  let checked = 0;
+  for (const file of await htmlFiles(dist)) {
+    if (file.includes(`${path.sep}studio${path.sep}`)) continue;
+    const html = await readFile(file, "utf8");
+    const header = html.match(/<header class="site-nav">[\s\S]*?<\/header>/)?.[0] || "";
+    if (!header.includes('class="desktop-nav"')) continue;
+    const italian = /<html lang="it(?:-IT)?"/i.test(html) || file.includes(`${path.sep}it${path.sep}`);
+    const routes = italian ? ["/it/strumenti/librerie/", "/it/strumenti/negozi-di-beneficenza/"] : ["/bookshops/", "/charity-shops/"];
+    for (const route of routes) {
+      const desktop = header.match(/<nav class="desktop-nav"[\s\S]*?<\/nav>/)?.[0] || "";
+      const mobile = header.slice(header.indexOf('class="nav-menu-panel mobile-menu-panel"'));
+      assert.ok(desktop.includes(`href="${route}"`), `${file}: desktop menu missing ${route}`);
+      assert.ok(mobile.includes(`href="${route}"`), `${file}: mobile menu missing ${route}`);
+    }
+    checked += 1;
+  }
+  assert.ok(checked >= 40, "expected complete bilingual site navigation coverage");
+});
