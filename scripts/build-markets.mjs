@@ -59,9 +59,16 @@ export async function linkMarkets() {
  for(const file of files) {
   const before=await readFile(file,'utf8'),it=/<html[^>]*lang="it/.test(before),route=marketRoutes[it?'it':'en'],t=COPY[it?'it':'en'];
   const link=`<a href="${route}" data-market-crosslink><span>${it?'Scegli il prossimo mercato':'Plan your next market visit'}</span><strong>${t.title}</strong></a>`;
+  const missingShopLinks = body => [
+   [it?'/it/strumenti/negozi-di-beneficenza/':'/charity-shops/',it?'Negozi solidali':'Charity Shops'],
+   [it?'/it/strumenti/librerie/':'/bookshops/',it?'Librerie':'Bookshops']
+  ].filter(([href])=>!body.includes(`href="${href}"`)).map(([href,label])=>`<a href="${href}"><strong>${label}</strong></a>`).join('');
   let after=before.replace(/<header class="site-nav">[\s\S]*?<\/header>/,header=>{
-   header=header.replace(/(<div class="[^"]*tools-menu-panel[^"]*">)([\s\S]*?)(<\/div>)/,(_,a,b,c)=>a+b+(b.includes(`href="${route}"`)?'':link)+c);
-   header=header.replace(/(<div class="[^"]*mobile-menu-panel[^"]*">)([\s\S]*?)(<\/div>)/,(_,a,b,c)=>a+(b.includes(`href="${route}"`)?b:b.replace(/(<p class="mobile-menu-heading">(?:Explore|Esplora)<\/p>)/,link+'$1'))+c);
+   header=header.replace(/(<div class="[^"]*tools-menu-panel[^"]*">)([\s\S]*?)(<\/div>)/,(_,a,b,c)=>a+b+(b.includes(`href="${route}"`)?'':link)+missingShopLinks(b)+c);
+   header=header.replace(/(<div class="[^"]*mobile-menu-panel[^"]*">)([\s\S]*?)(<\/div>)/,(_,a,b,c)=>{
+    const additions=(b.includes(`href="${route}"`)?'':link)+missingShopLinks(b);
+    return a+b.replace(/(<p class="mobile-menu-heading">(?:Explore|Esplora)<\/p>)/,additions+'$1')+c;
+   });
    return header;
   });
   // Add a practical crosslink inside the relevant articles, without changing editorial content.

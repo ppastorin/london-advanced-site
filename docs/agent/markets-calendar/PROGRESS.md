@@ -2,7 +2,7 @@
 
 ## Phase 1: approved implementation and production release
 
-Status: implementation complete; 167 tests and Cloudflare dry-run package validation pass. Release awaiting exact-head CI and production verification. Base a000f8cb2eb0842dcc190b9daf7518cbfc7cc7c2.
+Status: deployed and verified on 20 November 2026. PR #164 passed exact-head CI, merged, and Cloudflare Workers Builds succeeded. Both live language routes and 14 page/data/module/style/illustration assets match the tested bytes. Base a000f8cb2eb0842dcc190b9daf7518cbfc7cc7c2.
 Branch on completion: feat/phase-1-markets-calendar.
 The owner explicitly approved creation, both languages, crosslinks and production deployment. This overrides recon-only and no-merge defaults for this release.
 
@@ -20,4 +20,6 @@ Generated output: the required existing build also refreshes previously stale tr
 
 Open items: image permissions for additional documentary thumbnails; unresolved research entries held outside public data.
 Files touched: recorded by final Git manifest.
-Next: open PR, verify changed-file manifest, wait for exact-head Site safety checks, merge and verify production. Set the approved fortnightly refresh after the production release.
+Next: the enabled fortnightly research refresh begins 4 December 2026 morning, Europe/London. See automation/MARKETS_REFRESH_PROMPT.md. Durable release evidence and exact identifiers are recorded in merged PR #164. Optional owner action: provide more owned/authorised market photos.
+
+Post-release operational record: PR head 53a755eee295cf9416b22986735530cd619ab660, merge a746f625485f082c4ee8b619760bbb0b80e90025, Site safety checks 44759771257, Workers Build c2efb0dd-eb54-460b-a78b-76b7af54fac9. All 138 intended files verified in PR manifest. Live homepage/search/sitemap crosslinks pass in both languages. Release evidence is also retained in the merged PR body, without creating a redundant production deployment for this local status update.

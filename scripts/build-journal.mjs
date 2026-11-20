@@ -10,6 +10,14 @@ const studioDirectory = path.join(root, "studio");
 const canonicalOrigin = "https://www.londonadvanced.com";
 
 const TOOL_PATHS = {
+  "charity-shops": {
+    en: ["Charity Shops", "/charity-shops/", "Find nearby charity shops and second-hand stops."],
+    it: ["Negozi solidali", "/it/strumenti/negozi-di-beneficenza/", "Trova negozi solidali e occasioni di seconda mano."]
+  },
+  "bookshops": {
+    en: ["Bookshops", "/bookshops/", "Explore independent, specialist and second-hand bookshops."],
+    it: ["Librerie", "/it/strumenti/librerie/", "Esplora librerie indipendenti, specializzate e dell’usato."]
+  },
   "markets": { en: ["Markets calendar", "/markets/", "Find market dates, hours and organiser links."], it: ["Calendario dei mercati", "/it/strumenti/mercati/", "Trova date, orari e link agli organizzatori."] },
   "london-dashboard": {
     en: ["London Dashboard", "/home/london-dashboard/", "Check weather, transport, air quality and events before leaving."],
