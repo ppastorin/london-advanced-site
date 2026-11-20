@@ -18,6 +18,13 @@ export function weekendRange(today) {
   return [saturday,addDays(saturday,1)];
 }
 export function validDate(value) { return ISO_DATE.test(value||'') && !Number.isNaN(day(value).valueOf()) && day(value).toISOString().slice(0,10)===value; }
+export function rangeBounds(from='',until='') {
+  const first=validDate(from)?from:'',last=validDate(until)?until:'';
+  if(!first&&!last)return null;
+  if(!first)return [last,last];
+  if(!last)return [first,first];
+  return first<=last?[first,last]:[last,first];
+}
 export function validateFeed(feed) {
   const errors=[], ids=new Set(), categories=['farmers','craft','flea','carboot','flowers','food'];
   if(feed.timezone!=='Europe/London'||!validDate(feed.updated)||!validDate(feed.coverageEnd)) errors.push('Invalid feed dates or timezone');

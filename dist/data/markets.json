@@ -672,6 +672,32 @@
       ]
     },
     {
+      "id": "columbia-road-flower",
+      "name": "Columbia Road Flower Market",
+      "category": "flowers",
+      "area": "East",
+      "venue": "Columbia Road, E2 7RG",
+      "source": "https://columbiaroad.info/flower-market/",
+      "checked": "2026-11-20",
+      "description": {
+        "en": "Flowers, plants and independent shops along Columbia Road.",
+        "it": "Fiori, piante e negozi indipendenti lungo Columbia Road."
+      },
+      "note": {
+        "en": "The published closing time is approximate and some traders may finish earlier.",
+        "it": "L’orario di chiusura pubblicato è indicativo e alcuni venditori possono terminare prima."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "08:00",
+        "end": "15:00",
+        "from": "2026-11-20",
+        "until": "2027-02-28"
+      }
+    },
+    {
       "id": "chiswick-flower",
       "name": "Chiswick Flower Market",
       "category": "flowers",
