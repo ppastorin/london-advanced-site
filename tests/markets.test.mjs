@@ -52,6 +52,22 @@ test('bilingual pages are paired, indexable and linked to real related routes',a
   assert.ok(!html.includes('undefined'));
  }
 });
+test('support request is prominent, bilingual and not duplicated near the bottom',async()=>{
+ const expected={
+  en:['markets','If you want to support these tools','Buy me a flat white'],
+  it:['it/strumenti/mercati','Se vuoi sostenere questi strumenti','Offrimi un flat white']
+ };
+ for(const [locale,[route,message,action]] of Object.entries(expected)) {
+  const html=await readFile(`dist/${route}/index.html`,'utf8');
+  const introEnd=html.indexOf('</header>');
+  const controls=html.indexOf('<section data-market-app');
+  const support=html.indexOf('class="markets-support"');
+  assert.ok(support>introEnd&&support<controls,`${locale} support block must precede the tool controls`);
+  assert.ok(html.includes(message));assert.ok(html.includes(`>${action}</a>`));
+  assert.equal(html.match(/class="markets-support"/g)?.length,1);
+  assert.equal(html.match(/href="https:\/\/ko-fi\.com\/paolopastorino"/g)?.length,2,`${locale} should retain only the prominent CTA and footer link`);
+ }
+});
 test('both homepages, search indexes, menus, article pathways and sitemap include the tool',async()=>{
  for(const [locale,home,route] of [['en','dist/index.html','/markets/'],['it','dist/it/index.html','/it/strumenti/mercati/']]) {
   const html=await readFile(home,'utf8');assert.ok(html.includes(`href="${route}" data-track="app:`));
