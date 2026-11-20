@@ -54,5 +54,6 @@
       "en": ["bookshop", "bookshops", "bookstore", "independent bookshop", "specialist books", "second hand books", "rare books", "antiquarian", "children's books", "art books", "book café"],
       "it": ["libreria", "librerie", "libreria indipendente", "libreria specializzata", "libri usati", "libri rari", "antiquaria", "libri per bambini", "libri d'arte", "caffè libreria"]
     }
-  }
+  },
+  {"id": "markets", "keywords": {"en": ["markets", "market calendar", "flea", "vintage", "car boot", "farmers", "craft", "Chiswick", "Kew", "Peckham", "Hackney", "antiques"], "it": ["mercati", "mercatini", "calendario mercati", "pulci", "usato", "artigianato", "produttori", "antiquariato", "Chiswick", "Kew", "Peckham", "Hackney"]}}
 ]

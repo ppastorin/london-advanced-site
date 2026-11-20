@@ -218,6 +218,32 @@
       "content": "Find the right shelves Explore independent, specialist, second-hand and historic London bookshops by subject and experience."
     },
     {
+      "id": "tool:markets:en",
+      "type": "tool",
+      "locale": "en",
+      "title": "Markets calendar",
+      "summary": "Find London flea markets, car boots, farmers and craft markets by date and area.",
+      "url": "/markets/",
+      "tags": [
+        "Plan your next market visit"
+      ],
+      "keywords": [
+        "markets",
+        "market calendar",
+        "flea",
+        "vintage",
+        "car boot",
+        "farmers",
+        "craft",
+        "Chiswick",
+        "Kew",
+        "Peckham",
+        "Hackney",
+        "antiques"
+      ],
+      "content": "Plan your next market visit Find London flea markets, car boots, farmers and craft markets by date and area."
+    },
+    {
       "id": "article:blackheath-greenwich-walk:en",
       "type": "article",
       "locale": "en",
@@ -449,6 +475,28 @@
       "updated_at": "2026-10-24T10:05:35+01:00"
     },
     {
+      "id": "article:london-parades:en",
+      "type": "article",
+      "locale": "en",
+      "title": "London on parade: five events that put the city in the street",
+      "summary": "Five processions, five different Londons: international spectacle, British Chinese culture, LGBTQIA+ visibility, Caribbean community and the ancient rituals of the City.",
+      "url": "/journal/london-parades-five-public-celebrations/",
+      "tags": [
+        "London parades",
+        "New Year’s Day Parade",
+        "Chinese New Year",
+        "Pride in London",
+        "Notting Hill Carnival",
+        "Lord Mayor’s Show"
+      ],
+      "keywords": [
+        "Across London · Public celebrations",
+        "London Parades: Five Events and Their Different Histories"
+      ],
+      "content": "From a distance, London’s parades can look interchangeable: barriers, amplified music, uniforms, costumes and phones held above the crowd. They are not. Each of these five events belongs to a different history and speaks for a different London. The photographs here move through the year, from New Year’s Day to November. Together they show the street used as a stage, a place of cultural continuity, a demand for visibility, a neighbourhood celebration and a piece of civic theatre. New Year’s Day: London as an international stage The London New Year’s Day Parade began in 1987. On 1 January, marching bands, cheerleaders, dancers, acrobats and community groups fill a central route that usually runs from Piccadilly towards Westminster. Its character is deliberately international. Many of the marching bands travel from the United States, while entries from London boroughs place local groups beside performers accustomed to large stadium shows. The result is less a traditional London ritual than an exuberant piece of global entertainment staged against some of the city’s most formal streets. The scale creates an odd contrast. Piccadilly and Whitehall normally organise people through traffic lights, pavements and guarded entrances. For a few hours they become a performance corridor. Watching the spectators is almost as revealing as watching the procession: the first day of the year begins with London looking outward rather than retreating indoors. Chinese New Year: a community celebration that outgrew Chinatown London’s official Chinese New Year celebrations were established by the London Chinatown Chinese Association and expanded into Trafalgar Square in 2002. The parade links the civic space of the square with Chinatown, using dragon and lion teams, floats and performance to make British Chinese culture visible in the centre of the capital. It is tempting to describe the event only through colour and spectacle. That misses the important point. Chinatown is not a decorative setting but a working centre for businesses, associations and community life. The parade brings that identity into streets shared with theatres, shops and visitors from across London. The date follows the lunar calendar and the route and programme can change. Arrive early if the procession matters to you, but stay beyond it. The stages, food, family gatherings and smaller performances around Chinatown are not secondary attractions. They are the context that gives the parade meaning. Pride: celebration, visibility and unfinished work London’s first official Gay Pride Rally took place in 1972, when about 2,000 people marched in response to the defiant politics that followed the Stonewall uprising. Pride in London is now vastly larger, but its organisers still describe the parade as both celebration and protest. That distinction matters. Corporate floats and bright costumes are the most obvious images, yet the procession also gives space to charities, campaigners, families and communities whose rights and safety cannot be taken for granted. Treating Pride as a colourful summer festival strips it of the reason it occupies the street. The route through the West End places LGBTQIA+ visibility in some of London’s most symbolic public spaces. It also produces severe crowding. Choose one position rather than attempting to chase the parade, leave crossings clear and look beyond the largest floats. The quieter community groups often carry the sharper story. Notting Hill Carnival: much more than one parade Notting Hill Carnival grew from the work of Caribbean activists and local organisers responding to racism and tension in west London. Claudia Jones’s indoor Caribbean carnival in 1959 and Rhaune Laslett’s outdoor community festival in 1966 are both essential parts of its history. Today’s Carnival takes over the neighbourhood during the August bank holiday. Mas bands and the main procession are central, but static sound systems, steel pan, food and the occupation of residential streets are equally important. Calling it simply a parade reduces a complex, community led event to the part that is easiest to photograph. The crowds can be overwhelming and the streets work differently from an ordinary festival site. Plan an approach and an exit, expect stations and roads to be managed or closed, and do not assume you can cross the route whenever you want. Photograph with attention to the people who are participating, not as if the neighbourhood were a backdrop supplied for visitors. The Lord Mayor’s Show: the City performing its own continuity The Lord Mayor’s Show is the outlier. Its origins lie in the early thirteenth century, when King John allowed the City of London to appoint its own mayor on condition that the new office holder travelled to Westminster to pledge loyalty to the Crown. More than 800 years later, the procession still conveys the new Lord Mayor through the City. Livery companies, military units, schools, charities and ceremonial vehicles surround the state coach. Ancient symbolism and present day institutions appear in the same moving sequence. This is not a pageant about London as a whole. It belongs specifically to the City of London, with its separate government, traditions and relationship with the Crown. That narrower focus is exactly what makes it useful. The show turns structures that can seem obscure into a public performance and reveals how carefully the Square Mile maintains its historical identity. Five events, five versions of public space These events should not be forced into a single ranking or itinerary. Their dates, audiences and purposes are different. What connects them is the temporary reassignment of the street. Traffic is removed, movement is choreographed and a group claims the right to be seen. The useful question is not which parade is best. It is who is speaking, which history is being carried and how the surrounding part of London changes for the day. Look past the largest float and the loudest performance. The revealing details are often at the edge: a steward explaining a tradition, a family waiting for its group, a band preparing in a side street or the rapid return of buses and barriers once the event has passed. All five are free to watch from public viewing areas, although some events offer ticketed stands or controlled zones. Dates, routes and access arrangements change, so use the official event pages before travelling rather than relying on an old map.",
+      "updated_at": "2026-11-13T20:22:16Z"
+    },
+    {
       "id": "article:magnificent-seven-cemeteries:en",
       "type": "article",
       "locale": "en",
@@ -468,6 +516,28 @@
       ],
       "content": "The phrase ‘Magnificent Seven’ makes London’s Victorian cemeteries sound like a collection to be completed. They are better understood as seven different answers to the same urban crisis. In the early nineteenth century, London’s small churchyards could no longer cope with a rapidly growing population. Large, landscaped cemeteries were established outside the built up centre, combining burial space with architecture, planting and the rituals of a public garden. Highgate became the celebrity of the group. Its Egyptian Avenue, Circle of Lebanon and famous residents deserve attention, and our separate Highgate Cemetery guide explains how to read its East and West sides. But concentrating on Highgate alone misses the range of the Magnificent Seven. The other six move from formal avenues to dense woodland, from neoclassical mausoleums to East End social history. Brompton Cemetery: the ceremonial avenue Brompton is the most composed of the seven. A long central avenue leads towards the domed chapel, while colonnades and side paths create the geometry of an open air cathedral. The ground is flatter and less enclosed than Highgate or Abney Park, so monuments can be read as part of a deliberate urban plan rather than as discoveries in a wood. It is also the cemetery most visibly absorbed into everyday London. People cross it on foot or bicycle, rest on benches and use it as a green route between Earl’s Court, Chelsea and Fulham. Among the best known memorials are those of suffragette leader Emmeline Pankhurst and physician John Snow, whose investigation of the 1854 Soho cholera outbreak helped establish the link between contaminated water and disease. Brompton remains a working cemetery; its popularity as a park never cancels its primary purpose. Official visitor information → Kensal Green Cemetery: ambition in stone Opened in 1833, Kensal Green was the first of the seven. Its broad scale and neoclassical architecture set an early standard for the new garden cemeteries. This is the place for mausoleums, obelisks and monuments designed to project status long after death. The competition can feel excessive, but it gives the landscape its energy. The Brunel family grave offers a useful contrast. Marc and Isambard Kingdom Brunel, engineers associated with tunnels, bridges, railways and ships, are commemorated by a comparatively restrained stone. Nearby monuments, including the tomb of politician Sir William Molesworth, show how architecture could turn a family plot into a miniature temple. The Friends of Kensal Green run tours that make the enormous site far easier to read. Official visitor information → West Norwood Cemetery: invention, publishing and the Greek Necropolis West Norwood feels more concentrated. Its slopes, listed monuments and Greek Orthodox section create abrupt changes of scale: a modest headstone may sit close to a mausoleum built like an ancient temple. Recent conservation has restored important structures and added a visitor centre, while the Friends’ research connects the architecture to the people buried here. Three lives show the range. Hiram Maxim developed the machine gun that bears his name; Gideon Mantell helped identify the Iguanodon and shape early palaeontology; Isabella Beeton became inseparable from Victorian domestic publishing through Mrs Beeton’s Book of Household Management . Her grave is shared with her husband and publisher Samuel Orchart Beeton. Read the inscriptions as evidence rather than simply collecting famous names: careers, family losses and Victorian social codes are compressed into a few lines. Official visitor information → Abney Park: cemetery, arboretum and dissenting ground Abney Park in Stoke Newington was conceived as both a cemetery and an arboretum. Its association with Nonconformist communities gave it a more inclusive identity than an Anglican churchyard, while its planting turned the burial ground into a botanical landscape. Today it is also a Local Nature Reserve, and many paths feel more like woodland than formal cemetery avenues. The balance between monument and vegetation is the point. Ivy, roots and self seeded trees do not merely provide atmosphere; they reveal the challenge of conserving fragile memorials within a living habitat. The lion on animal showman Frank C. Bostock’s grave is a memorable landmark, but Abney rewards slower attention to its chapel, inscriptions, radical histories and changing ecology. The Abney Park Trust coordinates tours, events and volunteering with Hackney Council. Official visitor information → Nunhead Cemetery: hills, woodland and a distant St Paul’s Nunhead has the strongest sense of topography. Paths climb through open and wooded ground towards the roofless Anglican chapel, and from the higher western side a carefully framed gap in the trees reveals St Paul’s Cathedral. The view connects this quiet south London hill with the city whose overcrowding made the cemetery necessary. Nature is never separate from the history here. Meadows, mature trees and uneven paths have made Nunhead an important habitat as well as a place of remembrance. The Friends of Nunhead Cemetery organise guided walks, conservation work and a well loved annual open day. A tour is especially useful because many stories sit away from the obvious routes, and the site’s scale can otherwise reduce the visit to a pleasant woodland walk. Official visitor information → Tower Hamlets Cemetery Park: the East End remembered through a nature reserve Tower Hamlets is the least monumental looking of the seven today, which is precisely why it matters. Heavy wartime damage, post war clearance and decades of natural growth altered the formal cemetery. What survives is now read through a dense urban nature reserve managed with local volunteers. The memorials record dockers, craftspeople, merchants, children and families shaped by migration and the industries of the East End. Here the story is less about a procession of grand tombs and more about population: who lived in east London, how communities formed, and how a burial ground became public green infrastructure. Friends of Tower Hamlets Cemetery Park combine heritage walks with wildlife work, demonstrating that conservation can protect both human memory and biodiversity. Official visitor information → Do not attempt all seven in one day The Magnificent Seven are not an efficient circuit. Choose one or two and connect them to their neighbourhoods: Abney Park with Stoke Newington, Brompton with Chelsea, Nunhead with Peckham, or Tower Hamlets with Bow and Mile End. Allow at least ninety minutes for a first visit and check the official site for seasonal gate times, tours and temporary works. These are active cemeteries and memorial landscapes, not abandoned film sets. Stay on paths where requested, never climb monuments, avoid photographing mourners or recent graves, and keep group conversations quiet. A camera is useful, but the best record is often a name or inscription researched afterwards through the relevant Friends group. The six cemeteries beyond Highgate show why the ‘Magnificent Seven’ label remains useful: not because the sites are interchangeable, but because each preserves a different relationship between London, death and public space.",
       "updated_at": "2026-11-02T21:45:51Z"
+    },
+    {
+      "id": "article:musical-london:en",
+      "type": "article",
+      "locale": "en",
+      "title": "Musical London: four music videos and the streets behind them",
+      "summary": "Rick Astley under a railway viaduct, Richard Ashcroft crossing Hoxton, Dexys on a Kennington corner and a-ha inside a south London café. Four famous videos left precise traces in ordinary streets.",
+      "url": "/journal/musical-london-music-video-locations/",
+      "tags": [
+        "London music history",
+        "Music videos",
+        "Hoxton Street",
+        "Brook Drive",
+        "Wandsworth Road",
+        "Freston Road"
+      ],
+      "keywords": [
+        "London on screen · Music videos",
+        "Musical London: Four Music Video Locations"
+      ],
+      "content": "London music history is usually attached to vanished clubs, famous studios and blue plaques. Music videos preserve something different: an ordinary pavement, a railway bridge, a corner shop or a café at one particular moment. I returned to four locations with frames from the original videos. The exercise is less about recreating the performers’ poses than testing what the camera recorded. Buildings survive, businesses disappear, signs change and a street that looked anonymous becomes recognisable once the right image is placed beside it. The historic images in this article are frames from the official videos, used to identify and discuss the locations. The contemporary photographs are mine. Rick Astley beneath the railway Never Gonna Give You Up was filmed in 1987 at several west London locations. The exterior most often mistaken for somewhere in Harrow is actually on Freston Road, close to Latimer Road station, beneath the Hammersmith and City line viaduct. The confusion has an explanation. Other scenes were filmed inside the nearby Harrow Club, whose name led many later descriptions in the wrong geographical direction. The club is in North Kensington, not Harrow. The bridge is still easy to recognise. Brick arches, the curve of the road and the compressed space beneath the tracks do most of the work. What seemed like an anonymous background became one of the most repeatedly watched pieces of London through the later phenomenon of Rickrolling. There is no attraction to enter. It remains a working street under a railway. The interesting part is precisely that mismatch between the global reach of the image and the ordinariness of the place. Richard Ashcroft walks through Hoxton The 1997 video for Bitter Sweet Symphony follows Richard Ashcroft north along the eastern side of Hoxton Street. The walk begins around the junction with Falkirk Street and is presented as one relentless forward movement, with Ashcroft refusing to alter his path for other pedestrians. Hoxton has changed substantially since the 1990s, but this section has not become unrecognisable. Shop names and uses have changed, while the pavement line, estate buildings and proportions of the street still hold the shot together. The former Golden Fried Chicken at the start of the sequence is now another chicken shop, an unusually modest form of continuity. Trying to reproduce Ashcroft’s collisions would be idiotic. Standing back and comparing the shopfront rhythm is more revealing. The video turned a local shopping street into an image of 1990s British confidence and abrasion without disguising where it was filmed. A year later, the video for Fat Les’s Vindaloo parodied the same walk on the same street. Hoxton therefore contains both the original piece of pop mythology and its almost immediate joke. Dexys on Brook Drive Come On Eileen was filmed in 1982 around Brook Drive in Kennington, between Elephant and Castle and the Imperial War Museum. Several corners appear, but the best known storefront stood at 151 Brook Drive, at the junction with Hayles Street. In the video it was Vi’s Stores. The band perform and move through streets of late Victorian terraces, parked cars, small shops and vacant land. The setting feels unstaged because much of it was simply the neighbourhood as it stood. The shop later became Brook Drive Minimarket and has since closed. Yet this is the pair of images in which the surrounding brickwork makes the comparison particularly effective. The business identity has gone, while the corner remains legible more than four decades later. This is also why music videos can become accidental urban records. Nobody watching in 1982 needed the film to explain what a south London corner shop looked like. That ordinary information is now one of its most interesting qualities. a ha at the café on Wandsworth Road The live action café scenes in a ha’s 1985 video for Take On Me were filmed at Kim’s Café, on the corner of Wandsworth Road and Pensbury Place. The premises later traded as the Savoy Café and are now occupied by a Turkish restaurant. Most of the video’s reputation rests on the transition between live action and pencil animation. Around 3,000 frames were rotoscoped, turning the café customer, played by Bunty Bailey, and Morten Harket’s comic book character into one continuous story. The London exterior is easy to overlook because the fantasy takes over so quickly. Returning to the corner brings the video back to its practical starting point: a small café, a cup of coffee and someone reading alone at a table. Unlike the other three locations, this is an operating business rather than just a public street. The façade can be compared from the pavement. Going inside should mean behaving like a customer, not treating the restaurant as a film set. Four famous images, no formal trail These locations do not form a sensible single walk. They stretch from North Kensington to Hoxton, Kennington and Wandsworth Road. Visiting them separately, when another journey takes you nearby, is more honest than manufacturing a cross London itinerary. Save the relevant official video before going and pause on the frame you want to match. Small alignments matter more than dramatic poses: the edge of an arch, the angle of a shopfront, a line of windows or the width of the pavement. The reward is not nostalgia alone. It is seeing how popular culture fixes ordinary London in memory, while the real city continues changing around the frame. 1. Copyright note: The four historical frames remain the property of their respective rights holders. They are reproduced here only to identify, discuss and compare the filming locations; London Advanced claims no ownership of them.",
+      "updated_at": "2026-11-12T22:27:27Z"
     },
     {
       "id": "article:one-leadenhall-terrace:en",
@@ -550,7 +620,7 @@
         "Leamouth · Industrial London",
         "Trinity Buoy Wharf: Lighthouse and Longplayer Guide"
       ],
-      "content": "Trinity Buoy Wharf feels less like a conventional attraction than a pocket of London that avoided being tidied up. Shipping containers have become studios, experimental structures sit beside Victorian engineering and the Thames meets the Lea under the shadow of the O2. At the centre is London’s only lighthouse. It is not a polished heritage complex. People work here, events take over parts of the site and some doors will be closed when you visit. That incompleteness is part of the appeal. A lighthouse built for experiments The current Experimental Lighthouse was built in 1864 for Trinity House. Rather than warning ships from a dangerous coast, it was used to test lamps and equipment and to train lighthouse keepers. Michael Faraday, scientific adviser to Trinity House, carried out work on the site; a small structure nearby now houses The Faraday Effect , an installation by Ana Ospina. The lighthouse is normally open to visitors at weekends, with seasonal hours and free entry. The stairs are narrow and access is limited, so check the official listing before making a dedicated journey. Reaching the lantern level is worth it for the unusual view: the river, the Lea, Docklands and the O2 line up from a place that still feels slightly outside central London’s script. Listen to a thousand year composition Inside the lighthouse, Longplayer changes the scale of the visit. Conceived by Jem Finer, the composition began at midnight on 31 December 1999 and is designed to play without repetition for a thousand years. Its live listening post uses Tibetan singing bowls and a circular arrangement that makes the room feel part instrument, part observatory. The idea could have been a gimmick. In the lighthouse it becomes more persuasive. Industrial history, tidal water and a piece of music intended to outlast everyone listening to it make time feel unusually physical. Give it several quiet minutes rather than treating it as background sound. What else is on the wharf The site rewards a slow circuit. Look for the red lightship, container studios, public sculpture and the Faraday installation. Fatboy’s Diner adds a piece of American roadside fantasy, while the river’s edge provides one of the least familiar views towards the O2. Not every artwork or business keeps the same hours as the wharf. Think of the outdoor site as the reliable part and anything indoors as a bonus unless you have checked in advance. The wharf itself is open daily, except Christmas Day. Getting there East India on the DLR is the simplest station, followed by a walk through a landscape of roads, new housing and surviving industry. The route can feel counter intuitive near the Lea crossing, so save the final map section before leaving the station. Canning Town is another option but generally makes the approach longer. Arriving on foot is appropriate: the transition from ordinary streets to the buoy wharf is part of the experience. The site is also a strong addition to a wider walk around Leamouth, the Lower Lea and the Royal Docks. How long to allow Allow at least an hour for the outdoor site and closer to two if the lighthouse is open, you sit with Longplayer or stop for food. A bright day gives the clearest views; grey weather arguably suits the industrial textures better. Wind is the more important variable. Trinity Buoy Wharf is not hidden, exactly. It is simply placed where most London itineraries stop looking. Come for the novelty of a lighthouse in London. Stay for a site where engineering, art and the river still occupy the same untidy ground.",
+      "content": "Trinity Buoy Wharf feels less like a conventional attraction than a pocket of London that avoided being tidied up. Shipping containers have become studios, experimental structures sit beside Victorian engineering and the Thames meets the Lea under the shadow of the O2. At the centre is London’s only lighthouse. It is not a polished heritage complex. People work here, events take over parts of the site and some doors will be closed when you visit. That incompleteness is part of the appeal. A lighthouse built for experiments The current Experimental Lighthouse was built in 1864 for Trinity House. Rather than warning ships from a dangerous coast, it was used to test lamps and equipment and to train lighthouse keepers. Michael Faraday, scientific adviser to Trinity House, carried out work on the site; a small structure nearby now houses The Faraday Effect , an installation by Ana Ospina. The lighthouse is normally open to visitors at weekends, with seasonal hours and free entry. The stairs are narrow and access is limited, so check the official listing before making a dedicated journey. Reaching the lantern level is worth it for the unusual view: the river, the Lea, Docklands and the O2 line up from a place that still feels slightly outside central London’s script. Listen to a thousand year composition Inside the lighthouse, Longplayer changes the scale of the visit. Conceived by artist and musician Jem Finer, the composition began at midnight on 31 December 1999 and is designed to play without repetition for a thousand years. The listening post houses the Tibetan singing bowls on which the composition was originally recorded, and Ingrid Hu's circular arrangement makes the room feel part instrument, part observatory. Longplayer is streaming continually online and can be heard through speakers placed in the lantern room and around the singing bowl installation. The idea could have been a gimmick. In the lighthouse it becomes more persuasive. Industrial history, tidal water and a piece of music intended to outlast everyone listening to it make time feel unusually physical. Give it several quiet minutes rather than treating it as background sound. What else is on the wharf The site rewards a slow circuit. Look for the red lightship, container studios, public sculpture and the Faraday installation. Fatboy’s Diner adds a piece of American roadside fantasy, while the river’s edge provides one of the least familiar views towards the O2. Not every artwork or business keeps the same hours as the wharf. Think of the outdoor site as the reliable part and anything indoors as a bonus unless you have checked in advance. The wharf itself is open daily, except Christmas Day. Getting there East India on the DLR is the simplest station, followed by a walk through a landscape of roads, new housing and surviving industry. The route can feel counter intuitive near the Lea crossing, so save the final map section before leaving the station. Canning Town is another option but generally makes the approach longer. Arriving on foot is appropriate: the transition from ordinary streets to the buoy wharf is part of the experience. The site is also a strong addition to a wider walk around Leamouth, the Lower Lea and the Royal Docks. How long to allow Allow at least an hour for the outdoor site and closer to two if the lighthouse is open, you sit with Longplayer or stop for food. A bright day gives the clearest views; grey weather arguably suits the industrial textures better. Wind is the more important variable. Trinity Buoy Wharf is not hidden, exactly. It is simply placed where most London itineraries stop looking. Come for the novelty of a lighthouse in London. Stay for a site where engineering, art and the river still occupy the same untidy ground.",
       "updated_at": "2026-11-02T21:45:51Z"
     },
     {
@@ -772,148 +842,148 @@
       "updated_at": "2026-10-09T11:22:35+01:00"
     },
     {
-      "id": "event:indian-women-second-world-war-talk:en",
+      "id": "event:model-railway-weekend-croydon-2026:en",
       "type": "event",
       "locale": "en",
-      "title": "Women’s War Work: Indian Women and the Second World War",
-      "summary": "Fri 6 Nov · National Army Museum · Free — Historian Kiran Sahota uncovers the overlooked work of Indian women in wartime services, from the Women’s Auxiliary Corps to the Wasbies in Burma and naval support roles.",
-      "url": "/events/#event-indian-women-second-world-war-talk",
+      "title": "Model Railway Weekend at Croydon Clocktower",
+      "summary": "Fri 20 Nov · Braithwaite Hall, Croydon Town Hall · Free — Croydon Model Railway Society fills the Clocktower's civic hall with layouts inspired by the borough, alongside hands-on Brio tracks for younger visitors.",
+      "url": "/events/#event-model-railway-weekend-croydon-2026",
       "tags": [
-        "Talk",
+        "Heritage and history",
         "Free",
-        "Kensington and Chelsea",
+        "Croydon",
         "free"
       ],
       "keywords": [
-        "National Army Museum",
-        "Royal Hospital Road, Chelsea, London",
-        "SW3 4HT",
-        "Kensington and Chelsea",
+        "Braithwaite Hall, Croydon Town Hall",
+        "Katharine Street, Croydon",
+        "CR9 1ET",
+        "Croydon",
         "event events this week weekend free affordable"
       ],
-      "content": "Historian Kiran Sahota uncovers the overlooked work of Indian women in wartime services, from the Women’s Auxiliary Corps to the Wasbies in Burma and naval support roles. A free one-off talk restores Indian women to a wartime story often told without their labour, service and family experience.",
-      "updated_at": "2026-11-02T15:19:05+00:00",
-      "expires_at": "2026-11-06T13:15:00+00:00"
+      "content": "Croydon Model Railway Society fills the Clocktower's civic hall with layouts inspired by the borough, alongside hands-on Brio tracks for younger visitors. A free, locally built portrait of Croydon's railway identity temporarily takes over the borough's civic hall for two days.",
+      "updated_at": "2026-11-19T15:02:04+00:00",
+      "expires_at": "2026-11-21T16:15:00+00:00"
     },
     {
-      "id": "event:diwali-national-maritime-museum-2026:en",
+      "id": "event:radical-rediscovery-iii-2026:en",
       "type": "event",
       "locale": "en",
-      "title": "Diwali at the National Maritime Museum",
-      "summary": "Sat 7 Nov · National Maritime Museum · Free — Greenwich’s museum becomes a free community festival of South Asian dance, music, storytelling, gallery talks, craft workshops and a closing lantern parade into the park.",
-      "url": "/events/#event-diwali-national-maritime-museum-2026",
+      "title": "Radical Rediscovery III: What Survives?",
+      "summary": "Fri 20 Nov · London Performance Studios, Studios 3 and 4 · Free — A free archival exhibition traces fifty years of Black and Asian theatre through rare ephemera, oral histories, carnival costumes and the legacy of Naseem Khan's landmark 1976 report.",
+      "url": "/events/#event-radical-rediscovery-iii-2026",
+      "tags": [
+        "Local culture",
+        "Free",
+        "Southwark",
+        "free"
+      ],
+      "keywords": [
+        "London Performance Studios, Studios 3 and 4",
+        "Penarth Centre, Penarth Street, London",
+        "SE15 1TR",
+        "Southwark",
+        "event events this week weekend free affordable"
+      ],
+      "content": "A free archival exhibition traces fifty years of Black and Asian theatre through rare ephemera, oral histories, carnival costumes and the legacy of Naseem Khan's landmark 1976 report. A grassroots South Bermondsey archive makes an overlooked chapter of British theatre history tangible through a temporary, free display.",
+      "updated_at": "2026-11-19T15:02:04+00:00",
+      "expires_at": "2026-11-20T18:15:00+00:00"
+    },
+    {
+      "id": "event:anna-phillips-rhapsodie-harp-recital-2026:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Anna Phillips: Rhapsodie Harp Recital",
+      "summary": "Fri 20 Nov · Welsh Church of Central London · Free — Welsh harpist Anna Phillips closes her album tour with an intimate lunchtime programme of Bach, Guridi, Mathias, Grandjany and a Welsh folk-song arrangement.",
+      "url": "/events/#event-anna-phillips-rhapsodie-harp-recital-2026",
+      "tags": [
+        "Local culture",
+        "Free",
+        "City of Westminster",
+        "free"
+      ],
+      "keywords": [
+        "Welsh Church of Central London",
+        "30 Eastcastle Street, London",
+        "W1W 8DJ",
+        "City of Westminster",
+        "event events this week weekend free affordable"
+      ],
+      "content": "Welsh harpist Anna Phillips closes her album tour with an intimate lunchtime programme of Bach, Guridi, Mathias, Grandjany and a Welsh folk-song arrangement. A one-off Welsh cultural recital in a Grade II-listed chapel pairs an unusual central-London setting with genuinely free entry.",
+      "updated_at": "2026-11-19T15:02:04+00:00",
+      "expires_at": "2026-11-20T14:15:00+00:00"
+    },
+    {
+      "id": "event:illuminate-bermondsey-rotherhithe-2026:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Illuminate Bermondsey & Rotherhithe Lantern Procession",
+      "summary": "Fri 20 Nov · The Blue Market · Free — A neighbourhood-made lantern procession moves from The Blue to Southwark Park with a samba band, then lights the bandstand for an evening finale of local music.",
+      "url": "/events/#event-illuminate-bermondsey-rotherhithe-2026",
       "tags": [
         "Community",
         "Free",
-        "Greenwich",
+        "Southwark",
         "free"
       ],
       "keywords": [
-        "National Maritime Museum",
-        "Romney Road, Greenwich, London",
-        "SE10 9NF",
-        "Greenwich",
+        "The Blue Market",
+        "4 Market Place, Southwark Park Road, London",
+        "SE16 3UQ",
+        "Southwark",
         "event events this week weekend free affordable"
       ],
-      "content": "Greenwich’s museum becomes a free community festival of South Asian dance, music, storytelling, gallery talks, craft workshops and a closing lantern parade into the park. A free, museum-wide programme shaped with South Asian creatives combines local community culture, collections and a one-day public takeover.",
-      "updated_at": "2026-11-02T15:19:05+00:00",
-      "expires_at": "2026-11-07T17:15:00+00:00"
+      "content": "A neighbourhood-made lantern procession moves from The Blue to Southwark Park with a samba band, then lights the bandstand for an evening finale of local music. A free, one-night procession turns local Thames-side stories and residents' handmade lanterns into a shared journey through SE16.",
+      "updated_at": "2026-11-19T15:02:04+00:00",
+      "expires_at": "2026-11-20T19:45:00+00:00"
     },
     {
-      "id": "event:this-must-be-the-place-final-day:en",
+      "id": "event:discover-your-mosque-open-day-2026:en",
       "type": "event",
       "locale": "en",
-      "title": "This Must Be the Place: Artists for Whitechapel Gallery",
-      "summary": "Sun 8 Nov · Whitechapel Gallery, Assembly Room · Free — On its final day, 23 artists fill the former Whitechapel Library’s Assembly Room with new painting, marking 125 years of the East End gallery and supporting its future.",
-      "url": "/events/#event-this-must-be-the-place-final-day",
+      "title": "Discover Your Mosque Open Day",
+      "summary": "Sat 21 Nov · London Muslim Centre, Entrance 1 · Free — East London Mosque welcomes first-time and non-Muslim visitors for guided tours, conversation, tea and an exhibition confronting Islamophobia and harmful stereotypes.",
+      "url": "/events/#event-discover-your-mosque-open-day-2026",
       "tags": [
-        "Art and design",
+        "Community",
         "Free",
         "Tower Hamlets",
         "free"
       ],
       "keywords": [
-        "Whitechapel Gallery, Assembly Room",
-        "77–82 Whitechapel High Street, London",
-        "E1 7QX",
+        "London Muslim Centre, Entrance 1",
+        "46 Whitechapel Road, London",
+        "E1 1JX",
         "Tower Hamlets",
         "event events this week weekend free affordable"
       ],
-      "content": "On its final day, 23 artists fill the former Whitechapel Library’s Assembly Room with new painting, marking 125 years of the East End gallery and supporting its future. A free final-day visit links new painting to the history of a major East End institution and its former public-library space.",
-      "updated_at": "2026-11-02T15:19:05+00:00",
-      "expires_at": "2026-11-08T18:15:00+00:00"
+      "content": "East London Mosque welcomes first-time and non-Muslim visitors for guided tours, conversation, tea and an exhibition confronting Islamophobia and harmful stereotypes. A major Whitechapel institution offers unusual community-led access, combining local history, frank conversation and a free guided visit.",
+      "updated_at": "2026-11-19T15:02:04+00:00",
+      "expires_at": "2026-11-21T15:15:00+00:00"
     },
     {
-      "id": "event:remembering-wartime-willesden:en",
+      "id": "event:rebel-footprints-housmans-2026:en",
       "type": "event",
       "locale": "en",
-      "title": "Remembering Wartime Willesden",
-      "summary": "Sun 8 Nov · Willesden Jewish Cemetery · £10; £8 concessions — Inside Willesden Jewish Cemetery, a judge and local volunteers recover stories of chaplains, artists, Bletchley Park contributors and residents who sacrificed their lives in wartime.",
-      "url": "/events/#event-remembering-wartime-willesden",
+      "title": "Rebel Footprints: Radical London Book Launch",
+      "summary": "Sat 21 Nov · Housmans Bookshop · £5 standard; £2.50 low-income — David Rosenberg launches the third edition of his guide to London's radical geographies, linking suffragettes, Chartists, trade unionists and hidden sites of protest.",
+      "url": "/events/#event-rebel-footprints-housmans-2026",
       "tags": [
         "Heritage and history",
-        "£10; £8 concessions",
-        "Brent",
+        "£5 standard; £2.50 low-income",
+        "Islington",
         "cheap"
       ],
       "keywords": [
-        "Willesden Jewish Cemetery",
-        "Beaconsfield Road, Willesden, London",
-        "NW10 2JE",
-        "Brent",
+        "Housmans Bookshop",
+        "5 Caledonian Road, London",
+        "N1 9DX",
+        "Islington",
         "event events this week weekend free affordable"
       ],
-      "content": "Inside Willesden Jewish Cemetery, a judge and local volunteers recover stories of chaplains, artists, Bletchley Park contributors and residents who sacrificed their lives in wartime. A one-off programme inside a historic cemetery connects national conflict with deeply local Jewish lives, memorials and volunteer research.",
-      "updated_at": "2026-11-02T15:19:05+00:00",
-      "expires_at": "2026-11-08T16:45:00+00:00"
-    },
-    {
-      "id": "event:poetry-of-decadence-keats-house:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Afternoon Poems: The Poetry of Decadence",
-      "summary": "Sun 8 Nov · Keats House · Free — Poetry ambassadors read the opulent, rebellious and fantastical verse of Wilde, Baudelaire and Beardsley inside the Hampstead house where John Keats lived and wrote.",
-      "url": "/events/#event-poetry-of-decadence-keats-house",
-      "tags": [
-        "Local culture",
-        "Free",
-        "Camden",
-        "free"
-      ],
-      "keywords": [
-        "Keats House",
-        "10 Keats Grove, Hampstead, London",
-        "NW3 2RR",
-        "Camden",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Poetry ambassadors read the opulent, rebellious and fantastical verse of Wilde, Baudelaire and Beardsley inside the Hampstead house where John Keats lived and wrote. A free, one-hour reading places rarely heard Decadent poetry inside an intimate literary house with a strong Hampstead identity.",
-      "updated_at": "2026-11-02T15:19:05+00:00",
-      "expires_at": "2026-11-08T15:30:00+00:00"
-    },
-    {
-      "id": "event:black-people-alternative-music-history:en",
-      "type": "event",
-      "locale": "en",
-      "title": "A History of Black People and Alternative Music",
-      "summary": "Sun 8 Nov · Conway Hall, Brockway Room · £12 standard incl. levy — Big Joanie founder Stephanie Phillips restores Black artists to the history of punk, rock and alternative music, from Sister Rosetta Tharpe to Poly Styrene and today’s experimental scene.",
-      "url": "/events/#event-black-people-alternative-music-history",
-      "tags": [
-        "Local culture",
-        "£12 standard incl. levy",
-        "Camden",
-        "exceptional"
-      ],
-      "keywords": [
-        "Conway Hall, Brockway Room",
-        "25 Red Lion Square, London",
-        "WC1R 4RL",
-        "Camden",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Big Joanie founder Stephanie Phillips restores Black artists to the history of punk, rock and alternative music, from Sister Rosetta Tharpe to Poly Styrene and today’s experimental scene. A distinctive one-off at an independent ethical venue rewrites familiar British music history through overlooked Black artists and scenes.",
-      "updated_at": "2026-11-02T15:19:05+00:00",
-      "expires_at": "2026-11-08T16:45:00+00:00"
+      "content": "David Rosenberg launches the third edition of his guide to London's radical geographies, linking suffragettes, Chartists, trade unionists and hidden sites of protest. An independent radical bookshop hosts a one-off exploration of protest, social movements and the hidden London places where they unfolded.",
+      "updated_at": "2026-11-19T15:02:04+00:00",
+      "expires_at": "2026-11-21T20:45:00+00:00"
     }
   ]
 }

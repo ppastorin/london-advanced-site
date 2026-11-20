@@ -103,3 +103,8 @@ footer p { margin: 5px 0; }
   html { scroll-behavior: auto; }
 }
 
+
+.result-support { margin: 22px 0; padding: 18px; display: flex; align-items: center; justify-content: space-between; gap: 14px 20px; flex-wrap: wrap; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 14px; background: #fff8ef; }
+.result-support-label { color: var(--ink); font-size: 12px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
+.result-support a { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; max-width: 100%; padding: 10px 16px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 15px; font-weight: 800; text-align: center; text-decoration: none; }
+.result-support a:hover { background: var(--accent); color: #fff; }

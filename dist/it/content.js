@@ -84,6 +84,15 @@ window.LONDON_ADVANCED={
       "href": "/it/strumenti/librerie/",
       "embedUrl": "/it/strumenti/librerie/",
       "icon": "book"
+    },
+    {
+      "id": "markets",
+      "name": "Calendario dei mercati",
+      "short": "Scegli il prossimo mercato",
+      "description": "Trova mercatini delle pulci, usato, produttori e artigianato per data e zona.",
+      "href": "/it/strumenti/mercati/",
+      "embedUrl": "/it/strumenti/mercati/",
+      "icon": "calendar"
     }
   ],
   "stories": [

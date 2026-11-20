@@ -1,4 +1,5 @@
 const DATA = window.LONDON_ADVANCED;
+const KOFI_URL = window.LONDON_ADVANCED_CONFIG.kofiUrl;
 
 const icons = {
   pulse: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg>',
@@ -16,6 +17,7 @@ function icon(name) {
 }
 
 const visualMotifs = {
+  calendar: `<svg class="charity-shop-graphic" viewBox="0 0 184 88" aria-hidden="true"><rect x="35" y="10" width="114" height="70" rx="5"/><path d="M35 31h114M62 2v17m60-17v17M54 47h17m13 0h17m13 0h17M54 63h17m13 0h17"/></svg>`,
   pulse: `<div class="signal-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-chip">DAL VIVO</span>`,
   crowd: `<div class="crowd-field" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-chip">ORA +3H</span>`,
   ticket: `<div class="ticket-graphic" aria-hidden="true"><span>ZONE 1–6</span><b>£</b><small>CONTROLLO TARIFFE</small></div>`,
@@ -32,7 +34,7 @@ function appCards() {
       <div class="app-visual visual-${app.icon}">
         ${icon(app.icon)}
         <span class="app-number">0${index + 1}</span>
-        ${visualMotifs[app.icon]}
+        ${visualMotifs[app.icon] || ""}
       </div>
       <div class="app-copy">
         <span class="app-short">${app.short}</span>
@@ -344,7 +346,7 @@ function render() {
 
     <section class="hero">
       <div class="hero-intro">
-        <span class="eyebrow">Guida indipendente di Londra · 9 strumenti gratuiti</span>
+        <span class="eyebrow">Guida indipendente di Londra · 10 strumenti gratuiti</span>
         <h1>La città oltre<br><em>l’ovvio.</em></h1>
         <p>Trova luoghi insoliti, organizza spostamenti più intelligenti e scopri l’atmosfera di Londra prima di partire.</p>
         <div class="hero-actions"><button class="button primary" type="button" data-scroll-target="tools">Esplora gli strumenti</button><a class="text-link" href="${DATA.links.guideLanding}" data-track="guide:hero">Scopri la guida →</a></div>
@@ -368,9 +370,18 @@ function render() {
     </section>
 
     <section id="tools" class="tools section-wrap">
-      <div class="section-heading tool-heading"><div><span>01 / Londra pratica</span><h2>Scegli ciò che ti serve adesso.</h2></div><p>Nove strumenti mirati. Nessun account, nessuna app da scaricare e nessun consiglio generico.</p></div>
+      <div class="section-heading tool-heading"><div><span>01 / Londra pratica</span><h2>Scegli ciò che ti serve adesso.</h2></div><p>Dieci strumenti mirati. Nessun account, nessuna app da scaricare e nessun consiglio generico.</p></div>
       <div class="app-grid">${appCards()}</div>
     </section>
+
+    <aside class="home-support section-wrap" aria-labelledby="home-support-title">
+      <div class="home-support-copy">
+        <span class="eyebrow">Sostieni l’esplorazione indipendente di Londra</span>
+        <h2 id="home-support-title">Hai trovato qualcosa di utile? Aiuta London Advanced a restare indipendente.</h2>
+        <p>Gli strumenti e gli articoli restano gratuiti. Un flat white aiuta a coprire hosting, mappe, servizi dati e il tempo dedicato alla ricerca e agli aggiornamenti.</p>
+      </div>
+      <a class="button dark" href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">Offrimi un flat white <span aria-hidden="true">↗</span></a>
+    </aside>
 
     ${eventsSection()}
 
@@ -432,7 +443,7 @@ function render() {
 
     <footer id="community">
       <div><strong>London Advanced</strong><span>Strumenti indipendenti e appunti sul campo per una Londra meno ovvia.</span></div>
-      <div class="footer-meta"><a href="/it/eventi/">Questa settimana</a><a href="/it/#newsletter">Newsletter</a><a href="/it/chi-sono/">Chi sono</a><a href="/it/metodologia/">Metodologia</a><a href="/it/privacy/">Privacy</a><a href="/it/copyright/">Copyright e uso</a><a href="#contatti">Contatti</a><small>© ${new Date().getFullYear()} Paolo Pastorino. Tutti i diritti riservati.</small></div>
+      <div class="footer-meta"><a href="/it/eventi/">Questa settimana</a><a href="/it/#newsletter">Newsletter</a><a href="/it/chi-sono/">Chi sono</a><a href="/it/metodologia/">Metodologia</a><a href="/it/privacy/">Privacy</a><a href="/it/copyright/">Copyright e uso</a><a href="${KOFI_URL}" target="_blank" rel="noopener noreferrer">Offrimi un flat white</a><a href="#contatti">Contatti</a><small>© ${new Date().getFullYear()} Paolo Pastorino. Tutti i diritti riservati.</small></div>
     </footer>
   </main>`;
   bindSectionScrolling();
