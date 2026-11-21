@@ -2500,6 +2500,239 @@
           "end": "15:00"
         }
       ]
+    },
+    {
+      "id": "canada-water-craft-flea",
+      "name": "Canada Water Craft & Flea Market",
+      "category": "flea",
+      "area": "South",
+      "venue": "Corner Corner, Maritime Street, Canada Water, SE16 7LL",
+      "source": "https://cornercorner.com/whats-on/craft-flea-christmas-market",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A free two-day market of independent makers, collectors, designers and creative traders.",
+        "it": "Mercato gratuito di due giorni con artigiani, collezionisti, designer e creativi indipendenti."
+      },
+      "dates": [
+        {
+          "date": "2026-12-12",
+          "start": "11:00",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-13",
+          "start": "11:00",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "diy-christmas-art",
+      "name": "DIY Christmas Art Market",
+      "category": "craft",
+      "area": "South",
+      "venue": "Copeland Park, 133 Copeland Road, SE15 3SN",
+      "source": "https://www.eventbrite.co.uk/e/diy-christmas-art-market-tickets-1963151466884",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "More than 150 artists, illustrators, designers and independent publishers selling prints, zines, ceramics, books and original work.",
+        "it": "Oltre 150 artisti, illustratori, designer ed editori indipendenti con stampe, zine, ceramiche, libri e opere originali."
+      },
+      "dates": [
+        {
+          "date": "2026-12-12",
+          "start": "11:00",
+          "end": "17:00"
+        }
+      ],
+      "note": {
+        "en": "Entry costs £2 and card payment is accepted.",
+        "it": "L'ingresso costa £2 ed è possibile pagare con carta."
+      }
+    },
+    {
+      "id": "independent-ceramics",
+      "name": "Christmas Independent Ceramics Market",
+      "category": "craft",
+      "area": "South",
+      "venue": "Unit 8, Copeland Park, 133 Copeland Road, SE15 3SN",
+      "source": "https://www.eventbrite.co.uk/e/christmas-independent-ceramics-market-tickets-1963164726544",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "More than 150 ceramic artists, from students and graduates to established makers, selling pieces directly to visitors.",
+        "it": "Oltre 150 ceramisti, da studenti e neodiplomati ad autori affermati, vendono direttamente al pubblico."
+      },
+      "dates": [
+        {
+          "date": "2026-12-13",
+          "start": "11:00",
+          "end": "17:00"
+        }
+      ],
+      "note": {
+        "en": "Entry costs £2 and card payment is accepted.",
+        "it": "L'ingresso costa £2 ed è possibile pagare con carta."
+      }
+    },
+    {
+      "id": "satanic-flea",
+      "name": "Satanic Flea Market AntiChristmas Fayre",
+      "category": "flea",
+      "area": "East",
+      "venue": "UNLOCKED Shoreditch, 118 Curtain Road, EC2A 3PJ",
+      "source": "https://www.satanicfleamarket.com/",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A dark arts flea market for occult objects, vintage collectables, curiosities, underground fashion, records, art, comics and zines.",
+        "it": "Mercatino dark con oggetti esoterici, collezionismo vintage, curiosità, moda underground, dischi, arte, fumetti e zine."
+      },
+      "dates": [
+        {
+          "date": "2026-12-13",
+          "start": "12:00",
+          "end": "18:00"
+        }
+      ],
+      "note": {
+        "en": "The organiser announced a venue change to UNLOCKED Shoreditch. Admission is £5 on the door.",
+        "it": "L'organizzatore ha annunciato il cambio di sede a UNLOCKED Shoreditch. Ingresso £5 alla porta."
+      }
+    },
+    {
+      "id": "second-life-brick-lane",
+      "name": "Second Life Markets London",
+      "category": "flea",
+      "area": "East",
+      "venue": "Boiler House, 152 Brick Lane, E1 6QL",
+      "source": "https://www.trumanbrewery.com/web/upcoming-events.pl?wtID=2715",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "Seventy curated vintage stalls from London and across the UK, focused on preloved fashion and slower shopping.",
+        "it": "Settanta bancarelle vintage selezionate da Londra e dal Regno Unito, dedicate alla moda pre-loved e allo shopping più sostenibile."
+      },
+      "dates": [
+        {
+          "date": "2026-12-05",
+          "start": "10:30",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "hampstead-antique-collectors",
+      "name": "Hampstead Antique and Collectors Fair",
+      "category": "flea",
+      "area": "North",
+      "venue": "Hampstead Community Centre, 78 High Street, NW3 1RE",
+      "source": "https://www.antiques-atlas.com/antique_fair/hampstead_antique_and_collectors_fair/af2572",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "Thirty tables of small antiques, vintage pieces and collectables, with free admission.",
+        "it": "Trenta tavoli di piccoli oggetti d'antiquariato, pezzi vintage e da collezione, con ingresso gratuito."
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "peckham-vintage-kilo",
+      "name": "Peckham Vintage Thrift Event & Kilo Sale",
+      "category": "flea",
+      "area": "South",
+      "venue": "AMP Studios, 897a Old Kent Road, SE15 1NL",
+      "source": "https://ampstudios.co.uk/",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A World Vintage sale with rails of second-hand clothing sold individually or by weight.",
+        "it": "Vendita World Vintage con abiti di seconda mano acquistabili singolarmente o a peso."
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "15:00"
+        }
+      ],
+      "note": {
+        "en": "Timed entry prices vary during the day. Check the ticket listing before travelling.",
+        "it": "Il prezzo d'ingresso varia in base alla fascia oraria. Controlla i biglietti prima di partire."
+      }
+    },
+    {
+      "id": "walthamstow-craft-flea",
+      "name": "Walthamstow Christmas Makers Market by Craft & Flea",
+      "category": "craft",
+      "area": "East",
+      "venue": "Big Penny Social, 1 Priestley Way, E17 6AL",
+      "source": "https://www.thecraftandflea.com/pages/customers-walthamstow",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A one-day indoor market of independent makers, designers and collectors at Big Penny Social.",
+        "it": "Mercato al coperto di un giorno con artigiani, designer e collezionisti indipendenti al Big Penny Social."
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "11:00",
+          "end": "16:00"
+        }
+      ],
+      "note": {
+        "en": "Check the organiser for the current admission price.",
+        "it": "Controlla il prezzo d'ingresso aggiornato sul sito dell'organizzatore."
+      }
+    },
+    {
+      "id": "slc-creekside",
+      "name": "So Last Century Creekside Christmas Flea Market",
+      "category": "flea",
+      "area": "South",
+      "venue": "Found Works, Deptford, SE8 4SA",
+      "source": "https://www.solastcenturyfair.co.uk/traders",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A one-day Christmas flea market from So Last Century at Found Works in Deptford.",
+        "it": "Mercatino delle pulci natalizio di un giorno organizzato da So Last Century da Found Works a Deptford."
+      },
+      "dates": [
+        {
+          "date": "2026-12-19",
+          "start": null,
+          "end": null
+        }
+      ],
+      "note": {
+        "en": "The date and venue are confirmed. Check the organiser for opening hours.",
+        "it": "Data e sede sono confermate. Controlla gli orari sul sito dell'organizzatore."
+      }
+    },
+    {
+      "id": "peckham-salvage-yard",
+      "name": "Peckham Salvage Yard",
+      "category": "flea",
+      "area": "South",
+      "venue": "Unit 8, Copeland Park, 133 Copeland Road, SE15 3SN",
+      "source": "https://www.eventbrite.co.uk/e/peckham-salvage-yard-tickets-1984116759639",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A large indoor yard of vintage furniture, reclaimed fittings, lighting, homeware, curiosities, collectables and salvage.",
+        "it": "Grande mercato al coperto con mobili vintage, elementi di recupero, illuminazione, oggetti per la casa, curiosità e collezionismo."
+      },
+      "dates": [
+        {
+          "date": "2027-01-17",
+          "start": "10:00",
+          "end": "17:00"
+        }
+      ],
+      "note": {
+        "en": "Entry costs £2 and card payment is accepted.",
+        "it": "L'ingresso costa £2 ed è possibile pagare con carta."
+      }
     }
   ]
 }
