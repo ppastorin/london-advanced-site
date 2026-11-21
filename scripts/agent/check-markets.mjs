@@ -7,6 +7,8 @@ if(!missing.length) {
  const feed=JSON.parse(fs.readFileSync('content/markets.json','utf8'));
  const columbia=feed.markets.find(m=>m.id==='columbia-road-flower');
  if(!columbia||columbia.category!=='flowers'||columbia.recurrence?.days?.join()!=='0')failures.push('Columbia Road weekly schedule');
+ const fleaIds=['flea-london-hackney-bridge','go-east-strongroom','adams-antiques','bermondsey-antiques','portobello-green','deptford-bric-a-brac','brick-lane-flea','wanstead-vintage-fair','chiswick-antique-vintage','camden-passage','slc-beckenham','stardust-hampstead','bottle-factory-festive-flea'];
+ for(const id of fleaIds)if(!feed.markets.some(m=>m.id===id))failures.push(`missing ${id}`);
  for(const file of ['dist/markets/index.html','dist/it/strumenti/mercati/index.html']) {
   const html=fs.readFileSync(file,'utf8');
   if(!html.includes('id="market-date-from"')||!html.includes('id="market-date-until"'))failures.push(`${file} date range`);

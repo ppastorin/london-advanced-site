@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "coverageStart": "2026-11-20",
   "coverageEnd": "2027-02-28",
   "timezone": "Europe/London",
@@ -1283,13 +1283,353 @@
       ]
     },
     {
+      "id": "flea-london-hackney-bridge",
+      "name": "Flea London at Hackney Bridge",
+      "category": "flea",
+      "area": "East",
+      "venue": "Hackney Bridge, Units 1-28, Echo Building, East Bay Lane, E15 2SJ",
+      "source": "https://flealondon.com/",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "Weekend market for vintage homeware, clothing, jewellery, ceramics, vinyl, books, art and independent makers.",
+        "it": "Mercato del fine settimana con oggetti e abiti vintage, gioielli, ceramiche, vinili, libri, arte e produttori indipendenti."
+      },
+      "recurrence": {
+        "days": [
+          0,
+          6
+        ],
+        "start": "11:00",
+        "end": "17:00",
+        "from": "2026-11-21",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "go-east-strongroom",
+      "name": "Go East Vintage Christmas Flea Market",
+      "category": "flea",
+      "area": "East",
+      "venue": "Strongroom Venue, 120-124 Curtain Road, EC2A 3SQ",
+      "source": "https://www.eventbrite.co.uk/e/go-east-vintage-christmas-flea-market-at-strongroom-tickets-2004128096085",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A Christmas flea market with vintage fashion, vinyl, homeware and collectables.",
+        "it": "Mercatino natalizio con moda vintage, vinili, oggetti per la casa e da collezione."
+      },
+      "dates": [
+        {
+          "date": "2026-12-12",
+          "start": "11:00",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "adams-antiques",
+      "name": "Adams Antiques Fair",
+      "category": "flea",
+      "area": "Central",
+      "venue": "Lindley Hall, Royal Horticultural Halls, Elverton Street, SW1P 2PB",
+      "source": "https://www.adamsantiquesfairs.com/fair-dates",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A monthly central London fair with more than 100 antiques dealers selling jewellery, silver, decorative pieces and collectables.",
+        "it": "Fiera mensile nel centro di Londra con oltre 100 antiquari, tra gioielli, argenti, oggetti decorativi e da collezione."
+      },
+      "dates": [
+        {
+          "date": "2026-12-13",
+          "start": "10:00",
+          "end": "16:30"
+        },
+        {
+          "date": "2027-01-24",
+          "start": "10:00",
+          "end": "16:30"
+        },
+        {
+          "date": "2027-02-28",
+          "start": "10:00",
+          "end": "16:30"
+        }
+      ],
+      "note": {
+        "en": "Admission charge applies. Check the organiser for current prices.",
+        "it": "Ingresso a pagamento. Controlla i prezzi aggiornati sul sito dell'organizzatore."
+      }
+    },
+    {
+      "id": "bermondsey-antiques",
+      "name": "Bermondsey Antique Market",
+      "category": "flea",
+      "area": "South",
+      "venue": "Bermondsey Square, SE1 3UN",
+      "source": "https://www.southwark.gov.uk/southwark-presents/bermondsey-antique-market",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A long-running Friday market for antiques, vintage pieces, collectables, jewellery and art.",
+        "it": "Storico mercato del venerdì con antiquariato, vintage, oggetti da collezione, gioielli e arte."
+      },
+      "recurrence": {
+        "days": [
+          5
+        ],
+        "start": "07:00",
+        "end": "14:00",
+        "from": "2026-11-21",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "portobello-green",
+      "name": "Portobello Green Market",
+      "category": "flea",
+      "area": "West",
+      "venue": "Portobello Green, under the Westway, W10 5TZ",
+      "source": "https://www.portobellofashionmarket.com/",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "Friday antiques and vintage stalls, followed by mixed vintage, fashion, collectables, music and arts markets at the weekend.",
+        "it": "Antiquariato e vintage il venerdì, con mercati misti di vintage, moda, collezionismo, musica e arte nel fine settimana."
+      },
+      "recurrence": {
+        "days": [
+          0,
+          5,
+          6
+        ],
+        "start": "09:00",
+        "end": "17:00",
+        "from": "2026-11-21",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "deptford-bric-a-brac",
+      "name": "Deptford Market",
+      "category": "flea",
+      "area": "South",
+      "venue": "Deptford High Street and Douglas Way, SE8",
+      "source": "https://lewisham.gov.uk/inmyarea/markets/deptford-markets",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A street market whose Douglas Way section is known for bric-a-brac and second-hand goods, from record players to antique silverware.",
+        "it": "Mercato di strada con una sezione in Douglas Way nota per bric-à-brac e usato, dai giradischi all'argenteria antica."
+      },
+      "recurrence": {
+        "days": [
+          3,
+          5,
+          6
+        ],
+        "start": "09:00",
+        "end": "17:30",
+        "from": "2026-11-21",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "brick-lane-flea",
+      "name": "Brick Lane Market",
+      "category": "flea",
+      "area": "East",
+      "venue": "Brick Lane, E1",
+      "source": "https://www.towerhamlets.gov.uk/lgnl/business/markets/markets_in_tower_hamlets.aspx",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A Sunday East End market with flea stalls, household goods, jewellery, retro fashion, art and street food.",
+        "it": "Mercato domenicale dell'East End con bancarelle dell'usato, oggetti per la casa, gioielli, moda rétro, arte e street food."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "10:00",
+        "end": "15:00",
+        "from": "2026-11-21",
+        "until": "2027-02-28"
+      }
+    },
+    {
+      "id": "wanstead-vintage-fair",
+      "name": "Wanstead Vintage Fair",
+      "category": "flea",
+      "area": "East",
+      "venue": "Wanstead United Reformed Church, Nightingale Lane, E11 2HD",
+      "source": "https://wansteadvintage.com/find-us/",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A curated fair with vintage fashion, jewellery, homeware and collectables from independent dealers.",
+        "it": "Fiera selezionata con moda vintage, gioielli, oggetti per la casa e da collezione di venditori indipendenti."
+      },
+      "dates": [
+        {
+          "date": "2026-12-19",
+          "start": "09:30",
+          "end": "16:30"
+        },
+        {
+          "date": "2027-02-20",
+          "start": "09:30",
+          "end": "16:30"
+        }
+      ],
+      "note": {
+        "en": "Early admission from 09:30; general admission from 10:30. Check admission prices.",
+        "it": "Ingresso anticipato dalle 09:30; ingresso generale dalle 10:30. Controlla i prezzi."
+      }
+    },
+    {
+      "id": "chiswick-antique-vintage",
+      "name": "Chiswick Antiques & Vintage Market",
+      "category": "flea",
+      "area": "West",
+      "venue": "Old Market Place and Chiswick High Road, W4 2DR",
+      "source": "https://www.hounslow.gov.uk/downloads/file/10456/pending-street-trading-application-chiswick-antiques-vintage-market",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "An outdoor market for antiques, vintage objects, brocante, architectural salvage and collectables.",
+        "it": "Mercato all'aperto di antiquariato, oggetti vintage, brocante, recupero architettonico e collezionismo."
+      },
+      "recurrence": {
+        "days": [
+          0
+        ],
+        "start": "09:00",
+        "end": "15:00",
+        "from": "2026-11-21",
+        "until": "2027-02-28",
+        "nth": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "camden-passage",
+      "name": "Camden Passage Market",
+      "category": "flea",
+      "area": "North",
+      "venue": "Pierrepont Arcade, Camden Passage, N1 8EF",
+      "source": "https://www.camdenpassageislington.co.uk/markets/pierrepont-arcade-market.html",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "Antiques and collectables on Wednesday, Friday and the weekend, plus vintage fashion and jewellery on Thursday.",
+        "it": "Antiquariato e collezionismo il mercoledì, venerdì e nel fine settimana, con moda e gioielli vintage il giovedì."
+      },
+      "recurrences": [
+        {
+          "days": [
+            0,
+            3,
+            6
+          ],
+          "start": "08:30",
+          "end": "17:30",
+          "from": "2026-11-21",
+          "until": "2027-02-28"
+        },
+        {
+          "days": [
+            4
+          ],
+          "start": "09:00",
+          "end": "18:00",
+          "from": "2026-11-21",
+          "until": "2027-02-28"
+        },
+        {
+          "days": [
+            5
+          ],
+          "start": "08:30",
+          "end": "17:00",
+          "from": "2026-11-21",
+          "until": "2027-02-28"
+        }
+      ],
+      "note": {
+        "en": "Opening days and hours can vary, especially around bank holidays. Check before travelling.",
+        "it": "Giorni e orari possono variare, soprattutto nei periodi festivi. Controlla prima di partire."
+      }
+    },
+    {
+      "id": "slc-beckenham",
+      "name": "So Last Century Winter Vintage Market",
+      "category": "flea",
+      "area": "South",
+      "venue": "Beckenham Place Mansion, Beckenham Hill Road, BR3 1SY",
+      "source": "https://www.beckenhamplace.org/whatson/so-last-centurys-winter-vintage-market-2/2026-12-12/",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A two-day winter market with vintage decor, furniture, ceramics, glass, records, prints, maps, fashion and French antiques.",
+        "it": "Mercato invernale di due giorni con arredi vintage, mobili, ceramiche, vetri, dischi, stampe, mappe, moda e antiquariato francese."
+      },
+      "dates": [
+        {
+          "date": "2026-12-12",
+          "start": "10:00",
+          "end": "16:00"
+        },
+        {
+          "date": "2026-12-13",
+          "start": "10:00",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "stardust-hampstead",
+      "name": "Stardust Vintage Christmas Fair",
+      "category": "flea",
+      "area": "North",
+      "venue": "St Stephen's, Rosslyn Hill, NW3 2PP",
+      "source": "https://www.tickettailor.com/events/stardustvintageevents/2468629",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A Christmas fair with more than 50 dealers in antique and vintage jewellery, fashion, furniture, homeware, art and collectables.",
+        "it": "Fiera natalizia con oltre 50 espositori di gioielli antichi e vintage, moda, mobili, oggetti per la casa, arte e collezionismo."
+      },
+      "dates": [
+        {
+          "date": "2026-12-06",
+          "start": "10:00",
+          "end": "16:00"
+        }
+      ],
+      "note": {
+        "en": "Admission charge applies. Check the organiser for current prices.",
+        "it": "Ingresso a pagamento. Controlla i prezzi aggiornati sul sito dell'organizzatore."
+      }
+    },
+    {
+      "id": "bottle-factory-festive-flea",
+      "name": "Bottle Factory Festive Flea",
+      "category": "flea",
+      "area": "East",
+      "venue": "Hackney Bridge, Units 1-28, Echo Building, East Bay Lane, E15 2SJ",
+      "source": "https://hackneybridge.org/em_event/bottle-factory-festive-flea/",
+      "checked": "2026-11-21",
+      "description": {
+        "en": "A separate festive flea at Hackney Bridge with 40 traders in vintage fashion, furniture, homeware and unusual objects.",
+        "it": "Mercatino festivo separato a Hackney Bridge con 40 espositori di moda vintage, mobili, oggetti per la casa e curiosità."
+      },
+      "dates": [
+        {
+          "date": "2026-12-13",
+          "start": "10:00",
+          "end": "16:00"
+        }
+      ]
+    },
+    {
       "id": "hackney-flea",
       "name": "Hackney Flea Market",
       "category": "flea",
       "area": "North",
       "venue": "Stoke Newington Church Street, N16 0AS",
       "source": "https://hackneyfleamarket.com/",
-      "checked": "2026-11-20",
+      "checked": "2026-11-21",
       "description": {
         "en": "Vintage objects, collectables and second-hand finds.",
         "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
@@ -2108,7 +2448,7 @@
       "area": "West",
       "venue": "Chelsea Old Town Hall, King’s Road, SW3 5EE",
       "source": "https://www.frockmevintagefashion.com/2026-dates",
-      "checked": "2026-11-20",
+      "checked": "2026-11-21",
       "description": {
         "en": "Vintage objects, collectables and second-hand finds.",
         "it": "Oggetti vintage, collezionismo e occasioni di seconda mano."
@@ -2116,8 +2456,8 @@
       "dates": [
         {
           "date": "2026-12-06",
-          "start": null,
-          "end": null
+          "start": "11:00",
+          "end": "17:30"
         }
       ]
     },
