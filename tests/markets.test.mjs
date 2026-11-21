@@ -12,7 +12,7 @@ test('market data has valid bilingual records, sources, hours and unique stable 
  assert.ok(all.every(m=>!['hounslow','giant-january','big-south-london'].includes(m.id)));
 });
 test('December flea audit includes the verified organiser, venue and council listings',()=>{
- const ids=['flea-london-hackney-bridge','go-east-strongroom','adams-antiques','bermondsey-antiques','portobello-green','deptford-bric-a-brac','brick-lane-flea','wanstead-vintage-fair','chiswick-antique-vintage','camden-passage','slc-beckenham','stardust-hampstead','bottle-factory-festive-flea'];
+ const ids=['flea-london-hackney-bridge','go-east-strongroom','adams-antiques','bermondsey-antiques','portobello-green','deptford-bric-a-brac','brick-lane-flea','wanstead-vintage-fair','chiswick-antique-vintage','camden-passage','slc-beckenham','stardust-hampstead','bottle-factory-festive-flea','canada-water-craft-flea','diy-christmas-art','independent-ceramics','satanic-flea','second-life-brick-lane','hampstead-antique-collectors','peckham-vintage-kilo','walthamstow-craft-flea','slc-creekside','peckham-salvage-yard'];
  for(const id of ids)assert.ok(feed.markets.some(m=>m.id===id),`missing ${id}`);
  const december=all.filter(m=>m.category==='flea'&&m.date>='2026-12-01'&&m.date<='2026-12-31');
  assert.ok(new Set(december.map(m=>m.id)).size>=18);
@@ -20,6 +20,10 @@ test('December flea audit includes the verified organiser, venue and council lis
  const frock=all.find(m=>m.id==='frock'&&m.date==='2026-12-06');
  assert.equal(frock.start,'11:00');assert.equal(frock.end,'17:30');
  assert.ok(!all.some(m=>m.id==='bermondsey-antiques'&&m.date>='2026-12-24'&&m.date<='2027-01-03'));
+ assert.ok(all.some(m=>m.id==='diy-christmas-art'&&m.date==='2026-12-12'));
+ assert.ok(all.some(m=>m.id==='peckham-salvage-yard'&&m.date==='2027-01-17'));
+ assert.ok(!all.some(m=>m.id==='peckham-salvage-yard'&&m.date==='2026-12-12'));
+ assert.ok(!feed.markets.some(m=>m.id==='go-east-walthamstow-2026-12-12'));
 });
 test('Columbia Road Flower Market runs every Sunday in the verified coverage',()=>{
  const market=feed.markets.find(m=>m.id==='columbia-road-flower');
