@@ -3,7 +3,7 @@
 ## Phase status
 
 - Phase 0: completed. Baseline and measurement caveats are recorded in the Growth Intelligence workbook.
-- Phase 1: implemented locally on 2026-11-23, pending PR CI, merge and production verification.
+- Phase 1: completed and deployed on 2026-11-23 through PR #170, merge `89b83da2ab7a71d9a0aaf28be7f7d9f408a20586`.
 - Phase 3A: previously completed outside this release; no changes in this phase.
 
 ## Phase 1 acceptance criteria
@@ -26,7 +26,7 @@
 
 - Phase 0 defects: disabled homepage page views, repeated initialisation and incomplete public page coverage (three classes).
 - Phase 1 local check: 96 of 96 eligible pages, zero failures.
-- Full tests: 175 passed, zero failed. Final CI and live verification pending.
+- Full tests: 175 passed, zero failed. `Site safety checks` succeeded for exact PR head `b4ce1e8afcb018e5dcbf36c199969585b97df095`. Cloudflare Workers Builds succeeded for the merge commit. Live analytics assets and EN/IT representative pages matched.
 
 ## Files touched
 
@@ -37,4 +37,4 @@
 ## Open items and next step
 
 - Owner property mapping and independent Cloudflare access remain in `OWNER_TODO.md`.
-- Open Phase 1 PR, verify exact-head Site safety checks, merge, verify Cloudflare production and update this record. Stop after Phase 1.
+- Phase 1 is complete. Stop here. Phase 3A was not repeated.
