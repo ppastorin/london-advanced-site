@@ -576,53 +576,8 @@ function bindDropdownMenus() {
   });
 }
 
-function loadGoogleAnalytics(id) {
-  if (!id || id.includes("XXXX")) return;
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function(){ window.dataLayer.push(arguments); };
-  window.gtag("js", new Date());
- window.gtag("config", id, {
-  anonymize_ip: true,
-  send_page_view: false
-});
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
-  document.head.appendChild(script);
-}
-
-function initAnalytics() {
-  const cfToken = DATA.analytics.cloudflareBeaconToken;
-  if (cfToken && !cfToken.includes("REPLACE")) {
-    const beacon = document.createElement("script");
-    beacon.defer = true;
-    beacon.src = "https://static.cloudflareinsights.com/beacon.min.js";
-    beacon.dataset.cfBeacon = JSON.stringify({ token: cfToken });
-    document.head.appendChild(beacon);
-  }
-  const gaId = DATA.analytics.googleAnalyticsId;
-  if (!gaId || gaId.includes("XXXX")) return;
-  if (localStorage.getItem("la-analytics-consent") === "yes") {
-    loadGoogleAnalytics(gaId);
-    return;
-  }
-  if (localStorage.getItem("la-analytics-consent") === "no") return;
-  const consent = document.createElement("div");
-  consent.className = "consent";
-  consent.innerHTML = `<p><strong>Help improve London Advanced?</strong><span>Allow Google Analytics measurement. The site works without it. <a href="/privacy/">Privacy details</a>.</span></p><div><button data-consent="no">No thanks</button><button data-consent="yes">Allow analytics</button></div>`;
-  document.body.appendChild(consent);
-  consent.querySelectorAll("[data-consent]").forEach(button => button.addEventListener("click", () => {
-    const choice = button.dataset.consent;
-    localStorage.setItem("la-analytics-consent", choice);
-    consent.remove();
-    if (choice === "yes") loadGoogleAnalytics(gaId);
-  }));
-}
-
 function track(label) {
-  if (typeof window.gtag === "function") {
-    window.gtag("event", "select_content", { content_type: "link", item_id: label });
-  }
+  window.LAAnalytics?.track(label, { content_type: "link" });
 }
 
 function bindTracking(root = document) {
@@ -632,4 +587,3 @@ function bindTracking(root = document) {
 render();
 bindNewsletterForms();
 showNewsletterStatus();
-initAnalytics();

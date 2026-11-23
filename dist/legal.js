@@ -1,5 +1,6 @@
 document.querySelectorAll("[data-reset-consent]").forEach(button => {
   button.addEventListener("click", () => {
+    window.LAAnalytics?.revoke();
     localStorage.removeItem("la-analytics-consent");
     for (const name of ["_ga", "_gid", "_gat"]) {
       document.cookie = `${name}=; Max-Age=0; Path=/; SameSite=Lax`;

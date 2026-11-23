@@ -606,7 +606,7 @@ async function renderHomepage(feed) {
 
   vm.runInContext(contentSource, context, { filename: "dist/content.js" });
   const executable = appSource.replace(
-    /\nrender\(\);\s*\nbindNewsletterForms\(\);\s*\nshowNewsletterStatus\(\);\s*\ninitAnalytics\(\);\s*$/,
+    /\nrender\(\);\s*\nbindNewsletterForms\(\);\s*\nshowNewsletterStatus\(\);\s*$/,
     "\nwindow.__PRERENDER__ = { render, activeDigest, renderEventCard };"
   );
   vm.runInContext(executable, context, { filename: "dist/app.js" });
@@ -879,10 +879,19 @@ export async function prerender() {
   await linkMarkets();
   const sitemapEntries = await buildSitemap();
 
+  // The same loader covers every public, rendered route in both languages.
+  const analyticsConfig = dataContext.window.LONDON_ADVANCED.analytics;
+  const analyticsSource = await readFile(path.join(projectRoot, "analytics.js"), "utf8");
+  await Promise.all([
+    writeFile(path.join(distRoot, "analytics.js"), analyticsSource.replace("__LA_ANALYTICS_CONFIG__", JSON.stringify(analyticsConfig))),
+    copyFile(path.join(projectRoot, "analytics.css"), path.join(distRoot, "analytics.css")),
+    copyFile(path.join(projectRoot, "legal.js"), path.join(distRoot, "legal.js"))
+  ]);
+
   for (const file of await walkFiles(distRoot)) {
     if (!file.endsWith(".html")) continue;
     const original = await readFile(file, "utf8");
-    const updated = original
+    let updated = original
       .replaceAll("{{KOFI_URL}}", KOFI_URL)
       .replaceAll("1,100+", "1,450+")
       .replaceAll("over 800 places", "over 1,450 places")
@@ -890,6 +899,14 @@ export async function prerender() {
       .replaceAll("oltre 800 luoghi", "oltre 1.450 luoghi")
       .replaceAll("900+ luoghi", "1.450+ luoghi")
       .replaceAll("oltre 900 luoghi", "oltre 1.450 luoghi");
+    const relative = path.relative(distRoot, file).replaceAll(path.sep, "/");
+    if (!relative.startsWith("studio/") && relative !== "404.html" &&
+        !/<meta\s+name="robots"\s+content="[^"]*noindex/i.test(updated) &&
+        !/<meta\s+http-equiv="refresh"/i.test(updated) && updated.includes("</body>") &&
+        !updated.includes('src="/analytics.js"')) {
+      updated = updated.replace("</head>", '<link rel="stylesheet" href="/analytics.css"></head>')
+        .replace("</body>", '<script src="/analytics.js" defer></script></body>');
+    }
     if (updated !== original) await writeFile(file, updated);
   }
 

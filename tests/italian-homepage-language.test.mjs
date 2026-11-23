@@ -51,6 +51,6 @@ test("the Italian homepage contains no untranslated English interface copy", () 
   assert.match(html, /Luoghi selezionati, dettagli pratici, fotografie originali e mappe per trovare la Londra che le guide standard trascurano\./);
   assert.match(html, /Scopri la guida →/);
   assert.match(html, /124 pagine/);
-  assert.match(app, /Aiutaci a migliorare London Advanced/);
+  assert.match(html, /src="\/analytics.js"/);
   assert.match(app, /event\.price\.display\.replace/);
 });
