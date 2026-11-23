@@ -1,4 +1,4 @@
-import { readdir, readFile } from "node:fs/promises";
+// Check generated public HTML after prerender, including both languages.\nimport { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
 async function walk(dir) {
