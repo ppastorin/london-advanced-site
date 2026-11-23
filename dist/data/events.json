@@ -1,28 +1,128 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-11-19T15:02:04+00:00",
-  "valid_from": "2026-11-19",
-  "valid_until": "2026-11-22",
+  "generated_at": "2026-11-23T15:07:03+00:00",
+  "valid_from": "2026-11-23",
+  "valid_until": "2026-11-29",
   "timezone": "Europe/London",
   "editorial_title": "THIS WEEK, BEYOND THE OBVIOUS",
   "homepage_event_ids": [
-    "illuminate-bermondsey-rotherhithe-2026",
-    "discover-your-mosque-open-day-2026",
-    "rebel-footprints-housmans-2026"
+    "national-art-library-discovery-day-2026",
+    "cody-dock-frost-fair-2026",
+    "london-museum-smithfield-opening-2026"
   ],
   "events": [
     {
-      "id": "model-railway-weekend-croydon-2026",
-      "title_en": "Model Railway Weekend at Croydon Clocktower",
-      "title_it": "Weekend dei modellini ferroviari a Croydon Clocktower",
-      "summary_en": "Croydon Model Railway Society fills the Clocktower's civic hall with layouts inspired by the borough, alongside hands-on Brio tracks for younger visitors.",
-      "summary_it": "La Croydon Model Railway Society riempie la sala civica del Clocktower con plastici ispirati al borough e piste Brio da provare per i visitatori più giovani.",
-      "start": "2026-11-20T11:00:00+00:00",
-      "end": "2026-11-21T16:00:00+00:00",
+      "id": "the-544-bethlem-museum-2026",
+      "title_en": "The 544: A Photographic Memorial",
+      "title_it": "The 544: un memoriale fotografico",
+      "summary_en": "Sarah Ketelaars' 544 individual cyanotypes restore presence to unnamed psychiatric patients murdered by the Nazis, shown inside London's specialist museum of mental-health history.",
+      "summary_it": "I 544 cianotipi di Sarah Ketelaars restituiscono presenza ai pazienti psichiatrici senza nome uccisi dai nazisti, nel museo londinese dedicato alla storia della salute mentale.",
+      "start": "2026-11-27T09:30:00+00:00",
+      "end": "2026-11-27T17:00:00+00:00",
       "venue": {
-        "name": "Braithwaite Hall, Croydon Town Hall",
-        "address": "Katharine Street, Croydon",
-        "postcode": "CR9 1ET",
+        "name": "Bethlem Museum of the Mind",
+        "address": "Bethlem Royal Hospital, Monks Orchard Road, Beckenham",
+        "postcode": "BR3 3BX",
+        "borough": "Bromley"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free; optional donation",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 8,
+        "reason": "A little-known museum hosts a temporary, deeply researched memorial that connects psychiatric history, art and lives erased from the record.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 1,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://museumofthemind.org.uk/whats-on/exhibitions/the-544",
+      "verification": {
+        "verified_at": "2026-11-23T15:07:03+00:00",
+        "confidence": "high",
+        "source_url": "https://museumofthemind.org.uk/visit"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-23T15:07:03+00:00",
+      "expire_at": "2026-11-27T17:15:00+00:00",
+      "duplicate_key": "the-544-bethlem-museum-of-the-mind-2026-11-27"
+    },
+    {
+      "id": "national-art-library-discovery-day-2026",
+      "title_en": "National Art Library Discovery Day",
+      "title_it": "Giornata di scoperta della National Art Library",
+      "summary_en": "The V&A opens the National Art Library's reading room and hidden spaces for collection displays, book-making, curator talks and small-capacity behind-the-scenes tours.",
+      "summary_it": "Il V&A apre la sala di lettura e gli spazi nascosti della National Art Library con tesori d'archivio, laboratori di legatoria, incontri e tour dietro le quinte.",
+      "start": "2026-11-27T12:00:00+00:00",
+      "end": "2026-11-27T17:00:00+00:00",
+      "venue": {
+        "name": "National Art Library, V&A South Kensington",
+        "address": "Cromwell Road, London",
+        "postcode": "SW7 2RL",
+        "borough": "Kensington and Chelsea"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "heritage-history",
+      "advanced": {
+        "score": 9,
+        "reason": "A one-day chance to enter hidden library spaces and handle the stories behind a major national collection, entirely free.",
+        "breakdown": {
+          "non_obvious": 3,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.vam.ac.uk/event/EM7We53Ljg/library-and-archives-discovery-day-nov-2026",
+      "verification": {
+        "verified_at": "2026-11-23T15:07:03+00:00",
+        "confidence": "high",
+        "source_url": "https://www.vam.ac.uk/event/EM7We53Ljg/library-and-archives-discovery-day-nov-2026"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-23T15:07:03+00:00",
+      "expire_at": "2026-11-27T17:15:00+00:00",
+      "duplicate_key": "national-art-library-discovery-day-va-2026-11-27"
+    },
+    {
+      "id": "stanley-arts-christmas-market-lights-2026",
+      "title_en": "Stanley Arts Christmas Market and Lights",
+      "title_it": "Mercatino e accensione delle luci a Stanley Arts",
+      "summary_en": "South Norwood's Grade II-listed arts centre brings local makers into Stanley Hall, then gathers the neighbourhood outside for its annual tree-lighting ceremony.",
+      "summary_it": "Il centro artistico tutelato di South Norwood accoglie gli artigiani locali nella Stanley Hall e riunisce il quartiere all'esterno per l'accensione annuale degli alberi.",
+      "start": "2026-11-27T17:00:00+00:00",
+      "end": "2026-11-27T21:00:00+00:00",
+      "venue": {
+        "name": "Stanley Arts",
+        "address": "12 South Norwood Hill, London",
+        "postcode": "SE25 6AB",
         "borough": "Croydon"
       },
       "price": {
@@ -35,64 +135,14 @@
         "status": "drop-in",
         "url": null
       },
-      "category": "heritage-history",
+      "category": "community",
       "advanced": {
-        "score": 9,
-        "reason": "A free, locally built portrait of Croydon's railway identity temporarily takes over the borough's civic hall for two days.",
+        "score": 8,
+        "reason": "A neighbourhood-led market and one-off lighting ceremony animate a distinctive local arts landmark with free, drop-in access.",
         "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonfy"
-      ],
-      "official_url": "https://museumofcroydon.com/whats-on-listings/n4icoyse2c1yb4fkfgjp2bp3spux6j",
-      "verification": {
-        "verified_at": "2026-11-19T15:02:04+00:00",
-        "confidence": "high",
-        "source_url": "https://museumofcroydon.com/whats-on-listings/n4icoyse2c1yb4fkfgjp2bp3spux6j"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-11-19T15:02:04+00:00",
-      "expire_at": "2026-11-21T16:15:00+00:00",
-      "duplicate_key": "model-railway-weekend-croydon-clocktower-2026-11-20-21"
-    },
-    {
-      "id": "radical-rediscovery-iii-2026",
-      "title_en": "Radical Rediscovery III: What Survives?",
-      "title_it": "Radical Rediscovery III: Cosa sopravvive?",
-      "summary_en": "A free archival exhibition traces fifty years of Black and Asian theatre through rare ephemera, oral histories, carnival costumes and the legacy of Naseem Khan's landmark 1976 report.",
-      "summary_it": "Una mostra d'archivio gratuita ripercorre cinquant'anni di teatro nero e asiatico con documenti rari, testimonianze orali, costumi di carnevale e l'eredità del rapporto di Naseem Khan del 1976.",
-      "start": "2026-11-20T12:30:00+00:00",
-      "end": "2026-11-20T18:00:00+00:00",
-      "venue": {
-        "name": "London Performance Studios, Studios 3 and 4",
-        "address": "Penarth Centre, Penarth Street, London",
-        "postcode": "SE15 1TR",
-        "borough": "Southwark"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "local-culture",
-      "advanced": {
-        "score": 9,
-        "reason": "A grassroots South Bermondsey archive makes an overlooked chapter of British theatre history tangible through a temporary, free display.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 1,
+          "non_obvious": 2,
+          "place_story": 1,
+          "unusual_access": 2,
           "local_character": 1,
           "value": 2
         }
@@ -100,100 +150,50 @@
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://www.londonperformancestudios.com/radical-rediscovery-iii-what-survives-50-years-since-the-arts-britain-ignores/",
+      "official_url": "https://stanleyarts.org/event/stanley-arts-christmas-market/2026-11-27/",
       "verification": {
-        "verified_at": "2026-11-19T15:02:04+00:00",
+        "verified_at": "2026-11-23T15:07:03+00:00",
         "confidence": "high",
-        "source_url": "https://www.londonperformancestudios.com/radical-rediscovery-iii-what-survives-50-years-since-the-arts-britain-ignores/"
+        "source_url": "https://stanleyarts.org/event/stanley-arts-christmas-market/2026-11-27/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-19T15:02:04+00:00",
-      "expire_at": "2026-11-20T18:15:00+00:00",
-      "duplicate_key": "radical-rediscovery-iii-london-performance-studios-2026-11-20"
+      "publish_at": "2026-11-23T15:07:03+00:00",
+      "expire_at": "2026-11-27T21:15:00+00:00",
+      "duplicate_key": "stanley-arts-christmas-market-lights-south-norwood-2026-11-27"
     },
     {
-      "id": "anna-phillips-rhapsodie-harp-recital-2026",
-      "title_en": "Anna Phillips: Rhapsodie Harp Recital",
-      "title_it": "Anna Phillips: recital d'arpa Rhapsodie",
-      "summary_en": "Welsh harpist Anna Phillips closes her album tour with an intimate lunchtime programme of Bach, Guridi, Mathias, Grandjany and a Welsh folk-song arrangement.",
-      "summary_it": "L'arpista gallese Anna Phillips chiude il tour del suo album con un intimo concerto all'ora di pranzo: Bach, Guridi, Mathias, Grandjany e un canto tradizionale gallese.",
-      "start": "2026-11-20T13:00:00+00:00",
-      "end": "2026-11-20T14:00:00+00:00",
+      "id": "london-museum-smithfield-opening-2026",
+      "title_en": "London Museum Opens at Smithfield",
+      "title_it": "Il London Museum apre a Smithfield",
+      "summary_en": "The city's museum begins a new chapter inside Smithfield's restored Victorian General Market, revealing London collections and the building's market fabric on an unusually late opening day.",
+      "summary_it": "Il museo della città inaugura una nuova fase nel restaurato General Market vittoriano di Smithfield, tra collezioni londinesi e architettura del mercato, con apertura serale speciale.",
+      "start": "2026-11-28T10:00:00+00:00",
+      "end": "2026-11-28T23:00:00+00:00",
       "venue": {
-        "name": "Welsh Church of Central London",
-        "address": "30 Eastcastle Street, London",
-        "postcode": "W1W 8DJ",
-        "borough": "City of Westminster"
+        "name": "London Museum",
+        "address": "General Market, West Smithfield, London",
+        "postcode": "EC1A 9AG",
+        "borough": "City of London"
       },
       "price": {
         "amount_gbp": 0,
-        "display": "Free; optional retiring collection",
+        "display": "Free",
         "classification": "free"
       },
       "booking": {
         "required": false,
         "status": "recommended",
-        "url": "https://buytickets.at/annaphillipsmusic/2449358"
+        "url": "https://museumtickets.londonmuseum.org.uk/"
       },
-      "category": "local-culture",
+      "category": "heritage-history",
       "advanced": {
         "score": 8,
-        "reason": "A one-off Welsh cultural recital in a Grade II-listed chapel pairs an unusual central-London setting with genuinely free entry.",
+        "reason": "A landmark museum opening gives free access to London's story inside a transformed Victorian market, with late-night hours on day one.",
         "breakdown": {
-          "non_obvious": 3,
-          "place_story": 1,
-          "unusual_access": 1,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.annaphillipsmusic.com/concerts",
-      "verification": {
-        "verified_at": "2026-11-19T15:02:04+00:00",
-        "confidence": "high",
-        "source_url": "https://www.annaphillipsmusic.com/concerts"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-11-19T15:02:04+00:00",
-      "expire_at": "2026-11-20T14:15:00+00:00",
-      "duplicate_key": "anna-phillips-rhapsodie-welsh-church-2026-11-20"
-    },
-    {
-      "id": "illuminate-bermondsey-rotherhithe-2026",
-      "title_en": "Illuminate Bermondsey & Rotherhithe Lantern Procession",
-      "title_it": "Processione delle lanterne Illuminate Bermondsey & Rotherhithe",
-      "summary_en": "A neighbourhood-made lantern procession moves from The Blue to Southwark Park with a samba band, then lights the bandstand for an evening finale of local music.",
-      "summary_it": "Una processione di lanterne create nel quartiere parte da The Blue verso Southwark Park con una banda samba, per un finale musicale attorno al chiosco illuminato.",
-      "start": "2026-11-20T17:00:00+00:00",
-      "end": "2026-11-20T19:30:00+00:00",
-      "venue": {
-        "name": "The Blue Market",
-        "address": "4 Market Place, Southwark Park Road, London",
-        "postcode": "SE16 3UQ",
-        "borough": "Southwark"
-      },
-      "price": {
-        "amount_gbp": 0,
-        "display": "Free",
-        "classification": "free"
-      },
-      "booking": {
-        "required": false,
-        "status": "drop-in",
-        "url": null
-      },
-      "category": "community",
-      "advanced": {
-        "score": 10,
-        "reason": "A free, one-night procession turns local Thames-side stories and residents' handmade lanterns into a shared journey through SE16.",
-        "breakdown": {
-          "non_obvious": 3,
+          "non_obvious": 2,
           "place_story": 2,
           "unusual_access": 2,
-          "local_character": 1,
+          "local_character": 0,
           "value": 2
         }
       },
@@ -201,95 +201,45 @@
         "Londonist",
         "Londonfy"
       ],
-      "official_url": "https://www.southwark.gov.uk/southwark-presents/illuminate-bermondsey-rotherhithe-2026-lantern-procession",
+      "official_url": "https://www.londonmuseum.org.uk/whats-on/smithfield-general-admission/",
       "verification": {
-        "verified_at": "2026-11-19T15:02:04+00:00",
+        "verified_at": "2026-11-23T15:07:03+00:00",
         "confidence": "high",
-        "source_url": "https://www.southwark.gov.uk/southwark-presents/illuminate-bermondsey-rotherhithe-2026-lantern-procession"
+        "source_url": "https://www.londonmuseum.org.uk/whats-on/smithfield-general-admission/"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-19T15:02:04+00:00",
-      "expire_at": "2026-11-20T19:45:00+00:00",
-      "duplicate_key": "illuminate-bermondsey-rotherhithe-2026-11-20"
+      "publish_at": "2026-11-23T15:07:03+00:00",
+      "expire_at": "2026-11-28T23:15:00+00:00",
+      "duplicate_key": "london-museum-smithfield-opening-day-2026-11-28"
     },
     {
-      "id": "discover-your-mosque-open-day-2026",
-      "title_en": "Discover Your Mosque Open Day",
-      "title_it": "Discover Your Mosque: giornata aperta",
-      "summary_en": "East London Mosque welcomes first-time and non-Muslim visitors for guided tours, conversation, tea and an exhibition confronting Islamophobia and harmful stereotypes.",
-      "summary_it": "La East London Mosque accoglie chi visita per la prima volta e i non musulmani con tour guidati, conversazioni, tè e una mostra contro islamofobia e stereotipi.",
-      "start": "2026-11-21T11:00:00+00:00",
-      "end": "2026-11-21T15:00:00+00:00",
+      "id": "cody-dock-frost-fair-2026",
+      "title_en": "Cody Dock Frost Fair",
+      "title_it": "Frost Fair a Cody Dock",
+      "summary_en": "Cody Dock revives the Thames frost-fair tradition beside the lower Lea with local makers, winter crafts, live music, a children's lantern procession and a new ironwork installation.",
+      "summary_it": "Cody Dock riprende la tradizione delle fiere sul Tamigi gelato lungo il basso Lea, con artigiani locali, laboratori, musica, una processione di lanterne e una nuova installazione in ferro.",
+      "start": "2026-11-28T12:00:00+00:00",
+      "end": "2026-11-28T17:00:00+00:00",
       "venue": {
-        "name": "London Muslim Centre, Entrance 1",
-        "address": "46 Whitechapel Road, London",
-        "postcode": "E1 1JX",
-        "borough": "Tower Hamlets"
+        "name": "Cody Dock",
+        "address": "11c South Crescent, London",
+        "postcode": "E16 4TL",
+        "borough": "Newham"
       },
       "price": {
         "amount_gbp": 0,
-        "display": "Free",
+        "display": "Free entry; optional paid activities",
         "classification": "free"
       },
       "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://www.eastlondonmosque.org.uk/forms/discover-your-mosque-nov-26"
+        "required": false,
+        "status": "drop-in",
+        "url": null
       },
-      "category": "community",
-      "advanced": {
-        "score": 10,
-        "reason": "A major Whitechapel institution offers unusual community-led access, combining local history, frank conversation and a free guided visit.",
-        "breakdown": {
-          "non_obvious": 3,
-          "place_story": 2,
-          "unusual_access": 2,
-          "local_character": 1,
-          "value": 2
-        }
-      },
-      "newsletter_sources": [
-        "Londonist"
-      ],
-      "official_url": "https://www.eastlondonmosque.org.uk/forms/discover-your-mosque-nov-26",
-      "verification": {
-        "verified_at": "2026-11-19T15:02:04+00:00",
-        "confidence": "high",
-        "source_url": "https://www.eastlondonmosque.org.uk/forms/discover-your-mosque-nov-26"
-      },
-      "publication_status": "approved",
-      "publish_at": "2026-11-19T15:02:04+00:00",
-      "expire_at": "2026-11-21T15:15:00+00:00",
-      "duplicate_key": "discover-your-mosque-east-london-mosque-2026-11-21"
-    },
-    {
-      "id": "rebel-footprints-housmans-2026",
-      "title_en": "Rebel Footprints: Radical London Book Launch",
-      "title_it": "Rebel Footprints: lancio sulla Londra radicale",
-      "summary_en": "David Rosenberg launches the third edition of his guide to London's radical geographies, linking suffragettes, Chartists, trade unionists and hidden sites of protest.",
-      "summary_it": "David Rosenberg presenta la terza edizione della sua guida alle geografie radicali di Londra, tra suffragette, cartisti, sindacalisti e luoghi nascosti della protesta.",
-      "start": "2026-11-21T19:00:00+00:00",
-      "end": "2026-11-21T20:30:00+00:00",
-      "venue": {
-        "name": "Housmans Bookshop",
-        "address": "5 Caledonian Road, London",
-        "postcode": "N1 9DX",
-        "borough": "Islington"
-      },
-      "price": {
-        "amount_gbp": 5,
-        "display": "£5 standard; £2.50 low-income",
-        "classification": "cheap"
-      },
-      "booking": {
-        "required": true,
-        "status": "required",
-        "url": "https://housmans.com/event/book-launch-rebel-footprints-with-david-rosenberg/"
-      },
-      "category": "heritage-history",
+      "category": "local-culture",
       "advanced": {
         "score": 9,
-        "reason": "An independent radical bookshop hosts a one-off exploration of protest, social movements and the hidden London places where they unfolded.",
+        "reason": "A community dock turns river history into a free one-day festival of local craft, performance, lanterns and working-site culture.",
         "breakdown": {
           "non_obvious": 3,
           "place_story": 2,
@@ -301,16 +251,66 @@
       "newsletter_sources": [
         "Londonist"
       ],
-      "official_url": "https://housmans.com/event/book-launch-rebel-footprints-with-david-rosenberg/",
+      "official_url": "https://royaldocks.london/whats-on/frost-fair",
       "verification": {
-        "verified_at": "2026-11-19T15:02:04+00:00",
+        "verified_at": "2026-11-23T15:07:03+00:00",
         "confidence": "high",
-        "source_url": "https://housmans.com/event/book-launch-rebel-footprints-with-david-rosenberg/"
+        "source_url": "https://royaldocks.london/whats-on/frost-fair"
       },
       "publication_status": "approved",
-      "publish_at": "2026-11-19T15:02:04+00:00",
-      "expire_at": "2026-11-21T20:45:00+00:00",
-      "duplicate_key": "rebel-footprints-housmans-kings-cross-2026-11-21"
+      "publish_at": "2026-11-23T15:07:03+00:00",
+      "expire_at": "2026-11-28T17:15:00+00:00",
+      "duplicate_key": "cody-dock-frost-fair-2026-11-28"
+    },
+    {
+      "id": "wallace-collection-festive-late-2026",
+      "title_en": "Wallace Collection Festive Late",
+      "title_it": "Apertura serale festiva della Wallace Collection",
+      "summary_en": "Hertford House stays open after hours for pop-up music, collection tours, paper crafts and hands-on armour, with the opulent galleries dressed for winter.",
+      "summary_it": "Hertford House resta aperta dopo l'orario con musica, tour della collezione, laboratori di carta e armature da provare, mentre le sale storiche si vestono d'inverno.",
+      "start": "2026-11-28T17:00:00+00:00",
+      "end": "2026-11-28T21:00:00+00:00",
+      "venue": {
+        "name": "The Wallace Collection",
+        "address": "Hertford House, Manchester Square, London",
+        "postcode": "W1U 3BN",
+        "borough": "City of Westminster"
+      },
+      "price": {
+        "amount_gbp": 0,
+        "display": "Free",
+        "classification": "free"
+      },
+      "booking": {
+        "required": false,
+        "status": "drop-in",
+        "url": null
+      },
+      "category": "art-design",
+      "advanced": {
+        "score": 8,
+        "reason": "A free, after-hours opening animates an aristocratic house museum with small-scale tours, making and performance for one evening.",
+        "breakdown": {
+          "non_obvious": 2,
+          "place_story": 2,
+          "unusual_access": 2,
+          "local_character": 0,
+          "value": 2
+        }
+      },
+      "newsletter_sources": [
+        "Londonist"
+      ],
+      "official_url": "https://www.wallacecollection.org/whats-on/events/festive-late-2/",
+      "verification": {
+        "verified_at": "2026-11-23T15:07:03+00:00",
+        "confidence": "high",
+        "source_url": "https://www.wallacecollection.org/whats-on/events/festive-late-2/"
+      },
+      "publication_status": "approved",
+      "publish_at": "2026-11-23T15:07:03+00:00",
+      "expire_at": "2026-11-28T21:15:00+00:00",
+      "duplicate_key": "wallace-collection-festive-late-2026-11-28"
     }
   ]
 }
