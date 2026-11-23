@@ -1,8 +1,8 @@
 export const COPY = Object.freeze({
   en: {
     lang: "en-GB",
-    title: "London Travel Fare Calculator",
-    intro: "Compare standard Oyster and contactless costs for your group, including children and young visitors.",
+    title: "London Fare Calculator",
+    intro: "Compare Oyster and contactless costs for London travel, including options for children, young visitors and multi-day stays.",
     scope: "Zones 1–2 · 1–14 travel days",
     tripTitle: "Your trip",
     tripHelp: "Enter your group and travel dates. The calculator does not store your answers.",
