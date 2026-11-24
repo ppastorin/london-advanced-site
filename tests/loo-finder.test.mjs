@@ -34,9 +34,11 @@ for (const [language, page] of [
         value: id === '#where' ? 'Trafalgar Square' : '',
         offsetTop: 0, setAttribute() {} }]));
     const requests = [];
+    const events = [];
     const context = {
       document: { documentElement: { lang: language }, querySelector: id => elements.get(id) },
-      window: { scrollTo() {} },
+      window: { scrollTo() {}, LAAnalytics: { event(name, parameters) { events.push({ name, parameters }); } } },
+      navigator: { geolocation: { getCurrentPosition(success) { success({ coords: { latitude: 51.51, longitude: -0.12 } }); } } },
       fetch: async url => {
         requests.push(url);
         return { ok: true, json: async () => url === '/api/loos?v=20261027-it-notes'
@@ -46,6 +48,8 @@ for (const [language, page] of [
       setTimeout, encodeURIComponent, Intl, Date
     };
     vm.runInNewContext(script, context, { filename: 'loo.js' });
+    await elements.get('#nearby').onclick();
+    assert.equal(events.filter(event => event.name === 'loo_nearby_search_started').length, 1);
     for (const action of ['button', 'Enter']) {
       let prevented = false;
       await elements.get('#search').onsubmit({ preventDefault() { prevented = true; } });
@@ -67,6 +71,8 @@ for (const [language, page] of [
     }
     assert.ok(requests.includes('/api/loos?v=20261027-it-notes'));
     assert.ok(requests.some(url => url.startsWith('/api/loo-geocode?q=')));
+    assert.equal(events.filter(event => event.name === 'loo_place_search_completed').length, 2);
+    assert.ok(events.every(event => !('query' in event.parameters) && !('latitude' in event.parameters) && !('longitude' in event.parameters)));
     assert.match(elements.get('#result-count').textContent, /10.*15/);
     assert.equal(elements.get('#show-more').hidden, false);
     elements.get('#show-more').onclick();
@@ -82,6 +88,7 @@ for (const [language, page] of [
       assert.match(elements.get('#results').innerHTML, new RegExp(`<h3>${venue} London</h3>`));
       assert.equal(requests.filter(url => url.startsWith('/api/loo-geocode?')).length, geocodes);
     }
+    assert.equal(events.filter(event => event.name === 'loo_place_search_completed').length, 4);
     elements.get('#map-toggle').onclick();
     assert.equal(elements.get('#map-wrap').hidden, false);
     assert.equal(elements.get('#map-toggle').textContent,

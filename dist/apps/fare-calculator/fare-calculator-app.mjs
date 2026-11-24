@@ -150,7 +150,11 @@ function calculate(scroll = true) {
   }
   renderResults(result);
   els.support.classList.toggle("hidden", !scroll);
-  if (scroll) els.results.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (scroll) {
+    const analytics = window.parent === window ? window.LAAnalytics : window.parent.LAAnalytics;
+    analytics?.event("fare_calculation_completed", { tool_id: "travel_fare_calculator", language: locale });
+    els.results.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 function renderResults(result) {
