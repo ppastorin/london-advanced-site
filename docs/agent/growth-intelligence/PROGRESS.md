@@ -4,7 +4,7 @@
 
 - Phase 0: completed. Baseline and measurement caveats are recorded in the Growth Intelligence workbook.
 - Phase 1: completed and deployed on 2026-11-23 through PR #170, merge `89b83da2ab7a71d9a0aaf28be7f7d9f408a20586`. Exact-head CI and live production verification succeeded.
-- Phase 2: consolidated P0/P1 implementation completed locally on 2026-11-23 on `feat/phase-2`; PR CI, merge and production verification remain.
+- Phase 2: P0/P1 search landing-page release deployed through PR #172, merge `60aac6edf873073e7ee17347889db7eed2fa1328`; six live pages verified. Consent-aware tool interaction instrumentation is in progress on `feat/phase-2-events`.
 - Phase 3A: previously completed outside this release; no changes in this phase.
 
 ## Phase 1 acceptance criteria
@@ -18,7 +18,7 @@
 
 ## Decisions and assumptions
 
-- Reuse the configured measurement ID `G-3ZQEZ6R171`; the owner has not confirmed which of the two GA4 properties is authoritative. Do not combine property totals.
+- Use property `387640180`, stream `5538050022`, measurement ID `G-3ZQEZ6R171` as production reporting authority. The owner verified this mapping on 2026-11-24. Do not combine its totals with property `552897907`.
 - Embed the existing analytics settings from `dist/content.js` in the shared generated asset; do not alter identifiers or property settings.
 - Keep Cloudflare's existing consent-independent behaviour and the existing choice key `la-analytics-consent`.
 - Use the prerender pass for public route coverage so new EN/IT articles and tools receive the same loader automatically.
@@ -39,6 +39,23 @@
 - Acceptance criteria: all six English search landing pages expose the approved query-aligned title and description, generated output matches source, full tests pass, exact-head CI succeeds, and the merged Cloudflare deployment is verified live.
 - Local Phase 2 check: 12 of 12 assertions passed. Full `npm test`: 175 passed, zero failed.
 
+## Phase 2 interaction events
+
+- Events: `fare_calculation_completed`, `loo_nearby_search_started`, `loo_place_search_completed`.
+- Events must be sent only after affirmative GA4 consent through the shared analytics API.
+- No search text, coordinates or other user input may be included in event parameters.
+- The automatic initial Fare Calculator example must not count as a completed user calculation.
+- Acceptance criteria: focused checks and tests prove the three event names, successful-action placement, consent gating and absence of query/location parameters; full tests, exact-head CI and live production verification succeed.
+- Local verification: focused check 4 of 4, focused tests 7 of 7, full `npm test` 177 passed and zero failed.
+
+## Later journey instrumentation backlog
+
+- Highest value: successful place and nearby searches in Bookshops and Charity Shops, using the same privacy rule as Loo Finder.
+- Next: Markets Calendar filter use and organiser-link clicks, measured as completed result journeys rather than every keystroke or filter toggle.
+- External embedded tools (Dashboard, Escape the Crowds, Smart Navigation and London by Mood) require instrumentation in their own applications or an explicit, origin-checked `postMessage` contract. Wrapper page views cannot measure their internal journeys.
+- Site search should record a completed search and result selection without sending the search phrase.
+- Use a consistent funnel: tool viewed, meaningful action completed, result selected or exported, outbound destination opened. Avoid recording raw text, coordinates and noisy UI interactions.
+
 ## Files touched
 
 - Shared source and built assets: `analytics.js`, `analytics.css`, `dist/analytics.js`, `dist/analytics.css`.
@@ -49,4 +66,4 @@
 ## Open items and next step
 
 - Owner property mapping and independent Cloudflare access remain in `OWNER_TODO.md`.
-- Complete the consolidated Phase 2 implementation, run the mandatory release checks, merge after exact-head CI and verify Cloudflare production. Do not combine the two GA4 properties.
+- Complete and deploy the three Phase 2 interaction events. Review broader tool journey instrumentation as a separate prioritised backlog, not as part of this release.

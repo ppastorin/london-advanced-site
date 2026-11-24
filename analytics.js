@@ -23,6 +23,11 @@
   }
 
   window.LAAnalytics = {
+    event(name, context = {}) {
+      if (choice() === "yes" && typeof window.gtag === "function" && /^[a-z][a-z0-9_]{0,39}$/.test(name)) {
+        window.gtag("event", name, context);
+      }
+    },
     track(label, context = {}) {
       if (choice() === "yes" && typeof window.gtag === "function") {
         window.gtag("event", "select_content", { content_type: "link", item_id: label, ...context });

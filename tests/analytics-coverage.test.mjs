@@ -60,6 +60,11 @@ test("GA4 loads once with a page view only after consent and respects refusal an
     };
     context.document.createElement = tag => tag === "div" ? consent : { dataset: {} };
     vm.runInNewContext(code, context);
+    context.window.LAAnalytics.event("fare_calculation_completed", { tool_id: "travel_fare_calculator" });
+    const customEvents = () => (context.window.dataLayer || []).filter(args => args[0] === "event" && args[1] === "fare_calculation_completed");
+    assert.equal(customEvents().length, initial === "yes" ? 1 : 0);
+    context.window.LAAnalytics.event("Invalid Event Name");
+    assert.equal(customEvents().length, initial === "yes" ? 1 : 0);
     const gaScripts = () => scripts.filter(script => script.src?.includes("googletagmanager"));
     assert.equal(gaScripts().length, initial === "yes" ? 1 : 0);
     assert.equal(scripts.filter(script => script.src?.includes("cloudflareinsights")).length, 1);
