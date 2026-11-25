@@ -101,6 +101,19 @@ test('support request is prominent, bilingual and not duplicated near the bottom
   assert.equal(html.match(/href="https:\/\/ko-fi\.com\/paolopastorino"/g)?.length,2,`${locale} should retain only the prominent CTA and footer link`);
  }
 });
+test('every configured homepage tool icon is defined in both language bundles',async()=>{
+ const configured=new Set();
+ for(const path of ['dist/content.js','dist/it/content.js']) {
+  const content=await readFile(path,'utf8');
+  for(const match of content.matchAll(/["']?icon["']?\s*:\s*["']([^"']+)["']/g))configured.add(match[1]);
+ }
+ for(const path of ['dist/app.js','dist/it/app.js']) {
+  const app=await readFile(path,'utf8');
+  const block=app.match(/const icons = \{([\s\S]*?)\n\};/)?.[1]||'';
+  const defined=new Set([...block.matchAll(/^\s{2}([a-z]+):/gm)].map(match=>match[1]));
+  assert.deepEqual([...configured].filter(name=>!defined.has(name)),[],`${path} has configured tools without icons`);
+ }
+});
 test('both homepages, search indexes, menus, article pathways and sitemap include the tool',async()=>{
  for(const [locale,home,route] of [['en','dist/index.html','/markets/'],['it','dist/it/index.html','/it/strumenti/mercati/']]) {
   const html=await readFile(home,'utf8');assert.ok(html.includes(`href="${route}" data-track="app:`));

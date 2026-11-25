@@ -13,7 +13,7 @@ for(const file of ['content.js','dist/content.js']) {
 }
 for(const file of ['app.js','dist/app.js']) {
  let source=await readFile(file,'utf8');
- if(!source.includes('calendar:'))source=source.replace('const icons = {',`const icons = {\n  calendar: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4m8-4v4m-9 7h3m4 0h3m-10 4h3"/></svg>',`);
+ if(!/const icons = \\{[\\s\\S]*?\\n  calendar:/.test(source))source=source.replace('const icons = {',`const icons = {\n  calendar: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4m8-4v4m-9 7h3m4 0h3m-10 4h3"/></svg>',`);
  source=source.replace('${visualMotifs[app.icon]}','${visualMotifs[app.icon] || ""}');
  source=source.replaceAll('8 free tools','9 free tools').replaceAll('Eight focused tools','Nine focused tools');
  await writeFile(file,source);
