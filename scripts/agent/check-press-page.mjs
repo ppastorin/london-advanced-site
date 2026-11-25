@@ -22,7 +22,8 @@ await checkFile("dist/press/index.html", [
   'hreflang="it-IT" href="https://www.londonadvanced.com/it/stampa/"',
   "Editorial mission",
   "Platform innovations",
-  "Audience and scale",
+  "Platform scale",
+  "Languages",
   "Original photography",
   "Media contact"
 ]);
@@ -32,7 +33,8 @@ await checkFile("dist/it/stampa/index.html", [
   'hreflang="en-GB" href="https://www.londonadvanced.com/press/"',
   "Missione editoriale",
   "Innovazioni della piattaforma",
-  "Pubblico e dimensioni",
+  "Dimensioni della piattaforma",
+  "Lingue",
   "Fotografia originale",
   "Contatti per i media"
 ]);
@@ -45,6 +47,16 @@ await checkFile("dist/app.js", [
 const app = await readFile(path.join(root, "dist/app.js"), "utf8");
 if (app.includes('contact-nav" type="button"')) {
   failures.push("dist/app.js: Contact remains a JavaScript-only button");
+}
+
+for (const [relativePath, forbidden] of [
+  ["dist/press/index.html", ["2,500+", "Facebook community members"]],
+  ["dist/it/stampa/index.html", ["2.500+", "Membri della community Facebook"]]
+]) {
+  const content = await readFile(path.join(root, relativePath), "utf8");
+  for (const marker of forbidden) {
+    if (content.includes(marker)) failures.push(`${relativePath}: still contains ${marker}`);
+  }
 }
 
 if (failures.length) {
