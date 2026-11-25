@@ -2,16 +2,17 @@
 
 ## Status
 
-- Phase: complete, awaiting release
-- Branch: `feat/press-media-page`
-- Baseline focused check: 4 failures
+- Phase: audience figure removal complete, awaiting release
+- Branch: `feat/phase-press-scale`
+- Baseline focused check: 8 failures
 - Final focused check: 0 failures
 - Full test suite: 181 passed, 0 failed
 
 ## Acceptance criteria
 
 - Publish factual English and Italian press pages at `/press/` and `/it/stampa/`.
-- Cover the editorial mission, platform innovations, guide, audience and scale, original photography, and media contact route.
+- Cover the editorial mission, platform innovations, guide, platform scale, original photography, and media contact route.
+- Do not publish Facebook membership figures on either press page.
 - Add the page to desktop and mobile project navigation.
 - Replace the homepage Contact menu button with a dependable anchor.
 - Include canonical, reciprocal hreflang, structured data, responsive layout, sitemap discovery and regression checks.
@@ -20,7 +21,8 @@
 ## Decisions
 
 - Use the existing site design, map, guide cover and original journal photography.
-- Publish the defensible 2,500+ Facebook community figure and platform scale facts. Do not publish weak or volatile GA4 and Instagram figures.
+- Present platform scale instead of small or volatile audience figures.
+- Replace the Facebook membership card with a two-language metric.
 - Keep media enquiries on the existing contact form. Do not expose a private email address.
 - Place Press and media inside the Project menu to avoid crowding the primary navigation.
 - Replace Contact buttons with anchors so the fix does not depend on missing JavaScript binding.
@@ -38,4 +40,4 @@
 
 ## Next step
 
-- Commit, open the pull request, wait for the exact-head safety check, merge and verify production.
+- Commit, open the pull request, wait for exact-head CI, merge and verify both live pages.

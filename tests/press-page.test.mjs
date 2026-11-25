@@ -11,12 +11,14 @@ const [english, italian, homepage, italianHomepage, sitemap] = await Promise.all
 ]);
 
 test("press pages publish complete bilingual media information", () => {
-  for (const marker of ["Editorial mission", "Platform innovations", "Audience and scale", "The Other London", "Original photography", "Media contact", "2,500+"]) {
+  for (const marker of ["Editorial mission", "Platform innovations", "Platform scale", "The Other London", "Original photography", "Media contact", "Languages"]) {
     assert.match(english, new RegExp(marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
-  for (const marker of ["Missione editoriale", "Innovazioni della piattaforma", "Pubblico e dimensioni", "The Other London", "Fotografia originale", "Contatti per i media", "2.500+"]) {
+  for (const marker of ["Missione editoriale", "Innovazioni della piattaforma", "Dimensioni della piattaforma", "The Other London", "Fotografia originale", "Contatti per i media", "Lingue"]) {
     assert.match(italian, new RegExp(marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
+  assert.doesNotMatch(english, /2,500\+|Facebook community members/);
+  assert.doesNotMatch(italian, /2\.500\+|Membri della community Facebook/);
 });
 
 test("press pages have canonical and reciprocal language links", () => {
