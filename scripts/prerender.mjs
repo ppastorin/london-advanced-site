@@ -10,12 +10,31 @@ import { buildSearch } from "./build-search.mjs";
 import { buildSitemap } from "./build-sitemap.mjs";
 import { buildGuidePages } from "./build-guide-pages.mjs";
 import { buildLegalPages } from "./build-legal.mjs";
+import { buildPressPages } from "./build-press-pages.mjs";
 import { buildMarkets, linkMarkets } from "./build-markets.mjs";
 import { KOFI_URL } from "./site-config.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
 const canonicalOrigin = "https://www.londonadvanced.com";
+
+function addPressNavigation(html, relativePath) {
+  if (!html.includes('class="site-nav"')) return html;
+  const it = relativePath === "it/index.html" || relativePath.startsWith("it/");
+  const href = it ? "/it/stampa/" : "/press/";
+  if (html.includes(`href="${href}"`)) return html;
+
+  const header = html.match(/<header class="site-nav[^"]*">[\s\S]*?<\/header>/)?.[0];
+  if (!header) return html;
+
+  const methodHref = it ? "/it/metodologia/" : "/methodology/";
+  const pressLink = header.includes("legal-nav")
+    ? `<a href="${href}">${it ? "Stampa" : "Press"}</a>`
+    : `<a href="${href}"><span>${it ? "Informazioni, dati e materiali per i media" : "Information, facts and media assets"}</span><strong>${it ? "Stampa &amp; media" : "Press &amp; media"}</strong></a>`;
+  const methodPattern = new RegExp(`(<a[^>]*href="${methodHref.replaceAll("/", "\\/")}"[^>]*>[\\s\\S]*?<\\/a>)`, "g");
+  const updatedHeader = header.replace(methodPattern, `$1${pressLink}`);
+  return html.replace(header, updatedHeader);
+}
 
 async function walkFiles(dir) {
   const files = [];
@@ -875,6 +894,7 @@ export async function prerender() {
   await buildMarkets();
   await buildSearch();
   await buildLegalPages();
+  await buildPressPages();
   await buildCalendarSalesPage();
   await linkMarkets();
   const sitemapEntries = await buildSitemap();
@@ -885,13 +905,14 @@ export async function prerender() {
   await Promise.all([
     writeFile(path.join(distRoot, "analytics.js"), analyticsSource.replace("__LA_ANALYTICS_CONFIG__", JSON.stringify(analyticsConfig))),
     copyFile(path.join(projectRoot, "analytics.css"), path.join(distRoot, "analytics.css")),
-    copyFile(path.join(projectRoot, "legal.js"), path.join(distRoot, "legal.js"))
+    copyFile(path.join(projectRoot, "legal.js"), path.join(distRoot, "legal.js")),
+    copyFile(path.join(projectRoot, "press.css"), path.join(distRoot, "press.css"))
   ]);
 
   for (const file of await walkFiles(distRoot)) {
     if (!file.endsWith(".html")) continue;
     const original = await readFile(file, "utf8");
-    let updated = original
+    let updated = addPressNavigation(original, path.relative(distRoot, file).replaceAll(path.sep, "/"))
       .replaceAll("{{KOFI_URL}}", KOFI_URL)
       .replaceAll("1,100+", "1,450+")
       .replaceAll("over 800 places", "over 1,450 places")

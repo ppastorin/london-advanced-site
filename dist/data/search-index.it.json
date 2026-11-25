@@ -840,148 +840,148 @@
       "updated_at": "2026-10-09T11:22:35+01:00"
     },
     {
-      "id": "event:model-railway-weekend-croydon-2026:it",
+      "id": "event:the-544-bethlem-museum-2026:it",
       "type": "event",
       "locale": "it",
-      "title": "Weekend dei modellini ferroviari a Croydon Clocktower",
-      "summary": "ven 20 nov · Braithwaite Hall, Croydon Town Hall · Gratuito — La Croydon Model Railway Society riempie la sala civica del Clocktower con plastici ispirati al borough e piste Brio da provare per i visitatori più giovani.",
-      "url": "/it/eventi/#event-model-railway-weekend-croydon-2026",
+      "title": "The 544: un memoriale fotografico",
+      "summary": "ven 27 nov · Bethlem Museum of the Mind · Gratuito — I 544 cianotipi di Sarah Ketelaars restituiscono presenza ai pazienti psichiatrici senza nome uccisi dai nazisti, nel museo londinese dedicato alla storia della salute mentale.",
+      "url": "/it/eventi/#event-the-544-bethlem-museum-2026",
       "tags": [
         "Patrimonio e storia",
+        "Gratuito",
+        "Bromley",
+        "free"
+      ],
+      "keywords": [
+        "Bethlem Museum of the Mind",
+        "Bethlem Royal Hospital, Monks Orchard Road, Beckenham",
+        "BR3 3BX",
+        "Bromley",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "I 544 cianotipi di Sarah Ketelaars restituiscono presenza ai pazienti psichiatrici senza nome uccisi dai nazisti, nel museo londinese dedicato alla storia della salute mentale.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-27T17:15:00+00:00"
+    },
+    {
+      "id": "event:national-art-library-discovery-day-2026:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Giornata di scoperta della National Art Library",
+      "summary": "ven 27 nov · National Art Library, V&A South Kensington · Gratuito — Il V&A apre la sala di lettura e gli spazi nascosti della National Art Library con tesori d'archivio, laboratori di legatoria, incontri e tour dietro le quinte.",
+      "url": "/it/eventi/#event-national-art-library-discovery-day-2026",
+      "tags": [
+        "Patrimonio e storia",
+        "Gratuito",
+        "Kensington and Chelsea",
+        "free"
+      ],
+      "keywords": [
+        "National Art Library, V&A South Kensington",
+        "Cromwell Road, London",
+        "SW7 2RL",
+        "Kensington and Chelsea",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Il V&A apre la sala di lettura e gli spazi nascosti della National Art Library con tesori d'archivio, laboratori di legatoria, incontri e tour dietro le quinte.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-27T17:15:00+00:00"
+    },
+    {
+      "id": "event:stanley-arts-christmas-market-lights-2026:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Mercatino e accensione delle luci a Stanley Arts",
+      "summary": "ven 27 nov · Stanley Arts · Gratuito — Il centro artistico tutelato di South Norwood accoglie gli artigiani locali nella Stanley Hall e riunisce il quartiere all'esterno per l'accensione annuale degli alberi.",
+      "url": "/it/eventi/#event-stanley-arts-christmas-market-lights-2026",
+      "tags": [
+        "Community",
         "Gratuito",
         "Croydon",
         "free"
       ],
       "keywords": [
-        "Braithwaite Hall, Croydon Town Hall",
-        "Katharine Street, Croydon",
-        "CR9 1ET",
+        "Stanley Arts",
+        "12 South Norwood Hill, London",
+        "SE25 6AB",
         "Croydon",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "La Croydon Model Railway Society riempie la sala civica del Clocktower con plastici ispirati al borough e piste Brio da provare per i visitatori più giovani.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-21T16:15:00+00:00"
+      "content": "Il centro artistico tutelato di South Norwood accoglie gli artigiani locali nella Stanley Hall e riunisce il quartiere all'esterno per l'accensione annuale degli alberi.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-27T21:15:00+00:00"
     },
     {
-      "id": "event:radical-rediscovery-iii-2026:it",
+      "id": "event:london-museum-smithfield-opening-2026:it",
       "type": "event",
       "locale": "it",
-      "title": "Radical Rediscovery III: Cosa sopravvive?",
-      "summary": "ven 20 nov · London Performance Studios, Studios 3 and 4 · Gratuito — Una mostra d'archivio gratuita ripercorre cinquant'anni di teatro nero e asiatico con documenti rari, testimonianze orali, costumi di carnevale e l'eredità del rapporto di Naseem Khan del 1976.",
-      "url": "/it/eventi/#event-radical-rediscovery-iii-2026",
-      "tags": [
-        "Cultura locale",
-        "Gratuito",
-        "Southwark",
-        "free"
-      ],
-      "keywords": [
-        "London Performance Studios, Studios 3 and 4",
-        "Penarth Centre, Penarth Street, London",
-        "SE15 1TR",
-        "Southwark",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "Una mostra d'archivio gratuita ripercorre cinquant'anni di teatro nero e asiatico con documenti rari, testimonianze orali, costumi di carnevale e l'eredità del rapporto di Naseem Khan del 1976.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-20T18:15:00+00:00"
-    },
-    {
-      "id": "event:anna-phillips-rhapsodie-harp-recital-2026:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Anna Phillips: recital d'arpa Rhapsodie",
-      "summary": "ven 20 nov · Welsh Church of Central London · Gratuito — L'arpista gallese Anna Phillips chiude il tour del suo album con un intimo concerto all'ora di pranzo: Bach, Guridi, Mathias, Grandjany e un canto tradizionale gallese.",
-      "url": "/it/eventi/#event-anna-phillips-rhapsodie-harp-recital-2026",
-      "tags": [
-        "Cultura locale",
-        "Gratuito",
-        "City of Westminster",
-        "free"
-      ],
-      "keywords": [
-        "Welsh Church of Central London",
-        "30 Eastcastle Street, London",
-        "W1W 8DJ",
-        "City of Westminster",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "L'arpista gallese Anna Phillips chiude il tour del suo album con un intimo concerto all'ora di pranzo: Bach, Guridi, Mathias, Grandjany e un canto tradizionale gallese.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-20T14:15:00+00:00"
-    },
-    {
-      "id": "event:illuminate-bermondsey-rotherhithe-2026:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Processione delle lanterne Illuminate Bermondsey & Rotherhithe",
-      "summary": "ven 20 nov · The Blue Market · Gratuito — Una processione di lanterne create nel quartiere parte da The Blue verso Southwark Park con una banda samba, per un finale musicale attorno al chiosco illuminato.",
-      "url": "/it/eventi/#event-illuminate-bermondsey-rotherhithe-2026",
-      "tags": [
-        "Community",
-        "Gratuito",
-        "Southwark",
-        "free"
-      ],
-      "keywords": [
-        "The Blue Market",
-        "4 Market Place, Southwark Park Road, London",
-        "SE16 3UQ",
-        "Southwark",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "Una processione di lanterne create nel quartiere parte da The Blue verso Southwark Park con una banda samba, per un finale musicale attorno al chiosco illuminato.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-20T19:45:00+00:00"
-    },
-    {
-      "id": "event:discover-your-mosque-open-day-2026:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Discover Your Mosque: giornata aperta",
-      "summary": "sab 21 nov · London Muslim Centre, Entrance 1 · Gratuito — La East London Mosque accoglie chi visita per la prima volta e i non musulmani con tour guidati, conversazioni, tè e una mostra contro islamofobia e stereotipi.",
-      "url": "/it/eventi/#event-discover-your-mosque-open-day-2026",
-      "tags": [
-        "Community",
-        "Gratuito",
-        "Tower Hamlets",
-        "free"
-      ],
-      "keywords": [
-        "London Muslim Centre, Entrance 1",
-        "46 Whitechapel Road, London",
-        "E1 1JX",
-        "Tower Hamlets",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "La East London Mosque accoglie chi visita per la prima volta e i non musulmani con tour guidati, conversazioni, tè e una mostra contro islamofobia e stereotipi.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-21T15:15:00+00:00"
-    },
-    {
-      "id": "event:rebel-footprints-housmans-2026:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Rebel Footprints: lancio sulla Londra radicale",
-      "summary": "sab 21 nov · Housmans Bookshop · £5 standard; £2.50 low-income — David Rosenberg presenta la terza edizione della sua guida alle geografie radicali di Londra, tra suffragette, cartisti, sindacalisti e luoghi nascosti della protesta.",
-      "url": "/it/eventi/#event-rebel-footprints-housmans-2026",
+      "title": "Il London Museum apre a Smithfield",
+      "summary": "sab 28 nov · London Museum · Gratuito — Il museo della città inaugura una nuova fase nel restaurato General Market vittoriano di Smithfield, tra collezioni londinesi e architettura del mercato, con apertura serale speciale.",
+      "url": "/it/eventi/#event-london-museum-smithfield-opening-2026",
       "tags": [
         "Patrimonio e storia",
-        "£5 standard; £2.50 low-income",
-        "Islington",
-        "cheap"
+        "Gratuito",
+        "City of London",
+        "free"
       ],
       "keywords": [
-        "Housmans Bookshop",
-        "5 Caledonian Road, London",
-        "N1 9DX",
-        "Islington",
+        "London Museum",
+        "General Market, West Smithfield, London",
+        "EC1A 9AG",
+        "City of London",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "David Rosenberg presenta la terza edizione della sua guida alle geografie radicali di Londra, tra suffragette, cartisti, sindacalisti e luoghi nascosti della protesta.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-21T20:45:00+00:00"
+      "content": "Il museo della città inaugura una nuova fase nel restaurato General Market vittoriano di Smithfield, tra collezioni londinesi e architettura del mercato, con apertura serale speciale.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-28T23:15:00+00:00"
+    },
+    {
+      "id": "event:cody-dock-frost-fair-2026:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Frost Fair a Cody Dock",
+      "summary": "sab 28 nov · Cody Dock · Gratuito — Cody Dock riprende la tradizione delle fiere sul Tamigi gelato lungo il basso Lea, con artigiani locali, laboratori, musica, una processione di lanterne e una nuova installazione in ferro.",
+      "url": "/it/eventi/#event-cody-dock-frost-fair-2026",
+      "tags": [
+        "Cultura locale",
+        "Gratuito",
+        "Newham",
+        "free"
+      ],
+      "keywords": [
+        "Cody Dock",
+        "11c South Crescent, London",
+        "E16 4TL",
+        "Newham",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Cody Dock riprende la tradizione delle fiere sul Tamigi gelato lungo il basso Lea, con artigiani locali, laboratori, musica, una processione di lanterne e una nuova installazione in ferro.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-28T17:15:00+00:00"
+    },
+    {
+      "id": "event:wallace-collection-festive-late-2026:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Apertura serale festiva della Wallace Collection",
+      "summary": "sab 28 nov · The Wallace Collection · Gratuito — Hertford House resta aperta dopo l'orario con musica, tour della collezione, laboratori di carta e armature da provare, mentre le sale storiche si vestono d'inverno.",
+      "url": "/it/eventi/#event-wallace-collection-festive-late-2026",
+      "tags": [
+        "Arte e design",
+        "Gratuito",
+        "City of Westminster",
+        "free"
+      ],
+      "keywords": [
+        "The Wallace Collection",
+        "Hertford House, Manchester Square, London",
+        "W1U 3BN",
+        "City of Westminster",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Hertford House resta aperta dopo l'orario con musica, tour della collezione, laboratori di carta e armature da provare, mentre le sale storiche si vestono d'inverno.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-28T21:15:00+00:00"
     }
   ]
 }

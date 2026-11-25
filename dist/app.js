@@ -90,6 +90,10 @@ function projectMenuLinks() {
     <a href="/methodology/" data-track="project:methodology">
       <span>Sources, decisions and limits</span>
       <strong>Methodology</strong>
+    </a>
+    <a href="/press/" data-track="project:press">
+      <span>Information, facts and media assets</span>
+      <strong>Press &amp; media</strong>
     </a>`;
 }
 
@@ -123,10 +127,10 @@ function mobileMenuContent() {
       <span>Useful London, occasionally</span>
       <strong>Newsletter</strong>
     </a>
-    <button class="mobile-section-link" type="button" data-scroll-target="contact">
+    <a href="#contact">
       <span>Questions and suggestions</span>
       <strong>Contact me</strong>
-    </button>
+    </a>
     <p class="mobile-menu-heading">Project</p>
     ${projectMenuLinks()}
     <p class="mobile-menu-heading">Community</p>
@@ -325,7 +329,7 @@ function render() {
         </details>
         <button class="nav-section-button" type="button" data-scroll-target="journal">Journal</button>
         <a class="newsletter-nav" href="/newsletter/" data-track="newsletter:menu">Newsletter</a>
-        <button class="nav-section-button contact-nav" type="button" data-scroll-target="contact">Contact</button>
+        <a class="contact-nav" href="#contact">Contact</a>
         <details class="nav-dropdown project-menu">
           <summary>Project</summary>
           <div class="nav-menu-panel project-menu-panel">${projectMenuLinks()}</div>
