@@ -842,148 +842,148 @@
       "updated_at": "2026-10-09T11:22:35+01:00"
     },
     {
-      "id": "event:model-railway-weekend-croydon-2026:en",
+      "id": "event:the-544-bethlem-museum-2026:en",
       "type": "event",
       "locale": "en",
-      "title": "Model Railway Weekend at Croydon Clocktower",
-      "summary": "Fri 20 Nov · Braithwaite Hall, Croydon Town Hall · Free — Croydon Model Railway Society fills the Clocktower's civic hall with layouts inspired by the borough, alongside hands-on Brio tracks for younger visitors.",
-      "url": "/events/#event-model-railway-weekend-croydon-2026",
+      "title": "The 544: A Photographic Memorial",
+      "summary": "Fri 27 Nov · Bethlem Museum of the Mind · Free — Sarah Ketelaars' 544 individual cyanotypes restore presence to unnamed psychiatric patients murdered by the Nazis, shown inside London's specialist museum of mental-health history.",
+      "url": "/events/#event-the-544-bethlem-museum-2026",
       "tags": [
         "Heritage and history",
+        "Free",
+        "Bromley",
+        "free"
+      ],
+      "keywords": [
+        "Bethlem Museum of the Mind",
+        "Bethlem Royal Hospital, Monks Orchard Road, Beckenham",
+        "BR3 3BX",
+        "Bromley",
+        "event events this week weekend free affordable"
+      ],
+      "content": "Sarah Ketelaars' 544 individual cyanotypes restore presence to unnamed psychiatric patients murdered by the Nazis, shown inside London's specialist museum of mental-health history. A little-known museum hosts a temporary, deeply researched memorial that connects psychiatric history, art and lives erased from the record.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-27T17:15:00+00:00"
+    },
+    {
+      "id": "event:national-art-library-discovery-day-2026:en",
+      "type": "event",
+      "locale": "en",
+      "title": "National Art Library Discovery Day",
+      "summary": "Fri 27 Nov · National Art Library, V&A South Kensington · Free — The V&A opens the National Art Library's reading room and hidden spaces for collection displays, book-making, curator talks and small-capacity behind-the-scenes tours.",
+      "url": "/events/#event-national-art-library-discovery-day-2026",
+      "tags": [
+        "Heritage and history",
+        "Free",
+        "Kensington and Chelsea",
+        "free"
+      ],
+      "keywords": [
+        "National Art Library, V&A South Kensington",
+        "Cromwell Road, London",
+        "SW7 2RL",
+        "Kensington and Chelsea",
+        "event events this week weekend free affordable"
+      ],
+      "content": "The V&A opens the National Art Library's reading room and hidden spaces for collection displays, book-making, curator talks and small-capacity behind-the-scenes tours. A one-day chance to enter hidden library spaces and handle the stories behind a major national collection, entirely free.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-27T17:15:00+00:00"
+    },
+    {
+      "id": "event:stanley-arts-christmas-market-lights-2026:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Stanley Arts Christmas Market and Lights",
+      "summary": "Fri 27 Nov · Stanley Arts · Free — South Norwood's Grade II-listed arts centre brings local makers into Stanley Hall, then gathers the neighbourhood outside for its annual tree-lighting ceremony.",
+      "url": "/events/#event-stanley-arts-christmas-market-lights-2026",
+      "tags": [
+        "Community",
         "Free",
         "Croydon",
         "free"
       ],
       "keywords": [
-        "Braithwaite Hall, Croydon Town Hall",
-        "Katharine Street, Croydon",
-        "CR9 1ET",
+        "Stanley Arts",
+        "12 South Norwood Hill, London",
+        "SE25 6AB",
         "Croydon",
         "event events this week weekend free affordable"
       ],
-      "content": "Croydon Model Railway Society fills the Clocktower's civic hall with layouts inspired by the borough, alongside hands-on Brio tracks for younger visitors. A free, locally built portrait of Croydon's railway identity temporarily takes over the borough's civic hall for two days.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-21T16:15:00+00:00"
+      "content": "South Norwood's Grade II-listed arts centre brings local makers into Stanley Hall, then gathers the neighbourhood outside for its annual tree-lighting ceremony. A neighbourhood-led market and one-off lighting ceremony animate a distinctive local arts landmark with free, drop-in access.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-27T21:15:00+00:00"
     },
     {
-      "id": "event:radical-rediscovery-iii-2026:en",
+      "id": "event:london-museum-smithfield-opening-2026:en",
       "type": "event",
       "locale": "en",
-      "title": "Radical Rediscovery III: What Survives?",
-      "summary": "Fri 20 Nov · London Performance Studios, Studios 3 and 4 · Free — A free archival exhibition traces fifty years of Black and Asian theatre through rare ephemera, oral histories, carnival costumes and the legacy of Naseem Khan's landmark 1976 report.",
-      "url": "/events/#event-radical-rediscovery-iii-2026",
-      "tags": [
-        "Local culture",
-        "Free",
-        "Southwark",
-        "free"
-      ],
-      "keywords": [
-        "London Performance Studios, Studios 3 and 4",
-        "Penarth Centre, Penarth Street, London",
-        "SE15 1TR",
-        "Southwark",
-        "event events this week weekend free affordable"
-      ],
-      "content": "A free archival exhibition traces fifty years of Black and Asian theatre through rare ephemera, oral histories, carnival costumes and the legacy of Naseem Khan's landmark 1976 report. A grassroots South Bermondsey archive makes an overlooked chapter of British theatre history tangible through a temporary, free display.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-20T18:15:00+00:00"
-    },
-    {
-      "id": "event:anna-phillips-rhapsodie-harp-recital-2026:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Anna Phillips: Rhapsodie Harp Recital",
-      "summary": "Fri 20 Nov · Welsh Church of Central London · Free — Welsh harpist Anna Phillips closes her album tour with an intimate lunchtime programme of Bach, Guridi, Mathias, Grandjany and a Welsh folk-song arrangement.",
-      "url": "/events/#event-anna-phillips-rhapsodie-harp-recital-2026",
-      "tags": [
-        "Local culture",
-        "Free",
-        "City of Westminster",
-        "free"
-      ],
-      "keywords": [
-        "Welsh Church of Central London",
-        "30 Eastcastle Street, London",
-        "W1W 8DJ",
-        "City of Westminster",
-        "event events this week weekend free affordable"
-      ],
-      "content": "Welsh harpist Anna Phillips closes her album tour with an intimate lunchtime programme of Bach, Guridi, Mathias, Grandjany and a Welsh folk-song arrangement. A one-off Welsh cultural recital in a Grade II-listed chapel pairs an unusual central-London setting with genuinely free entry.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-20T14:15:00+00:00"
-    },
-    {
-      "id": "event:illuminate-bermondsey-rotherhithe-2026:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Illuminate Bermondsey & Rotherhithe Lantern Procession",
-      "summary": "Fri 20 Nov · The Blue Market · Free — A neighbourhood-made lantern procession moves from The Blue to Southwark Park with a samba band, then lights the bandstand for an evening finale of local music.",
-      "url": "/events/#event-illuminate-bermondsey-rotherhithe-2026",
-      "tags": [
-        "Community",
-        "Free",
-        "Southwark",
-        "free"
-      ],
-      "keywords": [
-        "The Blue Market",
-        "4 Market Place, Southwark Park Road, London",
-        "SE16 3UQ",
-        "Southwark",
-        "event events this week weekend free affordable"
-      ],
-      "content": "A neighbourhood-made lantern procession moves from The Blue to Southwark Park with a samba band, then lights the bandstand for an evening finale of local music. A free, one-night procession turns local Thames-side stories and residents' handmade lanterns into a shared journey through SE16.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-20T19:45:00+00:00"
-    },
-    {
-      "id": "event:discover-your-mosque-open-day-2026:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Discover Your Mosque Open Day",
-      "summary": "Sat 21 Nov · London Muslim Centre, Entrance 1 · Free — East London Mosque welcomes first-time and non-Muslim visitors for guided tours, conversation, tea and an exhibition confronting Islamophobia and harmful stereotypes.",
-      "url": "/events/#event-discover-your-mosque-open-day-2026",
-      "tags": [
-        "Community",
-        "Free",
-        "Tower Hamlets",
-        "free"
-      ],
-      "keywords": [
-        "London Muslim Centre, Entrance 1",
-        "46 Whitechapel Road, London",
-        "E1 1JX",
-        "Tower Hamlets",
-        "event events this week weekend free affordable"
-      ],
-      "content": "East London Mosque welcomes first-time and non-Muslim visitors for guided tours, conversation, tea and an exhibition confronting Islamophobia and harmful stereotypes. A major Whitechapel institution offers unusual community-led access, combining local history, frank conversation and a free guided visit.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-21T15:15:00+00:00"
-    },
-    {
-      "id": "event:rebel-footprints-housmans-2026:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Rebel Footprints: Radical London Book Launch",
-      "summary": "Sat 21 Nov · Housmans Bookshop · £5 standard; £2.50 low-income — David Rosenberg launches the third edition of his guide to London's radical geographies, linking suffragettes, Chartists, trade unionists and hidden sites of protest.",
-      "url": "/events/#event-rebel-footprints-housmans-2026",
+      "title": "London Museum Opens at Smithfield",
+      "summary": "Sat 28 Nov · London Museum · Free — The city's museum begins a new chapter inside Smithfield's restored Victorian General Market, revealing London collections and the building's market fabric on an unusually late opening day.",
+      "url": "/events/#event-london-museum-smithfield-opening-2026",
       "tags": [
         "Heritage and history",
-        "£5 standard; £2.50 low-income",
-        "Islington",
-        "cheap"
+        "Free",
+        "City of London",
+        "free"
       ],
       "keywords": [
-        "Housmans Bookshop",
-        "5 Caledonian Road, London",
-        "N1 9DX",
-        "Islington",
+        "London Museum",
+        "General Market, West Smithfield, London",
+        "EC1A 9AG",
+        "City of London",
         "event events this week weekend free affordable"
       ],
-      "content": "David Rosenberg launches the third edition of his guide to London's radical geographies, linking suffragettes, Chartists, trade unionists and hidden sites of protest. An independent radical bookshop hosts a one-off exploration of protest, social movements and the hidden London places where they unfolded.",
-      "updated_at": "2026-11-19T15:02:04+00:00",
-      "expires_at": "2026-11-21T20:45:00+00:00"
+      "content": "The city's museum begins a new chapter inside Smithfield's restored Victorian General Market, revealing London collections and the building's market fabric on an unusually late opening day. A landmark museum opening gives free access to London's story inside a transformed Victorian market, with late-night hours on day one.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-28T23:15:00+00:00"
+    },
+    {
+      "id": "event:cody-dock-frost-fair-2026:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Cody Dock Frost Fair",
+      "summary": "Sat 28 Nov · Cody Dock · Free — Cody Dock revives the Thames frost-fair tradition beside the lower Lea with local makers, winter crafts, live music, a children's lantern procession and a new ironwork installation.",
+      "url": "/events/#event-cody-dock-frost-fair-2026",
+      "tags": [
+        "Local culture",
+        "Free",
+        "Newham",
+        "free"
+      ],
+      "keywords": [
+        "Cody Dock",
+        "11c South Crescent, London",
+        "E16 4TL",
+        "Newham",
+        "event events this week weekend free affordable"
+      ],
+      "content": "Cody Dock revives the Thames frost-fair tradition beside the lower Lea with local makers, winter crafts, live music, a children's lantern procession and a new ironwork installation. A community dock turns river history into a free one-day festival of local craft, performance, lanterns and working-site culture.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-28T17:15:00+00:00"
+    },
+    {
+      "id": "event:wallace-collection-festive-late-2026:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Wallace Collection Festive Late",
+      "summary": "Sat 28 Nov · The Wallace Collection · Free — Hertford House stays open after hours for pop-up music, collection tours, paper crafts and hands-on armour, with the opulent galleries dressed for winter.",
+      "url": "/events/#event-wallace-collection-festive-late-2026",
+      "tags": [
+        "Art and design",
+        "Free",
+        "City of Westminster",
+        "free"
+      ],
+      "keywords": [
+        "The Wallace Collection",
+        "Hertford House, Manchester Square, London",
+        "W1U 3BN",
+        "City of Westminster",
+        "event events this week weekend free affordable"
+      ],
+      "content": "Hertford House stays open after hours for pop-up music, collection tours, paper crafts and hands-on armour, with the opulent galleries dressed for winter. A free, after-hours opening animates an aristocratic house museum with small-scale tours, making and performance for one evening.",
+      "updated_at": "2026-11-23T15:07:03+00:00",
+      "expires_at": "2026-11-28T21:15:00+00:00"
     }
   ]
 }

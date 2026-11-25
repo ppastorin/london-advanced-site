@@ -713,7 +713,7 @@ if (!homepageHtml.includes('class="wordmark" href="#top"') || !homepageHtml.incl
 }
 for (const marker of [
   'id="contact"',
-  'data-scroll-target="contact"',
+  'class="contact-nav" href="#contact"',
   'action="/api/contact"',
   'name="started_at"',
   'name="_honey"',

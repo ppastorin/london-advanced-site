@@ -121,7 +121,7 @@ function alternateLinks(page) {
 
 function navigation(page) {
   const it = page.locale === "it-IT";
-  return `<header class="site-nav legal-nav"><a class="wordmark" href="${it ? "/it/" : "/"}" aria-label="${it ? "Homepage London Advanced" : "London Advanced homepage"}">LA<span>•</span></a><nav aria-label="${it ? "Navigazione principale" : "Main navigation"}"><a href="${it ? "/it/" : "/"}">${it ? "Home" : "Home"}</a><a href="${it ? "/it/journal/" : "/journal/"}">Journal</a><a href="${it ? "/it/metodologia/" : "/methodology/"}">${it ? "Metodologia" : "Methodology"}</a><a href="${it ? "/it/chi-sono/" : "/about/"}">${it ? "Chi sono" : "About"}</a></nav><a class="nav-cta" href="${page.alternate}" lang="${it ? "en" : "it"}" hreflang="${it ? "en-GB" : "it-IT"}">${it ? "English" : "Italiano"}</a></header>`;
+  return `<header class="site-nav legal-nav"><a class="wordmark" href="${it ? "/it/" : "/"}" aria-label="${it ? "Homepage London Advanced" : "London Advanced homepage"}">LA<span>•</span></a><nav aria-label="${it ? "Navigazione principale" : "Main navigation"}"><a href="${it ? "/it/" : "/"}">${it ? "Home" : "Home"}</a><a href="${it ? "/it/journal/" : "/journal/"}">Journal</a><a href="${it ? "/it/metodologia/" : "/methodology/"}">${it ? "Metodologia" : "Methodology"}</a><a href="${it ? "/it/stampa/" : "/press/"}">${it ? "Stampa" : "Press"}</a><a href="${it ? "/it/chi-sono/" : "/about/"}">${it ? "Chi sono" : "About"}</a></nav><a class="nav-cta" href="${page.alternate}" lang="${it ? "en" : "it"}" hreflang="${it ? "en-GB" : "it-IT"}">${it ? "English" : "Italiano"}</a></header>`;
 }
 
 function footer(page) {
