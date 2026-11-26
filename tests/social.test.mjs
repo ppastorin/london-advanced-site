@@ -1,6 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import { validateSocialPost } from "../scripts/validate-social.mjs";
+
+const settings = JSON.parse(fs.readFileSync("content/social/settings.json", "utf8"));
 
 const approvedPost = {
   post_id: "2026-11-10-test-post",
@@ -26,7 +29,24 @@ test("allows a completely approved post to enter the Metricool hand-off queue", 
   assert.deepEqual(validateSocialPost(approvedPost), []);
 });
 
-test("blocks approval when the human approval record is incomplete", () => {
+test("social settings match the current standing policy", () => {
+  assert.deepEqual(settings.cadence.map(({ day, local_time, kind }) => [day, local_time, kind]), [
+    ["Tuesday", "18:30", "place"],
+    ["Sunday", "10:00", "journal-or-tool"]
+  ]);
+  assert.equal(settings.voice.caption_words_min, 40);
+  assert.equal(settings.voice.caption_words_max, 110);
+  assert.equal(settings.automation.require_human_approval, false);
+  assert.equal(settings.automation.approval_policy, "standing-authorisation");
+  assert.equal(settings.automation.standing_authorisation_date, "2026-11-20");
+  assert.match(settings.image_rules.overlay_policy, /immagini pulite/);
+});
+
+test("allows an approved post with no hashtags", () => {
+  assert.deepEqual(validateSocialPost({ ...approvedPost, hashtags: [] }), []);
+});
+
+test("blocks approval when the approval record is incomplete", () => {
   const post = { ...approvedPost, approval: { status: "pending" } };
   assert.ok(validateSocialPost(post).some(error => error.includes("complete approval record")));
 });
@@ -43,6 +63,6 @@ test("blocks hashtag clouds and duplicate carousel ordering", () => {
     images: [approvedPost.images[0], { ...approvedPost.images[0], src: "/assets/instagram/test/test - 2.jpg" }]
   };
   const errors = validateSocialPost(post);
-  assert.ok(errors.some(error => error.includes("one and five hashtags")));
+  assert.ok(errors.some(error => error.includes("no more than five hashtags")));
   assert.ok(errors.some(error => error.includes("order 1 is duplicated")));
 });

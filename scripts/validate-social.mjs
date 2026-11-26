@@ -30,7 +30,7 @@ export function validateSocialPost(post, options = {}) {
   if (["italian-plus-english-summary", "bilingual"].includes(post?.language_mode) && !post?.caption_en?.trim()) {
     errors.push(`${label}: caption_en is required for ${post.language_mode}.`);
   }
-  if (hashtags.length < 1 || hashtags.length > 5) errors.push(`${label}: use between one and five hashtags.`);
+  if (hashtags.length > 5) errors.push(`${label}: use no more than five hashtags.`);
   if (new Set(hashtags.map(tag => String(tag).toLowerCase())).size !== hashtags.length) errors.push(`${label}: hashtags must be unique.`);
   hashtags.forEach((tag, index) => {
     if (!hashtagPattern.test(tag)) errors.push(`${label}: hashtag ${index + 1} is invalid.`);

@@ -7,8 +7,10 @@ the full events page has been deployed and tested. Do not create a second task.
 
 Prepare and publish the London Advanced events digest.
 
-Read Gmail messages carrying the label `LA-Events` received in the last 10 days. Parse
-the newsletter content and consider Londonist, The Times, Londonfy and London x London.
+Read Gmail messages carrying the label `LA-Events` received in the last 5 days. Parse
+all messages with that label, including Londonist, The Times, ianVisits, Londonfy and
+London x London. Keep the actual newsletter name in `newsletter_sources`; other labelled
+senders are eligible and must not be relabelled as one of the named publications.
 Extract London events taking place from the coming Friday through the following Sunday,
 inclusive. Deduplicate the same event across newsletters and recurring mentions.
 
@@ -77,14 +79,23 @@ Validate the complete document against all schema and semantic rules before any
 repository write. If there are no valid events, validation fails, official verification
 is unavailable, or GitHub cannot be read safely, do not change GitHub. Report the reason.
 
-When the document is valid, update exactly this one GitHub file on branch `main`:
+When the document is valid, create a scoped branch named
+`automation/events-YYYY-MM-DD-HHMM` from the current `main` head and update exactly this
+one GitHub file:
 
 `dist/data/events.json`
 
 Do not create, edit or delete any other repository file. Use commit message
 `content(events): refresh YYYY-MM-DD HH:mm Europe/London` with the actual run date and
-time. After updating, fetch the committed file again and confirm it matches the validated
-document. Report the commit result, all titles published and the homepage selections.
+time. Fetch the committed file again and confirm it matches the validated document.
+
+Open a pull request to `main` and verify that its changed-file manifest contains only
+`dist/data/events.json`. Do not merge until `Site safety checks` succeeds for the exact
+pull-request head SHA. After merge, wait for the Cloudflare Workers Build for the merge
+commit to succeed, then fetch the live `/data/events.json` and confirm its generated time
+and event IDs match the merged document. If any gate fails, leave production unchanged
+and report the blocker. Report the commit and deployment result, all titles published
+and the homepage selections.
 
 Also return:
 
@@ -94,4 +105,5 @@ Also return:
    same approved events in the `events` array, up to eight, with date, price, booking note
    and official links. Do not publish it to Facebook.
 3. Source coverage showing whether at least one recent tagged email was found from each of
-   Londonist, The Times, Londonfy and London x London.
+   Londonist, The Times, ianVisits, Londonfy and London x London, plus the names of any
+   other `LA-Events` senders considered.

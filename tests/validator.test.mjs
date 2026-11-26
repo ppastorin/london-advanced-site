@@ -9,6 +9,21 @@ test('accepts the supplied full-list feed', () => {
   assert.deepEqual(validateDigest(valid), []);
 });
 
+test('accepts ianVisits and other labelled newsletter names', () => {
+  const candidate = structuredClone(valid);
+  candidate.events[0].newsletter_sources = ['ianVisits', 'A local London newsletter'];
+  assert.deepEqual(validateDigest(candidate), []);
+});
+
+test('rejects blank, duplicate and overlong newsletter names', () => {
+  const candidate = structuredClone(valid);
+  candidate.events[0].newsletter_sources = ['ianVisits', 'ianVisits', ' ', 'x'.repeat(121)];
+  const errors = validateDigest(candidate);
+  assert.ok(errors.some((error) => error.includes('must not contain duplicates')));
+  assert.ok(errors.some((error) => error.includes('newsletter_sources[2]')));
+  assert.ok(errors.some((error) => error.includes('newsletter_sources[3]')));
+});
+
 function expandTo(candidate, count) {
   while (candidate.events.length < count) {
     const copy = structuredClone(candidate.events[0]);
