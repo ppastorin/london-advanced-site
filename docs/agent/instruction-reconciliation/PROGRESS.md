@@ -2,8 +2,8 @@
 
 ## Status
 
-- Step 1 of the approved Agent Skills migration is in progress.
-- No skill files are created in this step.
+- Step 1 is complete.
+- Step 2 is implemented and locally validated; pull-request verification remains.
 
 ## Decisions
 
@@ -11,6 +11,9 @@
 - Scheduled event publication follows branch, pull request, exact-head CI, Cloudflare deployment and live-readback safeguards.
 - Instagram feed cadence is Tuesday place and Sunday Journal or tool. Weekend-event feed publishing remains paused.
 - Instagram uses standing authorisation dated 20 November 2026, clean-photo carousels, normally 40 to 110 Italian words and zero to five precise hashtags.
+- `AGENTS.md` retains only repository-wide scope, evidence, change-safety and writing safeguards.
+- Release mechanics live in `la-safe-deployment`; visual and responsive proof lives in `la-ui-validation`.
+- Skill-only changes trigger the existing site-safety workflow.
 
 ## Acceptance criteria
 
@@ -19,6 +22,8 @@
 - Social settings match the current cadence, standing approval, clean-image and caption policies.
 - Social validation permits zero hashtags and still rejects more than five.
 - Full tests and exact-head CI pass.
+- Both skills have valid frontmatter and retain the safeguards removed from `AGENTS.md`.
+- Regression tests enforce skill routing, release gates, UI proof and CI path coverage.
 
 ## Files touched
 
@@ -26,4 +31,4 @@
 
 ## Next step
 
-- After merge and live automation alignment, begin Step 2 with `la-safe-deployment` and `la-ui-validation`.
+- After Step 2 is merged and deployed, begin Step 3 of the approved migration sequence.
