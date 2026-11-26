@@ -842,76 +842,28 @@
       "updated_at": "2026-10-09T11:22:35+01:00"
     },
     {
-      "id": "event:the-544-bethlem-museum-2026:en",
+      "id": "event:riles-all-love-bsmt-2026:en",
       "type": "event",
       "locale": "en",
-      "title": "The 544: A Photographic Memorial",
-      "summary": "Fri 27 Nov · Bethlem Museum of the Mind · Free — Sarah Ketelaars' 544 individual cyanotypes restore presence to unnamed psychiatric patients murdered by the Nazis, shown inside London's specialist museum of mental-health history.",
-      "url": "/events/#event-the-544-bethlem-museum-2026",
+      "title": "Rilès: ALL LOVE at BSMT Gallery",
+      "summary": "Fri 27 Nov · BSMT Gallery · Free — Watch through BSMT's gallery window as Rilès hand-copies the Bible by day, then composes a new album in the same room each evening: a durational work built on repetition and attention.",
+      "url": "/events/#event-riles-all-love-bsmt-2026",
       "tags": [
-        "Heritage and history",
+        "Art and design",
         "Free",
-        "Bromley",
+        "Hackney",
         "free"
       ],
       "keywords": [
-        "Bethlem Museum of the Mind",
-        "Bethlem Royal Hospital, Monks Orchard Road, Beckenham",
-        "BR3 3BX",
-        "Bromley",
+        "BSMT Gallery",
+        "529 Kingsland Road, London",
+        "E8 4AR",
+        "Hackney",
         "event events this week weekend free affordable"
       ],
-      "content": "Sarah Ketelaars' 544 individual cyanotypes restore presence to unnamed psychiatric patients murdered by the Nazis, shown inside London's specialist museum of mental-health history. A little-known museum hosts a temporary, deeply researched memorial that connects psychiatric history, art and lives erased from the record.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
-      "expires_at": "2026-11-27T17:15:00+00:00"
-    },
-    {
-      "id": "event:national-art-library-discovery-day-2026:en",
-      "type": "event",
-      "locale": "en",
-      "title": "National Art Library Discovery Day",
-      "summary": "Fri 27 Nov · National Art Library, V&A South Kensington · Free — The V&A opens the National Art Library's reading room and hidden spaces for collection displays, book-making, curator talks and small-capacity behind-the-scenes tours.",
-      "url": "/events/#event-national-art-library-discovery-day-2026",
-      "tags": [
-        "Heritage and history",
-        "Free",
-        "Kensington and Chelsea",
-        "free"
-      ],
-      "keywords": [
-        "National Art Library, V&A South Kensington",
-        "Cromwell Road, London",
-        "SW7 2RL",
-        "Kensington and Chelsea",
-        "event events this week weekend free affordable"
-      ],
-      "content": "The V&A opens the National Art Library's reading room and hidden spaces for collection displays, book-making, curator talks and small-capacity behind-the-scenes tours. A one-day chance to enter hidden library spaces and handle the stories behind a major national collection, entirely free.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
-      "expires_at": "2026-11-27T17:15:00+00:00"
-    },
-    {
-      "id": "event:stanley-arts-christmas-market-lights-2026:en",
-      "type": "event",
-      "locale": "en",
-      "title": "Stanley Arts Christmas Market and Lights",
-      "summary": "Fri 27 Nov · Stanley Arts · Free — South Norwood's Grade II-listed arts centre brings local makers into Stanley Hall, then gathers the neighbourhood outside for its annual tree-lighting ceremony.",
-      "url": "/events/#event-stanley-arts-christmas-market-lights-2026",
-      "tags": [
-        "Community",
-        "Free",
-        "Croydon",
-        "free"
-      ],
-      "keywords": [
-        "Stanley Arts",
-        "12 South Norwood Hill, London",
-        "SE25 6AB",
-        "Croydon",
-        "event events this week weekend free affordable"
-      ],
-      "content": "South Norwood's Grade II-listed arts centre brings local makers into Stanley Hall, then gathers the neighbourhood outside for its annual tree-lighting ceremony. A neighbourhood-led market and one-off lighting ceremony animate a distinctive local arts landmark with free, drop-in access.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
-      "expires_at": "2026-11-27T21:15:00+00:00"
+      "content": "Watch through BSMT's gallery window as Rilès hand-copies the Bible by day, then composes a new album in the same room each evening: a durational work built on repetition and attention. A family-run Dalston gallery becomes the site of a visible, months-long performance joining sacred text, endurance and music-making at no cost.",
+      "updated_at": "2026-11-26T15:06:06+00:00",
+      "expires_at": "2026-11-27T22:15:00+00:00"
     },
     {
       "id": "event:london-museum-smithfield-opening-2026:en",
@@ -934,8 +886,32 @@
         "event events this week weekend free affordable"
       ],
       "content": "The city's museum begins a new chapter inside Smithfield's restored Victorian General Market, revealing London collections and the building's market fabric on an unusually late opening day. A landmark museum opening gives free access to London's story inside a transformed Victorian market, with late-night hours on day one.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
+      "updated_at": "2026-11-26T15:06:06+00:00",
       "expires_at": "2026-11-28T23:15:00+00:00"
+    },
+    {
+      "id": "event:studio-pottery-open-studio-2026:en",
+      "type": "event",
+      "locale": "en",
+      "title": "Studio Pottery London Open Studio Weekend",
+      "summary": "Sat 28 Nov · Studio Pottery London · Free — A working Belgravia pottery studio opens for one weekend, bringing visitors face to face with 30 ceramic artists, their processes and handmade work in the place where it is made.",
+      "url": "/events/#event-studio-pottery-open-studio-2026",
+      "tags": [
+        "Art and design",
+        "Free",
+        "City of Westminster",
+        "free"
+      ],
+      "keywords": [
+        "Studio Pottery London",
+        "29 Eccleston Place, London",
+        "SW1W 9NF",
+        "City of Westminster",
+        "event events this week weekend free affordable"
+      ],
+      "content": "A working Belgravia pottery studio opens for one weekend, bringing visitors face to face with 30 ceramic artists, their processes and handmade work in the place where it is made. Temporary access to a working central-London ceramics studio connects visitors directly with makers and specialist craft, free for one weekend.",
+      "updated_at": "2026-11-26T15:06:06+00:00",
+      "expires_at": "2026-11-29T17:15:00+00:00"
     },
     {
       "id": "event:cody-dock-frost-fair-2026:en",
@@ -958,7 +934,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "Cody Dock revives the Thames frost-fair tradition beside the lower Lea with local makers, winter crafts, live music, a children's lantern procession and a new ironwork installation. A community dock turns river history into a free one-day festival of local craft, performance, lanterns and working-site culture.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
+      "updated_at": "2026-11-26T15:06:06+00:00",
       "expires_at": "2026-11-28T17:15:00+00:00"
     },
     {
@@ -982,7 +958,7 @@
         "event events this week weekend free affordable"
       ],
       "content": "Hertford House stays open after hours for pop-up music, collection tours, paper crafts and hands-on armour, with the opulent galleries dressed for winter. A free, after-hours opening animates an aristocratic house museum with small-scale tours, making and performance for one evening.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
+      "updated_at": "2026-11-26T15:06:06+00:00",
       "expires_at": "2026-11-28T21:15:00+00:00"
     }
   ]

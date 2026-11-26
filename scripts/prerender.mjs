@@ -13,6 +13,7 @@ import { buildLegalPages } from "./build-legal.mjs";
 import { buildPressPages } from "./build-press-pages.mjs";
 import { buildMarkets, linkMarkets } from "./build-markets.mjs";
 import { KOFI_URL } from "./site-config.mjs";
+import { addSitewideSupport } from "./support-cta.mjs";
 
 const projectRoot = process.cwd();
 const distRoot = path.join(projectRoot, "dist");
@@ -906,13 +907,15 @@ export async function prerender() {
     writeFile(path.join(distRoot, "analytics.js"), analyticsSource.replace("__LA_ANALYTICS_CONFIG__", JSON.stringify(analyticsConfig))),
     copyFile(path.join(projectRoot, "analytics.css"), path.join(distRoot, "analytics.css")),
     copyFile(path.join(projectRoot, "legal.js"), path.join(distRoot, "legal.js")),
-    copyFile(path.join(projectRoot, "press.css"), path.join(distRoot, "press.css"))
+    copyFile(path.join(projectRoot, "press.css"), path.join(distRoot, "press.css")),
+    copyFile(path.join(projectRoot, "support-cta.css"), path.join(distRoot, "support-cta.css"))
   ]);
 
   for (const file of await walkFiles(distRoot)) {
     if (!file.endsWith(".html")) continue;
     const original = await readFile(file, "utf8");
-    let updated = addPressNavigation(original, path.relative(distRoot, file).replaceAll(path.sep, "/"))
+    const relative = path.relative(distRoot, file).replaceAll(path.sep, "/");
+    let updated = addSitewideSupport(addPressNavigation(original, relative), relative)
       .replaceAll("{{KOFI_URL}}", KOFI_URL)
       .replaceAll("1,100+", "1,450+")
       .replaceAll("over 800 places", "over 1,450 places")
@@ -920,7 +923,6 @@ export async function prerender() {
       .replaceAll("oltre 800 luoghi", "oltre 1.450 luoghi")
       .replaceAll("900+ luoghi", "1.450+ luoghi")
       .replaceAll("oltre 900 luoghi", "oltre 1.450 luoghi");
-    const relative = path.relative(distRoot, file).replaceAll(path.sep, "/");
     if (!relative.startsWith("studio/") && relative !== "404.html" &&
         !/<meta\s+name="robots"\s+content="[^"]*noindex/i.test(updated) &&
         !/<meta\s+http-equiv="refresh"/i.test(updated) && updated.includes("</body>") &&
