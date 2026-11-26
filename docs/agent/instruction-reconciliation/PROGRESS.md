@@ -2,8 +2,8 @@
 
 ## Status
 
-- Step 1 is complete.
-- Step 2 is implemented and locally validated; pull-request verification remains.
+- Steps 1 and 2 are complete.
+- The safe-deployment and UI-validation skills are merged and deployed.
 
 ## Decisions
 
@@ -27,8 +27,8 @@
 
 ## Files touched
 
-- Recorded in the final Git manifest.
+- Recorded in the final Git manifests for pull requests 179 and 180.
 
 ## Next step
 
-- After Step 2 is merged and deployed, begin Step 3 of the approved migration sequence.
+- Begin Step 3 of the approved migration sequence.
