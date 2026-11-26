@@ -69,3 +69,5 @@
   .sitewide-support--tool-shell .sitewide-support__copy p { display: none; }
   .sitewide-support--tool-shell .sitewide-support__action { width: auto; min-height: 36px; padding: 6px 12px; white-space: nowrap; }
 }
+
+/* Shared by the public tool and main-page support placements. */
