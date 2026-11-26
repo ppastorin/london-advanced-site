@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "AGENTS.md"
+      - ".agents/skills/**"
       - "dist/**"
       - "scripts/**"
       - "tests/**"
@@ -26,6 +27,7 @@ on:
       - main
     paths:
       - "AGENTS.md"
+      - ".agents/skills/**"
       - "dist/**"
       - "scripts/**"
       - "tests/**"
