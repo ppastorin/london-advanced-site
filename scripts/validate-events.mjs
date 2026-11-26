@@ -7,7 +7,6 @@ const HTTPS_RE = /^https:\/\//i;
 const TICKETMASTER_AFFILIATE_HOST = 'ticketmaster.evyy.net';
 const TICKETMASTER_AFFILIATE_PATH = '/c/7729619/1965662/24023';
 const TICKETMASTER_UK_HOSTS = new Set(['ticketmaster.co.uk', 'www.ticketmaster.co.uk']);
-const ALLOWED_SOURCES = new Set(['Londonist', 'The Times', 'Londonfy', 'London x London']);
 const ALLOWED_CATEGORIES = new Set([
   'architecture',
   'art-design',
@@ -200,7 +199,9 @@ function validateEvent(event, path, errors) {
     errors.push(`${path}.newsletter_sources must be a non-empty array`);
   } else {
     if (new Set(event.newsletter_sources).size !== event.newsletter_sources.length) errors.push(`${path}.newsletter_sources must not contain duplicates`);
-    for (const source of event.newsletter_sources) if (!ALLOWED_SOURCES.has(source)) errors.push(`${path}.newsletter_sources contains an unknown source`);
+    event.newsletter_sources.forEach((source, index) => {
+      requiredString(errors, source, `${path}.newsletter_sources[${index}]`, 2, 120);
+    });
   }
 
   if (!HTTPS_RE.test(event.official_url ?? '')) errors.push(`${path}.official_url must be HTTPS`);
