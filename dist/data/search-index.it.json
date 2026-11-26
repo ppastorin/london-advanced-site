@@ -840,76 +840,28 @@
       "updated_at": "2026-10-09T11:22:35+01:00"
     },
     {
-      "id": "event:the-544-bethlem-museum-2026:it",
+      "id": "event:riles-all-love-bsmt-2026:it",
       "type": "event",
       "locale": "it",
-      "title": "The 544: un memoriale fotografico",
-      "summary": "ven 27 nov · Bethlem Museum of the Mind · Gratuito — I 544 cianotipi di Sarah Ketelaars restituiscono presenza ai pazienti psichiatrici senza nome uccisi dai nazisti, nel museo londinese dedicato alla storia della salute mentale.",
-      "url": "/it/eventi/#event-the-544-bethlem-museum-2026",
+      "title": "Rilès: ALL LOVE alla BSMT Gallery",
+      "summary": "ven 27 nov · BSMT Gallery · Gratuito — Dalla vetrina della BSMT, Rilès copia a mano la Bibbia di giorno e compone un nuovo album nella stessa stanza ogni sera: una performance di durata fatta di ripetizione e attenzione.",
+      "url": "/it/eventi/#event-riles-all-love-bsmt-2026",
       "tags": [
-        "Patrimonio e storia",
+        "Arte e design",
         "Gratuito",
-        "Bromley",
+        "Hackney",
         "free"
       ],
       "keywords": [
-        "Bethlem Museum of the Mind",
-        "Bethlem Royal Hospital, Monks Orchard Road, Beckenham",
-        "BR3 3BX",
-        "Bromley",
+        "BSMT Gallery",
+        "529 Kingsland Road, London",
+        "E8 4AR",
+        "Hackney",
         "evento eventi questa settimana weekend gratuito economico"
       ],
-      "content": "I 544 cianotipi di Sarah Ketelaars restituiscono presenza ai pazienti psichiatrici senza nome uccisi dai nazisti, nel museo londinese dedicato alla storia della salute mentale.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
-      "expires_at": "2026-11-27T17:15:00+00:00"
-    },
-    {
-      "id": "event:national-art-library-discovery-day-2026:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Giornata di scoperta della National Art Library",
-      "summary": "ven 27 nov · National Art Library, V&A South Kensington · Gratuito — Il V&A apre la sala di lettura e gli spazi nascosti della National Art Library con tesori d'archivio, laboratori di legatoria, incontri e tour dietro le quinte.",
-      "url": "/it/eventi/#event-national-art-library-discovery-day-2026",
-      "tags": [
-        "Patrimonio e storia",
-        "Gratuito",
-        "Kensington and Chelsea",
-        "free"
-      ],
-      "keywords": [
-        "National Art Library, V&A South Kensington",
-        "Cromwell Road, London",
-        "SW7 2RL",
-        "Kensington and Chelsea",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "Il V&A apre la sala di lettura e gli spazi nascosti della National Art Library con tesori d'archivio, laboratori di legatoria, incontri e tour dietro le quinte.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
-      "expires_at": "2026-11-27T17:15:00+00:00"
-    },
-    {
-      "id": "event:stanley-arts-christmas-market-lights-2026:it",
-      "type": "event",
-      "locale": "it",
-      "title": "Mercatino e accensione delle luci a Stanley Arts",
-      "summary": "ven 27 nov · Stanley Arts · Gratuito — Il centro artistico tutelato di South Norwood accoglie gli artigiani locali nella Stanley Hall e riunisce il quartiere all'esterno per l'accensione annuale degli alberi.",
-      "url": "/it/eventi/#event-stanley-arts-christmas-market-lights-2026",
-      "tags": [
-        "Community",
-        "Gratuito",
-        "Croydon",
-        "free"
-      ],
-      "keywords": [
-        "Stanley Arts",
-        "12 South Norwood Hill, London",
-        "SE25 6AB",
-        "Croydon",
-        "evento eventi questa settimana weekend gratuito economico"
-      ],
-      "content": "Il centro artistico tutelato di South Norwood accoglie gli artigiani locali nella Stanley Hall e riunisce il quartiere all'esterno per l'accensione annuale degli alberi.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
-      "expires_at": "2026-11-27T21:15:00+00:00"
+      "content": "Dalla vetrina della BSMT, Rilès copia a mano la Bibbia di giorno e compone un nuovo album nella stessa stanza ogni sera: una performance di durata fatta di ripetizione e attenzione.",
+      "updated_at": "2026-11-26T15:06:06+00:00",
+      "expires_at": "2026-11-27T22:15:00+00:00"
     },
     {
       "id": "event:london-museum-smithfield-opening-2026:it",
@@ -932,8 +884,32 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Il museo della città inaugura una nuova fase nel restaurato General Market vittoriano di Smithfield, tra collezioni londinesi e architettura del mercato, con apertura serale speciale.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
+      "updated_at": "2026-11-26T15:06:06+00:00",
       "expires_at": "2026-11-28T23:15:00+00:00"
+    },
+    {
+      "id": "event:studio-pottery-open-studio-2026:it",
+      "type": "event",
+      "locale": "it",
+      "title": "Weekend di studi aperti da Studio Pottery London",
+      "summary": "sab 28 nov · Studio Pottery London · Gratuito — Uno studio di ceramica attivo a Belgravia apre per un solo weekend, mettendo il pubblico a contatto con 30 artisti, i loro processi e le opere fatte a mano nel luogo di produzione.",
+      "url": "/it/eventi/#event-studio-pottery-open-studio-2026",
+      "tags": [
+        "Arte e design",
+        "Gratuito",
+        "City of Westminster",
+        "free"
+      ],
+      "keywords": [
+        "Studio Pottery London",
+        "29 Eccleston Place, London",
+        "SW1W 9NF",
+        "City of Westminster",
+        "evento eventi questa settimana weekend gratuito economico"
+      ],
+      "content": "Uno studio di ceramica attivo a Belgravia apre per un solo weekend, mettendo il pubblico a contatto con 30 artisti, i loro processi e le opere fatte a mano nel luogo di produzione.",
+      "updated_at": "2026-11-26T15:06:06+00:00",
+      "expires_at": "2026-11-29T17:15:00+00:00"
     },
     {
       "id": "event:cody-dock-frost-fair-2026:it",
@@ -956,7 +932,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Cody Dock riprende la tradizione delle fiere sul Tamigi gelato lungo il basso Lea, con artigiani locali, laboratori, musica, una processione di lanterne e una nuova installazione in ferro.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
+      "updated_at": "2026-11-26T15:06:06+00:00",
       "expires_at": "2026-11-28T17:15:00+00:00"
     },
     {
@@ -980,7 +956,7 @@
         "evento eventi questa settimana weekend gratuito economico"
       ],
       "content": "Hertford House resta aperta dopo l'orario con musica, tour della collezione, laboratori di carta e armature da provare, mentre le sale storiche si vestono d'inverno.",
-      "updated_at": "2026-11-23T15:07:03+00:00",
+      "updated_at": "2026-11-26T15:06:06+00:00",
       "expires_at": "2026-11-28T21:15:00+00:00"
     }
   ]
