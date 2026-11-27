@@ -2,8 +2,9 @@
 
 ## Status
 
-- Steps 1 through 5 are complete. Step 6 is implemented and locally validated; pull-request
-  verification remains.
+- Steps 1 through 6 are complete.
+- The Growth Intelligence skill is merged and used by the scheduled 21 December review
+  automation.
 - The markets and Instagram skills are merged, deployed and used by the existing scheduled
   automations. The weekend Reel automation remains intentionally paused.
 
@@ -51,9 +52,8 @@
 
 ## Files touched
 
-- Recorded in the final Git manifests for pull requests 179, 180, 182 and 184.
+- Recorded in the final Git manifests for pull requests 179, 180, 182, 184 and 186.
 
 ## Next step
 
-- After Step 6 is merged and its scheduled prompt is updated, begin Step 7 of the approved
-  migration sequence.
+- Begin Step 7 of the approved migration sequence.
