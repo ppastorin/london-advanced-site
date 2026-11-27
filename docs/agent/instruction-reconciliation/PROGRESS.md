@@ -2,7 +2,8 @@
 
 ## Status
 
-- Steps 1 through 5 are complete.
+- Steps 1 through 5 are complete. Step 6 is implemented and locally validated; pull-request
+  verification remains.
 - The markets and Instagram skills are merged, deployed and used by the existing scheduled
   automations. The weekend Reel automation remains intentionally paused.
 
@@ -29,6 +30,8 @@
 - Instagram JSON, Studio defaults and deterministic settings validation share the same
   two-slot cadence, standing approval, clean carousel, zero-to-five hashtag, monthly cap
   and paused weekend-event policies.
+- `la-growth-intelligence` owns durable acquisition, consented-product-journey and decision
+  methodology. Growth phase state and dated review inputs are separate repository records.
 
 ## Acceptance criteria
 
@@ -43,6 +46,8 @@
   single-file publication path and concise scheduled prompt.
 - Markets and Instagram regression tests enforce skill delegation, script quarantine,
   settings reconciliation and concise automation prompts.
+- Growth regression tests enforce the methodology/state/review boundary and concise scheduled
+  prompt.
 
 ## Files touched
 
@@ -50,4 +55,5 @@
 
 ## Next step
 
-- Begin Step 6 of the approved migration sequence.
+- After Step 6 is merged and its scheduled prompt is updated, begin Step 7 of the approved
+  migration sequence.

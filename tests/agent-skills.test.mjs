@@ -8,11 +8,15 @@ const ui = fs.readFileSync(".agents/skills/la-ui-validation/SKILL.md", "utf8");
 const events = fs.readFileSync(".agents/skills/la-events-digest/SKILL.md", "utf8");
 const markets = fs.readFileSync(".agents/skills/la-markets-refresh/SKILL.md", "utf8");
 const instagram = fs.readFileSync(".agents/skills/la-instagram/SKILL.md", "utf8");
+const growth = fs.readFileSync(".agents/skills/la-growth-intelligence/SKILL.md", "utf8");
 const digestPrompt = fs.readFileSync("automation/DIGEST_TO_GITHUB_PROMPT.md", "utf8");
 const marketsPrompt = fs.readFileSync("automation/MARKETS_REFRESH_PROMPT.md", "utf8");
 const instagramPreparePrompt = fs.readFileSync("automation/INSTAGRAM_PREPARE_PROMPT.md", "utf8");
 const instagramSchedulePrompt = fs.readFileSync("automation/INSTAGRAM_SCHEDULE_PROMPT.md", "utf8");
 const instagramPausedPrompt = fs.readFileSync("automation/INSTAGRAM_WEEKEND_PAUSED_PROMPT.md", "utf8");
+const growthPrompt = fs.readFileSync("automation/GROWTH_INTELLIGENCE_REVIEW_PROMPT.md", "utf8");
+const growthProgress = fs.readFileSync("docs/agent/growth-intelligence/PROGRESS.md", "utf8");
+const growthReview = fs.readFileSync("docs/agent/growth-intelligence/reviews/2026-12-21-phase-2.md", "utf8");
 const studioConfig = fs.readFileSync("studio/config.yml", "utf8");
 const eventsSchema = fs.readFileSync("schema/events.schema.json", "utf8");
 const eventsValidator = fs.readFileSync("scripts/validate-events.mjs", "utf8");
@@ -126,6 +130,44 @@ test("Studio settings cannot default back to obsolete Instagram rules", () => {
   assert.match(settingsSection, /require_human_approval[^\n]+default: false/);
   assert.match(settingsSection, /monthly_post_limit[^\n]+default: 20/);
   assert.match(settingsSection, /weekend_event_publishing[^\n]+default: paused/);
+});
+
+test("growth intelligence separates durable methodology from operational state", () => {
+  assert.match(growth, /^---\nname: la-growth-intelligence\ndescription: .+\n---/);
+  assert.match(growth, /Pull page totals, query totals and query-to-page rows separately/);
+  assert.match(growth, /consented subset, not total usage/);
+  assert.match(growth, /never add or merge their totals/);
+  assert.match(growth, /thresholds in the dated review input/);
+  assert.match(growth, /A review does not authorise production changes/);
+  assert.match(growth, /la-safe-deployment/);
+  assert.doesNotMatch(growth, /23 November to 20 December 2026/);
+  assert.doesNotMatch(growth, /property `387640180`/);
+
+  assert.match(growthProgress, /Phase 2A consent-aware tool events: deployed/);
+  assert.match(growthProgress, /reviews\/2026-12-21-phase-2\.md/);
+  assert.doesNotMatch(growthProgress, /1,348 Search Console/);
+  assert.doesNotMatch(growthProgress, /Window: 2026-10-24/);
+});
+
+test("dated growth review owns its inputs and no-change boundary", () => {
+  assert.match(growthReview, /Baseline window: 24 October to 20 November 2026/);
+  assert.match(growthReview, /Post-release window: 23 November to 20 December 2026/);
+  assert.match(growthReview, /Minimum decision volume: 200 page impressions/);
+  assert.match(growthReview, /deterioration of more than 1\.0 average-position point/);
+  assert.match(growthReview, /Highgate Cemetery/);
+  assert.match(growthReview, /Parkland Walk/);
+  assert.match(growthReview, /property `387640180`/);
+  assert.match(growthReview, /fare_calculation_completed/);
+  assert.match(growthReview, /Do not implement or deploy/);
+});
+
+test("scheduled growth prompt delegates without copying dated evidence", () => {
+  assert.ok(growthPrompt.length < 1000, "growth review prompt should stay concise");
+  assert.match(growthPrompt, /la-growth-intelligence\/SKILL\.md/);
+  assert.match(growthPrompt, /reviews\/2026-12-21-phase-2\.md/);
+  assert.doesNotMatch(growthPrompt, /Highgate Cemetery/);
+  assert.doesNotMatch(growthPrompt, /24 October to 20 November/);
+  assert.doesNotMatch(growthPrompt, /fare_calculation_completed/);
 });
 
 test("skill-only changes trigger site safety checks", () => {
