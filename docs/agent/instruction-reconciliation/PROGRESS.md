@@ -2,7 +2,9 @@
 
 ## Status
 
-- Steps 1 through 8 are complete.
+- Steps 1 through 9 are complete. The approved migration sequence is complete.
+- The six skill-backed live automations match their concise repository wrappers; schedules,
+  timezones, timing modes and enabled or paused states were preserved.
 - Every repository skill has deterministic positive, near-miss and explicit-invocation
   trigger coverage derived from its frontmatter metadata.
 - Site safety checks now cover all `.agents/**`, `automation/**` and `schema/**` changes
@@ -23,6 +25,8 @@
 - Agent, automation and schema changes trigger the existing site-safety workflow.
 - Trigger tests treat frontmatter as the repository-controlled routing contract and do not
   claim to reproduce the hosted model router.
+- Live prompts were shortened only after the skills, CI coverage and trigger tests were
+  accepted, in a prompt-only release that did not modify any skill.
 - `la-events-digest` owns the five-day source window, editorial selection, feed creation,
   deterministic validation and protected publication workflow.
 - The scheduled prompt is a concise entry point and no longer duplicates digest policy.
@@ -58,11 +62,15 @@
   prompt.
 - Trigger regression tests cover all six skills and require one intended positive match, no
   near-miss match and exact `@skill-name` routing.
+- Every live skill-backed prompt matches its repository wrapper and remains below 450
+  characters without changing its schedule or state.
 
 ## Files touched
 
-- Recorded in the final Git manifests for pull requests 179, 180, 182, 184, 186, 188 and 190.
+- Recorded in the final Git manifests for pull requests 179, 180, 182, 184, 186, 188, 190
+  and 192.
 
 ## Next step
 
-- Begin Step 9 of the approved migration sequence.
+- Observe the next scheduled run of each enabled skill-backed automation. Reopen the
+  migration only if runtime evidence exposes a routing, access or wrapper defect.
