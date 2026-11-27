@@ -198,9 +198,11 @@ function validateEvent(event, path, errors) {
   if (!Array.isArray(event.newsletter_sources) || event.newsletter_sources.length < 1) {
     errors.push(`${path}.newsletter_sources must be a non-empty array`);
   } else {
-    if (new Set(event.newsletter_sources).size !== event.newsletter_sources.length) errors.push(`${path}.newsletter_sources must not contain duplicates`);
+    const normalisedSources = event.newsletter_sources.map((source) => typeof source === 'string' ? source.trim().toLocaleLowerCase('en-GB') : source);
+    if (new Set(normalisedSources).size !== normalisedSources.length) errors.push(`${path}.newsletter_sources must not contain duplicates`);
     event.newsletter_sources.forEach((source, index) => {
       requiredString(errors, source, `${path}.newsletter_sources[${index}]`, 2, 120);
+      if (typeof source === 'string' && source !== source.trim()) errors.push(`${path}.newsletter_sources[${index}] must be trimmed`);
     });
   }
 

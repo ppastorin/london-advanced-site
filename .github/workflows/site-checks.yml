@@ -5,6 +5,7 @@ on:
     paths:
       - "AGENTS.md"
       - ".agents/skills/**"
+      - "automation/**"
       - "dist/**"
       - "scripts/**"
       - "tests/**"
@@ -28,6 +29,7 @@ on:
     paths:
       - "AGENTS.md"
       - ".agents/skills/**"
+      - "automation/**"
       - "dist/**"
       - "scripts/**"
       - "tests/**"

@@ -15,13 +15,14 @@ test('accepts ianVisits and other labelled newsletter names', () => {
   assert.deepEqual(validateDigest(candidate), []);
 });
 
-test('rejects blank, duplicate and overlong newsletter names', () => {
+test('rejects blank, untrimmed, duplicate and overlong newsletter names', () => {
   const candidate = structuredClone(valid);
-  candidate.events[0].newsletter_sources = ['ianVisits', 'ianVisits', ' ', 'x'.repeat(121)];
+  candidate.events[0].newsletter_sources = ['ianVisits', 'IANVISITS', ' Londonist ', ' ', 'x'.repeat(121)];
   const errors = validateDigest(candidate);
   assert.ok(errors.some((error) => error.includes('must not contain duplicates')));
   assert.ok(errors.some((error) => error.includes('newsletter_sources[2]')));
   assert.ok(errors.some((error) => error.includes('newsletter_sources[3]')));
+  assert.ok(errors.some((error) => error.includes('newsletter_sources[4]')));
 });
 
 function expandTo(candidate, count) {
