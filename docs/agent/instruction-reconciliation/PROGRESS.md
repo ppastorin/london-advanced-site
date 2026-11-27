@@ -2,7 +2,9 @@
 
 ## Status
 
-- Steps 1 through 7 are complete.
+- Steps 1 through 8 are complete.
+- Every repository skill has deterministic positive, near-miss and explicit-invocation
+  trigger coverage derived from its frontmatter metadata.
 - Site safety checks now cover all `.agents/**`, `automation/**` and `schema/**` changes
   on pull requests and pushes to `main`.
 - The Growth Intelligence skill is merged and used by the scheduled 21 December review
@@ -19,6 +21,8 @@
 - `AGENTS.md` retains only repository-wide scope, evidence, change-safety and writing safeguards.
 - Release mechanics live in `la-safe-deployment`; visual and responsive proof lives in `la-ui-validation`.
 - Agent, automation and schema changes trigger the existing site-safety workflow.
+- Trigger tests treat frontmatter as the repository-controlled routing contract and do not
+  claim to reproduce the hosted model router.
 - `la-events-digest` owns the five-day source window, editorial selection, feed creation,
   deterministic validation and protected publication workflow.
 - The scheduled prompt is a concise entry point and no longer duplicates digest policy.
@@ -52,11 +56,13 @@
   settings reconciliation and concise automation prompts.
 - Growth regression tests enforce the methodology/state/review boundary and concise scheduled
   prompt.
+- Trigger regression tests cover all six skills and require one intended positive match, no
+  near-miss match and exact `@skill-name` routing.
 
 ## Files touched
 
-- Recorded in the final Git manifests for pull requests 179, 180, 182, 184, 186 and 188.
+- Recorded in the final Git manifests for pull requests 179, 180, 182, 184, 186, 188 and 190.
 
 ## Next step
 
-- Begin Step 8 of the approved migration sequence.
+- Begin Step 9 of the approved migration sequence.
