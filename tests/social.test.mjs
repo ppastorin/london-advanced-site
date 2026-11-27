@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { validateSocialPost } from "../scripts/validate-social.mjs";
+import { validateSocialPost, validateSocialSettings } from "../scripts/validate-social.mjs";
 
 const settings = JSON.parse(fs.readFileSync("content/social/settings.json", "utf8"));
 
@@ -30,16 +30,34 @@ test("allows a completely approved post to enter the Metricool hand-off queue", 
 });
 
 test("social settings match the current standing policy", () => {
+  assert.deepEqual(validateSocialSettings(settings), []);
   assert.deepEqual(settings.cadence.map(({ day, local_time, kind }) => [day, local_time, kind]), [
     ["Tuesday", "18:30", "place"],
     ["Sunday", "10:00", "journal-or-tool"]
   ]);
   assert.equal(settings.voice.caption_words_min, 40);
   assert.equal(settings.voice.caption_words_max, 110);
+  assert.equal(settings.voice.hashtags_min, 0);
+  assert.equal(settings.voice.hashtags_max, 5);
   assert.equal(settings.automation.require_human_approval, false);
   assert.equal(settings.automation.approval_policy, "standing-authorisation");
   assert.equal(settings.automation.standing_authorisation_date, "2026-11-20");
+  assert.equal(settings.automation.monthly_post_limit, 20);
+  assert.equal(settings.automation.weekend_event_publishing, "paused");
+  assert.equal(settings.image_rules.carousel_images_min, 3);
+  assert.equal(settings.image_rules.carousel_images_max, 6);
   assert.match(settings.image_rules.overlay_policy, /immagini pulite/);
+});
+
+test("rejects settings that revive obsolete Instagram policy", () => {
+  const candidate = structuredClone(settings);
+  candidate.cadence.push({ day: "Friday", local_time: "10:00", kind: "weekend-events" });
+  candidate.automation.require_human_approval = true;
+  candidate.automation.weekend_event_publishing = "enabled";
+  const errors = validateSocialSettings(candidate);
+  assert.ok(errors.some(error => error.includes("cadence")));
+  assert.ok(errors.some(error => error.includes("standing authorisation")));
+  assert.ok(errors.some(error => error.includes("weekend-event")));
 });
 
 test("allows an approved post with no hashtags", () => {

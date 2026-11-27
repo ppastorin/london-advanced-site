@@ -15,6 +15,28 @@ function validDate(value) {
   return Boolean(value) && Number.isFinite(Date.parse(value));
 }
 
+export function validateSocialSettings(settings) {
+  const errors = [];
+  const expectedCadence = [
+    ["Tuesday", "18:30", "place"],
+    ["Sunday", "10:00", "journal-or-tool"]
+  ];
+  const cadence = Array.isArray(settings?.cadence)
+    ? settings.cadence.map(({ day, local_time, kind }) => [day, local_time, kind])
+    : [];
+  if (settings?.account !== "@londonadvanced") errors.push("settings: account must be @londonadvanced.");
+  if (settings?.timezone !== "Europe/London") errors.push("settings: timezone must be Europe/London.");
+  if (JSON.stringify(cadence) !== JSON.stringify(expectedCadence)) errors.push("settings: cadence must contain only the approved Tuesday and Sunday slots.");
+  if (settings?.voice?.caption_words_min !== 40 || settings?.voice?.caption_words_max !== 110) errors.push("settings: caption range must be 40 to 110 words.");
+  if (settings?.voice?.hashtags_min !== 0 || settings?.voice?.hashtags_max !== 5) errors.push("settings: hashtag range must be zero to five.");
+  if (settings?.image_rules?.carousel_images_min !== 3 || settings?.image_rules?.carousel_images_max !== 6) errors.push("settings: carousel range must be three to six images.");
+  if (settings?.automation?.require_human_approval !== false || settings?.automation?.approval_policy !== "standing-authorisation") errors.push("settings: standing authorisation must be active.");
+  if (settings?.automation?.standing_authorisation_by !== "Paolo Pastorino" || settings?.automation?.standing_authorisation_date !== "2026-11-20") errors.push("settings: standing authorisation attribution is incomplete.");
+  if (settings?.automation?.monthly_post_limit !== 20) errors.push("settings: monthly post limit must be 20.");
+  if (settings?.automation?.weekend_event_publishing !== "paused") errors.push("settings: weekend-event publishing must remain paused.");
+  return errors;
+}
+
 export function validateSocialPost(post, options = {}) {
   const errors = [];
   const label = post?.post_id || "unnamed post";
@@ -103,6 +125,12 @@ if (isDirect) {
   }
   const projectRoot = path.resolve(directory, "../../..");
   const { files, errors } = validateSocialDirectory(directory, { projectRoot });
+  const settingsPath = path.join(projectRoot, "content/social/settings.json");
+  try {
+    errors.unshift(...validateSocialSettings(JSON.parse(fs.readFileSync(settingsPath, "utf8"))));
+  } catch (error) {
+    errors.unshift(`settings: cannot read content/social/settings.json (${error.message}).`);
+  }
   if (errors.length) {
     console.error(`Instagram queue validation failed:\n- ${errors.join("\n- ")}`);
     process.exit(1);

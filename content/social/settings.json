@@ -18,6 +18,8 @@
     "english_mode": "short-summary",
     "caption_words_min": 40,
     "caption_words_max": 110,
+    "hashtags_min": 0,
+    "hashtags_max": 5,
     "tone": "Apri con il luogo o con un dettaglio concreto. Racconta una sola cosa memorabile, aggiungi un giudizio personale o una nota pratica e chiudi senza enfasi. Mantieni il tono curioso, competente e leggermente ironico dei post Facebook di Paolo. Le parentesi sono ammesse quando aggiungono una vera osservazione. Correggi i fatti anche quando la fonte storica contiene una formulazione imprecisa.",
     "avoid": [
       "Hook generici come Non crederai mai o Salva subito",
@@ -32,6 +34,8 @@
     "width": 1080,
     "height": 1350,
     "max_mb": 8,
+    "carousel_images_min": 3,
+    "carousel_images_max": 6,
     "overlay_policy": "Per i caroselli fotografici usa immagini pulite, senza titoli, loghi o etichette sovrapposte. Per un Reel il testo è ammesso solo quando necessario, dentro le aree di sicurezza del progetto e dopo la verifica visuale di ogni scena e ritaglio."
   },
   "automation": {
@@ -40,6 +44,8 @@
     "standing_authorisation_by": "Paolo Pastorino",
     "standing_authorisation_date": "2026-11-20",
     "schedule_approved": true,
+    "monthly_post_limit": 20,
+    "weekend_event_publishing": "paused",
     "metricool_brand_id": "5985082",
     "connection_checked_at": "2026-10-19T17:25:00+01:00"
   }

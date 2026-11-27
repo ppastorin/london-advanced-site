@@ -1,15 +1,9 @@
-# Refresh and publish the London Advanced markets calendar
+# London Advanced markets refresh scheduled run
 
-Read AGENTS.md and docs/agent/markets-calendar/PROGRESS.md in ppastorin/london-advanced-site first. The owner has authorised research refreshes and publication of this tool in both languages, including merge and production deployment through the existing safeguards.
-
-Use content/markets.json as the canonical source. Do not run the initial seed script: it would overwrite subsequent editorial research. Read the current data before changing it. Use a branch and a task state file for the refresh.
-
-Research official organiser and venue sources for flea/vintage/antique markets, car boots, farmers/producer markets and craft/maker markets in Greater London. Flowers and specialist food are separate optional categories. Outside Greater London, include a venue only with verified geographic eligibility and relevant TfL zone 1 to 4 access. Never assign a fare zone to an entire postcode.
-
-Recheck every existing series and discover new events using the saved source URLs and these additional organisers: London Car Boot Co, Go East Vintage, So Last Century, Frock Me, Crafty Fox, SoLo, Urban Makers, Local Makers, Duck Pond, London Farmers' Markets, CCFM, Good Market Company, My Farmers Market, council and venue calendars. Process batches of at most 10 series. Do not rely on directory-generated future dates, stale search snippets or last year's dates.
-
-Cover the coming three full calendar months, keeping every later explicitly announced date. Preserve announced dates separately from calculated recurring schedules. Advance recurrence bounds only after rechecking the source and its seasonal rules. Use occurrence overrides for changed venue/hours. Preserve cancellations and exclusions, and never silently recreate them. Unknown hours or prices stay unknown. Use visitor hours rather than seller setup times or pitch prices. Exclude malformed date/time fields and duplicate or overlapping event brands until resolved. Check Christmas, New Year and winter closures individually. Update checked on a series only after its actual source has been checked; update the feed timestamp only after a completed research pass. If a source cannot be checked, retain its previous checked date and stale label rather than marking it current.
-
-Write original short summaries in EN and native IT, preserving proper market names. Use only owned/authorised market photos with matching venue evidence and credits; otherwise retain the labelled category illustrations. Never use generated pictures as documentary venue photographs.
-
-Update content/markets.json, retain a concise research change log and unresolved-source list in task docs, run npm test, and verify the generated HTML, data, search, sitemap, EN/IT language pairing and relevant navigation links. Commit the complete source and generated deployment package. Open the PR only after npm test succeeds; verify its changed-file manifest; wait for Site safety checks to succeed on the exact head SHA; then merge. Production is deployed by Cloudflare Workers Builds, never by direct wrangler deployment. Verify live pages and exact market data/asset bytes. Report counts and unresolved exceptions concisely. If no substantive source/data change exists, do not generate an empty release.
+Read the current `main` versions of `AGENTS.md`,
+`.agents/skills/la-markets-refresh/SKILL.md`, `.agents/skills/la-safe-deployment/SKILL.md`,
+`content/markets.json` and `docs/agent/markets-calendar/PROGRESS.md`. Run the complete
+`la-markets-refresh` workflow for the existing fortnightly automation. Never execute or
+restore files under `scripts/quarantine/markets-initial/`. If no substantive verified
+change exists or a required source or release gate cannot be completed, leave production
+unchanged and report the blocker.

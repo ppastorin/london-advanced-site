@@ -1,4 +1,6 @@
-// Initial integration of the approved tool into existing source conventions.
+// QUARANTINED: historical one-off integration of the initial Markets Calendar.
+// It must never run against the maintained site integration.
+throw new Error('Quarantined one-off market integration. Use current build scripts and tests.');
 import {readFile,writeFile} from 'node:fs/promises';
 import vm from 'node:vm';
 const en={id:'markets',name:'Markets calendar',short:'Plan your next market visit',description:'Find London flea markets, car boots, farmers and craft markets by date and area.',href:'/markets/',embedUrl:'/markets/',icon:'calendar'};
