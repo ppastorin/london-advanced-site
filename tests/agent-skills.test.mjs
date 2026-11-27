@@ -170,9 +170,10 @@ test("scheduled growth prompt delegates without copying dated evidence", () => {
   assert.doesNotMatch(growthPrompt, /fare_calculation_completed/);
 });
 
-test("skill-only changes trigger site safety checks", () => {
-  const occurrences = workflow.match(/\.agents\/skills\/\*\*/g) ?? [];
-  assert.equal(occurrences.length, 2);
-  const automationOccurrences = workflow.match(/automation\/\*\*/g) ?? [];
-  assert.equal(automationOccurrences.length, 2);
+test("agent, automation and schema changes trigger site safety checks", () => {
+  for (const path of [".agents/**", "automation/**", "schema/**"]) {
+    const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const occurrences = workflow.match(new RegExp(escaped, "g")) ?? [];
+    assert.equal(occurrences.length, 2, `${path} must cover pull requests and pushes`);
+  }
 });
