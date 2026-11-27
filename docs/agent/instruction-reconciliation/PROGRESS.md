@@ -2,8 +2,8 @@
 
 ## Status
 
-- Steps 1 and 2 are complete.
-- Step 3 is implemented and locally validated; pull-request verification remains.
+- Steps 1, 2 and 3 are complete.
+- The events digest skill is merged, deployed and used by the existing scheduled automation.
 
 ## Decisions
 
@@ -34,8 +34,8 @@
 
 ## Files touched
 
-- Recorded in the final Git manifests for pull requests 179, 180 and the Step 3 pull request.
+- Recorded in the final Git manifests for pull requests 179, 180 and 182.
 
 ## Next step
 
-- After Step 3 is merged and deployed, begin Step 4 of the approved migration sequence.
+- Begin Step 4 of the approved migration sequence.
