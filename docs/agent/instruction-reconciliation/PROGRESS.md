@@ -3,7 +3,7 @@
 ## Status
 
 - Steps 1 and 2 are complete.
-- The safe-deployment and UI-validation skills are merged and deployed.
+- Step 3 is implemented and locally validated; pull-request verification remains.
 
 ## Decisions
 
@@ -14,6 +14,11 @@
 - `AGENTS.md` retains only repository-wide scope, evidence, change-safety and writing safeguards.
 - Release mechanics live in `la-safe-deployment`; visual and responsive proof lives in `la-ui-validation`.
 - Skill-only changes trigger the existing site-safety workflow.
+- `la-events-digest` owns the five-day source window, editorial selection, feed creation,
+  deterministic validation and protected publication workflow.
+- The scheduled prompt is a concise entry point and no longer duplicates digest policy.
+- Newsletter source names remain open-ended, but must be trimmed and unique without
+  case-sensitive duplicates.
 
 ## Acceptance criteria
 
@@ -24,11 +29,13 @@
 - Full tests and exact-head CI pass.
 - Both skills have valid frontmatter and retain the safeguards removed from `AGENTS.md`.
 - Regression tests enforce skill routing, release gates, UI proof and CI path coverage.
+- Digest regression tests enforce the source model, five-day window, validator invocation,
+  single-file publication path and concise scheduled prompt.
 
 ## Files touched
 
-- Recorded in the final Git manifests for pull requests 179 and 180.
+- Recorded in the final Git manifests for pull requests 179, 180 and the Step 3 pull request.
 
 ## Next step
 
-- Begin Step 3 of the approved migration sequence.
+- After Step 3 is merged and deployed, begin Step 4 of the approved migration sequence.
