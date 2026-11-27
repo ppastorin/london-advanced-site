@@ -2,8 +2,9 @@
 
 ## Status
 
-- Steps 1, 2 and 3 are complete.
-- Steps 4 and 5 are implemented and locally validated; pull-request verification remains.
+- Steps 1 through 5 are complete.
+- The markets and Instagram skills are merged, deployed and used by the existing scheduled
+  automations. The weekend Reel automation remains intentionally paused.
 
 ## Decisions
 
@@ -45,9 +46,8 @@
 
 ## Files touched
 
-- Recorded in the final Git manifests for pull requests 179, 180, 182 and the Steps 4–5
-  pull request.
+- Recorded in the final Git manifests for pull requests 179, 180, 182 and 184.
 
 ## Next step
 
-- After Steps 4 and 5 are merged and deployed, begin Step 6 of the approved migration sequence.
+- Begin Step 6 of the approved migration sequence.
