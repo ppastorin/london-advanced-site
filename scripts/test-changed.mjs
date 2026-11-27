@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const TEST_FILES = [
+  "tests/agent-skill-triggers.test.mjs",
   "tests/agent-skills.test.mjs",
   "tests/markets.test.mjs",
   "tests/affiliate-rendering.test.mjs",
