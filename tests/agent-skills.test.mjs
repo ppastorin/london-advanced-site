@@ -6,7 +6,14 @@ const agents = fs.readFileSync("AGENTS.md", "utf8");
 const deployment = fs.readFileSync(".agents/skills/la-safe-deployment/SKILL.md", "utf8");
 const ui = fs.readFileSync(".agents/skills/la-ui-validation/SKILL.md", "utf8");
 const events = fs.readFileSync(".agents/skills/la-events-digest/SKILL.md", "utf8");
+const markets = fs.readFileSync(".agents/skills/la-markets-refresh/SKILL.md", "utf8");
+const instagram = fs.readFileSync(".agents/skills/la-instagram/SKILL.md", "utf8");
 const digestPrompt = fs.readFileSync("automation/DIGEST_TO_GITHUB_PROMPT.md", "utf8");
+const marketsPrompt = fs.readFileSync("automation/MARKETS_REFRESH_PROMPT.md", "utf8");
+const instagramPreparePrompt = fs.readFileSync("automation/INSTAGRAM_PREPARE_PROMPT.md", "utf8");
+const instagramSchedulePrompt = fs.readFileSync("automation/INSTAGRAM_SCHEDULE_PROMPT.md", "utf8");
+const instagramPausedPrompt = fs.readFileSync("automation/INSTAGRAM_WEEKEND_PAUSED_PROMPT.md", "utf8");
+const studioConfig = fs.readFileSync("studio/config.yml", "utf8");
 const eventsSchema = fs.readFileSync("schema/events.schema.json", "utf8");
 const eventsValidator = fs.readFileSync("scripts/validate-events.mjs", "utf8");
 const workflow = fs.readFileSync(".github/workflows/site-checks.yml", "utf8");
@@ -65,6 +72,60 @@ test("scheduled digest prompt delegates instead of duplicating policy", () => {
   assert.match(digestPrompt, /Sunday and Thursday 11:00/);
   assert.doesNotMatch(digestPrompt, /non-obviousness/);
   assert.doesNotMatch(digestPrompt, /Ticketmaster affiliate/);
+});
+
+test("markets refresh preserves evidence and excludes bootstrap scripts", () => {
+  assert.match(markets, /^---\nname: la-markets-refresh\ndescription: .+\n---/);
+  assert.match(markets, /content\/markets\.json` as the source of truth/);
+  assert.match(markets, /batches of at most ten series/);
+  assert.match(markets, /coming three full calendar months/);
+  assert.match(markets, /announced dates separate from calculated recurrence/);
+  assert.match(markets, /nothing\s+substantive changed, stop without producing an empty release/);
+  assert.match(markets, /la-safe-deployment/);
+  assert.equal(fs.existsSync("scripts/agent/seed-markets.mjs"), false);
+  assert.equal(fs.existsSync("scripts/agent/integrate-markets.mjs"), false);
+  for (const filename of ["seed-markets.mjs", "integrate-markets.mjs"]) {
+    const quarantined = fs.readFileSync(`scripts/quarantine/markets-initial/${filename}`, "utf8");
+    assert.match(quarantined, /^\/\/ QUARANTINED:/);
+    assert.match(quarantined, /throw new Error\('Quarantined one-off market/);
+  }
+});
+
+test("scheduled markets prompt delegates and blocks the initial scripts", () => {
+  assert.ok(marketsPrompt.length < 1000, "markets scheduled prompt should stay concise");
+  assert.match(marketsPrompt, /\.agents\/skills\/la-markets-refresh\/SKILL\.md/);
+  assert.match(marketsPrompt, /scripts\/quarantine\/markets-initial/);
+  assert.doesNotMatch(marketsPrompt, /London Car Boot Co/);
+});
+
+test("Instagram skill owns preparation, scheduling and media safety", () => {
+  assert.match(instagram, /^---\nname: la-instagram\ndescription: .+\n---/);
+  assert.match(instagram, /content\/social\/settings\.json` as policy/);
+  assert.match(instagram, /three to six\s+distinct images/);
+  assert.match(instagram, /zero to the configured maximum/);
+  assert.match(instagram, /x=96\.\.850/);
+  assert.match(instagram, /stable\s+Metricool UUID/);
+  assert.match(instagram, /autoPublish: true/);
+  assert.match(instagram, /la-safe-deployment/);
+});
+
+test("Instagram prompts delegate without repeating standing policy", () => {
+  for (const prompt of [instagramPreparePrompt, instagramSchedulePrompt, instagramPausedPrompt]) {
+    assert.ok(prompt.length < 1000, "Instagram automation prompt should stay concise");
+    assert.match(prompt, /la-instagram\/SKILL\.md/);
+    assert.doesNotMatch(prompt, /Día de los Muertos/);
+    assert.doesNotMatch(prompt, /x=96\.\.850/);
+  }
+});
+
+test("Studio settings cannot default back to obsolete Instagram rules", () => {
+  const settingsSection = studioConfig.slice(studioConfig.indexOf("- name: social_settings"), studioConfig.indexOf("- name: social_posts"));
+  assert.doesNotMatch(settingsSection, /weekend-events/);
+  assert.match(settingsSection, /caption_words_min[^\n]+default: 40/);
+  assert.match(settingsSection, /caption_words_max[^\n]+default: 110/);
+  assert.match(settingsSection, /require_human_approval[^\n]+default: false/);
+  assert.match(settingsSection, /monthly_post_limit[^\n]+default: 20/);
+  assert.match(settingsSection, /weekend_event_publishing[^\n]+default: paused/);
 });
 
 test("skill-only changes trigger site safety checks", () => {

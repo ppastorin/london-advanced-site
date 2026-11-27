@@ -1,5 +1,6 @@
-// Initial seed from the approved 20 November 2026 discovery register.
-// Run only when deliberately rebuilding the initial inventory, not during a refresh.
+// QUARANTINED: historical initial seed from 20 November 2026.
+// It must never run against the maintained market inventory.
+throw new Error('Quarantined one-off market seed. Use la-markets-refresh with content/markets.json.');
 import { mkdir, writeFile } from 'node:fs/promises';
 const sources = {
   lfm:'https://www.lfm.org.uk/markets-home/', ccfm:'https://www.weareccfm.com/our-markets/', good:'https://www.thegoodmarketcompany.com/locations',

@@ -3,7 +3,7 @@
 ## Status
 
 - Steps 1, 2 and 3 are complete.
-- The events digest skill is merged, deployed and used by the existing scheduled automation.
+- Steps 4 and 5 are implemented and locally validated; pull-request verification remains.
 
 ## Decisions
 
@@ -19,6 +19,15 @@
 - The scheduled prompt is a concise entry point and no longer duplicates digest policy.
 - Newsletter source names remain open-ended, but must be trimmed and unique without
   case-sensitive duplicates.
+- `la-markets-refresh` owns the evidence, recurrence, bilingual validation and protected
+  publication workflow for market updates.
+- Initial market seed and integration scripts are quarantined outside the active agent
+  script directory and fail immediately if invoked.
+- `la-instagram` owns preparation, media validation, scheduling, planner reconciliation
+  and performance interpretation.
+- Instagram JSON, Studio defaults and deterministic settings validation share the same
+  two-slot cadence, standing approval, clean carousel, zero-to-five hashtag, monthly cap
+  and paused weekend-event policies.
 
 ## Acceptance criteria
 
@@ -31,11 +40,14 @@
 - Regression tests enforce skill routing, release gates, UI proof and CI path coverage.
 - Digest regression tests enforce the source model, five-day window, validator invocation,
   single-file publication path and concise scheduled prompt.
+- Markets and Instagram regression tests enforce skill delegation, script quarantine,
+  settings reconciliation and concise automation prompts.
 
 ## Files touched
 
-- Recorded in the final Git manifests for pull requests 179, 180 and 182.
+- Recorded in the final Git manifests for pull requests 179, 180, 182 and the Steps 4–5
+  pull request.
 
 ## Next step
 
-- Begin Step 4 of the approved migration sequence.
+- After Steps 4 and 5 are merged and deployed, begin Step 6 of the approved migration sequence.

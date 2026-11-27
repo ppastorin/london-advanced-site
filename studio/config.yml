@@ -67,7 +67,7 @@ collections:
             fields:
               - { label: Day, name: day, widget: select, options: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday] }
               - { label: Local time, name: local_time, widget: string, hint: Europe/London time in HH:mm format. }
-              - { label: Post type, name: kind, widget: select, options: [place, weekend-events, journal-or-tool] }
+              - { label: Post type, name: kind, widget: select, options: [place, journal-or-tool] }
           - label: Voice
             name: voice
             widget: object
@@ -75,8 +75,10 @@ collections:
             fields:
               - { label: Primary language, name: primary_language, widget: select, options: [Italian, English], default: Italian }
               - { label: English treatment, name: english_mode, widget: select, options: [none, short-summary, full-bilingual], default: short-summary }
-              - { label: Minimum Italian words, name: caption_words_min, widget: number, value_type: int, min: 20, max: 220, default: 70 }
-              - { label: Maximum Italian words, name: caption_words_max, widget: number, value_type: int, min: 40, max: 300, default: 120 }
+              - { label: Minimum Italian words, name: caption_words_min, widget: number, value_type: int, min: 20, max: 220, default: 40 }
+              - { label: Maximum Italian words, name: caption_words_max, widget: number, value_type: int, min: 40, max: 300, default: 110 }
+              - { label: Minimum hashtags, name: hashtags_min, widget: number, value_type: int, min: 0, max: 5, default: 0 }
+              - { label: Maximum hashtags, name: hashtags_max, widget: number, value_type: int, min: 0, max: 5, default: 5 }
               - { label: Tone instructions, name: tone, widget: text }
               - label: Avoid
                 name: avoid
@@ -90,14 +92,21 @@ collections:
               - { label: Output width, name: width, widget: number, value_type: int, default: 1080 }
               - { label: Output height, name: height, widget: number, value_type: int, default: 1350 }
               - { label: Maximum file size (MB), name: max_mb, widget: number, value_type: float, default: 8 }
+              - { label: Minimum carousel images, name: carousel_images_min, widget: number, value_type: int, min: 1, max: 10, default: 3 }
+              - { label: Maximum carousel images, name: carousel_images_max, widget: number, value_type: int, min: 1, max: 10, default: 6 }
               - { label: Overlay policy, name: overlay_policy, widget: text }
           - label: Automation policy
             name: automation
             widget: object
             collapsed: false
             fields:
-              - { label: Human approval is required, name: require_human_approval, widget: boolean, default: true }
+              - { label: Human approval is required, name: require_human_approval, widget: boolean, default: false }
+              - { label: Approval policy, name: approval_policy, widget: select, options: [standing-authorisation, per-post], default: standing-authorisation }
+              - { label: Standing authorisation by, name: standing_authorisation_by, widget: string, default: Paolo Pastorino }
+              - { label: Standing authorisation date, name: standing_authorisation_date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, default: 2026-11-20 }
               - { label: Schedule approved posts automatically, name: schedule_approved, widget: boolean, default: true }
+              - { label: Monthly post limit, name: monthly_post_limit, widget: number, value_type: int, min: 1, max: 20, default: 20 }
+              - { label: Weekend-event publishing, name: weekend_event_publishing, widget: select, options: [paused, enabled], default: paused }
               - { label: Metricool brand ID, name: metricool_brand_id, widget: string, required: false, hint: Filled automatically after the connector returns the London Advanced brand. Not a password or token. }
               - { label: Metricool connection checked at, name: connection_checked_at, widget: datetime, required: false, date_format: YYYY-MM-DD, time_format: HH:mm }
   - name: social_posts
