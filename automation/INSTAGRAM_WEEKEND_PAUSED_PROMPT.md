@@ -1,6 +1,4 @@
-# London Advanced weekend Instagram automation
-
-This automation is intentionally paused. Do not prepare, schedule or publish weekend-event
-content unless the owner explicitly resumes it and `content/social/settings.json` no longer
-marks it paused. If resumed, read and follow `.agents/skills/la-instagram/SKILL.md` from the
-current `main` branch before acting.
+This automation is intentionally paused. Unless explicitly resumed, do nothing. If resumed,
+read the current `main` versions of `.agents/skills/la-instagram/SKILL.md` and
+`content/social/settings.json` before acting. Never prepare, schedule or publish weekend
+content while the settings mark it paused.
