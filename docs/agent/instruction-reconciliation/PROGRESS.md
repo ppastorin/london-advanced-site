@@ -2,7 +2,9 @@
 
 ## Status
 
-- Steps 1 through 6 are complete.
+- Steps 1 through 7 are complete.
+- Site safety checks now cover all `.agents/**`, `automation/**` and `schema/**` changes
+  on pull requests and pushes to `main`.
 - The Growth Intelligence skill is merged and used by the scheduled 21 December review
   automation.
 - The markets and Instagram skills are merged, deployed and used by the existing scheduled
@@ -16,7 +18,7 @@
 - Instagram uses standing authorisation dated 20 November 2026, clean-photo carousels, normally 40 to 110 Italian words and zero to five precise hashtags.
 - `AGENTS.md` retains only repository-wide scope, evidence, change-safety and writing safeguards.
 - Release mechanics live in `la-safe-deployment`; visual and responsive proof lives in `la-ui-validation`.
-- Skill-only changes trigger the existing site-safety workflow.
+- Agent, automation and schema changes trigger the existing site-safety workflow.
 - `la-events-digest` owns the five-day source window, editorial selection, feed creation,
   deterministic validation and protected publication workflow.
 - The scheduled prompt is a concise entry point and no longer duplicates digest policy.
@@ -42,7 +44,8 @@
 - Social validation permits zero hashtags and still rejects more than five.
 - Full tests and exact-head CI pass.
 - Both skills have valid frontmatter and retain the safeguards removed from `AGENTS.md`.
-- Regression tests enforce skill routing, release gates, UI proof and CI path coverage.
+- Regression tests enforce skill routing, release gates, UI proof and both pull-request and
+  push CI coverage for `.agents/**`, `automation/**` and `schema/**`.
 - Digest regression tests enforce the source model, five-day window, validator invocation,
   single-file publication path and concise scheduled prompt.
 - Markets and Instagram regression tests enforce skill delegation, script quarantine,
@@ -52,8 +55,8 @@
 
 ## Files touched
 
-- Recorded in the final Git manifests for pull requests 179, 180, 182, 184 and 186.
+- Recorded in the final Git manifests for pull requests 179, 180, 182, 184, 186 and 188.
 
 ## Next step
 
-- Begin Step 7 of the approved migration sequence.
+- Begin Step 8 of the approved migration sequence.
