@@ -71,9 +71,9 @@ test("events source model stays schema and validator aligned", () => {
 });
 
 test("scheduled digest prompt delegates instead of duplicating policy", () => {
-  assert.ok(digestPrompt.length < 1000, "scheduled prompt should stay concise");
+  assert.ok(digestPrompt.length < 450, "scheduled prompt should stay concise");
   assert.match(digestPrompt, /\.agents\/skills\/la-events-digest\/SKILL\.md/);
-  assert.match(digestPrompt, /Sunday and Thursday 11:00/);
+  assert.doesNotMatch(digestPrompt, /Sunday and Thursday 11:00/);
   assert.doesNotMatch(digestPrompt, /non-obviousness/);
   assert.doesNotMatch(digestPrompt, /Ticketmaster affiliate/);
 });
@@ -96,7 +96,7 @@ test("markets refresh preserves evidence and excludes bootstrap scripts", () => 
 });
 
 test("scheduled markets prompt delegates and blocks the initial scripts", () => {
-  assert.ok(marketsPrompt.length < 1000, "markets scheduled prompt should stay concise");
+  assert.ok(marketsPrompt.length < 450, "markets scheduled prompt should stay concise");
   assert.match(marketsPrompt, /\.agents\/skills\/la-markets-refresh\/SKILL\.md/);
   assert.match(marketsPrompt, /scripts\/quarantine\/markets-initial/);
   assert.doesNotMatch(marketsPrompt, /London Car Boot Co/);
@@ -115,7 +115,7 @@ test("Instagram skill owns preparation, scheduling and media safety", () => {
 
 test("Instagram prompts delegate without repeating standing policy", () => {
   for (const prompt of [instagramPreparePrompt, instagramSchedulePrompt, instagramPausedPrompt]) {
-    assert.ok(prompt.length < 1000, "Instagram automation prompt should stay concise");
+    assert.ok(prompt.length < 450, "Instagram automation prompt should stay concise");
     assert.match(prompt, /la-instagram\/SKILL\.md/);
     assert.doesNotMatch(prompt, /Día de los Muertos/);
     assert.doesNotMatch(prompt, /x=96\.\.850/);
@@ -162,7 +162,7 @@ test("dated growth review owns its inputs and no-change boundary", () => {
 });
 
 test("scheduled growth prompt delegates without copying dated evidence", () => {
-  assert.ok(growthPrompt.length < 1000, "growth review prompt should stay concise");
+  assert.ok(growthPrompt.length < 450, "growth review prompt should stay concise");
   assert.match(growthPrompt, /la-growth-intelligence\/SKILL\.md/);
   assert.match(growthPrompt, /reviews\/2026-12-21-phase-2\.md/);
   assert.doesNotMatch(growthPrompt, /Highgate Cemetery/);
